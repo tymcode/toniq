@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 280" role="img" aria-labelledby="depth-title">
+  <title id="depth-title">Cross-fade DEPTH: 0 dB at the top of the X, 6 dB at the crossing</title>
+  <rect x="90" y="40" width="170" height="150" fill="#d8d8d8" stroke="#111" stroke-width="1.4"/>
+  <rect x="260" y="40" width="200" height="150" fill="#fff" stroke="#111" stroke-width="1.4"/>
+  <rect x="460" y="40" width="170" height="150" fill="#d8d8d8" stroke="#111" stroke-width="1.4"/>
+  <g fill="none" stroke="#111" stroke-width="1.5">
+    <line x1="260" y1="40" x2="460" y2="190"/>
+    <line x1="260" y1="190" x2="460" y2="40"/>
+    <line x1="360" y1="40" x2="360" y2="190" stroke-dasharray="4 3"/>
+  </g>
+  <g fill="#111" font-family="Helvetica, Arial, sans-serif">
+    <text transform="translate(28 160) rotate(-90)" font-size="14" text-anchor="middle">Volume</text>
+    <text x="175" y="228" font-size="13" text-anchor="middle">Step 1 Duration</text>
+    <text x="360" y="228" font-size="13" text-anchor="middle">XFADE-TIME</text>
+    <text x="545" y="228" font-size="13" text-anchor="middle">Step 2 Duration</text>
+    <text x="640" y="48" font-size="13">DEPTH=0 dB</text>
+    <text x="640" y="122" font-size="13">DEPTH=6 dB</text>
+  </g>
+  <g fill="none" stroke="#111" stroke-width="1.2">
+    <path d="M628 42H380" marker-end="url(#arrow)"/>
+    <path d="M628 116H372" marker-end="url(#arrow)"/>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#111"/>
+    </marker>
+  </defs>
+</svg>

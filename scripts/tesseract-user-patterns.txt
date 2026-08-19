@@ -1,0 +1,5 @@
+TUNE=[+-][0-9][0-9]
+VEL-MAX=[0-9][0-9][0-9]
+BANKSET [URS][0-9]
+SYS-EX=(OFF|ON|OLD)
+DEVICE-ID=[0-9][0-9]

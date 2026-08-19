@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Section 3 — MIDI Control Page Parameters — ENSONIQ TS-10/TS-12 Musician’s Manual</title>
+  <link rel="stylesheet" href="css/manual.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="chrome">
+      <a href="index.html"><span class="brand">ENSONIQ</span>
+      <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
+    </div>
+  </header>
+  <nav class="section-nav">
+    <div><a href="02-system.html">← Section 2 — System Page Parameters</a></div>
+    <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
+    <div><a href="04-presets.html">Section 4 — Understanding Presets →</a></div>
+  </nav>
+  <article class="manual" id="main">
+    <header class="title-block">
+      <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
+      <h1>Section 3 — MIDI Control Page Parameters</h1>
+    </header>
+    <p>These parameters set instrument wide MIDI parameters, such as the Base Channel number and MIDI Reception mode, and control what types of MIDI messages are received and transmitted.</p>
+<p>The settings of these parameters will remain in effect at all times and are preserved while the power is off. The MIDI Control Page has three sub-pages. This section also offers an introduction and overview of <span class="mode">General MIDI</span>, and explains how to use it with the TS-10.</p>
+<p>Whether you are simply linking two keyboards together, playing a synth from a guitar controller, or driving a rack of samplers from the TS-10, MIDI makes it all possible.</p>
+<p>• Press the <kbd class="button">MIDI Control</kbd> button. This takes you to the top level <span class="page-name">MIDI Control page</span>:</p>
+<figure class="vfd-unit has-page">
+  
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">MIDI</td><td class="cell">BASE-CHAN=01</td><td class="cell selected">GMIDI=OFF</td><td class="cell">SEND=TRACK</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODE=MULTI</td><td class="cell">VELS/XPOS=BOTH</td><td class="cell">XCTRL=002</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  
+</figure>
+<h4 id="base-chan" class="param-name"><span class="param">BASE-CHAN</span><span class="range">Range: 01 to 16</span></h4>
+<p>Selects the Base Channel on which the TS-10 transmits and receives MIDI messages. System Exclusive messages are always sent and received on the base channel.</p>
+<p>Any of 16 MIDI channels may be selected as the basic MIDI channel of the TS-10. The effect of setting the base channel varies depending on the MIDI Mode and whether data is being sent or received.</p>
+<p>Transmit If <span class="lcd">SEND=BASE</span>, then the TS-10 only transmits keys, controllers, and program changes on the base channel. If <span class="lcd">SEND=TRACK</span>, then keys, controllers, and program changes are transmitted on the channel defined in the preset or sequencer track.</p>
+<p>Receive In Poly mode — keys, controllers, and program changes are only recognized if received on the base channel. In <span class="mode">Mono A</span> mode, program changes are received only on the base channel. The base channel is also used in both Mono modes as the first channel of the 12 channel range.</p>
+<h4 id="gmidi" class="param-name"><span class="param">GMIDI</span><span class="range">Range: OFF or ON</span></h4>
+<p>This is used to enter <span class="mode">General MIDI</span> mode. The TS-10 completely conforms to the full <span class="mode">General MIDI</span> Specification. This allows you to play back any <span class="mode">General MIDI</span>-based sequence via incoming MIDI and always get predictable results. The <span class="mode">General MIDI</span> Sounds in ROM (listed later) are also provided on the in-box disk (TSD-300) that came with your TS-10.</p>
+<p>For a complete description of this mode, see Section 12 — Sequencing/MIDI Applications.</p>
+<h4 id="send" class="param-name"><span class="param">SEND</span><span class="range">Range: BASE or TRACK</span></h4>
+<p>Controls the MIDI channel on which the TS-10 will transmit performance information such as key and controller events, as well as program changes.</p>
+<p>• BASE — The TS-10 will transmit only on the Base Channel, and will ignore the channel assignments contained in the tracks. When Presets are selected, they will transmit the MIDI Program Change for the Preset, and not the Program Change values for the three Tracks.</p>
+<p>• TRACK — The settings on the Track MIDI page determine the MIDI transmission channel.</p>
+<p>The TS-10 will transmit on the channel(s) assigned to the track(s) being played, either from the keyboard or the sequencer, depending on the Track MIDI Status (i.e. nothing will be sent if a track is assigned to the - - - - /RECV or <span class="lcd">MIDI-OFF</span> status). Each track can have its own MIDI channel.</p>
+<aside class="note"><p>Note: When a Sequence or Song Track is selected, <span class="param">SEND</span> will automatically be set to TRACK. Sequence and Song Tracks always transmit on their Track MIDI Channel.</p></aside>
+<h4 id="mode" class="param-name"><span class="param">MODE</span><span class="range">Range: OMNI, POLY, MULTI, MONO-A, or MONO-B</span></h4>
+<p>This parameter determines how MIDI information will be received by the TS-10. <span class="param">MODE</span> has no effect on what MIDI information is transmitted.</p>
+<p>There are five MIDI modes implemented in the TS-10:</p>
+<p>• <span class="value">OMNI</span> — In this mode, the TS-10 will receive on any or all of the 16 MIDI channels. This mode is useful when you are only using a few instruments, and you are not concerned with setting up different channels for each device.</p>
+<p>• <span class="value">POLY</span> — In this mode, the TS-10 will receive only on the Base MIDI channel. MIDI information on all other channels will be ignored.</p>
+<p>• <span class="value">MULTI</span> — An ENSONIQ innovation, <span class="value">MULTI</span> mode is the key to unlocking the potential of the TS-10 as a multi-timbral receiver from an external MIDI sequencer. In <span class="value">MULTI</span> mode, the 12 Tracks of the current song or sequence can receive MIDI information independently and polyphonically on up to 12 different MIDI channels. The Preset Tracks will not receive incoming MIDI in <span class="value">MULTI</span> mode.</p>
+<p>In <span class="value">MULTI</span> mode, different MIDI channels must be selected for each Sequence Track that you want to receive via MIDI. This can be accomplished on the Track MIDI page. If more than one Sequence Track is set to the same MIDI channel, only the lowest numbered track will receive via MIDI.</p>
+<p>In <span class="value">MULTI</span> mode, independent of what tracks are stacked or selected on the front panel, the sounds you hear will depend entirely on what MIDI channel(s) the MIDI data is received on.</p>
+<h4 id="about-mono-mode">About Mono Mode</h4>
+<p>Mono mode is particularly useful for driving the TS-10 from a guitar controller, or any other application where having up to twelve independent, monophonic channels is desirable. The TS-10 offers two types of Mono mode operation. In both types, the TS-10 will receive monophonically on twelve consecutive MIDI channels (the Base channel through Base channel +11). The difference has to do with how those MIDI channels are routed within the TS-10.</p>
+<p>• MONO-A — This is another ENSONIQ development intended to make using multi-channel controllers like guitars easier. All notes and controllers received via MIDI will play whatever sounds are selected or stacked on the front panel, just as if the notes were played from the keyboard. You have the advantage of multiple tracks which will respond independently to controllers received on multiple channels, but you do not have to set up the sounds for each track separately.</p>
+<p>• MONO-B — This is the more conventional type of Mono mode. It allows you to set up each track of the current song or sequence as a monophonic synthesizer. Each track can have a different sound assigned to it. This is how you get a different sound on each string when using a MIDI guitar controller.</p>
+<h3 id="global-controllers-in-mono-mode">Global Controllers in Mono Mode</h3>
+<p>Global controllers are controllers sent on one channel that affect all other channels simultaneously.</p>
+<p>They can be useful in reducing the number of MIDI events required to achieve particular effects, and can thereby reduce the delays sometimes associated with overloading MIDI. Some guitar controllers can transmit global controllers, and the TS-10 can respond to them.</p>
+<p>In Mono mode (A or B) the base channel minus one becomes the MIDI channel for global controllers (pitch bend, pressure, etc.). For example, if the base channel is channel 3, any controllers received on channel 2 will be interpreted as global controllers and will affect all voices being played. If the base channel is channel 1, channel 16 becomes the channel for global controllers. Each track will also respond independently to controllers sent on its own channel.</p>
+<p>For example, each guitar string on a MIDI guitar can send independent pitch bend, while the “whammy bar” controller could be sent on the global channel to affect all voices.</p>
+<h4 id="vels-xpos-midi-transpose-enable" class="param-name"><span class="param">VELS/XPOS — MIDI Transpose Enable</span><span class="range">Range: SEND, RECV, or BOTH</span></h4>
+<p>Controls whether track transpose will affect the transmission/reception of MIDI key numbers, giving you more control over how the Track Parameter <span class="param">TRANSPOSE</span> function will affect notes played on a track.</p>
+<p>XPOS also controls how the Track VELS setting will affect MIDI transmission/reception of velocity, in accordance with the same rules that govern the Track <span class="param">TRANSPOSE</span> parameter.</p>
+<p>• <span class="param">SEND</span> — Will transmit the transposed key numbers of a track, but notes received via incoming MIDI will not be transposed. This setting is useful for sending transposed key numbers to an external MIDI device, without affecting the pitch of notes received via incoming MIDI.</p>
+<p>• RECV — The key number transmitted by the TS-10 will always be the same key that was actually played on the TS-10 keyboard, but notes received via incoming MIDI will be transposed. In this mode, the TS-10 will respond properly when transposed data sent to an external sequencer is transmitted back to the TS-10.</p>
+<p>• BOTH — Will transmit and receive the transposed key numbers of a track. Useful for sending transposed key numbers to an external MIDI device, while also affecting the pitch of notes received via incoming MIDI.</p>
+<table class="data-table"><thead><tr><th>Setting</th><th>Local Voices Affected</th><th>MIDI Reception Affected</th><th>MIDI Transmission Affected</th></tr></thead><tbody><tr><td><span class="param">SEND</span></td><td>Yes</td><td>No</td><td>Yes</td></tr><tr><td>RECV</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>BOTH</td><td>Yes</td><td>Yes</td><td>Yes</td></tr></tbody></table>
+<h4 id="xctrl-external-controller" class="param-name"><span class="param">XCTRL - External Controller</span><span class="range">Range: 000 to 127</span></h4>
+<p>Use <span class="param">XCTRL</span> to assign an external MIDI Controller number to be both transmitted and received by the TS-10. The number that is assigned here will be used as the MIDI Controller number that the <span class="param">XCTRL</span> Track parameter will transmit on.</p>
+<p>Most controllers on a synthesizer—mod wheel, channel pressure, or breath controller for example—have a MIDI controller number associated with them: this parameter can be set to match the MIDI Controller number of any controller in your rig. Doing so will make a particular external controller available as a modulator in any of your sounds.</p>
+<p>One of the modulation sources that can be selected in the programming section is <span class="param">XCTRL</span>. The value of the <span class="param">XCTRL</span> parameter is a MIDI controller number, ranging from 000 to 127. When the Track <span class="param">XCTRL</span> value is edited, parameters that have <span class="param">XCTRL</span> assigned as a mod source will be modulated, and the TS-10 will transmit the edited value(s) on the MIDI Controller number assigned to this parameter. When the TS-10 receives MIDI Controller messages corresponding to this controller number, they will be routed to all parameters that have been programmed with <span class="param">XCTRL</span> as a modulation source.</p>
+<p>Suppose for example, you are playing the TS-10 from a keyboard with a breath controller (or want to use a breath controller as a modulator when playing the TS-10 keyboard). You can set up a program on the TS-10 in which the filter cutoff frequency is modulated by <span class="param">XCTRL</span>. If you then set <span class="lcd">XCTRL=02</span>, the breath controller will now be able to modulate the filter, or whatever else has its modulation source set to <span class="param">XCTRL</span>, in the program you have created.</p>
+<p>The following controller numbers are commonly supported:</p>
+<table class="data-table"><thead><tr><th>Number</th><th>Controller</th><th>Number</th><th>Controller</th></tr></thead><tbody><tr><td>1</td><td>Modulation Wheel</td><td>64</td><td>Sustain</td></tr><tr><td>2</td><td>Breath Controller</td><td>66</td><td>Sostenuto</td></tr><tr><td>4</td><td>Foot Pedal</td><td>70</td><td>Sound Variation (Patch Selects)</td></tr><tr><td>6</td><td>Data Entry MSB</td><td>71</td><td>Harmonic Content (Timbre)</td></tr><tr><td>7</td><td>Volume</td><td>72</td><td>Release Time</td></tr><tr><td>10</td><td>Pan</td><td>73</td><td>Attack Time</td></tr><tr><td>12</td><td>Effect Modulation</td><td>74</td><td>Brightness</td></tr></tbody></table>
+<p>• Press <kbd class="button">MIDI Control</kbd> again. The display shows the second sub-page:</p>
+<figure class="vfd-unit has-page">
+  
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tr" aria-label="Top right soft button" aria-pressed="true"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">MIDI</td><td class="cell">LOOP=OFF</td><td class="cell">CNTRLS=ON</td><td class="cell selected">SONG-SEL=OFF</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">ALL-OFF=OFF</td><td class="cell">START/STOP=ON</td><td class="cell">PROG-CHG=ON</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  
+</figure>
+<h4 id="loop" class="param-name"><span class="param">LOOP</span><span class="range">Range: OFF or ON</span></h4>
+<p>The MIDI <span class="param">LOOP</span> parameter controls how volume information is handled when a track’s status is set to <span class="lcd">LOCAL-OFF</span> or MIDI-<span class="param">LOOP</span>. It controls whether or not the Track <span class="param">MIX</span> parameter, as adjusted in the Track Parameter section, will transmit via MIDI. It only affects tracks that have their MIDI status set to <span class="lcd">LOCAL-OFF</span> or MIDI-<span class="param">LOOP</span>. It is normally <span class="value">OFF</span>, but in a MIDI loop setup, it should be ON.</p>
+<p>• <span class="value">OFF</span> — This is the default setting. When changes are made to the Track <span class="param">MIX</span> parameter (on tracks with <span class="lcd">STATUS=LOCAL-OFF</span> or MIDI-<span class="param">LOOP</span>), or when the volume pedal is moved, the TS-10 will transmit MIDI volume (controller 7) messages that combine the Track <span class="param">MIX</span> setting with the current setting of the volume pedal.</p>
+<p>• ON — The TS-10 will not transmit changes made to the Track <span class="param">MIX</span> parameter on tracks with <span class="lcd">STATUS=LOCAL-OFF</span> or MIDI-<span class="param">LOOP</span>. Volume pedal changes will be transmitted directly and are unaffected by the <span class="param">MIX</span> setting.</p>
+<p>When <span class="lcd">LOOP=OFF</span>, then the <span class="param">MIX</span> parameter is combined (multiplied) with the volume pedal setting to create a composite volume, which is then transmitted to external sound modules as MIDI controller 7. In a MIDI loop situation with a computer, this is undesirable, because lowering the <span class="param">MIX</span> value will send controller messages that are indistinguishable from volume pedal messages. When this information is echoed by the computer, the TS-10 receives it as volume pedal, lowering the volume on that track even further. Eventually this causes the volume to spiral down to zero, which in turn causes the track to be silenced, even though the displayed volume setting is greater than zero. Setting <span class="lcd">LOOP=ON</span> will prevent this problem from occurring.</p>
+<p>Note that the volume pedal is only active if <span class="lcd">PEDAL=VOL</span> on the <span class="page-name">System page</span>, and that volume pedal changes will always be transmitted as MIDI volume (controller 7).</p>
+<h4 id="working-with-midi-loops">Working with MIDI Loops</h4>
+<p>With a MIDI loop setup, the MIDI Out of the TS-10 is either directly or indirectly (through an external device such as a computer) connected to the MIDI In of the TS-10. The MIDI-<span class="param">LOOP</span> Track STATUS is optimized for use in a MIDI loop in which the TS-10 will play back into itself.</p>
+<p>Do not use the <span class="lcd">SEND/RECV</span> Track STATUS setting with a MIDI loop present. To connect a TS-10 track to a computer sequencer, the MIDI-<span class="param">LOOP</span> setting should be used. In this type of setup, a computer in MIDI Thru mode forms a loop which echoes the MIDI information back into the TS-10. See Section 5 — Preset/Track Parameters for more information about the Track MIDI STATUS parameter. See Section 10 — Understanding the Sequencer for information on recording into the TS-10 sequencer in a MIDI loop.</p>
+<h4 id="using-presets-with-midi-loops">Using Presets with MIDI Loops</h4>
+<aside class="tip"><p>For best results, set <span class="lcd">SEND=BASE</span> and <span class="lcd">MODE=POLY</span> on the <span class="page-name">MIDI Control page</span>. Be aware that when you select a new preset, program changes with the preset’s number are transmitted via MIDI; Program changes are not transmitted from the individual tracks in the preset. Receiving from MIDI while on a Preset bank page or Preset Track parameter page will minimize problems.</p></aside>
+<h4 id="cntrls-controllers" class="param-name"><span class="param">CNTRLS — Controllers</span><span class="range">Range: OFF or ON</span></h4>
+<p>This switch controls whether or not the TS-10 will transmit and receive MIDI controllers — pitch bend, mod wheel, pressure, volume, sustain pedal, etc.</p>
+<h4 id="song-sel-song-select" class="param-name"><span class="param">SONG-SEL — Song Select</span><span class="range">Range: OFF or ON</span></h4>
+<p>This determines whether the TS-10 will send and receive MIDI Song Select messages.</p>
+<p>• <span class="value">OFF</span> — The TS-10 will not transmit MIDI Song Select messages, and will ignore incoming Song Select messages received via MIDI.</p>
+<p>• ON — Incoming Song Selects will select the corresponding TS-10 sequencer location.</p>
+<p>Incoming MIDI Song Selects # 00-59 will select TS-10 Sequencer locations # 00-59. Selecting Sequencer locations # 00-59 will always cause the TS-10 to transmit MIDI Song selects # 00-59.</p>
+<h4 id="all-off" class="param-name"><span class="param">ALL-OFF</span><span class="range">Range: OFF or ON</span></h4>
+<p>The All Notes Off message enable switch controls how the system will react to MIDI All Notes</p>
+<p>Off messages received on any MIDI channel.</p>
+<p>• <span class="value">OFF</span> — The TS-10 will ignore any All Notes Off messages that are received.</p>
+<p>• ON — The TS-10 will shut down all currently sounding internal voices unless the <span class="param">MODE</span> parameter is set to <span class="value">OMNI</span>, in which case the message is ignored.</p>
+<h4 id="start-stop" class="param-name"><span class="param">START/STOP</span><span class="range">Range: OFF or ON</span></h4>
+<p>This parameter determines whether pressing the <kbd class="button">Play</kbd> and <kbd class="button">Stop/Continue</kbd> buttons will transmit MIDI Start, Stop and Continue messages from the TS-10 MIDI Out port. The TS-10 will always receive Play Stop, and Continue messages via MIDI, regardless of the setting of this parameter, if <span class="lcd">CLOCK=MIDI</span> on the Sequencer Control page. Some older drum machines have no way of disabling reception of these messages, and will always start playing their internal patterns when they receive a Start message. Set this parameter to <span class="value">OFF</span> when you want to use such a drum machine simply as a voice module, played from a TS-10 sequencer track, without starting its internal sequencer playing each time you press the <kbd class="button">Play</kbd> button on the TS-10.</p>
+<p>• ON — When you press the <kbd class="button">Play</kbd> or <kbd class="button">Stop/Continue</kbd> buttons to start, stop or continue the TS-10 sequencer, a corresponding MIDI Start, Stop or Continue message will be sent.</p>
+<p>• <span class="value">OFF</span> — When you press the <kbd class="button">Play</kbd> or <kbd class="button">Stop/Continue</kbd> buttons to start, stop or continue the TS-10 sequencer, a MIDI Start, Stop or Continue message will not be sent.</p>
+<h4 id="prog-chg-program-changes" class="param-name"><span class="param">PROG-CHG — Program Changes</span><span class="range">Range: OFF or ON</span></h4>
+<p>This switch controls how the TS-10 handles transmission and reception of MIDI program change messages.</p>
+<p>• <span class="value">OFF</span>—the TS-10 will not transmit or receive MIDI program changes.</p>
+<p>• ON—the TS-10 will transmit and receive program changes over MIDI.</p>
+<p>• NEW—the TS-10 will transmit program changes only if they are different than the previous program change sent out on the particular channel. Program changes will be received normally.</p>
+<p>Refer to the Track MIDI parameter description in Section 5 — Preset/Track Parameters and Section 10 — Understanding the Sequencer for more information on how program changes are handled.</p>
+<h4 id="receiving-midi-program-changes">Receiving MIDI Program Changes</h4>
+<p>The way in which the TS-10 receives program changes is slightly more complex than some other systems, because of the large number of programs and presets that are available to be selected from MIDI program changes. The following chart shows how the TS-10 receives MIDI program changes:</p>
+<p>In <span class="value">OMNI</span>, <span class="value">POLY</span> and MONO-A modes (puts unit into Sounds/Presets mode):</p>
+<table class="data-table"><thead><tr><th>When…</th><th>Incoming MIDI Program Changes…</th><th>Will Select…</th></tr></thead><tbody><tr><td><dfn class="term">BankSet</dfn> U0 is selected</td><td>00-59</td><td>User RAM Programs 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> U1 is selected</td><td>00-59</td><td>User RAM Programs 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> R2 is selected</td><td>00-59</td><td>ROM Programs 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> R3 is selected</td><td>00-59</td><td>ROM Programs 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> R4 is selected</td><td>00-59</td><td>ROM Programs 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> S8 is selected</td><td>0-9</td><td>Sampled Sounds 0-9</td></tr><tr><td><dfn class="term">BankSet</dfn> S9 is selected</td><td>0-9</td><td>Sampled Sounds 0-9</td></tr><tr><td><dfn class="term">BankSet</dfn> U0 is selected</td><td>60-119</td><td>User RAM Presets 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> U1 is selected</td><td>60-119</td><td>User RAM Presets 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> R2 is selected</td><td>60-119</td><td>ROM Presets 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> R3 is selected</td><td>60-119</td><td>ROM Presets 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> R4 is selected</td><td>60-119</td><td>ROM Presets 00-59</td></tr><tr><td><dfn class="term">BankSet</dfn> S8 is selected</td><td>10-127</td><td>nothing...</td></tr><tr><td><dfn class="term">BankSet</dfn> S9 is selected</td><td>10-127</td><td>nothing...</td></tr></tbody></table>
+<p>In <span class="value">MULTI</span> and MONO-B modes (received on Seq/Song Tracks only):</p>
+<table class="data-table"><thead><tr><th>When…</th><th>Incoming MIDI Program Changes…</th><th>Will Select…</th></tr></thead><tbody><tr><td>Track <span class="lcd">BANK=000</span> (<dfn class="term">BankSet</dfn> U0)</td><td>00-59</td><td>(without FX) User RAM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=001</span> (<dfn class="term">BankSet</dfn> U1)</td><td>00-59</td><td>(without FX) User RAM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=002</span> (<dfn class="term">BankSet</dfn> R2)</td><td>00-59</td><td>(without FX) ROM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=003</span> (<dfn class="term">BankSet</dfn> R3)</td><td>00-59</td><td>(without FX) ROM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=004</span> (<dfn class="term">BankSet</dfn> R4)</td><td>00-59</td><td>(without FX) ROM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=008</span> (<dfn class="term">BankSet</dfn> S8)</td><td>0-9</td><td>(without FX) Sampled Sounds 0-9</td></tr><tr><td>Track <span class="lcd">BANK=009</span> (<dfn class="term">BankSet</dfn> S9)</td><td>0-9</td><td>(without FX) Sampled Sounds 0-9</td></tr><tr><td>Track <span class="lcd">BANK=000</span> (<dfn class="term">BankSet</dfn> U0)</td><td>60-119</td><td>(with FX) User RAM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=001</span> (<dfn class="term">BankSet</dfn> U1)</td><td>60-119</td><td>(with FX) User RAM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=002</span> (<dfn class="term">BankSet</dfn> R2)</td><td>60-119</td><td>(with FX) ROM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=003</span> (<dfn class="term">BankSet</dfn> R3)</td><td>60-119</td><td>(with FX) ROM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=004</span> (<dfn class="term">BankSet</dfn> R4)</td><td>60-119</td><td>(with FX) ROM Programs 00-59</td></tr><tr><td>Track <span class="lcd">BANK=008</span> (<dfn class="term">BankSet</dfn> S8)</td><td>60-69</td><td>(with FX) Sampled Sounds 0-9</td></tr><tr><td>Track <span class="lcd">BANK=009</span> (<dfn class="term">BankSet</dfn> S9)</td><td>60-69</td><td>(with FX) Sampled Sounds 0-9</td></tr></tbody></table>
+<aside class="note"><p>Note: Incoming MIDI Bank Select messages 0 thru 9 will select <dfn class="term">BankSets</dfn> 0 thru 9, changing which Programs will be selected by incoming MIDI Program Changes. In all cases Program Change numbers above 120 to 127 are ignored.</p></aside>
+<h3 id="selecting-a-new-sequence-or-song-effect-from-midi-program-changes">Selecting a New Sequence or Song Effect from MIDI Program Changes</h3>
+<p>As indicated in the above chart, in <span class="value">MULTI</span> and MONO-B modes, adding 60 to the MIDI Program Change number for the desired sound will select the new sound and also install the effect from that sound into the sequence (or song) effect. This can be useful when controlling the TS-10 from an external sequencer. Note that changing the effect will briefly silence the audio output and will cut off any sounding voices if <span class="lcd">VOICE-MUTING=ON</span> on the <span class="page-name">System page</span>.</p>
+<p>• Press <kbd class="button">MIDI Control</kbd> again. The display shows the third sub-page:</p>
+<figure class="vfd-unit has-page">
+  
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">MIDI</td><td class="cell selected">SYS-EX=OFF</td><td class="cell">&nbsp;</td><td class="cell">DEVICE-ID=01</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell">SEND-PARAMS=OFF</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  
+</figure>
+<h4 id="sys-ex" class="param-name"><span class="param">SYS-EX</span><span class="range">Range: OFF, ON, or OLD</span></h4>
+<p>This switch determines whether the TS-10 is able to receive incoming MIDI System Exclusive messages:</p>
+<p>• When <span class="lcd">SYS-EX=OFF</span>, the TS-10 is not able to receive any MIDI System Exclusive messages.</p>
+<p>• When <span class="lcd">SYS-EX=ON</span>, the TS-10 will receive MIDI System Exclusive messages in the post-2.0 <span class="param">SYS-EX</span> data format.</p>
+<p>• When <span class="lcd">SYS-EX=OLD</span>, the TS-10 will receive MIDI System Exclusive messages in both the pre- 2.0 <span class="param">SYS-EX</span> data format, and the post-2.0 <span class="param">SYS-EX</span> data format. The <span class="value">OLD</span> setting allows data saved from pre-2.0 software to be loaded into the TS-10.</p>
+<p>The Sys-Ex Dump messages that are sent from the Storage, Sys-Ex, Send Dump pages can always be transmitted regardless of the setting of this switch. (Refer to the Appendix for more information about the TS-10’s Sys-Ex implementation).</p>
+<h4 id="device-id" class="param-name"><span class="param">DEVICE-ID</span><span class="range">Range: 01 to 16</span></h4>
+<p>Allows Remote MIDI Devices to address the TS-10 via incoming MIDI Sys-Ex without changing the base channel number. Think of this parameter as a higher level of identification. This is also used to identify Sys-Ex messages transmitted by the TS-10.</p>
+<h4 id="send-params" class="param-name"><span class="param">SEND-PARAMS</span><span class="range">Range: OFF or ON</span></h4>
+<p>When <span class="lcd">SEND-PARAMS=ON</span>, the TS-10 allows the transmission of parameter values via Sys-Ex messages. When <span class="value">OFF</span>, there is no transmission of parameter values. For example, if you are editing a sound, set this parameter to <span class="value">OFF</span>, to prevent a stream of MIDI Sys-EX information from flowing between the TS-10 and any connected Remote MIDI Devices.</p>
+  </article>
+  <footer class="site-footer">
+    Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
+    This is a working HTML transcription for the Toniq project; original pagination
+    and the printed Index are omitted.
+  </footer>
+</body>
+</html>

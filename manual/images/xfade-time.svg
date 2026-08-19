@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-labelledby="xfade-title">
+  <title id="xfade-title">XFADE-TIME adds overlap between two wave-step durations</title>
+  <g fill="none" stroke="#111" stroke-width="1.6">
+    <rect x="40" y="18" width="150" height="52"/>
+    <rect x="330" y="18" width="150" height="52"/>
+    <line x1="190" y1="18" x2="330" y2="70"/>
+    <line x1="190" y1="70" x2="330" y2="18"/>
+    <path d="M214 102v10h92v-10"/>
+  </g>
+  <g fill="#111" font-family="Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="115" y="51" font-size="16" font-weight="700">DUR</text>
+    <text x="405" y="51" font-size="16" font-weight="700">DUR</text>
+    <text x="115" y="90" font-size="13">Step 1</text>
+    <text x="405" y="90" font-size="13">Step 2</text>
+    <text x="260" y="136" font-size="13">XFADE-TIME</text>
+  </g>
+</svg>

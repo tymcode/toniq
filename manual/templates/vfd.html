@@ -1,0 +1,37 @@
+<!--
+  Reusable 2x40 VFD + 6 soft-button template.
+  Three buttons above the screen, three below, aligned with three 13-character columns.
+  Mark the discussed field with class="selected" and the corresponding button
+  with class="pressed" aria-pressed="true".
+-->
+<figure class="vfd-unit" data-page="SYSTEM">
+  <table>
+    <thead>
+      <tr class="soft-row top">
+        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr>
+        <td class="cell selected">TUNE=+00</td>
+        <td class="cell">TOUCH=MED</td>
+        <td class="cell">VEL-MAX=127</td>
+      </tr>
+      <tr>
+        <td class="cell">PRESS=MED</td>
+        <td class="cell">PEDAL=VOL</td>
+        <td class="cell">SLIDER=NORMAL</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  <figcaption>System page — <span class="param">TUNE</span> selected</figcaption>
+</figure>
