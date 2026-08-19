@@ -1,0 +1,21 @@
+.DS_Store
+/tmp
+*.pyc
+__pycache__/
+ notes/*
+notes/transcript/musicians-manual.txt
+notes/vfd-screens.json
+notes/transcript/sysex-ocr.txt
+notes/parameters.md
+notes/ocr-wordlist.txt
+notes/modes.md
+notes/sysex.md
+notes/terms.json
+notes/transcript/front-matter.txt
+notes/midi-studio.md
+notes/instrument-model.md
+notes/html-conventions.md
+notes/glossary.md
+docs/Ensoniq TS-10 Musicians Manual.pdf
+docs/Ensoniq TS-10 and TS-12 Service Manual.pdf
+docs/Ensoniq TS series MIDI SysEx specification.pdf
