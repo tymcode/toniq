@@ -713,6 +713,9 @@ DEFN_ROW_SPLIT = re.compile(
 )
 
 SLUG_COUNTS: dict[str, int] = {}
+# Effect algorithm cross-links (Section 7 pages). Built in main().
+EFFECT_ALGO_INDEX: dict[str, tuple[str, str]] = {}
+EFFECT_PARAM_NAMES: list[str] = []
 # Printed TOC titles → heading level. Loaded in main() before classify/unwrap.
 TOC_HEADINGS: dict[str, str] = {}
 TOC_ORIGINALS: dict[str, str] = {}
@@ -858,6 +861,14 @@ def is_prose_heading(line: str) -> bool:
         if not (w[:1].isupper() or w[:1].isdigit()):
             return False
     if re.search(r"\b(is|are|was|were|will|can|should|must|has|have)\b", s):
+        return False
+    if words[-1].lower() in HEADING_SMALL_WORDS:
+        return False
+    if re.search(r"\bRanges?\s*:", s):
+        return False
+    if "+" in s or "Routing" in s or s.rstrip().endswith("+"):
+        return False
+    if MID_PHRASE_END.search(s.rstrip()):
         return False
     return True
 
@@ -1121,6 +1132,136 @@ def tip_join(prev: str, s: str) -> str | None:
     return f"{prev} {s}"
 
 
+def should_merge_dangling_prose(prev: str, nxt: str) -> bool:
+    """Rejoin PDF wraps that stopped mid-phrase (Section 7 and elsewhere)."""
+    if not prev or not nxt:
+        return False
+    if is_flush_line(nxt) or is_flush_line(prev):
+        return False
+    if re.search(r"[.!?]$", prev.rstrip()):
+        return False
+    if re.search(r"For a complete description of the(?: remaining)?$", prev, re.I):
+        return True
+    if prev.rstrip().endswith("+") and re.match(r"^[A-Z0-9]", nxt):
+        return True
+    if re.search(r"refer to the [A-Z0-9+\-/ ]+$", prev, re.I):
+        return True
+    if prev.rstrip().endswith("(on the") and re.match(r"^Output page", nxt, re.I):
+        return True
+    if _is_continuation(nxt):
+        return True
+    if MID_PHRASE_END.search(prev.rstrip()):
+        return len(nxt) < 120
+    return False
+
+
+def merge_dangling_prose(paras: list[str]) -> list[str]:
+    out: list[str] = []
+    i = 0
+    while i < len(paras):
+        p = paras[i]
+        if not p:
+            out.append(p)
+            i += 1
+            continue
+        merged = p
+        while i + 1 < len(paras) and paras[i + 1].strip():
+            nxt = paras[i + 1].strip()
+            if not should_merge_dangling_prose(merged, nxt):
+                break
+            glue = "" if merged.rstrip().endswith("+") else " "
+            merged = merged.rstrip() + glue + nxt
+            i += 1
+        out.append(merged)
+        i += 1
+    return out
+
+
+def norm_effect_algo_key(name: str) -> str:
+    s = re.sub(r"\s+", " ", name.strip().upper())
+    s = re.sub(r"- -", "- -", s)
+    return s
+
+
+def effect_algo_slug(num: str, name: str) -> str:
+    s = re.sub(r"[^a-z0-9]+", "-", f"{num} {name}".lower()).strip("-")
+    return s[:70] or "effect"
+
+
+def build_effect_manual_catalog(pages: list[str]) -> None:
+    """Index Section 7 algorithm headings and parameter names for cross-links."""
+    global EFFECT_ALGO_INDEX, EFFECT_PARAM_NAMES
+    index: dict[str, tuple[str, str]] = {}
+    param_names: set[str] = set()
+    for start, end, parts in SPLIT_RANGES:
+        if not any(fname.startswith("07-effects-") for fname, _ in parts):
+            continue
+        lines = collect_range(pages, start, end)
+        chunks = split_parts(lines, parts)
+        for fname, chunk in chunks.items():
+            if not fname.startswith("07-effects-"):
+                continue
+            for ln in chunk:
+                s = ln.strip()
+                m = ALGO_RE.match(s)
+                if m and len(s) < 48:
+                    num, name = m.group(1), m.group(2).strip()
+                    slug = effect_algo_slug(num, name)
+                    key = norm_effect_algo_key(name)
+                    if key not in index:
+                        index[key] = (fname, slug)
+                    continue
+                rm = RANGE_RE.match(s)
+                if rm:
+                    param_names.add(rm.group(1).strip())
+                elif is_param_heading(s) and len(s) < 48:
+                    param_names.add(s.strip())
+    EFFECT_ALGO_INDEX = index
+    EFFECT_PARAM_NAMES = sorted(param_names, key=len, reverse=True)
+
+
+def lookup_effect_algo(name: str) -> tuple[str, str] | None:
+    key = norm_effect_algo_key(name)
+    hit = EFFECT_ALGO_INDEX.get(key)
+    if hit:
+        return hit
+    compact = re.sub(r"\s+", "", key)
+    for k, v in EFFECT_ALGO_INDEX.items():
+        if re.sub(r"\s+", "", k) == compact:
+            return v
+    return None
+
+
+EFFECT_ALGO_REF_RE = re.compile(
+    r"(\brefer to the )([A-Z0-9+\-/ ]+?)( algorithm\b|\bparameters\b)",
+    re.I,
+)
+
+
+def link_effect_algo_refs(escaped: str, source_file: str | None) -> str:
+    if not source_file or not source_file.startswith("07-effects-") or not EFFECT_ALGO_INDEX:
+        return escaped
+
+    def repl(m: re.Match[str]) -> str:
+        prefix, name, suffix = m.group(1), m.group(2).strip(), m.group(3)
+        hit = lookup_effect_algo(name)
+        if not hit:
+            return m.group(0)
+        fname, slug = hit
+        href = f"{fname}#{slug}" if fname != source_file else f"#{slug}"
+        return (
+            f'{prefix}<a class="algo" href="{html.escape(href, quote=True)}">'
+            f"{html.escape(name)}</a>{html.escape(suffix)}"
+        )
+
+    parts = re.split(r"(<[^>]+>)", escaped)
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            continue
+        parts[i] = EFFECT_ALGO_REF_RE.sub(repl, part)
+    return "".join(parts)
+
+
 def table_row_join(prev: str, s: str) -> str | None:
     """Keep a wrapped description in the same 2-column row; do not glue the next row."""
     row = split_twocol_row(prev)
@@ -1311,6 +1452,7 @@ def unwrap(lines: list[str]) -> list[str]:
                 and not re.search(r"[.!?]$", prev)
                 and (
                     continuation
+                    or MID_PHRASE_END.search(prev.rstrip())
                     or (len(prev) >= 40 and MID_PHRASE_END.search(prev))
                     or (len(prev) >= 50 and len(s) >= 45)
                 )
@@ -1330,7 +1472,7 @@ def unwrap(lines: list[str]) -> list[str]:
         else:
             collapsed.append(p)
             blank = False
-    return expand_defn_table_lines(join_page_wraps(collapsed))
+    return expand_defn_table_lines(merge_dangling_prose(join_page_wraps(collapsed)))
 
 
 def join_page_wraps(paras: list[str]) -> list[str]:
@@ -1432,6 +1574,7 @@ def classify(line: str) -> str:
         and line[0].isupper()
         and not line.isupper()
         and not line.endswith((".", ",", ":", ";"))
+        and not re.match(r"^[A-Z][A-Za-z-]+$", line)
     ):
         return "h3"
     if is_prose_heading(line):
@@ -1763,7 +1906,7 @@ def split_off_row_trailer(line: str) -> list[str]:
 def expand_collapsed_defn_line(line: str) -> list[str]:
     """Split OCR/unwrap merges of 2-column lookup rows back into separate lines."""
     s = line.strip()
-    if not s:
+    if not s or not is_defn_table_candidate(s):
         return [s]
     matches = list(DEFN_ROW_SPLIT.finditer(s))
     if not matches:
@@ -1783,8 +1926,24 @@ def expand_collapsed_defn_line(line: str) -> list[str]:
     return parts or [s]
 
 
+def is_defn_table_candidate(line: str) -> bool:
+    """Skip prose; only split lines that are clearly merged lookup-table rows."""
+    if re.search(
+        r"\b(refer to|For a complete|Controls the|Setting this|This parameter|algorithm found)\b",
+        line,
+        re.I,
+    ):
+        return False
+    lower = sum(1 for c in line if c.islower())
+    if lower > max(12, len(line) // 3):
+        return False
+    return True
+
+
 def should_expand_defn_line(line: str) -> bool:
     """Only split lines that clearly contain several merged lookup-table rows."""
+    if not is_defn_table_candidate(line):
+        return False
     matches = list(DEFN_ROW_SPLIT.finditer(line))
     if len(matches) >= 2:
         return True
@@ -2066,6 +2225,68 @@ def is_bullet_grid_orphan(s: str, nxt: str, rows: list[list[str]]) -> bool:
     ):
         return False
     return True
+
+
+EFFECT_PARAM_REF_ROWS = (
+    ("FX2- -REVRB", "PAN"),
+    ("DRY", "DDL REGEN L"),
+    ("DDL MIX", "DAMPING"),
+    ("LEVEL", "DELAY TIME L and R"),
+)
+
+EFFECT_PARAM_REF_HEADER_RE = re.compile(
+    r"^FX2- -REVRB\s+PAN\s+DRY\s+DDL REGEN L\s+DDL MIX DAMPING\s*$"
+)
+
+EFFECT_PARAM_REF_TRAILER_RE = re.compile(
+    r"^LEVEL\s+DELAY TIME L and R\s+("
+    r"For a complete description of these parameters,\s*refer to the.+)$",
+    re.I,
+)
+
+EFFECT_PARAM_REF_CROSSREF_RE = re.compile(
+    r"^For a complete description of these parameters,\s*refer to the\s+"
+    r".+algorithm found earlier in this section\.?\s*$",
+    re.I,
+)
+
+
+def render_effect_param_ref_table() -> str:
+    parts = ['<table class="param-cols"><tbody>']
+    for left, right in EFFECT_PARAM_REF_ROWS:
+        parts.append(
+            "<tr>"
+            f'<td><span class="param">{html.escape(left)}</span></td>'
+            f'<td><span class="param">{html.escape(right)}</span></td>'
+            "</tr>"
+        )
+    parts.append("</tbody></table>")
+    return "".join(parts)
+
+
+def consume_effect_param_ref_table(
+    lines: list[str],
+    i: int,
+    terms: dict[str, list[str]],
+    fname: str,
+) -> tuple[str | None, int]:
+    s = lines[i].strip()
+    if not EFFECT_PARAM_REF_HEADER_RE.match(s):
+        return None, i
+    html = render_effect_param_ref_table()
+    j = i + 1
+    if j < len(lines) and lines[j].strip():
+        nxt = lines[j].strip()
+        cross_ref = None
+        m = EFFECT_PARAM_REF_TRAILER_RE.match(nxt)
+        if m:
+            cross_ref = m.group(1)
+        elif EFFECT_PARAM_REF_CROSSREF_RE.match(nxt):
+            cross_ref = nxt
+        if cross_ref:
+            html += f'<p>{apply_tags(cross_ref, terms, source_file=fname)}</p>'
+            j += 1
+    return html, j
 
 
 def render_bullet_grid(rows: list[list[str]], terms: dict[str, list[str]]) -> str:
@@ -3091,10 +3312,13 @@ def apply_tags(
           "Data Entry Slider", "Volume Slider"], "button", skip_page_suffix=True)
     escaped = wrap_bankset(escaped)
     wrap(terms.get("term", []), "term")
+    if source_file and source_file.startswith("07-effects-") and EFFECT_PARAM_NAMES:
+        wrap(EFFECT_PARAM_NAMES, "param")
     wrap(terms.get("param", []), "param")
     wrap(terms.get("value", []), "value")
     wrap(["Sounds Mode", "Presets Mode", "Sequencer Mode", "General MIDI",
           "Group Edit", "Mono A", "Mono B"], "mode")
+    escaped = link_effect_algo_refs(escaped, source_file)
     return link_chart_refs(escaped)
 
 
@@ -3309,6 +3533,11 @@ def to_html_body(
         if kind == "blank" or is_diagram_crumb(line):
             i += 1
             continue
+        ref_html, ref_i = consume_effect_param_ref_table(lines, i, terms, fname)
+        if ref_html:
+            chunks.append(ref_html)
+            i = ref_i
+            continue
         if looks_like_memory_map(line):
             chunks.append(render_memory_map(terms))
             while i < len(lines) and lines[i].strip() != "Using the BankSet Button":
@@ -3432,8 +3661,9 @@ def to_html_body(
             m = ALGO_RE.match(line)
             label = f"{m.group(1)} {m.group(2).strip()}" if m else line
             sid = slugify(label)
+            algo_tag = "h2" if fname.startswith("07-effects-") else "h3"
             chunks.append(
-                f'<h3 id="{sid}" class="algo">{tags(label, heading=True)}</h3>'
+                f'<{algo_tag} id="{sid}" class="algo">{tags(label, heading=True)}</{algo_tag}>'
             )
             i += 1
             continue
@@ -3677,6 +3907,7 @@ def write_page(
 def main() -> None:
     pages = load_pages()
     load_toc(pages)
+    build_effect_manual_catalog(pages)
     terms = load_terms()
     catalog = load_vfd_screens()
     OUT.mkdir(exist_ok=True)

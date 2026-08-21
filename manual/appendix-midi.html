@@ -25,9 +25,7 @@
       <h1>Appendix — MIDI Implementation</h1>
     </header>
     <figure class="figure"><img src="images/page-409.png" alt="MIDI Implementation Chart"><figcaption>MIDI Implementation Chart</figcaption></figure><h3 id="ts-10-midi-implementation">TS-10 MIDI Implementation</h3>
-<p>The TS-10 features an extensive MIDI (Musical Instrument Digital Interface) implementation. For normal applications, you will find all the information you need regarding the TS-10’s</p>
-<p>MIDI functions in this manual. You can also refer MIDI Implementation Chart on the next page for a summary of the TS-10</p>
-<p>MIDI implementation.</p>
+<p>The TS-10 features an extensive MIDI (Musical Instrument Digital Interface) implementation. For normal applications, you will find all the information you need regarding the TS-10’s MIDI functions in this manual. You can also refer MIDI Implementation Chart on the next page for a summary of the TS-10 MIDI implementation.</p>
 <p>If you are writing a computer program to communicate with the TS-10 via MIDI, or otherwise require a copy of the full TS-10 System Exclusive Specification, it is available free of charge by writing to:</p>
 <table class="defn-table"><tbody><tr><td><span class="lcd">ENSONIQ</span></td><td>Corp.</td></tr><tr><td><span class="lcd">MIDI</span></td><td>Specification Desk</td></tr><tr><td><span class="lcd">155</span></td><td>Great Valley Parkway</td></tr></tbody></table>
 <h3 id="p-o-box-3035">P.O. Box 3035</h3>
@@ -35,7 +33,7 @@
 <h4 id="usa" class="param-name">USA</h4>
 <p>Include in your written request your name and address, and indicate that you would like a copy of the “TS-10 System Exclusive Specification.” Please allow 2 to 3 weeks for delivery.</p>
 <p>Registered Parameters Registered parameters are transmitted (as four sequential continuous controller messages) by the TS-10 whenever certain parameters are edited from the front panel. The two registered parameter controllers select the parameter and the following two data entry controllers specify the value.</p>
-<h3 id="controllers">Controllers</h3>
+<p>Controllers</p>
 <table class="defn-table"><thead><tr><th>Number</th><th>Name                                                   Value</th></tr></thead><tbody><tr><td><span class="lcd">100</span></td><td>Registered Parameter Select LSB                        00 or 01</td></tr><tr><td><span class="lcd">101</span></td><td>Registered Parameter Select MSB                        always 0</td></tr></tbody></table>
 <div class="vfd-callouts top"><div>6 38</div><div>Data Entry MSB (Most Significant Byte) Data Entry LSB(Least Significant Byte)</div><div>(see below) (see below)</div></div>
 <h2 id="registered-parameters">Registered Parameters</h2>
@@ -46,10 +44,7 @@
 <p>Pitch Bend Range          0..25                               0</p>
 <p>Fine Tuning               0..127 (internal bits 1..7)         64 or 0 (internal bit 0)</p>
 <p>For Fine Tuning, which is an 8-bit value internally, the most significant 7 bits are offset by 64 and shifted once before being sent as Data Entry MSB (Controller 6). The least significant bit of the internal value is transmitted as bit 6 of Data Entry LSB (Controller 38).</p>
-<p>In most system modes, registered parameters 0 and 1 affect the <span class="page-name">System page</span></p>
-<h3 id="tune-and">TUNE and</h3>
-<p>BEND parameters respectively (when received on the Base Channel only). In General</p>
-<p>MIDI mode, registered parameters 0, 1, and 2 are received multi-timbrally, and affect each Track/Channel independently.</p>
+<p>In most system modes, registered parameters 0 and 1 affect the <span class="page-name">System page</span> <span class="param">TUNE</span> and BEND parameters respectively (when received on the Base Channel only). In <span class="mode">General MIDI</span> mode, registered parameters 0, 1, and 2 are received multi-timbrally, and affect each Track/Channel independently.</p>
 <div class="vfd-callouts top"><div>MODEL: TS-10 Function…</div><div>MIDI Implementation Chart Transmitted</div><div>Version: 2.0 Recognized</div></div>
 <p>Basic            Default             1                              1</p>
 <p>Channel          Channels             1-16                           1-16</p>

@@ -73,17 +73,11 @@
 <p>The active controls on the Sequence <span class="page-name">Locate page</span> are:</p>
 <p>TEMPO (Tap Tempo)                             Seq Range: 25 to 250 BPM, or EXT</p>
 <h4 id="song" class="param-name"><span class="param">Song</span><span class="range">Range: -64 to +63 Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</span></h4>
-<p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the</p>
-<p>TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When CLOCK=</p>
-<p>MIDI on the <span class="page-name">Sequencer Control page</span>, this field will read TEMPO=</p>
-<p>EXT to indicate that the tempo is controlled by incoming</p>
-<p>MIDI clocks.</p>
+<p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="lcd">CLOCK=MIDI</span> on the <span class="page-name">Sequencer Control page</span>, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is controlled by incoming MIDI clocks.</p>
 <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of 25-250 BPM. When <span class="lcd">TEMPO=+00</span> the sequences in the song will play at their designated tempo.</p>
 <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
 <h4 id="goto-sequence-autolocate-control" class="param-name">GOTO — Sequence Autolocate Control</h4>
-<h3 id="displays-the">Displays the</h3>
-<p><span class="page-name">GOTO sub-page</span> where the auto-locator destination is set. Using the</p>
-<p>GOTO function you can quickly locate to any bar and beat within the sequence, in order to play or record from there.</p>
+<p>Displays the <span class="page-name">GOTO sub-page</span> where the auto-locator destination is set. Using the GOTO function you can quickly locate to any bar and beat within the sequence, in order to play or record from there.</p>
 <p>• Press GOTO. The display shows:</p>
 <figure class="vfd-unit has-page">
   
@@ -115,13 +109,8 @@
   
   
 </figure>
-<p>GOTO will be flashing and the destination may be set using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Notice there is now a cursor (underline) beneath the bar value at the BAR/</p>
-<p>BEAT parameter. Press the soft button beneath BAR/</p>
-<p>BEAT to move the cursor between the Bar and Beat. Continued presses of the BAR/</p>
-<p>BEAT parameter will toggle between the bar and beat values.</p>
-<p>• After selecting a new location to go to, press the</p>
-<p>GOTO soft button again to complete the locating process and return to the main <span class="page-name">Locate page</span>. The</p>
-<p>GOTO function provides a quick and easy way to repeatedly locate to a certain place in a sequence — the destination remains set until a new sequence or song is selected.</p>
+<p>GOTO will be flashing and the destination may be set using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Notice there is now a cursor (underline) beneath the bar value at the BAR/BEAT parameter. Press the soft button beneath BAR/BEAT to move the cursor between the Bar and Beat. Continued presses of the BAR/BEAT parameter will toggle between the bar and beat values.</p>
+<p>• After selecting a new location to go to, press the GOTO soft button again to complete the locating process and return to the main <span class="page-name">Locate page</span>. The GOTO function provides a quick and easy way to repeatedly locate to a certain place in a sequence — the destination remains set until a new sequence or song is selected.</p>
 <p>• After using the GOTO function to locate to a spot in the sequence, press <kbd class="button">Stop/Continue</kbd> to begin playing the sequence from that point.</p>
 <p>Setting  the GOTO Locate Time While the Sequence Plays You can set the location of the GOTO time “on the fly” as the sequence plays:</p>
 <p>• Press <kbd class="button">Play</kbd> to begin playing the sequence.</p>
@@ -162,10 +151,6 @@
   <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Tempo</div><div>Auto-locate Control</div><div>Location in current Step (Bar + Beat)</div></div>
   
 </figure>
-<h3 id="sequence-in">Sequence in</h3>
-<p>Current Song Step           Current Song Location (Step + Rep)</p>
-<p>Tempo                Auto-locate Control        Location in current</p>
-<p>Step (Bar + Beat)</p>
 <p>Note that the Sequencer Status (shown in the lower left corner of the display) now shows SNGS, for Song Stop, indicating that a song is selected.</p>
 <p>The following are display only parameters, provided here for your information:</p>
 <h4 id="sequence-name" class="param-name">Sequence Name</h4>
@@ -177,10 +162,7 @@
 <p>The user-controllable parameters on the Song <span class="page-name">Locate page</span> are:</p>
 <h4 id="tempo" class="param-name"><span class="param">TEMPO</span><span class="range">Range: -99 to +99 BPM, or EXT</span></h4>
 <p>This controls the tempo of the song. It is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by +/–99%, within the legal limits of 25-250 BPM. When <span class="lcd">TEMPO=+00</span> the sequences will play at their designated tempo.</p>
-<h3 id="when-clock">When CLOCK=</h3>
-<p>MIDI on the <span class="page-name">Sequencer Control page</span>, this field will read TEMPO=</p>
-<p>EXT to indicate that the tempo is being controlled by incoming</p>
-<p>MIDI clocks.</p>
+<p>When <span class="lcd">CLOCK=MIDI</span> on the <span class="page-name">Sequencer Control page</span>, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is being controlled by incoming MIDI clocks.</p>
 <p>GOTO — Song Autolocate control</p>
 <p>The <span class="page-name">GOTO sub-page</span> looks a little different in song mode, as you can locate to any step or rep in the song, as well as to any bar and beat within the step.</p>
 <p>• Press GOTO. The display shows:</p>
@@ -219,9 +201,7 @@
 <p>• After using the GOTO function to locate to a point in the song, press <kbd class="button">Stop/Continue</kbd> to begin playing from that point.</p>
 <p>Setting  the GOTO Locate Time While the Song Plays You can set the location of the GOTO time “on the fly” as the song plays:</p>
 <p>• Press <kbd class="button">Play</kbd> to begin playing the song.</p>
-<p>• When the song reaches the point where you want to set the</p>
-<p>GOTO location, press GOTO. The display momentarily shows LOCATE TIME SET - STOP TO LOCATE, and installs that time as the</p>
-<p>GOTO location.</p>
+<p>• When the song reaches the point where you want to set the GOTO location, press GOTO. The display momentarily shows LOCATE TIME SET - STOP TO LOCATE, and installs that time as the GOTO location.</p>
 <p>• Press <kbd class="button">Stop•Continue</kbd> (or let the song end).</p>
 <p>• Now if you press GOTO twice, it will go to the same location that was set as when it was playing.</p>
 <p>Edit Times  — Using the Autopunch Feature Press <kbd class="button">Locate</kbd> a second time to display the <span class="page-name">Edit Times sub-page</span>:</p>
@@ -267,14 +247,10 @@
 <p>• Select the OUT Edit Time and set to IN = 003.04.96 (bar 3, beat 4, clock 96)</p>
 <p>• Press <kbd class="button">Record/Play</kbd> and play along with the track. The TS-10 will automatically enter record at the first clock of the third bar and exit record on the last clock of the third bar.</p>
 <h4 id="edit-times-in-and-out" class="param-name"><span class="param">EDIT TIMES IN and OUT</span><span class="range">Range: (various)</span></h4>
-<p>When a sequence is selected, the display shows the Bar, Beat and Clock at which the TS-10 will enter and exit record when <span class="lcd">AUTOPUNCH=ON</span>. Press the soft buttons nearest</p>
-<h3 id="in-and">IN and</h3>
-<p>OUT to select the Edit Times parameters for editing.</p>
+<p>When a sequence is selected, the display shows the Bar, Beat and Clock at which the TS-10 will enter and exit record when <span class="lcd">AUTOPUNCH=ON</span>. Press the soft buttons nearest IN and OUT to select the Edit Times parameters for editing.</p>
 <p>The Edit Times are set using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Repeatedly pressing the soft button next to either time toggles the cursor between the Bar, Beat and Clock value.</p>
 <h4 id="reset" class="param-name">RESET</h4>
-<p>Pressing this soft button resets the currently selected time to its default value (the beginning and end of the sequence or song).</p>
-<p>IN is reset to 001.01.00, or the beginning of the sequence, and</p>
-<p>OUT is reset to the time value for the last clock of the sequence. If other values are installed, they will remain in effect until they are reset or a different sequence or song is selected.</p>
+<p>Pressing this soft button resets the currently selected time to its default value (the beginning and end of the sequence or song). IN is reset to 001.01.00, or the beginning of the sequence, and OUT is reset to the time value for the last clock of the sequence. If other values are installed, they will remain in effect until they are reset or a different sequence or song is selected.</p>
 <h4 id="set" class="param-name">SET</h4>
 <p>This sets the selected time to the current sequencer time value (as shown on the <span class="page-name">Locate page</span>) if the sequencer is running. If the sequencer is stopped, the most recent time value is used. Using the Locate function does affect the current time value.</p>
 <p>Edit Times in Song Mode You can use the Autopunch mode and Edit Times to punch in and out on the song tracks as well as sequence tracks. When a song is selected, pressing <kbd class="button">Locate</kbd> twice shows the following:</p>
@@ -282,9 +258,7 @@
 <p>.    .   .   .</p>
 <p>.   .   .   .</p>
 <p>Step Rep Bar Beat Clock</p>
-<p>Notice that two more parameters are added to the Edit In and Out Times: the Song Step number and the Repetition of that step are added to the Bar, Beat and Clock within the sequence that plays during the step. You can set the</p>
-<h3 id="in-or">IN or</h3>
-<p>OUT time to any point within the song.</p>
+<p>Notice that two more parameters are added to the Edit In and Out Times: the Song Step number and the Repetition of that step are added to the Bar, Beat and Clock within the sequence that plays during the step. You can set the IN or OUT time to any point within the song.</p>
 <p>Setting the Edit Times in Real Time If you know the exact bar, beat and clock (or step, rep, bar, beat and clock in song mode) at which you want to punch in and out, you can simply select and set the Edit Times using the data entry controls. If not, you can set them “on the fly” using the following procedure:</p>
 <p>• Press the soft button above IN to select the IN Edit Time.</p>
 <p>• Press <kbd class="button">Play</kbd> to begin playing the sequence or song.</p>

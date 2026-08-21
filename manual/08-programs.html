@@ -41,9 +41,7 @@
 <p>• Voices without brackets around the name are enabled for that patch and will play.</p>
 <p>• Brackets around the name mean that the voice is muted for that patch and will not play.</p>
 <p>• Asterisks (*) on both sides of the name mean that the voice is soloed for that patch, and all other voices are muted.</p>
-<p>The <kbd class="button">Patch Select</kbd> buttons are sent and received over</p>
-<h3 id="midi-as">MIDI as</h3>
-<p>MIDI controller #70, and will be recorded and played back by the sequencer like any other controller.</p>
+<p>The <kbd class="button">Patch Select</kbd> buttons are sent and received over MIDI as MIDI controller #70, and will be recorded and played back by the sequencer like any other controller.</p>
 <p><span class="function">Compare</span> — Using the <kbd class="button">Compare</kbd> Button As soon as you change any parameter in a program, the LED above the <kbd class="button">Compare</kbd> button will light. It will remain lit until you select another program or save (write) the newly edited program into memory. This is a constant reminder that something in the program has been changed.</p>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Compare</div></td></tr></table></aside>
 <p>To hear the original, unchanged program, press the <kbd class="button">Compare</kbd> button. The <span class="function">Compare</span> LED will go out, and you will hear the original sound and see the page with its original settings. Press <kbd class="button">Compare</kbd> again to return to your edited program. You can toggle back and forth between the original and the edited sound as often as you like.</p>
@@ -99,10 +97,7 @@
 <p><span class="page-name">Write Page</span> — Saving a New Program Into Memory Once you have modified an existing program or created an entirely new one, you can write or save that program to any User RAM location using the <span class="page-name">Write Page</span>. This page is also used to rename the program with the name of your choice.</p>
 <p>When you are ready to save a program into memory, first decide on a name of up to eleven characters for your new program. Then:</p>
 <p>• Press <kbd class="button">Write Program</kbd>. The <span class="page-name">Write Program page</span> appears as below, with the current program name showing. You will see a cursor, or underline, beneath the first letter of that name.</p>
-<p>• Edit the Program Name using the <kbd class="button">Data Entry Slider</kbd> and the two Move Cursor soft buttons, labeled</p>
-<p>LEFT and RIGHT. You can move the <kbd class="button">Data Entry Slider</kbd> up and down to scroll through the available characters, or step through them one at a time with the <kbd class="button">Up/Down Arrow</kbd> buttons. Find the first letter you want, then press the</p>
-<p>RIGHT button to move the cursor to the next location. Repeat this procedure until the display shows the name you have chosen (or if the</p>
-<p><span class="param">KBD-NAMING</span> parameter on the <span class="page-name">System page</span> is ON, you can use the keyboard to enter the name, as explained in <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System Page</span> Parameters</a>).</p>
+<p>• Edit the Program Name using the <kbd class="button">Data Entry Slider</kbd> and the two Move Cursor soft buttons, labeled LEFT and RIGHT. You can move the <kbd class="button">Data Entry Slider</kbd> up and down to scroll through the available characters, or step through them one at a time with the <kbd class="button">Up/Down Arrow</kbd> buttons. Find the first letter you want, then press the RIGHT button to move the cursor to the next location. Repeat this procedure until the display shows the name you have chosen (or if the <span class="param">KBD-NAMING</span> parameter on the <span class="page-name">System page</span> is ON, you can use the keyboard to enter the name, as explained in <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System Page</span> Parameters</a>).</p>
 <aside class="tip"><p>Moving the <kbd class="button">Data Entry Slider</kbd> all the way down gives you a blank space. Also, using dashes, periods and slashes between characters can make a sound name hold together better when displayed on Program Bank and Preset pages.</p></aside>
 <p>• Select a memory location for your new program. Press one of the <kbd class="button">Bank</kbd> buttons (0-9). As long as you hold the button down, the display will show the sound select page for that bank, with two differences:</p>
 <p>1) None of the program names are underlined, and</p>
@@ -127,7 +122,7 @@
 <p>• Press the soft button beneath MAKE COPY. This puts the current program into the copy buffer. The display briefly shows COPY COMPLETED and then returns to the <span class="page-name">Copy page</span>.</p>
 <p>• Press the RECALL soft button. This puts you back on the <span class="page-name">Write page</span>, with the new program showing. Now proceed exactly as described above to write the program to the new location.</p>
 <p>Voice Programming This section covers those functions which can be edited independently for each individual voice within the program.</p>
-<h3 id="programming">Programming</h3>
+<p>Programming</p>
 <p>LFO     Env 1   Env 2        Env 3</p>
 <h2 id="pitch-voice-programming-pages">Pitch                          Voice Programming Pages</h2>
 <p>Pitch  Filters    Output Mods</p>
@@ -161,10 +156,37 @@
 <table class="bullet-cols"><tr><td>• LFO — Low Frequency Oscillator</td><td>• PITCH — Pitch Bend Wheel</td></tr><tr><td>• NOISE — Noise Generator</td><td>• <span class="param">PEDAL</span> — Voltage Control Foot Pedal</td></tr><tr><td>• ENV-1 — Envelope 1</td><td>• TIMBR — Timbre Control</td></tr><tr><td>• ENV-2 — Envelope 2</td><td>• <span class="param">XCTRL</span> — External Controller (MIDI)</td></tr><tr><td>• MIXER — Mod Mixer/Shaper</td><td>• <span class="param">PRESS</span> — Pressure (After-touch)</td></tr><tr><td>• WL + PR — Wheel + Pressure</td><td>• KEYBD — Keyboard Tracking</td></tr><tr><td>• PR + VL — Pressure + Velocity</td><td>• VELOC — Velocity</td></tr><tr><td>• WHEEL — Modulation Wheel</td><td>• <span class="lcd">*<span class="value">OFF</span>*</span> — no modulation</td></tr></table>
 <p>• LFO — Low Frequency Oscillator The Low Frequency Oscillator generates only very low frequency waves, below the audio spectrum, which can produce vibrato, tremolo, and many other effects, depending on the LFO wave selected, and where it is applied as a modulator. There are seven possible waveshapes for the LFO.</p>
 <p>• NOISE — Noise Generator The Noise generator creates a randomly changing level. It is useful for modulating, among other things, the pitch of a voice (<span class="page-name">Pitch Mods page</span>). Applied to pitch with large modulation amounts, it tends to create strange “computer sound” effects. Small modulation amounts (around +02 to +04) can create a subtle random movement in the sound, which can impart a more natural quality.</p>
-<p>On the second sub-page of the</p>
-<p><span class="page-name">LFO page</span> (press</p>
-<p>LFO twice) there is a parameter labeled NOISE-RATE=##, which adjusts the rate at which the level of this modulator will change.</p>
-<p>• ENV-1, ENV-2, (ENV-3)</p>
+<p>On the second sub-page of the <span class="page-name">LFO page</span> (press <kbd class="button">LFO</kbd> twice) there is a parameter labeled NOISE-RATE=##, which adjusts the rate at which the level of this modulator will change.</p>
+<figure class="vfd-unit has-page">
+  
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">LFO</td><td class="cell">WAVESHAPE=TRIANGLE</td><td class="cell">RESTART-MODE=ON</td><td class="cell">&nbsp;</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PHASE=035</td><td class="cell">DELAY=25</td><td class="cell">NOISE-RATE=70</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  
+</figure>
 <p>The TS-10 has three complex Envelopes. Envelopes are used to create changes, over time, in pitch, brightness, volume, etc.</p>
 <p>&gt; ENV-1 is permanently routed to the pitch of the voice, though it can be assigned as a modulator elsewhere if you wish.</p>
 <p>&gt; ENV-2 is permanently routed to the filter cutoff frequency. It also can be assigned as a modulator elsewhere.</p>
@@ -172,9 +194,7 @@
 <p>• MIXER — Mod Mixer/Shaper</p>
 <p>The Mod Mixer/Shaper is a powerful feature which allows you to assign two modulation sources to one input, and to scale and shape the response of one of those modulators. The controls on the <span class="page-name">Mod Mixer page</span> are used to determine what will happen when MIXER is chosen as a modulator.</p>
 <p>• WL + PR — Wheel + Pressure</p>
-<p>This is one of two “combination” modulators. When selected, both the mod wheel and pressure will affect the level which is being modulated. This can be good for modulating</p>
-<p>LFO depth when using the</p>
-<p>LFO for vibrato. That way the player can use either to get vibrato.</p>
+<p>This is one of two “combination” modulators. When selected, both the mod wheel and pressure will affect the level which is being modulated. This can be good for modulating LFO depth when using the LFO for vibrato. That way the player can use either to get vibrato.</p>
 <p>• PR + VL — Pressure + Velocity Another combination modulator. When this modulator is selected, both pressure and velocity will affect the level which is being modulated.</p>
 <p>• WHEEL — Modulation Wheel</p>
 <p>The Mod Wheel to the left of the keyboard is assignable wherever a modulator is selected. To use the mod wheel for vibrato (one common application) WHEEL must be assigned to modulate the LFO, and the LFO Amount set to some number other than zero on the <span class="page-name">Pitch Mods Page</span>. The mod wheel’s effect is positive-going only, from 0 (wheel towards you) to +99 (wheel away from you). Negative modulation amounts will reverse the effect.</p>
@@ -182,30 +202,19 @@
 <p>This assigns the Pitch Wheel, located to the left of the mod wheel, as a modulator. It allows you to have the Pitch Wheel, in addition to bending the pitch of a note (its normal function), also affect some other level. Applied to the filter cutoff frequency, for example, this would cause notes to become brighter as you bend them upwards, and more muted as you bend them down (or the opposite with negative modulation amounts).</p>
 <p>• <span class="param">PEDAL</span> — Voltage Control Foot Pedal</p>
 <p>This selects the CVP-1 Foot Pedal, which can be plugged into the Pedal•CV jack on the TS-10 rear panel, as a modulator. Its effect will be the same as that of the mod wheel. It can be applied wherever a Modulator is selected.</p>
-<p>Note that the Foot Pedal will only act as a modulator when the Pedal Function Select parameter is set to <span class="param">PEDAL</span>=</p>
-<p><span class="value">MOD</span> on the <span class="page-name">System Page</span>. When that parameter is set to <span class="param">PEDAL</span>=</p>
-<p><span class="value">VOL</span> the Foot Pedal will act as a volume pedal, not as a modulator (though this has no effect on incoming MIDI Foot Pedal data). See <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System Page</span> Parameters</a> for more details.</p>
+<p>Note that the Foot Pedal will only act as a modulator when the Pedal Function Select parameter is set to <span class="lcd">PEDAL=MOD</span> on the <span class="page-name">System Page</span>. When that parameter is set to <span class="lcd">PEDAL=VOL</span> the Foot Pedal will act as a volume pedal, not as a modulator (though this has no effect on incoming MIDI Foot Pedal data). See <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System Page</span> Parameters</a> for more details.</p>
 <p>• TIMBR — Timbre Control</p>
 <p>This is a special modulator, which is intended as an “extra” real-time performance controller.</p>
 <p>TIMBR can be assigned like any other modulator wherever a modulation source is selected. It is controlled from the <span class="page-name">Timbre page</span> in the Track Parameters section.</p>
 <p>The Timbre parameter also controls the relative volume modulation amounts for each of the six program voices (assigned on the <span class="page-name">TIMBRE sub-page</span> found on the <span class="page-name">Program Control Page</span>). This allows you to determine how much louder or softer each voice will become as the Timbre modulation controller is increased or decreased.</p>
 <p>Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button twice to get to the <span class="page-name">Timbre sub-page</span>, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the Timbre modulator. Note that because it can be assigned to modulate any mod destination within a voice or effect, the Timbre control will not always necessarily adjust the tone color (which is what we normally associate with the word timbre) of a given sound, depending on what the programmer has chosen to do with it. As a rule, however, programmers are encouraged to make sure that Timbre always does something interesting to the sound.</p>
-<p>• <span class="param">XCTRL</span> — External Controller Like the</p>
-<p>TIMBR modulator, the External Controller (<span class="param">XCTRL</span>) modulator can be assigned to modulate any voice or effect modulation destination. Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button three times to get to the</p>
-<p><span class="page-name">XCTRL sub-page</span>, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the</p>
-<p><span class="param">XCTRL</span> modulator.</p>
-<p>In addition to using the Track</p>
-<p><span class="param">XCTRL</span> parameter, an external controller such as a Breath Controller, <kbd class="button">Data Entry Slider</kbd>, etc., that is received via</p>
-<p>MIDI from another synthesizer or</p>
-<p>MIDI controller, will modulate any voice or effect parameter that has</p>
-<p><span class="param">XCTRL</span> assigned as a modulator. On the <span class="page-name">MIDI Control Page</span>, you select the MIDI Controller number of the external controller that will be recognized by the TS-10.</p>
+<p>• <span class="param">XCTRL</span> — External Controller Like the TIMBR modulator, the External Controller (<span class="param">XCTRL</span>) modulator can be assigned to modulate any voice or effect modulation destination. Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button three times to get to the <span class="page-name">XCTRL sub-page</span>, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the <span class="param">XCTRL</span> modulator.</p>
+<p>In addition to using the Track <span class="param">XCTRL</span> parameter, an external controller such as a Breath Controller, <kbd class="button">Data Entry Slider</kbd>, etc., that is received via MIDI from another synthesizer or MIDI controller, will modulate any voice or effect parameter that has <span class="param">XCTRL</span> assigned as a modulator. On the <span class="page-name">MIDI Control Page</span>, you select the MIDI Controller number of the external controller that will be recognized by the TS-10.</p>
 <p>You don’t have to be playing the TS-10 from an external instrument for this to work. For example, if you have a keyboard with a Breath Controller:</p>
 <p>1) Connect its MIDI Out to the TS-10 MIDI In</p>
 <p>2) Make sure both instruments have controllers enabled (<span class="page-name">MIDI Control page</span>)</p>
 <p>3) Select Breath Controller as the external controller that will be received by the TS-10 (<span class="lcd">XCTRL=02</span>, also on the <span class="page-name">MIDI Control Page</span>)</p>
-<p>4) assign</p>
-<h3 id="xctrl-as-a-modulator-for">XCTRL as a Modulator for</h3>
-<p>LFO level, Filter Cutoff frequency, or some other manual level within a voice</p>
+<p>4) assign <span class="param">XCTRL</span> as a Modulator for LFO level, Filter Cutoff frequency, or some other manual level within a voice</p>
 <p>5) play the sound from the TS-10 keyboard, while blowing into the Breath Controller connected to the sending instrument. The modulation will have the same effect as if you were playing from the sending instrument.</p>
 <p>• <span class="param">PRESS</span> — Pressure (After-touch) Pressure, also called after-touch, is a modulator which varies a manual level within a voice depending on how hard you press down on a key or keys. After you have struck a key, and while the note is sustaining, continuing to press down harder on the key brings in pressure.</p>
 <p>The TS-10 keyboard generates pressure, and by using this modulator you can add a tremendous amount of expression to your sounds without ever taking your hands off the keyboard.</p>
@@ -222,9 +231,7 @@
 <p>-100</p>
 <p>TS-10 keyboard</p>
 <p>76-note keyboard</p>
-<p>MIDI  Key numbers 0-127 As the above illustration shows, the effect of</p>
-<p>KEYBD as a modulator goes negative as well as positive. The effect of</p>
-<p>KEYBD is to reduce the Level on notes below the break point (F4+), and increase levels above that point. Negative Modulation depths will do the opposite.</p>
+<p>MIDI  Key numbers 0-127 As the above illustration shows, the effect of KEYBD as a modulator goes negative as well as positive. The effect of KEYBD is to reduce the Level on notes below the break point (F4+), and increase levels above that point. Negative Modulation depths will do the opposite.</p>
 <p>• VELOC — Velocity Velocity means how hard you strike a key. Selecting VELOC as a Modulator allows you to modulate any manual level with velocity. Velocity as a modulation source only goes positive (though assigning a negative modulation amount will make the net result be to reduce the level with increased velocity).</p>
 <p>• <span class="lcd">*<span class="value">OFF</span>*</span> Modulation is disabled.</p>
 <h2 id="wave-page">Wave Page</h2>
@@ -244,9 +251,7 @@
 <p>• <span class="lcd">WAVEFORM</span> - A waveform is a single cycle of a sound repeated over and over. The TS-10 contains both sampled and synthetic waveforms. Waveforms such as Sawtooth and Square can be used to reproduce a wide array of analog synth sounds.</p>
 <p>• <span class="lcd">INHARMONIC</span> - Inharmonic loops are similar to waveforms except that they contain many cycles of the sound and can therefore contain inharmonics — frequencies which are not exact multiples of the fundamental frequency.</p>
 <p>• <span class="lcd">TRANSWAVE</span> - is a special class of waves. Each Transwave consists of many single-cycle waveforms, each with a different harmonic spectrum. The playback parameters allow you to start the wave playing at any one of these waveforms and move through the wavetable, continually varying the timbre of the sound, using any of the 15 modulators.</p>
-<p>The last two wave classes are unique in that they are only available when OPTION=</p>
-<h3 id="wave-list-or">WAVE-LIST or</h3>
-<p><span class="lcd">DRUM-MAP</span> on the <span class="page-name">Program Control page</span>:</p>
+<p>The last two wave classes are unique in that they are only available when <span class="lcd">OPTION=WAVE-LIST</span> or <span class="lcd">DRUM-MAP</span> on the <span class="page-name">Program Control page</span>:</p>
 <p>• <span class="lcd">WAVE-LIST</span> - up to sixteen user-definable waveforms are linked together to create a single wave-list. Any of the internal waveforms can be used, and can be played in any order, forward or backward, to create effects and “jam-loops.”</p>
 <p>• <span class="lcd">DRUM-MAP</span> - Up to 61 different waves can be assigned to each key of the keyboard to create “custom” drum-maps. Individual keys can be assigned their own volume levels, panning, pitch, and voice parameter template.</p>
 <p>Complete  TS-10 ROM Wave Catalog The wave class is shown in bold at the top of each ROM Wave group.</p>
@@ -353,27 +358,17 @@
 <p>Based on the current copy context, this command will copy a set of parameters into the copy buffer. The copy buffer is a separate buffer into which the copy utility will copy data without affecting the current edit program in the compare buffer. Remember that MAKE COPY has no effect on the compare buffer or the selected program or voice.</p>
 <h3 id="recall">RECALL</h3>
 <p>This command will copy parameters back from the copy buffer into the compare buffer where the edit program resides, again according to the copy context. Pressing the soft button below RECALL causes the indicated data set to be copied, and the display returns to the <span class="page-name">Copy page</span>.</p>
-<p>The</p>
-<p>RECALL function always copies data into the compare buffer. If the compare buffer is selected (i.e. the <span class="function">Compare</span></p>
-<p>LED is on) at the time you perform a recall, then the data is added to the edited program in the compare buffer. If the compare buffer is not selected then the compare buffer is loaded with the currently selected primary program before the recall is completed. The compare buffer is always selected after a recall.</p>
+<p>The RECALL function always copies data into the compare buffer. If the compare buffer is selected (i.e. the <span class="function">Compare</span> LED is on) at the time you perform a recall, then the data is added to the edited program in the compare buffer. If the compare buffer is not selected then the compare buffer is loaded with the currently selected primary program before the recall is completed. The compare buffer is always selected after a recall.</p>
 <p>If <span class="function">Group Edit</span> is active when pages of voice parameters are recalled, then the recall will affect all of the voices in the group. The data being recalled will be written into all of the grouped voices in the compare buffer at the same time. For example, you could make a copy of an envelope page from one voice and then recall it into a group of voices in one step. <span class="function">Group Edit</span> has no effect when recalling effects, complete voices, pitch tables, or complete programs.</p>
-<p>Special Recall Functions There are several exceptions to the normal pattern of operation in the</p>
-<p>RECALL function. The first exceptions occur with the Envelope and Filter contexts. When the copy context is set to any of the Filter or Envelope settings, pressing</p>
-<p>RECALL will display an additional page which allows you to select the source and destination pages for the parameter transfer. This allows you to copy information between different envelopes and filters.</p>
+<p>Special Recall Functions There are several exceptions to the normal pattern of operation in the RECALL function. The first exceptions occur with the Envelope and Filter contexts. When the copy context is set to any of the Filter or Envelope settings, pressing RECALL will display an additional page which allows you to select the source and destination pages for the parameter transfer. This allows you to copy information between different envelopes and filters.</p>
 <h4 id="select-source" class="param-name">Select Source</h4>
 <h4 id="envelope-number" class="param-name">Envelope Number</h4>
 <p>Select Destination</p>
 <h4 id="envelope-number-2" class="param-name">Envelope Number</h4>
-<p>The sample screen shown above illustrates the</p>
-<p><span class="page-name">RECALL sub-page</span> for the</p>
-<p>ENVELOPE context.</p>
-<p>The Source Envelope number controls which envelope in the copy buffer will be used by the recall, and the Destination Envelope number determines which envelope in the compare buffer will be replaced with the new data being recalled. The default settings are always the same number for source and destination. If you want to copy across from one envelope to another, you must set the source and destination envelope numbers accordingly. The</p>
-<p><span class="page-name">RECALL sub-page</span> for the</p>
-<p>FILTER context is similar in appearance and function.</p>
+<p>The sample screen shown above illustrates the <span class="page-name">RECALL sub-page</span> for the ENVELOPE context.</p>
+<p>The Source Envelope number controls which envelope in the copy buffer will be used by the recall, and the Destination Envelope number determines which envelope in the compare buffer will be replaced with the new data being recalled. The default settings are always the same number for source and destination. If you want to copy across from one envelope to another, you must set the source and destination envelope numbers accordingly. The <span class="page-name">RECALL sub-page</span> for the FILTER context is similar in appearance and function.</p>
 <p>Remember that the copy buffer always contains copies of each of the three envelopes and two filters, regardless of whether you last used an envelope, filter, voice, or program copy function.</p>
-<p>Another exception occurs in the</p>
-<p>PROGRAM context. Pressing</p>
-<p>RECALL from this context will take you directly to the <span class="page-name">Write page</span>. The compare buffer is loaded with the same information as the copy buffer whenever you recall an entire program, and you are ready to save the program in a new location.</p>
+<p>Another exception occurs in the PROGRAM context. Pressing RECALL from this context will take you directly to the <span class="page-name">Write page</span>. The compare buffer is loaded with the same information as the copy buffer whenever you recall an entire program, and you are ready to save the program in a new location.</p>
 <p>The system will alert you if you try to recall into a context different than the last copy action that was performed. This prevents you from mistakenly recalling a fragmented voice, program or pitch-table.</p>
 <p>Special Copy Operations There are also some special command options that appear in the display (above the lower left soft button) for certain copy contexts.</p>
 <h3 id="default">DEFAULT</h3>
@@ -395,16 +390,10 @@
 <p>FAST ATCK PAD            SFORZANDO                PITCH DOWN 2</p>
 <p>SLOW ATCK PAD            SLOW REPEAT              ALL ZEROS</p>
 <p>SLOW ATCK/REL            SLOW LFO</p>
-<p>Select the default envelope type using the <kbd class="button">Data Entry Slider</kbd> or the Up/Down Arrows and press</p>
-<p><span class="lcd">*YES*</span> if you wish to install the selected envelope type into the envelope number shown on the upper line of the display. Press</p>
-<p><span class="lcd">*NO*</span> to return to the <span class="page-name">Copy page</span> without performing any action.</p>
+<p>Select the default envelope type using the <kbd class="button">Data Entry Slider</kbd> or the Up/Down Arrows and press <span class="lcd">*YES*</span> if you wish to install the selected envelope type into the envelope number shown on the upper line of the display. Press <span class="lcd">*NO*</span> to return to the <span class="page-name">Copy page</span> without performing any action.</p>
 <h3 id="system">SYSTEM</h3>
 <p>For the PITCHTABLE parameter context only:</p>
-<p>When entered from the Edit Pitch-table pages, the <span class="page-name">Copy page</span> shows the</p>
-<p>SYSTEM command on the lower left part of the display. This command will copy the pitch-table directly from the currently program, or from the compare buffer if the <span class="function">Compare</span></p>
-<p>LED is on, into the system pitchtable. It is not necessary to use the MAKE</p>
-<p>COPY command in this case. Using this command will automatically set the SYSTEM</p>
-<p>PITCH-TABLE parameter on the <span class="page-name">System page</span> to CUSTOM, thereby selecting the newly installed pitch-table for use as the System pitch-table.</p>
+<p>When entered from the Edit Pitch-table pages, the <span class="page-name">Copy page</span> shows the SYSTEM command on the lower left part of the display. This command will copy the pitch-table directly from the currently program, or from the compare buffer if the <span class="function">Compare</span> LED is on, into the system pitchtable. It is not necessary to use the MAKE COPY command in this case. Using this command will automatically set the SYSTEM PITCH-TABLE parameter on the <span class="page-name">System page</span> to CUSTOM, thereby selecting the newly installed pitch-table for use as the System pitch-table.</p>
 <h3 id="some-useful-applications-of-the-copy-functions">Some Useful Applications of the Copy Functions</h3>
 <h3 id="copying-an-effect-from-one-program-to-another">Copying an effect from one program to another</h3>
 <p>• Press <kbd class="button">Sounds</kbd> and select the program whose effect you wish to copy.</p>
@@ -440,10 +429,7 @@
 <p>• Press <kbd class="button">Copy</kbd> and make sure that the copy context is PROGRAM PARAMETERS.</p>
 <p>• Press the soft button below the MAKE COPY option to copy the compare buffer into the copy buffer.</p>
 <p>Collecting parts from several sources into the copy buffer While you can only make a single copy of an entire voice or program at one time, it is possible to make consecutive copies of multiple pages of parameters before recalling the data you have copied. These pages can even be taken from different voices or different programs.</p>
-<p>For example, using the normal MAKE</p>
-<p>COPY process, you can make copies of one or more envelope pages, followed by an</p>
-<p><span class="page-name">LFO page</span> and a wave page. A single copy of each of these pages is saved into the copy buffer. You can then start recalling the pages you want into the compare buffer using the normal</p>
-<p>RECALL procedure described above. The data you copied will remain intact until you copy a complete voice or program, which will replace the contents of the copy buffer.</p>
+<p>For example, using the normal MAKE COPY process, you can make copies of one or more envelope pages, followed by an <span class="page-name">LFO page</span> and a wave page. A single copy of each of these pages is saved into the copy buffer. You can then start recalling the pages you want into the compare buffer using the normal RECALL procedure described above. The data you copied will remain intact until you copy a complete voice or program, which will replace the contents of the copy buffer.</p>
 <p>About <dfn class="term">Pitch-Tables</dfn> Alternate pitch-tables enable you to chart new musical territories as well as explore ancient and ethnic tunings. In Western music, equal temperament has been the dominant tuning for the last one hundred and fifty years, and is really a musical compromise. In equal temperament, all intervals are equally out of tune. However, this compromise is what allows our music to remain relatively in tune as we modulate from one key to another.</p>
 <p>Equal temperament evolved out of other systems of tuning — such as just intonation — where intervals in a scale are tuned perfectly. The difficulty with perfectly-tuned scales is that you can’t modulate keys as universally as with equal temperament. Nonetheless, computer technology — keep in mind your TS-10 is in fact a computer — has made it easy to create and employ alternate pitch-tables.</p>
 <p>Imagine starting a piece in equal temperament, modulating to Pythagorean, then Werckmeister, then 19 tone, and back to equal temperament, simply by changing Programs. Sound interesting?</p>
@@ -490,9 +476,7 @@
   
 </figure>
 <p>As mentioned earlier, whenever you create a custom pitch-table, the TS-10 will delete voices 5 and 6, and use the memory normally occupied by those parameters to store the pitch-table.</p>
-<p>• Press the soft button underneath</p>
-<p>PITCH-TABLE to REPLACE VOICES 5+6. This takes you to the <span class="page-name">Select Voice page</span>, which now shows the words EDIT</p>
-<p>PITCH-TABLE where voices 5 and 6 once were.</p>
+<p>• Press the soft button underneath PITCH-TABLE to REPLACE VOICES 5+6. This takes you to the <span class="page-name">Select Voice page</span>, which now shows the words EDIT PITCH-TABLE where voices 5 and 6 once were.</p>
 <p>We have just created a custom pitch-table with variable pitch values for each key. Keep in mind that the custom pitch-table will sound the same as the System pitch-table until you edit it. We will do this a bit later.</p>
 <p>When you create a pitch-table and start editing it, you are in the edit buffer (the <span class="function">Compare</span> light is on), and all edits will affect the data in the edit buffer, and not the program’s memory. If you use the copy function while the compare light is on, the TS-10 will copy the data in the edit buffer, and not the program’s memory.</p>
 <p>First, we need to select which of the four voices will use the custom pitch-table:</p>
@@ -555,9 +539,7 @@
 <p>• Press the soft button above <span class="lcd">*CALCULATOR*</span>. The display reads something like this:</p>
 <p>The KEY-RANGE defines the area of the keyboard that the TS-10 will use as a reference by which to make its calculations.</p>
 <p>To set the key-range:</p>
-<p>• The</p>
-<p>START key (the first of the two key numbers shown) should be underlined. If not, press the soft button beneath it to select it. Now, play C4 (middle C) on the keyboard. The underline jumps to the</p>
-<p>END key.</p>
+<p>• The START key (the first of the two key numbers shown) should be underlined. If not, press the soft button beneath it to select it. Now, play C4 (middle C) on the keyboard. The underline jumps to the END key.</p>
 <p>• The END key should now be underlined. Play C5 on the keyboard. The parameter should read: KEY-RANGE START/END C4 – C5. You have defined the key range whose pitch intervals you want to duplicate over the entire keyboard.</p>
 <p>Note that you can also set the start and end keys using the data entry controls, and press the soft button beneath them to toggle back and forth.</p>
 <p>We began editing our pitch-table with note C4 and ended our editing with C5. This is the keyrange for this particular pitch-table. Extrapolate will take the intervals between the notes in our one-octave custom pitch-table and apply them to the rest of the keyboard, resulting in a</p>
@@ -621,23 +603,14 @@
   
 </figure>
 <p>• Note that the System PITCH-TABLE parameter has been set to CUSTOM. Now all programs whose voices are set to use the system pitch-table (which is most programs) will use the custom pitch-table.</p>
-<p>To return all programs to standard equi-tempered tuning, set the System</p>
-<p>PITCH-TABLE parameter back to <span class="value">NORMAL</span>. Switching back to</p>
-<p>CUSTOM will restore your custom System pitch-table. You can switch back and forth as often as you wish. You can also try installing other custom pitch-tables in the System, but the System pitch-table can only contain one custom pitchtable at a time.</p>
+<p>To return all programs to standard equi-tempered tuning, set the System PITCH-TABLE parameter back to <span class="value">NORMAL</span>. Switching back to CUSTOM will restore your custom System pitch-table. You can switch back and forth as often as you wish. You can also try installing other custom pitch-tables in the System, but the System pitch-table can only contain one custom pitchtable at a time.</p>
 <p>Dynamic <dfn class="term">Pitch-Table</dfn> Selection The TS-10 allows you to easily switch between different system pitch-tables in performance situations. With <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> (on the <span class="page-name">System Page</span>), you can instantly load new CUSTOM system pitch-tables without affecting the sound you are playing by selecting programs in <dfn class="term">BankSet</dfn> U1. This allows you to change the tuning while playing, and without having to actually select a different sound.</p>
 <p>In order for this feature to work correctly, you must set the system pitch-table switch to <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System page</span> before “selecting” a new pitch-table program. If the program you indicate contains a valid pitch-table, it will be installed into the CUSTOM System pitch-table, and you will immediately hear the new tuning. If it does not, nothing will happen. In either case there will be no visible indication of your action. The program name will not be underlined when you “select” it, which is a good indication that you are using a pitchtable from a program in <dfn class="term">BankSet</dfn> U1.</p>
-<p>You may save programs (with or without pitch-tables) onto <dfn class="term">BankSet</dfn> U1 in the normal way. It is suggested that you name programs that are to be used to install pitch-tables with names that describe the pitch-table they contain. For example, naming a program PT-PYTHA-F describes it as follows:</p>
-<p>PT for pitch-table program;</p>
-<p>PYTHA for Pythagorean tuning; and F for the tone center.</p>
+<p>You may save programs (with or without pitch-tables) onto <dfn class="term">BankSet</dfn> U1 in the normal way. It is suggested that you name programs that are to be used to install pitch-tables with names that describe the pitch-table they contain. For example, naming a program PT-PYTHA-F describes it as follows: PT for pitch-table program; PYTHA for Pythagorean tuning; and F for the tone center.</p>
 <p>This naming scheme is useful in making pitch-table programs easily recognizable.</p>
-<p>In</p>
-<p>MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and MONO A, incoming</p>
-<p>MIDI program changes 0 to 59 will select pitch-tables from <dfn class="term">BankSet</dfn> U1, if PITCH-TABLE=U1-</p>
-<p>PROGRAMS on the <span class="page-name">System page</span>.</p>
+<p>In MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and MONO A, incoming MIDI program changes 0 to 59 will select pitch-tables from <dfn class="term">BankSet</dfn> U1, if <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System page</span>.</p>
 <p>For more information about the MIDI <span class="param">MODE</span> parameter, see <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control Page</span> Parameters</a>.</p>
-<p>About <dfn class="term">Wave-Lists</dfn> <dfn class="term">Hyper-Wave</dfn>™ architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn class="term">Hyper-Waves</dfn> are created by selecting</p>
-<h3 id="wave-list-with-the">WAVE-LIST with the</h3>
-<p>OPTION parameter found on the <span class="page-name">Program Control page</span> (replacing voices 5 and 6 in a program). Note that when using a <dfn class="term">Wave-List</dfn>, your polyphony is halved. This is to allow smooth transitions with the <dfn class="term">Wave-List</dfn> XFADE-TIME (crossfade time) parameter, which requires two voices playing at the same time.</p>
+<p>About <dfn class="term">Wave-Lists</dfn> <dfn class="term">Hyper-Wave</dfn>™ architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn class="term">Hyper-Waves</dfn> are created by selecting <span class="lcd">WAVE-LIST</span> with the OPTION parameter found on the <span class="page-name">Program Control page</span> (replacing voices 5 and 6 in a program). Note that when using a <dfn class="term">Wave-List</dfn>, your polyphony is halved. This is to allow smooth transitions with the <dfn class="term">Wave-List</dfn> XFADE-TIME (crossfade time) parameter, which requires two voices playing at the same time.</p>
 <p><dfn class="term">Wave-Lists</dfn> have their own specific parameters, and are described in the following section.</p>
 <h4 id="how-to-create-a-wave-list">How to Create a Wave-List</h4>
 <p>• Select a program into which you want to install a custom wave-list.</p>
@@ -675,11 +648,7 @@
   
 </figure>
 <p>Whenever you create a wave-list, the TS-10 will delete voices 5 and 6, and use the memory normally occupied by those parameters to store the wave-list.</p>
-<p>• Press the soft button underneath</p>
-<p><span class="lcd">WAVE-LIST</span> to replace voices 5 &amp; 6, and create a new default wave-list in the program. Selecting</p>
-<p><span class="lcd">WAVE-LIST</span> will also display the <span class="page-name">Select Voice page</span> with the EDIT</p>
-<p><span class="lcd">WAVE-LIST</span> option activated. Note that the <span class="page-name">Program Control page</span> will now show OPTION=</p>
-<p><span class="lcd">WAVELIST</span> to indicate that a wave-list is active in the program. The display shows:</p>
+<p>• Press the soft button underneath <span class="lcd">WAVE-LIST</span> to replace voices 5 &amp; 6, and create a new default wave-list in the program. Selecting <span class="lcd">WAVE-LIST</span> will also display the <span class="page-name">Select Voice page</span> with the EDIT <span class="lcd">WAVE-LIST</span> option activated. Note that the <span class="page-name">Program Control page</span> will now show <span class="lcd">OPTION=WAVELIST</span> to indicate that a wave-list is active in the program. The display shows:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -818,9 +787,7 @@
   
   
 </figure>
-<h3 id="the-make">The MAKE</h3>
-<p>COPY option allows you to make a copy of the complete <dfn class="term">Wave-List</dfn> from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer. Pressing the lower right soft button beneath MAKE</p>
-<p>COPY will complete the command, and will show COPY</p>
+<p>The MAKE COPY option allows you to make a copy of the complete <dfn class="term">Wave-List</dfn> from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer. Pressing the lower right soft button beneath MAKE COPY will complete the command, and will show COPY</p>
 <p>COMPLETED before returning to the <span class="page-name">Copy page</span>.</p>
 <p>The RECALL option allows you to recall the complete <dfn class="term">Wave-List</dfn> from the Copy Buffer into an edited version of the current program if 1) the current program has a <dfn class="term">Wave-List</dfn> installed in it and</p>
 <p>2) the Copy buffer contains a <dfn class="term">Wave-List</dfn>. If you attempt to recall a <dfn class="term">Wave-List</dfn> into a program without just previously having copied a <dfn class="term">Wave-List</dfn> into the Copy buffer, the copy is not completed and the following message is displayed:</p>
@@ -899,10 +866,7 @@
   
 </figure>
 <p>Whenever you create a custom drum-map, the TS-10 will delete voices 5 and 6, and use the memory normally occupied by those parameters to store the drum-map.</p>
-<p>• Press the soft button underneath</p>
-<p><span class="lcd">DRUM-MAP</span> to replace voices 5 &amp; 6, and create a new default drum-map in the program. Selecting</p>
-<p><span class="lcd">DRUM-MAP</span> will also display the <span class="page-name">Select Voice page</span> with the Edit <dfn class="term">Drum-Map</dfn> option activated. Note that the <span class="page-name">Program Control page</span> will now show OPTION=</p>
-<p><span class="lcd">DRUM-MAP</span> to indicate that a drum-map is active in the program. The display looks something like this:</p>
+<p>• Press the soft button underneath <span class="lcd">DRUM-MAP</span> to replace voices 5 &amp; 6, and create a new default drum-map in the program. Selecting <span class="lcd">DRUM-MAP</span> will also display the <span class="page-name">Select Voice page</span> with the Edit <dfn class="term">Drum-Map</dfn> option activated. Note that the <span class="page-name">Program Control page</span> will now show <span class="lcd">OPTION=DRUM-MAP</span> to indicate that a drum-map is active in the program. The display looks something like this:</p>
 <p>• Select one of the four available voices. In the example above, the first voice is selected</p>
 <p>• Press the <kbd class="button">Wave</kbd> button. The display shows:</p>
 <figure class="vfd-unit has-page">
@@ -936,11 +900,7 @@
   
 </figure>
 <p>• As you can see, activating a <dfn class="term">Drum-Map</dfn> in a Program automatically changes the Wave for the four remaining voices to <dfn class="term">Drum-Map</dfn>. Your edited program now contains a <dfn class="term">Drum-Map</dfn> and all four voices will play the <dfn class="term">Drum-Map</dfn>.</p>
-<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the</p></aside>
-<h3 id="octave-and">OCTAVE and</h3>
-<p>SEMITONE values on the</p>
-<p><span class="page-name">PITCH page</span> will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the</p>
-<p>PITCH parameter in the Drum Map Editor.</p>
+<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the OCTAVE and SEMITONE values on the <span class="page-name">PITCH page</span> will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the Drum Map Editor.</p></aside>
 <p>Editing a <dfn class="term">Drum-Map</dfn> When a <dfn class="term">Drum-Map</dfn> is active within the current program, the <span class="page-name">Select Voice page</span> looks something like this:</p>
 <figure class="vfd-unit has-page">
   
@@ -1051,9 +1011,7 @@
 </figure>
 <p><span class="page-name">Map Editor page</span> when you pressed <kbd class="button">Copy</kbd>).</p>
 <p>You can specify the range of keys in the drum-map to be filled by selecting the KEY–RANGE START/END parameter and then playing the lowest and then highest key of the range. You can also edit these parameters using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Press the soft button to select between the Start and End key fields.</p>
-<h3 id="selecting">Selecting</h3>
-<p><span class="lcd">*COPY*</span> will complete the command and will show COPY</p>
-<p>DONE before returning to the <span class="page-name">Copy page</span>.</p>
+<p>Selecting <span class="lcd">*COPY*</span> will complete the command and will show COPY DONE before returning to the <span class="page-name">Copy page</span>.</p>
 <p>Selecting <span class="lcd">*EXIT*</span> will simply return the <span class="page-name">Copy page</span> without affecting the <dfn class="term">Drum-Map</dfn>.</p>
   </article>
   <footer class="site-footer">

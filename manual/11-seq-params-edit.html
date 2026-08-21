@@ -99,11 +99,7 @@
 <p>• Pressing <span class="lcd">*NO*</span> will abort the procedure and leave Song Track 12 intact.</p>
 <p><span class="page-name">INFO Sub-Page</span> Pressing the soft button above INFO displays a page containing information about the song, including the song name, the size in blocks, the song tempo offset, number of steps, and the elapsed time at the current tempo. From this page, you can also rename the song, and adjust the tempo offset. The parameters on this page are:</p>
 <h4 id="name" class="param-name">NAME</h4>
-<p>Used to rename the song. Pressing the soft button above the Song Name displays a sub-page which allows you to edit the name of the song. Use the data entry controls and the</p>
-<h3 id="left-and">LEFT and</h3>
-<p>RIGHT cursor buttons to rename the song. Then press</p>
-<p><span class="lcd">*SAVE*</span> to return to the</p>
-<p><span class="page-name">INFO page</span> with the new name.</p>
+<p>Used to rename the song. Pressing the soft button above the Song Name displays a sub-page which allows you to edit the name of the song. Use the data entry controls and the LEFT and RIGHT cursor buttons to rename the song. Then press <span class="lcd">*SAVE*</span> to return to the <span class="page-name">INFO page</span> with the new name.</p>
 <h4 id="size" class="param-name"><span class="param">SIZE</span><span class="range">Range: (read only)</span></h4>
 <p>This read only parameter displays the size of the current song in blocks. Blocks are the units of 512 bytes used by the sequencer and disk memory management software. One block generally represents 128 events, though this is only an approximation and depends on the specific data recorded.</p>
 <h4 id="tempo" class="param-name"><span class="param">TEMPO</span><span class="range">Range: -64 to +63, or EXT</span></h4>
@@ -116,18 +112,13 @@
 <p>The Erase command will erase the currently selected song and leave its location undefined. First, make sure the Song you want to erase is selected. Then:</p>
 <p>• Press <kbd class="button">Edit Song</kbd>.</p>
 <p>• Press the soft button beneath ERASE. The display asks ERASE CURRENT SONG &lt;SONG NAME&gt; FROM LOCATION ##?</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to erase and undefine the song, or press</p>
-<p><span class="lcd">*NO*</span> to cancel.</p>
+<p>• Press <span class="lcd">*YES*</span> to erase and undefine the song, or press <span class="lcd">*NO*</span> to cancel.</p>
 <h4 id="copy">COPY</h4>
 <p>Use this command to copy the currently selected song into another sequencer location. Note that the original song remains intact in its original location. First, make sure the Song you want to copy is selected. Then:</p>
 <p>• Press <kbd class="button">Edit Song</kbd>.</p>
 <p>• Press the soft button beneath COPY. The display shows:</p>
 <p>• Use the data entry controls to select a location for the copied song. Note that only undefined sequencer locations will be available for selecting.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to copy the song to the new location (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). The new song will be given the same name as the original one you copied. You can rename it from the Edit Song</p>
-<p><span class="page-name">INFO page</span> as described above.</p>
+<p>• Press <span class="lcd">*YES*</span> to copy the song to the new location (or press <span class="lcd">*NO*</span> to cancel). The new song will be given the same name as the original one you copied. You can rename it from the <span class="page-name">Edit Song INFO page</span> as described above.</p>
 <p><span class="page-name">EDIT  STEPS Page</span> Pressing EDIT STEPS displays the song step editor page. Here you chain sequences together to define the basic structure of the song.</p>
 <p>A song is composed of Steps. Each Step consists of:</p>
 <p>• A sequence which will play during that step,</p>
@@ -168,18 +159,11 @@
 <p>• Press APPEND. The display shows:</p>
 <p>• Use the data entry controls to select the sequence which will be appended to the current sequence. The default source is the current sequence, which allows the current sequence to be easily appended to itself.</p>
 <p>• The bottom of the display shows the destination sequence, and the total number of bars in the current sequence.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to append the sequence specified in the top line of the display onto the end of the current sequence (or press</p>
-<p><span class="lcd">*NO*</span> to cancel).</p>
+<p>• Press <span class="lcd">*YES*</span> to append the sequence specified in the top line of the display onto the end of the current sequence (or press <span class="lcd">*NO*</span> to cancel).</p>
 <h4 id="info">INFO</h4>
 <p>Selecting INFO displays a page of information about the currently selected sequence, including the name, the size in blocks, the tempo, the number of bars and the elapsed time at the current tempo. The tempo is the only field which can be directly edited, but the elapsed time field will be updated to reflect the new tempo.</p>
 <h4 id="name-2" class="param-name">NAME</h4>
-<p>Pressing the soft button above the sequence</p>
-<p>NAME displays a sub-page which allows you to edit the name of the sequence. Use the data entry controls and the</p>
-<h3 id="left-and-2">LEFT and</h3>
-<p>RIGHT cursor buttons to rename the sequence. Then press</p>
-<p><span class="lcd">*SAVE*</span> to return to the</p>
-<p><span class="page-name">INFO page</span>.</p>
+<p>Pressing the soft button above the sequence NAME displays a sub-page which allows you to edit the name of the sequence. Use the data entry controls and the LEFT and RIGHT cursor buttons to rename the sequence. Then press <span class="lcd">*SAVE*</span> to return to the <span class="page-name">INFO page</span>.</p>
 <h4 id="size-2" class="param-name"><span class="param">SIZE</span><span class="range">Range: (read only)</span></h4>
 <p>Displays the size of the current sequence in events.</p>
 <h4 id="tempo-2" class="param-name"><span class="param">TEMPO</span><span class="range">Range: 025 to 250, or EXT</span></h4>
@@ -195,19 +179,14 @@
 <p>The Erase command will delete the currently selected sequence from memory and leave its location undefined (-BLANK-). This command can also be used to erase all song tracks (when a song is selected). First, make sure the sequence you want to erase is selected. Then:</p>
 <p>• Press <kbd class="button">Edit Sequence</kbd>.</p>
 <p>• Press ERASE. The display asks ERASE CURRENT SEQ &lt;SEQ-NAME&gt; FROM LOCATION ##?</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to erase and undefine the sequence, or press</p>
-<p><span class="lcd">*NO*</span> to cancel.</p>
+<p>• Press <span class="lcd">*YES*</span> to erase and undefine the sequence, or press <span class="lcd">*NO*</span> to cancel.</p>
 <h4 id="copy-2">COPY</h4>
 <p>Use this command to make a copy of the currently selected sequence in another sequencer location. If this command is used on a song, it will copy the song track data only into a new sequence. This command only copies the saved Track Parameter settings; it will not copy any temporary Track Parameter edits you may have made. Note that the original sequence or song remains intact in its original location. First, make sure the sequence you want to copy is selected.</p>
 <p>Then:</p>
 <p>• Press <kbd class="button">Edit Sequence</kbd>.</p>
 <p>• Press COPY. The display shows:</p>
 <p>• Use the data entry controls to select a location for the copied sequence. Note that only - BLANK- sequencer locations will be available for selecting.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to copy the sequence (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). The new sequence will be given the same name as the original sequence. You can then rename it from the Edit Sequence/</p>
-<p><span class="page-name">INFO page</span> if you wish.</p>
+<p>• Press <span class="lcd">*YES*</span> to copy the sequence (or press <span class="lcd">*NO*</span> to cancel). The new sequence will be given the same name as the original sequence. You can then rename it from the Edit Sequence/<span class="page-name">INFO page</span> if you wish.</p>
 <h4 id="length-add-and-delete-bars-from-a-sequence">LENGTH — Add and Delete Bars from a Sequence</h4>
 <p>Though the length of the first track determines the length of the sequence, you can use the Add Bars and Delete Bars functions to add empty bars, starting from any bar within the sequence, or to remove any number of bars from the sequence.</p>
 <p>From the <span class="page-name">Edit Sequence page</span>, press LENGTH. The display shows:</p>
@@ -224,9 +203,7 @@
 <p>&gt; Selecting any other bar will cause bars to be added starting from that point in the sequence.</p>
 <p>• Press the soft button above ADD ## BARS.</p>
 <p>• Use the data entry controls to select how many bars you want to add. You can add any number up to a total sequence length of 999 bars. Empty bars (no track data) will be added beginning from the bar selected in the previous step.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to complete the command, or press</p>
-<p><span class="lcd">*NO*</span> to cancel.</p>
+<p>• Press <span class="lcd">*YES*</span> to complete the command, or press <span class="lcd">*NO*</span> to cancel.</p>
 <h4 id="delete-bars">DELETE BARS</h4>
 <p>The Delete Bars function lets you delete (or remove) any number of bars from a sequence, starting from any bar within the sequence.</p>
 <p>This is handy when, for example, you record a first track which is perfect except that it runs to 5 Bars instead of 4. With this edit function you can easily chop off the extra bar.</p>
@@ -237,31 +214,21 @@
 <p>• Use the data entry controls to determine at which bar you want to begin removing bars. This can be any Bar within the Sequence. Bars will be deleted from the beginning of the Bar you select here.</p>
 <p>• Press the soft button above DELETE ## BARS.</p>
 <p>• Use the data entry controls to select how many bars you want to delete.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to complete the command, or press</p>
-<p><span class="lcd">*NO*</span> to cancel.</p>
+<p>• Press <span class="lcd">*YES*</span> to complete the command, or press <span class="lcd">*NO*</span> to cancel.</p>
 <p>Sequence Bank Utilities A new way to select sequences has been added to certain sequencer edit pages. When a sequence name parameter is selected on the Song Edit, Append Sequence, Copy Track or Merge Track pages, an LED above one of the bank buttons will flash to show where the indicated sequence is located. Pressing a <kbd class="button">Bank</kbd> button will temporarily show the corresponding sequence bank page, and sequences may be selected using soft buttons. If the selection is valid, the page will then revert to the previous edit page with the new sequence name installed. In addition, you may select the destination Location for Copy Song or Copy Sequence by indicating a -BLANKlocation on one of the bank pages. This will automatically install the corresponding location number and return to the copy command page.</p>
 <h2 id="edit-track-page-parameters"><span class="page-name">Edit Track Page</span> Parameters</h2>
-<p><span class="page-name">Range Sub-Page</span> — Setting the Time and Key Range Within almost all track editing functions, you will find a parameter labeled RANGE. Pressing the soft button below</p>
-<p>RANGE takes you to a special sub-page where you can define the time and key range over which the track edit command will work. Data outside the defined range will be left alone. When you select</p>
-<p>RANGE from within a track edit function, the display shows:</p>
+<p><span class="page-name">Range Sub-Page</span> — Setting the Time and Key Range Within almost all track editing functions, you will find a parameter labeled RANGE. Pressing the soft button below RANGE takes you to a special sub-page where you can define the time and key range over which the track edit command will work. Data outside the defined range will be left alone. When you select RANGE from within a track edit function, the display shows:</p>
 <h4 id="time-range" class="param-name">Time Range</h4>
 <p>Bar Beat Clock        Bar Beat Clock</p>
 <h4 id="key-range" class="param-name">Key Range</h4>
 <p>• On the upper line of the display you can select and modify the Time range which will be affected by the edit function; on the lower line you select and modify the Key range.</p>
-<p>• To set the time range, first press the soft button above</p>
-<p>IN to choose the beginning edit time, shown in Bars, Beats and Clocks. Adjust to the desired bar with the data entry controls. Press the same soft button again to advance the underline from Bar to Beat to Clock, etc. adjusting each as needed. Then press the soft button above</p>
-<p>OUT and repeat these steps to set the ending edit time.</p>
+<p>• To set the time range, first press the soft button above IN to choose the beginning edit time, shown in Bars, Beats and Clocks. Adjust to the desired bar with the data entry controls. Press the same soft button again to advance the underline from Bar to Beat to Clock, etc. adjusting each as needed. Then press the soft button above OUT and repeat these steps to set the ending edit time.</p>
 <p>• To set the key range, press the soft button beneath the low and high keys, underlining the low key. Play the lowest note you want affected by the edit function; the underline switches to the high key. Play the highest key you want to be affected. The underline disappears, allowing you to play the keyboard without resetting the ranges every time you press a key. You can reset the range (if it’s not correct) by pressing the soft button again, and playing the low and high keys. You can also set the key range using the data entry controls, and pressing the soft button again to move the cursor from the low to high key.</p>
 <p>• Press <span class="lcd">*SET*</span> to accept these edit ranges for the current track edit function. You will be returned to the edit function with the display reading <span class="lcd">RANGE=SET</span>, or;</p>
 <p>• Press <span class="lcd">*ALL*</span> to bypass the edit ranges and have the track edit function affect the entire track.</p>
 <p>You will be returned to the edit function with the display reading <span class="lcd">RANGE=ALL</span>.</p>
 <h3 id="important">Important:</h3>
-<p>The</p>
-<h3 id="in-and">IN and</h3>
-<p>OUT times specified in the <span class="page-name">Edit Track Range page</span> are the same as the Edit Times found on the <span class="page-name">Locate sub-page</span> and used by the Autopunch function. They are interactive — changing the</p>
-<h3 id="in-or">IN or</h3>
-<p>OUT times in either location will cause them to be changed in the other.</p>
+<p>The IN and OUT times specified in the <span class="page-name">Edit Track Range page</span> are the same as the Edit Times found on the <span class="page-name">Locate sub-page</span> and used by the Autopunch function. They are interactive — changing the IN or OUT times in either location will cause them to be changed in the other.</p>
 <h4 id="track-edit-functions">Track Edit Functions</h4>
 <p>• Press the <kbd class="button">Edit Track</kbd> button. The display shows:</p>
 <h4 id="shift" class="param-name"><span class="param">SHIFT</span><span class="range">Range: -96 to +96 (96 clocks=1/4 note)</span></h4>
@@ -269,9 +236,7 @@
 <p>• Make sure the track you want to edit is selected.</p>
 <p>• Press <kbd class="button">Edit Track</kbd>, then select SHIFT. The display shows:</p>
 <p>• Use the data entry controls to specify the amount the track is to be shifted. Positive values will move the events in the track ahead in time, toward the end of the sequence; negative amounts will shift the events back, toward the beginning.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the edit command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, the display shows the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the edit command (or press <span class="lcd">*NO*</span> to cancel). After editing, the display shows the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <h4 id="quantize" class="param-name"><span class="param">QUANTIZE</span><span class="range">Range: 1/4 to 1/64T</span></h4>
 <p>The Quantize (or auto-correct) function can take a less than perfect track and put it right on the beat. The TS-10 uses post-quantization — that is, you first record a track, then apply the quantization later as a track editing option. You can select any note value from 1/4 note up to 1/64 note triplets, and move all notes in the track directly onto the nearest beat of that value.</p>
 <p>• Make sure the track you want to quantize is selected.</p>
@@ -281,24 +246,17 @@
 <p>1/4 — quarter notes 1/16T — sixteenth note triplets 1/4T — quarter note triplets 1/32 — thirty-second notes 1/8 — eighth notes 1/32T — thirty-second note triplets</p>
 <p>1/8T — eighth note triplets 1/64 — sixty-fourth notes 1/16 — sixteenth notes 1/64T — sixty-fourth note triplets</p>
 <p>• If you wish to quantize a specific range rather than the entire track, press RANGE and set the time and/or key range on the <span class="page-name">Edit Track Range page</span>, as shown earlier in this section. If not, leave it set to <span class="lcd">RANGE=ALL</span>.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the</p>
-<p>QUANTIZE command (or press *NO * to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the QUANTIZE command (or press *NO * to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <h4 id="options" class="param-name"><span class="param">Options</span><span class="range">Range: OFF or ON</span></h4>
 <p>The TS-10 allows you to define how you want to quantize your track. In other words, when you select the quantize options, you can select several different variables in quantizing your track.</p>
 <p>Using these variables can create a very live sounding sequence. When “<span class="lcd">OPTIONS=OFF</span>,” all key events are quantized to the closest note value that was selected earlier. To select Options:</p>
-<p>• Press the soft</p>
-<p>OPTIONS button. This takes you to the Options</p>
-<h3 id="on-sub-page"><span class="page-name">ON sub-page</span>:</h3>
+<p>• Press the soft OPTIONS button. This takes you to the <span class="page-name">Options ON sub-page</span>:</p>
 <p>• On the <span class="page-name">Options page</span>, you can set the levels of the Quantize PERCENT, RANDOM, and SWING amount using the <kbd class="button">Data Entry Slider</kbd>. After setting these levels, to engage these parameters, press *ON *.</p>
 <p>• If you do not want to use these features, press <span class="lcd">*<span class="value">OFF</span>*</span>. This returns you to the previous display.</p>
 <p>• Straight quantization will always take place when quantize options are set to “<span class="value">OFF</span>,” even if the user has specified values for PERCENT, RANDOM, and SWING. The options will not have any effect until “<span class="lcd">OPTIONS=ON</span>.”</p>
 <p>The option switch defaults to <span class="value">OFF</span> when the sequencer is initialized, but after that, the quantize option switch setting is remembered until changed again by the user.</p>
 <h4 id="swing" class="param-name"><span class="param">SWING</span><span class="range">Range: 50 to 74%</span></h4>
-<p>When you specify a</p>
-<p>SWING percentage value, you are defining the offset amount that every second quantize point (known as the swing note) will be delayed. In keeping with the swing implementation in most</p>
-<p>MIDI sequencers, the</p>
-<p>SWING range is from 50% (the same as straight quantization) to 74% (a tick before the next higher note value). A setting of 66 is equivalent to setting the quantization to triplets. The following examples show what happens when the user quantizes to 1/8 notes with various settings of SWING. Q denotes every straight 1/8 note quantize point, while S denotes the swing eighth quantize point.</p>
+<p>When you specify a SWING percentage value, you are defining the offset amount that every second quantize point (known as the swing note) will be delayed. In keeping with the swing implementation in most MIDI sequencers, the SWING range is from 50% (the same as straight quantization) to 74% (a tick before the next higher note value). A setting of 66 is equivalent to setting the quantization to triplets. The following examples show what happens when the user quantizes to 1/8 notes with various settings of SWING. Q denotes every straight 1/8 note quantize point, while S denotes the swing eighth quantize point.</p>
 <p>1/4 note</p>
 <div class="vfd-callouts top"><div>8th 16th</div><div>8th 16th</div><div>Quantize points: 16th</div></div>
 <h4 id="s-swing" class="param-name">S = Swing</h4>
@@ -312,14 +270,7 @@
 <p>The SWING setting is the percentage of the time difference between the two Straight quantize points, and it is used to position the Swing quantize point. As the Swing setting increases from 50%, the Swing quantize point is moved closer to the following Straight quantize point.</p>
 <p>The SWING percentage actually defines the point between the two straight quantize points. In other words, at 96 ppq, 60% swing means that between two quarter notes, the swing eighth will occur at the 60% mark, or at clock 58 (0.60 x 96). The default value for this parameter is 50% when the sequencer is initialized. Once it is changed, the last value is always remembered.</p>
 <h4 id="percent" class="param-name"><span class="param">PERCENT</span><span class="range">Range: 000 to 100</span></h4>
-<p>While the Quantize Note Value and</p>
-<p>SWING parameters determine the position of the quantize points, the</p>
-<h3 id="percent-and">PERCENT and</h3>
-<p>RANDOM parameters determine where the key events will be placed in relation to the quantize points. The</p>
-<p>PERCENT parameter specifies how much the key event will move toward the calculated quantize point. A</p>
-<p>PERCENT value of zero would mean that the key events would not move any distance toward the quantize point. A</p>
-<p>PERCENT value of 100 would mean that the key event would be placed exactly on the quantize point. A</p>
-<p>PERCENT value of 50 will move the event half way to the quantize point.</p>
+<p>While the Quantize Note Value and SWING parameters determine the position of the quantize points, the PERCENT and RANDOM parameters determine where the key events will be placed in relation to the quantize points. The PERCENT parameter specifies how much the key event will move toward the calculated quantize point. A PERCENT value of zero would mean that the key events would not move any distance toward the quantize point. A PERCENT value of 100 would mean that the key event would be placed exactly on the quantize point. A PERCENT value of 50 will move the event half way to the quantize point.</p>
 <p>The following diagram illustrates this. Again, Q and S represent the straight quantize and swing quantize points respectively. The original source track is shown, followed by the quantized versions at 0, 25, 50, and 100% quantization.</p>
 <h3 id="quantize-points">Quantize points:</h3>
 <p>8th                             Q = Straight</p>
@@ -333,22 +284,12 @@
 <h3 id="at-50">At 50%</h3>
 <h3 id="at-100">At 100%</h3>
 <p>Time</p>
-<p>In this example,</p>
-<p>QUANTIZE is set to 1/8th notes and</p>
-<p>SWING is set to 50%.</p>
+<p>In this example, QUANTIZE is set to 1/8th notes and SWING is set to 50%.</p>
 <p>Increasing the PERCENT setting moves the events closer to the quantize points.</p>
 <p>Notice how increasing the quantize percentage tightens up the track timing. The default value for this parameter is 100% when the sequencer is initialized. Once it is changed, the last value is always remembered.</p>
 <h4 id="random" class="param-name"><span class="param">RANDOM</span><span class="range">Range: 0 to 3</span></h4>
-<h3 id="after-the">After the</h3>
-<p>PERCENT parameter calculates the placement of the key event relative to the quantization points, the</p>
-<p>RANDOM parameter determines if, and how much, randomization should be applied to the key placement. The</p>
-<p>RANDOM parameter defines a “window of looseness” that the key event can fall into.</p>
-<h4 id="a" class="param-name">A</h4>
-<p>RANDOM factor of 0 indicates that</p>
-<p>NO randomization will occur. A</p>
-<p>RANDOM factor of 3 indicates that the key event will be shifted anywhere from 0 to 3 clocks in either direction from the calculated key placement. Again, an example will illustrate this more clearly. This time we’ll use an event list. For our example, we’ll assume 1/4 note quantization with NO (i.e. 50%) swing, and a</p>
-<p>PERCENT factor of 50. The first column shows the original source track. The second column shows where the events will be placed if quantized with no randomization. The third and fourth columns show the range that the event will fall in with various degrees of randomization. Note that the placement of the key event is calculated first with</p>
-<p>NO randomization, then the random factor is applied.</p>
+<p>After the PERCENT parameter calculates the placement of the key event relative to the quantization points, the RANDOM parameter determines if, and how much, randomization should be applied to the key placement. The RANDOM parameter defines a “window of looseness” that the key event can fall into.</p>
+<p>A RANDOM factor of 0 indicates that NO randomization will occur. A RANDOM factor of 3 indicates that the key event will be shifted anywhere from 0 to 3 clocks in either direction from the calculated key placement. Again, an example will illustrate this more clearly. This time we’ll use an event list. For our example, we’ll assume 1/4 note quantization with NO (i.e. 50%) swing, and a PERCENT factor of 50. The first column shows the original source track. The second column shows where the events will be placed if quantized with no randomization. The third and fourth columns show the range that the event will fall in with various degrees of randomization. Note that the placement of the key event is calculated first with NO randomization, then the random factor is applied.</p>
 <table class="data-table"><thead><tr><th>ORIGINAL</th><th>with <span class="lcd">RANDOM=0</span></th><th>with <span class="lcd">RANDOM=1</span></th><th>with <span class="lcd">RANDOM=2</span></th></tr></thead><tbody><tr><td>1.1.08</td><td>1.1.04</td><td>1.1.03 to 1.1.05</td><td>1.1.02 to 1.1.06</td></tr><tr><td>1.2.12</td><td>1.2.06</td><td>1.2.05 to 1.1.07</td><td>1.2.04 to 1.2.08</td></tr><tr><td>1.2.95</td><td>1.2.96</td><td>1.2.95 to 1.3.01</td><td>1.2.94 to 1.3.02</td></tr><tr><td>1.4.01</td><td>1.4.01</td><td>1.3.96 to 1.4.02</td><td>1.3.95 to 1.4.03</td></tr></tbody></table>
 <p>The RANDOM parameter defaults to zero when the sequencer is initialized. After that, the last value is remembered.</p>
 <p>Using the Quantize Options Percentage quantization can be used to “tighten up” a track without placing everything exactly on a quantize point. This can make loose tracks sound tighter without sounding mechanical. It’s especially useful on passages where you want to play constantly ahead of or behind the beat.</p>
@@ -356,46 +297,32 @@
 <p>Keep in mind that percentage quantization can be done in stages. For example, quantize a track to 25% and keep it. Then later, if you decide you want it tighter still, quantize it again by 25%.</p>
 <p>Each time you perform a quantization, you will move the key events slightly closer to the quantize point.</p>
 <p>Random quantization is useful for taking old tracks that have been quantized 100% and giving them a more human feel. This can be done by quantizing with the desired randomization factor.</p>
-<p>The higher the</p>
-<p>RANDOM factor, the looser the track will become (since the tracks have previously been quantized to the 100% quantize points, the</p>
-<p>PERCENT parameter will have no effect). Tracks that have not been quantized can be randomized as well. If your desired effect is simply to loosen a current track, select a quantize</p>
-<p>PERCENT of zero, and quantize with the desired randomization. This will shift each event in the track within a few clocks of its original place, but will not necessarily move it towards the quantize point.</p>
-<p>In addition, the</p>
-<p>RANDOM parameter inside the TS-10 “reseeds” itself. This means that if you quantize two identical tracks with randomization, you will get different results. Also, if you set the</p>
-<p>PERCENT parameter to zero, you can randomize a track, keep the new track, and randomize it again to get things progressively looser.</p>
+<p>The higher the RANDOM factor, the looser the track will become (since the tracks have previously been quantized to the 100% quantize points, the PERCENT parameter will have no effect). Tracks that have not been quantized can be randomized as well. If your desired effect is simply to loosen a current track, select a quantize PERCENT of zero, and quantize with the desired randomization. This will shift each event in the track within a few clocks of its original place, but will not necessarily move it towards the quantize point.</p>
+<p>In addition, the RANDOM parameter inside the TS-10 “reseeds” itself. This means that if you quantize two identical tracks with randomization, you will get different results. Also, if you set the PERCENT parameter to zero, you can randomize a track, keep the new track, and randomize it again to get things progressively looser.</p>
 <p>Although PERCENT, RANDOM, and SWING are interrelated, you do not have to use all of them when selecting options. By setting these parameters to their default values (<span class="lcd">PERCENT=100</span> - <span class="lcd">RANDOM=0</span> - <span class="lcd">SWING=50)</span>, you can use any one or combination of these options to quantize your tracks.</p>
 <h3 id="important-2">Important:</h3>
-<p>An event can be randomized and end up closer to a different quantize point. This could be a problem if you later decided to go back to a straight, no-frills quantization. This is not a fault of the quantization feature, but simply what can happen with randomization. The random factor is purposely kept low to prevent this from happening, however, there are cases where this can occur. One example would be successive randomization with the</p>
-<p>PERCENT parameter set to zero. Another instance involves using combinations of a high</p>
-<p>SWING parameter with a high</p>
+<p>An event can be randomized and end up closer to a different quantize point. This could be a problem if you later decided to go back to a straight, no-frills quantization. This is not a fault of the quantization feature, but simply what can happen with randomization. The random factor is purposely kept low to prevent this from happening, however, there are cases where this can occur. One example would be successive randomization with the PERCENT parameter set to zero. Another instance involves using combinations of a high SWING parameter with a high</p>
 <p>RANDOM factor.</p>
 <p>For example, let’s say you have a hi-hat track that’s already been quantized to straight eighths.</p>
-<p>Now you decide to give it a large swing feel, so you set</p>
-<p>SWING to 74. Any event that was at clock number 49 (a straight eighth note) would move to clock 72. But if you also specified a</p>
-<p>RANDOM of 3, the event may move as far as clock 75. Now let’s suppose you keep this track, but then later on decide that you don’t want a swing feel. So you setup a straight 1/8 note quantize. Only this time, the event that originally was at clock 49 is now at clock 75, so it would be moved to the next quantize point at clock 1 in the next beat (since that’s the closest quantize point to that event). If you audition the track and hear that the swing event has moved up to the next quantize point, then you should keep the old track, shift the track by -3 clocks (to put the swing note closer to the original straight eighth point) then requantize with no swing to get all events back on the straight eighth points.</p>
+<p>Now you decide to give it a large swing feel, so you set SWING to 74. Any event that was at clock number 49 (a straight eighth note) would move to clock 72. But if you also specified a RANDOM of 3, the event may move as far as clock 75. Now let’s suppose you keep this track, but then later on decide that you don’t want a swing feel. So you setup a straight 1/8 note quantize. Only this time, the event that originally was at clock 49 is now at clock 75, so it would be moved to the next quantize point at clock 1 in the next beat (since that’s the closest quantize point to that event). If you audition the track and hear that the swing event has moved up to the next quantize point, then you should keep the old track, shift the track by -3 clocks (to put the swing note closer to the original straight eighth point) then requantize with no swing to get all events back on the straight eighth points.</p>
 <h3 id="quantize-points-2">Quantize points:</h3>
 <p>8th                               Q = Straight</p>
 <div class="vfd-callouts top"><div>16th</div><div>16th</div><div>S = Swing</div></div>
 <p>74%</p>
 <div class="vfd-callouts top"><div>01</div><div>25</div><div>49</div></div>
-<h3 id="quantized-to">Quantized to</h3>
+<p>Quantized to</p>
 <h4 id="straight-eighths" class="param-name">Straight Eighths</h4>
 <p>at Clock 72 with <span class="lcd">SWING=74</span> at Clock 75 with <span class="lcd">RANDOM=3</span></p>
-<h3 id="re-quantized-to">Re-Quantized to</h3>
+<p>Re-Quantized to</p>
 <p>Straight Eighths  Event moves to next 8th!</p>
 <p>Time</p>
-<p>In this example,</p>
-<p>QUANTIZE is set to 1/8th notes,</p>
-<p>SWING is set to 74% and</p>
-<p>RANDOM set to 3, the event can be moved beyond the Swing Quantize point. In this case, a subsequent straight eighth quantize will move the event to the eighth note after the one it was initially on.</p>
+<p>In this example, QUANTIZE is set to 1/8th notes, SWING is set to 74% and RANDOM set to 3, the event can be moved beyond the Swing Quantize point. In this case, a subsequent straight eighth quantize will move the event to the eighth note after the one it was initially on.</p>
 <h4 id="erase-3">ERASE</h4>
 <p>This command will erase notes, controllers and all other data from the entire track, or from a given range if you so specify.</p>
 <p>• Make sure the track you want to erase is selected.</p>
 <p>• Press <kbd class="button">Edit Track</kbd>, then select ERASE. The display shows:</p>
 <p>• If you wish to erase a specific range rather than the entire track, press RANGE and set the time and/or key range on the <span class="page-name">Edit Track Range page</span>, as shown earlier in this section. If not, leave it set to <span class="lcd">RANGE=ALL</span>.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the edit command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, if a range was specified, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not. If the range was ALL, there is no audition.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the edit command (or press <span class="lcd">*NO*</span> to cancel). After editing, if a range was specified, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not. If the range was ALL, there is no audition.</p>
 <h4 id="copy-3">COPY</h4>
 <p>This command will copy all or part of the current track (the source track) to another track. The destination track can be in the same sequence or in a different sequence.</p>
 <p>• Make sure the track you want to copy is selected.</p>
@@ -406,15 +333,10 @@
 <p>• Select the destination track and use the data entry controls to select a track for the source track to be copied into.</p>
 <p>• Press the soft button beneath the destination track again to move the underline to the starting bar. The data from the source track will be copied into the destination track starting from the beginning of the bar specified here. The default is bar 1, the beginning of the track.</p>
 <p>• If you wish to copy a specific range rather than the entire track, press RANGE and set the time and/or key range on the <span class="page-name">Edit Track Range page</span>, as shown earlier in this section. If not, leave it set to <span class="lcd">RANGE=ALL</span>.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the copy command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the copy command (or press <span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <aside class="note"><p>Note: The Copy Track function behaves differently depending on whether or not there is already recorded data on the destination track:</p></aside>
 <p>• If the destination track is empty (no track data), both the track data and all the track parameters (Mix, Pan, Timbre, etc.) from source track will be copied to the destination track.</p>
-<p>• If the destination track already contains recorded track data, after you press</p>
-<p><span class="lcd">*YES*</span> to copy the track, the display will warn: DATA ON DESTINATION TRACK WILL BE LOST. Press</p>
-<p><span class="lcd">*YES*</span> to proceed, or press</p>
-<p><span class="lcd">*NO*</span> to exit and select a different destination track.</p>
+<p>• If the destination track already contains recorded track data, after you press <span class="lcd">*YES*</span> to copy the track, the display will warn: DATA ON DESTINATION TRACK WILL BE LOST. Press <span class="lcd">*YES*</span> to proceed, or press <span class="lcd">*NO*</span> to exit and select a different destination track.</p>
 <p>• After you press <span class="lcd">*YES*</span>, the display asks COPY TRACK PARAMETERS TOO?</p>
 <p>&gt; Press <span class="lcd">*YES*</span> to copy both the recorded track data and all the track parameters to the destination track.</p>
 <p>&gt; Press <span class="lcd">*NO*</span> to copy only the recorded track data to the destination track, leaving the values of all the track parameters as they were before.</p>
@@ -432,9 +354,7 @@
 <h4 id="semitone" class="param-name"><span class="param">Semitone</span><span class="range">Range: -12 to +12 semitones</span></h4>
 <p>Press the soft button above the transpose amount again to move the underline to the semitone amount and adjust that.</p>
 <p>• If you wish to transpose a specific range rather than the entire track, press RANGE and set the time and/or key range on the <span class="page-name">Edit Track Range page</span>, as shown earlier in this section. If not, leave it set to <span class="lcd">RANGE=ALL</span>.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the edit command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the edit command (or press <span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <h4 id="scale">SCALE</h4>
 <p>The Scale command lets you increase or decrease the level of any controller information in the track by a specified amount. You could use this function, for example, to tame some over-zealous mod wheel work, or to increase the key velocity of all the notes in the track by some amount.</p>
 <p>• Make sure the track you want to edit is selected.</p>
@@ -444,7 +364,7 @@
 <h4 id="cntl-1-modwhl-mod-wheel" class="param-name">CNTL-1.MODWHL — Mod Wheel</h4>
 <h4 id="cntl-4-pedal-foot-pedal" class="param-name">CNTL-4.PEDAL — Foot Pedal</h4>
 <h4 id="cntl-7-volume-volume-pedal" class="param-name">CNTL-7.VOLUME — Volume Pedal</h4>
-<h3 id="cntl-10-pan-track-or-midi-pan">CNTL-10.PAN — Track or MIDI Pan</h3>
+<p>CNTL-10.<span class="param">PAN</span> — Track or MIDI Pan</p>
 <h4 id="cntl-64-sustn-sustain-foot-switch" class="param-name">CNTL-64.SUSTN — Sustain Foot Switch</h4>
 <h4 id="cntl-66-sostu-sostenuto-foot-switch" class="param-name">CNTL-66.SOSTU — Sostenuto Foot Switch</h4>
 <h4 id="cntl-12-fx-sw-effect-mod-foot-switch" class="param-name">CNTL-12.FX-SW — Effect Mod Foot Switch</h4>
@@ -459,14 +379,10 @@
 <h4 id="chan-pressure-channel-mono-pressure" class="param-name">CHAN-PRESSURE — Channel (mono) Pressure</h4>
 <h4 id="mixdwn-volume-mixdown-volume" class="param-name">MIXDWN-VOLUME — Mixdown Volume</h4>
 <h4 id="mixdown-pan-mixdown-pan" class="param-name">MIXDOWN-PAN — Mixdown Pan</h4>
-<p>TEMPO — Tempo Track Events (note that</p>
-<p>SCALE will have no effect on</p>
-<p>TEMPO events)</p>
+<p>TEMPO — Tempo Track Events (note that SCALE will have no effect on TEMPO events)</p>
 <h4 id="pitch-bend-pitch-bend-wheel" class="param-name">PITCH-BEND — Pitch Bend Wheel</h4>
 <p>• If you wish to scale a specific range rather than the entire track, press RANGE and set the time and/or key range on the <span class="page-name">Edit Track Range page</span>, as shown earlier in this section. If not, leave it set to <span class="lcd">RANGE=ALL</span>.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the Scale command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the Scale command (or press <span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <h4 id="event-list">EVENT-LIST</h4>
 <p>The Event List function provides you with an extremely powerful tool for viewing and editing each event in the track. Every key event, controller change and program change can be individually located and edited.</p>
 <p>• Make sure the track you want to edit is selected.</p>
@@ -486,7 +402,7 @@
 <h4 id="mod-mod-wheel" class="param-name">MOD — Mod Wheel</h4>
 <h4 id="ped-foot-pedal" class="param-name">PED — Foot Pedal</h4>
 <h4 id="vol-volume-pedal" class="param-name">VOL — Volume Pedal</h4>
-<h3 id="pan-track-or-midi-pan">PAN — Track or MIDI Pan</h3>
+<p><span class="param">PAN</span> — Track or MIDI Pan</p>
 <h4 id="sus-sustain-foot-switch" class="param-name">SUS — Sustain Foot Switch</h4>
 <h4 id="sos-sostenuto-foot-switch" class="param-name">SOS — Sostenuto Foot Switch</h4>
 <h4 id="fxs-effect-mod-foot-switch" class="param-name">FXS — Effect Mod Foot Switch</h4>
@@ -543,7 +459,7 @@
 <p>Use the data entry controls to change the start point of the event, pressing the soft button beneath the time to move the cursor between Bar, Beat, and Clock. When you have the starting time that you want showing on the display, press <span class="lcd">*EXIT*</span> to return to the <span class="page-name">Event List page</span> with the event on the new time.</p>
 <aside class="note"><p>Note: When a Song track is selected, an additional two segments are added to this readout, and the time readouts on the other Event List pages. In song mode, the display shows Step.Rep.Bar.Beat.Clock. For example, Step 1, Rep 2, Bar 4, Beat 3, Clock 76 would appear as:</p></aside>
 <p>START <span class="lcd">TIME=01.02.004.03.76</span></p>
-<h3 id="duration">Duration</h3>
+<p>Duration</p>
 <p>For Key Events only, you can change the length of the event (the time between when the key is struck and it is released). From the <span class="page-name">Event Edit sub-page</span> press the soft button below DURATION.</p>
 <p>The display shows:</p>
 <h4 id="bar-beat-clock-2" class="param-name">Bar Beat Clock</h4>
@@ -566,7 +482,7 @@
 <h4 id="cntl-1-modwhl-mod-wheel-2" class="param-name">CNTL-1.MODWHL — Mod Wheel</h4>
 <h4 id="cntl-4-pedal-foot-pedal-2" class="param-name">CNTL-4.PEDAL — Foot Pedal</h4>
 <h4 id="cntl-7-volume-volume-pedal-2" class="param-name">CNTL-7.VOLUME — Volume Pedal</h4>
-<h3 id="cntl-10-pan-track-or-midi-pan-2">CNTL-10.PAN — Track or MIDI Pan</h3>
+<p>CNTL-10.<span class="param">PAN</span> — Track or MIDI Pan</p>
 <h4 id="cntl-64-sustn-sustain-foot-switch-2" class="param-name">CNTL-64.SUSTN — Sustain Foot Switch</h4>
 <h4 id="cntl-66-sostu-sostenuto-foot-switch-2" class="param-name">CNTL-66.SOSTU — Sostenuto Foot Switch</h4>
 <h4 id="cntl-12-fx-sw-effect-mod-foot-switch-2" class="param-name">CNTL-12.FX-SW — Effect Mod Foot Switch</h4>
@@ -591,9 +507,7 @@
 <p>&gt;    If you want to copy the data to another track, select a destination track and then press COPY.</p>
 <p>You are returned to the <span class="page-name">Filter page</span>, the display reading <span class="lcd">MODE=COPY</span>.</p>
 <p>&gt; If you want to permanently remove the data from the track, simply press ERASE. You are returned to the <span class="page-name">Filter page</span>, the display reading <span class="lcd">MODE=ERASE</span>. (Note that Erase mode is the default whenever you enter the filter command, so if you want Erase mode you can skip this step.)</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the filter command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the filter command (or press <span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <aside class="note"><p>Note: If you chose Copy mode, the TS-10 returns with the new track (the copy) selected. If you wanted to copy and then erase the data, you must first reselect the original track and then repeat the above procedure, using Erase mode.</p></aside>
 <aside class="note"><p>Note: The Copy mode of the Filter command works just like the Copy Track command: Data on the destination track will be erased.</p></aside>
 <h4 id="merge">MERGE</h4>
@@ -604,9 +518,7 @@
 <p>Destination Sequence</p>
 <p>• Press the soft button above the destination track and use the data entry controls to select a track for the source track to be merged into.</p>
 <p>• If you want to merge the source track with a track in a different sequence, select the destination sequence and use the data entry controls to choose the one you want. The default is the current sequence, the one the source track is in.</p>
-<p>• Press</p>
-<p><span class="lcd">*YES*</span> to execute the merge command (or press</p>
-<p><span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
+<p>• Press <span class="lcd">*YES*</span> to execute the merge command (or press <span class="lcd">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep page</span> where you can audition the results of the edit before deciding whether to keep it or not.</p>
 <h2 id="click-page">Click Page</h2>
 <p>Pressing the <kbd class="button">Sequencer Click</kbd> button displays a page containing parameters which control the metronome functions of the sequencer.</p>
 <h4 id="click" class="param-name"><span class="param">CLICK</span><span class="range">Range: OFF, ON, or REC</span></h4>
@@ -624,11 +536,7 @@
 <p>• QUIET — the countoff will occur in Play or Record modes without the click.</p>
 <p>TEMPO (Tap Tempo)                          Seq Range: 25 to 250 BPM, or EXT</p>
 <h4 id="song" class="param-name"><span class="param">Song</span><span class="range">Range: -64 to +63 Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</span></h4>
-<p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the</p>
-<p>TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When CLOCK=</p>
-<p>MIDI on the <span class="page-name">Sequencer Control page</span>, this field will read TEMPO=</p>
-<p>EXT to indicate that the tempo is controlled by incoming</p>
-<p>MIDI clocks.</p>
+<p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="lcd">CLOCK=MIDI</span> on the <span class="page-name">Sequencer Control page</span>, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is controlled by incoming MIDI clocks.</p>
 <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of 25-250 BPM. When <span class="lcd">TEMPO=+00</span> the sequences in the song will play at their designated tempo.</p>
 <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
 <h4 id="vol" class="param-name"><span class="param">VOL</span><span class="range">Range: -50 to +14 dB</span></h4>
@@ -643,13 +551,8 @@
 <h4 id="clock" class="param-name"><span class="param">CLOCK</span><span class="range">Range: INT or MIDI</span></h4>
 <p>This parameter selects the clock source for the sequencer.</p>
 <p>• INT — Selects the TS-10’s own internal clock to run the sequencer. The TS-10 features 96 ppq (pulses per quarter-note) resolution for extremely accurate recording.</p>
-<p>• MIDI — Selects external</p>
-<p>MIDI clocks as the sequencer clock source. Use this setting if you want to use another device (such as a computer sequencer or drum machine) as the master clock source and sync the TS-10 to it. Whenever <span class="lcd">CLOCK=MIDI</span>, the tempo display will read TEMPO=</p>
-<p>EXT to indicate that the TS-10 is syncing to an external clock source.</p>
-<p>When CLOCK SOURCE= MIDI, pressing the <kbd class="button">Record</kbd> button puts the TS-10 into standby</p>
-<p>MIDI sync record. The</p>
-<p>MIDI indicator light will flash and the display will show WAITING… Recording will begin with the first</p>
-<p>MIDI clock received after a MIDI Start command. If the <kbd class="button">Stop•Continue</kbd> button is pressed before a MIDI Start command is received, the TS-10 waits five seconds before stopping.</p>
+<p>• MIDI — Selects external MIDI clocks as the sequencer clock source. Use this setting if you want to use another device (such as a computer sequencer or drum machine) as the master clock source and sync the TS-10 to it. Whenever <span class="lcd">CLOCK=MIDI</span>, the tempo display will read <span class="lcd">TEMPO=EXT</span> to indicate that the TS-10 is syncing to an external clock source.</p>
+<p>When CLOCK SOURCE= MIDI, pressing the <kbd class="button">Record</kbd> button puts the TS-10 into standby MIDI sync record. The MIDI indicator light will flash and the display will show WAITING… Recording will begin with the first MIDI clock received after a MIDI Start command. If the <kbd class="button">Stop•Continue</kbd> button is pressed before a MIDI Start command is received, the TS-10 waits five seconds before stopping.</p>
 <h4 id="record-mode" class="param-name"><span class="param">RECORD-MODE</span><span class="range">Range: REPLACE, ADD, LOOPED, or MIXDOWN</span></h4>
 <p>Selects between the three recording modes for the sequencer.</p>
 <p>• REPLACE — Anything recorded into an existing track will replace the data that was in the track previously. The sequencer will stop recording after one time through the sequence or song and will enter Audition/Play mode.</p>
@@ -660,10 +563,7 @@
 <p>Depending on the setting of the EDIT TRACKS parameter on the next sub-page (see below) you can mix down either the song tracks or sequence tracks over the length of the song.</p>
 <p>TEMPO (Tap Tempo)                              Seq Range: 25 to 250 BPM, or EXT</p>
 <h4 id="song-2" class="param-name"><span class="param">Song</span><span class="range">Range: -64 to +63 Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</span></h4>
-<p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the</p>
-<p>TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="lcd">CLOCK=MIDI</span>, this field will read TEMPO=</p>
-<p>EXT to indicate that the tempo is controlled by incoming</p>
-<p>MIDI clocks, and cannot be edited.</p>
+<p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="lcd">CLOCK=MIDI</span>, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is controlled by incoming MIDI clocks, and cannot be edited.</p>
 <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of 25-250 BPM. When <span class="lcd">TEMPO=+00</span> the sequences in the song will play at their designated tempo.</p>
 <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
 <h4 id="autopunch" class="param-name"><span class="param">AUTOPUNCH</span><span class="range">Range: OFF or ON</span></h4>
@@ -680,53 +580,30 @@
 <p>• SEQ — the individual sequence effects will be selected as the sequences are played.</p>
 <p>• SONG — the song effect will override the individual sequence effects.</p>
 <h4 id="rec-source" class="param-name"><span class="param">REC-SOURCE</span><span class="range">Range: BOTH, KEYBD, MIDI, or MULTI</span></h4>
-<p>This parameter determines what will be recorded when the</p>
-<p>MIDI mode is <span class="value">MULTI</span> — data from the keyboard, from incoming MIDI, or both. Setting this parameter to</p>
-<p>MIDI is useful if you want to send data from the TS-10 to a</p>
-<p>MIDI processor, then record only the incoming data coming back from the processor. This parameter only has an effect in</p>
-<p><span class="value">MULTI</span> mode; in</p>
-<h3 id="poly-or">POLY or</h3>
-<p><span class="value">OMNI</span> modes the sequencer always records both.</p>
-<p>• BOTH — The sequencer will record data received either from the keyboard or from</p>
-<p>MIDI on the track’s</p>
-<p>MIDI channel.</p>
+<p>This parameter determines what will be recorded when the MIDI mode is <span class="value">MULTI</span> — data from the keyboard, from incoming MIDI, or both. Setting this parameter to MIDI is useful if you want to send data from the TS-10 to a MIDI processor, then record only the incoming data coming back from the processor. This parameter only has an effect in <span class="value">MULTI</span> mode; in <span class="value">POLY</span> or <span class="value">OMNI</span> modes the sequencer always records both.</p>
+<p>• BOTH — The sequencer will record data received either from the keyboard or from MIDI on the track’s MIDI channel.</p>
 <p>• KYBD — The sequencer will record data only from the keyboard.</p>
-<p>• MIDI — The sequencer will record only data received from the</p>
-<p>MIDI on the track’s</p>
-<p>MIDI channel.</p>
+<p>• MIDI — The sequencer will record only data received from the MIDI on the track’s MIDI channel.</p>
 <p>• <span class="value">MULTI</span> — this setting allows you to record data onto multiple TS-10 tracks simultaneously, but only from MIDI. This is most useful for recording tracks sent from external sequencers or played from guitar controllers.</p>
-<aside class="note"><p>Note:   The TS-10 must be set to receive data from</p></aside>
-<p>MIDI in Multi mode (<span class="param">MODE</span>=</p>
-<h3 id="multi-on-the-midi">MULTI on the MIDI</h3>
+<aside class="note"><p>Note:   The TS-10 must be set to receive data from MIDI in Multi mode (<span class="lcd">MODE=MULTI</span> on the MIDI</p></aside>
 <p>Control page) in order for this feature to work correctly.</p>
-<p>It is possible to record multi-track sequences from the keyboard, but only if you set track status to</p>
-<p>MIDI-<span class="param">LOOP</span> for each of the active (primary and layered) tracks and then set up a</p>
-<p>MIDI loop (by connecting MIDI Out to MIDI In). This procedure is a bit tricky, and should only be attempted if you have a good understanding of the system. See <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a> for information on recording into the TS-10 sequencer in a</p>
-<p>MIDI loop.</p>
+<p>It is possible to record multi-track sequences from the keyboard, but only if you set track status to MIDI-<span class="param">LOOP</span> for each of the active (primary and layered) tracks and then set up a MIDI loop (by connecting MIDI Out to MIDI In). This procedure is a bit tricky, and should only be attempted if you have a good understanding of the system. See <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a> for information on recording into the TS-10 sequencer in a MIDI loop.</p>
 <aside class="note"><p>Note: With the SQX-70 installed, the sequencer can record over 97,00 notes. However the sequencer record buffer is of a limited size, and can only record 16, 00 notes at one time. As a result, you may see an OUT OF MEMORY message if you exceed the size of the record buffer. (this is most common in multi-track record). If this occurs, try editing the incoming data into several smaller sequences; then, once recorded into the TS-10 sequencer, append them together.</p></aside>
 <h4 id="edit-tracks" class="param-name"><span class="param">EDIT TRACKS</span><span class="range">Range: SEQ or SONG</span></h4>
 <p>This determines which set of tracks will be displayed on the track parameter pages when a song is selected. It also determines whether song or sequence tracks will be affected by volume or pan changes when you select RECORD <span class="lcd">MODE=MIXDOWN</span> (see above). When incoming MIDI is received, the setting of this switch determines whether the sounds on the sequence or the song tracks will play. The setting of this switch is saved with each song.</p>
-<p>• SEQ — the sequence tracks from the current song step will be displayed. When EDIT TRACKS=</p>
-<p>SEQ and you press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>, the</p>
-<p>LED above the button will flash to remind you that you are looking at the tracks from the sequence currently playing and not at the song tracks. The sequence tracks will receive via incoming MIDI.</p>
+<p>• SEQ — the sequence tracks from the current song step will be displayed. When EDIT <span class="lcd">TRACKS=SEQ</span> and you press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>, the LED above the button will flash to remind you that you are looking at the tracks from the sequence currently playing and not at the song tracks. The sequence tracks will receive via incoming MIDI.</p>
 <p>• SONG — the song tracks will be displayed when a song is selected. The song tracks will receive via incoming MIDI.</p>
-<aside class="tip"><p>When you are working with a song, you may want to switch back and forth between the Song and Sequence tracks without having to go to the <span class="page-name">Sequencer Control page</span>. There is a shortcut for toggling between EDIT TRACKS=</p></aside>
-<p>SEQ and EDIT <span class="lcd">TRACKS=SONG</span>. While on either of the Seq/Song Tracks pages, rapidly double-click the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button. The</p>
-<p>LED above the tracks button flashes when you are looking at sequence tracks; it remains solidly lit when the song tracks are displayed.</p>
+<aside class="tip"><p>When you are working with a song, you may want to switch back and forth between the Song and Sequence tracks without having to go to the <span class="page-name">Sequencer Control page</span>. There is a shortcut for toggling between EDIT TRACKS= SEQ and EDIT <span class="lcd">TRACKS=SONG</span>. While on either of the Seq/Song Tracks pages, rapidly double-click the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button. The LED above the tracks button flashes when you are looking at sequence tracks; it remains solidly lit when the song tracks are displayed.</p></aside>
 <p>Press <kbd class="button">Sequencer Control</kbd> a third time to display the third sub-page:</p>
 <h4 id="free" class="param-name"><span class="param">FREE</span><span class="range">Range: (read only)</span></h4>
 <p>This shows the number of available events in sequencer memory. This read only parameter is informational and cannot be selected or edited.</p>
 <h4 id="save-changes" class="param-name"><span class="param">SAVE CHANGES</span><span class="range">Range: NO, ASK, or AUTO</span></h4>
 <p>This parameter turns the SAVE CHANGES prompt on or off when switching between sequences and/or songs.</p>
 <p>• NO — when SAVE <span class="lcd">CHANGES=NO</span>, you can edit any of the Track Parameters, replace the sound on a track, etc. and the changes will be “forgotten” as soon as you select a new sequence or song.</p>
-<h3 id="the-save">The SAVE</h3>
-<p>CHANGES prompt with not be displayed. This mode is helpful when you are not sequencing, but have edited a sequence or song, and don’t want to be slowed down by the SAVE</p>
-<p>CHANGES prompt. Recording any new track data, however, will automatically reset this parameter to ASK.</p>
+<p>The SAVE CHANGES prompt with not be displayed. This mode is helpful when you are not sequencing, but have edited a sequence or song, and don’t want to be slowed down by the SAVE CHANGES prompt. Recording any new track data, however, will automatically reset this parameter to ASK.</p>
 <p>• ASK — when SAVE <span class="lcd">CHANGES=ASK</span>, if you edit any of the Track Parameters, replace the sound on a track, etc. and then select a different sequence or song, you will be asked if you want to save those changes. This is the default setting.</p>
 <p>• AUTO — when SAVE <span class="lcd">CHANGES=AUTO</span>, all changes made to any of the Track Parameters, or track sound assignments are made permanent when you select another sequence or song.</p>
-<p>AUTO is similar to ASK, except the SAVE</p>
-<p>CHANGES prompt is not displayed, and assumes that you answered <span class="lcd">*YES*</span>. Recording any new track data will not automatically reset this parameter to ASK — it will remain set to</p>
-<p>AUTO until you change it.</p>
+<p>AUTO is similar to ASK, except the SAVE CHANGES prompt is not displayed, and assumes that you answered <span class="lcd">*YES*</span>. Recording any new track data will not automatically reset this parameter to ASK — it will remain set to AUTO until you change it.</p>
 <h4 id="step-entry" class="param-name"><span class="param">STEP-ENTRY</span><span class="range">Range: OFF or ON</span></h4>
 <p>Determines whether <span class="function">Step Entry</span> mode will be used when the sequencer is put into record.</p>
 <p>• <span class="value">OFF</span> — With this switch set to <span class="value">OFF</span>, <span class="function">Step Entry</span> Recording is disabled and the system will behave normally.</p>
@@ -787,15 +664,10 @@
 <table class="data-table"><tbody><tr><td>Whole note</td><td>1/1</td><td>4.00</td><td>32nd note</td><td>1/32</td><td>0.12</td></tr><tr><td>Whole note triplet</td><td>1/1T</td><td>2.64</td><td>32nd note triplet</td><td>1/32T</td><td>0.08</td></tr><tr><td>Half note</td><td>1/2</td><td>2.00</td><td>64th note</td><td>1/64</td><td>0.06</td></tr><tr><td>Half note triplet</td><td>1/2T</td><td>1.32</td><td>64th note triplet</td><td>1/64T</td><td>0.04</td></tr><tr><td>Quarter note</td><td>1/4</td><td>1.00</td><td>Dotted whole note</td><td>1/1D</td><td>6.00</td></tr><tr><td>Quarter note triplet</td><td>1/4T</td><td>0.64</td><td>Dotted half note</td><td>1/2D</td><td>3.00</td></tr><tr><td>Eighth note</td><td>1/8</td><td>0.48</td><td>Dotted quarter note</td><td>1/4D</td><td>1.48</td></tr><tr><td>Eighth note triplet</td><td>1/8T</td><td>0.32</td><td>Dotted eighth note</td><td>1/8D</td><td>0.72</td></tr><tr><td>Sixteenth note</td><td>1/16</td><td>0.24</td><td>Dotted 16th note</td><td>1/16D</td><td>0.36</td></tr></tbody></table>
 <p>Sixteenth note triplet   1/16T        0.16</p>
 <h4 id="step-4" class="param-name">*STEP*</h4>
-<p>Pressing this soft button will advance the track location (TIME) by the amount set in the</p>
-<p>STEP parameter. Notice the</p>
-<p>TIME parameter adjusts to the new location on the track when the</p>
-<p><span class="lcd">*STEP*</span> button is pressed.</p>
+<p>Pressing this soft button will advance the track location (TIME) by the amount set in the STEP parameter. Notice the TIME parameter adjusts to the new location on the track when the <span class="lcd">*STEP*</span> button is pressed.</p>
 <p>If you have selected <span class="lcd">RECORD-<span class="param">MODE</span>=LOOPED</span> on the <span class="page-name">Sequencer Control page</span>, stepping past the end of the track will wrap around to the beginning, allowing you to continue stepping.</p>
 <p>Otherwise, if you step past the end of the track you will enter Audition mode.</p>
-<p>If you are using a Foot Switch with the TS-10, you can assign the foot switch to advance the location by setting FS1=</p>
-<p><span class="lcd">*STEP*</span> on the <span class="page-name">System page</span>. Pressing the foot switch will act just like the</p>
-<p><span class="lcd">*STEP*</span> command on the <span class="page-name">Step Entry page</span>. This is useful when you need both hands to control the keyboard.</p>
+<p>If you are using a Foot Switch with the TS-10, you can assign the foot switch to advance the location by setting <span class="lcd">FS1=*STEP*</span> on the <span class="page-name">System page</span>. Pressing the foot switch will act just like the <span class="lcd">*STEP*</span> command on the <span class="page-name">Step Entry page</span>. This is useful when you need both hands to control the keyboard.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.

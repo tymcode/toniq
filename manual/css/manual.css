@@ -350,6 +350,18 @@ a.refer-to:hover {
   border-bottom-color: var(--accent);
 }
 
+a.algo {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+a.algo:hover {
+  border-bottom-color: var(--accent);
+}
+
 kbd.button,
 strong.panel {
   font-family: var(--font-ui);
@@ -642,6 +654,19 @@ table.bullet-cols {
 table.bullet-cols td {
   vertical-align: top;
   padding: 0.12rem 1.1rem 0.12rem 0;
+}
+
+table.param-cols {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0.55rem 0 1rem;
+}
+
+table.param-cols td {
+  vertical-align: top;
+  padding: 0.12rem 1.1rem 0.12rem 0;
+  width: 50%;
 }
 
 table.data-table {

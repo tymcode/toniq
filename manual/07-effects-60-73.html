@@ -24,59 +24,55 @@
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
       <h1 id="section-7-effect-parameters-60-73-amp-filter">Section 7 — Effect Parameters (60–73 Amp/Filter)</h1>
     </header>
-    <h3 id="60-rotary-speaker-rev" class="algo">60 ROTARY SPEAKER + REV</h3>
-<p>A rotating speaker simulation with reverb and distortion. Assign a voice to FX-1 to get reverb after the rotary speaker with distortion, or use FX-2 for reverb only. There are Variations on the first sub-page for the Rotary Speaker without Distortion.</p>
+    <h2 id="60-rotary-speaker-rev" class="algo">60 ROTARY SPEAKER + REV</h2>
+<p>A rotating speaker simulation with reverb and distortion. Assign a voice to FX-1 to get reverb after the rotary speaker with distortion, or use <span class="param">FX-2</span> for reverb only. There are Variations on the first sub-page for the Rotary Speaker without Distortion.</p>
 <h4 id="dist-input-output" class="param-name"><span class="param">DIST INPUT/OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
-<p>The DIST INPUT parameter determines the input signal gain into the amplifier simulation, creating a tube-like overdrive.</p>
-<p>The OUTPUT parameter controls the output of the amplifier distortion. There is a (fixed) clean path in parallel with the distortion. Therefore, to eliminate distortion, set this parameter to 00.</p>
+<p>The DIST <span class="param">INPUT</span> parameter determines the input signal gain into the amplifier simulation, creating a tube-like overdrive.</p>
+<p>The <span class="param">OUTPUT</span> parameter controls the output of the amplifier distortion. There is a (fixed) clean path in parallel with the distortion. Therefore, to eliminate distortion, set this parameter to 00.</p>
 <h4 id="filter" class="param-name"><span class="param">FILTER</span><span class="range">Range: 00 to 99</span></h4>
 <p>A three-pole, low pass filter following the amplifier simulation. Controls the filter cutoff resulting in a brighter sound (for higher values) or a darker sound (low values).</p>
 <h4 id="spkr-gain" class="param-name"><span class="param">SPKR GAIN</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the level of the signal (distorted or not) applied to the rotary speaker. High gain will simulate a broken speaker. Also use higher settings when using little or no distortion, because distortion raises the signal level to the speaker.</p>
 <h4 id="rotor-slow" class="param-name"><span class="param">ROTOR SLOW</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the rate of the rotary speaker when in the “Slow” setting. ROTOR SLOW determines the manual level for the rotary speaker rate when SPEED= SLOW, or when the selected modulator is at zero output level. Again, the higher the value, the faster the rate.</p>
+<p>Determines the rate of the rotary speaker when in the “Slow” setting. <span class="param">ROTOR SLOW</span> determines the manual level for the rotary speaker rate when <span class="param">SPEED</span>= SLOW, or when the selected modulator is at zero output level. Again, the higher the value, the faster the rate.</p>
 <h4 id="fast" class="param-name"><span class="param">FAST</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the rate of the rotary speaker when in the “Fast” setting. The higher the value, the faster the rate.</p>
 <h4 id="inertia" class="param-name"><span class="param">INERTIA</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
 <h4 id="speed" class="param-name"><span class="param">SPEED</span><span class="range">Range: SLOW or FAST</span></h4>
-<p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the</p>
-<p>INERTIA parameter (see previous description). Any effect modulator can act as the</p>
-<p>SPEED controller. How the modulators will switch the rotor speed fall into two categories:</p>
-<p>• WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>(ure), KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set ROTOR SLOW faster than ROTOR FAST.</p>
-<p>• KEYDN, PATCH, SUSTN, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</p>
+<p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:</p>
+<p>• WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>(ure), KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than ROTOR <span class="param">FAST</span>.</p>
+<p>• KEYDN, PATCH, <span class="param">SUSTN</span>, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</p>
 <h4 id="decay-time" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0</span></h4>
 <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
 <h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
 <h4 id="diffusion" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h3 id="61-speaker-cabinet" class="algo">61 SPEAKER CABINET</h3>
-<h4 id="speaker" class="param-name">SPEAKER</h4>
-<p>CABINET simulates the warm sound of an open-back speaker cabinet. SPEAKER</p>
-<p>CABINET is fabulous for a guitar, bass or any other stringed instrument sound. This algorithm contains the resonances and the non linearity of a real musical instrument speaker. The FX-1 and FX-2 parameters can be routed into the effect with different Dry/Wet mixes. For a brighter speaker emulation, try using TUNABLE SPEAKER.</p>
+<h2 id="61-speaker-cabinet" class="algo">61 SPEAKER CABINET</h2>
+<p>SPEAKER  CABINET simulates the warm sound of an open-back speaker cabinet. SPEAKER CABINET is fabulous for a guitar, bass or any other stringed instrument sound. This algorithm contains the resonances and the non linearity of a real musical instrument speaker. The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes. For a brighter speaker emulation, try using TUNABLE SPEAKER.</p>
 <h4 id="output-gain" class="param-name"><span class="param">OUTPUT GAIN</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>Since speaker cabinets are “lossy,” output gain is required to compensate losses in perceived volume. Setting this gain too high will cause clipping of the output signal.</p>
-<h3 id="62-tunable-speaker" class="algo">62 TUNABLE SPEAKER</h3>
-<p>Tunable Speaker offers an EQ controllable speaker sound that is brighter than SPEAKER CABINET. By tuning three parametric filters, you can simulate many different speaker cabinet sounds that are used in all styles of music. The FX-1 and FX-2 parameters can be routed into the effect with different Dry/Wet mixes.</p>
+<h2 id="62-tunable-speaker" class="algo">62 TUNABLE SPEAKER</h2>
+<p>Tunable Speaker offers an EQ controllable speaker sound that is brighter than SPEAKER CABINET. By tuning three parametric filters, you can simulate many different speaker cabinet sounds that are used in all styles of music. The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="mid-1-fc" class="param-name"><span class="param">MID-1 FC</span><span class="range">Range: 0000 to 9999 Hz</span></h4>
 <p>This parameter sets the center of the mid-frequency parametric. Higher values have a brighter sound.</p>
 <h4 id="q" class="param-name"><span class="param">Q</span><span class="range">Range: 01 to 18</span></h4>
 <p>This parameter is a bandwidth control that determines the width of the resonant peak at the center of the-frequency band. By raising the value, you can produce a narrower bandwidth.</p>
 <h4 id="level" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>This parameter sets the amount of cut (negative values) or boost (positive values) applied to this mid-frequency parametric.</p>
-<p>MID-2 FC                                 MID-3 FC</p>
+<p><span class="param">MID-2 FC</span>                                 MID-3 FC</p>
 <p>Q                                        Q</p>
-<p>LEVEL                  LEVEL</p>
+<p><span class="param">LEVEL</span>                  <span class="param">LEVEL</span></p>
 <p>These parameters are similar to the previous ones, but can be assigned to control different bandwidths within the mid-range.</p>
 <h4 id="input-level" class="param-name"><span class="param">INPUT LEVEL</span><span class="range">Range: -24 to +00 dB</span></h4>
 <p>Lets you to adjust the input level before the EQs to eliminate the possibility of clipping boosted signals.</p>
 <h4 id="output-level" class="param-name"><span class="param">OUTPUT LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>Since speaker cabinets are “lossy,” output gain is required to compensate for losses in perceived volume. Setting this gain too high will cause clipping of the output signal.</p>
-<h3 id="63-guitar-amp-1" class="algo">63 GUITAR AMP 1</h3>
-<h3 id="64-guitar-amp-2" class="algo">64 GUITAR AMP 2</h3>
+<h2 id="63-guitar-amp-1" class="algo">63 GUITAR AMP 1</h2>
+<h2 id="64-guitar-amp-2" class="algo">64 GUITAR AMP 2</h2>
 <p>These algorithms recreate the warm sound of a guitar tube amplifier. They do this by emulating tube distortion characteristics. These algorithms are good for all stringed instrument sounds.</p>
-<p>GUITAR  AMP 1, designed for Hard Rock, offers more distortion than GUITAR AMP 2, which is optimized for “bluesy” type sounds. The EFFECT <span class="param">MIX</span> FX-1 and FX-2 parameters can be routed into the effect with different Dry/Wet mixes.</p>
+<p>GUITAR  AMP 1, designed for Hard Rock, offers more distortion than GUITAR AMP 2, which is optimized for “bluesy” type sounds. The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="preamp-gain" class="param-name"><span class="param">PREAMP GAIN</span><span class="range">Range: -48 to +48 dB</span></h4>
 <p>This parameter adjusts the amount of boost or cut applied to the incoming signal. We recommend a setting of +0 dB, since these emulations were optimized for distortion there. Lower preamp gains will result in less distortion, while higher preamp gains will yield clipping distortion. For low preamp gain, it may be desirable to use low tube bias values.</p>
 <h4 id="main-level" class="param-name"><span class="param">MAIN LEVEL</span><span class="range">Range: 00 to 99</span></h4>
@@ -115,9 +111,9 @@
 <p>Determines the width of the resonant peak of the second filter center.</p>
 <h4 id="level-4" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>Adjusts the amount of boost or cut applied to the second main amp parametric.</p>
-<h3 id="65-guitar-amp-3" class="algo">65 GUITAR AMP 3</h3>
+<h2 id="65-guitar-amp-3" class="algo">65 GUITAR AMP 3</h2>
 <p>GUITAR AMP 3 combines an inverse expander with a bright distortion for amp lead sounds.</p>
-<p>The inverse expander may be thought of as a compressor that amplifies all signals below the threshold. This algorithm is good for heavy metal and hard rock guitar solos. The FX-1 and FX-2 parameters can be routed into the effect with different Dry/Wet mixes.</p>
+<p>The inverse expander may be thought of as a compressor that amplifies all signals below the threshold. This algorithm is good for heavy metal and hard rock guitar solos. The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="preamp-gain-2" class="param-name"><span class="param">PREAMP GAIN</span><span class="range">Range: -48 to +48 dB</span></h4>
 <p>Adjusts the amount of boost or cut applied to the EQ’d incoming signal. Lead sounds are obtained using high gain.</p>
 <h4 id="main-level-2" class="param-name"><span class="param">MAIN LEVEL</span><span class="range">Range: 00 to 99</span></h4>
@@ -156,58 +152,44 @@
 <p>Determines the width of the resonant peak of the second filter center.</p>
 <h4 id="level-7" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>Adjusts the amount of boost or cut applied to the second main amp parametric.</p>
-<h3 id="66-vcf-distortion-vcf" class="algo">66 VCF- -DISTORTION- -VCF</h3>
-<h4 id="vcf-distortion" class="param-name">VCF- -DISTORTION- -</h4>
-<p>VCF combines a voltage control filter, a raspy distortion, and a second voltage control filter. Three effects can be obtained: Distortion, Wah-wah, and Auto-wah. The last two functions use the same VCF. These filters can be disabled or used as</p>
-<p>EQ if desired. The second</p>
-<p>VCF that exists after the distortion can be set to act like a simple speaker simulator, or it can be modulated in parallel with the pre-distortion VCF.</p>
+<h2 id="66-vcf-distortion-vcf" class="algo">66 VCF- -DISTORTION- -VCF</h2>
+<p>VCF- -DISTORTION- -VCF combines a voltage control filter, a raspy distortion, and a second voltage control filter. Three effects can be obtained: Distortion, Wah-wah, and Auto-wah. The last two functions use the same VCF. These filters can be disabled or used as EQ if desired. The second VCF that exists after the distortion can be set to act like a simple speaker simulator, or it can be modulated in parallel with the pre-distortion VCF.</p>
 <h4 id="vcf-distortion-vcf-signal-routing" class="param-name">VCF- -DISTORTION- -VCF Signal Routing</h4>
-<p>Main</p>
-<p>FX1 Left                                                                                     Outputs</p>
+<p><span class="param">Main FX1 Left Outputs</span></p>
 <h3 id="post-dist">Post-Dist</h3>
 <div class="vfd-callouts top"><div>FX2 Left Variable</div><div>Pre-Dist VCF</div><div>L</div></div>
 <table class="defn-table"><thead><tr><th>Distortion</th><th>Distortion Distortion Env Fol</th></tr></thead><tbody><tr><td><span class="lcd">VCF</span></td><td>Clip HiPass</td></tr><tr><td><span class="lcd">FX1</span></td><td>Right               Filter                                                                     R</td></tr></tbody></table>
 <h4 id="env-fol" class="param-name">Env Fol</h4>
 <div class="vfd-callouts top"><div>FX2 Right</div><div>Level In</div><div>Level Out Bypass</div></div>
-<p>The EFFECT <span class="param">MIX</span> FX-1 and FX-2 parameters can be routed into the algorithm with different</p>
+<p>The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the algorithm with different</p>
 <p>Dry/Wet mixes.</p>
 <h4 id="dist-level-in" class="param-name"><span class="param">DIST LEVEL - IN</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the gain going into the distortion effect. DIST LEVEL -</p>
-<p>IN will boost the signal level up to 48 dB. For more distortion, use a high input level gain and turn the</p>
-<p>OUT down to keep the volume under control. For less distortion, use a low gain input level and a higher output volume.</p>
+<p>Controls the gain going into the distortion effect. <span class="param">DIST <span class="param">LEVEL</span> - IN</span> will boost the signal level up to 48 dB. For more distortion, use a high input level gain and turn the <span class="param">OUT</span> down to keep the volume under control. For less distortion, use a low gain input level and a higher output volume.</p>
 <h4 id="out" class="param-name"><span class="param">OUT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the gain coming out of the distortion effect. Generally, if the DIST LEVEL - IN is set high, set this parameter lower to control the volume.</p>
+<p>Controls the gain coming out of the distortion effect. Generally, if the <span class="param">DIST <span class="param">LEVEL</span> - IN</span> is set high, set this parameter lower to control the volume.</p>
 <h4 id="bypass" class="param-name"><span class="param">BYPASS</span><span class="range">Range: OFF or ON</span></h4>
 <p>Allows you to bypass the distortion (as shown on the signal routing diagram).</p>
 <h4 id="pre-eq-high-fc" class="param-name"><span class="param">PRE-EQ HIGH FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
 <p>Filters out the low frequencies before the EQ. The higher the value, the less low frequencies will pass through.</p>
 <h4 id="pre-dist-vcf-fc" class="param-name"><span class="param">PRE-DIST VCF FC</span><span class="range">Range: 01 to 99</span></h4>
-<p>Determines the filter cut off-frequency before the distortion. Higher values have a brighter sound. This parameter can be modulated, using a CV Pedal for a wah-wah pedal effect. To disable the distortion filter, set this parameter to 99. To use as an EQ, set the desired value and make sure ENV AMT is +00. To use as the auto-wah, set this parameter close to 01 (lower values) and turn on ENV AMT.</p>
+<p>Determines the filter cut off-frequency before the distortion. Higher values have a brighter sound. This parameter can be modulated, using a CV Pedal for a wah-wah pedal effect. To disable the distortion filter, set this parameter to 99. To use as an EQ, set the desired value and make sure <span class="param">ENV AMT</span> is +00. To use as the auto-wah, set this parameter close to 01 (lower values) and turn on <span class="param">ENV AMT</span>.</p>
 <h4 id="q-8" class="param-name"><span class="param">Q</span><span class="range">Range: 01 to 25</span></h4>
-<p>Determines the level and width of the resonant peak at the filter cutoff point. While the PRE-DIST VCF FC parameter determines where (at what-frequency) this peak will occur, the Q setting controls the presence of the peak. This setting is important for the auto-wah effect.</p>
+<p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">PRE-DIST VCF FC</span> parameter determines where (at what-frequency) this peak will occur, the Q setting controls the presence of the peak. This setting is important for the auto-wah effect.</p>
 <h4 id="env-amt" class="param-name"><span class="param">ENV AMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines how much the amplitude of the incoming signal will modify the distortion filter cutoff-frequency. When set to +00, no modification will occur. When set to mid positive values, the PRE-DIST VCF</p>
-<p>FC will go high, but then come down to its nominal setting. When set to negative mid values, the PRE-DIST VCF</p>
-<p>FC will go low, and then go back up to its nominal setting How quickly it does so is determined by the</p>
-<h3 id="attack-and">ATTACK and</h3>
-<p><span class="param">RELEASE</span> parameters. This sound is the auto-wah; positive values will boost the high frequencies, offering an “oww-oww” sound, and negative values will cut the high frequencies, producing a “dweep-dweep” sound.</p>
+<p>Determines how much the amplitude of the incoming signal will modify the distortion filter cutoff-frequency. When set to +00, no modification will occur. When set to mid positive values, the <span class="param">PRE-DIST VCF FC</span> will go high, but then come down to its nominal setting. When set to negative mid values, the <span class="param">PRE-DIST VCF FC</span> will go low, and then go back up to its nominal setting How quickly it does so is determined by the <span class="param">ATTACK</span> and <span class="param">RELEASE</span> parameters. This sound is the auto-wah; positive values will boost the high frequencies, offering an “oww-oww” sound, and negative values will cut the high frequencies, producing a “dweep-dweep” sound.</p>
 <h4 id="post-dist-vcf-fc" class="param-name"><span class="param">POST-DIST VCF FC</span><span class="range">Range: 01 to 99</span></h4>
 <p>Determines the filter cut off-frequency after the distortion. Higher values have a brighter sound.</p>
 <p>This parameter can also be modulated, using a CV Pedal for a wah-wah pedal effect. To disable the post-distortion filter, set this parameter to 99.</p>
 <h4 id="q-9" class="param-name"><span class="param">Q</span><span class="range">Range: 01 to 25</span></h4>
-<p>Determines the level and width of the resonant peak at the filter cutoff point. While the POST-DIST VCF FC (filter cutoff) parameter determines where (at what-frequency) this peak will occur, the Q setting controls the presence of the peak. This setting is important for the auto-wah effect.</p>
+<p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">POST-DIST VCF FC</span> (filter cutoff) parameter determines where (at what-frequency) this peak will occur, the Q setting controls the presence of the peak. This setting is important for the auto-wah effect.</p>
 <h4 id="env-amt-2" class="param-name"><span class="param">ENV AMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines how much the amplitude of the incoming signal will modify the distortion filter cutoff-frequency. When set to +00, no modification will occur. When set to mid positive values,</p>
-<p>FC will go high, but then come down to its nominal setting. When set to negative mid values,</p>
-<p>FC will go low, and then go back up to its nominal setting How quickly it does so is determined by the</p>
-<h3 id="attack-and-2">ATTACK and</h3>
-<p><span class="param">RELEASE</span> parameters. This sound is the auto-wah; positive values will boost the high frequencies, offering an “oww-oww” sound, and negative values will cut the high frequencies, producing a “dweep-dweep” sound.</p>
+<p>Determines how much the amplitude of the incoming signal will modify the distortion filter cutoff-frequency. When set to +00, no modification will occur. When set to mid positive values, FC will go high, but then come down to its nominal setting. When set to negative mid values, FC will go low, and then go back up to its nominal setting How quickly it does so is determined by the <span class="param">ATTACK</span> and <span class="param">RELEASE</span> parameters. This sound is the auto-wah; positive values will boost the high frequencies, offering an “oww-oww” sound, and negative values will cut the high frequencies, producing a “dweep-dweep” sound.</p>
 <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 50 µsec to 10.0 sec</span></h4>
 <p>Sets the attack of the envelope follower (i.e. determines how closely the attack is followed) once the incoming signal has been detected. Generally the attack should be short.</p>
 <h4 id="release-3" class="param-name"><span class="param">RELEASE</span><span class="range">Range: 1 msec to 10.0 sec</span></h4>
 <p>Sets the amount of time after the incoming signal has ceased for the envelope follower to shut down. Generally these times are longer than the attack times.</p>
-<h3 id="67-wah-distortion-rev" class="algo">67 WAH- -DISTORTION + REV</h3>
-<p>A guitar and amp simulator, featuring distortion, compression, reverb, and a resonant filter following the amplitude of the signal. Assign a sound to FX-1 for reverb after Wah distortion, or use FX-2 for reverb only.</p>
+<h2 id="67-wah-distortion-rev" class="algo">67 WAH- -DISTORTION + REV</h2>
+<p>A guitar and amp simulator, featuring distortion, compression, reverb, and a resonant filter following the amplitude of the signal. Assign a sound to FX-1 for reverb after Wah distortion, or use <span class="param">FX-2</span> for reverb only.</p>
 <h4 id="dist-input-and-output" class="param-name"><span class="param">DIST INPUT and OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
 <p>These two parameters control the levels going into and coming out of the distortion effect. For more distortion, use a high input level and turn the output level down to keep the volume under control. For less distortion, use a low input level and a higher output level.</p>
 <h4 id="wah-center" class="param-name"><span class="param">WAH - CENTER</span><span class="range">Range: 00 to 99</span></h4>
@@ -220,16 +202,15 @@
 <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
 <h4 id="feedback" class="param-name"><span class="param">FEEDBACK</span><span class="range">Range: -99 to +99</span></h4>
 <p>Controls the amount of signal applied from the output of the reverb back into the input of the compressor. The sign of the value determines the polarity of the feedback.</p>
-<aside class="note"><p>Note: Since the feedback level is taken from FX-1, if the Effect Mix for FX-1 is set to 00 or a low value, feedback will have little or no consequence. Also, it is important to note that since the signal is being taken from the reverb, which is also fed by FX-2, voices sent to FX-2 will enter the feedback loop along with the FX-1 signals.</p></aside>
+<aside class="note"><p>Note: Since the feedback level is taken from FX-1, if the Effect Mix for FX-1 is set to 00 or a low value, feedback will have little or no consequence. Also, it is important to note that since the signal is being taken from the reverb, which is also fed by <span class="param">FX-2</span>, voices sent to <span class="param">FX-2</span> will enter the feedback loop along with the FX-1 signals.</p></aside>
 <h4 id="compressor-thresh" class="param-name"><span class="param">COMPRESSOR THRESH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the threshold level for the compressor. As the input signal dies away below the threshold, the compressor will increase the gain of the system, causing feedback to increase as well. Normal compression is “72.”</p>
-<h3 id="68-flng-cmp-dist-rev" class="algo">68 FLNG- -CMP- -DIST + REV</h3>
-<p>A screaming guitar-and-amp simulator that features not only compression, distortion, and reverb, but flanging and EQ as well. FX-1 routes the signal through each of these effect processors, while FX-2 is used for reverb only.</p>
-<h3 id="flng-cmp-dist-rev-signal-routing">FLNG- -CMP- -DIST + REV Signal Routing</h3>
-<p>DRY                      Reverb to Compressor Feedback</p>
+<h2 id="68-flng-cmp-dist-rev" class="algo">68 FLNG- -CMP- -DIST + REV</h2>
+<p>A screaming guitar-and-amp simulator that features not only compression, distortion, and reverb, but flanging and EQ as well. FX-1 routes the signal through each of these effect processors, while <span class="param">FX-2</span> is used for reverb only.</p>
+<p>FLNG- -CMP- -DIST + REV Signal Routing</p>
+<p><span class="param">DRY</span>                      Reverb to Compressor Feedback</p>
 <div class="vfd-callouts top"><div>Flange</div><div>Comp</div><div>Distort</div></div>
-<p>Main</p>
-<p>Reverb</p>
+<h4 id="main-reverb" class="param-name">Main Reverb</h4>
 <p>Outputs</p>
 <h4 id="r" class="param-name">R</h4>
 <p>Bus2</p>
@@ -241,18 +222,16 @@
 <h4 id="dist-input-and-output-2" class="param-name"><span class="param">DIST INPUT and OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
 <p>Control the levels going into and coming out of the distortion effect. For more distortion, use a high input level and turn the output level down to keep the volume under control. For less distortion, use a low input level and a higher output level.</p>
 <h4 id="filter-low-fc-high-fc" class="param-name"><span class="param">FILTER - LOW FC/HIGH FC</span><span class="range">Range: 00 to 99</span></h4>
-<h3 id="the-low">The LOW</h3>
-<p>FC parameter filters out high frequencies after the distortion signal path. The lower the value, the less high frequencies pass through. The HIGH</p>
-<p>FC parameter filters out low frequencies after the distortion signal path. The higher the value, the less low frequencies pass through.</p>
+<p>The <span class="param">LOW FC</span> parameter filters out high frequencies after the distortion signal path. The lower the value, the less high frequencies pass through. The <span class="param">HIGH FC</span> parameter filters out low frequencies after the distortion signal path. The higher the value, the less low frequencies pass through.</p>
 <h4 id="decay-time-3" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0 msec</span></h4>
 <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
 <h4 id="hf-damping-3" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
 <h4 id="feedback-2" class="param-name"><span class="param">FEEDBACK</span><span class="range">Range: -99 to +99</span></h4>
 <p>Controls the amount of signal applied from the output of the reverb back into the input of the compressor. The sign of the value determines the polarity of the feedback.</p>
-<aside class="note"><p>Note: Since the feedback level is taken from FX-1, if the Effect Mix for FX-1 is set to 00 or a low value, feedback will have little or no consequence. Also, it is important to note that since the signal is being taken from the reverb, which is also fed by FX-2, voices sent to FX-2 will enter the feedback loop along with the FX-1 signals.</p></aside>
-<h3 id="69-distort-chorus-rev" class="algo">69 DISTORT + CHORUS- -REV</h3>
-<p>A brighter guitar-and-amp simulator that features distortion, chorus, and reverb, but without the compressor. The FX-1 and FX-2 <span class="param">MIX</span> parameters can be routed into the effect with different</p>
+<aside class="note"><p>Note: Since the feedback level is taken from FX-1, if the Effect Mix for FX-1 is set to 00 or a low value, feedback will have little or no consequence. Also, it is important to note that since the signal is being taken from the reverb, which is also fed by <span class="param">FX-2</span>, voices sent to <span class="param">FX-2</span> will enter the feedback loop along with the FX-1 signals.</p></aside>
+<h2 id="69-distort-chorus-rev" class="algo">69 DISTORT + CHORUS- -REV</h2>
+<p>A brighter guitar-and-amp simulator that features distortion, chorus, and reverb, but without the compressor. The FX-1 and <span class="param">FX-2</span> <span class="param">MIX</span> parameters can be routed into the effect with different</p>
 <p>Dry/Wet mixes.</p>
 <h4 id="dist-mix" class="param-name"><span class="param">DIST MIX</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the Dry/Wet, or in this case, dirty/clean mix of the signal. A value of 00 yields a clean signal; 99 yields an all distortion signal.</p>
@@ -261,7 +240,7 @@
 <h4 id="filter-fc" class="param-name"><span class="param">FILTER - FC</span><span class="range">Range: 00 to 99</span></h4>
 <p>This determines the filter cutoff-frequency (brightness) of the distortion.</p>
 <h4 id="q-10" class="param-name"><span class="param">Q</span><span class="range">Range: 01 to 25</span></h4>
-<p>Determines the level of the resonant peak at the filter cutoff point. While the FILTER - FC parameter determines where (at what-frequency) this peak will occur, the Q setting controls the presence of the peak.</p>
+<p>Determines the level of the resonant peak at the filter cutoff point. While the <span class="param">FILTER - FC</span> parameter determines where (at what-frequency) this peak will occur, the Q setting controls the presence of the peak.</p>
 <h4 id="chorus-mix" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the Dry/Wet mix within the chorus itself.</p>
 <h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
@@ -282,7 +261,7 @@
 <p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
 <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h3 id="70-parametric-eq" class="algo">70 PARAMETRIC EQ</h3>
+<h2 id="70-parametric-eq" class="algo">70 PARAMETRIC EQ</h2>
 <p>PARAMETRIC EQ offers a minimum phase four band parametric EQ.</p>
 <h4 id="eq-trim" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00 dB</span></h4>
 <p>Allows you to adjust the input level trim to the EQs to eliminate the possibility of clipping boosted signals.</p>
@@ -304,13 +283,11 @@
 <h4 id="q-12" class="param-name">Q</h4>
 <h4 id="level-11" class="param-name">LEVEL</h4>
 <p>These three parameters are identical to the previous three parameters, and are used to control different bandwidths within the mid range.</p>
-<h3 id="71-eq-compressor" class="algo">71 EQ- -COMPRESSOR</h3>
-<p>EQ- -COMPRESSOR combines an</p>
-<p>EQ with a full-feature compressor. For high compressor ratios, this algorithm functions as a limiter. This algorithm operates by compressing (attenuating) signals above the threshold and passing the signals below the threshold. For higher ratios and lower thresholds, this algorithm can be used to create sustain.</p>
-<p>EQ exists in both signal and side chain paths.</p>
+<h2 id="71-eq-compressor" class="algo">71 EQ- -COMPRESSOR</h2>
+<p>EQ- -COMPRESSOR combines an EQ with a full-feature compressor. For high compressor ratios, this algorithm functions as a limiter. This algorithm operates by compressing (attenuating) signals above the threshold and passing the signals below the threshold. For higher ratios and lower thresholds, this algorithm can be used to create sustain. EQ exists in both signal and side chain paths.</p>
 <h4 id="signal-level" class="param-name">Signal Level</h4>
-<h3 id="attenuate">Attenuate</h3>
-<h3 id="threshold">Threshold</h3>
+<p>Attenuate</p>
+<p>Threshold</p>
 <p>Pass</p>
 <p>Time</p>
 <h4 id="compressor-ratio" class="param-name"><span class="param">COMPRESSOR RATIO</span><span class="range">Range: 1/1 to 40/1, infinity</span></h4>
@@ -340,18 +317,16 @@
 <p>Sets the cutoff-frequency of the upper-frequency band high shelving filter.</p>
 <h4 id="level-13" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
-<h3 id="72-rumble-filter" class="algo">72 RUMBLE FILTER</h3>
-<h4 id="rumble" class="param-name">RUMBLE</h4>
-<p>FILTER is a high pass filter in cascade with a low pass filter, fourth order (24dB per octave). The high pass filter is good for eliminating low end rumble. The low pass filter is good for eliminating hiss. The EFFECT <span class="param">MIX</span> FX-1 and FX-2</p>
-<p>FILTER parameters can be routed into the effect with different Dry/Wet mixes. For this algorithm, we recommend mid value Mixes.</p>
+<h2 id="72-rumble-filter" class="algo">72 RUMBLE FILTER</h2>
+<p>RUMBLE  <span class="param">FILTER</span> is a high pass filter in cascade with a low pass filter, fourth order (24dB per octave). The high pass filter is good for eliminating low end rumble. The low pass filter is good for eliminating hiss. The EFFECT <span class="param">MIX FX-1 and FX-2</span> <span class="param">FILTER</span> parameters can be routed into the effect with different Dry/Wet mixes. For this algorithm, we recommend mid value Mixes.</p>
 <h4 id="high-fc-4" class="param-name"><span class="param">HIGH FC</span><span class="range">Range: 4 to 8000 Hz</span></h4>
 <p>Controls the boost or cut of the high pass filter-frequency applied to the input signal.</p>
 <h4 id="low-fc-3" class="param-name"><span class="param">LOW FC</span><span class="range">Range: 100 Hz to 15 KHz</span></h4>
 <p>Controls the boost or cut of the low pass filter-frequency applied to the input signal.</p>
 <h4 id="gain" class="param-name"><span class="param">GAIN</span><span class="range">Range: -48 to +48 dB</span></h4>
 <p>Because the cascade of high pass with low pass causes an insertion loss, this parameter allows you to boost the filtered output signal.</p>
-<h3 id="73-van-der-pol-filter" class="algo">73 VAN DER POL FILTER</h3>
-<p>VAN  DER POL FILTER adds synthetic high harmonics to the input signal, brightening the overall sound. This algorithm is most often used in the studio for vocalists, but feel free to experiment with this algorithm using your favorite instrument as well. This algorithm features prominent transient enhancement that makes it ideal for “plucked” sounds. The filter in this algorithm operates on the signal prior to enhancement. Set the filter to enhance the-frequency region that you desire. Then use the EFFECT <span class="param">MIX</span> FX-1 parameter to mix the enhanced signal with the dry signal. For this algorithm we recommend mid values of the Mix.</p>
+<h2 id="73-van-der-pol-filter" class="algo">73 VAN DER POL FILTER</h2>
+<p>VAN  DER POL <span class="param">FILTER</span> adds synthetic high harmonics to the input signal, brightening the overall sound. This algorithm is most often used in the studio for vocalists, but feel free to experiment with this algorithm using your favorite instrument as well. This algorithm features prominent transient enhancement that makes it ideal for “plucked” sounds. The filter in this algorithm operates on the signal prior to enhancement. Set the filter to enhance the-frequency region that you desire. Then use the EFFECT <span class="param">MIX</span> FX-1 parameter to mix the enhanced signal with the dry signal. For this algorithm we recommend mid values of the Mix.</p>
 <h4 id="high-fc-5" class="param-name"><span class="param">HIGH FC</span><span class="range">Range: 4 to 8000 Hz</span></h4>
 <p>Controls the boost or cut of the high pass filter-frequency applied to the input signal.</p>
 <h4 id="low-fc-4" class="param-name"><span class="param">LOW FC</span><span class="range">Range: 100 Hz to 15 KHz</span></h4>
