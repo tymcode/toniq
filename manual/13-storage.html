@@ -15,14 +15,14 @@
     </div>
   </header>
   <nav class="section-nav">
-    <div><a href="12-general-midi.html">← Section 12 — General MIDI</a></div>
+    <div><a href="12-general-midi.html#section-12-general-midi">← Section 12 — General MIDI</a></div>
     <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
-    <div><a href="14-sampled-sounds.html">Section 14 — Understanding Sampled Sounds →</a></div>
+    <div><a href="14-sampled-sounds.html#section-14-understanding-sampled-sounds">Section 14 — Understanding Sampled Sounds →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
-      <h1>Section 13 — Storage</h1>
+      <h1 id="section-13-storage">Section 13 — Storage</h1>
     </header>
     <p>The <span class="page-name">Storage page</span> provides data storage functions that enable you to:</p>
 <p>• save and load Program, Preset, Sequencer and System data to disk,</p>
@@ -31,11 +31,17 @@
 <p>The <span class="page-name">Storage page</span> presents a series of menus containing command options which are selected by using the soft buttons.</p>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Storage</div></td></tr></table></aside>
 <p>• Pressing <kbd class="button">Storage</kbd> will always display the <span class="page-name">Storage page</span>:</p>
-<p>From the <span class="page-name">Storage page</span> you can select which kind of data storage you want to use — Disk or MIDI <span class="param">SYS-EX</span> storage. A SCSI option is available for loading Sampled Sounds from EPS/EPS-16 PLUS/ASR-10 format SCSI Storage Devices when the optional SP-4 interface is installed. The TS-10 SCSI port will only read from SCSI; it will not write to SCSI Storage Devices. When the SP-4 is installed, the STORAGE page will display a new active field (explained later), as below:</p>
-<p>Pressing <span class="lcd">*LOAD*</span> is the equivalent of pressing DISK followed by <span class="lcd">*LOAD*</span> on the Disk page.</p>
+<p>From the <span class="page-name">Storage page</span> you can select which kind of data storage you want to use — Disk or MIDI</p>
+<p><span class="param">SYS-EX</span> storage. A</p>
+<p>SCSI option is available for loading Sampled Sounds from EPS/EPS-16 PLUS/ASR-10 format SCSI Storage Devices when the optional SP-4 interface is installed. The TS-10</p>
+<p>SCSI port will only read from SCSI; it will not write to SCSI Storage Devices. When the SP-4 is installed, the</p>
+<p><span class="page-name">STORAGE page</span> will display a new active field (explained later), as below:</p>
+<h3 id="pressing">Pressing</h3>
+<p><span class="lcd">*LOAD*</span> is the equivalent of pressing</p>
+<p>DISK followed by</p>
+<p><span class="lcd">*LOAD*</span> on the <span class="page-name">Disk page</span>.</p>
 <p>Pressing the <kbd class="button">Storage</kbd> button twice in a row performs the same function. Since Disk storage is the most convenient and commonly used form of storage, we’ll cover that first.</p>
-<h3 id="disk-storage-using-the-disk-drive-to-save-and-load-data">Disk Storage — Using the Disk Drive to Save and Load Data</h3>
-<p>The TS-10’s built-in disk drive is used to store all your program, preset and sequencer data, as well as System Exclusive messages from other MIDI devices. The TS-10 uses a Quad-density disk drive that can store 1600 Kilobytes of data on a Double-Sided High-Density (DSHD) 3.5” microfloppy disk and 800 Kilobytes of data on a Double-Sided Double-Density (DSDD) 3.5” microfloppy disk. The disks are enclosed in a protective plastic carrier with an automatic shutter to protect the diskette from physical damage. It is important not to alter this carrier in any way.</p>
+<p>Disk Storage — Using the Disk Drive to Save and Load Data The TS-10’s built-in disk drive is used to store all your program, preset and sequencer data, as well as System Exclusive messages from other MIDI devices. The TS-10 uses a Quad-density disk drive that can store 1600 Kilobytes of data on a Double-Sided High-Density (DSHD) 3.5” microfloppy disk and 800 Kilobytes of data on a Double-Sided Double-Density (DSDD) 3.5” microfloppy disk. The disks are enclosed in a protective plastic carrier with an automatic shutter to protect the diskette from physical damage. It is important not to alter this carrier in any way.</p>
 <figure class="figure"><img src="images/floppy-disks.png" alt="3.5-inch DSHD disk with disk window and write-protect tab, and DSDD disk with no extra window"><figcaption>Write-protect tab and high-density window on 3.5″ disks.</figcaption></figure>
 <p>Floppy disks are a magnetic storage medium and should be treated with the same care you’d give important audio tapes. Just as you would use high quality audio tapes for your important recording needs, we recommend using high-quality floppy disks for your TS-10. On the following page are a few Do’s and Don’t’s concerning disks and the disk drive.</p>
 <h3 id="do-s">Do’s:</h3>
@@ -67,21 +73,33 @@
 <p>• 30-SEQ/SONGS — contains 30 TS-10 sequencer locations, saved from either the lower half of the sequencer memory (Banks 0-4) or the upper half (Banks 5-9). A 30-SEQ/SONGS file can be loaded into either the upper or lower half.</p>
 <p>• 60-SEQ/SONGS — contains the entire sequencer memory (Banks 0-9) and the global Click and <kbd class="button">Sequencer Control</kbd> page settings.</p>
 <p>Whenever you save a 30 or 60 Seq/Song file to disk, you will be asked whether you want to also save internal programs (either 60 or the entire 120) in the same file along with the sequencer data.</p>
-<p>Saving 60 Programs with a 30-SEQ/SONGS file containing Seq/Song Banks 0-4 will save the contents of Program <dfn class="term">BankSet</dfn> U0. Saving 60 Programs with a 30-SEQ/SONGS file containing Seq/Song Banks 5-9 will save the contents of Program <dfn class="term">BankSet</dfn> U1. Saving 60 Programs with a 60-SEQ/SONGS file will save the contents of Program <dfn class="term">BankSet</dfn> U0. A 60 SEQ/SONGS file will also allow you to save the currently loaded contents of the Sample Banks with it. This lets you keep the sequences and their appropriate programs and Sample Banks information together when reloading the data.</p>
+<p>Saving 60 Programs with a 30-SEQ/</p>
+<p>SONGS file containing Seq/Song Banks 0-4 will save the contents of Program <dfn class="term">BankSet</dfn> U0. Saving 60 Programs with a 30-SEQ/</p>
+<p>SONGS file containing Seq/Song Banks 5-9 will save the contents of Program <dfn class="term">BankSet</dfn> U1. Saving 60 Programs with a 60-SEQ/</p>
+<p>SONGS file will save the contents of Program <dfn class="term">BankSet</dfn> U0. A 60 SEQ/</p>
+<p>SONGS file will also allow you to save the currently loaded contents of the Sample Banks with it. This lets you keep the sequences and their appropriate programs and Sample Banks information together when reloading the data.</p>
 <h3 id="midi-system-exclusive-data">MIDI System Exclusive data:</h3>
-<p>• <span class="param">SYS-EX</span>-DATA — In addition to the above types of TS-10 data, you can use the disk drive to save system exclusive data from other MIDI devices. The TS-10 can thus serve as the “librarian” for your other MIDI gear. This function is covered at the end of this section.</p>
+<p>• <span class="param">SYS-EX</span>-DATA — In addition to the above types of TS-10 data, you can use the disk drive to save system exclusive data from other</p>
+<p>MIDI devices. The TS-10 can thus serve as the “librarian” for your other</p>
+<p>MIDI gear. This function is covered at the end of this section.</p>
 <h3 id="system-file">System File:</h3>
-<p>• SYSTEM-SET-UP — System set-up files let you save the system, or “global” parameters, those contained on the System and MIDI Control pages, so that you can save and re-load a new system configuration in seconds. This is handy if you use the TS-10 in a number of different applications that require different settings for MIDI mode, MIDI base channel, master tuning, etc.</p>
+<p>• SYSTEM-SET-UP — System set-up files let you save the system, or “global” parameters, those contained on the System and MIDI Control pages, so that you can save and re-load a new system configuration in seconds. This is handy if you use the TS-10 in a number of different applications that require different settings for</p>
+<p>MIDI mode,</p>
+<p>MIDI base channel, master tuning, etc.</p>
 <h4 id="sampled-sounds">Sampled Sounds:</h4>
 <p>• SAMPLE-BANKS — remembers up to 20 Sampled Sound names (ten in <dfn class="term">BankSet</dfn> 8 and ten in <dfn class="term">BankSet</dfn> 9, if applicable) as well as their source disk(s), file paths, and bank locations. Loading a <dfn class="term">Sample-Banks</dfn> file will allow you to <span class="function">Auto-Load</span> the Sampled Sound files back into the same location(s) that they were in at the time the <dfn class="term">Sample-Banks</dfn> file was saved.</p>
 <p>• SAMPLE-EDITS — contains parameter edits of Sampled Sounds.</p>
-<h3 id="disk-capacity-bytes-blocks-and-files">Disk Capacity — Bytes, Blocks, and Files</h3>
-<p>The TS-10 has a high-density (HD) drive, allowing you to use both Double-Sided High-Density and Double-Sided Double-Density disks:</p>
+<p>Disk Capacity — Bytes, Blocks, and Files The TS-10 has a high-density (HD) drive, allowing you to use both Double-Sided High-Density and Double-Sided Double-Density disks:</p>
 <p>• Double-Density disks — can store 800 kilobytes of TS-10 data, which translates into about 1600 Blocks.</p>
 <p>• High-Density disks — can store 1600 kilobytes of data, which translates into about 3200 Blocks.</p>
 <p>A Block is a handy unit that the TS-10 uses to measure internal and disk memory — 1 Block=512 bytes=256 sample words; 2 Blocks=1k bytes; 4 Blocks=1k sample words.</p>
-<p>TS-10 disk files vary in size — how many will fit on a disk depends on the number and size of the files. Whenever you are on the DISK LOAD page the display shows the size in blocks of each file on the disk. When you are on the DISK SAVE page the display shows the number of free blocks available on the disk in the drive.</p>
-<table class="data-table"><thead><tr><th>Disk Type</th><th>High -Density</th><th>Double-Density</th></tr></thead><tbody><tr><td>Kilobytes</td><td>1600</td><td>800</td></tr><tr><td>Sample Words</td><td>800k</td><td>400k</td></tr><tr><td>Blocks</td><td>3176</td><td>1585</td></tr></tbody></table>
+<p>TS-10 disk files vary in size — how many will fit on a disk depends on the number and size of the files. Whenever you are on the DISK</p>
+<p><span class="page-name">LOAD page</span> the display shows the size in blocks of each file on the disk. When you are on the DISK</p>
+<p><span class="page-name">SAVE page</span> the display shows the number of free blocks available on the disk in the drive.</p>
+<p>Disk Type         High -Density       Double-Density</p>
+<div class="vfd-callouts top"><div>Kilobytes</div><div>1600</div><div>800</div></div>
+<p>Sample Words            800k                400k</p>
+<div class="vfd-callouts top"><div>Blocks</div><div>3176</div><div>1585</div></div>
 <p>There are limits to the number of files on a TS-10 disk:</p>
 <p>• Each disk can hold a maximum of 78 files.</p>
 <p>• A disk can hold up to 60 files of any one file type, but not more than the total of 78 files of all types for a single disk.</p>
@@ -107,13 +125,14 @@
 <p>• Press FORMAT.</p>
 <p>• The display shows:</p>
 <p>• Use the <kbd class="button">Up/Down Arrow</kbd> buttons or the <kbd class="button">Data Entry Slider</kbd> (or Keyboard Naming if enabled) to change the first character of the name and the left and right soft buttons on the screen to move the cursor to the next character. The last three alpha-numeric characters can only be numbers. Once you have the name that you want:</p>
-<p>• SAVE saves the name shown into memory (battery backed up RAM). This name is also saved with global parameters when you SAVE SYSTEM SET-UP (on the Disk Save page). This is useful for changing the default disk name used for formatting.</p>
-<p>• Pressing <span class="lcd">*EXIT*</span> will return you to the Disk <span class="page-name">Storage page</span> with no harm done.</p>
-<p>• Press <span class="lcd">*FORMAT*</span> to proceed. The display shows FORMAT DISK ALL DISK FILES WILL BE ERASED. Press <span class="lcd">*YES*</span> to proceed, or *NO * to abort the command.</p>
+<p>• SAVE saves the name shown into memory (battery backed up RAM). This name is also saved with global parameters when you SAVE SYSTEM SET-UP (on the <span class="page-name">Disk Save page</span>). This is useful for changing the default disk name used for formatting.</p>
+<p>• Pressing <span class="lcd">*EXIT*</span> will return you to the <span class="page-name">Disk Storage page</span> with no harm done.</p>
+<p>• Press</p>
+<p><span class="lcd">*FORMAT*</span> to proceed. The display shows FORMAT DISK ALL DISK FILES WILL BE ERASED. Press</p>
+<p><span class="lcd">*YES*</span> to proceed, or *NO * to abort the command.</p>
 <p>• While the TS-10 is formatting the disk, the display reads FORMATTING DISK PLEASE WAIT... The formatting process takes about 80 seconds.</p>
 <p>• When the formatting is done, the display reads DISK COMMAND COMPLETED, and then you are returned to the <span class="page-name">Storage page</span>. The disk is ready to accept program, preset, sequencer, system, Sys-Ex, or Sampled Sound data.</p>
-<h3 id="format-disk-error-messages">FORMAT DISK Error Messages:</h3>
-<p>There are a number of messages you might encounter while formatting a disk:</p>
+<p>FORMAT  DISK Error Messages: There are a number of messages you might encounter while formatting a disk:</p>
 <p>• DISK DRIVE NOT READY — No disk in the drive.</p>
 <p>• DISK FORMAT FAILURE -- DISK IS UNUSABLE. This indicates a defective disk. If you get this message we advise that you throw out the disk in question. Try again with another disk.</p>
 <p>• DISK WRITE-PROTECTED — The plastic write-protect tab in the lower-left corner of the disk must be closed (so you can’t see through the hole) before anything can be written to the disk.</p>
@@ -143,19 +162,18 @@
 <p>• Select NO to start renaming with your own custom disk name that is currently stored in memory as a starting point.</p>
 <p>• After selecting either YES or NO, the display shows the following:</p>
 <p>• Use the <kbd class="button">Up/Down Arrow</kbd> buttons to change the first character of the name and the left and right buttons on the screen to move the cursor to the next character. The last three alpha- numeric characters can only be numbers. Once you have the name that you want:</p>
-<p>• SAVE saves the name shown into memory (battery backed up RAM) as your custom disk name. This custom disk name is also saved with global parameters when you SAVE SYSTEM SET-UP (on the Disk Save page). Saving a custom disk name allows you to easily rename and format a series of disks by simply updating the number portion of the name.</p>
+<p>• SAVE saves the name shown into memory (battery backed up RAM) as your custom disk name. This custom disk name is also saved with global parameters when you SAVE SYSTEM SET-UP (on the <span class="page-name">Disk Save page</span>). Saving a custom disk name allows you to easily rename and format a series of disks by simply updating the number portion of the name.</p>
 <p>• RENAME will write the name shown above onto the disk in the drive.</p>
 <p>• EXIT will abort this process, without changing the disk name.</p>
 <h4 id="save-saving-data-to-disk">SAVE — Saving Data to Disk</h4>
 <p>When you press SAVE from the Disk Storage menu, you will see the following display:</p>
 <h4 id="file-type" class="param-name">File Type</h4>
-<h3 id="source-bank-or-bankset">Source Bank or <dfn class="term">BankSet</dfn></h3>
-<p>Free disk blocks                     (some file types)</p>
+<p>Source Bank  or <dfn class="term">BankSet</dfn> Free disk blocks                     (some file types)</p>
 <p>The display shows the File Type, the number of free blocks on the disk, and (for some file types) the Source Bank or <dfn class="term">BankSet</dfn>, i.e. which <dfn class="term">BankSet</dfn> or bank(s) you want to save. Note that you cannot save information to a Sampled Sound disk.</p>
 <p>To Save data to disk:</p>
 <p>• Insert a formatted TS-10 disk into the disk drive.</p>
 <p>• When saving 1-PROGRAM, 1-PRESET or 1-SEQ/SONG, first make sure the program, preset or sequencer location you want to save is selected.</p>
-<p>• Press <kbd class="button">Storage</kbd> to go to the Storage Page.</p>
+<p>• Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage Page</span>.</p>
 <p>• Press DISK. The Disk Storage menu appears.</p>
 <p>• Press SAVE. The Save File display appears as shown above. The file type is underlined.</p>
 <p>• Select the file type you want to save from among the available types:</p>
@@ -163,61 +181,77 @@
 <p>6-PROGRAMS              60-PRESETS               30-SEQ/SONGS             SYSTEM-SETUP</p>
 <p>60-PROGRAMS             120-PRESETS              60-SEQ/SONGS             SAMPLE-BANKS</p>
 <p>120-PROGRAMS                                                              SAMPLE-EDITS</p>
-<p>• Select a source bank (if applicable). For the file types 6–PROGRAMS and 30–SEQ/SONGS, you will see a <span class="lcd">SELECT=BANK(</span>s) location beneath the file type, and for the file types 60–PROGRAMS and 60–PRESETS you will see a <span class="lcd">SELECT=BANKSET</span> location beneath the file type, as shown above. This defaults to the current <dfn class="term">BankSet</dfn> (or bank). If you want to save a different <dfn class="term">BankSet</dfn> (or bank) than what is showing, select this field and change it using the data entry controls.</p>
+<p>• Select a source bank (if applicable). For the file types 6–</p>
+<p>PROGRAMS and 30–SEQ/SONGS, you will see a <span class="lcd">SELECT=BANK(</span>s) location beneath the file type, and for the file types 60–</p>
+<h4 id="programs-and-60">PROGRAMS and 60–</h4>
+<p>PRESETS you will see a SELECT=</p>
+<p>BANKSET location beneath the file type, as shown above. This defaults to the current <dfn class="term">BankSet</dfn> (or bank). If you want to save a different <dfn class="term">BankSet</dfn> (or bank) than what is showing, select this field and change it using the data entry controls.</p>
 <p>• Press <span class="lcd">*YES*</span>. The display showsthe Name File page.</p>
 <p>• Name the file with a name of your choice using the data entry controls and the two cursor soft buttons, labeled LEFT and RIGHT, or you can use the keyboard to select characters and move the cursor (see below).</p>
 <p>• Press <span class="lcd">*YES*</span>. The display reads SAVING &lt;FILENAME&gt; while the data is being saved to disk.</p>
-<p>Or Press <span class="lcd">*NO*</span> to cancel the procedure for any reason. If you are saving a 30-SEQ/SONGS or 60-SEQ/SONGS file there are additional steps (see below).</p>
+<h4 id="or-press" class="param-name">Or Press</h4>
+<p><span class="lcd">*NO*</span> to cancel the procedure for any reason. If you are saving a 30-SEQ/</p>
+<h3 id="songs-or-60-seq">SONGS or 60-SEQ/</h3>
+<p>SONGS file there are additional steps (see below).</p>
 <p>• If there is a file of that type with the same name already on the disk, the TS-10 will ask</p>
-<p>DELETE <span class="value">OLD</span> VERSION? Press <span class="lcd">*YES*</span> to save the file, replacing the one on the disk. This is for updating files to which you have made changes. Or press <span class="lcd">*NO*</span> to abort the procedure.</p>
-<p>• After the file is saved, the TS-10 returns to the Save File page so that you can save any other files you may want to save at that time.</p>
-<h3 id="naming-with-the-keyboard">Naming with the Keyboard</h3>
-<p>When the <span class="param">KBD-NAMING</span> parameter on the <span class="page-name">System page</span> is ON, the keyboard can be used for name data entry. Whenever a name field is active, pressing a key on the keyboard will enter the character assigned to that key or move the cursor. The 36 white keys are the digits 0..9 and letters A..Z, while the black keys provide a repeating set consisting of cursor left, cursor right, and 3 punctuation marks (space, dash, and plus). Period, slash, and star are only available using the <kbd class="button">Data Entry Slider</kbd> or the Up/Down Arrows.</p>
+<p>DELETE  <span class="value">OLD</span> VERSION? Press</p>
+<p><span class="lcd">*YES*</span> to save the file, replacing the one on the disk. This is for updating files to which you have made changes. Or press</p>
+<p><span class="lcd">*NO*</span> to abort the procedure.</p>
+<p>• After the file is saved, the TS-10 returns to the <span class="page-name">Save File page</span> so that you can save any other files you may want to save at that time.</p>
+<p>Naming with the Keyboard When the <span class="param">KBD-NAMING</span> parameter on the <span class="page-name">System page</span> is ON, the keyboard can be used for name data entry. Whenever a name field is active, pressing a key on the keyboard will enter the character assigned to that key or move the cursor. The 36 white keys are the digits 0..9 and letters A..Z, while the black keys provide a repeating set consisting of cursor left, cursor right, and 3 punctuation marks (space, dash, and plus). Period, slash, and star are only available using the</p>
+<p><kbd class="button">Data Entry Slider</kbd> or the Up/Down Arrows.</p>
 <p>Cursor Cursor Space Dash Plus       Each octave of black keys repeats the same 5</p>
-<div class="vfd-callouts top"><div>Left</div><div>Right</div><div>characters found on the bottom octave.</div></div>
+<p>Left  Right                          characters found on the bottom octave.</p>
 <p>0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N OP Q R S T U V W X Y Z</p>
-<h3 id="saving-programs-along-with-a-30-seq-songs-file">Saving Programs along with a 30-SEQ/SONGS File</h3>
-<p>When you save a 30-SEQ/SONGS file, the TS-10 gives you the option of saving Programs in the same file, so that you can keep the sequences and the Programs that go with them together.</p>
+<p>Saving Programs along with a 30-SEQ/SONGS File When you save a 30-SEQ/SONGS file, the TS-10 gives you the option of saving Programs in the same file, so that you can keep the sequences and the Programs that go with them together.</p>
 <p>After you have selected the 30-SEQ/SONGS file type, chosen either <span class="lcd">SELECT=BANKS</span> 0-4 or 5-9, and pressed <span class="lcd">*YES*</span>, the TS-10 offers you an option. The display shows:</p>
 <p>Use the data entry controls to select whether (and how many) Programs will be saved in the same file with the sequence data:</p>
 <p>• NO — Only the specified sequencer data will be saved, no Programs.</p>
-<p>• 60 — When a 30-SEQ/SONGS file to be saved is from <span class="lcd">SELECT=BANKS</span> 0-4, the <dfn class="term">BankSet</dfn> U0 programs will be saved into the file along with the sequence data. When a 30-SEQ/SONGS file to be saved is from <span class="lcd">SELECT=BANKS</span> 5-9, the <dfn class="term">BankSet</dfn> U1 programs will be saved into the file along with the sequence data. The Programs will automatically be reloaded into the same User RAM location when the 30-SEQ/SONGS file is loaded, replacing the Programs that are there.</p>
+<p>• 60 — When a 30-SEQ/</p>
+<p>SONGS file to be saved is from <span class="lcd">SELECT=BANKS</span> 0-4, the <dfn class="term">BankSet</dfn> U0 programs will be saved into the file along with the sequence data. When a 30-SEQ/</p>
+<p>SONGS file to be saved is from <span class="lcd">SELECT=BANKS</span> 5-9, the <dfn class="term">BankSet</dfn> U1 programs will be saved into the file along with the sequence data. The Programs will automatically be reloaded into the same User</p>
+<p>RAM location when the 30-SEQ/</p>
+<p>SONGS file is loaded, replacing the Programs that are there.</p>
 <p>• 120 — All User RAM Programs will be saved into the file along with the sequence data (<dfn class="term">BankSet</dfn> U0 and U1). The Programs will be reloaded into the internal memory when the 30-SEQ/SONGS file is loaded, replacing the programs that are there.</p>
 <p>• After choosing the number of Programs to be saved, press <span class="lcd">*YES*</span> to proceed.</p>
-<aside class="note"><p>Note: If Programs have been saved in a Sequencer file along with the sequencer data, when you later go to load the file, a P will flash on the display next to the file name when the file is displayed on the DISK LOAD page. When you answer <span class="lcd">*YES*</span> to load the data, the TS-10 will load the Programs automatically with the sequencer data. This will over-write the Programs that are in the internal memory. You should always be sure that any Programs you value are saved before loading sequencer files which contain Programs.</p></aside>
-<h3 id="saving-sample-banks-along-with-a-60-seq-songs-file">Saving Sample-Banks along with a 60 SEQ/SONGS File</h3>
-<p>When you save a 60-SEQ/SONGS file, the TS-10 also gives you the option of saving the currently loaded contents of the Sample Banks, as well as the internal User RAM Programs, in the same file, so that you can store the Programs, and Sampled Sound data that the sequences and songs use all together in a single file.</p>
+<aside class="note"><p>Note: If Programs have been saved in a Sequencer file along with the sequencer data, when you later go to load the file, a P will flash on the display next to the file name when the file is displayed on the</p></aside>
+<h4 id="disk" class="param-name">DISK</h4>
+<p><span class="page-name">LOAD page</span>. When you answer</p>
+<p><span class="lcd">*YES*</span> to load the data, the TS-10 will load the Programs automatically with the sequencer data. This will over-write the Programs that are in the internal memory. You should always be sure that any Programs you value are saved before loading sequencer files which contain Programs.</p>
+<p>Saving <dfn class="term">Sample-Banks</dfn> along with a 60 SEQ/SONGS File When you save a 60-SEQ/SONGS file, the TS-10 also gives you the option of saving the currently loaded contents of the Sample Banks, as well as the internal User RAM Programs, in the same file, so that you can store the Programs, and Sampled Sound data that the sequences and songs use all together in a single file.</p>
 <p>After you have selected 60-SEQ/SONGS file type and pressed <span class="lcd">*YES*</span>, the TS-10 offers you the first option. The display shows:</p>
 <p>Use the data entry controls to select whether or not Programs will be saved in the same file with the sequence data:</p>
 <p>• NO — Only the specified sequencer data will be saved, without Programs.</p>
 <p>• 120 — All User RAM Programs will be saved into the file along with the sequence data (<dfn class="term">BankSet</dfn> U0 and U1). The Programs will be reloaded into the internal memory when the 60-SEQ/SONGS file is loaded, replacing the Programs that are there.</p>
 <p>• After choosing whether or not Programs will be saved, press <span class="lcd">*YES*</span> to proceed. If any Sampled Sounds are currently loaded, the TS-10 offers you the second option. The display shows:</p>
 <aside class="note"><p>Note: The SAVE SAMPLE BANKS prompt will only appear if there are Sampled Sounds currently loaded into the TS-10.</p></aside>
-<p>• Answering <span class="lcd">*YES*</span> will save all of the Sampled Sound names (ten in <dfn class="term">BankSet</dfn> 8 and ten in <dfn class="term">BankSet</dfn> 9, if applicable) as well as their source disk(s), file paths, and bank locationswith the 60-SEQ/SONGS file.</p>
+<p>• Answering</p>
+<p><span class="lcd">*YES*</span> will save all of the Sampled Sound names (ten in <dfn class="term">BankSet</dfn> 8 and ten in <dfn class="term">BankSet</dfn> 9, if applicable) as well as their source disk(s), file paths, and bank locationswith the 60-SEQ/</p>
+<p>SONGS file.</p>
 <p>• Answering <span class="lcd">*NO*</span> will not save the <dfn class="term">Sample-Banks</dfn> file with the sequence file.</p>
-<h3 id="specifying-a-file-bank-location-when-saving-a-file">Specifying a File Bank Location when Saving a File</h3>
-<p>If you follow the save procedure exactly as described earlier (pressing <span class="lcd">*YES*</span> after naming the file) the data will automatically be placed in the first empty file bank location for that file type, starting from the first location in Bank 0 and going up from there.</p>
+<p>Specifying a File Bank Location when Saving a File If you follow the save procedure exactly as described earlier (pressing <span class="lcd">*YES*</span> after naming the file) the data will automatically be placed in the first empty file bank location for that file type, starting from the first location in Bank 0 and going up from there.</p>
 <p>However, you can specify a particular file bank for the file to be placed in:</p>
 <p>• Press <kbd class="button">Storage</kbd>, and select DISK, then SAVE. The Save File display appears.</p>
 <p>• Select the desired file type and then press <span class="lcd">*YES*</span>.</p>
 <p>• Name the file with the name of your choice.</p>
 <p>• Now you can press the <kbd class="button">Bank</kbd> buttons (0-9) to see the file banks, which show all the files of that type on the disk, six at a time. For example:</p>
 <p>File Bank Locations containing Files</p>
-<h4 id="empty-file-bank-locations" class="param-name">Empty File Bank Locations</h4>
+<p>Empty File Bank Locations</p>
 <p>• File bank locations containing a file show the file name. Locations that show <span class="lcd">*****</span> are empty and are available for saving files to.</p>
 <p>• Press the soft button next to any empty file bank location, and the TS-10 will immediately save the file in that location. This lets you organize your files into banks of your choosing for easy access when loading them later.</p>
 <p>• If there is a file with the same name already on the disk in a different file bank location, the TS-10 will ask DELETE <span class="value">OLD</span> VERSION? If you press <span class="lcd">*YES*</span> the TS-10, will delete the original file and save the new one in the new location. Use this to change the bank in which a file is saved.</p>
-<p>• Note that when you simply want to update an existing file, but not change its file bank location, it is not necessary to specify the location. Just press <span class="lcd">*YES*</span> after naming the file and answer <span class="lcd">*YES*</span> to DELETE <span class="value">OLD</span> VERSION?</p>
+<p>• Note that when you simply want to update an existing file, but not change its file bank location, it is not necessary to specify the location. Just press</p>
+<p><span class="lcd">*YES*</span> after naming the file and answer</p>
+<h3 id="yes-to-delete-old-version">*YES* to DELETE OLD VERSION?</h3>
 <h3 id="load-loading-data-from-disk">LOAD — Loading Data from Disk</h3>
 <p>When you press LOAD from the Disk Storage menu, you will see the following display:</p>
 <h4 id="file-size" class="param-name">File Size</h4>
 <p>File Name               in blocks</p>
-<p>File Type             Destination Bank</p>
-<p>(some file types)</p>
+<p>File Type  Destination Bank (some file types)</p>
 <p>The display shows the File Name which identifies the file that will be loaded if you press <span class="lcd">*YES*</span>; the Size of the file in Blocks; the File Type and (for some file types) the Destination Bank, i.e. which bank(s) to load the data into. Only files of the type selected will be shown in the File Name field, or in file banks.</p>
 <p>To Load a file from disk:</p>
 <p>• Insert the disk containing the file data into the disk drive.</p>
-<p>• Press <kbd class="button">Storage</kbd> to go to the Storage Page.</p>
+<p>• Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage Page</span>.</p>
 <p>• Press DISK. The Disk Storage menu appears.</p>
 <p>• Press LOAD. The Load File display appears as shown above. The file type is underlined.</p>
 <p>• Select the file type you want from among the available types:</p>
@@ -227,26 +261,43 @@
 <p>120-PROGRAMS                                                                  SAMPLE-EDITS</p>
 <aside class="tip"><p>Press the <kbd class="button">Storage</kbd> button twice to get to the Load File display quickly.</p></aside>
 <p>• Press the soft button above the file name and use the data entry controls to find the file you want, or you can use the File Banks to quickly locate the file without scrolling (see below).</p>
-<p>• Select a destination bank (if applicable). For the file types 6–PROGRAMS and 30–SEQ/SONGS, you will see a Bank destination, as shown above. For the file types 60–PROGRAMS and 60–PRESETS, you will see a <dfn class="term">BankSet</dfn> destination This defaults to the same <dfn class="term">BankSet</dfn> (or bank) the file was originally saved from. If you want a different destination bank, select this field and change it using the data entry controls.</p>
+<p>• Select a destination bank (if applicable). For the file types 6–</p>
+<p>PROGRAMS and 30–SEQ/SONGS, you will see a Bank destination, as shown above. For the file types 60–</p>
+<p>PROGRAMS and 60–PRESETS, you will see a <dfn class="term">BankSet</dfn> destination This defaults to the same <dfn class="term">BankSet</dfn> (or bank) the file was originally saved from. If you want a different destination bank, select this field and change it using the data entry controls.</p>
 <p>• Press <span class="lcd">*YES*</span>. The display reads LOADING FILE... while the data is being loaded. Or Press <span class="lcd">*NO*</span> to cancel the procedure for any reason.</p>
-<p>• After the file is loaded, the TS-10 returns to the Load File page so that you can load any other files you may want.</p>
+<p>• After the file is loaded, the TS-10 returns to the <span class="page-name">Load File page</span> so that you can load any other files you may want.</p>
 <p>Where the data ends up depends on the file type and (where applicable) the destination bank selected:</p>
-<p>• 1-PROGRAM file — once loaded, the program is placed on the Write page, where you can save it to any internal User RAM location as detailed in Section 8 — Understanding Programs.</p>
+<p>• 1-</p>
+<p>PROGRAM file — once loaded, the program is placed on the <span class="page-name">Write page</span>, where you can save it to any internal User</p>
+<p>RAM location as detailed in <a class="refer-to" href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>
 <p>• 6-PROGRAMS file — the bank of 6 programs is loaded into the destination Bank (U0-0 to U1-9) specified before pressing <span class="lcd">*YES*</span>.</p>
 <p>• 60-PROGRAMS file — the 60 programs will be loaded into either <dfn class="term">BankSet</dfn> U0 or U1 as specified before pressing <span class="lcd">*YES*</span>.</p>
-<p>• 120-PROGRAM file — replaces all User RAM program memory locations (both <dfn class="term">BankSets</dfn>).</p>
-<p>• 1-PRESET file — the preset is loaded as the Edit Preset, and can be saved to memory as detailed in Saving a Preset in Section 4 — Understanding Presets.</p>
+<p>• 120-</p>
+<p>PROGRAM file — replaces all User</p>
+<p>RAM program memory locations (both <dfn class="term">BankSets</dfn>).</p>
+<p>• 1-PRESET file — the preset is loaded as the Edit Preset, and can be saved to memory as detailed in Saving a Preset in <a class="refer-to" href="04-presets.html#section-4-understanding-presets">Section 4 — Understanding Presets</a>.</p>
 <p>• 60-PRESETS file — will be loaded into either <dfn class="term">BankSet</dfn> of preset memory as specified before pressing <span class="lcd">*YES*</span>.</p>
 <p>• 120-PRESET file — replaces the internal preset memory (both <dfn class="term">BankSet</dfn> locations).</p>
-<p>• 1-SEQ/SONG file — After selecting the single sequence/song file to be loaded and selecting <span class="lcd">*YES*</span> on the Load File page, you are shown a prompt page which allows you to select the bank location into which the sequence/song file will be loaded. The default value is the first available location, and you may accept this choice, or you may select a different location by using one of two methods. Pressing a <kbd class="button">Bank</kbd> button will temporarily show the corresponding sequence bank page, and while the bank button is held, you may select the destination Location using the soft buttons. If your selection is a -BLANK- location, the display will revert to the prompt page with the new location selected. You may also directly select the location number using the data entry controls.</p>
+<p>• 1-SEQ/</p>
+<p>SONG file — After selecting the single sequence/song file to be loaded and selecting</p>
+<p><span class="lcd">*YES*</span> on the <span class="page-name">Load File page</span>, you are shown a prompt page which allows you to select the bank location into which the sequence/song file will be loaded. The default value is the first available location, and you may accept this choice, or you may select a different location by using one of two methods. Pressing a <kbd class="button">Bank</kbd> button will temporarily show the corresponding sequence bank page, and while the bank button is held, you may select the destination Location using the soft buttons. If your selection is a -BLANK- location, the display will revert to the prompt page with the new location selected. You may also directly select the location number using the data entry controls.</p>
 <p>• 30-SEQ/SONGS file — the 30 sequence/songs will be loaded into either the lower half of the sequencer memory (Banks 0-4) or the upper half (Banks 5-9), specified before pressing <span class="lcd">*YES*</span>.</p>
-<p>If 60 or 120 programs were saved in a 30-SEQ/SONGS file along with the sequencer data, a P will flash on the upper line of the display when the file is displayed on the DISK LOAD page.</p>
+<p>If 60 or 120 programs were saved in a 30-SEQ/</p>
+<p>SONGS file along with the sequencer data, a P will flash on the upper line of the display when the file is displayed on the DISK</p>
+<p><span class="page-name">LOAD page</span>.</p>
 <p>When you answer <span class="lcd">*YES*</span> to load the data, the TS-10 will load the programs automatically with the sequencer data, replacing the programs currently in memory.</p>
-<p>• 60-SEQ/SONGS file — replaces the entire sequencer memory (Banks 0-9), and installs global Sequencer Control page settings.</p>
+<p>• 60-SEQ/SONGS file — replaces the entire sequencer memory (Banks 0-9), and installs global <span class="page-name">Sequencer Control page</span> settings.</p>
 <h3 id="loading-60-seq-songs-files-that-contain-programs-and-or-sample-banks">Loading 60 SEQ/SONGS Files that Contain Programs and/or Sample Banks</h3>
-<p>• If only Programs have been saved in a 60-SEQ/SONGS file along with the sequencer data, when you go to load the file, a P will flash on the display next to the file name when the file name is displayed on the LOAD FILE page.</p>
-<p>• If only Sample Banks have been saved in a 60-SEQ/SONGS file along with the sequencer data, when you later go to load the file, an S will flash on the display next to the file name when the file name is displayed on the LOAD FILE page.</p>
-<p>• If both Programs and Sample Banks have been saved in a 60-SEQ/SONGS file along with the sequencer data, when you later go to load the file, a PS will flash on the display next to the file name when the file name is displayed on the LOAD FILE page.</p>
+<p>• If only Programs have been saved in a 60-SEQ/</p>
+<p>SONGS file along with the sequencer data, when you go to load the file, a P will flash on the display next to the file name when the file name is displayed on the LOAD</p>
+<p><span class="page-name">FILE page</span>.</p>
+<p>• If only Sample Banks have been saved in a 60-SEQ/</p>
+<p>SONGS file along with the sequencer data, when you later go to load the file, an S will flash on the display next to the file name when the file name is displayed on the LOAD</p>
+<p><span class="page-name">FILE page</span>.</p>
+<p>• If both Programs and Sample Banks have been saved in a 60-SEQ/</p>
+<p>SONGS file along with the sequencer data, when you later go to load the file, a</p>
+<p>PS will flash on the display next to the file name when the file name is displayed on the LOAD</p>
+<p><span class="page-name">FILE page</span>.</p>
 <p>To load a 60 SEQ/SONGS file:</p>
 <p>• Press <kbd class="button">Storage</kbd>.</p>
 <p>• Press the soft button beneath DISK.</p>
@@ -254,22 +305,25 @@
 <p>• Use the Data Entry Controls to locate <span class="lcd">TYPE=60-SEQ/SONGS</span>.</p>
 <p>• Press the upper left soft button to select the file to load.</p>
 <p>• Press the upper right soft button above <span class="lcd">*YES*</span>.</p>
-<p>If the 60-SEQ/SONGS file had Sample Banks saved with it, after answering <span class="lcd">*YES*</span> to load the 60-SEQ/SONGS file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span class="lcd">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask for the disk(s) to automatically load the Sampled Sound data. If you answer *NO *, the Sampled Sound bank information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not loaded.</p>
+<h3 id="if-the-60-seq">If the 60-SEQ/</h3>
+<p>SONGS file had Sample Banks saved with it, after answering</p>
+<p><span class="lcd">*YES*</span> to load the 60-SEQ/</p>
+<p>SONGS file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer</p>
+<p><span class="lcd">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask for the disk(s) to automatically load the Sampled Sound data. If you answer *NO *, the Sampled Sound bank information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not loaded.</p>
 <aside class="note"><p>Note: Do not load any 60-SEQ/SONGS files that have been saved with <dfn class="term">Sample-Banks</dfn> into a TS-10 that is running software earlier than version 2.0. The new feature is incompatible with older software.</p></aside>
 <p>To check which software version of the TS-10 you are running, while holding down the <kbd class="button">Presets</kbd> button, press the <kbd class="button">System</kbd> button.</p>
-<h3 id="using-file-banks-to-locate-files-for-loading">Using File Banks to Locate Files for Loading</h3>
-<p>As we mentioned earlier, File Banks provide a quick way to locate and select a file for loading.</p>
+<p>Using File  Banks to Locate Files for Loading As we mentioned earlier, File Banks provide a quick way to locate and select a file for loading.</p>
 <p>After you have selected LOAD from the DISK Storage menu, the ten <kbd class="button">Bank</kbd> buttons will select file banks. From the file banks you can directly select a file to be loaded instead of scrolling through the entire list of files.</p>
 <h3 id="here-s-how-file-banks-work">Here’s how file banks work:</h3>
 <p>• Press <kbd class="button">Storage</kbd> and select DISK, then LOAD to get to the Load File display.</p>
 <p>• Select the file type you want to load.</p>
 <p>• Press <kbd class="button">Bank</kbd> button 0 and hold it down. The display shows the first File Bank for that file type: File Bank Locations containing Files</p>
-<h4 id="empty-file-bank-locations-2" class="param-name">Empty File Bank Locations</h4>
-<p>• File bank locations containing a file show the file name. Locations that show <span class="lcd">*****</span> are empty and cannot be selected. If you release the <kbd class="button">Bank</kbd> button, the display remains on the file bank for about 1 second and then returns to the Load File page. This lets you “shop” among the different banks until you find the file you want.</p>
+<p>Empty File Bank Locations</p>
+<p>• File bank locations containing a file show the file name. Locations that show <span class="lcd">*****</span> are empty and cannot be selected. If you release the <kbd class="button">Bank</kbd> button, the display remains on the file bank for about 1 second and then returns to the <span class="page-name">Load File page</span>. This lets you “shop” among the different banks until you find the file you want.</p>
 <p>• While the file bank is displayed, press the soft button next to the name of the file you want load.</p>
-<p>This selects that file as the one to be loaded and instantly returns you to the Load File page.</p>
+<p>This selects that file as the one to be loaded and instantly returns you to the <span class="page-name">Load File page</span>.</p>
 <p>• Press <span class="lcd">*YES*</span> to load the selected file.</p>
-<aside class="note"><p>Note: On the Load File page, you may notice another type called DIAGNOSTICS. This is for use by ENSONIQ manufacturing for quality testing/troubleshooting, and is not for use by the end-user.</p></aside>
+<aside class="note"><p>Note: On the <span class="page-name">Load File page</span>, you may notice another type called DIAGNOSTICS. This is for use by ENSONIQ manufacturing for quality testing/troubleshooting, and is not for use by the end-user.</p></aside>
 <h3 id="delete-deleting-erasing-files-from-disk">DELETE — Deleting (Erasing) Files from Disk</h3>
 <p>When you press DELETE from the Disk Storage menu, you will see the following display:</p>
 <h4 id="file-size-2" class="param-name">File Size</h4>
@@ -280,59 +334,80 @@
 <p>• Insert the disk containing the file to be deleted into the disk drive.</p>
 <p>• Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage page</span>.</p>
 <p>• Press DISK. The Disk Storage menu appears.</p>
-<p>• Press DELETE. The Delete File page appears as shown above. The file type is underlined.</p>
+<p>• Press DELETE. The <span class="page-name">Delete File page</span> appears as shown above. The file type is underlined.</p>
 <p>• Select the file type you want from among the available types.</p>
 <p>• Press the soft button above the file name and use the data entry controls to find the file you want to delete. (Or you can press the <kbd class="button">Bank</kbd> buttons (0-9) and use the File Banks to select the file without scrolling, just as when loading.)</p>
 <p>• Press <span class="lcd">*YES*</span>. The display asks DELETE &lt;FILE NAME&gt;, and warns &lt;FILE TYPE&gt; FILE WILL BE ERASED.</p>
 <p>• Press <span class="lcd">*YES*</span>. The display reads DELETING &lt;FILE NAME&gt;… while the file is being removed.</p>
 <p>Or press <span class="lcd">*NO*</span> to cancel the procedure for any reason.</p>
-<p>• After the file is deleted, the TS-10 returns to the Delete File page so that you may delete any other files you may want. If you have no more files to delete, press <span class="lcd">*NO*</span> to exit.</p>
+<p>• After the file is deleted, the TS-10 returns to the <span class="page-name">Delete File page</span> so that you may delete any other files you may want. If you have no more files to delete, press <span class="lcd">*NO*</span> to exit.</p>
 <h3 id="scsi-option-read-only">SCSI Option (read-only)</h3>
-<p>A SCSI option is available for loading Sampled Sounds from EPS/EPS-16 PLUS/ASR-10 format SCSI Storage Devices when the optional SP-4 interface is installed. The TS-10 SCSI port will only read from SCSI; it will not write to SCSI Storage Devices. When the SP-4 is installed, the STORAGE page will display a new active field, as below:</p>
+<p>A SCSI option is available for loading Sampled Sounds from EPS/EPS-16 PLUS/ASR-10 format</p>
+<p>SCSI  Storage Devices when the optional SP-4 interface is installed. The TS-10</p>
+<p>SCSI port will only read from SCSI; it will not write to SCSI Storage Devices. When the SP-4 is installed, the</p>
+<p><span class="page-name">STORAGE page</span> will display a new active field, as below:</p>
 <p>Pressing the lower left soft button beneath SCSI will reveal the following sub-page:</p>
-<p>This is the SCSI STATUS page, where you select the SCSI DEVICE ID from which you want to load Sampled Sounds. It is important that each SCSI Storage Device in a SCSI network be assigned a unique SCSI Device ID number — this will ensure predictable communication between devices. Since the range of valid SCSI IDs is 0 to 7, it is possible to connect up to eight distinct devices on a single network. The TS-10 is permanently assigned to Device ID #3, so no other devices in the SCSI network can be assigned to Device ID #3.</p>
+<p>This is the SCSI</p>
+<p><span class="page-name">STATUS page</span>, where you select the SCSI DEVICE</p>
+<p>ID from which you want to load Sampled Sounds. It is important that each SCSI Storage Device in a</p>
+<p>SCSI network be assigned a unique SCSI Device</p>
+<p>ID number — this will ensure predictable communication between devices. Since the range of valid SCSI IDs is 0 to 7, it is possible to connect up to eight distinct devices on a single network. The TS-10 is permanently assigned to Device ID #3, so no other devices in the</p>
+<p>SCSI network can be assigned to Device ID #3.</p>
 <p>The STATUS field will show one of five different values:</p>
 <p>• INVALID - there is no device mounted on the current SCSI Device ID number</p>
-<p>• FOREIGN - the volume on the current SCSI Device ID number is not an ENSONIQ format</p>
-<p>• AUDIOCD - an Audio CD volume is on the current SCSI Device ID number.</p>
+<p>• FOREIGN - the volume on the current SCSI Device</p>
+<p>ID number is not an</p>
+<p>ENSONIQ format</p>
+<p>• AUDIOCD - an Audio</p>
+<p>CD volume is on the current SCSI Device</p>
+<p>ID number.</p>
 <p>• STANDBY - a removable media device is mounted on the current SCSI Device ID number, but it contains no volume</p>
-<p>• UNNAMED - an unnamed ENSONIQ format volume is on the current SCSI Device ID number</p>
+<p>• UNNAMED - an unnamed</p>
+<p>ENSONIQ format volume is on the current SCSI Device</p>
+<p>ID number</p>
 <p>• xxxx### - 7 character ENSONIQ volume name</p>
-<p>Pressing <span class="lcd">*LOAD*</span> will display the lowest numbered Sample Sound file or Directory name in the Root directory of the selected SCSI Storage Device. If no Sampled Sound files exist in the current directory, the file TYPE parameter will be automatically set to <span class="lcd">TYPE=DIRECTORY</span>, and the lowest numbered directory name will automatically be displayed. If no sub-directories exist in the current directory, the file TYPE parameter will be automatically set to <span class="lcd">TYPE=SAMPLEDSND</span> and the lowest numbered Sampled Sound file will be displayed.</p>
+<h3 id="pressing-2">Pressing</h3>
+<p><span class="lcd">*LOAD*</span> will display the lowest numbered Sample Sound file or Directory name in the Root directory of the selected SCSI Storage Device. If no Sampled Sound files exist in the current directory, the file</p>
+<p>TYPE parameter will be automatically set to <span class="lcd">TYPE=DIRECTORY</span>, and the lowest numbered directory name will automatically be displayed. If no sub-directories exist in the current directory, the file</p>
+<p>TYPE parameter will be automatically set to <span class="lcd">TYPE=SAMPLEDSND</span> and the lowest numbered Sampled Sound file will be displayed.</p>
 <aside class="tip"><p>Pressing <kbd class="button">Storage</kbd> then <span class="lcd">*LOAD*</span> , or pressing <kbd class="button">Storage</kbd> twice, will display the contents of the last viewed directory.</p></aside>
-<p>After the directory from a SCSI device has been loaded, pressing <kbd class="button">Storage</kbd>, then the soft button beneath SCSI, and the soft button beneath <span class="lcd">*LOAD*</span> will always display the contents of the Root directory.</p>
+<p>After the directory from a</p>
+<p>SCSI device has been loaded, pressing <kbd class="button">Storage</kbd>, then the soft button beneath SCSI, and the soft button beneath</p>
+<p><span class="lcd">*LOAD*</span> will always display the contents of the Root directory.</p>
 <h3 id="directories">Directories</h3>
 <h2 id="what-is-a-directory">What is a Directory?</h2>
-<p>Files on Sampled Sound disks are organized in directories. A directory is a group of up to 38 files. These files can be one of two possible file types: a Sampled Sound or another directory (called a sub-directory). Each sub-directory may contain up to 38 more files. If there are no subdirectories, the disk will only contain the 38 files of the Root (or Main) directory. The Root directory is the default top level directory selected when you change SCSI DEVICE ID numbers on the SCSI STATUS page or after power-up. If you are familiar with the Macintosh computer, or MicroSoft Windows™ for IBM/PC Compatibles, sub-directories are similar to folders.</p>
+<p>Files on Sampled Sound disks are organized in directories. A directory is a group of up to 38 files. These files can be one of two possible file types: a Sampled Sound or another directory (called a sub-directory). Each sub-directory may contain up to 38 more files. If there are no subdirectories, the disk will only contain the 38 files of the Root (or Main) directory. The Root directory is the default top level directory selected when you change SCSI DEVICE</p>
+<p>ID numbers on the SCSI</p>
+<p><span class="page-name">STATUS page</span> or after power-up. If you are familiar with the Macintosh computer, or MicroSoft Windows™ for IBM/PC Compatibles, sub-directories are similar to folders.</p>
 <p>The directories and sub-directories on a Sampled Sound disk form a tree-like structure, with the Root directory as the trunk, and the various levels of sub-directories conceptually similar to the branches of the tree. For example:</p>
-<h4 id="example-directory-structure" class="param-name">Example Directory Structure</h4>
-<h4 id="scsi-device-4-sampled-sound-disk" class="param-name">SCSI DEVICE #4 (Sampled Sound Disk)</h4>
-<h4 id="root-directory" class="param-name">ROOT Directory</h4>
-<p>1-STRINGED    2-WIND+BRASS 3-<span class="lcd">PERCUSSION</span>              4-PIANO+ORGAN        5-VOCAL SOUND</p>
-<p>etc.          etc.</p>
-<p>1 - STRING SECT       2 - SOLO STRNG       1 - FLUTES+PIPES       2 - CLARINET</p>
-<p>1 - ORCH STRNGS1      1 - CELLO            1 - FLUTE 1            1 - BASS CLRNT</p>
-<p>2 - EPIC STRINGS      2 - MINI-VIOLIN      2 - FLUTE 2            2 - CLARINET 1</p>
-<p>3 - ORCH STRNGS2      3 - SOLO CELLO       3 - FLUTE 3            3 - CLARINET 2</p>
-<p>4 - LEGATO FLUTE</p>
-<p>4 - SOLO VIOLIN                             4 - etc.</p>
-<p>5 - etc.</p>
-<h4 id="navigating-in-directories">Navigating in Directories</h4>
+<table class="defn-table"><thead><tr><th>Example Directory</th><th>Structure</th></tr><tr><th>Navigating</th><th>in Directories</th></tr></thead><tbody><tr><td><span class="lcd">SCSI</span></td><td>DEVICE #4 (Sampled Sound Disk)</td></tr><tr><td><span class="lcd">ROOT</span></td><td>Directory 1-STRINGED    2-WIND+BRASS 3-<span class="lcd">PERCUSSION</span>              4-PIANO+ORGAN        5-VOCAL SOUND etc.          etc. 1 - STRING SECT       2 - SOLO STRNG       1 - FLUTES+PIPES       2 - CLARINET 1 - ORCH STRNGS1      1 - CELLO            1 - FLUTE 1            1 - BASS CLRNT 2 - EPIC STRINGS      2 - MINI-VIOLIN      2 - FLUTE 2            2 - CLARINET 1 3 - ORCH STRNGS2      3 - SOLO CELLO       3 - FLUTE 3            3 - CLARINET 2 4 - LEGATO FLUTE 4 - SOLO VIOLIN                             4 - etc. 5 - etc.</td></tr></tbody></table>
 <h4 id="file-paths">File Paths</h4>
-<p>It is helpful to have an understanding of how the TS-10 keeps track of all the files that can be on a large Sampled Sound disk like a CD-ROM. If we were to describe the location of the sound SOLO VIOLIN in the Example Directory Structure diagram above, we might say:</p>
-<p>“The SOLO VIOLIN Sampled Sound file is the fourth file in the SOLO STRING sub-directory, within the STRINGED directory, which is in the ROOT directory, on the SCSI Storage Device assigned to <span class="param">DEVICE-ID</span> #4.”</p>
+<p>It is helpful to have an understanding of how the TS-10 keeps track of all the files that can be on a large Sampled Sound disk like a CD-ROM. If we were to describe the location of the sound</p>
+<p>SOLO VIOLIN in the Example Directory Structure diagram above, we might say:</p>
+<p>“The SOLO VIOLIN Sampled Sound file is the fourth file in the SOLO</p>
+<p>STRING sub-directory, within the</p>
+<p>STRINGED directory, which is in the</p>
+<p>ROOT directory, on the SCSI Storage Device assigned to <span class="param">DEVICE-ID</span> #4.”</p>
 <p>If we read the description from right to left, starting with the SCSI Storage Device, it becomes:</p>
 <p>SCSI <span class="param">DEVICE-ID</span> 4..ROOT..STRINGED..SOLO STRNG..SOLO VIOLIN</p>
 <p>This description of the location of the file is called a file path. This is the path that the TS-10 will follow to find the file. If you use an IBM PC/Compatible running under MS-DOS, you may already be familiar with file paths (e.g. C:\STRINGED\SOLOSTRNG\SOLOVIOL). On a Macintosh computer, or an IBM PC/Compatible running Microsoft Windows, the file path would correspond to the cascade of the folders you would open in order to locate a file.</p>
-<h3 id="to-enter-or-move-down-into-a-directory">To Enter or Move Down into a Directory</h3>
+<p>To Enter or Move Down into a Directory</p>
 <p>• Press the <kbd class="button">Storage</kbd> button.</p>
-<p>• On the SELECT STORAGE OPTION page, press the soft button beneath the word SCSI to reveal the following sub-page:</p>
-<p>• If the STATUS is a valid volume, press the soft button beneath the word <span class="lcd">*LOAD*</span>. This takes you to the LOAD FILE page.</p>
-<p>• When FILE <span class="lcd">TYPE=DIRECTORY</span> on the LOAD FILE page, you can view the contents of the Root directory, and select a sub-directory by using the Data Entry Controls, and pressing <span class="lcd">*YES*</span>. The display momentarily shows LOADING &lt;Directory&gt;, and then shows the LOAD FILE page with either Sampled Sound files or another sub-directory selected.</p>
+<p>• On the SELECT STORAGE</p>
+<p><span class="page-name">OPTION page</span>, press the soft button beneath the word</p>
+<p>SCSI to reveal the following sub-page:</p>
+<p>• If the</p>
+<p>STATUS is a valid volume, press the soft button beneath the word <span class="lcd">*LOAD*</span>. This takes you to the LOAD</p>
+<p><span class="page-name">FILE page</span>.</p>
+<p>• When FILE <span class="lcd">TYPE=DIRECTORY</span> on the LOAD</p>
+<p><span class="page-name">FILE page</span>, you can view the contents of the Root directory, and select a sub-directory by using the Data Entry Controls, and pressing <span class="lcd">*YES*</span>. The display momentarily shows LOADING &lt;Directory&gt;, and then shows the LOAD</p>
+<p><span class="page-name">FILE page</span> with either Sampled Sound files or another sub-directory selected.</p>
 <p>• You can continue to select other Sampled Sound files or sub-directories using the Data Entry</p>
 <p>Controls and pressing the <span class="lcd">*YES*</span> button to load them.</p>
 <p>To Exit from or move back up from a Directory:</p>
-<p>• On the LOAD FILE page, press the lower left soft button beneath the TYPE value.</p>
+<p>• On the LOAD</p>
+<p><span class="page-name">FILE page</span>, press the lower left soft button beneath the</p>
+<p>TYPE value.</p>
 <p>• Press the <kbd class="button">Down Arrow</kbd> button to set <span class="lcd">TYPE=DIRECTORY</span>. The display shows <span class="lcd">*EXIT*</span> on the top of the display.</p>
 <p>• Press the top middle soft button above <span class="lcd">*EXIT*</span> to exit the current sub-directory level, and return you to its parent directory.</p>
 <aside class="tip"><p>To quickly return to the Root Directory, press the <kbd class="button">Storage</kbd> button, the soft button beneath SCSI, and then the soft button beneath <span class="lcd">*LOAD*</span>.</p></aside>
@@ -341,7 +416,9 @@
 <p>It may have occurred to you that with the large number of files that a SCSI Storage Device can contain, it would be nice to be able to get directly to a directory or specific file quickly rather than having to scroll through all of the files and manually enter each directory and sub-directory.</p>
 <p><dfn class="term">Direct-Macros</dfn> allow you to do this. In the TS-10, a <span class="function">Direct-Macro</span> is a shortcut that allows you to get to a file or directory on a Sampled Sound CD ROM with just a few button presses.</p>
 <h4 id="direct-dialing-macros-on-sampled-sound-cd-roms">Direct-Dialing Macros on Sampled Sound CD ROMs</h4>
-<p>ENSONIQ formatted Sampled Sound CD ROMs have a unique <span class="function">Direct-Macro</span> number assigned to each individual file location (see the CD-ROM manual for Direct-Dial listings). Pressing and holding the top left soft button above the LOAD FILE name field, and then pressing the <kbd class="button">Bank</kbd> buttons, allows direct-dialing of <span class="function">Direct-Macro</span> numbers. The following screen will be displayed after a <kbd class="button">Bank</kbd> button has been pressed, for as long as the top left soft button is held down:</p>
+<p>ENSONIQ formatted Sampled Sound CD ROMs have a unique <span class="function">Direct-Macro</span> number assigned to each individual file location (see the</p>
+<p>CD-ROM manual for Direct-Dial listings). Pressing and holding the top left soft button above the LOAD</p>
+<p>FILE name field, and then pressing the <kbd class="button">Bank</kbd> buttons, allows direct-dialing of <span class="function">Direct-Macro</span> numbers. The following screen will be displayed after a <kbd class="button">Bank</kbd> button has been pressed, for as long as the top left soft button is held down:</p>
 <p>Letting go of the top left soft button will invoke the Direct Macro for the value that is displayed.</p>
 <p><span class="function">Direct-Macro</span> numbers conform to the ENSONIQ CD-ROM conventions:</p>
 <p>• 1 digit is meaningless and does nothing.</p>
@@ -354,17 +431,22 @@
 <div class="vfd-callouts top"><div>This number: selects:</div><div>4 SCSI DEVICE ID</div><div>1 STRINGED</div></div>
 <div class="vfd-callouts top"><div>which is:</div><div>SCSI DEVICE-ID</div><div>Main Directory</div></div>
 <aside class="note"><p>Note: All <span class="function">Direct-Macro</span> operations are performed with the top left soft button above the file name held down, and take effect when the button is released.</p></aside>
-<p>It is not necessary to enter the SCSI Device ID digit unless you are changing SCSI Storage Devices. When working with a CD-ROM, four digits are all you need to enter, because CD ROM drives containg ENSONIQ CD-ROMs should always be set to SCSI ID #4. If you make a mistake, type up to six digits; the sixth digit entered will start over at the first digit of your next attempt.</p>
+<p>It is not necessary to enter the SCSI Device</p>
+<p>ID digit unless you are changing SCSI Storage Devices. When working with a CD-ROM, four digits are all you need to enter, because CD</p>
+<p>ROM drives containg ENSONIQ CD-ROMs should always be set to SCSI ID #4. If you make a mistake, type up to six digits; the sixth digit entered will start over at the first digit of your next attempt.</p>
 <h3 id="midi-sys-ex">MIDI SYS-EX</h3>
-<p>To Send MIDI Sys-Ex Messages to another TS-10</p>
-<p>The TS-10 is able to send System Exclusive dumps of Programs and Presets, either singly or in banks, as well as Sequencer dumps containing either the entire sequencer memory or the current sequence/song. These dumps can be understood by another TS-10.</p>
-<p>Banks of programs or presets are always transmitted from the internal RAM. If you want to send internal ROM data, you must first replace all of the internal RAM data with copies of the internal ROM data. Make sure that you have first saved your internal RAM data before replacing it with the ROM data.</p>
-<p>From the STORAGE page:</p>
+<p>To Send MIDI Sys-Ex Messages to another TS-10 The TS-10 is able to send System Exclusive dumps of Programs and Presets, either singly or in banks, as well as Sequencer dumps containing either the entire sequencer memory or the current sequence/song. These dumps can be understood by another TS-10.</p>
+<p>Banks of programs or presets are always transmitted from the internal RAM. If you want to send internal</p>
+<p>ROM data, you must first replace all of the internal</p>
+<p>RAM data with copies of the internal</p>
+<p>ROM data. Make sure that you have first saved your internal</p>
+<p>RAM data before replacing it with the</p>
+<p>ROM data.</p>
+<p>From the <span class="page-name">STORAGE page</span>:</p>
 <p>Press the soft button for <span class="param">SYS-EX</span>. The display reads:</p>
 <p>This page is used to select either the Sys-Ex Recorder, or the option to transmit bulk Sys-Ex dumps of data in RAM. Pressing the soft button below <span class="param">SEND</span>-DUMPS will reveal the following sub-page:</p>
 <h4 id="programs-2">PROGRAMS</h4>
-<p>To Send Programs out via MIDI Sys-Ex</p>
-<p>From the MIDI <span class="param">SYS-EX</span> page:</p>
+<p>To Send  Programs out via MIDI Sys-Ex From the <span class="page-name">MIDI <span class="param">SYS-EX</span> page</span>:</p>
 <p>• Press the soft button for PROGRAMS. The display reads:</p>
 <p>• CURRENT PROGRAM — this command will send out all data for the currently selected primary Program as a system exclusive message. The Program may be in any bank, including the ROM <dfn class="term">BankSets</dfn>, or may be in the <span class="function">Compare</span> buffer.</p>
 <p>• BANKSET-U0 — this command transmits the contents of User RAM Program <dfn class="term">BankSet</dfn> U0 as a system exclusive message. The dump contains data for 60 Programs.</p>
@@ -372,28 +454,28 @@
 <p>• ALL — this command transmits the contents of both User RAM Program <dfn class="term">BankSets</dfn> U0 and U1 as a system exclusive message. The dump contains data for the complete set of 120 RAM Programs.</p>
 <h4 id="presets-2">PRESETS</h4>
 <p>To send Presets out via MIDI Sys-Ex</p>
-<p>From the MIDI <span class="param">SYS-EX</span> page:</p>
+<p>From the <span class="page-name">MIDI <span class="param">SYS-EX</span> page</span>:</p>
 <p>• Press the soft button for PRESETS. The display reads:</p>
 <p>• CURRENT PRESET — will send out all data for the current Preset as a system exclusive message. The Preset may be in any bank, including the ROM <dfn class="term">BankSets</dfn>, or may be in the Preset Edit buffer.</p>
 <p>• BANKSET-U0 — this command transmits the contents of User RAM Preset <dfn class="term">BankSet</dfn> U0 as a system exclusive message. The dump contains data for 60 Presets.</p>
 <p>• BANKSET-U1 — this command transmits the contents of User RAM Preset <dfn class="term">BankSet</dfn> U1 as a system exclusive message. The dump contains data for 60 Presets.</p>
 <p>• ALL — this command transmits the contents of both User RAM Preset <dfn class="term">BankSets</dfn> U0 and U1 as a system exclusive message. The dump contains data for the complete set of 120 RAM Presets.</p>
 <h4 id="sequencer-data">SEQUENCER DATA</h4>
-<p>To Send Sequences/Songs out via MIDI Sys-Ex</p>
-<p>From the MIDI <span class="param">SYS-EX</span> page:</p>
+<p>To Send  Sequences/Songs out via MIDI Sys-Ex From the <span class="page-name">MIDI <span class="param">SYS-EX</span> page</span>:</p>
 <p>• Press the soft button for SEQUENCER. The display reads:</p>
 <p>• CURRENT SEQ/SONG — will send out all data for the currently selected sequence or song as a system exclusive message.</p>
 <p>• TRACKS — transmits all information about the 12 tracks and the effect in the current sequence or song (not including recorded track data) as a system exclusive message. If received by a TS-10, it will change the effect and reconfigure the tracks of the current sequence or song.</p>
 <p>• ALL SEQ DATA — transmits the contents of the ten Sequencer Banks as a system exclusive message. The dump contains data for the complete set of 60 sequencer locations.</p>
 <h4 id="all">ALL</h4>
-<p>Sending Programs, Presets and All Sequencer data out via MIDI Sys-Ex</p>
-<p>From the MIDI <span class="param">SYS-EX</span> page:</p>
+<p>Sending  Programs, Presets and All Sequencer data out via MIDI Sys-Ex From the <span class="page-name">MIDI <span class="param">SYS-EX</span> page</span>:</p>
 <p>• Press the soft button for ALL. The TS-10 will transmit three consecutive dump messages containing both User Program <dfn class="term">BankSets</dfn> (U0 and U1), both User Preset <dfn class="term">BankSets</dfn> (U0 and U1), and the entire Sequencer memory. Using this command is equivalent to sending the three messages individually, and is convenient when you wish to transmit everything with one command.</p>
-<h3 id="receiving-midi-sys-ex-messages">Receiving MIDI Sys-Ex Messages</h3>
-<p>The receiving of data dumps is initiated automatically by System Exclusive messages sent from the transmitting unit. No front-panel commands are necessary to receive dumps if the receiving of System Exclusive messages is enabled on the MIDI Control sub-page (<span class="lcd">SYS-EX=ON)</span>.</p>
+<p>Receiving MIDI Sys-Ex Messages The receiving of data dumps is initiated automatically by System Exclusive messages sent from the transmitting unit. No front-panel commands are necessary to receive dumps if the receiving of System Exclusive messages is enabled on the <span class="page-name">MIDI Control sub-page</span> (<span class="lcd">SYS-EX=ON)</span>.</p>
 <h3 id="midi-system-exclusive-recorder">MIDI System Exclusive Recorder</h3>
 <h2 id="what-are-system-exclusives">What are System Exclusives?</h2>
-<p>Some MIDI information—such as key events, controllers, program changes, etc.— is understood by virtually all MIDI devices, regardless of the manufacturer. The common ability to send and receive these messages is what allows you to play any MIDI synth from any other, to change programs and volume remotely, to start and stop sequencers and drum machines together, and the many other performance miracles we have come to expect from MIDI.</p>
+<p>Some</p>
+<p>MIDI information—such as key events, controllers, program changes, etc.— is understood by virtually all</p>
+<p>MIDI devices, regardless of the manufacturer. The common ability to send and receive these messages is what allows you to play any</p>
+<p>MIDI synth from any other, to change programs and volume remotely, to start and stop sequencers and drum machines together, and the many other performance miracles we have come to expect from MIDI.</p>
 <p>There are other messages which each manufacturer has reserved for communicating specific information with a specific machine (or family of machines). These machine-specific messages are called System Exclusive (or Sys-Ex) messages, since they are meant to be recognized only by a particular device and ignored by all others (i.e. they are exclusive to a particular system).</p>
 <p>The TS-10, for example, can transfer programs, presets or sequences or via to another TS-10. It is a lot like sending a file from one computer to another via modem. The 1’s and 0’s that make up the data in memory are sent out the MIDI port. This data can be received and understood by another TS-10, or by a computer running the proper librarian software.</p>
 <h4 id="generic-system-exclusive-storage">“Generic” System Exclusive Storage</h4>
@@ -404,14 +486,14 @@
 <p>• The sequence memory of a MIDI sequencer</p>
 <p>• The preset memory of any MIDI effects device which can send and receive it (such as the</p>
 <h4 id="ensoniq-dp-4" class="param-name">ENSONIQ DP/4)</h4>
-<p>In short, any MIDI data (within memory limits) which can be transmitted from one device to another can be received and stored by the TS-10. With the TS-10 at the heart of your system, you now have disk storage for the data in all your MIDI instruments.</p>
-<h4 id="saving-sys-ex-data-uses-the-sequencer-memory">Saving Sys-Ex data uses the Sequencer Memory</h4>
-<p>The TS-10 uses the RAM (Random Access Memory) that is normally devoted to the sequencer to “buffer” incoming System Exclusive messages before saving them to disk. A buffer is an area of memory where data is held temporarily. When the TS-10 receives a System Exclusive data dump, it stores it in the sequencer memory until you save the data to disk.</p>
+<p>In short, any</p>
+<p>MIDI data (within memory limits) which can be transmitted from one device to another can be received and stored by the TS-10. With the TS-10 at the heart of your system, you now have disk storage for the data in all your</p>
+<p>MIDI instruments.</p>
+<p>Saving Sys-Ex data uses the Sequencer Memory The TS-10 uses the RAM (Random Access Memory) that is normally devoted to the sequencer to “buffer” incoming System Exclusive messages before saving them to disk. A buffer is an area of memory where data is held temporarily. When the TS-10 receives a System Exclusive data dump, it stores it in the sequencer memory until you save the data to disk.</p>
 <h3 id="important">Important:</h3>
 <p>You must save all sequencer memory before using the System Exclusive Recorder function to receive data.</p>
 <p>Loading Sys-Ex data from disk to an external device will not necessarily clear the sequencer memory. If there is enough unused sequencer memory to load and transmit the Sys-Ex message, the memory will not be affected. If there is not enough memory, the TS-10 will warn you, and give you a chance to proceed (erasing the sequencer memory) or quit and save the data.</p>
-<h3 id="saving-system-exclusive-data-from-an-external-device">SAVING System Exclusive Data from an External Device</h3>
-<p>Using the TS-10’s disk drive for storing data from external devices is a three-step process:</p>
+<p>SAVING  System Exclusive Data from an External Device Using the TS-10’s disk drive for storing data from external devices is a three-step process:</p>
 <p>1) First you get the TS-10 ready to receive the data via MIDI;</p>
 <p>2) next, you send the data from the external MIDI device to the TS-10; and finally</p>
 <p>3) you save the data to a formatted disk with the TS-10’s disk drive.</p>
@@ -421,24 +503,29 @@
 <p>• Press the <kbd class="button">Storage</kbd> button to select the <span class="page-name">Storage page</span>.</p>
 <p>• Press DISK. The Disk Storage menu appears.</p>
 <p>• Press <span class="param">SYS-EX</span> REC.</p>
-<p>• The display shows SEQUENCER DATA WILL BE ERASED to warn you that any sequences and songs currently in memory will be lost. It’s not too late, however, to quit and preserve the sequencer memory intact. Pressing <span class="lcd">*NO*</span> at this point will return you to the <span class="page-name">Storage page</span> without erasing the sequencer memory, allowing you to save it to disk before proceeding.</p>
+<p>• The display shows SEQUENCER DATA WILL BE</p>
+<p>ERASED to warn you that any sequences and songs currently in memory will be lost. It’s not too late, however, to quit and preserve the sequencer memory intact. Pressing</p>
+<p><span class="lcd">*NO*</span> at this point will return you to the <span class="page-name">Storage page</span> without erasing the sequencer memory, allowing you to save it to disk before proceeding.</p>
 <p>• Press <span class="lcd">*YES*</span> to proceed. The following screen appears:</p>
 <p>The TS-10 will now record into its memory any System Exclusive message which it receives. At the upper right of the display (SIZE=##) you see the size (expressed in disk blocks) of the Sys-Ex data received so far.</p>
 <p>&gt; Pressing SAVE lets you name and save to disk what has been received so far (don’t do that yet).</p>
 <p>&gt; Pressing <span class="param">SEND</span> will retransmit whatever has been received so far (don’t do that yet either).</p>
-<p>&gt; Pressing <span class="lcd">*EXIT*</span> returns you to the Storage Page.</p>
+<p>&gt; Pressing <span class="lcd">*EXIT*</span> returns you to the <span class="page-name">Storage Page</span>.</p>
 <ul class="tips"><li>• From the external MIDI device, transmit the System Exclusive data. The display will read <span class="lcd">STATUS=RECEIVING</span></li><li>while the data is being sent</li></ul>
-<p>• When the full message has been received, the display will read <span class="lcd">STATUS=COMPLETE</span> to indicate that a complete message was recorded. The display shows how many blocks of data have been received so far. At this point, assuming there’s enough memory, you can send the TS-10 another System Exclusive message (from a different instrument, for example) which will be stored right after the first one. You can save as many different messages as memory permits in a single Sys-Ex block. Each time, the TS-10 will read <span class="lcd">STATUS=RECEIVING</span>… and then return with <span class="lcd">STATUS=COMPLETE</span> when the complete message has been received. When the data is later retransmitted, all the messages will be sent out in the order they were received, with a 100 millisecond pause between each. In this way you could load new data into all your devices with a single Load command from the TS-10.</p>
+<p>• When the full message has been received, the display will read STATUS=</p>
+<p>COMPLETE to indicate that a complete message was recorded. The display shows how many blocks of data have been received so far. At this point, assuming there’s enough memory, you can send the TS-10 another System Exclusive message (from a different instrument, for example) which will be stored right after the first one. You can save as many different messages as memory permits in a single Sys-Ex block. Each time, the TS-10 will read <span class="lcd">STATUS=RECEIVING</span>… and then return with STATUS=</p>
+<p>COMPLETE when the complete message has been received. When the data is later retransmitted, all the messages will be sent out in the order they were received, with a 100 millisecond pause between each. In this way you could load new data into all your devices with a single Load command from the TS-10.</p>
 <p>• Once you have successfully received the Sys-Ex message (or messages), press SAVE. The standard SAVE FILE display appears:</p>
 <p>• Name the file with an 11-character name of your choice using the data entry controls and the two cursor soft buttons, labeled LEFT and RIGHT. (Or you can use the keyboard to select characters and move the cursor, if Keyboard Naming is enabled on the <span class="page-name">System page</span>).</p>
 <p>• Press <span class="lcd">*YES*</span>. The Display reads SAVING &lt;FILENAME&gt; while the data is being saved. Or Press <span class="lcd">*NO*</span> to cancel the procedure for any reason.</p>
-<p>• If there is a Sys-Ex file with the same name already on the disk, the TS-10 will ask DELETE <span class="value">OLD</span> VERSION? Press <span class="lcd">*YES*</span> to save the file, replacing the one on the disk. This is for updating files to which you have made changes. Or press <span class="lcd">*NO*</span> to abort the procedure.</p>
-<p>• After the file is saved, the TS-10 returns to the SAVE FILE page, so that you can save a backup copy of the data to a different disk if you wish. Press <span class="lcd">*NO*</span> (or any other front panel button) to exit.</p>
+<p>• If there is a Sys-Ex file with the same name already on the disk, the TS-10 will ask DELETE <span class="value">OLD</span> VERSION? Press</p>
+<p><span class="lcd">*YES*</span> to save the file, replacing the one on the disk. This is for updating files to which you have made changes. Or press</p>
+<p><span class="lcd">*NO*</span> to abort the procedure.</p>
+<p>• After the file is saved, the TS-10 returns to the <span class="page-name">SAVE FILE page</span>, so that you can save a backup copy of the data to a different disk if you wish. Press <span class="lcd">*NO*</span> (or any other front panel button) to exit.</p>
 <aside class="note"><p>Note: If during the reception of Sys-Ex data, the TS-10 display reads <span class="lcd">STATUS=INCOMPLETE</span>, this means it did not receive an “End Of Exclusive” after the System Exclusive message. This would indicate that the external MIDI device did not transmit a complete message for some reason.</p></aside>
 <p>Press <span class="lcd">*EXIT*</span> and try again.</p>
 <p>If the TS-10 display reads <span class="lcd">STATUS=MEMORY</span> FULL, this means it ran out of memory with which to “buffer” the incoming data (the maximum amount which can be received is 256, 767 with expanded memory, blocks for a standard TS-10). After receiving the Memory Full message you can still save the file, but it is almost certain that the last Sys-Ex message received is incomplete and will not be able to be received successfully when retransmitted.</p>
-<h4 id="loading-system-exclusive-data-from-disk-to-an-external-device">LOADING System Exclusive Data from Disk to an External Device</h4>
-<p>After you have saved a System Exclusive message from an external MIDI instrument, getting the data back to the original instrument involves three steps:</p>
+<p>LOADING  System Exclusive Data from Disk to an External Device After you have saved a System Exclusive message from an external MIDI instrument, getting the data back to the original instrument involves three steps:</p>
 <p>1) First you prepare the receiving instrument(s) to receive System Exclusive messages via MIDI;</p>
 <p>2) next, you Load the data from the TS-10’s disk drive into memory; and then</p>
 <p>3) you send (transmit) the data to the remote MIDI device(s) from the TS-10.</p>
@@ -457,34 +544,46 @@
 <p>Otherwise, press <span class="lcd">*YES*</span>.</p>
 <p>• The display reads LOADING &lt;FILENAME&gt; while the data is being loaded. Once the data is in memory, the Sys-Ex Recorder screen appears:</p>
 <p>• Press <span class="param">SEND</span> to transmit the data. The display reads <span class="lcd">STATUS=SENDING</span>, and then returns to <span class="lcd">STATUS=READY..</span>., ready to send the data again if necessary.</p>
-<p>• Check the receiving instrument(s) to see that the data was received correctly. If it wasn’t, make sure that: &gt; the MIDI connections are correct (TS-10’s MIDI Out to the receiving device’s MIDI In), &gt; the receiving device(s) is enabled to receive System Exclusive messages, &gt; the receiving device(s) is set to the same MIDI base channel(s) as when the data was initially sent to the TS-10.</p>
+<p>• Check the receiving instrument(s) to see that the data was received correctly. If it wasn’t, make sure that: &gt; the</p>
+<p>MIDI connections are correct (TS-10’s MIDI Out to the receiving device’s MIDI In), &gt; the receiving device(s) is enabled to receive System Exclusive messages, &gt; the receiving device(s) is set to the same</p>
+<p>MIDI base channel(s) as when the data was initially sent to the TS-10.</p>
 <p>• Then press <span class="param">SEND</span> again, and the data will be transmitted again. You can keep repeating this until the data has been successfully received by the remote device(s).</p>
 <p>• Once the data has been successfully transmitted, press EXIT.</p>
-<h4 id="additional-sys-ex-recorder-notes">Additional Sys-Ex Recorder Notes</h4>
-<p>As you have no doubt noticed, the TS-10 displays exactly the same page for sending and receiving Sys-Ex data. In fact, MIDI System Exclusive data can be transmitted or received any time this page is on the display, regardless of which way you entered it.</p>
+<p>Additional Sys-Ex Recorder Notes As you have no doubt noticed, the TS-10 displays exactly the same page for sending and receiving Sys-Ex data. In fact, MIDI System Exclusive data can be transmitted or received any time this page is on the display, regardless of which way you entered it.</p>
 <p>Whenever this page is displayed:</p>
 <p>• Pressing <span class="param">SEND</span> will transmit whatever is in the MIDI Sys-Ex buffer.</p>
 <p>• Incoming MIDI Sys-Ex messages will be recorded and added to the data already in the buffer memory.</p>
-<p>• Pressing SAVE will always take you to the SAVE FILE page where you can name and save to disk the data in the buffer memory.</p>
+<p>• Pressing</p>
+<p>SAVE will always take you to the SAVE</p>
+<p><span class="page-name">FILE page</span> where you can name and save to disk the data in the buffer memory.</p>
 <p>This allows a number of useful applications. You can, for example, load a Sys-Ex file from disk, then transmit to the TS-10 any additional message or messages, adding that data to the original data, and then resave the file to disk. Or you can press <span class="param">SEND</span> to retransmit a Sys-Ex message immediately after it has been received, to check and see that it was received properly.</p>
 <h3 id="ts-10-disk-messages">TS-10 Disk Messages</h3>
 <p>Disk messages are displayed for one second and indicate either successful completion or nonfatal error conditions encountered during a disk operation:</p>
 <p>• DISK COMMAND COMPLETED — indicates that the disk operation was completed successfully and without errors.</p>
-<p>• DISK WRITE-PROTECTED — appears during SAVE or DELETE operations if the diskette is write-protected.</p>
-<p>• DISK HAS BEEN CHANGED — appears when you respond <span class="lcd">*YES*</span> to LOAD, SAVE or DELETE when the disk in the drive has been changed since the last time the TS-10 loaded a disk directory.</p>
+<p>• DISK WRITE-PROTECTED — appears during</p>
+<h3 id="save-or">SAVE or</h3>
+<p>DELETE operations if the diskette is write-protected.</p>
+<p>• DISK HAS BEEN CHANGED — appears when you respond</p>
+<p><span class="lcd">*YES*</span> to LOAD,</p>
+<h3 id="save-or-2">SAVE or</h3>
+<p>DELETE when the disk in the drive has been changed since the last time the TS-10 loaded a disk directory.</p>
 <p>• DISK DRIVE NOT READY — usually indicates that there is no diskette in the drive, although it can indicate a hardware problem if it persists.</p>
 <p>• NOT ENOUGH DISK SPACE — indicates that there are not enough available sectors on diskette to save the file.</p>
-<p>• FILE DOES NOT EXIST — appears when you respond <span class="lcd">*YES*</span> to LOAD or DELETE when the display shows <span class="lcd">FILE=*NO</span> FILES*.</p>
+<p>• FILE DOES NOT EXIST — appears when you respond</p>
+<h3 id="yes-to">*YES* to</h3>
+<h3 id="load-or">LOAD or</h3>
+<p>DELETE when the display shows <span class="lcd">FILE=*NO</span> FILES*.</p>
 <p>• DISK COMMAND NOT COMPLETED — appears when you respond <span class="lcd">*NO*</span> to DELETE <span class="value">OLD</span> VERSION? when saving files.</p>
 <p>• NO FREE DISK FILES — indicated that there are no free directory entries in which to save the file.</p>
 <p>• NO <span class="param">SYS-EX</span> DATA TO SAVE — indicates that there is no data in the Sys-Ex Recorder to save.</p>
 <p>• SEQUENCER MEMORY RESET — appears after using the Sys-Ex Recorder (which erases sequencer memory) and you try to enter a sequence.</p>
 <p>• FILE TOO LARGE TO LOAD — indicates that the sequence data in the file will not fit into the free memory. Delete sequences or songs to make some memory available. If that does not work, the file may have been saved from a system with expanded memory.</p>
-<p>• INCOMPATIBLE DISK CAPACITY — appears when copying an HD disk’s contents to a DD disk, or vice versa.</p>
+<p>• INCOMPATIBLE DISK CAPACITY — appears when copying an</p>
+<p>HD disk’s contents to a</p>
+<p>DD disk, or vice versa.</p>
 <p>• NOT ENOUGH SOUND RAM INSTALLED — appears when you try to <span class="function">Auto-Load</span> a SAMPLE-BANKS file that was created on an 8 Meg TS-10 into a 2 Meg unit.</p>
 <aside class="note"><p>Note: Any <dfn class="term">Sample-Banks</dfn> files created on an 8 Meg TS-10 using <dfn class="term">BankSet</dfn> S9, and then loaded into a 2 Meg unit will automatically erase all Sampled Sounds in <dfn class="term">BankSet</dfn> S9.</p></aside>
-<h3 id="fatal-error-messages">Fatal Error Messages</h3>
-<p>Fatal error messages are always accompanied by the <span class="param">PRESS</span> ANY BUTTON TO CONTINUE...</p>
+<p>Fatal Error  Messages Fatal error messages are always accompanied by the <span class="param">PRESS</span> ANY BUTTON TO CONTINUE...</p>
 <p>prompt, and remain on the screen until any button is pressed. These messages indicate serious error conditions which interrupted the disk operation. These errors may have prevented the correct saving or loading of the data in the file(s).</p>
 <p>• DISK DRIVE NOT READY — indicates either that there is no diskette in the drive or that there are hardware problems.</p>
 <p>• DISK NOT FORMATTED — the disk format was not recognized, and the disk is either blank or formatted for some other system.</p>
@@ -496,10 +595,14 @@
 <p>• DISK ERROR - BAD DISK OS — during a file operation, the CRC of the Disk OS Program Control Block was incorrect. Probably indicates a bad disk sector. The disk may be unusable.</p>
 <p>• DISK ERROR - BAD DIRECTORY — during a file operation, the CRC of the Directory blocks was incorrect. Probably indicates a bad disk sector. The disk may be unusable.</p>
 <p>• DISK ERROR - BAD FAT — during a file operation, the CRC of the FAT (File Allocation Table) block was incorrect. Probably indicates a bad disk sector. The disk may be unusable.</p>
-<p>• DISK ERROR - BAD DEVICE ID — during a file operation, the CRC of the Device ID block was incorrect. Probably indicates a bad disk sector. The disk may be unusable.</p>
+<p>• DISK ERROR - BAD DEVICE ID — during a file operation, the</p>
+<h3 id="crc-of-the-device">CRC of the Device</h3>
+<p>ID block was incorrect. Probably indicates a bad disk sector. The disk may be unusable.</p>
 <p>• FORMAT FAILED - BAD DISK — during formatting, a bad disk sector was detected. The disk may be defective, and should not be used.</p>
 <p>• DISK COPY NOT COMPLETED — appears if <span class="lcd">*QUIT*</span> is pressed during the Disk Copy procedure.</p>
-<p>• INVALID SCSI DEVICE — indicates that there are problems either with the connected SCSI Device, with the SCSI cable, or that the SCSI Storage Device is set to the wrong SCSI Device-ID number.</p>
+<p>• INVALID SCSI DEVICE — indicates that there are problems either with the connected SCSI Device, with the</p>
+<p>SCSI cable, or that the SCSI Storage Device is set to the wrong SCSI Device-</p>
+<p>ID number.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.

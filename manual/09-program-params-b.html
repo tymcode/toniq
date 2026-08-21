@@ -15,47 +15,18 @@
     </div>
   </header>
   <nav class="section-nav">
-    <div><a href="09-program-params-a.html">← Section 9 — Program Parameters (LFO, Envelopes, Pitch, Filters)</a></div>
+    <div><a href="09-program-params-a.html#section-9-program-parameters-lfo-envelopes-pitch-filters">← Section 9 — Program Parameters (LFO, Envelopes, Pitch, Filters)</a></div>
     <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
-    <div><a href="10-sequencer.html">Section 10 — Understanding the Sequencer →</a></div>
+    <div><a href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
-      <h1>Section 9 — Program Parameters (Wave, Hyper-Wave, Editors)</h1>
+      <h1 id="section-9-program-parameters-wave-hyper-wave-editors">Section 9 — Program Parameters (Wave, Hyper-Wave, Editors)</h1>
     </header>
     <h2 id="wave-page">Wave Page</h2>
-<p>Press the <kbd class="button">Wave</kbd> button. On the Wave page, the same three parameters (Wave Name, Wave Type, and Delay) will always appear on the top line of the display, no matter which type of wave is selected:</p>
-<figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Wave Name</div><div>Wave Class</div><div>Delay before playing</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">WAVE</td><td class="cell selected">SOLOVIOLN</td><td class="cell">STRING-SOUND</td><td class="cell">DELAY=0000</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MULTISAMPLE-SHIFT=+00</td><td class="cell">DIR=FORWARD</td><td class="cell">&nbsp;</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
-</figure>
+<p>Press the <kbd class="button">Wave</kbd> button. On the <span class="page-name">Wave page</span>, the same three parameters (Wave Name, Wave Type, and Delay) will always appear on the top line of the display, no matter which type of wave is selected:</p>
+<p>Wave Name            Wave Class           Delay before playing</p>
 <h4 id="wave-name" class="param-name">Wave Name</h4>
 <p>Here you select the actual wave that the voice will play. When this parameter is underlined, the <kbd class="button">Data Entry Slider</kbd> will select only among the waves in the current wave class. Pressing the <kbd class="button">Up/Down Arrow</kbd> button will allow you to cross over into the next Wave Class.</p>
 <h4 id="wave-class">Wave Class</h4>
@@ -65,14 +36,14 @@
 <p>This parameter determines how long the voice will wait after a key is struck before playing. A delay of up to 5 seconds is possible.</p>
 <p>When set to <span class="lcd">DELAY=KYUP</span> (Key Up), the voice will wait until the key is released before it plays.</p>
 <h2 id="class-specific-wave-parameters">Class-Specific Wave Parameters</h2>
-<p>The parameters shown on the lower line of the display on the Wave page will vary depending on the current wave class. For each wave class, the lower line of the display will contain parameters controlling the features which are specific to that class.</p>
+<p>The parameters shown on the lower line of the display on the <span class="page-name">Wave page</span> will vary depending on the current wave class. For each wave class, the lower line of the display will contain parameters controlling the features which are specific to that class.</p>
 <p>Changing the wave class resets these parameters. However, if you scroll only one step away from the current class and then scroll back, any lower-line settings you had will be restored. Go more than one class from the current one, and any lower-line settings will be lost.</p>
 <p>For the first thirteen wave classes, the bottom line of the display shows:</p>
 <h4 id="multisample-shift" class="param-name"><span class="param">MULTISAMPLE-SHIFT</span><span class="range">Range: -60 to +60</span></h4>
 <p>Changes keyboard split points on multi-sampled waves. This has the effect of setting the <dfn class="term">WaveSamples</dfn> to ranges you wouldn’t otherwise hear (allowing aliasing in some cases), creating completely different colorations. A setting of +00 is the default.</p>
 <h4 id="dir" class="param-name"><span class="param">DIR</span><span class="range">Range: FORWARD or REVERSE</span></h4>
 <p>Any of the waves in these wave classes can be made to play forward (which is the normal mode) or backward with this parameter. When DIR= <span class="value">REVERSE</span>, the sound will play from the end of the sample to the start point, and will not loop.</p>
-<p>Press the <kbd class="button">Wave</kbd> button again to get to the next Wave sub-page:</p>
+<p>Press the <kbd class="button">Wave</kbd> button again to get to the next <span class="page-name">Wave sub-page</span>:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -143,9 +114,11 @@
     </tfoot>
   </table>
   </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Loop Start Point</div><div>Wave Modulation Source</div><div>Wave Modulation Amount</div></div>
+  
   
 </figure>
+<p>Loop Start            Wave Modulation                                         Wave Modulation</p>
+<p>Point                   Source                                                 Amount</p>
 <h4 id="index" class="param-name"><span class="param">INDEX</span><span class="range">Range: 00 to 99</span></h4>
 <p>The Index parameter controls where within the wavetable the voice-loop will begin playing when the key is struck.</p>
 <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: 00 to 99</span></h4>
@@ -154,10 +127,12 @@
 <p>Determines how much the selected modulator (above) will affect the wave; i.e. how far away from the start point the sound will move. If <span class="lcd">MODAMT=+00</span>, the sound will remain static.</p>
 <p>Positive amounts will modulate the sound forward (toward the end of the wave); negative modulation amounts will move the sound back toward the beginning.</p>
 <h2 id="hyper-wave-specific-wave-parameters">Hyper-Wave™ -Specific Wave Parameters</h2>
-<p><dfn class="term">Hyper-Wave</dfn> architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn class="term">Hyper-Waves</dfn> are created by selecting <span class="lcd">WAVE-LIST</span> with the OPTION parameter found on the Program Control page. Hyper- Waves have there own specific wave parameters.</p>
+<p><dfn class="term">Hyper-Wave</dfn> architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn class="term">Hyper-Waves</dfn> are created by selecting</p>
+<h3 id="wave-list-with-the">WAVE-LIST with the</h3>
+<p>OPTION parameter found on the <span class="page-name">Program Control page</span>. Hyper- Waves have there own specific wave parameters.</p>
 <p>When the Wave Class is <span class="lcd">WAVE-LIST</span>, the display shows:</p>
 <figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Wave Name</div><div>Wave Class</div><div>Delay before playing</div></div>
+  
   <div class="vfd-bezel">
   <table>
     <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
@@ -183,9 +158,11 @@
     </tfoot>
   </table>
   </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Selects which step the WAVE-LIST will start with when a key is pressed.</div><div>Selects which step the Wave-List will use to start the loop when a key is held down.</div><div>Defines the last Wave in the list.</div></div>
+  
   
 </figure>
+<p>Wave Name            Wave Class           Delay before playing</p>
+<div class="vfd-callouts top"><div>Selects which step the WAVE-LIST will start with when a key is pressed.</div><div>Selects which step the Wave-List will use to start the loop when a key is held down.</div><div>Defines the last Wave in the list.</div></div>
 <h4 id="wave-name-2" class="param-name"><span class="param">Wave Name</span><span class="range">Range: Read only</span></h4>
 <p>The wave name parameter in a <span class="lcd">WAVE-LIST</span> is meaningless and is not selectable.</p>
 <h4 id="wave-class-2">Wave Class</h4>
@@ -200,7 +177,7 @@
 <p>Step for its duration.</p>
 <h4 id="end" class="param-name"><span class="param">END</span><span class="range">Range: 01 to 16</span></h4>
 <p>Defines the last step in the <dfn class="term">Wave-List</dfn> that the voice will play before looping back to play the Loop Start step.</p>
-<p>Press the <kbd class="button">Wave</kbd> button again to get to the next <dfn class="term">Hyper-Wave</dfn> sub-page:</p>
+<p>Press the <kbd class="button">Wave</kbd> button again to get to the next <span class="page-name">Hyper-Wave sub-page</span>:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -232,25 +209,53 @@
   
 </figure>
 <h4 id="mod-destination" class="param-name"><span class="param">MOD-DESTINATION</span><span class="range">Range: *-NONE-*, START-STEP, LOOP-START, END-STEP, TRAVELER, or START+LOOP</span></h4>
-<p>• When set to <span class="lcd">START-STEP</span>, the output level of the <span class="lcd">START-MODSRC</span> at the time of the note-on will determine which step the <dfn class="term">Wave-List</dfn> will begin playing at. A positive <span class="param">MODAMT</span> will cause <span class="param">MODSRC</span> output to increment the <span class="lcd">START-STEP</span> above the manual level. A negative <span class="param">MODAMT</span> will decrement the <span class="lcd">START-STEP</span> below the manual level. The manual level is determined by the <span class="lcd">START-STEP</span> parameter. After the appropriate <span class="lcd">START-STEP</span> has played for its duration, the <dfn class="term">Wave-List</dfn> will play through all of the successive steps, up to the END step, and then will loop back around to play the <span class="param">LOOPSTART</span> Step. If the output of the <span class="param">MODSRC</span> causes the <dfn class="term">Wave-List</dfn> to begin playing at a Step that is past the END Step, the appropriate <span class="lcd">START-STEP</span> will play for its duration, and then the <dfn class="term">Wave-List</dfn> will loop back to play the <span class="param">LOOPSTART</span> Step. The <dfn class="term">Wave-List</dfn> will continue to loop between the <span class="param">LOOPSTART</span> Step and the END Step, until the voice is turned off.</p>
-<p>• When set to either <span class="lcd">LOOP-START</span> or <span class="lcd">END-STEP</span>, the <span class="param">LOOPSTART</span> Step or the END Step values will be modulated in a non-real-time manner, similar to when <span class="lcd">MOD-DESTINATION=START-STEP</span>. With either setting, if the output of the <span class="param">MODSRC</span> causes the END Step to be lower than the <span class="param">LOOPSTART</span> Step, the <dfn class="term">Wave-List</dfn> will simply repeat the <span class="param">LOOPSTART</span> Step.</p>
-<p>• When set to <span class="lcd">TRAVELER</span>, Step Duration will be ignored, and <span class="param">MODSRC</span> output will directly control which Step will play, within the boundaries of the <span class="lcd">START-STEP</span> and the END Step, continuously, in real-time. With <span class="param">MODSRC</span> output at zero, a positive <span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the <span class="lcd">START-STEP</span>. With <span class="param">MODSRC</span> output at full, a positive <span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the END Step. A negative <span class="param">MODAMT</span> will have the opposite effects.</p>
-<p>• When set to <span class="lcd">START+LOOP</span>, the <span class="param">MODSRC</span> will modulate the <span class="lcd">START-STEP</span>, <span class="param">LOOPSTART</span> Step and END Step values all simultaneously, relative to one another, and all in a real-time manner similar to when <span class="lcd">MOD-DESTINATION=TRAVELER</span>. The integrity of the loop will be maintained as the Step values are modulated. <span class="lcd">START+LOOP</span> allows you to move a fixed- length window over a definable range of the <dfn class="term">Wave-List</dfn>.</p>
+<p>• When set to <span class="lcd">START-STEP</span>, the output level of the</p>
+<p><span class="lcd">START-MODSRC</span> at the time of the note-on will determine which step the <dfn class="term">Wave-List</dfn> will begin playing at. A positive</p>
+<p><span class="param">MODAMT</span> will cause</p>
+<p><span class="param">MODSRC</span> output to increment the</p>
+<p><span class="lcd">START-STEP</span> above the manual level. A negative</p>
+<p><span class="param">MODAMT</span> will decrement the</p>
+<p><span class="lcd">START-STEP</span> below the manual level. The manual level is determined by the</p>
+<p><span class="lcd">START-STEP</span> parameter. After the appropriate</p>
+<p><span class="lcd">START-STEP</span> has played for its duration, the <dfn class="term">Wave-List</dfn> will play through all of the successive steps, up to the</p>
+<p>END step, and then will loop back around to play the <span class="param">LOOPSTART</span> Step. If the output of the</p>
+<p><span class="param">MODSRC</span> causes the <dfn class="term">Wave-List</dfn> to begin playing at a Step that is past the END Step, the appropriate</p>
+<p><span class="lcd">START-STEP</span> will play for its duration, and then the <dfn class="term">Wave-List</dfn> will loop back to play the <span class="param">LOOPSTART</span> Step. The <dfn class="term">Wave-List</dfn> will continue to loop between the <span class="param">LOOPSTART</span> Step and the END Step, until the voice is turned off.</p>
+<p>• When set to either</p>
+<p><span class="lcd">LOOP-START</span> or <span class="lcd">END-STEP</span>, the <span class="param">LOOPSTART</span> Step or the END Step values will be modulated in a non-real-time manner, similar to when <span class="lcd">MOD-DESTINATION=START-STEP</span>. With either setting, if the output of the</p>
+<p><span class="param">MODSRC</span> causes the END Step to be lower than the <span class="param">LOOPSTART</span> Step, the <dfn class="term">Wave-List</dfn> will simply repeat the <span class="param">LOOPSTART</span> Step.</p>
+<p>• When set to <span class="lcd">TRAVELER</span>, Step Duration will be ignored, and</p>
+<p><span class="param">MODSRC</span> output will directly control which Step will play, within the boundaries of the</p>
+<p><span class="lcd">START-STEP</span> and the END Step, continuously, in real-time. With</p>
+<p><span class="param">MODSRC</span> output at zero, a positive</p>
+<p><span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the <span class="lcd">START-STEP</span>. With</p>
+<p><span class="param">MODSRC</span> output at full, a positive</p>
+<p><span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the END Step. A negative</p>
+<p><span class="param">MODAMT</span> will have the opposite effects.</p>
+<p>• When set to <span class="lcd">START+LOOP</span>, the</p>
+<p><span class="param">MODSRC</span> will modulate the <span class="lcd">START-STEP</span>, <span class="param">LOOPSTART</span> Step and END Step values all simultaneously, relative to one another, and all in a real-time manner similar to when <span class="lcd">MOD-DESTINATION=TRAVELER</span>. The integrity of the loop will be maintained as the Step values are modulated. START+</p>
+<p><span class="param">LOOP</span> allows you to move a fixed- length window over a definable range of the <dfn class="term">Wave-List</dfn>.</p>
 <h4 id="modsrc-2" class="param-name"><span class="param">MODSRC</span><span class="range">Range: 00 to 99</span></h4>
 <p>Here you choose which of the 15 modulators will control the movement of the wave-list. Any of the modulators can be selected.</p>
 <h4 id="modamt-3" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -15 to +15</span></h4>
 <p>This parameter determines the number of steps that the selected Mod Destination will be modulated. Modulation can be either positive or negative.</p>
 <h2 id="drum-map-specific-wave-parameters">Drum-Map Specific Wave Parameters</h2>
-<p>A <dfn class="term">Drum-Map</dfn> can use up to 64 waves per program, four waves per key, with separate pitch, volume, panning and voice template parameters for each wave. All of the <span class="lcd">DRUM-MAP</span> wave page parameters are identical to the first thirteen wave classes, with the exclusion of the MULTISAMPLE-SHIFT parameter.</p>
+<p>A <dfn class="term">Drum-Map</dfn> can use up to 64 waves per program, four waves per key, with separate pitch, volume, panning and voice template parameters for each wave. All of the</p>
+<p><span class="lcd">DRUM-MAP</span> wave page parameters are identical to the first thirteen wave classes, with the exclusion of the MULTISAMPLE-</p>
+<p>SHIFT parameter.</p>
 <p>Also, the <span class="lcd">DRUM-MAP</span> Wave Class category is only visible when the current program contains a <dfn class="term">Drum-Map</dfn>. The wave name parameter in a <dfn class="term">Drum-Map</dfn> is meaningless and is not selectable.</p>
-<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the OCTAVE and SEMITONE values on the PITCH page will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <dfn class="term">Drum-Map</dfn> Editor.</p></aside>
+<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the</p></aside>
+<h3 id="octave-and">OCTAVE and</h3>
+<p>SEMITONE values on the</p>
+<p><span class="page-name">PITCH page</span> will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the</p>
+<p>PITCH parameter in the <dfn class="term">Drum-Map</dfn> Editor.</p>
 <h2 id="mod-mixer-page">Mod Mixer Page</h2>
 <p>The Mod Mixer is a unique feature which allows you to:</p>
 <p>• combine and assign two modulators to a single modulation input</p>
 <p>• scale and/or shape the response of one of those modulators according to one of 16 Mod</p>
 <h4 id="shaper-curves" class="param-name">Shaper Curves</h4>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Select Voice</div></td></tr></table></aside>
-<p>Select the voice you want to edit on the <span class="function">Select Voice</span> page, and then press <kbd class="button">Mod Mixer</kbd>. The display shows:</p>
+<p>Select the voice you want to edit on the <span class="page-name">Select Voice page</span>, and then press <kbd class="button">Mod Mixer</kbd>. The display shows:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Mod Source 1</div><div>Mod Source 2</div><div></div></div>
   <div class="vfd-bezel">
@@ -281,9 +286,10 @@
   <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>Scale Amount</div><div>Shaper Curve</div><div></div></div>
   
 </figure>
+<p>Scale Amoumt                       Shaper Curve</p>
 <p>The two parameters on the top line of the display select the two modulators which will be mixed together, <span class="param">SRC-1</span> and <span class="param">SRC-2</span>. On the lower line of the display are two parameters for shaping the level and response of <span class="param">SRC-2</span>. Internally, the Mixer/Shaper works like this:</p>
 <figure class="figure"><img src="images/mod-mixer-block.png" alt="Mod Mixer/Shaper block: SRC-1 goes straight to the mixer; SRC-2 passes through Scale and Shape before summing"><figcaption>Internal signal flow of the Mod Mixer/Shaper.</figcaption></figure>
-<p>There are four parameters which can be selected on the Mod/Mixer page:</p>
+<p>There are four parameters which can be selected on the <span class="page-name">Mod/Mixer page</span>:</p>
 <h4 id="src-1" class="param-name"><span class="param">SRC-1</span><span class="range">Range: various</span></h4>
 <p>Select any of the 15 available modulators (including the mixer itself) as Mod Source 1. <span class="param">SRC-1</span> is sent directly to the mod mixer without any level change or response shaping.</p>
 <h4 id="src-2" class="param-name"><span class="param">SRC-2</span><span class="range">Range: various</span></h4>
@@ -370,27 +376,39 @@
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: OFF, KEY, or CHAN</span></h4>
 <p>Allows you to select <dfn class="term">Poly-Key</dfn>, Channel, or no pressure for the program. Generally, if a program doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="patch" class="param-name"><span class="param">PATCH</span><span class="range">Range: LIVE or HELD</span></h4>
-<p>Selects the default patch select mode for the program. When set to LIVE, it uses the current state of the buttons to select a patch. When set to HELD, it uses the patch set by the first key hit while touching the patch select buttons. For more information about patch selects, refer to Sections 4 and 5. This is the default setting that will be installed into a track when the program is selected.</p>
+<p>Selects the default patch select mode for the program. When set to LIVE, it uses the current state of the buttons to select a patch. When set to HELD, it uses the patch set by the first key hit while touching the patch select buttons. For more information about patch selects, refer to Sections <a class="refer-to" href="04-presets.html#section-4-understanding-presets">4</a> and <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">5</a>. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="restrike" class="param-name"><span class="param">RESTRIKE</span><span class="range">Range: 00 to 99</span></h4>
 <p>This parameter controls the voice Restrike time. When you play a particular note and then restrike it again immediately before the old note has finished sounding, the amount of time it takes for the first strike to fadeout is determined by this parameter. By varying the setting of this parameter, you can control how long sounds overlap when a note is restruck.</p>
 <p>For example, if you have a slow string sound, it may sound more natural to use a longer restrike value, which will cause the old note to decay more slowly, rather than end abruptly when the new note starts. Normal values are around 10. The higher the value, the longer the fadeout time.</p>
 <aside class="tip"><p>If you hear clicking sounds when you restrike a note, setting the Restrike time to higher values may eliminate the click.</p></aside>
-<p>Along with the <span class="param">PRESS</span> and PATCH parameters, the next page contains copies of track parameters that are saved in the program. When a program is selected or put on a track, values of these parameters (as saved in the program) are installed in the track as the default initial settings. They can be edited on the track pages without affecting the program default settings, but must be edited on this page in order to be saved with the program. Changes made here will be copied to the current primary track.</p>
+<p>Along with the</p>
+<h3 id="press-and">PRESS and</h3>
+<p>PATCH parameters, the next page contains copies of track parameters that are saved in the program. When a program is selected or put on a track, values of these parameters (as saved in the program) are installed in the track as the default initial settings. They can be edited on the track pages without affecting the program default settings, but must be edited on this page in order to be saved with the program. Changes made here will be copied to the current primary track.</p>
 <p>Press the <kbd class="button">Program Control</kbd> button again to get to the second sub-page:</p>
-<p>The following parameters are the default settings for the Track parameters that are stored with the Program. For more information about how these parameters function, see Section 5 —</p>
-<p>Preset/Track Parameters.</p>
+<p>The following parameters are the default settings for the Track parameters that are stored with the Program. For more information about how these parameters function, see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>.</p>
 <h4 id="atck" class="param-name"><span class="param">ATCK</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the ATCK parameter default values will simultaneously edit the Track <span class="param">ATTACK</span> Parameter values on the track that the sound is occupying. This parameter will only function if an asterisk is assigned to any <span class="param">ATTACK</span> parameter (found on the ENV1, 2, and 3 pages) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
+<h3 id="editing-the">Editing the</h3>
+<p>ATCK parameter default values will simultaneously edit the Track <span class="param">ATTACK</span> Parameter values on the track that the sound is occupying. This parameter will only function if an asterisk is assigned to any</p>
+<p><span class="param">ATTACK</span> parameter (found on the ENV1, 2, and 3 pages) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="bright" class="param-name"><span class="param">BRIGHT</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the BRIGHT parameter default values will simultaneously edit the Track <span class="param">BRIGHTNESS</span> Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any filter cutoff parameter (found on the Filters page) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
+<p>Editing the BRIGHT parameter default values will simultaneously edit the Track <span class="param">BRIGHTNESS</span> Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any filter cutoff parameter (found on the <span class="page-name">Filters page</span>) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the RATE parameter default values will simultaneously edit the Track RATE Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any LFO RATE parameter (found on the LFO page) for any Voice in the selected program, or if the program contains a voice that plays a <dfn class="term">Wave-List</dfn>. This is the default setting that will be installed into a track when the program is selected.</p>
+<h3 id="editing-the-2">Editing the</h3>
+<p>RATE parameter default values will simultaneously edit the Track RATE Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any LFO</p>
+<p>RATE parameter (found on the</p>
+<p><span class="page-name">LFO page</span>) for any Voice in the selected program, or if the program contains a voice that plays a <dfn class="term">Wave-List</dfn>. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="rels" class="param-name"><span class="param">RELS</span><span class="range">Range: -64 to +63</span></h4>
-<p>Editing the RELS parameter default values will simultaneously edit the Track <span class="param">RELEASE</span> Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any <span class="param">RELEASE</span> parameter (found on the ENV1, 2, and 3 pages) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
+<h3 id="editing-the-3">Editing the</h3>
+<p>RELS parameter default values will simultaneously edit the Track <span class="param">RELEASE</span> Parameter values on the track that the Program is occupying. This parameter will only function if an asterisk is assigned to any</p>
+<p><span class="param">RELEASE</span> parameter (found on the ENV1, 2, and 3 pages) for any Voice in the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="timbre" class="param-name"><span class="param">TIMBRE</span><span class="range">Range: 000 to 127</span></h4>
-<p>Editing the <span class="param">TIMBRE</span> parameter default values will simultaneously edit the Track <span class="param">TIMBRE</span> Parameter values on the track that the Program is occupying. This parameter will only function if <span class="param">TIMBRE</span> is assigned as a modulator within the selected program, or if the V1 through V6 relative volume modulation amounts on the third Program Control sub-page have been assigned to values other than zero. This is the default setting that will be installed into a track when the program is selected.</p>
+<h3 id="editing-the-4">Editing the</h3>
+<p><span class="param">TIMBRE</span> parameter default values will simultaneously edit the Track <span class="param">TIMBRE</span> Parameter values on the track that the Program is occupying. This parameter will only function if</p>
+<p><span class="param">TIMBRE</span> is assigned as a modulator within the selected program, or if the V1 through V6 relative volume modulation amounts on the third <span class="page-name">Program Control sub-page</span> have been assigned to values other than zero. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="xctrl" class="param-name"><span class="param">XCTRL</span><span class="range">Range: 000 to 127</span></h4>
-<p>Editing the <span class="param">XCTRL</span> parameter default values will simultaneously edit the Track <span class="param">XCTRL</span> Parameter values on the track that the Program is occupying. This parameter will only function if <span class="param">XCTRL</span> has been assigned as a modulator within the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
+<h3 id="editing-the-5">Editing the</h3>
+<p><span class="param">XCTRL</span> parameter default values will simultaneously edit the Track <span class="param">XCTRL</span> Parameter values on the track that the Program is occupying. This parameter will only function if</p>
+<p><span class="param">XCTRL</span> has been assigned as a modulator within the selected program. This is the default setting that will be installed into a track when the program is selected.</p>
 <p>Press <kbd class="button">Program Control</kbd> again to get to the third sub-page:</p>
 <figure class="vfd-unit has-page">
   
@@ -423,7 +441,9 @@
   
 </figure>
 <h4 id="timbre-v1-to-v6" class="param-name"><span class="param">TIMBRE V1 to V6</span><span class="range">Range: -64 to +63</span></h4>
-<p>The <span class="param">TIMBRE</span> sub-page controls the relative volume modulation amounts for each Voice, as controlled by Timbre. Note that when OPTIONS is set to PITCH-TABLE, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM-MAP</span>, the V5 and V6 parameters are not displayed.</p>
+<p>The</p>
+<p><span class="page-name">TIMBRE sub-page</span> controls the relative volume modulation amounts for each Voice, as controlled by Timbre. Note that when</p>
+<p>OPTIONS is set to PITCH-TABLE, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM-MAP</span>, the V5 and V6 parameters are not displayed.</p>
 <h2 id="pitch-table-editor-parameters">Pitch-Table Editor Parameters</h2>
 <p>The following parameters are only available when <span class="lcd">OPTION=PITCH-TABLE</span> on the first <span class="page-name">Program Control Page</span>. To access the <dfn class="term">Pitch-Table</dfn> Editor parameters:</p>
 <p>1) Press the <kbd class="button">Program Control</kbd> button.</p>
@@ -462,10 +482,8 @@
   <div class="vfd-callouts bottom"><div>Source Key</div><div>Playback Pitch (in Semitones)</div><div>Playback Pitch (in Cents)</div></div>
   
 </figure>
-<h4 id="extrapolate-interpolate" class="param-name">Extrapolate &amp; Interpolate</h4>
-<div class="vfd-callouts top"><div>Source Key (in Semitones)</div><div>Playback Pitch (in Cents)</div><div>Playback Pitch</div></div>
 <h4 id="calculator" class="param-name">*CALCULATOR*</h4>
-<p>This parameter selects the Extrapolate/Interpolate sub-page, allowing you to create a pitch-table calculated from a user-defined key range.</p>
+<p>This parameter selects the <span class="page-name">Extrapolate/Interpolate sub-page</span>, allowing you to create a pitch-table calculated from a user-defined key range.</p>
 <h4 id="key-source-key" class="param-name"><span class="param">KEY Source Key</span><span class="range">Range: A0 to C8</span></h4>
 <p>For every Source Key on the lower left, you can see and edit the pitch of that key. The Source Key can be selected by pressing the keys, or using the Data Entry Controls.</p>
 <h4 id="playback-pitch" class="param-name"><span class="param">Playback Pitch</span><span class="range">Range: A0 to C8</span></h4>
@@ -473,8 +491,8 @@
 <h4 id="fine-tune-parameter" class="param-name"><span class="param">Fine Tune Parameter</span><span class="range">Range: 00 to 99 cents</span></h4>
 <p>Enables you to fine tune the pitch, or create micro-tunings and other alternate tunings.</p>
 <h4 id="exit" class="param-name">*EXIT*</h4>
-<p>• Press <span class="lcd">*EXIT*</span> to return to the first Program Control sub-page, eliminating any edits you may have made on the <dfn class="term">Pitch-Table</dfn> Editor sub-page.</p>
-<p>To display the Extrapolate/Interpolate sub-page, press the <span class="lcd">*CALCULATOR*</span> soft button. The display shows:</p>
+<p>• Press <span class="lcd">*EXIT*</span> to return to the first <span class="page-name">Program Control sub-page</span>, eliminating any edits you may have made on the <span class="page-name">Pitch-Table Editor sub-page</span>.</p>
+<p>To display the <span class="page-name">Extrapolate/Interpolate sub-page</span>, press the <span class="lcd">*CALCULATOR*</span> soft button. The display shows:</p>
 <figure class="vfd-unit">
   
   <div class="vfd-bezel">
@@ -506,18 +524,19 @@
   
 </figure>
 <h4 id="key-range-start-end" class="param-name"><span class="param">KEY-RANGE START/END</span><span class="range">Range: A0 to C8</span></h4>
-<p>Defines the area of the keyboard that the TS-10 will use as a reference by which to make its calculations. The START key is the first of the two key numbers shown, and the END key is the second number shown. By selecting a start and stop key, you can define the key range whose pitch intervals will be duplicated over the entire keyboard. Note that you can also set the start and end keys using the data entry controls, and press the soft button beneath them to toggle back and forth.</p>
+<p>Defines the area of the keyboard that the TS-10 will use as a reference by which to make its calculations. The</p>
+<p>START key is the first of the two key numbers shown, and the</p>
+<p>END key is the second number shown. By selecting a start and stop key, you can define the key range whose pitch intervals will be duplicated over the entire keyboard. Note that you can also set the start and end keys using the data entry controls, and press the soft button beneath them to toggle back and forth.</p>
 <h4 id="extrapolate" class="param-name">EXTRAPOLATE</h4>
 <p>The EXTRAPOLATE command takes the pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
 <p>After a key-range has been defined, press the EXTRAPOLATE soft button. The display briefly reads PITCH-TABLE <span class="lcd">*CALCULATOR*</span>, then returns with the newly defined range across the whole keyboard.</p>
 <h4 id="interpolate" class="param-name">INTERPOLATE</h4>
 <p>INTERPOLATE takes the interval between two notes on the keyboard and divides all the keys in between into equally-spaced fractions of that interval.</p>
 <p>After a key-range has been defined, press the INTERPOLATE soft button. The display briefly reads PITCH-TABLE <span class="lcd">*CALCULATOR*</span>, then returns with the newly defined range across the whole keyboard.</p>
-<p>• Press <span class="lcd">*EXIT*</span> to return to the first Edit <dfn class="term">Pitch-Table</dfn> sub-page, eliminating any edits you may have made on the Extrapolate/Interpolate sub-page.</p>
+<p>• Press <span class="lcd">*EXIT*</span> to return to the first <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn> sub-page</span>, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate sub-page</span>.</p>
 <h3 id="warning">Warning:</h3>
 <p>You must save the program containing your custom pitch-table, or copy the custom pitch-table into the system, or you will lose it as soon as you edit another sound.</p>
-<h2 id="copy-pitch-table-parameters">Copy Pitch-Table Parameters</h2>
-<p>Pressing <kbd class="button">Copy</kbd> from the Edit <dfn class="term">Pitch-Table</dfn> sub-page will display the Copy page:</p>
+<p>Copy  <dfn class="term">Pitch-Table</dfn> Parameters Pressing <kbd class="button">Copy</kbd> <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn> sub-page</span> will display the <span class="page-name">Copy page</span>:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -552,7 +571,7 @@
 <p>The RECALL parameter allows you to recall the complete pitch-table from the Copy Buffer into an edited version of the current program if 1) the current program has a pitch-table installed in it and 2) the Copy buffer contains a pitch-table. If you attempt to recall a <dfn class="term">Pitch-Table</dfn> into a program without just previously having copied a pitch-table into the Copy buffer, the copy is not completed and an error message is displayed.</p>
 <p>The SYSTEM parameter allows you to install an alternate tuning into the System pitch-table. As an added feature, the System pitch-table itself is user-definable. For instance, if you want to hear what other programs sound like using the custom pitch-table from a program, you can redefine the System pitch-table. Or, if your main tuning is “just intonation,” then it might be convenient for you to use this or some other alternate tuning as your System tuning.</p>
 <p>• Press the soft button beneath SYSTEM. The display briefly reads COPY TO SYSTEM PITCH-TABLE, and the custom pitch-table is installed into the TS-10 Operating System where it is available for use by any program.</p>
-<p>• Press <kbd class="button">System</kbd> four times to view the System PITCH-TABLE sub-page.</p>
+<p>• Press <kbd class="button">System</kbd> four times to view the <span class="page-name">System PITCH-TABLE sub-page</span>.</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -584,7 +603,9 @@
   
 </figure>
 <p>• Note that the SYSTEM PITCH-TABLE parameter has been set to CUSTOM. Now all programs whose voices are set to use the system pitch-table (which is most programs) will use the custom pitch-table.</p>
-<p>To return all programs to standard equi-tempered tuning, set the System PITCH-TABLE parameter back to <span class="value">NORMAL</span>. Switching back to CUSTOM will restore your custom System pitch-table. You can switch back and forth as often as you wish. You can also try installing other custom pitch-tables in the System, but the System pitch-table can only contain one Custom pitchtable at a time.</p>
+<p>To return all programs to standard equi-tempered tuning, set the System</p>
+<p>PITCH-TABLE parameter back to <span class="value">NORMAL</span>. Switching back to</p>
+<p>CUSTOM will restore your custom System pitch-table. You can switch back and forth as often as you wish. You can also try installing other custom pitch-tables in the System, but the System pitch-table can only contain one Custom pitchtable at a time.</p>
 <h2 id="wave-list-editor-parameters">Wave-List Editor Parameters</h2>
 <p>The following parameters are only available when <span class="lcd">OPTION=WAVE-LIST</span> on the <span class="page-name">Program Control Page</span>. To access the <dfn class="term">Wave-List</dfn> Editor parameters for a program that does not contain a <dfn class="term">Wave-List</dfn>:</p>
 <p>1) Press the <kbd class="button">Program Control</kbd> button.</p>
@@ -675,7 +696,7 @@
 <p>Determines how many decibels (dB0 below normal volume the two wave steps will meet at the center point of the cross-fade curve.</p>
 <figure class="figure"><img src="images/xfade-depth.svg" alt="Cross-fade volume graph: DEPTH=0 dB at the top of the X, DEPTH=6 dB at the crossing"><figcaption>DEPTH is how far below full volume the two steps meet.</figcaption></figure>
 <h4 id="exit-2" class="param-name">*EXIT*</h4>
-<p>Pressing <span class="lcd">*EXIT*</span> will return you to the <dfn class="term">Wave-List</dfn> Editor page.</p>
+<p>Pressing <span class="lcd">*EXIT*</span> will return you to the <span class="page-name">Wave-List Editor page</span>.</p>
 <h4 id="pitch" class="param-name">*PITCH*</h4>
 <p>Pressing this soft button will reveal the following screen:</p>
 <figure class="vfd-unit">
@@ -719,9 +740,8 @@
 <h4 id="detune" class="param-name"><span class="param">DETUNE</span><span class="range">Range: -99 to +99 (in cents)</span></h4>
 <p>Allows you to fine-tune the wave step.</p>
 <h4 id="exit-3" class="param-name">*EXIT*</h4>
-<p>Pressing <span class="lcd">*EXIT*</span> will return you to the <dfn class="term">Wave-List</dfn> Editor page.</p>
-<h2 id="copy-wave-list-parameters">Copy Wave-List Parameters</h2>
-<p>Pressing <kbd class="button">Copy</kbd> from the Edit <dfn class="term">Wave-List</dfn> sub-page will display the Copy page:</p>
+<p>Pressing <span class="lcd">*EXIT*</span> will return you to the <span class="page-name">Wave-List Editor page</span>.</p>
+<p>Copy  <dfn class="term">Wave-List</dfn> Parameters Pressing <kbd class="button">Copy</kbd> <span class="page-name">Edit <dfn class="term">Wave-List</dfn> sub-page</span> will display the <span class="page-name">Copy page</span>:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -828,9 +848,9 @@
 <p>Determines where the drum wave voice will be panned in the stereo mix. The values for the</p>
 <p><span class="param">PAN</span> parameter are:</p>
 <table class="defn-table"><tbody><tr><td><span class="lcd">*VOICE*</span></td><td>Uses Patch VOICE panning</td></tr><tr><td><span class="lcd">L------</span></td><td>Hard Left</td></tr><tr><td><span class="lcd">-L-----</span></td><td>Medium Left</td></tr><tr><td><span class="lcd">--L----</span></td><td>Soft Left</td></tr><tr><td><span class="lcd">---C---</span></td><td>Center</td></tr><tr><td><span class="lcd">----R--</span></td><td>Soft Right</td></tr><tr><td><span class="lcd">-----R-</span></td><td>Medium Right</td></tr><tr><td><span class="lcd">------R</span></td><td>Hard Right</td></tr></tbody></table>
-<aside class="note"><p>Note: When <span class="lcd">PAN=*VOICE*</span>, the key uses whatever pan setting is chosen on the Output page of the voice(s) responding to the key. All of the other <span class="param">PAN</span> settings override the pan setting on the Output page.</p></aside>
+<aside class="note"><p>Note: When <span class="lcd">PAN=*VOICE*</span>, the key uses whatever pan setting is chosen on the <span class="page-name">Output page</span> of the voice(s) responding to the key. All of the other <span class="param">PAN</span> settings override the pan setting on the <span class="page-name">Output page</span>.</p></aside>
 <h4 id="pitch-2" class="param-name"><span class="param">PITCH</span><span class="range">Range: -16 to +15 semitones</span></h4>
-<p>The pitch of the selected wave can be raised or lowered in semitone steps. If a greater range or precision of tuning is required, then it is necessary to use pitch modulation on the Pitch Mods page in the destination voice(s).</p>
+<p>The pitch of the selected wave can be raised or lowered in semitone steps. If a greater range or precision of tuning is required, then it is necessary to use pitch modulation on the <span class="page-name">Pitch Mods page</span> in the destination voice(s).</p>
 <h4 id="key" class="param-name"><span class="param">KEY</span><span class="range">Range: B1 to B6</span></h4>
 <p>This parameter selects a single key for editing and displays all of the current drum-map parameter settings for that key. When this parameter is underlined, you can select the drum-map key to be edited using the data entry controls or by playing the keys on the keyboard. If you play several keys together, the last one played will be selected. There are 61 possible keys in a drummap, ranging from B1 to D7 (MIDI keys 35 to 95). This range is based on the General MID Spec.</p>
 <h4 id="wave" class="param-name"><span class="param">WAVE</span><span class="range">Range: (shown below)</span></h4>
@@ -840,11 +860,19 @@
 <h4 id="voice-voice-parameter-template" class="param-name"><span class="param">VOICE — Voice Parameter Template</span><span class="range">Range: (shown below)</span></h4>
 <p>This parameter specifies where the current voice will be sent. For the four <kbd class="button">Patch Select</kbd> settings, the destination voices are within the current program and the number of active voices is determined by the mute status of the four voices within the specified patch.</p>
 <p>If the VOICE parameter is assigned to a patch which does not have any voices set to wave type <span class="lcd">DRUM-MAP</span>, then the display will show <span class="lcd">WAVE=*-VOICE-*</span> and the parameter will not be editable. This indicates that the wave played by the key is controlled by the voice(s) in the patch rather than by the <dfn class="term">Drum-Map</dfn>.</p>
-<table class="defn-table"><thead><tr><th>for this setting:</th><th>the selected key is assigned to:</th></tr></thead><tbody><tr><td><span class="lcd">00 PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> 00</td></tr><tr><td><span class="lcd">0* PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> 0*</td></tr><tr><td><span class="lcd">*0 PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> *0</td></tr><tr><td><span class="lcd">** PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> **</td></tr><tr><td><span class="lcd">DRUM-FX1</span></td><td>This basic medium drum/perc. envelope, routed to FX-1, lets most drum sounds through unchanged, but then closes down to create a gate-type effect. Can be used for almost all unlooped drums &amp; percussion. To create a percussion decay out of a looped sound, you should use the LDECAY, MDECAY or SDECAY voices described below.</td></tr><tr><td><span class="lcd">DRUM-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">DRUM-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">TIGHT-FX1</span></td><td>Very quick decay drum/perc. env., routed to FX-1. Good for transients, muted or “choked” sounds. Turns an ambient drum wave into a tight one.</td></tr><tr><td><span class="lcd">TIGHT-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">TIGHT-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">NORMAL-FX1</span></td><td>A normal mode env. for controlling the duration of the sound (sound plays as long as the key is held, rather than always finishing its decay). Can be used for snare roll, guiro, or other sustaining waves where you would want to vary the duration.</td></tr><tr><td><span class="lcd">NORMAL-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">NORMAL-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">TOMTOM-FX1</span></td><td>Slight downward pitch envelope, volume and filter shapes optimized for toms, routed to FX-1. Can be used for toms, congas, tablas, anything that wants a subtle pitch env. and drum decay. Pressure bends the pitch down further. (For more radical pitch effects, use SYNDRM default below.)</td></tr><tr><td><span class="lcd">TOMTOM-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">TOMTOM-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">KEYGRP-FX1</span></td><td>Trigger mode voice, optimized for hi-hats. This allows group voice cutoff, and can be used for hi-hat key group.</td></tr><tr><td><span class="lcd">KEYGRP-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">KEYGRP-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">LDECAY-FX1</span></td><td>Long cymbal/percussion decay, routed to FX-1. Can be used for crash cymbals, rides, various long-decay percussion sounds.</td></tr><tr><td><span class="lcd">LDECAY-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">LDECAY-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">MDECAY-FX1</span></td><td>Medium cymbal/percussion decay, routed to FX-1. Good used for china cymbal, medium crash, and other medium-decay percussion sounds.</td></tr><tr><td><span class="lcd">MDECAY-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">MDECAY-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">SDECAY-FX1</span></td><td>Short cymbal/percussion decay, routed to FX-1. Good for splash cymbals and other, shorter-decay percussion sounds.</td></tr><tr><td><span class="lcd">SDECAY-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">SDECAY-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">SYNDRM-FX1</span></td><td>Exaggerated pitch and filter envelopes, good for processing synth drums, or creating special effects with regular drums.</td></tr><tr><td><span class="lcd">SYNDRM-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">SYNDRM-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">DRUM-AUX</span></td><td>The envelope is the same as DRUM-FX1, but the voice is routed to AUX. This special default routes the basic drum/perc. voice to the AUX outputs.</td></tr></tbody></table>
-<aside class="tip"><p>By assigning one of the PATCH settings to the drum-map VOICE parameter and setting the WAVE parameter to *-MUTED-*, you can use any internal ROM voice to play for that assigned key. Just make sure that the internal ROM wave is assigned to one of the remaining voices (on the <span class="function">Select Voice</span> page) and that it is active in the defined patch select setting.</p></aside>
+<table class="defn-table"><thead><tr><th>for this setting:</th><th>the selected key is assigned to:</th></tr></thead><tbody><tr><td><span class="lcd">00 PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> 00</td></tr><tr><td><span class="lcd">0* PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> 0*</td></tr><tr><td><span class="lcd">*0 PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> *0</td></tr><tr><td><span class="lcd">** PATCH</span></td><td>Voice will play, along with any other voice(s) assigned to <kbd class="button">Patch Select</kbd> **</td></tr><tr><td><span class="lcd">DRUM-FX1</span></td><td>This basic medium drum/perc. envelope, routed to FX-1, lets most drum sounds through unchanged, but then closes down to create a gate-type effect.</td></tr></tbody></table>
+<p>Can be used for almost all unlooped drums &amp; percussion. To create a percussion decay out of a looped sound, you should use the LDECAY,</p>
+<h3 id="mdecay-or">MDECAY or</h3>
+<p>SDECAY voices described below.</p>
+<table class="defn-table"><tbody><tr><td><span class="lcd">DRUM-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">DRUM-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">TIGHT-FX1</span></td><td>Very quick decay drum/perc. env., routed to FX-1. Good for transients, muted or “choked” sounds. Turns an ambient drum wave into a tight one.</td></tr><tr><td><span class="lcd">TIGHT-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">TIGHT-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">NORMAL-FX1</span></td><td>A normal mode env. for controlling the duration of the sound (sound plays as long as the key is held, rather than always finishing its decay). Can be used for snare roll, guiro, or other sustaining waves where you would want to vary the duration.</td></tr><tr><td><span class="lcd">NORMAL-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">NORMAL-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">TOMTOM-FX1</span></td><td>Slight downward pitch envelope, volume and filter shapes optimized for toms, routed to FX-1. Can be used for toms, congas, tablas, anything that wants a subtle pitch env. and drum decay. Pressure bends the pitch down further. (For more radical pitch effects, use SYNDRM default below.)</td></tr><tr><td><span class="lcd">TOMTOM-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">TOMTOM-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">KEYGRP-FX1</span></td><td>Trigger mode voice, optimized for hi-hats. This allows group voice cutoff, and can be used for hi-hat key group.</td></tr><tr><td><span class="lcd">KEYGRP-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">KEYGRP-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">LDECAY-FX1</span></td><td>Long cymbal/percussion decay, routed to FX-1. Can be used for crash cymbals, rides, various long-decay percussion sounds.</td></tr><tr><td><span class="lcd">LDECAY-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">LDECAY-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">MDECAY-FX1</span></td><td>Medium cymbal/percussion decay, routed to FX-1. Good used for china cymbal, medium crash, and other medium-decay percussion sounds.</td></tr><tr><td><span class="lcd">MDECAY-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">MDECAY-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">SDECAY-FX1</span></td><td>Short cymbal/percussion decay, routed to FX-1. Good for splash cymbals and other, shorter-decay percussion sounds.</td></tr><tr><td><span class="lcd">SDECAY-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">SDECAY-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">SYNDRM-FX1</span></td><td>Exaggerated pitch and filter envelopes, good for processing synth drums, or creating special effects with regular drums.</td></tr><tr><td><span class="lcd">SYNDRM-FX2</span></td><td>Same as above, routed to FX-2</td></tr><tr><td><span class="lcd">SYNDRM-DRY</span></td><td>Same as above, routed to DRY</td></tr><tr><td><span class="lcd">DRUM-AUX</span></td><td>The envelope is the same as DRUM-FX1, but the voice is routed to AUX. This special default routes the basic drum/perc. voice to the AUX outputs.</td></tr></tbody></table>
+<aside class="tip"><p>By assigning one of the</p></aside>
+<p>PATCH settings to the drum-map</p>
+<p>VOICE parameter and setting the</p>
+<p>WAVE parameter to *-MUTED-*, you can use any internal</p>
+<p>ROM voice to play for that assigned key. Just make sure that the internal</p>
+<p>ROM wave is assigned to one of the remaining voices (on the <span class="page-name">Select Voice page</span>) and that it is active in the defined patch select setting.</p>
 <p>Press the <kbd class="button">Program Control</kbd> button to exit the <dfn class="term">Drum-Map</dfn> Editor.</p>
-<h2 id="copy-drum-map-parameters">Copy Drum-Map Parameters</h2>
-<p>Pressing <kbd class="button">Copy</kbd> from the <dfn class="term">Drum-Map</dfn> Editor page will display the Copy page:</p>
+<p>Copy  <dfn class="term">Drum-Map</dfn> Parameters Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Drum-Map Editor page</span> will display the <span class="page-name">Copy page</span>:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -938,24 +966,27 @@
   
   
 </figure>
-<p>Map Editor page when you pressed <kbd class="button">Copy</kbd>).</p>
+<p><span class="page-name">Map Editor page</span> when you pressed <kbd class="button">Copy</kbd>).</p>
 <h4 id="key-range-start-end-2" class="param-name"><span class="param">KEY–RANGE START / END</span><span class="range">Range: B1 to B6</span></h4>
 <p>Allows you to specify the range of keys in the drum-map to be filled by playing the lowest and then highest key of the range. You can also edit these parameters using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Press the soft button to select between the Start and End key fields.</p>
-<p>Selecting <span class="lcd">*COPY*</span> will complete the command and will show COPY DONE before returning to the Copy page.</p>
-<p>Selecting <span class="lcd">*EXIT*</span> will simply return the Copy page without affecting the <dfn class="term">Drum-Map</dfn>.</p>
+<h3 id="selecting">Selecting</h3>
+<p><span class="lcd">*COPY*</span> will complete the command and will show COPY</p>
+<p>DONE before returning to the <span class="page-name">Copy page</span>.</p>
+<p>Selecting <span class="lcd">*EXIT*</span> will simply return the <span class="page-name">Copy page</span> without affecting the <dfn class="term">Drum-Map</dfn>.</p>
 <h2 id="program-effects-page">Program Effects Page</h2>
 <p>Understanding the effect algorithms and their related parameters are described in detail in</p>
 <h2 id="select-voice-page">Select Voice Page</h2>
-<p>The <span class="function">Select Voice</span> page is used to view the six voices that create a program sound. Note that if there is a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> within the program, the <span class="function">Select Voice</span> page will only show four voices (a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> replaces voices 5 and 6).</p>
-<p>Continued presses of the <kbd class="button">Select Voice</kbd> button will toggle between the <span class="function">Select Voice</span> page and the page you were on prior to entering the <span class="function">Select Voice</span> Page.</p>
+<p>The <span class="page-name">Select Voice page</span> is used to view the six voices that create a program sound. Note that if there is a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> within the program, the <span class="page-name">Select Voice page</span> will only show four voices (a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> replaces voices 5 and 6).</p>
+<p>Continued presses of the <kbd class="button">Select Voice</kbd> button will toggle between the <span class="page-name">Select Voice page</span> and the page you were on prior to entering the <span class="page-name">Select Voice Page</span>.</p>
 <h2 id="copy-page">Copy Page</h2>
-<p>The Copy page is context sensitive— depending on what was last selected, it can be used to copy:</p>
+<p>The <span class="page-name">Copy page</span> is context sensitive— depending on what was last selected, it can be used to copy:</p>
 <table class="bullet-cols"><tr><td>• All LFO Parameters</td><td>• Mod Mixer Parameters</td></tr><tr><td>• Envelope-1, 2, and 3 Parameters</td><td>• Program Parameters</td></tr><tr><td>• <span class="page-name">Pitch Page</span> Parameters</td><td>• Pitchtable Parameters</td></tr><tr><td>• Pitch Mod Parameters</td><td>• <dfn class="term">Drum-Map</dfn> Parameters</td></tr><tr><td>• Filter-1 and 2 Parameters</td><td>• Effects Parameters</td></tr><tr><td>• All Output Parameters</td><td>• All Voice Parameters</td></tr><tr><td>• <span class="page-name">Wave Page</span> Parameters</td><td>&nbsp;</td></tr></table>
-<p>For more information on using the Copy page, refer to the previous section.</p>
+<p>For more information on using the <span class="page-name">Copy page</span>, refer to the previous section.</p>
 <h2 id="write-program-page">Write Program Page</h2>
 <p>Pressing the <kbd class="button">Write Program</kbd> button will allow you to edit the name of the currently selected program, and write it into a User RAM location. After you’ve written your program name (using the left/right cursor buttons and the data entry controls), press and hold the <kbd class="button">Sounds</kbd> button, and select a <dfn class="term">BankSet</dfn>, and Bank location for your edited program. When you’ve decided on a location, while still holding down the <kbd class="button">Sounds</kbd> button, press the soft button above/below where you want to load the newly edited program. The display quickly shows WRITING PROGRAM, and then shows the newly edited program in that location.</p>
-<h3 id="compare-function">Compare Function</h3>
-<p>The <kbd class="button">Compare</kbd> button is used to compare the newly edited sound with the original sound. This allows you to audition your changes before saving them. When the LED is lit, you are hearing the edited sound. When the LED is <span class="value">OFF</span>, you are hearing the original sound. Continued presses of the <kbd class="button">Compare</kbd> button will toggle between the edited and the original version of a sound program.</p>
+<p><span class="function">Compare</span> Function The <kbd class="button">Compare</kbd> button is used to compare the newly edited sound with the original sound. This allows you to audition your changes before saving them. When the</p>
+<p>LED is lit, you are hearing the edited sound. When the</p>
+<p>LED is <span class="value">OFF</span>, you are hearing the original sound. Continued presses of the <kbd class="button">Compare</kbd> button will toggle between the edited and the original version of a sound program.</p>
 <p>The <span class="function">Compare</span> function will not work with Sampled Sounds.</p>
   </article>
   <footer class="site-footer">

@@ -134,6 +134,103 @@ NAV_ORDER = [
     "appendix-midi.html",
 ]
 
+SECTION_LINE_RE = re.compile(r"^Section\s+(\d+)\s*[—–\-]\s*.+")
+
+
+def section_anchor(title: str) -> str:
+    """Stable id for a manual section title (title-block h1)."""
+    m = re.match(r"Section\s+(\d+)\s*[—–\-]\s*(.+)", title.strip())
+    if not m:
+        return slugify(title)
+    num, name = m.group(1), m.group(2)
+    slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")[:60]
+    return f"section-{num}-{slug}"
+
+
+def _norm_section_hint(text: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html.unescape(text)
+    text = text.replace("—", "-").replace("–", "-")
+    text = re.sub(r"\s+", " ", text).strip(" .,:;")
+    return text.casefold()
+
+
+def _section_files() -> dict[int, list[str]]:
+    by_num: dict[int, list[str]] = {}
+    for fname in NAV_ORDER:
+        title = TITLES.get(fname, "")
+        m = re.match(r"Section\s+(\d+)", title)
+        if m:
+            by_num.setdefault(int(m.group(1)), []).append(fname)
+    return by_num
+
+
+SECTION_FILES_BY_NUM = None  # filled in main()
+
+
+def _load_section_files() -> dict[int, list[str]]:
+    global SECTION_FILES_BY_NUM
+    if SECTION_FILES_BY_NUM is None:
+        SECTION_FILES_BY_NUM = _section_files()
+    return SECTION_FILES_BY_NUM
+
+
+SECTION_TITLE_ALIASES: dict[tuple[int, str], str] = {
+    (1, "controls and basic functions"): "01-controls.html",
+    (2, "system page parameters"): "02-system.html",
+    (2, "system page"): "02-system.html",
+    (3, "midi control page parameters"): "03-midi.html",
+    (3, "midi control page"): "03-midi.html",
+    (3, "midi control"): "03-midi.html",
+    (4, "understanding presets"): "04-presets.html",
+    (5, "preset/track parameters"): "05-track-params.html",
+    (5, "preset/track"): "05-track-params.html",
+    (6, "understanding effects"): "06-effects-concepts.html",
+    (6, "effect concepts"): "06-effects-concepts.html",
+    (7, "effect parameters"): "07-effects-00-21.html",
+    (7, "effects parameters"): "07-effects-00-21.html",
+    (8, "understanding programs"): "08-programs.html",
+    (9, "program parameters"): "09-program-params-a.html",
+    (10, "understanding the sequencer"): "10-sequencer.html",
+    (11, "sequencer parameters"): "11-seq-params-edit.html",
+    (12, "sequencing/midi applications"): "12-midi-applications.html",
+    (12, "general midi"): "12-general-midi.html",
+    (13, "storage"): "13-storage.html",
+    (14, "understanding sampled sounds"): "14-sampled-sounds.html",
+    (14, "understanding sampled"): "14-sampled-sounds.html",
+    (15, "sampled sound parameters"): "15-sampled-params.html",
+}
+
+
+def resolve_section_target(num: int, hint: str = "") -> tuple[str, str]:
+    """Return (filename, fragment id) for a section number and optional title hint."""
+    hint_norm = _norm_section_hint(hint)
+    if hint_norm:
+        alias = SECTION_TITLE_ALIASES.get((num, hint_norm))
+        if alias:
+            return alias, section_anchor(TITLES[alias])
+        for fname in _load_section_files().get(num, []):
+            title_part = TITLES[fname].split(" — ", 1)[-1]
+            tp_norm = _norm_section_hint(title_part)
+            if hint_norm.startswith(tp_norm) or tp_norm.startswith(hint_norm):
+                return fname, section_anchor(TITLES[fname])
+            if len(hint_norm) >= 8 and (hint_norm in tp_norm or tp_norm in hint_norm):
+                return fname, section_anchor(TITLES[fname])
+    files = _load_section_files().get(num, [])
+    if files:
+        fname = files[0]
+        return fname, section_anchor(TITLES[fname])
+    return "index.html", ""
+
+
+def section_href(num: int, hint: str = "", current_file: str | None = None) -> str:
+    fname, anchor = resolve_section_target(num, hint)
+    path = f"{fname}#{anchor}" if anchor else fname
+    if current_file and fname == current_file:
+        return f"#{anchor}" if anchor else path
+    return path
+
+
 FIGURES = {
     "06-effects-concepts.html": [
         ("page-088.png", "Effects overview"),
@@ -491,6 +588,41 @@ INLINE_FIGURES = [
         "caption": "Destination-bus signal routing.",
     },
     {
+        "after": re.compile(r"^Single Function Effect Mixer$"),
+        "skip_until": re.compile(r"^The above illustration shows"),
+        "src": "single-function-effect-mixer.png",
+        "alt": (
+            "Single-function effect mixer: Voice Output pan/vol to Destination Bus "
+            "(FX1, FX2, DRY, AUX); FX1 and FX2 each pass through Mix1 or Mix2 into "
+            "Effect 1, then to Main Outputs; DRY and AUX go to Main and Aux outputs"
+        ),
+        "caption": "Single-function effect mixer.",
+    },
+    {
+        "after": re.compile(r"^Multiple Function Effect Mixer$"),
+        "skip_until": re.compile(
+            r"^When the selected algorithm is a combined effect"
+        ),
+        "src": "multiple-function-effect-mixer.png",
+        "alt": (
+            "Multiple-function effect mixer: FX1 through Effect 1 and Mix1, FX2 through "
+            "Mix2 into Effect 2; dry paths from Mix1, Mix2, and DRY bus to Main Outputs"
+        ),
+        "caption": "Multiple-function effect mixer.",
+    },
+    {
+        "after": re.compile(r"^Parallel Effect Mixer$"),
+        "skip_until": re.compile(
+            r"^All of the parallel effect algorithms follow"
+        ),
+        "src": "parallel-effect-mixer.png",
+        "alt": (
+            "Parallel effect mixer: FX1 L/R to Effect A and Effect B with A-to-B and "
+            "reverb sends; FX2 to reverb and dry mix; DRY and AUX to Main and Aux outputs"
+        ),
+        "caption": "Parallel effect mixer.",
+    },
+    {
         "after": re.compile(
             r"The XFADE-TIME adds time to the duration of both the current step and the next step"
         ),
@@ -575,6 +707,9 @@ TABLE_NAME_RE = re.compile(
     r"|[LCR*-]{4,10}"
     r"|<[^>]+>"
     r")$"
+)
+DEFN_ROW_SPLIT = re.compile(
+    r"(?<!\w)([A-Z]{2,8}(?:-[A-Z]{2,6})?|\*[A-Z]+\*)\s+(?=[a-z])"
 )
 
 SLUG_COUNTS: dict[str, int] = {}
@@ -1042,6 +1177,70 @@ def link_chart_refs(escaped: str) -> str:
     return escaped
 
 
+SECTIONS_AND_RE = re.compile(r"\bSections?\s+(\d+)\s+and\s+(\d+)\b", re.I)
+SECTION_REF_RE = re.compile(
+    r"\bSection\s+(\d+)\s*[—–\-]\s*((?:[^<.;]|&[a-z#0-9]+;|<(?!/a>)[^>]*>)+?)"
+    r"(?=[.;,)\]\"']|<|$|\s+for\s|\s+and\s|\s+in\s|\s+on\s|\s+with\s|\s+where\s|\s+which\s|\s+is\s|\s+are\s|\s+was\s|\s+will\s|\s+can\s|\s+has\s|\s+have\s|\s+explains\b)",
+    re.I,
+)
+
+
+def link_section_refs(escaped: str, current_file: str | None = None) -> str:
+    """Link cross-references like ‘see Section 5 — Preset/Track Parameters’."""
+    def link_num(num: str, hint: str = "") -> str:
+        href = section_href(int(num), hint, current_file)
+        return f'<a class="refer-to" href="{html.escape(href, quote=True)}">'
+
+    def repl_section(m: re.Match[str]) -> str:
+        num, hint = m.group(1), m.group(2).strip()
+        return f'{link_num(num, hint)}Section {num} — {hint}</a>'
+
+    def repl_and(m: re.Match[str]) -> str:
+        n1, n2 = m.group(1), m.group(2)
+        h1 = section_href(int(n1), "", current_file)
+        h2 = section_href(int(n2), "", current_file)
+        return (
+            f'Sections <a class="refer-to" href="{html.escape(h1, quote=True)}">{n1}</a> '
+            f'and <a class="refer-to" href="{html.escape(h2, quote=True)}">{n2}</a>'
+        )
+
+    parts = re.split(r"(<[^>]+>)", escaped)
+    skip = False
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            if part.startswith('<a ') or part.startswith('<a>'):
+                skip = True
+            elif part == "</a>":
+                skip = False
+            continue
+        if skip:
+            continue
+        part = SECTIONS_AND_RE.sub(repl_and, part)
+        parts[i] = SECTION_REF_RE.sub(repl_section, part)
+    return "".join(parts)
+
+
+def section_ref_join(prev: str, nxt: str) -> str | None:
+    """Rejoin section cross-references split across transcript lines."""
+    prev_st = prev.rstrip()
+    nxt_st = nxt.strip()
+    if prev_st.endswith("refer to") and SECTION_LINE_RE.match(nxt_st):
+        return f"{prev_st} {nxt_st}"
+    if re.search(r"Section\s+\d+\s*[—–\-]\s*$", prev_st):
+        if re.match(r"^[A-Za-z(/].*", nxt_st) and len(nxt_st) < 100:
+            return f"{prev_st} {nxt_st}"
+    if re.search(r"Section\s+\d+\s*[—–\-]\s+\S", prev_st) and not re.search(r"[.!?)]$", prev_st):
+        if (
+            len(nxt_st.split()) <= 8
+            and re.match(r"^[A-Za-z(/].*", nxt_st)
+            and not is_flush_line(nxt_st)
+            and not nxt_st.startswith("•")
+            and not re.match(r"^(Press|Note:|Tip:|When|If|The|This|These|You|Transmit|Receive)\b", nxt_st)
+        ):
+            return f"{prev_st} {nxt_st}"
+    return None
+
+
 def format_range_html(rng: str) -> str:
     rng = re.sub(r"\s+", " ", rng).strip()
     parts = re.split(r"\s+(?=Held Range:)", rng, maxsplit=1, flags=re.I)
@@ -1082,6 +1281,7 @@ def unwrap(lines: list[str]) -> list[str]:
                 or tip_join(prev, s)
                 or token_hyphen_join(prev, s)
                 or table_row_join(prev, s)
+                or section_ref_join(prev, s)
             )
             if joined is not None:
                 buf[-1] = joined
@@ -1100,6 +1300,10 @@ def unwrap(lines: list[str]) -> list[str]:
                 continue
             if hyphen and continuation:
                 buf[-1] = prev[:-1] + s
+                continue
+            if is_gutter_twocol_row(s):
+                flush()
+                buf.append(s)
                 continue
             if (
                 not is_flush_line(s)
@@ -1126,7 +1330,7 @@ def unwrap(lines: list[str]) -> list[str]:
         else:
             collapsed.append(p)
             blank = False
-    return join_page_wraps(collapsed)
+    return expand_defn_table_lines(join_page_wraps(collapsed))
 
 
 def join_page_wraps(paras: list[str]) -> list[str]:
@@ -1171,8 +1375,8 @@ def classify(line: str) -> str:
         return "range"
     if ALGO_RE.match(line) and len(line) < 48:
         return "algo"
-    if line.startswith("Section ") and "—" in line:
-        return "h1"
+    if SECTION_LINE_RE.match(line):
+        return "para"
     if PAGE_TITLE_RE.match(line) and not NOT_HEADING_START.match(line) and ". " not in line:
         return "h2"
     if line.endswith("?") and 8 <= len(line) < 60 and line[0].isupper():
@@ -1516,6 +1720,93 @@ def is_lookup_caption(line: str) -> bool:
     return bool(LOOKUP_CAPTION_RE.match(s)) and 1 <= s.count(" ") <= 3
 
 
+def is_short_label_name(name: str) -> bool:
+    """ALL-CAPS row labels in lookup tables (WHEEL, FX-SW, *OFF*)."""
+    if re.fullmatch(r"\*[A-Z]+\*", name):
+        return True
+    return bool(re.fullmatch(r"[A-Z]{2,8}(?:-[A-Z]{2,6})?", name))
+
+
+def is_column_header(name: str, desc: str) -> bool:
+    """Printed column captions such as Mod Source | Modulation effect derived from."""
+    if not is_prose_cell(desc):
+        return False
+    if re.search(r"\b(has|is|are|was|will|can|have)\b", desc, re.I):
+        return False
+    return bool(
+        re.fullmatch(r"(?:[A-Z][a-z]+(?: [A-Z][a-z]+)?){1,2}", name)
+        and 4 <= len(name) <= 32
+        and 8 <= len(desc) <= 72
+        and not name.endswith(":")
+        and not desc.endswith(":")
+    )
+
+
+def is_gutter_twocol_row(s: str) -> bool:
+    """True when the line still has the PDF's name/description column gutter."""
+    if not re.search(r"\s{2,}", s):
+        return False
+    return bool(split_twocol_row(s) or split_twocol_row(s, in_table=True))
+
+
+def split_off_row_trailer(line: str) -> list[str]:
+    m = re.search(
+        r"(\*[A-Z]+\*.*?no modulation)\s+(For more information about.+)",
+        line,
+        re.I,
+    )
+    if m:
+        return [m.group(1).strip(), m.group(2).strip()]
+    return [line]
+
+
+def expand_collapsed_defn_line(line: str) -> list[str]:
+    """Split OCR/unwrap merges of 2-column lookup rows back into separate lines."""
+    s = line.strip()
+    if not s:
+        return [s]
+    matches = list(DEFN_ROW_SPLIT.finditer(s))
+    if not matches:
+        return [s]
+    if len(matches) == 1 and matches[0].start() == 0:
+        return [s]
+    parts: list[str] = []
+    prefix = s[: matches[0].start()].strip()
+    if prefix:
+        parts.append(prefix)
+    for i, m in enumerate(matches):
+        start = m.start()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(s)
+        chunk = s[start:end].strip()
+        if chunk:
+            parts.append(chunk)
+    return parts or [s]
+
+
+def should_expand_defn_line(line: str) -> bool:
+    """Only split lines that clearly contain several merged lookup-table rows."""
+    matches = list(DEFN_ROW_SPLIT.finditer(line))
+    if len(matches) >= 2:
+        return True
+    if len(matches) == 1 and matches[0].start() > 0:
+        prefix = line[: matches[0].start()]
+        return bool(re.search(r"(?:Mod Source|derived from)\s*$", prefix, re.I))
+    return False
+
+
+def expand_defn_table_lines(paras: list[str]) -> list[str]:
+    out: list[str] = []
+    for p in paras:
+        if not p:
+            out.append(p)
+            continue
+        if should_expand_defn_line(p):
+            out.extend(expand_collapsed_defn_line(p))
+            continue
+        out.extend(split_off_row_trailer(p))
+    return out
+
+
 def is_table_name(name: str, *, in_table: bool = False, desc: str = "") -> bool:
     """Left-column tokens like DRUM-FX1, 00 PATCH, *VOICE*, SEND/RECV, F0 7E."""
     if re.fullmatch(r"<[^>]+>", name):
@@ -1528,6 +1819,8 @@ def is_table_name(name: str, *, in_table: bool = False, desc: str = "") -> bool:
         return bool(re.match(r"^(sub-ID|EOX\b|ID of |Universal )", desc, re.I))
     if not TABLE_NAME_RE.match(name):
         return False
+    if is_short_label_name(name):
+        return True
     return bool(re.search(r"[0-9*/\-]", name) or "*" in name)
 
 
@@ -1595,13 +1888,27 @@ def split_twocol_row(line: str, *, in_table: bool = False) -> tuple[str, str] | 
         name, desc = parts
         if is_twocol_header(s):
             return name, desc
+        if is_column_header(name, desc):
+            return name, desc
         if is_table_name(name, in_table=in_table, desc=desc) and is_prose_cell(desc):
-            if desc[:1].islower() and not re.match(r"sub-ID\b", desc):
+            if (
+                desc[:1].islower()
+                and not re.match(r"sub-ID\b", desc)
+                and not (in_table or is_short_label_name(name))
+            ):
                 return None
             return name, desc
         return None
+    m = re.match(r"^((?:[A-Z][a-z]+(?: [A-Z][a-z]+)?){1,2})\s+(.+)$", s)
+    if m:
+        name, desc = m.group(1), m.group(2)
+        if is_column_header(name, desc):
+            return name, desc
     if in_table:
         return match_table_name_prefix(s)
+    prefixed = match_table_name_prefix(s)
+    if prefixed and is_short_label_name(prefixed[0]):
+        return prefixed
     return None
 
 
@@ -1615,6 +1922,8 @@ def is_table_desc_wrap(s: str, last_desc: str, *, row_follows: bool = False) -> 
     if PAGE_TITLE_RE.match(s) or is_param_heading(s) or toc_heading_kind(s) or (s.startswith("Section ") and "—" in s):
         return False
     if s.lower().startswith(("note:", "important:")) or looks_like_title(s) or is_prose_heading(s):
+        return False
+    if re.match(r"^(?:For more information|See Section \d+)", s, re.I):
         return False
     kind = classify(s)
     if kind in ("h1", "h2", "h3", "h4", "range", "tip", "algo", "vfd", "callouts"):
@@ -1720,7 +2029,7 @@ def consume_defn_table(
         )
         if parsed:
             name, desc = parsed
-            header = is_twocol_header(s)
+            header = is_twocol_header(s) or is_column_header(name, desc)
             rows.append([name, desc, header])
             j += 1
             continue
@@ -1928,6 +2237,128 @@ def render_data_table(
         parts.append(f"<tr>{tds}</tr>")
     parts.append("</tbody></table>")
     return "".join(parts)
+
+
+EFFECTS_ALGO_INTRO_RE = re.compile(r"available effects algorithms are:\s*$", re.I)
+EFFECTS_ALGO_ENTRY_RE = re.compile(r"^\d{1,2}\s+\S")
+EFFECTS_ALGO_CONT_DIGIT_RE = re.compile(r"^\d$")
+EFFECTS_ALGO_CONT_TAIL_RE = re.compile(r"^(\d+)\s+([A-Z]+)$")
+
+
+def join_table_cols(parts: list[str]) -> str:
+    return ("          ".join(p.strip() for p in parts if p.strip()))
+
+
+def is_effects_algo_table_row(line: str) -> bool:
+    s = line.strip()
+    if not s or TIP_RE.match(s) or is_running_header(s):
+        return False
+    parts = split_cols(s)
+    if len(parts) >= 3 and EFFECTS_ALGO_ENTRY_RE.match(parts[0]):
+        return True
+    if len(parts) >= 4 and EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(parts[0]):
+        return True
+    if len(parts) == 2 and all(EFFECTS_ALGO_ENTRY_RE.match(p) for p in parts):
+        return True
+    return False
+
+
+def is_effects_algo_continuation(line: str) -> bool:
+    s = line.strip()
+    if not s:
+        return False
+    if EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(s):
+        return True
+    return bool(EFFECTS_ALGO_CONT_TAIL_RE.match(s))
+
+
+def merge_effects_algo_continuation(prev: str, cont: str) -> str:
+    cont = cont.strip()
+    parts = split_cols(prev)
+    if EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(cont):
+        if len(parts) >= 4 and EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(parts[0]):
+            parts = [f"{parts[0]}{cont} {parts[1]}"] + parts[2:]
+        elif parts:
+            m = re.match(r"^(\d)(\s+)(.*)$", parts[0])
+            if m:
+                parts[0] = f"{m.group(1)}{cont}{m.group(2)}{m.group(3)}"
+            elif len(parts) >= 2 and EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(parts[0]):
+                parts = [f"{parts[0]}{cont} {parts[1]}"] + parts[2:]
+        return join_table_cols(parts)
+    m = EFFECTS_ALGO_CONT_TAIL_RE.match(cont)
+    if m and parts:
+        if len(parts) >= 4 and EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(parts[0]):
+            num = f"{parts[0]}{m.group(1)}"
+            name = f"{parts[1]}{m.group(2)}"
+            parts = [f"{num} {name}"] + parts[2:]
+        else:
+            m0 = re.match(r"^(\d+)(\s+)(.*)$", parts[0])
+            if m0:
+                parts[0] = f"{m0.group(1)}{m.group(1)}{m0.group(2)}{m0.group(3)}{m.group(2)}"
+        return join_table_cols(parts)
+    return prev
+
+
+def effects_algo_row_cells(line: str) -> list[str]:
+    parts = split_cols(line.strip())
+    if len(parts) >= 4 and EFFECTS_ALGO_CONT_DIGIT_RE.fullmatch(parts[0]):
+        parts = [f"{parts[0]} {parts[1]}"] + parts[2:]
+    row = (parts + ["", "", ""])[:3]
+    return row
+
+
+def merge_effects_algo_lines(raw: list[str]) -> list[str]:
+    merged: list[str] = []
+    for line in raw:
+        s = line.strip()
+        if not s or is_running_header(s):
+            continue
+        if is_effects_algo_continuation(s):
+            if merged:
+                merged[-1] = merge_effects_algo_continuation(merged[-1], s)
+            continue
+        if PAGE_NUM_RE.match(s) and len(s) <= 3:
+            continue
+        if is_effects_algo_table_row(s):
+            merged.append(s)
+    return merged
+
+
+def consume_effects_algorithm_table(
+    lines: list[str], i: int, terms: dict[str, list[str]]
+) -> tuple[str | None, int]:
+    """Three-column effect algorithm list (Section 6 Selecting Effects)."""
+    raw: list[str] = []
+    j = i
+    while j < len(lines):
+        s = lines[j].strip()
+        if not s:
+            j += 1
+            continue
+        if TIP_RE.match(s) or s.startswith("What is an Algorithm"):
+            break
+        if is_running_header(s):
+            j += 1
+            continue
+        if is_effects_algo_continuation(s) or is_effects_algo_table_row(s):
+            raw.append(s)
+            j += 1
+            continue
+        if raw:
+            break
+        j += 1
+    logical = merge_effects_algo_lines(raw)
+    if len(logical) < 3:
+        return None, i
+    rows = [effects_algo_row_cells(line) for line in logical]
+    return (
+        render_data_table(
+            rows,
+            terms,
+            caption="Effect Algorithms",
+        ),
+        j,
+    )
 
 
 def consume_numeric_table(
@@ -2517,19 +2948,102 @@ def wrap_press_buttons(escaped: str, names: list[str]) -> str:
     return escaped
 
 
-def apply_tags(text: str, terms: dict[str, list[str]], *, heading: bool = False) -> str:
+PAGE_NAME_BLOCK_PREFIX = re.compile(
+    r"^(?:This|That|The|Next|Previous|Following|Same|Last|First|Second|Third|Another|Each|Every|Any|Either|Current|New|Prior|Own|One|Other|Accessible|Active|Entire|Whole|Printed|Top level|Rest of the|Diagram on the following|Velocity response curves are shown on the next|MIDI Implementation Chart on the next|Power-on showing the last|Using the|Returning to the|Quick Way to get to the|Repeatedly pressing the same|Layering Sounds on The Tracks|About the Audition|Current Event|For each|Discussion of|Selecting INFO|Pressing EDIT|Pressing the soft button above|As you have no doubt noticed, the TS-10 displays exactly the same)\b",
+    re.I,
+)
+PAGE_NAME_PROSE_RE = re.compile(
+    r"\b(?:on the|on next|on this|or the|as described|begins on|displays|displayed|function on|parameter on|parameters on|values on|command on|controller on|returns with|returned to|shows the|showing the|reveals the|reveal the following|exactly the same|where the|which way you|regardless of which|any time this|editor page|song step editor|event editor|following sub|mode and return|and return to)\b",
+    re.I,
+)
+PAGE_NAME_ON_THE_RE = re.compile(
+    r"\b(?:on|from|to|at|into)\s+the\s+([A-Z0-9][A-Za-z0-9/+ -]{1,40}?)\s+(Page|page|Sub-Page|Sub-page|sub-page)\b(?![\w<])"
+)
+PAGE_NAME_INLINE_RE = re.compile(
+    r"(?<![\w>])([A-Z0-9][A-Za-z0-9/+ -]{1,44}?)\s+(Page|page|Sub-Page|Sub-page|sub-page)\b(?![\w<])"
+)
+PAGE_SUFFIX_RE = re.compile(r"\s+(?:Page|page|Sub-Page|Sub-page|sub-page)\b")
+
+
+def wrap_page_names(escaped: str, terms: dict[str, list[str]]) -> str:
+    """Tag inline UI page references as span.page-name."""
+    del terms  # registry lives in notes/terms.json; matching is pattern-based.
+
+    def accept(name: str) -> bool:
+        name = name.strip(" ,-")
+        if len(name) < 2 or len(name) > 44:
+            return False
+        if PAGE_NAME_BLOCK_PREFIX.match(name):
+            return False
+        if PAGE_NAME_PROSE_RE.search(name):
+            return False
+        if re.search(
+            r"\b(is|are|was|will|can|have|from|with|when|you|see|consult|same|exactly|repeatedly|pressing|using|returning|quick)\b",
+            name,
+            re.I,
+        ):
+            return False
+        if name.lower() in {"section", "parameter", "parameters", "control", "effect parameter"}:
+            return False
+        if re.search(r"\b(this|that)\b", name, re.I):
+            return False
+        if name.lower().startswith("on ") or name.lower().endswith(" the"):
+            return False
+        return bool(re.match(r"^[A-Z0-9]", name))
+
+    def tag(name: str, suffix: str) -> str:
+        name = name.strip(" ,-")
+        if not accept(name):
+            return f"{name} {suffix}"
+        return f'<span class="page-name">{name} {suffix}</span>'
+
+    def repl_on_the(m: re.Match[str]) -> str:
+        return tag(m.group(1), m.group(2))
+
+    def repl_inline(m: re.Match[str]) -> str:
+        return tag(m.group(1), m.group(2))
+
+    parts = re.split(r"(<[^>]+>)", escaped)
+    in_page_name = False
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            in_page_name = 'class="page-name"' in part
+            continue
+        if in_page_name:
+            in_page_name = False
+            continue
+        part = PAGE_NAME_ON_THE_RE.sub(repl_on_the, part)
+        parts[i] = PAGE_NAME_INLINE_RE.sub(repl_inline, part)
+    return "".join(parts)
+
+
+def apply_tags(
+    text: str,
+    terms: dict[str, list[str]],
+    *,
+    heading: bool = False,
+    source_file: str | None = None,
+) -> str:
     escaped = html.escape(text)
+    escaped = link_section_refs(escaped, source_file)
     if heading:
         escaped = wrap_press_buttons(escaped, panel_button_names(terms))
         escaped = wrap_bankset(escaped)
+        if not PAGE_TITLE_RE.match(text.strip()):
+            escaped = wrap_page_names(escaped, terms)
         return link_chart_refs(escaped)
 
-    def wrap(items: list[str], cls: str, tag: str = "span") -> None:
+    def wrap(items: list[str], cls: str, tag: str = "span", *, skip_page_suffix: bool = False) -> None:
         nonlocal escaped
         for item in sorted(items, key=len, reverse=True):
             if len(item) < 3:
                 continue
-            pat = re.compile(rf"(?<![\w>])({re.escape(html.escape(item))})(?![\w<])")
+            item_esc = re.escape(html.escape(item))
+            if skip_page_suffix:
+                tail = rf"(?!{PAGE_SUFFIX_RE.pattern})(?![\w<])"
+            else:
+                tail = r"(?![\w<])"
+            pat = re.compile(rf"(?<![\w>])({item_esc}){tail}")
             if cls == "button":
                 escaped = pat.sub(r'<kbd class="button">\1</kbd>', escaped)
             elif cls == "term":
@@ -2569,13 +3083,13 @@ def apply_tags(text: str, terms: dict[str, list[str]], *, heading: bool = False)
             r"(?<![\w>])(" + "|".join(re.escape(x) for x in sorted(LCD_FIELDS, key=len, reverse=True)) + r")(?![\w<])"
         )
         wrap_in_text(field_pat, lambda m: f'<span class="lcd">{m.group(1)}</span>')
-    wrap(terms.get("function", []), "function")
+    wrap(terms.get("page", []), "page-name")
+    escaped = wrap_page_names(escaped, terms)
+    wrap(terms.get("function", []), "function", skip_page_suffix=True)
     wrap(["Seqs/Songs", "Replace Track Sound", "Track Effects", "Select Voice",
           "Write Program", "Program Effects", "Patch Select",
-          "Data Entry Slider", "Volume Slider"], "button")
+          "Data Entry Slider", "Volume Slider"], "button", skip_page_suffix=True)
     escaped = wrap_bankset(escaped)
-    if not heading:
-        wrap(terms.get("page", []), "page-name")
     wrap(terms.get("term", []), "term")
     wrap(terms.get("param", []), "param")
     wrap(terms.get("value", []), "value")
@@ -2785,6 +3299,10 @@ def to_html_body(
     last_sid: str | None = None
     trigger_used: dict[str, int] = {}
     i = 0
+
+    def tags(text: str, *, heading: bool = False) -> str:
+        return apply_tags(text, terms, heading=heading, source_file=fname)
+
     while i < len(lines):
         line = lines[i]
         kind = classify(line)
@@ -2797,7 +3315,7 @@ def to_html_body(
                 i += 1
             continue
         if looks_like_preset_anatomy(line):
-            tagged = apply_tags(line, terms)
+            tagged = tags(line)
             chunks.append(f"<p>{tagged}</p>")
             chunks.append(render_preset_anatomy(catalog, terms))
             i += 1
@@ -2863,18 +3381,18 @@ def to_html_body(
                 continue
         if kind == "h1":
             sid = slugify(line)
-            chunks.append(f'<h1 id="{sid}">{apply_tags(line, terms, heading=True)}</h1>')
+            chunks.append(f'<h1 id="{sid}">{tags(line, heading=True)}</h1>')
             i += 1
             continue
         if kind == "h2":
             sid = slugify(line)
-            chunks.append(f'<h2 id="{sid}">{apply_tags(line, terms, heading=True)}</h2>')
+            chunks.append(f'<h2 id="{sid}">{tags(line, heading=True)}</h2>')
             ni = consume_inline_figure(line, lines, i, chunks)
             i = ni if ni is not None else i + 1
             continue
         if kind == "h3":
             sid = slugify(line)
-            chunks.append(f'<h3 id="{sid}">{apply_tags(line, terms, heading=True)}</h3>')
+            chunks.append(f'<h3 id="{sid}">{tags(line, heading=True)}</h3>')
             ni = consume_inline_figure(line, lines, i, chunks)
             i = ni if ni is not None else i + 1
             continue
@@ -2905,7 +3423,7 @@ def to_html_body(
             ):
                 cls = ' class="param-name"'
             chunks.append(
-                f'<h4 id="{sid}"{cls}>{apply_tags(line, terms, heading=True)}</h4>'
+                f'<h4 id="{sid}"{cls}>{tags(line, heading=True)}</h4>'
             )
             ni = consume_inline_figure(line, lines, i, chunks)
             i = ni if ni is not None else i + 1
@@ -2915,7 +3433,7 @@ def to_html_body(
             label = f"{m.group(1)} {m.group(2).strip()}" if m else line
             sid = slugify(label)
             chunks.append(
-                f'<h3 id="{sid}" class="algo">{apply_tags(label, terms, heading=True)}</h3>'
+                f'<h3 id="{sid}" class="algo">{tags(label, heading=True)}</h3>'
             )
             i += 1
             continue
@@ -2948,7 +3466,7 @@ def to_html_body(
             continue
         if kind == "tip":
             rest = TIP_RE.match(line).group(1)
-            chunks.append(f'<aside class="tip"><p>{apply_tags(rest, terms)}</p></aside>')
+            chunks.append(f'<aside class="tip"><p>{tags(rest)}</p></aside>')
             i += 1
             continue
         if kind == "vfd":
@@ -2964,12 +3482,19 @@ def to_html_body(
                 tip = item.strip(" .")
                 if not tip:
                     continue
-                lis.append(f"<li>{apply_tags(tip, terms)}</li>")
+                lis.append(f"<li>{tags(tip)}</li>")
             if lis:
                 chunks.append("<ul class=\"tips\">" + "".join(lis) + "</ul>")
                 i += 1
                 continue
-        tagged = apply_tags(line, terms)
+        if EFFECTS_ALGO_INTRO_RE.search(line):
+            chunks.append(f"<p>{tags(line)}</p>")
+            table_html, ni = consume_effects_algorithm_table(lines, i + 1, terms)
+            if table_html:
+                chunks.append(table_html)
+                i = ni
+                continue
+        tagged = tags(line)
         inline_spec = next(
             (spec for spec in INLINE_FIGURES if spec["after"].search(line)), None
         )
@@ -3034,9 +3559,22 @@ def chrome(filename: str, body: str) -> str:
     idx = NAV_ORDER.index(filename) if filename in NAV_ORDER else -1
     prev_l = next_l = ""
     if idx > 0:
-        prev_l = f'<a href="{NAV_ORDER[idx-1]}">← {TITLES[NAV_ORDER[idx-1]]}</a>'
+        prev_name = NAV_ORDER[idx - 1]
+        prev_title = TITLES[prev_name]
+        prev_href = prev_name
+        if prev_title.startswith("Section "):
+            prev_href = f"{prev_name}#{section_anchor(prev_title)}"
+        prev_l = f'<a href="{prev_href}">← {prev_title}</a>'
     if 0 <= idx < len(NAV_ORDER) - 1:
-        next_l = f'<a href="{NAV_ORDER[idx+1]}">{TITLES[NAV_ORDER[idx+1]]} →</a>'
+        next_name = NAV_ORDER[idx + 1]
+        next_title = TITLES[next_name]
+        next_href = next_name
+        if next_title.startswith("Section "):
+            next_href = f"{next_name}#{section_anchor(next_title)}"
+        next_l = f'<a href="{next_href}">{next_title} →</a>'
+    h1_id = ""
+    if title.startswith("Section "):
+        h1_id = f' id="{section_anchor(title)}"'
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3061,7 +3599,7 @@ def chrome(filename: str, body: str) -> str:
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
-      <h1>{html.escape(title)}</h1>
+      <h1{h1_id}>{html.escape(title)}</h1>
     </header>
     {body}
   </article>
@@ -3080,7 +3618,11 @@ def build_index() -> str:
     for name in NAV_ORDER:
         if name == "index.html":
             continue
-        items.append(f'<li><a href="{name}">{html.escape(TITLES[name])}</a></li>')
+        title = TITLES[name]
+        href = name
+        if title.startswith("Section "):
+            href = f"{name}#{section_anchor(title)}"
+        items.append(f'<li><a href="{href}">{html.escape(title)}</a></li>')
     body = (
         "<p>Start here. The printed Index is not transcribed. "
         "Use <a href=\"search.html\">Search</a> to find parameters, buttons, and terms across pages.</p>"

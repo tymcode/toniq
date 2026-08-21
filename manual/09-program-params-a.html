@@ -15,97 +15,54 @@
     </div>
   </header>
   <nav class="section-nav">
-    <div><a href="08-programs.html">← Section 8 — Understanding Programs</a></div>
+    <div><a href="08-programs.html#section-8-understanding-programs">← Section 8 — Understanding Programs</a></div>
     <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
-    <div><a href="09-program-params-b.html">Section 9 — Program Parameters (Wave, Hyper-Wave, Editors) →</a></div>
+    <div><a href="09-program-params-b.html#section-9-program-parameters-wave-hyper-wave-editors">Section 9 — Program Parameters (Wave, Hyper-Wave, Editors) →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
-      <h1>Section 9 — Program Parameters (LFO, Envelopes, Pitch, Filters)</h1>
+      <h1 id="section-9-program-parameters-lfo-envelopes-pitch-filters">Section 9 — Program Parameters (LFO, Envelopes, Pitch, Filters)</h1>
     </header>
     <p>This section covers the parameters which can be edited independently for each Voice within a Program. For a general overview of the program concepts involved, refer to the previous section.</p>
-<h2 id="lfo-page">LFO Page</h2>
-<p>The <span class="page-name">LFO Page</span> contains the parameters related to the Low Frequency Oscillator. Each voice in a program has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo and other effects.</p>
-<p>Press the <kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the LFO page:</p>
-<figure class="vfd-unit has-page">
-  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>LFO Rate</div><div>Rate Modulator</div><div>Rate Modulation Amount</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell">RATE=60*</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+16</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">DEPTH=35</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+99</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>LFO Depth</div><div>Depth Modulator</div><div>Depth Modulation Amount</div></div>
-  
-</figure>
+<p><span class="page-name">LFO Page</span> The <span class="page-name">LFO Page</span> contains the parameters related to the Low Frequency Oscillator. Each voice in a program has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo and other effects.</p>
+<h3 id="press-the">Press the</h3>
+<p><kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the</p>
+<h3 id="lfo-page"><span class="page-name">LFO page</span>:</h3>
+<table class="defn-table"><tbody><tr><td><span class="lcd">LFO</span></td><td>Rate               Rate Modulator           Rate Modulation Amount</td></tr><tr><td><span class="lcd">LFO</span></td><td>Depth             Depth Modulator           Depth Modulation Amount</td></tr></tbody></table>
 <h4 id="lfo-rate" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the speed of the LFO. <a href="#lfo-frequencies">The table below</a> shows the frequency (in hertz) for each value:</p>
 <table class="data-table lookup" id="lfo-frequencies"><caption>LFO FREQUENCIES</caption><thead><tr><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th></tr></thead><tbody><tr><td>0</td><td>.00</td><td>20</td><td>.63</td><td>40</td><td>2.17</td><td>60</td><td>4.77</td><td>80</td><td>7.37</td></tr><tr><td>1</td><td>.01</td><td>21</td><td>.67</td><td>41</td><td>2.30</td><td>61</td><td>4.90</td><td>81</td><td>7.50</td></tr><tr><td>2</td><td>.03</td><td>22</td><td>.70</td><td>42</td><td>2.43</td><td>62</td><td>5.03</td><td>82</td><td>7.63</td></tr><tr><td>3</td><td>.07</td><td>23</td><td>.73</td><td>43</td><td>2.56</td><td>63</td><td>5.16</td><td>83</td><td>7.76</td></tr><tr><td>4</td><td>.10</td><td>24</td><td>.77</td><td>44</td><td>2.69</td><td>64</td><td>5.29</td><td>84</td><td>7.89</td></tr><tr><td>5</td><td>.13</td><td>25</td><td>.80</td><td>45</td><td>2.82</td><td>65</td><td>5.42</td><td>85</td><td>8.02</td></tr><tr><td>6</td><td>.17</td><td>26</td><td>.83</td><td>46</td><td>2.95</td><td>66</td><td>5.55</td><td>86</td><td>8.15</td></tr><tr><td>7</td><td>.20</td><td>27</td><td>.87</td><td>47</td><td>3.08</td><td>67</td><td>5.68</td><td>87</td><td>8.28</td></tr><tr><td>8</td><td>.23</td><td>28</td><td>.90</td><td>48</td><td>3.21</td><td>68</td><td>5.81</td><td>88</td><td>9.28</td></tr><tr><td>9</td><td>.27</td><td>29</td><td>.93</td><td>49</td><td>3.34</td><td>69</td><td>5.94</td><td>89</td><td>10.28</td></tr><tr><td>10</td><td>.30</td><td>30</td><td>.97</td><td>50</td><td>3.47</td><td>70</td><td>6.07</td><td>90</td><td>11.28</td></tr><tr><td>11</td><td>.33</td><td>31</td><td>1.00</td><td>51</td><td>3.60</td><td>71</td><td>6.20</td><td>91</td><td>12.28</td></tr><tr><td>12</td><td>.37</td><td>32</td><td>1.13</td><td>52</td><td>3.73</td><td>72</td><td>6.33</td><td>92</td><td>13.28</td></tr><tr><td>13</td><td>.40</td><td>33</td><td>1.26</td><td>53</td><td>3.86</td><td>73</td><td>6.46</td><td>93</td><td>14.28</td></tr><tr><td>14</td><td>.43</td><td>34</td><td>1.39</td><td>54</td><td>3.99</td><td>74</td><td>6.59</td><td>94</td><td>15.28</td></tr><tr><td>15</td><td>.47</td><td>35</td><td>1.52</td><td>55</td><td>4.12</td><td>75</td><td>6.72</td><td>95</td><td>16.28</td></tr><tr><td>16</td><td>.50</td><td>36</td><td>1.65</td><td>56</td><td>4.25</td><td>76</td><td>6.85</td><td>96</td><td>17.28</td></tr><tr><td>17</td><td>.53</td><td>37</td><td>1.78</td><td>57</td><td>4.38</td><td>77</td><td>6.98</td><td>97</td><td>18.28</td></tr><tr><td>18</td><td>.57</td><td>38</td><td>1.91</td><td>58</td><td>4.51</td><td>78</td><td>7.11</td><td>98</td><td>19.28</td></tr><tr><td>19</td><td>.60</td><td>39</td><td>2.04</td><td>59</td><td>4.64</td><td>79</td><td>7.24</td><td>99</td><td>20.28</td></tr></tbody></table>
 <h4 id="track-rate-mod-selector" class="param-name"><span class="param">Track RATE Mod Selector</span><span class="range">Range: enabled (*) or disabled (blank)</span></h4>
-<p>Press the soft button above the RATE parameter again to enable or disable the Track RATE parameter independently for each LFO. When an asterisk (*) is displayed, the Track RATE parameter will affect the Rate of the LFO. If there is no asterisk, then the Track RATE parameter will have no effect on the Rate of the LFO. This allows you to define whether or not each voice in a Program will have its LFO Rate modulated by the Track RATE parameter. Successive presses of the soft button above RATE will toggle between the Rate value and the Track RATE Mod selector.</p>
-<aside class="tip"><p>If you set the LFO Rate to 00, and the RESTART-<span class="param">MODE</span> parameter to ON, you can use the LFO as a gated modulator with a variable depth. Use <span class="lcd">WAVESHAPE=SQUARE</span>, because it starts high.</p></aside>
+<p>Press the soft button above the</p>
+<p>RATE parameter again to enable or disable the Track</p>
+<p>RATE parameter independently for each LFO. When an asterisk (*) is displayed, the Track</p>
+<p>RATE parameter will affect the Rate of the LFO. If there is no asterisk, then the Track</p>
+<p>RATE parameter will have no effect on the Rate of the LFO. This allows you to define whether or not each voice in a Program will have its LFO Rate modulated by the Track</p>
+<p>RATE parameter. Successive presses of the soft button above</p>
+<p>RATE will toggle between the Rate value and the Track RATE Mod selector.</p>
+<aside class="tip"><p>If you set the LFO Rate to 00, and the</p></aside>
+<p>RESTART-<span class="param">MODE</span> parameter to ON, you can use the</p>
+<p>LFO as a gated modulator with a variable depth. Use <span class="lcd">WAVESHAPE=SQUARE</span>, because it starts high.</p>
 <h4 id="rate-modsrc" class="param-name"><span class="param">RATE MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for LFO RATE from among the 15 available modulators.</p>
 <h4 id="rate-modamt" class="param-name"><span class="param">RATE MODAMT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount by which the assigned RATE modulator will affect the LFO RATE. The effect of RATE <span class="param">MODAMT</span> is added to the effect of the LFO RATE parameter.</p>
+<p>Determines the amount by which the assigned</p>
+<p>RATE modulator will affect the LFO RATE. The effect of RATE</p>
+<p><span class="param">MODAMT</span> is added to the effect of the LFO</p>
+<p>RATE parameter.</p>
 <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Sets the “manual” level of the LFO. DEPTH controls the initial amount of LFO.</p>
 <h4 id="depth-modsrc" class="param-name"><span class="param">DEPTH MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for LFO DEPTH from among the 15 available modulators.</p>
 <h4 id="depth-modamt" class="param-name"><span class="param">DEPTH MODAMT</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the assigned DEPTH modulator will affect the LFO DEPTH.</p>
-<p>The effect of DEPTH <span class="param">MODAMT</span> is added to the effect of the LFO DEPTH parameter.</p>
-<p>Press the <kbd class="button">LFO</kbd> button again to access the second sub-page of the LFO page. The display reads:</p>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell">WAVESHAPE=TRIANGLE</td><td class="cell">RESTART-MODE=ON</td><td class="cell">&nbsp;</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PHASE=035</td><td class="cell">DELAY=25</td><td class="cell">NOISE-RATE=70</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
-</figure>
+<p>The effect of DEPTH</p>
+<p><span class="param">MODAMT</span> is added to the effect of the LFO</p>
+<p>DEPTH parameter.</p>
+<h3 id="press-the-2">Press the</h3>
+<p><kbd class="button">LFO</kbd> button again to access the second sub-page of the</p>
+<p><span class="page-name">LFO page</span>. The display reads:</p>
 <h4 id="waveshape" class="param-name"><span class="param">WAVESHAPE</span><span class="range">Range: various (see below)</span></h4>
 <p>The Waveshape determines how the LFO signal will rise and fall. There are seven possible values:</p>
 <p>• TRIANGLE — the triangle wave is commonly used to modulate pitch to produce vibrato.</p>
@@ -117,20 +74,31 @@
 <p>• SQUARE — this positive-only square wave is useful for producing in-tune trill effects.</p>
 <figure class="figure"><img src="images/lfo-waveshapes.png" alt="Seven LFO waveshapes: TRIANGLE, SINE, SINE/TRI, POS/SINE, POS/TRI, SAWTOOTH, and SQUARE"><figcaption>LFO waveshapes.</figcaption></figure>
 <h4 id="restart-mode" class="param-name"><span class="param">RESTART-MODE</span><span class="range">Range: OFF or ON</span></h4>
-<p>Determines whether the LFO will restart with each keystrike. When set to <span class="value">OFF</span>, the LFO will cycle continuously without resetting. When set to ON, the LFO waveform will always start at the starting phase, as determined by the PHASE parameter, each time a new key is struck.</p>
+<p>Determines whether the</p>
+<p>LFO will restart with each keystrike. When set to <span class="value">OFF</span>, the</p>
+<p>LFO will cycle continuously without resetting. When set to ON, the</p>
+<p>LFO waveform will always start at the starting phase, as determined by the</p>
+<p>PHASE parameter, each time a new key is struck.</p>
 <h4 id="phase" class="param-name"><span class="param">PHASE</span><span class="range">Range: 000 to 255</span></h4>
 <p>Determines the starting phase of the LFO, when <span class="lcd">RESTART-<span class="param">MODE</span>=ON</span>. With a setting of 000, the LFO will always restart at the beginning of its cycle.</p>
 <h4 id="delay" class="param-name"><span class="param">DELAY</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the time it takes for the LFO to go from zero to the amount set with the DEPTH parameter. Values above 0 will cause the LFO to take longer to achieve its full depth. This is useful for creating delayed vibrato, tremolo, etc.</p>
+<p>Determines the time it takes for the</p>
+<p>LFO to go from zero to the amount set with the</p>
+<p>DEPTH parameter. Values above 0 will cause the</p>
+<p>LFO to take longer to achieve its full depth. This is useful for creating delayed vibrato, tremolo, etc.</p>
 <h4 id="noise-rate" class="param-name"><span class="param">NOISE-RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>One of the TS-10’s 15 available modulation sources is NOISE. The NOISE modulator produces a randomly changing level. Its main use is to randomize or “humanize” pitch when applied as a pitch modulator. It can also be used to randomize any other modulation destination. Typically, the NOISE signal might look like this:</p>
-<figure class="figure"><img src="images/noise-rate.png" alt="Stepped random NOISE modulator with a bracket marking Noise Rate"><figcaption>Typical NOISE modulator signal.</figcaption></figure>
+<p>One of the TS-10’s 15 available modulation sources is NOISE. The</p>
+<p>NOISE modulator produces a randomly changing level. Its main use is to randomize or “humanize” pitch when applied as a pitch modulator. It can also be used to randomize any other modulation destination. Typically, the</p>
+<p>NOISE signal might look like this:</p>
+<p>+100</p>
+<p>-100</p>
+<h4 id="noise-rate-2" class="param-name">Noise Rate</h4>
 <p>NOISE-RATE determines how frequently the random level will change. Low values will cause it to change very slowly; with high values the level will change quickly.</p>
 <h3 id="env1-env2-env3-ts-10-envelopes">ENV1, ENV2, ENV3 — TS-10 Envelopes</h3>
 <p>An Envelope is a shape, or contour, which we apply to a signal source to make it change over time. Each TS-10 voice has three envelopes. These envelopes are automatically routed to the pitch, filter frequency and amplitude of the voice, though ENV1 and ENV2 can also be assigned elsewhere, wherever a modulator is selectable.</p>
-<p>• ENV1 is routed to the pitch of the voice. There is a parameter always available on the Pitch Mods page which lets you adjust the amount by which ENV1 will modulate the voice’s pitch.</p>
-<p>• ENV2 is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the ENV2 parameter on the Filters page controls the ENV2 depth.</p>
-<p>• ENV3 is routed to the amplitude (volume) of the voice. ENV3 always controls the final volume contour of the voice. Any other volume modulators selected on the Output page will occur before ENV3 in the signal flow.</p>
+<p>• ENV1 is routed to the pitch of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods page</span> which lets you adjust the amount by which ENV1 will modulate the voice’s pitch.</p>
+<p>• ENV2 is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the ENV2 parameter on the <span class="page-name">Filters page</span> controls the ENV2 depth.</p>
+<p>• ENV3 is routed to the amplitude (volume) of the voice. ENV3 always controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output page</span> will occur before ENV3 in the signal flow.</p>
 <p>The TS-10 envelopes are descended from the venerable ADSR (attack, decay, sustain, release) envelope, but with many refinements. While the ADSR envelope gives you control over three time segments and one level, the TS-10 envelopes give you control over four levels and five time segments.</p>
 <p>The illustration below shows the make-up of a TS-10 envelope:</p>
 <figure class="figure"><img src="images/envelope-stages.png" alt="TS-10 envelope: ATTACK, DECAY 1–3, KEY HELD, and RELEASE with PEAK, BREAK1, BREAK2, and SUSTAIN levels"><figcaption>Make-up of a TS-10 envelope.</figcaption></figure>
@@ -140,24 +108,38 @@
 <p>• The third sub-page contains the Envelope mode, keyboard scaling, and several parameters for shaping the velocity response of the envelope.</p>
 <h2 id="env1-env2-and-env3-pages">ENV1, ENV2 and ENV3 Pages</h2>
 <p>The ENV1, ENV2 and ENV3 Pages, parameters and ranges are all the same except where indicated below. We will use ENV3 as our example, since its effect on the volume of the voice is immediately apparent.</p>
-<p>Press the <kbd class="button">Env 3</kbd> button to get to the first ENV3 sub-page containing the five TIME parameters:</p>
+<p>Press the <kbd class="button">Env 3</kbd> button to get to the first <span class="page-name">ENV3 sub-page</span> containing the five TIME parameters:</p>
 <p>Note that the numbers shown here represent times, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
 <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 00 to 99 (see <a href="#envelope-times">the Envelope Times chart below</a> for a listing of the time values)</span></h4>
 <p>The amount of time it takes for the envelope level to travel from zero (when the key is struck) to the PEAK level. The higher the value, the longer the time.</p>
 <h4 id="track-attack-mod-selector" class="param-name"><span class="param">Track Attack Mod Selector</span><span class="range">Range: enabled (*) or disabled (blank)</span></h4>
-<p>Press the soft button above the <span class="param">ATTACK</span> parameter again to enable or disable the Track <span class="param">ATTACK</span> parameter independently for each Envelope. When an asterisk (*) is displayed, the Track <span class="param">ATTACK</span> parameter will affect the Attack Time of the Envelope. If there is no asterisk, then the Track <span class="param">ATTACK</span> parameter will have no effect on the Attack Time of the Envelope. This allows you to define whether or not each Envelope in each Voice in a Program will have its Attack Time modulated by the Track <span class="param">ATTACK</span> parameter. Successive presses of the soft button above <span class="param">ATTACK</span> will toggle between the Attack value and the Track <span class="param">ATTACK</span> Mod selector.</p>
+<p>Press the soft button above the</p>
+<p><span class="param">ATTACK</span> parameter again to enable or disable the Track</p>
+<p><span class="param">ATTACK</span> parameter independently for each Envelope. When an asterisk (*) is displayed, the Track</p>
+<p><span class="param">ATTACK</span> parameter will affect the Attack Time of the Envelope. If there is no asterisk, then the Track</p>
+<p><span class="param">ATTACK</span> parameter will have no effect on the Attack Time of the Envelope. This allows you to define whether or not each Envelope in each Voice in a Program will have its Attack Time modulated by the Track</p>
+<p><span class="param">ATTACK</span> parameter. Successive presses of the soft button above</p>
+<p><span class="param">ATTACK</span> will toggle between the Attack value and the Track <span class="param">ATTACK</span> Mod selector.</p>
 <h4 id="decay-1" class="param-name"><span class="param">DECAY 1</span><span class="range">Range: 00 to 99</span></h4>
 <p>The time it takes the envelope to go from PEAK to BREAK 1.</p>
 <h4 id="decay-2" class="param-name"><span class="param">DECAY 2</span><span class="range">Range: 00 to 99</span></h4>
 <p>The time it takes the envelope to go from BREAK 1 to BREAK 2.</p>
 <h4 id="decay-3" class="param-name"><span class="param">DECAY 3</span><span class="range">Range: 00 to 99</span></h4>
-<p>The time it takes the envelope to go from BREAK 2 to the <span class="param">SUSTAIN</span> stage. At the end of DECAY 3, the envelope will remain at the <span class="param">SUSTAIN</span> level until the key is released.</p>
+<p>The time it takes the envelope to go from BREAK 2 to the</p>
+<p><span class="param">SUSTAIN</span> stage. At the end of DECAY 3, the envelope will remain at the</p>
+<p><span class="param">SUSTAIN</span> level until the key is released.</p>
 <h4 id="release" class="param-name"><span class="param">RELEASE</span><span class="range">Range: 00 to 99</span></h4>
 <p>This defines the time it will take the envelope to return to zero after the key has been released.</p>
 <h4 id="track-release-mod-selector" class="param-name"><span class="param">Track Release Mod Selector</span><span class="range">Range: enabled (*) or disabled (blank)</span></h4>
-<p>Press the soft button below the <span class="param">RELEASE</span> parameter again to enable or disable the Track <span class="param">RELEASE</span> parameter independently for each Envelope. When an asterisk (*) is displayed, the Track <span class="param">RELEASE</span> parameter will affect the Release Time of the Envelope. If there is no asterisk, then the Track <span class="param">RELEASE</span> parameter will have no effect on the Release Time of the Envelope. This allows you to define whether or not each Envelope in each Voice in a Program will have its Release Time modulated by the Track <span class="param">RELEASE</span> parameter. Successive presses of the soft button below <span class="param">RELEASE</span> will toggle between the Release value and the <span class="param">RELEASE</span> Mod selector.</p>
+<p>Press the soft button below the</p>
+<p><span class="param">RELEASE</span> parameter again to enable or disable the Track</p>
+<p><span class="param">RELEASE</span> parameter independently for each Envelope. When an asterisk (*) is displayed, the Track</p>
+<p><span class="param">RELEASE</span> parameter will affect the Release Time of the Envelope. If there is no asterisk, then the Track</p>
+<p><span class="param">RELEASE</span> parameter will have no effect on the Release Time of the Envelope. This allows you to define whether or not each Envelope in each Voice in a Program will have its Release Time modulated by the Track</p>
+<p><span class="param">RELEASE</span> parameter. Successive presses of the soft button below</p>
+<p><span class="param">RELEASE</span> will toggle between the Release value and the <span class="param">RELEASE</span> Mod selector.</p>
 <table class="data-table lookup" id="envelope-times"><caption>ENVELOPE TIMES</caption><thead><tr><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th></tr></thead><tbody><tr><td>0</td><td>.00</td><td>20</td><td>.20</td><td>40</td><td>.82</td><td>60</td><td>3.2</td><td>80</td><td>13</td></tr><tr><td>1</td><td>.01</td><td>21</td><td>.22</td><td>41</td><td>.88</td><td>61</td><td>3.5</td><td>81</td><td>14</td></tr><tr><td>2</td><td>.02</td><td>22</td><td>.23</td><td>42</td><td>.94</td><td>62</td><td>3.7</td><td>82</td><td>15</td></tr><tr><td>3</td><td>.03</td><td>23</td><td>.25</td><td>43</td><td>1.0</td><td>63</td><td>4.0</td><td>83</td><td>16</td></tr><tr><td>4</td><td>.04</td><td>24</td><td>.27</td><td>44</td><td>1.0</td><td>64</td><td>4.3</td><td>84</td><td>17</td></tr><tr><td>5</td><td>.06</td><td>25</td><td>.29</td><td>45</td><td>1.1</td><td>65</td><td>4.6</td><td>85</td><td>18</td></tr><tr><td>6</td><td>.07</td><td>26</td><td>.31</td><td>46</td><td>1.2</td><td>66</td><td>4.9</td><td>86</td><td>19</td></tr><tr><td>7</td><td>.08</td><td>27</td><td>.33</td><td>47</td><td>1.3</td><td>67</td><td>5.3</td><td>87</td><td>21</td></tr><tr><td>8</td><td>.08</td><td>28</td><td>.35</td><td>48</td><td>1.4</td><td>68</td><td>5.7</td><td>88</td><td>22</td></tr><tr><td>9</td><td>.09</td><td>29</td><td>.38</td><td>49</td><td>1.5</td><td>69</td><td>6.1</td><td>89</td><td>24</td></tr><tr><td>10</td><td>.10</td><td>30</td><td>.41</td><td>50</td><td>1.6</td><td>70</td><td>6.5</td><td>90</td><td>26</td></tr><tr><td>11</td><td>.11</td><td>31</td><td>.44</td><td>51</td><td>1.7</td><td>71</td><td>7.0</td><td>91</td><td>28</td></tr><tr><td>12</td><td>.11</td><td>32</td><td>.47</td><td>52</td><td>1.8</td><td>72</td><td>7.5</td><td>92</td><td>30</td></tr><tr><td>13</td><td>.12</td><td>33</td><td>.50</td><td>53</td><td>2.0</td><td>73</td><td>8.1</td><td>93</td><td>32</td></tr><tr><td>14</td><td>.13</td><td>34</td><td>.54</td><td>54</td><td>2.1</td><td>74</td><td>8.6</td><td>94</td><td>34</td></tr><tr><td>15</td><td>.14</td><td>35</td><td>.58</td><td>55</td><td>2.3</td><td>75</td><td>9.3</td><td>95</td><td>37</td></tr><tr><td>16</td><td>.15</td><td>36</td><td>.62</td><td>56</td><td>2.4</td><td>76</td><td>9.9</td><td>96</td><td>39</td></tr><tr><td>17</td><td>.16</td><td>37</td><td>.66</td><td>57</td><td>2.6</td><td>77</td><td>10</td><td>97</td><td>42</td></tr><tr><td>18</td><td>.17</td><td>38</td><td>.71</td><td>58</td><td>2.8</td><td>78</td><td>11</td><td>98</td><td>45</td></tr><tr><td>19</td><td>.19</td><td>39</td><td>.76</td><td>59</td><td>3.0</td><td>79</td><td>12</td><td>99</td><td>49</td></tr></tbody></table>
-<p>Press <kbd class="button">Env 3</kbd> again. This takes you to the second ENV3 sub-page, which shows the five LEVELS:</p>
+<p>Press <kbd class="button">Env 3</kbd> again. This takes you to the second <span class="page-name">ENV3 sub-page</span>, which shows the five LEVELS:</p>
 <h4 id="peak" class="param-name"><span class="param">PEAK</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the level the envelope will reach at the end of the time defined by <span class="param">ATTACK</span>.</p>
 <h4 id="break-1" class="param-name"><span class="param">BREAK 1</span><span class="range">Range: 00 to 99</span></h4>
@@ -167,19 +149,29 @@
 <h4 id="sustain" class="param-name"><span class="param">SUSTAIN</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the level the envelope will reach at the end of DECAY 3 and retain as long as the key is held down.</p>
 <h4 id="vel-lev" class="param-name"><span class="param">VEL-LEV</span><span class="range">Range: 00 to 99</span></h4>
-<p>The Velocity level parameter will lower all envelope level settings with a softer keystrike. This means the settings you assign to PEAK, BREAK 1, and BREAK 2 and <span class="param">SUSTAIN</span> are maximum levels — the levels that will be reached with the hardest keystrike. The amount of VEL-LEV will determine how much those levels will be reduced as you play softer. With this parameter you can have continuous dynamic control over the five levels by varying how hard you play. The Velocity Curve (VEL-CURVE on next sub-page) controls the response of the VEL-LEV parameter, reshaping the way that velocity modulates the envelope levels. This provides further control over the velocity response of the envelope.</p>
+<p>The Velocity level parameter will lower all envelope level settings with a softer keystrike. This means the settings you assign to PEAK, BREAK 1, and BREAK 2 and</p>
+<p><span class="param">SUSTAIN</span> are maximum levels — the levels that will be reached with the hardest keystrike. The amount of</p>
+<p>VEL-LEV will determine how much those levels will be reduced as you play softer. With this parameter you can have continuous dynamic control over the five levels by varying how hard you play. The Velocity Curve (</p>
+<p>VEL-CURVE on next sub-page) controls the response of the</p>
+<p>VEL-LEV parameter, reshaping the way that velocity modulates the envelope levels. This provides further control over the velocity response of the envelope.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button again. This displays the final sub-page for ENV 3:</p>
 <h4 id="mode-env-1-and-env-2" class="param-name"><span class="param">MODE (ENV 1 and ENV 2)</span><span class="range">Range: NORMAL, FINISH, or REPEAT</span></h4>
 <p>• <span class="value">NORMAL</span> — The envelope plays through normally.</p>
 <p>• FINISH — The envelope runs its full cycle — finishes playing through all its stages — ignoring the key-up event. The envelope spends no time at the sustain stage. As soon as DECAY 3 is finished, instead of stopping at the sustain stage the envelope immediately goes into the release stage. This is good for percussive-type sounds where you want the envelope to be the same for every note, no matter how long the key is held down.</p>
 <p>• REPEAT — In this mode, at the end of the DECAY3 stage, instead of sustaining, the envelope goes immediately back to the beginning of the envelope and repeats. When the key is released, the envelope stops repeating, and moves into the release stage. This type of envelope can be used to create complex LFO-type effects. When ENV3 is set to <span class="lcd">MODE=REPEAT</span>, each time Envelope 3 restarts it will restart the Wave from its SAMPLE-START-OFFSET value.</p>
 <h4 id="mode-env-3" class="param-name"><span class="param">MODE (ENV 3)</span><span class="range">Range: NORMAL, FINISH, or REPEAT</span></h4>
-<h4 id="voice-triggering-stealing-notes" class="param-name">Voice Triggering/Stealing Notes</h4>
-<p>Since Env 3 controls the volume of the voice, there are a number of special considerations to be aware of when using the different envelope modes:</p>
+<p>Voice Triggering/Stealing Notes Since Env 3 controls the volume of the voice, there are a number of special considerations to be aware of when using the different envelope modes:</p>
 <p>• In <span class="value">NORMAL</span> mode, if you set a delay on the voice, and you release the key before the designated delay time elapses, the voice will not sound.</p>
 <p>• In FINISH mode, if you set a delay on the voice and you release the key before the designated delay time elapses, the note will sound anyway, and then envelope will run through its full cycle. The envelope finishes what you set it up to do.</p>
-<p>• In REPEAT mode, the envelope will repeatedly cycle through the PEAK and BREAK 1 and 2 LEVELS, using the <span class="param">ATTACK</span> and all three DECAY times, for as long as the key is held down.</p>
-<p>When envelope gets to the <span class="param">SUSTAIN</span> level, it goes back to the INITIAL level. The TS-10 restarts the wave at its SAMPLE-START-OFFSET every time the envelope repeats.</p>
+<p>• In</p>
+<p>REPEAT mode, the envelope will repeatedly cycle through the</p>
+<p>PEAK and BREAK 1 and 2 LEVELS, using the</p>
+<p><span class="param">ATTACK</span> and all three</p>
+<p>DECAY times, for as long as the key is held down.</p>
+<p>When envelope gets to the</p>
+<p><span class="param">SUSTAIN</span> level, it goes back to the</p>
+<p>INITIAL level. The TS-10 restarts the wave at its SAMPLE-</p>
+<p>START-OFFSET every time the envelope repeats.</p>
 <p>In order to maximize the use of the TS-10’s 32 voices, and to manage the “voice stealing” it is sometimes useful to understand when a given voice will be assigned and when it will be released, or “put back” into the pool for use by other sounds. This depends on a combination of envelope mode and the wave type.</p>
 <p>A looped (sustaining) wave will continue to use the voice until the envelope reaches zero. For a sustaining wave, when the Envelope Mode is Normal: 99 = Envelope</p>
 <figure class="figure"><img src="images/envelope-steal-normal.png" alt="Looped voice in NORMAL mode: the voice is free when ENV3 reaches zero"><figcaption>Sustaining wave, Envelope Mode = Normal.</figcaption></figure>
@@ -194,13 +186,23 @@
 <p>KBDTRK makes the envelope times shorter or longer depending on the key played. The scaling effect of this parameter is based on a 76-note keyboard, with a center break point at F4+.</p>
 <p>Positive values will make all envelope times (except Release) shorter for keys above F4+, and longer for keys below F4+. Negative values will have the opposite effect. Envelope times for F4+ are not affected by this parameter.</p>
 <h4 id="vel-atck" class="param-name"><span class="param">VEL-ATCK</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter makes envelope <span class="param">ATTACK</span> time respond to velocity. Raising the VEL-ATCK value above zero makes the envelope <span class="param">ATTACK</span> time shorter with harder keystrikes. If <span class="lcd">ATTACK=00</span>, this parameter will have no effect.</p>
+<p>This parameter makes envelope</p>
+<p><span class="param">ATTACK</span> time respond to velocity. Raising the</p>
+<p>VEL-ATCK value above zero makes the envelope</p>
+<p><span class="param">ATTACK</span> time shorter with harder keystrikes. If <span class="lcd">ATTACK=00</span>, this parameter will have no effect.</p>
 <h4 id="vel-rels" class="param-name"><span class="param">VEL-RELS</span><span class="range">Range: -99 to +99</span></h4>
-<p>This parameter makes envelope <span class="param">RELEASE</span> time respond to velocity. When the value of VEL-RELS is positive, a harder keystrike will result in a longer release. Likewise, when the value of VEL-RELS is negative, a harder keystrike will result in a shorter release. Note that this parameter will have no effect if <span class="param">RELEASE</span> = 00.</p>
+<p>This parameter makes envelope</p>
+<p><span class="param">RELEASE</span> time respond to velocity. When the value of</p>
+<p>VEL-RELS is positive, a harder keystrike will result in a longer release. Likewise, when the value of</p>
+<p>VEL-RELS is negative, a harder keystrike will result in a shorter release. Note that this parameter will have no effect if <span class="param">RELEASE</span> = 00.</p>
 <h2 id="pitch-page">Pitch Page</h2>
-<p>The Pitch page parameters determine the “manual” levels for the pitch of the voice, as well as the poly/mono voice assignment mode.</p>
-<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the OCTAVE and SEMITONE values on the PITCH page will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the Drum Map Editor.</p></aside>
-<p>Press the <kbd class="button">Pitch</kbd> button. The display shows the PITCH page.</p>
+<p>The <span class="page-name">Pitch page</span> parameters determine the “manual” levels for the pitch of the voice, as well as the poly/mono voice assignment mode.</p>
+<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the</p></aside>
+<h3 id="octave-and">OCTAVE and</h3>
+<p>SEMITONE values on the</p>
+<p><span class="page-name">PITCH page</span> will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the</p>
+<p>PITCH parameter in the Drum Map Editor.</p>
+<p>Press the <kbd class="button">Pitch</kbd> button. The display shows the <span class="page-name">PITCH page</span>.</p>
 <h4 id="octave" class="param-name"><span class="param">OCTAVE</span><span class="range">Range: -4 to +4 octaves</span></h4>
 <p>Changes the pitch of the voice by octaves.</p>
 <h4 id="semitone" class="param-name"><span class="param">SEMITONE</span><span class="range">Range: -11 to +11</span></h4>
@@ -216,14 +218,18 @@
 <p>• MONO — Similar to mono mode on old analog synths. The voice will play with one-note polyphony, and new notes will always glide from the previous note. The envelopes and waves are always retriggered, or restarted, each time there is a new key down.</p>
 <p>• LEGATO — Enables monophonic voice assignment, allowing only one note of polyphony to be active in the voice. If a key is depressed before another is released (i.e.: if you play legato), the voice will glide from the old note to the new one. If you play a key with no other keys down (i.e.: if you play staccato), the voice will not glide. The envelopes and waves are retriggered, or restarted, from the beginning each time there is a new key down.</p>
 <p>• TRIGGER — This mode plays monophonically, with the envelopes and waves retriggering, or restarting, each time there is a new key down. This mode works just like LEGATO mode, except that it has no “note memory”. It is ideal for adding monophonic piano “thuds” to piano sounds.</p>
-<p>• MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the <span class="param">PEDAL</span>, MONO, LEGATO or TRIGGER modes, the envelopes and waves are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</p>
-<aside class="note"><p>Note: MONO, LEGATO and MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p></aside>
+<p>• MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the <span class="param">PEDAL</span>, MONO,</p>
+<h3 id="legato-or">LEGATO or</h3>
+<p>TRIGGER modes, the envelopes and waves are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</p>
+<aside class="note"><p>Note: MONO,</p></aside>
+<h3 id="legato-and">LEGATO and</h3>
+<p>MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p>
 <table class="data-table" id="glide-modes"><caption>GLIDE MODES</caption><thead><tr><th><span class="param">MODE</span></th><th>Staccato Glide</th><th>Legato Glide</th><th>Legato Envelope Retrigger</th><th>Note Memory</th></tr></thead><tbody><tr><td><span class="param">PEDAL</span> (WITH <span class="param">PEDAL</span> DOWN)</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MONO</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>LEGATO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>TRIGGER</td><td>NO</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MINIMODE</td><td>NO</td><td>YES</td><td>NO</td><td>YES</td></tr></tbody></table>
 <h4 id="glidetime" class="param-name"><span class="param">GLIDETIME</span><span class="range">Range: 00 to 99</span></h4>
 <p>This parameter controls the time it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses Constant-Time Portamento. This means that it will take the same amount of time to glide between notes that are close together (i.e.: C4 to D4) as it will to glide between notes that are far apart (i.e.: C4 to C7).</p>
 <h2 id="pitch-mods-page">Pitch Mods Page</h2>
-<p>The Pitch Mods page parameters control pitch modulation for the voice.</p>
-<p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the Pitch Mods page.</p>
+<p>The <span class="page-name">Pitch Mods page</span> parameters control pitch modulation for the voice.</p>
+<p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the <span class="page-name">Pitch Mods page</span>.</p>
 <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the pitch of the voice from among the 15 available modulators.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
@@ -233,31 +239,33 @@
 <h4 id="pitchtbl" class="param-name"><span class="param">PITCHTBL</span><span class="range">Range: SYSTEM, ALL-C4, or CUSTOM</span></h4>
 <p>Pitch-tables allow you to map each key on the keyboard to play at any desired pitch. They provide a user-definable tuning table for each note on the keyboard. This parameter lets you select which pitch-table the voice will use.</p>
 <p>When you create a custom pitch-table, the TS-10 stores the pitch-table inside the program.</p>
-<p>Within the program, the custom pitch-table uses the space normally used to store the parameters for voices 5 and 6. Therefore, when there is a custom pitch-table in a program, voices 5 and 6 are not available. They are replaced on the <span class="function">Select Voice</span> page by the EDIT PITCH TABLE function.</p>
-<p>Of the remaining four voices, each individual voice can be assigned to use either the SYSTEM pitch-table, no pitch-table (ALL-C4), or the CUSTOM pitch-table that resides within the program.</p>
+<p>Within the program, the custom pitch-table uses the space normally used to store the parameters for voices 5 and 6. Therefore, when there is a custom pitch-table in a program, voices 5 and 6 are not available. They are replaced on the <span class="page-name">Select Voice page</span> by the EDIT PITCH TABLE function.</p>
+<p>Of the remaining four voices, each individual voice can be assigned to use either the</p>
+<p>SYSTEM pitch-table, no pitch-table (ALL-C4), or the</p>
+<p>CUSTOM pitch-table that resides within the program.</p>
 <p>• SYSTEM — Uses whatever is selected as the system pitch-table on the <span class="page-name">System page</span>. Normally this is standard twelve-tone equal temperament tuning across the keyboard. However, a custom pitch-table can be copied into the system pitch-table for use by all sounds. The PITCH-TABLE parameter on the <span class="page-name">System page</span> determines what the System pitch-table will be.</p>
 <p>• ALL-C4 — No pitch tracking — the same pitch (C4) plays across the keyboard.</p>
 <p>• CUSTOM — User definable pitch-table. This option is only available if a custom pitch-table has been created in the program.</p>
 <h4 id="env1" class="param-name"><span class="param">ENV1</span><span class="range">Range: -99 to +99</span></h4>
-<p>This hard-wired modulation routing determines the amount by which Envelope 1 will affect pitch. Unlike applying ENV-1 as a pitch modulator with the generic pitch <span class="param">MODSRC</span> parameter, the hard-wired ENV1 parameter forces Envelope 1 to always sustain at the manual pitch setting on the Pitch page. The Envelope 1 <span class="param">SUSTAIN</span> level no longer controls the pitch at which Envelope 1 will sustain. Instead, it becomes an &quot;equator-shift&quot; value, determining which Envelope 1 level values will cause the pitch to rise above the manual pitch setting and which level values will drive it below. Envelope 1 level values equal to the <span class="param">SUSTAIN</span> level value will sound at the manual setting. Higher level values will shift the pitch upward from the manual pitch setting, and lower values will shift the pitch downward. This feature allows for the creation of bidirectional pitch envelope shapes, while conveniently ensuring that voices will always sustain at the manual pitch setting, without the need to offset the manual pitch setting on the Pitch page.</p>
+<p>This hard-wired modulation routing determines the amount by which Envelope 1 will affect pitch. Unlike applying ENV-1 as a pitch modulator with the generic pitch</p>
+<p><span class="param">MODSRC</span> parameter, the hard-wired ENV1 parameter forces Envelope 1 to always sustain at the manual pitch setting on the <span class="page-name">Pitch page</span>. The Envelope 1</p>
+<p><span class="param">SUSTAIN</span> level no longer controls the pitch at which Envelope 1 will sustain. Instead, it becomes an &quot;equator-shift&quot; value, determining which Envelope 1 level values will cause the pitch to rise above the manual pitch setting and which level values will drive it below. Envelope 1 level values equal to the</p>
+<p><span class="param">SUSTAIN</span> level value will sound at the manual setting. Higher level values will shift the pitch upward from the manual pitch setting, and lower values will shift the pitch downward. This feature allows for the creation of bidirectional pitch envelope shapes, while conveniently ensuring that voices will always sustain at the manual pitch setting, without the need to offset the manual pitch setting on the <span class="page-name">Pitch page</span>.</p>
 <h4 id="lfo" class="param-name"><span class="param">LFO</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the LFO (Low Frequency Oscillator) will affect pitch.</p>
 <h2 id="filters-page">Filters Page</h2>
 <p>Each TS-10 voice has its own pair of digital filters, FILTER 1 and FILTER 2, which are connected in series. The filter settings determine which ranges of frequencies will be allowed to pass through to the output.</p>
 <h4 id="low-pass-high-pass">Low-pass/High-pass</h4>
 <p>A low-pass filter allows only those frequencies below the filter cutoff frequency to pass — higher frequencies are filtered out. The reverse is true for a high-pass filter — it lets frequencies higher than the cutoff frequency pass and filters out those below. In the TS-10, FILTER 1 is always a low-pass filter. FILTER 2 can be either a high-pass or low-pass filter.</p>
-<h4 id="poles-rolloff-curves">Poles — Rolloff Curves</h4>
-<p>“Pole” is an engineering term which describes the steepness of a filter, or the filter’s cutoff slope.</p>
+<p>Poles  — Rolloff Curves “Pole” is an engineering term which describes the steepness of a filter, or the filter’s cutoff slope.</p>
 <p>Each additional pole gives a filter a steeper rolloff curve. In the TS-10, the filter modes are interdependent; that is, the combined number of poles in FILTER 1 and FILTER 2 is always four.</p>
 <p>These four poles are divided between the two filters; either as 2 and 2, or as 3 and 1. There are two FILTER Pages; however, if you change the number of poles on either page, you will change the number of poles on the other page — high-pass will remain high-pass, but the number of poles will change.</p>
 <p>A 1-pole filter will rolloff at 6 dB per octave; a 2-pole filter, 12 dB per octave; a 3-pole filter, 18 dB per octave; and 4-pole filter, 24 dB per octave. To reproduce a 4-pole low-pass filter (for that “classic” analog synth sound) you would set both low-pass filters to roll off at 12 dB per octave, resulting in a 24 dB per octave rolloff.</p>
-<h4 id="cutoff-frequency">Cutoff Frequency</h4>
-<p>Every filter has a “knee” in the response curve, known as the cutoff frequency. This is the frequency at which the filter begins filtering out frequencies. The filter cutoff frequency can remain fixed over time, or it can be varied by modulating the filter with an envelope, LFO, velocity, etc. You can create some very interesting filter configurations by using a different modulator for each filter. For instance, try using pressure to modulate the filters. You can drive one filter up with pressure, while simultaneously driving the other down.</p>
-<h4 id="filter-configurations">Filter Configurations</h4>
-<p>The diagrams below show a number of possible filter configurations. On the left are the response curves of the two filters shown separately. On the right are some of the possible shapes of the combined filters.</p>
+<p>Cutoff Frequency Every filter has a “knee” in the response curve, known as the cutoff frequency. This is the frequency at which the filter begins filtering out frequencies. The filter cutoff frequency can remain fixed over time, or it can be varied by modulating the filter with an envelope, LFO, velocity, etc. You can create some very interesting filter configurations by using a different modulator for each filter. For instance, try using pressure to modulate the filters. You can drive one filter up with pressure, while simultaneously driving the other down.</p>
+<p>Filter Configurations The diagrams below show a number of possible filter configurations. On the left are the response curves of the two filters shown separately. On the right are some of the possible shapes of the combined filters.</p>
 <figure class="figure"><img src="images/filter-configurations.png" alt="Filter 1 plus Filter 2 response curves combining into 4-pole low-pass or bandpass shapes"><figcaption>Possible filter configurations.</figcaption></figure>
 <h2 id="filter-1-page">FILTER 1 Page</h2>
-<p>Press the <kbd class="button">Filters</kbd> button. The display shows the FILTER1 page.</p>
+<p>Press the <kbd class="button">Filters</kbd> button. The display shows the <span class="page-name">FILTER1 page</span>.</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Filter 1 Mode</div><div>Filter 1 Cutoff Frequency</div><div>Filter 1 Keyboard Scaling Amount</div></div>
   <div class="vfd-bezel">
@@ -293,7 +301,9 @@
 <h4 id="cutoff" class="param-name"><span class="param">CUTOFF</span><span class="range">Range: 000 to 127</span></h4>
 <p>Determines the initial filter cutoff frequency for each of the two filters. With a low-pass filter, a setting of 127 lets all the original signal pass through the filter. With a high-pass filter, a setting of 000 lets through all of the original signal. This setting represents the “filter floor,” or manual level. The effect of any selected modulators will be added to (or subtracted from) this level.</p>
 <h4 id="track-brightness-mod-selector" class="param-name"><span class="param">Track Brightness Mod Selector</span><span class="range">Range: enabled (*) or disabled (blank)</span></h4>
-<p>Press the soft button above the <span class="param">CUTOFF</span> parameter again to enable or disable the Track <span class="param">BRIGHTNESS</span> parameter independently for each Filter. When an asterisk (*) is displayed, the Track <span class="param">BRIGHTNESS</span> parameter will affect the Cutoff frequency of the Filter. If there is no asterisk, then the Track <span class="param">BRIGHTNESS</span> parameter will have no effect on the Cutoff frequency of the Filter. This allows you to define whether or not each Filter in each Voice in a Program will have its Cutoff frequency modulated by the Track <span class="param">BRIGHTNESS</span> parameter. Successive presses of the soft button above <span class="param">CUTOFF</span> will toggle between the Cutoff value and the <span class="param">BRIGHTNESS</span></p>
+<p>Press the soft button above the</p>
+<p><span class="param">CUTOFF</span> parameter again to enable or disable the Track <span class="param">BRIGHTNESS</span> parameter independently for each Filter. When an asterisk (*) is displayed, the Track <span class="param">BRIGHTNESS</span> parameter will affect the Cutoff frequency of the Filter. If there is no asterisk, then the Track <span class="param">BRIGHTNESS</span> parameter will have no effect on the Cutoff frequency of the Filter. This allows you to define whether or not each Filter in each Voice in a Program will have its Cutoff frequency modulated by the Track <span class="param">BRIGHTNESS</span> parameter. Successive presses of the soft button above</p>
+<p><span class="param">CUTOFF</span> will toggle between the Cutoff value and the <span class="param">BRIGHTNESS</span></p>
 <p>Mod selector.</p>
 <h4 id="kbd" class="param-name"><span class="param">KBD</span><span class="range">Range: -99 to +99</span></h4>
 <p>Sets the amount by which the location of a note on a keyboard will modulate the filter cutoff frequency (filter keyboard tracking). The scaling effect of this parameter is based on a 76-note keyboard, with a center break point at F4+. To have the filter track the keyboard exactly, set</p>
@@ -305,7 +315,7 @@
 <h4 id="env2" class="param-name"><span class="param">ENV2</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which Envelope 2 will affect the filter cutoff frequency.</p>
 <h2 id="filter-2-page">FILTER 2 Page</h2>
-<p>Press the <kbd class="button">Filters</kbd> button again. The display shows the FILTER2 page:</p>
+<p>Press the <kbd class="button">Filters</kbd> button again. The display shows the <span class="page-name">FILTER2 page</span>:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Filter 2 Mode</div><div></div><div></div></div>
   <div class="vfd-bezel">
@@ -342,7 +352,7 @@
 <p>FILTER 2 can be configured as a 2-pole or 1-pole high-pass filter, or a 2-pole or 1-pole low-pass filter.</p>
 <p>The remaining parameters and ranges are the same as for FILTER 1.</p>
 <h2 id="output-page">Output Page</h2>
-<p>The parameters on the Output page, along with Envelope 3, control the overall volume and panning of the voice, along with keyboard scaling, effects routing and voice “voice stealing” priority. The Output page consists of three separate sub-pages.</p>
+<p>The parameters on the <span class="page-name">Output page</span>, along with Envelope 3, control the overall volume and panning of the voice, along with keyboard scaling, effects routing and voice “voice stealing” priority. The <span class="page-name">Output page</span> consists of three separate sub-pages.</p>
 <p>Press the <kbd class="button">Output</kbd>. button. The first OUTPUT sub-page is displayed.</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Keyboard Scale Amt. (or Zone)</div><div></div><div>High and Low keys for Keyboard Scaling or Zone</div></div>
@@ -378,8 +388,7 @@
 <p>Can be used to fade the voice in or out between the two keys specified to the right (see below).</p>
 <p>This is good for doing keyboard crossfades between voices, or for reducing the volume of a particular voice as you go higher up the keyboard. A value of +99 will fade the voice in from silence to full level from the low keys to the high keys. A value of -99 will fade the voice out from full level to silence from the low keys to the high keys. Intermediate values will scale the voice from full level to an intermediate level.</p>
 <figure class="figure"><img src="images/output-kbd-scale.png" alt="OUTPUT KBD-SCALE at +99 and −99 across MIDI keys 0–127, with the TS-10 keyboard range marked"><figcaption>Keyboard scaling of voice volume.</figcaption></figure>
-<h3 id="setting-a-keyboard-zone">Setting a Keyboard Zone</h3>
-<p>Moving the <kbd class="button">Data Entry Slider</kbd> all the way down to the bottom position (below -99) selects <span class="lcd">KBD-SCAL=ZON</span>. In this position the voice will sound only over the keyboard range specified by the low and high keys. When <span class="lcd">KBD-SCAL=ZON</span>, the volume scaling function is not in effect — the voice will play at the same volume throughout the zone.</p>
+<p>Setting a Keyboard Zone Moving the <kbd class="button">Data Entry Slider</kbd> all the way down to the bottom position (below -99) selects <span class="lcd">KBD-SCAL=ZON</span>. In this position the voice will sound only over the keyboard range specified by the low and high keys. When <span class="lcd">KBD-SCAL=ZON</span>, the volume scaling function is not in effect — the voice will play at the same volume throughout the zone.</p>
 <figure class="figure"><img src="images/output-kbd-zone.png" alt="KBD-SCALE=ZON: full volume only between the specified low and high keys"><figcaption>Keyboard zone with <span class="lcd">KBD-SCALE=ZON</span>.</figcaption></figure>
 <p>The next two parameters on the top line of the display provide a powerful tool for shaping the volume of the sound across the keyboard:</p>
 <h4 id="lo-hi-key" class="param-name"><span class="param">LO/HI-KEY</span><span class="range">Range: -A0 to C8</span></h4>
@@ -440,9 +449,13 @@
 <p>Press the <kbd class="button">Output</kbd> button a third time. The final sub-page contains three parameters:</p>
 <h4 id="voice-priority" class="param-name"><span class="param">VOICE-PRIORITY</span><span class="range">Range: LO, MED, or HI</span></h4>
 <p>This parameter gives you some control over how voices will be reassigned, or “stolen,” to play new notes when all of the TS-10’s voices are already playing. A voice can be assigned LO, <span class="value">MED</span>, or HI priority. The rule is that a given voice will only be allowed to steal from voices with the same or lower priority.</p>
-<p><span class="value">MED</span> is the usual state and should be used for most voices. LO can be used for voices within a sound which would be missed the least if stolen (such as a voice playing the same wave as another voice but detuned a bit). HI is best used only for specific applications in which you want to protect a voice or voices from being stolen — such as cymbals or a sustaining “pad” sound in a sequencer track.</p>
+<p><span class="value">MED</span> is the usual state and should be used for most voices.</p>
+<p>LO can be used for voices within a sound which would be missed the least if stolen (such as a voice playing the same wave as another voice but detuned a bit).</p>
+<p>HI is best used only for specific applications in which you want to protect a voice or voices from being stolen — such as cymbals or a sustaining “pad” sound in a sequencer track.</p>
 <h4 id="velocity-window-lo-hi" class="param-name"><span class="param">VELOCITY-WINDOW LO &amp; HI</span><span class="range">Range: 000 to 127</span></h4>
-<p>The LO and HI parameters allow you to define the velocity range for each voice. The full velocity range (default) is <span class="lcd">LO=000</span> <span class="lcd">HI=127</span>. By adjusting these parameters, you can set specific velocity ranges for each voice. This allows velocity switching between different voices within the program. For example, if you set a solo violin voice to <span class="lcd">LO=000</span> <span class="lcd">HI=064</span>, and a string section voice to <span class="lcd">LO=064</span> <span class="lcd">HI=127</span>, a soft velocity will play only the solo violin, whereas a harder velocity will play only the string section. Ranges can over-lap for velocity cross-fade effects.</p>
+<p>The</p>
+<h3 id="lo-and">LO and</h3>
+<p>HI parameters allow you to define the velocity range for each voice. The full velocity range (default) is <span class="lcd">LO=000</span> <span class="lcd">HI=127</span>. By adjusting these parameters, you can set specific velocity ranges for each voice. This allows velocity switching between different voices within the program. For example, if you set a solo violin voice to <span class="lcd">LO=000</span> <span class="lcd">HI=064</span>, and a string section voice to <span class="lcd">LO=064</span> <span class="lcd">HI=127</span>, a soft velocity will play only the solo violin, whereas a harder velocity will play only the string section. Ranges can over-lap for velocity cross-fade effects.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
