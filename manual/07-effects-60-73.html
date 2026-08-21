@@ -41,8 +41,9 @@
 <p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
 <h4 id="speed" class="param-name"><span class="param">SPEED</span><span class="range">Range: SLOW or FAST</span></h4>
 <p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:</p>
-<p>• WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>(ure), KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than ROTOR <span class="param">FAST</span>.</p>
-<p>• KEYDN, PATCH, <span class="param">SUSTN</span>, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</p>
+<p>• <span class="param">WHEEL</span>, <span class="param">PBEND</span>, <span class="param">PEDAL</span>, <span class="param">TIMBR</span>, <span class="param">XCTRL</span>, <span class="param">PRESS</span>(ure), <span class="param">KEYBD</span>, and <span class="param">VELOC</span> — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than <span class="param">ROTOR FAST</span>.</p>
+<p>• <span class="param">KEYDN</span>, <span class="param">PATCH</span>, <span class="param">SUSTN</span>, <span class="param"
+  >SOSTU</span>, <span class="param">FX-SW</span> — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</p>
 <h4 id="decay-time" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0</span></h4>
 <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
 <h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
@@ -61,12 +62,10 @@
 <p>This parameter is a bandwidth control that determines the width of the resonant peak at the center of the-frequency band. By raising the value, you can produce a narrower bandwidth.</p>
 <h4 id="level" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>This parameter sets the amount of cut (negative values) or boost (positive values) applied to this mid-frequency parametric.</p>
-<p><span class="param">MID-2 FC</span>                                 MID-3 FC</p>
-<p>Q                                        Q</p>
-<p><span class="param">LEVEL</span>                  <span class="param">LEVEL</span></p>
+<table class="param-cols"><tbody><tr><td><span class="param">MID-2 FC</span></td><td><span class="param">MID-3 FC</span></td></tr><tr><td><span class="param">Q</span></td><td><span class="param">Q</span></td></tr><tr><td><span class="param">LEVEL</span></td><td><span class="param">LEVEL</span></td></tr></tbody></table>
 <p>These parameters are similar to the previous ones, but can be assigned to control different bandwidths within the mid-range.</p>
 <h4 id="input-level" class="param-name"><span class="param">INPUT LEVEL</span><span class="range">Range: -24 to +00 dB</span></h4>
-<p>Lets you to adjust the input level before the EQs to eliminate the possibility of clipping boosted signals.</p>
+<p>Lets you adjust the input level before the EQs to eliminate the possibility of clipping boosted signals.</p>
 <h4 id="output-level" class="param-name"><span class="param">OUTPUT LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
 <p>Since speaker cabinets are “lossy,” output gain is required to compensate for losses in perceived volume. Setting this gain too high will cause clipping of the output signal.</p>
 <h2 id="63-guitar-amp-1" class="algo">63 GUITAR AMP 1</h2>
@@ -154,13 +153,8 @@
 <p>Adjusts the amount of boost or cut applied to the second main amp parametric.</p>
 <h2 id="66-vcf-distortion-vcf" class="algo">66 VCF- -DISTORTION- -VCF</h2>
 <p>VCF- -DISTORTION- -VCF combines a voltage control filter, a raspy distortion, and a second voltage control filter. Three effects can be obtained: Distortion, Wah-wah, and Auto-wah. The last two functions use the same VCF. These filters can be disabled or used as EQ if desired. The second VCF that exists after the distortion can be set to act like a simple speaker simulator, or it can be modulated in parallel with the pre-distortion VCF.</p>
-<h4 id="vcf-distortion-vcf-signal-routing" class="param-name">VCF- -DISTORTION- -VCF Signal Routing</h4>
-<p><span class="param">Main FX1 Left Outputs</span></p>
-<h3 id="post-dist">Post-Dist</h3>
-<div class="vfd-callouts top"><div>FX2 Left Variable</div><div>Pre-Dist VCF</div><div>L</div></div>
-<table class="defn-table"><thead><tr><th>Distortion</th><th>Distortion Distortion Env Fol</th></tr></thead><tbody><tr><td><span class="lcd">VCF</span></td><td>Clip HiPass</td></tr><tr><td><span class="lcd">FX1</span></td><td>Right               Filter                                                                     R</td></tr></tbody></table>
-<h4 id="env-fol" class="param-name">Env Fol</h4>
-<div class="vfd-callouts top"><div>FX2 Right</div><div>Level In</div><div>Level Out Bypass</div></div>
+<h4 id="vcf-distortion-vcf-routing" class="param-name">VCF- -DISTORTION- -VCF Signal Routing</h4>
+<figure class="figure"><img src="images/vcf-distortion-vcf-routing.png" alt="VCF- -DISTORTION- -VCF signal routing: FX-1 and FX-2 left/right inputs summed to mono through Variable HiPass Filter and Pre-Dist VCF (Env Fol); Distortion Level In, Clip, and Level Out with Bypass switch; Post-Dist VCF (Env Fol) to Main Outputs L and R"><figcaption>VCF- -DISTORTION- -VCF signal routing.</figcaption></figure>
 <p>The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the algorithm with different</p>
 <p>Dry/Wet mixes.</p>
 <h4 id="dist-level-in" class="param-name"><span class="param">DIST LEVEL - IN</span><span class="range">Range: 00 to 99</span></h4>
@@ -207,14 +201,8 @@
 <p>Controls the threshold level for the compressor. As the input signal dies away below the threshold, the compressor will increase the gain of the system, causing feedback to increase as well. Normal compression is “72.”</p>
 <h2 id="68-flng-cmp-dist-rev" class="algo">68 FLNG- -CMP- -DIST + REV</h2>
 <p>A screaming guitar-and-amp simulator that features not only compression, distortion, and reverb, but flanging and EQ as well. FX-1 routes the signal through each of these effect processors, while <span class="param">FX-2</span> is used for reverb only.</p>
-<p>FLNG- -CMP- -DIST + REV Signal Routing</p>
-<p><span class="param">DRY</span>                      Reverb to Compressor Feedback</p>
-<div class="vfd-callouts top"><div>Flange</div><div>Comp</div><div>Distort</div></div>
-<h4 id="main-reverb" class="param-name">Main Reverb</h4>
-<p>Outputs</p>
-<h4 id="r" class="param-name">R</h4>
-<p>Bus2</p>
-<h4 id="fx2" class="param-name">FX2</h4>
+<h4 id="flng-cmp-dist-rev-routing" class="param-name">FLNG- -CMP- -DIST + REV Signal Routing</h4>
+<figure class="figure"><img src="images/flng-cmp-dist-rev-routing.png" alt="FLNG- -CMP- -DIST + REV signal routing: DRY bypasses to Main Outputs; FX1 through Flange, Comp, Distort, and EQ to Bus1; FX2 to Bus2; both buses feed Reverb with Reverb-to-Compressor feedback; summed L/R Main Outputs"><figcaption>FLNG- -CMP- -DIST + REV signal routing.</figcaption></figure>
 <h4 id="compressor-thresh-2" class="param-name"><span class="param">COMPRESSOR THRESH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the threshold level for the compressor. As the input signal dies away below the threshold, the compressor will increase the gain of the system, causing feedback to increase as well. Normal compression is “72.”</p>
 <h4 id="flange-rate" class="param-name"><span class="param">FLANGE RATE</span><span class="range">Range: 00 to 99</span></h4>

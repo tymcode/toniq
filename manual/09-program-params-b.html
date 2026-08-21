@@ -26,7 +26,7 @@
     </header>
     <h2 id="wave-page">Wave Page</h2>
 <p>Press the <kbd class="button">Wave</kbd> button. On the <span class="page-name">Wave page</span>, the same three parameters (Wave Name, Wave Type, and Delay) will always appear on the top line of the display, no matter which type of wave is selected:</p>
-<p>Wave Name            Wave Class           Delay before playing</p>
+<table class="param-cols cols-3"><tbody><tr><td>Wave Name</td><td>Wave Class</td><td>Delay before playing</td></tr></tbody></table>
 <h4 id="wave-name" class="param-name">Wave Name</h4>
 <p>Here you select the actual wave that the voice will play. When this parameter is underlined, the <kbd class="button">Data Entry Slider</kbd> will select only among the waves in the current wave class. Pressing the <kbd class="button">Up/Down Arrow</kbd> button will allow you to cross over into the next Wave Class.</p>
 <h4 id="wave-class">Wave Class</h4>
@@ -117,8 +117,7 @@
   
   
 </figure>
-<p>Loop Start            Wave Modulation                                         Wave Modulation</p>
-<p>Point                   Source                                                 Amount</p>
+<table class="param-cols cols-3"><tbody><tr><td>Loop Start</td><td>Wave Modulation</td><td>Wave Modulation</td></tr><tr><td>Point</td><td>Source</td><td>Amount</td></tr></tbody></table>
 <h4 id="index" class="param-name"><span class="param">INDEX</span><span class="range">Range: 00 to 99</span></h4>
 <p>The Index parameter controls where within the wavetable the voice-loop will begin playing when the key is struck.</p>
 <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: 00 to 99</span></h4>
@@ -159,7 +158,7 @@
   
   
 </figure>
-<p>Wave Name            Wave Class           Delay before playing</p>
+<table class="param-cols cols-3"><tbody><tr><td>Wave Name</td><td>Wave Class</td><td>Delay before playing</td></tr></tbody></table>
 <div class="vfd-callouts top"><div>Selects which step the WAVE-LIST will start with when a key is pressed.</div><div>Selects which step the Wave-List will use to start the loop when a key is held down.</div><div>Defines the last Wave in the list.</div></div>
 <h4 id="wave-name-2" class="param-name"><span class="param">Wave Name</span><span class="range">Range: Read only</span></h4>
 <p>The wave name parameter in a <span class="lcd">WAVE-LIST</span> is meaningless and is not selectable.</p>
@@ -793,12 +792,13 @@
   
   
 </figure>
-<h4 id="vol-2" class="param-name"><span class="param">VOL</span><span class="range">Range: +00 to +15 in incremental steps</span></h4>
+<h4 id="vol-2" class="param-name"><span class="param">VOL</span><span class="range">Range: +00 to +15</span></h4>
+<p>in incremental steps</p>
 <p>Controls the volume level of the sound(s) played by this key relative to the other keys in the drum-map. Setting this parameter to 00 does not necessarily silence the voice(s) playing the wave, and the actual volume minimum depends on the base volume level of the original waveform.</p>
 <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: various</span></h4>
 <p>Determines where the drum wave voice will be panned in the stereo mix. The values for the</p>
 <p><span class="param">PAN</span> parameter are:</p>
-<table class="defn-table"><tbody><tr><td><span class="lcd">*VOICE*</span></td><td>Uses Patch VOICE panning</td></tr><tr><td><span class="lcd">L------</span></td><td>Hard Left</td></tr><tr><td><span class="lcd">-L-----</span></td><td>Medium Left</td></tr><tr><td><span class="lcd">--L----</span></td><td>Soft Left</td></tr><tr><td><span class="lcd">---C---</span></td><td>Center</td></tr><tr><td><span class="lcd">----R--</span></td><td>Soft Right</td></tr><tr><td><span class="lcd">-----R-</span></td><td>Medium Right</td></tr><tr><td><span class="lcd">------R</span></td><td>Hard Right</td></tr></tbody></table>
+<table class="data-table lookup"><tbody><tr><td><span class="lcd">*VOICE*</span></td><td>Uses Patch VOICE panning</td></tr><tr><td>L------</td><td>Hard Left</td></tr><tr><td>-L-----</td><td>Medium Left</td></tr><tr><td>--L----</td><td>Soft Left</td></tr><tr><td>---C---</td><td>Center</td></tr><tr><td>----R--</td><td>Soft Right</td></tr><tr><td>-----R-</td><td>Medium Right</td></tr><tr><td>------R</td><td>Hard Right</td></tr></tbody></table>
 <aside class="note"><p>Note: When <span class="lcd">PAN=*VOICE*</span>, the key uses whatever pan setting is chosen on the <span class="page-name">Output page</span> of the voice(s) responding to the key. All of the other <span class="param">PAN</span> settings override the pan setting on the <span class="page-name">Output page</span>.</p></aside>
 <h4 id="pitch-2" class="param-name"><span class="param">PITCH</span><span class="range">Range: -16 to +15 semitones</span></h4>
 <p>The pitch of the selected wave can be raised or lowered in semitone steps. If a greater range or precision of tuning is required, then it is necessary to use pitch modulation on the <span class="page-name">Pitch Mods page</span> in the destination voice(s).</p>

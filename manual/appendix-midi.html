@@ -34,20 +34,19 @@
 <p>Include in your written request your name and address, and indicate that you would like a copy of the “TS-10 System Exclusive Specification.” Please allow 2 to 3 weeks for delivery.</p>
 <p>Registered Parameters Registered parameters are transmitted (as four sequential continuous controller messages) by the TS-10 whenever certain parameters are edited from the front panel. The two registered parameter controllers select the parameter and the following two data entry controllers specify the value.</p>
 <p>Controllers</p>
-<table class="defn-table"><thead><tr><th>Number</th><th>Name                                                   Value</th></tr></thead><tbody><tr><td><span class="lcd">100</span></td><td>Registered Parameter Select LSB                        00 or 01</td></tr><tr><td><span class="lcd">101</span></td><td>Registered Parameter Select MSB                        always 0</td></tr></tbody></table>
-<div class="vfd-callouts top"><div>6 38</div><div>Data Entry MSB (Most Significant Byte) Data Entry LSB(Least Significant Byte)</div><div>(see below) (see below)</div></div>
+<table class="param-cols cols-3"><tbody><tr><td>Number</td><td>Name</td><td>Value</td></tr></tbody></table>
+<table class="data-table"><tbody><tr><td>100</td><td>Registered Parameter Select LSB</td><td>00 or 01</td></tr><tr><td>101</td><td>Registered Parameter Select MSB</td><td>always 0</td></tr><tr><td>6</td><td>Data Entry MSB (Most Significant Byte)</td><td>(see below)</td></tr><tr><td>38</td><td>Data Entry LSB(Least Significant Byte)</td><td>(see below)</td></tr></tbody></table>
 <h2 id="registered-parameters">Registered Parameters</h2>
 <p>Number            Name                                     TS-10 parameter range</p>
-<table class="data-table"><tbody><tr><td>00</td><td>Pitch Bend Range</td><td>0..12..0H..12H</td></tr><tr><td>01</td><td>Fine Tuning</td><td>0..255 (displayed -99 to +99)</td></tr><tr><td>02</td><td>Coarse Tuning (GM Mode only)</td><td>0..127 (displayed -64 to +63)</td></tr></tbody></table>
+<table class="data-table lookup"><tbody><tr><td>00</td><td>Pitch Bend Range</td><td>0..12..0H..12H</td></tr><tr><td>01</td><td>Fine Tuning</td><td>0..255 (displayed -99 to +99)</td></tr><tr><td>02</td><td>Coarse Tuning (GM Mode only)</td><td>0..127 (displayed -64 to +63)</td></tr></tbody></table>
 <p>The parameter values are sent as two Data Entry controller messages:</p>
-<p>Parameter                 Data Entry MSB (6)                  Data Entry LSB (38)</p>
+<table class="param-cols cols-3"><tbody><tr><td>Parameter</td><td>Data Entry MSB (6)</td><td>Data Entry LSB (38)</td></tr></tbody></table>
 <p>Pitch Bend Range          0..25                               0</p>
 <p>Fine Tuning               0..127 (internal bits 1..7)         64 or 0 (internal bit 0)</p>
 <p>For Fine Tuning, which is an 8-bit value internally, the most significant 7 bits are offset by 64 and shifted once before being sent as Data Entry MSB (Controller 6). The least significant bit of the internal value is transmitted as bit 6 of Data Entry LSB (Controller 38).</p>
 <p>In most system modes, registered parameters 0 and 1 affect the <span class="page-name">System page</span> <span class="param">TUNE</span> and BEND parameters respectively (when received on the Base Channel only). In <span class="mode">General MIDI</span> mode, registered parameters 0, 1, and 2 are received multi-timbrally, and affect each Track/Channel independently.</p>
 <div class="vfd-callouts top"><div>MODEL: TS-10 Function…</div><div>MIDI Implementation Chart Transmitted</div><div>Version: 2.0 Recognized</div></div>
-<p>Basic            Default             1                              1</p>
-<p>Channel          Channels             1-16                           1-16</p>
+<table class="param-cols cols-4"><tbody><tr><td>Basic</td><td>Default</td><td>1</td><td>1</td></tr><tr><td>Channel</td><td>Channels</td><td>1-16</td><td>1-16</td></tr></tbody></table>
 <div class="vfd-callouts top"><div>1</div><div>1, 3, 4, MULTI</div><div>current mode is memorized</div></div>
 <p>Default</p>
 <div class="vfd-callouts top"><div>Messages Mode Altered</div><div>X Mode X</div><div>X X</div></div>
@@ -55,17 +54,16 @@
 <div class="vfd-callouts top"><div>Note ON Velocity</div><div>O 1</div><div>O</div></div>
 <p>A Note Off velocity of 64 is</p>
 <div class="vfd-callouts top"><div>Note OFF After</div><div>X1 Key</div><div>X O</div></div>
-<p>Touch        Channel              O                              O</p>
-<table class="data-table"><thead><tr><th>Pitch Bender</th><th>O</th><th>O</th></tr></thead><tbody><tr><td>1–127 External Controller</td><td>1–127 External Controller</td><td>assignable (<span class="param">XCTRL</span>)</td></tr><tr><td>0 Bank Select MSB</td><td>0 Bank Select MSB</td><td></td></tr><tr><td>1 Mod Wheel</td><td>1 Mod Wheel</td><td></td></tr><tr><td>4 Foot Pedal</td><td>4 Foot Pedal</td><td></td></tr><tr><td>6 Data Entry MSB2</td><td>6 Data Entry MSB2</td><td>2</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>Touch</td><td>Channel</td><td>O</td><td>O</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>Pitch Bender</td><td>O</td><td>O</td></tr></tbody></table>
+<div class="vfd-callouts top"><div>1–127 External Controller 0 Bank Select MSB 1 Mod Wheel 4 Foot Pedal 6 Data Entry MSB2</div><div>1–127 External Controller 0 Bank Select MSB 1 Mod Wheel 4 Foot Pedal 6 Data Entry MSB2</div><div>assignable (XCTRL) 2</div></div>
 <p>for Reg. Params only after</p>
 <div class="vfd-callouts top"><div>7 Volume Control</div><div>7 Volume 10 Pan</div><div>100 &amp; 101 are transmitted 10 Pan</div></div>
 <p>Change 12 Effect Mod Foot Switch 12 Effect Mod Foot Switch 32 Bank Select LSB 32 Bank Select LSB 38 Data Entry LSB2 38 Data Entry LSB2</p>
-<h3 id="64-sustain-64-sustain" class="algo">64 Sustain                     64 Sustain</h3>
-<h3 id="66-sostenuto-66-sostenuto" class="algo">66 Sostenuto                   66 Sostenuto</h3>
+<table class="param-cols"><tbody><tr><td>64 Sustain</td><td>64 Sustain</td></tr><tr><td>66 Sostenuto</td><td>66 Sostenuto</td></tr></tbody></table>
 <div class="vfd-callouts top"><div>70 Sound Variation3</div><div>70 Sound Variation3</div><div>3 Patch Selects; values of 0,</div></div>
 <div class="vfd-callouts top"><div>71 Harmonic Content4 72 Release Time</div><div>71 Harmonic Content4 72 Release Time</div><div>32, 64, 127 4 Timbre</div></div>
-<p>73 Attack Time                 73 Attack Time</p>
-<h3 id="74-brightness-74-brightness" class="algo">74 Brightness                  74 Brightness</h3>
+<table class="param-cols"><tbody><tr><td>73 Attack Time</td><td>73 Attack Time</td></tr><tr><td>74 Brightness</td><td>74 Brightness</td></tr></tbody></table>
 <p>75 Rate (LFO &amp;/or Duration)    75 Rate (LFO &amp;/or Duration)</p>
 <div class="vfd-callouts top"><div>100 Reg. Param. Select LSB5</div><div>100 Reg. Param. Select LSB5</div><div>5 values of 0 &amp; 1 only</div></div>
 <div class="vfd-callouts top"><div>101 Reg. Param. Select MSB6</div><div>101 Reg. Param. Select MSB6</div><div>6 always 0</div></div>
@@ -73,14 +71,9 @@
 <h4 id="true-number" class="param-name">True Number</h4>
 <p>Change                                0-127                          0-119                   in <span class="value">MULTI</span> &amp; MONO B</p>
 <div class="vfd-callouts top"><div>System Exclusive</div><div>O</div><div>O</div></div>
-<p>System : Song Pos                     O                              O</p>
-<p>Common : Song Sel                     O                              O</p>
-<div class="vfd-callouts top"><div>: Tune</div><div>X</div><div>X</div></div>
-<p>System : Clocks                      O                              O</p>
+<table class="data-table lookup"><tbody><tr><td>System : Song Pos</td><td>O</td><td>O</td></tr><tr><td>Common : Song Sel</td><td>O</td><td>O</td></tr><tr><td>: Tune</td><td>X</td><td>X</td></tr><tr><td>System : Clocks</td><td>O</td><td>O</td></tr></tbody></table>
 <div class="vfd-callouts top"><div>Real Time : Commands</div><div>O7</div><div>O7</div></div>
-<div class="vfd-callouts top"><div>: Local On/Off Aux.</div><div>X : All Notes Off</div><div>X O</div></div>
-<p>Messages : Active Sense                X                              X</p>
-<div class="vfd-callouts top"><div>: Reset</div><div>O</div><div>O</div></div>
+<table class="data-table lookup"><tbody><tr><td>: Local On/Off</td><td>X</td><td>X</td></tr><tr><td>Aux.   : All Notes Off</td><td>O</td><td>O</td></tr><tr><td>Messages : Active Sense</td><td>X</td><td>X</td></tr><tr><td>: Reset</td><td>O</td><td>O</td></tr></tbody></table>
 <p>Notes</p>
 <div class="vfd-callouts top"><div>Mode 1= OMNI ON, POLY Mode 3= OMNI OFF, POLY</div><div>Mode 2= OMNI ON, MONO Mode 4= OMNI OFF, MONO</div><div>O = YES X = NO</div></div>
   </article>

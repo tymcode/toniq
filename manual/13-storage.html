@@ -79,10 +79,7 @@
 <p>• High-Density disks — can store 1600 kilobytes of data, which translates into about 3200 Blocks.</p>
 <p>A Block is a handy unit that the TS-10 uses to measure internal and disk memory — 1 Block=512 bytes=256 sample words; 2 Blocks=1k bytes; 4 Blocks=1k sample words.</p>
 <p>TS-10 disk files vary in size — how many will fit on a disk depends on the number and size of the files. Whenever you are on the <span class="page-name">DISK LOAD page</span> the display shows the size in blocks of each file on the disk. When you are on the <span class="page-name">DISK SAVE page</span> the display shows the number of free blocks available on the disk in the drive.</p>
-<p>Disk Type         High -Density       Double-Density</p>
-<div class="vfd-callouts top"><div>Kilobytes</div><div>1600</div><div>800</div></div>
-<p>Sample Words            800k                400k</p>
-<div class="vfd-callouts top"><div>Blocks</div><div>3176</div><div>1585</div></div>
+<table class="param-cols cols-3"><tbody><tr><td>Disk Type</td><td>High -Density</td><td>Double-Density</td></tr><tr><td>Kilobytes</td><td>1600</td><td>800</td></tr><tr><td>Sample Words</td><td>800k</td><td>400k</td></tr><tr><td>Blocks</td><td>3176</td><td>1585</td></tr></tbody></table>
 <p>There are limits to the number of files on a TS-10 disk:</p>
 <p>• Each disk can hold a maximum of 78 files.</p>
 <p>• A disk can hold up to 60 files of any one file type, but not more than the total of 78 files of all types for a single disk.</p>
@@ -158,9 +155,7 @@
 <p>• Press DISK. The Disk Storage menu appears.</p>
 <p>• Press SAVE. The Save File display appears as shown above. The file type is underlined.</p>
 <p>• Select the file type you want to save from among the available types:</p>
-<p>1-PROGRAM               1-PRESET                 1-SEQ/SONG               <span class="param">SYS-EX</span>-DATA</p>
-<p>6-PROGRAMS              60-PRESETS               30-SEQ/SONGS             SYSTEM-SETUP</p>
-<p>60-PROGRAMS             120-PRESETS              60-SEQ/SONGS             SAMPLE-BANKS</p>
+<table class="param-cols cols-4"><tbody><tr><td>1-PROGRAM</td><td>1-PRESET</td><td>1-SEQ/SONG</td><td><span class="param">SYS-EX</span>-DATA</td></tr><tr><td>6-PROGRAMS</td><td>60-PRESETS</td><td>30-SEQ/SONGS</td><td>SYSTEM-SETUP</td></tr><tr><td>60-PROGRAMS</td><td>120-PRESETS</td><td>60-SEQ/SONGS</td><td>SAMPLE-BANKS</td></tr></tbody></table>
 <p>120-PROGRAMS                                                              SAMPLE-EDITS</p>
 <p>• Select a source bank (if applicable). For the file types 6–PROGRAMS and 30–SEQ/SONGS, you will see a <span class="lcd">SELECT=BANK(</span>s) location beneath the file type, and for the file types 60–PROGRAMS and 60–PRESETS you will see a <span class="lcd">SELECT=BANKSET</span> location beneath the file type, as shown above. This defaults to the current <dfn class="term">BankSet</dfn> (or bank). If you want to save a different <dfn class="term">BankSet</dfn> (or bank) than what is showing, select this field and change it using the data entry controls.</p>
 <p>• Press <span class="lcd">*YES*</span>. The display showsthe Name File page.</p>
@@ -217,9 +212,7 @@
 <p>• Press DISK. The Disk Storage menu appears.</p>
 <p>• Press LOAD. The Load File display appears as shown above. The file type is underlined.</p>
 <p>• Select the file type you want from among the available types:</p>
-<p>1-PROGRAM                 1-PRESET                  1-SEQ/SONG                <span class="param">SYS-EX</span>-DATA</p>
-<p>6-PROGRAMS                60-PRESETS                30-SEQ/SONGS              SYSTEM-SETUP</p>
-<p>60-PROGRAMS               120-PRESETS               60-SEQ/SONGS              SAMPLE-BANKS</p>
+<table class="param-cols cols-4"><tbody><tr><td>1-PROGRAM</td><td>1-PRESET</td><td>1-SEQ/SONG</td><td><span class="param">SYS-EX</span>-DATA</td></tr><tr><td>6-PROGRAMS</td><td>60-PRESETS</td><td>30-SEQ/SONGS</td><td>SYSTEM-SETUP</td></tr><tr><td>60-PROGRAMS</td><td>120-PRESETS</td><td>60-SEQ/SONGS</td><td>SAMPLE-BANKS</td></tr></tbody></table>
 <p>120-PROGRAMS                                                                  SAMPLE-EDITS</p>
 <aside class="tip"><p>Press the <kbd class="button">Storage</kbd> button twice to get to the Load File display quickly.</p></aside>
 <p>• Press the soft button above the file name and use the data entry controls to find the file you want, or you can use the File Banks to quickly locate the file without scrolling (see below).</p>
@@ -337,7 +330,7 @@
 <p>If we were to locate the sound SOLO VIOLIN in the Example Directory Structure using the</p>
 <h3 id="direct-dial-feature-you-would-enter-41204">Direct-Dial feature, you would enter 41204:</h3>
 <div class="vfd-callouts top"><div>This number: selects:</div><div>4 SCSI DEVICE ID</div><div>1 STRINGED</div></div>
-<div class="vfd-callouts top"><div>which is:</div><div>SCSI DEVICE-ID</div><div>Main Directory</div></div>
+<table class="param-cols cols-5"><tbody><tr><td>which is:</td><td>SCSI <span class="param">DEVICE-ID</span></td><td>Main Directory</td><td>Sub-Directory</td><td>File Number</td></tr></tbody></table>
 <aside class="note"><p>Note: All <span class="function">Direct-Macro</span> operations are performed with the top left soft button above the file name held down, and take effect when the button is released.</p></aside>
 <p>It is not necessary to enter the SCSI Device ID digit unless you are changing SCSI Storage Devices. When working with a CD-ROM, four digits are all you need to enter, because CD ROM drives containg ENSONIQ CD-ROMs should always be set to SCSI ID #4. If you make a mistake, type up to six digits; the sixth digit entered will start over at the first digit of your next attempt.</p>
 <h3 id="midi-sys-ex">MIDI SYS-EX</h3>

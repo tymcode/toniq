@@ -666,7 +666,26 @@ table.param-cols {
 table.param-cols td {
   vertical-align: top;
   padding: 0.12rem 1.1rem 0.12rem 0;
+}
+
+table.param-cols.cols-2 td {
   width: 50%;
+}
+
+table.param-cols.cols-3 td {
+  width: 33.33%;
+}
+
+table.param-cols.cols-4 td {
+  width: 25%;
+}
+
+table.param-cols.cols-5 td {
+  width: 20%;
+}
+
+table.param-cols.cols-6 td {
+  width: 16.66%;
 }
 
 table.data-table {
@@ -704,6 +723,64 @@ table.data-table th {
 table.data-table.lookup td {
   text-align: right;
   white-space: nowrap;
+}
+
+table.data-table.delay-tempo-chart td {
+  text-align: right;
+  white-space: nowrap;
+}
+
+table.data-table.delay-tempo-chart td:nth-child(5n + 1) {
+  text-align: left;
+}
+
+.delay-tempo-calculator {
+  margin: 1.25rem 0 1.5rem;
+  padding: 1rem 1.1rem 1.15rem;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+.delay-tempo-calculator h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.delay-tempo-calc-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.85rem;
+  margin: 0.75rem 0 0.9rem;
+  font-family: var(--font-ui);
+}
+
+.delay-tempo-calc-form label {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.delay-tempo-calc-form input[type="number"] {
+  width: 6.5rem;
+  padding: 0.35rem 0.55rem;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: #fff;
+}
+
+.delay-tempo-calc-results {
+  margin: 0;
+  max-width: 28rem;
+}
+
+.delay-tempo-calc-results td:last-child {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 
 table.data-table.lookup td:nth-child(even) {

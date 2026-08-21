@@ -27,7 +27,6 @@
     <p>In this section, we will show you how to edit a TS-10 Program. For detailed descriptions of the many parameters, refer to the following section.</p>
 <h2 id="what-is-a-program">What is a Program?</h2>
 <p>A program (or sound as we sometimes refer to it) is made up of six voices and one effect. The status of the two <kbd class="button">Patch Select</kbd> buttons determines which of those six voices will play at any given time. The diagram below illustrates the make-up of a TS-10 program:</p>
-<figure class="figure"><img src="images/program-structure.png" alt="TS-10 program structure: Patch Select variations, six voices, destination bus, dynamic effects, Main and Aux outputs"><figcaption>TS-10 program structure.</figcaption></figure>
 <p>Understanding Voices and Polyphony When referring to the number of voices in a program, we are not talking about polyphony (as in “you can only play so many notes”). Instead, we are referring to the number of voices that will sound on each key as you play the program. The TS-10 is unique in that it lets you choose the number of voices (from one to six) per key for each program.</p>
 <p>The TS-10 has a total of 32 voices which are dynamically assigned to the different sounds that you play (31 voices when Sampled Sounds are loaded into Dynamic RAM). How many voices a sound uses on each key depends on the program. Many sounds use only one voice — in the case of these sounds, you can play 32 notes before “voice stealing” occurs. On programs that use two voices, you can play 16 notes before any voices are stolen. Three voices, 10 notes, and so on. Up to six voices can be active in one program.</p>
 <p>The TS-10 is “smart” about voice allocation — there are a number of things you can do to increase the apparent polyphony of a sound and to minimize the effects of voice stealing. For example:</p>
@@ -123,11 +122,10 @@
 <p>• Press the RECALL soft button. This puts you back on the <span class="page-name">Write page</span>, with the new program showing. Now proceed exactly as described above to write the program to the new location.</p>
 <p>Voice Programming This section covers those functions which can be edited independently for each individual voice within the program.</p>
 <p>Programming</p>
-<p>LFO     Env 1   Env 2        Env 3</p>
-<h2 id="pitch-voice-programming-pages">Pitch                          Voice Programming Pages</h2>
-<p>Pitch  Filters    Output Mods</p>
-<div class="vfd-callouts top"><div>Mod</div><div>Program</div><div>Program</div></div>
-<p>Wave    Mixer    Control    Effects</p>
+<table class="param-cols cols-3"><tbody><tr><td>LFO</td><td>Env 1   Env 2</td><td>Env 3</td></tr></tbody></table>
+<table class="param-cols"><tbody><tr><td>Pitch</td><td>Voice Programming Pages</td></tr><tr><td>Pitch  Filters</td><td>Output Mods</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>Mod</td><td>Program</td><td>Program</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>Wave</td><td>Mixer</td><td>Control</td><td>Effects</td></tr></tbody></table>
 <p>Layer       Effects</p>
 <h3 id="ts-10-voice-configuration">TS-10 Voice Configuration</h3>
 <p>Each of the six voices within a TS-10 program consists of:</p>
@@ -238,14 +236,7 @@
 <p>Each TS-10 voice will play one of the 254 waves in its memory. These waves are the “raw material” from which TS-10 programs are crafted. On the <span class="page-name">Wave page</span> you can choose which wave the currently selected voice will play, and modify the various playback parameters of the wave.</p>
 <h4 id="wave-class">Wave Class</h4>
 <p>The TS-10 waves are divided into 16 categories, or Wave Classes:</p>
-<p><span class="lcd">KEYBOARD</span>                         <span class="lcd">PERCUSSION</span></p>
-<p><span class="lcd">STRING-SOUND</span>                     <span class="lcd">TUNED-PERCUS</span></p>
-<p><span class="lcd">BRASS+HORNS</span>                      <span class="lcd">SOUND-EFFECT</span></p>
-<p><span class="lcd">WIND+REEDS</span>                       <span class="lcd">WAVEFORM</span></p>
-<p><span class="lcd">VOCAL-SOUND</span>                      <span class="lcd">INHARMONIC</span></p>
-<p><span class="lcd">BASS-SOUND</span>                       <span class="lcd">TRANSWAVE</span></p>
-<p><span class="lcd">DRUM-SOUND</span>                       <span class="lcd">WAVE-LIST</span></p>
-<p><span class="lcd">CYMBALS</span>                          <span class="lcd">DRUM-MAP</span></p>
+<table class="param-cols"><tbody><tr><td><span class="lcd">KEYBOARD</span></td><td><span class="lcd">PERCUSSION</span></td></tr><tr><td><span class="lcd">STRING-SOUND</span></td><td><span class="lcd">TUNED-PERCUS</span></td></tr><tr><td><span class="lcd">BRASS+HORNS</span></td><td><span class="lcd">SOUND-EFFECT</span></td></tr><tr><td><span class="lcd">WIND+REEDS</span></td><td><span class="lcd">WAVEFORM</span></td></tr><tr><td><span class="lcd">VOCAL-SOUND</span></td><td><span class="lcd">INHARMONIC</span></td></tr><tr><td><span class="lcd">BASS-SOUND</span></td><td><span class="lcd">TRANSWAVE</span></td></tr><tr><td><span class="lcd">DRUM-SOUND</span></td><td><span class="lcd">WAVE-LIST</span></td></tr><tr><td><span class="lcd">CYMBALS</span></td><td><span class="lcd">DRUM-MAP</span></td></tr></tbody></table>
 <p>The first eleven wave classes contain samples of real acoustic and electronic sounds, which can be used as the basis for a wide variety of realistic musical sounds. Where necessary, these waves have been multi-sampled (sampled at many points through the range of the instrument) for maximum accuracy.</p>
 <p>The next three wave classes contain a variety of sampled and algorithmically generated waves that are more “synthesizer” oriented:</p>
 <p>• <span class="lcd">WAVEFORM</span> - A waveform is a single cycle of a sound repeated over and over. The TS-10 contains both sampled and synthetic waveforms. Waveforms such as Sawtooth and Square can be used to reproduce a wide array of analog synth sounds.</p>
@@ -255,72 +246,25 @@
 <p>• <span class="lcd">WAVE-LIST</span> - up to sixteen user-definable waveforms are linked together to create a single wave-list. Any of the internal waveforms can be used, and can be played in any order, forward or backward, to create effects and “jam-loops.”</p>
 <p>• <span class="lcd">DRUM-MAP</span> - Up to 61 different waves can be assigned to each key of the keyboard to create “custom” drum-maps. Individual keys can be assigned their own volume levels, panning, pitch, and voice parameter template.</p>
 <p>Complete  TS-10 ROM Wave Catalog The wave class is shown in bold at the top of each ROM Wave group.</p>
-<p><span class="lcd">KEYBOARD</span>:         <span class="lcd">WIND+REEDS</span>:        <span class="lcd">DRUM-SOUND</span>          <span class="lcd">TUNED-PERCUS</span>:     <span class="lcd">INHARMONIC</span>:</p>
-<div class="vfd-callouts top"><div>GND-PIANO</div><div>SOPRN-SAX</div><div>(continued):</div></div>
-<p>PNO-THUD          SOPRN-SAX2         SIDESTK-2           MARIMBA           BIG-BELL</p>
-<p>EL-PIANO1         ALTO-SAX           BRUSH-SCR           XYLOPHONE         CRYSTAL</p>
-<p>EL-PIANO2         TENOR-SAX          BRUSH-TAP           GLOCKEN           SYNTHBELL</p>
-<p>EL-PIANO3         CLARINET           BRUSH-OPN           TYMPANI           NOISE</p>
-<p>EL-PIANO4         OBOE               BRUSH-HIT           TUNED-TOM         AIR-<span class="param">LOOP</span></p>
-<p>EL-PIANO5         OBOE-VAR           DANCE-SNR           TUNED-LOG         SPINNER-1</p>
-<p>WURLIE-LO         FLUTE              HIPHOP-SN           STEEL-DRM         SPINNER-2</p>
-<p>WURLIE-HI         FOLKFLUTE          SYNSNAR-1           KALIMBA           TEXTURE-1</p>
-<p>ROCK-ORGN         PANFLUTE           SYNSNAR-2           GAM-BELL          TEXTURE-2</p>
-<p>JAZZ-ORGN         CHIFFLUTE          SYNSNAR-3           DOORBELL          METL-<span class="param">LOOP</span></p>
-<p>ROTARYORG         SHAKU              SYN-STICK           WHISTLE</p>
-<p>ORGAN-1           HARMONICA          DRY-TOM             DANCE-HIT         <span class="lcd">TRANSWAVE</span>:</p>
-<p>ORGAN-1           ACCORDION          ROOM-TOM1           ORCH-HIT          BELL-XWV1</p>
-<p>PIPE-ORGN                            ROOM-TOM2                             BELL-XWV2</p>
-<p>REED-ORGN         <span class="lcd">VOCAL-SOUND</span>:       BRUSH-TOM           <span class="lcd">SOUND-EFFECT</span>:     RESONANCE</p>
-<p>CELESTE           CHOIR              SYN-DRUM1           BIRD-SONG         XWAVE-EE</p>
-<p>HARPSICRD         VOCAL-OOH          SYN-DRUM2           APPLAUSE          XWAVE-AY</p>
-<p>SYNTH-PAD         VOCAL-AAH          SYN-DRUM3           TELEPHONE         XWAVE-AA</p>
-<p>SYNTH-ANA         VOCAL-SYN                              AN-<span class="value">OLD</span>-45         XWAVE-OH</p>
-<p>SYNTH-VOX                            <span class="lcd">CYMBALS</span>:            MACHINE           XWAVE-Z</p>
-<p><span class="lcd">BASS-SOUND</span>:        CLO-HAT-1           CLICKER-1</p>
-<p><span class="lcd">STRING-SOUND</span>:     EL-BASS-1          CLO-HAT-2           CLICKER-2</p>
-<p>NYLON-GTR         EL-BASS-2          OPN-HAT-1           BELL-<span class="param">LOOP</span></p>
-<p>STEEL-GTR         EL-BASS-3          OPN-HAT-2</p>
-<p>GTR-VAR           SLAP-BASS          <span class="param">PEDAL</span>-HAT           <span class="lcd">WAVEFORM</span>:</p>
-<p>FRETNOISE         PICK-BASS          CRASH-CYM           SINE-WAVE</p>
-<p>NYLON-HRM         MUTE-BASS          CHINA-CYM           SQUARE-WV</p>
-<p>ELEC-GTR1         BASS-TAP           RIDE-CYM            SAW-WAVE1</p>
-<p>ELEC-GTR2         FRETLESS           RIDE-BELL           SAW-WAVE2</p>
-<p>ELEC-GTR3         BS-HARMS           SYN-HAT-CL          TRI-WAVE</p>
-<p>DIST-GTR          AC-BASS            SYN-HAT-OP          ORG-WAVE1</p>
-<p>MUTE-GTR          BASS-THUD                              ORG-WAVE2</p>
-<p>GTR-HARM          FM-BASS            <span class="lcd">PERCUSSION</span>:         ORG-WAVE3</p>
-<p>HARP              SYNBASS-1          CONGA-MT            ORG-WAVE4</p>
-<p>OCT-HARP          SYNBASS-2          CONGA-SLP           ORG-WAVE5</p>
-<p>STRINGS           SYNBASS-3          CONGA-HI            ORG-WAVE6</p>
-<p>PIZZ-SECT         ANABASS-1          CONGA-LO            CH-ORG-WV</p>
-<p>SOLOVIOLN         ANABASS-2          TIMBALI             BEL-WAVE1</p>
-<p>SOLOCELLO         ANABASS-3          BONGO               BEL-WAVE2</p>
-<p>SOLO-PIZZ         ANABASS-4          TABLA-SLP           BEL-WAVE3</p>
-<p>TECHSTRNG                            TABLA-HI            BEL-WAVE4</p>
-<p>GOTO              <span class="lcd">DRUM-SOUND</span>:        TABLA-LO            BEL-WAVE5</p>
-<p>BIWA              ROOM-KICK          TAIKO               BEL-WAVE6</p>
-<p>SHAMISEN          REAL-KICK          SHAKER              BEL-WAVE7</p>
-<p>SITAR             ROCK-KICK          CABASA              DBL-REED</p>
-<p>BANJO             JAZZ-KICK          MARACAS             SNGL-REED</p>
-<p>DULCIMER          FAT-KICK           HI-BLOCK            CLAV-WAVE</p>
-<p>R+B-KICK           LO-BLOCK            PAD-WAVE1</p>
-<p><span class="lcd">BRASS+HORNS</span>:      KICK-1             CLAVE               PAD-WAVE2</p>
-<p>TRUMPET           SYNKICK-1          CASTANETS           PAD-WAVE3</p>
-<p>FLUGELHRN         SYNKICK-2          GUIRO               PAD-WAVE4</p>
-<p>MUTE-TRMP         SYNKICK-3          CUICA               PAD-WAVE5</p>
-<p>PICO-TRMP         DANCE-KIK          VIBRASLAP           PAD-WAVE6</p>
-<p>TROMBONE          <span class="param">LOOP</span>-KICK          COWBELL             5THS-WAVE</p>
-<p>TUBA              REALSNARE          AGOGO-BEL           VOCAL-WV</p>
-<p>TRUMP-SEC         ROCKSNARE          TAMBORINE           DIGI-WAVE</p>
-<p>FRHRN-SEC         DEEPSNARE          TAMB-<span class="param">LOOP</span>           ANDROMEDA</p>
-<p>TBONE-SEC         GATESNARE          TRIANGLE            SYNKEY-WV</p>
-<p>FUNKSNARE          METALPIPE           ANA-WAVE1</p>
-<p>JAZZSNARE       WINDCHIME   ANA-WAVE2</p>
-<p>SNARE-ROL       WNDCHIME2   ANA-WAVE3</p>
-<p>RIMSHOT-1       FNGR-SNAP   ANA-WAVE4</p>
-<p>RIMSHOT-2       SYN-CLAPS   METL-WAVE</p>
-<p>SIDESTK-1       SYN-KISS</p>
+<table class="param-cols cols-5"><tbody><tr><td><span class="lcd">KEYBOARD</span>:</td><td><span class="lcd">WIND+REEDS</span>:</td><td><span class="lcd">DRUM-SOUND</span></td><td><span class="lcd">TUNED-PERCUS</span>:</td><td><span class="lcd">INHARMONIC</span>:</td></tr></tbody></table>
+<table class="data-table lookup"><tbody><tr><td>GND-PIANO</td><td>SOPRN-SAX</td><td>(continued):</td><td>VIBRAPHON</td><td>TUBULAR</td></tr><tr><td>PNO-THUD</td><td>SOPRN-SAX2</td><td>SIDESTK-2</td><td>MARIMBA</td><td>BIG-BELL</td></tr><tr><td>EL-PIANO1</td><td>ALTO-SAX</td><td>BRUSH-SCR</td><td>XYLOPHONE</td><td>CRYSTAL</td></tr><tr><td>EL-PIANO2</td><td>TENOR-SAX</td><td>BRUSH-TAP</td><td>GLOCKEN</td><td>SYNTHBELL</td></tr><tr><td>EL-PIANO3</td><td>CLARINET</td><td>BRUSH-OPN</td><td>TYMPANI</td><td>NOISE</td></tr><tr><td>EL-PIANO4</td><td>OBOE</td><td>BRUSH-HIT</td><td>TUNED-TOM</td><td>AIR-<span class="param">LOOP</span></td></tr><tr><td>EL-PIANO5</td><td>OBOE-VAR</td><td>DANCE-SNR</td><td>TUNED-LOG</td><td>SPINNER-1</td></tr><tr><td>WURLIE-LO</td><td>FLUTE</td><td>HIPHOP-SN</td><td>STEEL-DRM</td><td>SPINNER-2</td></tr><tr><td>WURLIE-HI</td><td>FOLKFLUTE</td><td>SYNSNAR-1</td><td>KALIMBA</td><td>TEXTURE-1</td></tr><tr><td>ROCK-ORGN</td><td>PANFLUTE</td><td>SYNSNAR-2</td><td>GAM-BELL</td><td>TEXTURE-2</td></tr><tr><td>JAZZ-ORGN</td><td>CHIFFLUTE</td><td>SYNSNAR-3</td><td>DOORBELL</td><td>METL-<span class="param">LOOP</span></td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>ROTARYORG</td><td>SHAKU</td><td>SYN-STICK</td><td>WHISTLE</td></tr></tbody></table>
+<table class="param-cols cols-5"><tbody><tr><td>ORGAN-1</td><td>HARMONICA</td><td>DRY-TOM</td><td>DANCE-HIT</td><td><span class="lcd">TRANSWAVE</span>:</td></tr><tr><td>ORGAN-1</td><td>ACCORDION</td><td>ROOM-TOM1</td><td>ORCH-HIT</td><td>BELL-XWV1</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>PIPE-ORGN</td><td>ROOM-TOM2</td><td>BELL-XWV2</td></tr></tbody></table>
+<table class="param-cols cols-5"><tbody><tr><td>REED-ORGN</td><td><span class="lcd">VOCAL-SOUND</span>:</td><td>BRUSH-TOM</td><td><span class="lcd">SOUND-EFFECT</span>:</td><td>RESONANCE</td></tr><tr><td>CELESTE</td><td>CHOIR</td><td>SYN-DRUM1</td><td>BIRD-SONG</td><td>XWAVE-EE</td></tr><tr><td>HARPSICRD</td><td>VOCAL-OOH</td><td>SYN-DRUM2</td><td>APPLAUSE</td><td>XWAVE-AY</td></tr><tr><td>SYNTH-PAD</td><td>VOCAL-AAH</td><td>SYN-DRUM3</td><td>TELEPHONE</td><td>XWAVE-AA</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>SYNTH-ANA</td><td>VOCAL-SYN</td><td>AN-<span class="value">OLD</span>-45</td><td>XWAVE-OH</td></tr><tr><td>SYNTH-VOX</td><td><span class="lcd">CYMBALS</span>:</td><td>MACHINE</td><td>XWAVE-Z</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td><span class="lcd">BASS-SOUND</span>:</td><td>CLO-HAT-1</td><td>CLICKER-1</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td><span class="lcd">STRING-SOUND</span>:</td><td>EL-BASS-1</td><td>CLO-HAT-2</td><td>CLICKER-2</td></tr><tr><td>NYLON-GTR</td><td>EL-BASS-2</td><td>OPN-HAT-1</td><td>BELL-<span class="param">LOOP</span></td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>STEEL-GTR</td><td>EL-BASS-3</td><td>OPN-HAT-2</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>GTR-VAR</td><td>SLAP-BASS</td><td><span class="param">PEDAL</span>-HAT</td><td><span class="lcd">WAVEFORM</span>:</td></tr><tr><td>FRETNOISE</td><td>PICK-BASS</td><td>CRASH-CYM</td><td>SINE-WAVE</td></tr><tr><td>NYLON-HRM</td><td>MUTE-BASS</td><td>CHINA-CYM</td><td>SQUARE-WV</td></tr><tr><td>ELEC-GTR1</td><td>BASS-TAP</td><td>RIDE-CYM</td><td>SAW-WAVE1</td></tr><tr><td>ELEC-GTR2</td><td>FRETLESS</td><td>RIDE-BELL</td><td>SAW-WAVE2</td></tr><tr><td>ELEC-GTR3</td><td>BS-HARMS</td><td>SYN-HAT-CL</td><td>TRI-WAVE</td></tr><tr><td>DIST-GTR</td><td>AC-BASS</td><td>SYN-HAT-OP</td><td>ORG-WAVE1</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>MUTE-GTR</td><td>BASS-THUD</td><td>ORG-WAVE2</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>GTR-HARM</td><td>FM-BASS</td><td><span class="lcd">PERCUSSION</span>:</td><td>ORG-WAVE3</td></tr><tr><td>HARP</td><td>SYNBASS-1</td><td>CONGA-MT</td><td>ORG-WAVE4</td></tr><tr><td>OCT-HARP</td><td>SYNBASS-2</td><td>CONGA-SLP</td><td>ORG-WAVE5</td></tr><tr><td>STRINGS</td><td>SYNBASS-3</td><td>CONGA-HI</td><td>ORG-WAVE6</td></tr><tr><td>PIZZ-SECT</td><td>ANABASS-1</td><td>CONGA-LO</td><td>CH-ORG-WV</td></tr><tr><td>SOLOVIOLN</td><td>ANABASS-2</td><td>TIMBALI</td><td>BEL-WAVE1</td></tr><tr><td>SOLOCELLO</td><td>ANABASS-3</td><td>BONGO</td><td>BEL-WAVE2</td></tr><tr><td>SOLO-PIZZ</td><td>ANABASS-4</td><td>TABLA-SLP</td><td>BEL-WAVE3</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>TECHSTRNG</td><td>TABLA-HI</td><td>BEL-WAVE4</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>GOTO</td><td><span class="lcd">DRUM-SOUND</span>:</td><td>TABLA-LO</td><td>BEL-WAVE5</td></tr><tr><td>BIWA</td><td>ROOM-KICK</td><td>TAIKO</td><td>BEL-WAVE6</td></tr><tr><td>SHAMISEN</td><td>REAL-KICK</td><td>SHAKER</td><td>BEL-WAVE7</td></tr><tr><td>SITAR</td><td>ROCK-KICK</td><td>CABASA</td><td>DBL-REED</td></tr><tr><td>BANJO</td><td>JAZZ-KICK</td><td>MARACAS</td><td>SNGL-REED</td></tr><tr><td>DULCIMER</td><td>FAT-KICK</td><td>HI-BLOCK</td><td>CLAV-WAVE</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>R+B-KICK</td><td>LO-BLOCK</td><td>PAD-WAVE1</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td><span class="lcd">BRASS+HORNS</span>:</td><td>KICK-1</td><td>CLAVE</td><td>PAD-WAVE2</td></tr><tr><td>TRUMPET</td><td>SYNKICK-1</td><td>CASTANETS</td><td>PAD-WAVE3</td></tr><tr><td>FLUGELHRN</td><td>SYNKICK-2</td><td>GUIRO</td><td>PAD-WAVE4</td></tr><tr><td>MUTE-TRMP</td><td>SYNKICK-3</td><td>CUICA</td><td>PAD-WAVE5</td></tr><tr><td>PICO-TRMP</td><td>DANCE-KIK</td><td>VIBRASLAP</td><td>PAD-WAVE6</td></tr><tr><td>TROMBONE</td><td><span class="param">LOOP</span>-KICK</td><td>COWBELL</td><td>5THS-WAVE</td></tr><tr><td>TUBA</td><td>REALSNARE</td><td>AGOGO-BEL</td><td>VOCAL-WV</td></tr><tr><td>TRUMP-SEC</td><td>ROCKSNARE</td><td>TAMBORINE</td><td>DIGI-WAVE</td></tr><tr><td>FRHRN-SEC</td><td>DEEPSNARE</td><td>TAMB-<span class="param">LOOP</span></td><td>ANDROMEDA</td></tr><tr><td>TBONE-SEC</td><td>GATESNARE</td><td>TRIANGLE</td><td>SYNKEY-WV</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>FUNKSNARE</td><td>METALPIPE</td><td>ANA-WAVE1</td></tr></tbody></table>
+<table class="param-cols"><tbody><tr><td>JAZZSNARE</td><td>WINDCHIME   ANA-WAVE2</td></tr><tr><td>SNARE-ROL</td><td>WNDCHIME2   ANA-WAVE3</td></tr><tr><td>RIMSHOT-1</td><td>FNGR-SNAP   ANA-WAVE4</td></tr><tr><td>RIMSHOT-2</td><td>SYN-CLAPS   METL-WAVE</td></tr><tr><td>SIDESTK-1</td><td>SYN-KISS</td></tr></tbody></table>
 <h4 id="rattle" class="param-name">RATTLE</h4>
 <p>Using  the Copy Functions The <span class="page-name">Copy page</span> provides programming utility functions for:</p>
 <p>• copying entire pages of parameter data at once while programming voices</p>
@@ -336,8 +280,7 @@
 <p>• Press <kbd class="button">Copy</kbd> again. You will be returned to the <span class="page-name">Wave page</span>.</p>
 <p>There is a well-defined group of copy contexts that are available for your use. The copy context is set whenever you select pages from within this group. The following table shows the copy context that is automatically set whenever particular pages are displayed.</p>
 <p>Prior page...                Copy context         What gets copied...</p>
-<p>LFO                          ALL</p>
-<p>LFO              all</p>
+<table class="param-cols"><tbody><tr><td>LFO</td><td>ALL</td></tr><tr><td>LFO</td><td>all</td></tr></tbody></table>
 <p><span class="page-name">LFO page</span> parameters</p>
 <div class="vfd-callouts top"><div>ENV1, 2, 3</div><div>ENVELOPE-#</div><div>all parameters for one envelope</div></div>
 <p>Pitch                        PITCH PAGE           all <span class="page-name">Pitch page</span> parameters</p>
@@ -378,16 +321,7 @@
 <p>• For the ENVELOPE-1, -2, and -3 parameter contexts:</p>
 <p>The DEFAULT command also appears with the ENVELOPE-# context. Pressing the soft button below the command displays a sub-page which will allow you to select from a group of standard preset envelope types which can be recalled into the current envelope. This is particularly useful when setting up typical envelopes as starting points when you are creating new voices.</p>
 <p>The available standard preset envelope types are:</p>
-<p>FULL VEL RANGE           <span class="lcd">PERCUSSION</span> 1             VIBRATO LFO</p>
-<p>FULL ON                  <span class="lcd">PERCUSSION</span> 2             <span class="param">DETUNE</span> LFO</p>
-<p>RAMP DOWN                TIGHT PERC               REPEAT TRIANG</p>
-<p>RAMP UP                  TOM-TOM DECAY            REPEAT RAMP</p>
-<p>RAMP UP+DOWN             HI-HAT DECAY             TRANSIENT</p>
-<p>PIANO DECAY              LONG CYMBAL              SHORT BLIP</p>
-<p>GUITAR DECAY             <span class="value">MED</span> CYMBAL               AMP BLIP</p>
-<p>BASS DECAY               SHORT CYMBAL             WIND PITCH</p>
-<p>XPRSV STRINGS            BRASS FILTER             PITCH DOWN 1</p>
-<p>FAST ATCK PAD            SFORZANDO                PITCH DOWN 2</p>
+<table class="param-cols cols-3"><tbody><tr><td>FULL VEL RANGE</td><td><span class="lcd">PERCUSSION</span> 1</td><td>VIBRATO LFO</td></tr><tr><td>FULL ON</td><td><span class="lcd">PERCUSSION</span> 2</td><td><span class="param">DETUNE</span> LFO</td></tr><tr><td>RAMP DOWN</td><td>TIGHT PERC</td><td>REPEAT TRIANG</td></tr><tr><td>RAMP UP</td><td>TOM-TOM DECAY</td><td>REPEAT RAMP</td></tr><tr><td>RAMP UP+DOWN</td><td>HI-HAT DECAY</td><td>TRANSIENT</td></tr><tr><td>PIANO DECAY</td><td>LONG CYMBAL</td><td>SHORT BLIP</td></tr><tr><td>GUITAR DECAY</td><td><span class="value">MED</span> CYMBAL</td><td>AMP BLIP</td></tr><tr><td>BASS DECAY</td><td>SHORT CYMBAL</td><td>WIND PITCH</td></tr><tr><td>XPRSV STRINGS</td><td>BRASS FILTER</td><td>PITCH DOWN 1</td></tr><tr><td>FAST ATCK PAD</td><td>SFORZANDO</td><td>PITCH DOWN 2</td></tr></tbody></table>
 <p>SLOW ATCK PAD            SLOW REPEAT              ALL ZEROS</p>
 <p>SLOW ATCK/REL            SLOW LFO</p>
 <p>Select the default envelope type using the <kbd class="button">Data Entry Slider</kbd> or the Up/Down Arrows and press <span class="lcd">*YES*</span> if you wish to install the selected envelope type into the envelope number shown on the upper line of the display. Press <span class="lcd">*NO*</span> to return to the <span class="page-name">Copy page</span> without performing any action.</p>
@@ -524,17 +458,7 @@
 <p>• The display shows the source key and playback pitch as described earlier.</p>
 <p>• To set up one octave of a Pythagorean scale, change the source keys, playback pitches, and cents, one note at a time, from C4 to C5 — to the following values:</p>
 <div class="vfd-callouts top"><div>Source Key</div><div>Playback Pitch</div><div>Cents C4</div></div>
-<p>D4                D4                  04</p>
-<p>D4+               D4+                 01</p>
-<p>E4                E4                  08</p>
-<p>F4                E4                  98</p>
-<p>F4+               F4+                 12</p>
-<p>G4                G4                  02</p>
-<p>G4+               G4+                 14</p>
-<p>A4                A4                  06</p>
-<p>A4+               A4                  98</p>
-<p>B4                B4                  10</p>
-<p>C5                C5                  00</p>
+<table class="param-cols cols-3"><tbody><tr><td>D4</td><td>D4</td><td>04</td></tr><tr><td>D4+</td><td>D4+</td><td>01</td></tr><tr><td>E4</td><td>E4</td><td>08</td></tr><tr><td>F4</td><td>E4</td><td>98</td></tr><tr><td>F4+</td><td>F4+</td><td>12</td></tr><tr><td>G4</td><td>G4</td><td>02</td></tr><tr><td>G4+</td><td>G4+</td><td>14</td></tr><tr><td>A4</td><td>A4</td><td>06</td></tr><tr><td>A4+</td><td>A4</td><td>98</td></tr><tr><td>B4</td><td>B4</td><td>10</td></tr><tr><td>C5</td><td>C5</td><td>00</td></tr></tbody></table>
 <p>You can manually edit your custom pitch-table across the remaining octaves of the keyboard. Or you can use the Calculator in the TS-10 to do this for you.</p>
 <p>• Press the soft button above <span class="lcd">*CALCULATOR*</span>. The display reads something like this:</p>
 <p>The KEY-RANGE defines the area of the keyboard that the TS-10 will use as a reference by which to make its calculations.</p>

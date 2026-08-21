@@ -26,7 +26,7 @@
     </header>
     <p>The following parameters control the TS-10 sequencer. Parameters for creating and manipulating sequences, songs, and the tracks contained within each are covered here. For a basic overview of the concepts involved, refer to the previous section.</p>
 <h3 id="sequencer-editing-functions">Sequencer Editing Functions</h3>
-<p>Edit      Edit     Edit</p>
+<table class="param-cols cols-3"><tbody><tr><td>Edit</td><td>Edit</td><td>Edit</td></tr></tbody></table>
 <p>Song    Sequence   Track</p>
 <p>The three <kbd class="button">Edit</kbd> buttons in the top row of the Sequencer section of the front panel provide access to the various sequencer editing functions. These are divided into Song, Sequence, and Track editing functions. Pressing any of these three buttons shows a menu of the available functions in that category.</p>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Seqs/Songs</div></td></tr></table></aside>
@@ -258,7 +258,8 @@
 <h4 id="swing" class="param-name"><span class="param">SWING</span><span class="range">Range: 50 to 74%</span></h4>
 <p>When you specify a SWING percentage value, you are defining the offset amount that every second quantize point (known as the swing note) will be delayed. In keeping with the swing implementation in most MIDI sequencers, the SWING range is from 50% (the same as straight quantization) to 74% (a tick before the next higher note value). A setting of 66 is equivalent to setting the quantization to triplets. The following examples show what happens when the user quantizes to 1/8 notes with various settings of SWING. Q denotes every straight 1/8 note quantize point, while S denotes the swing eighth quantize point.</p>
 <p>1/4 note</p>
-<div class="vfd-callouts top"><div>8th 16th</div><div>8th 16th</div><div>Quantize points: 16th</div></div>
+<table class="param-cols cols-3"><tbody><tr><td>8th</td><td>8th</td><td>Quantize points:</td></tr></tbody></table>
+<div class="vfd-callouts top"><div>16th</div><div>16th</div><div>16th</div></div>
 <h4 id="s-swing" class="param-name">S = Swing</h4>
 <div class="vfd-callouts top"><div>01</div><div>25</div><div>49</div></div>
 <p>At 50% *                                               = 50%</p>
@@ -276,7 +277,7 @@
 <p>8th                             Q = Straight</p>
 <div class="vfd-callouts top"><div>16th</div><div>16th</div><div>S = Swing</div></div>
 <p>50%</p>
-<div class="vfd-callouts top"><div>01</div><div>25</div><div>49</div></div>
+<table class="param-cols cols-6"><tbody><tr><td>01</td><td>25</td><td>49</td><td>73</td><td>01</td><td>Clocks</td></tr></tbody></table>
 <p>(Original)</p>
 <h3 id="at-0">At 0%</h3>
 <h4 id="percent-2" class="param-name">PERCENT</h4>
@@ -309,7 +310,7 @@
 <p>8th                               Q = Straight</p>
 <div class="vfd-callouts top"><div>16th</div><div>16th</div><div>S = Swing</div></div>
 <p>74%</p>
-<div class="vfd-callouts top"><div>01</div><div>25</div><div>49</div></div>
+<table class="param-cols cols-6"><tbody><tr><td>01</td><td>25</td><td>49</td><td>73</td><td>01</td><td>Clocks</td></tr></tbody></table>
 <p>Quantized to</p>
 <h4 id="straight-eighths" class="param-name">Straight Eighths</h4>
 <p>at Clock 72 with <span class="lcd">SWING=74</span> at Clock 75 with <span class="lcd">RANDOM=3</span></p>
@@ -441,8 +442,7 @@
 <p>Pressing EDIT displays the event editor sub-page which shows the selected event and its event number with the time that it occurs, and in the case of events with duration, the end time of the event as well.</p>
 <p>Once you have selected an event to edit using the Event Number parameter (NUM), press</p>
 <p><span class="lcd">*EDIT*</span>. The display shows:</p>
-<p>Insert Event at          Delete Current         Exit to top-level</p>
-<p>Current Time                Event             Event List screen</p>
+<table class="param-cols cols-3"><tbody><tr><td>Insert Event at</td><td>Delete Current</td><td>Exit to top-level</td></tr><tr><td>Current Time</td><td>Event</td><td>Event List screen</td></tr></tbody></table>
 <p>Press to Edit Event       Press to Edit           Press to Edit</p>
 <div class="vfd-callouts top"><div>Value/Veloc.</div><div>Event Start Time</div><div>Event Duration</div></div>
 <p>(Key Events only)</p>
@@ -534,8 +534,8 @@
 <p>• ON — a one bar countoff plays before the sequence or song begins to play.</p>
 <p>• REC — a one bar countoff will occur in Record mode only.</p>
 <p>• QUIET — the countoff will occur in Play or Record modes without the click.</p>
-<p>TEMPO (Tap Tempo)                          Seq Range: 25 to 250 BPM, or EXT</p>
-<h4 id="song" class="param-name"><span class="param">Song</span><span class="range">Range: -64 to +63 Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</span></h4>
+<h4 id="tempo-tap-tempo" class="param-name"><span class="param">TEMPO (Tap Tempo)</span><span class="range">Seq Range: 25 to 250 BPM, or EXT<br>Song Range: -64 to +63</span></h4>
+<p>Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</p>
 <p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="lcd">CLOCK=MIDI</span> on the <span class="page-name">Sequencer Control page</span>, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is controlled by incoming MIDI clocks.</p>
 <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of 25-250 BPM. When <span class="lcd">TEMPO=+00</span> the sequences in the song will play at their designated tempo.</p>
 <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
@@ -561,8 +561,8 @@
 <p>There is a fourth Record Mode which is available only when a song is selected:</p>
 <p>• MIXDOWN — When a song is selected on the TS-10, you can set the Record Mode to MIXDOWN, which is used to record dynamic Volume and Pan changes into sequence and song tracks. When <span class="lcd">RECORD-<span class="param">MODE</span>=MIXDOWN</span> the TS-10 will record only changes made on the Volume and Pan pages in the Track Parameters section. Notes, controllers, program changes, etc. will not be recorded in this mode.</p>
 <p>Depending on the setting of the EDIT TRACKS parameter on the next sub-page (see below) you can mix down either the song tracks or sequence tracks over the length of the song.</p>
-<p>TEMPO (Tap Tempo)                              Seq Range: 25 to 250 BPM, or EXT</p>
-<h4 id="song-2" class="param-name"><span class="param">Song</span><span class="range">Range: -64 to +63 Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</span></h4>
+<h4 id="tempo-tap-tempo-2" class="param-name"><span class="param">TEMPO (Tap Tempo)</span><span class="range">Seq Range: 25 to 250 BPM, or EXT<br>Song Range: -64 to +63</span></h4>
+<p>Sets the tempo of the current sequence or song. On any of the three pages where tempo appears</p>
 <p>(Click, <kbd class="button">Sequencer Control</kbd>, and <kbd class="button">Locate</kbd>), the soft button nearest the TEMPO field can be used to “tap” in the tempo. If the field is already selected, tapping on the soft button at the correct rate for the desired tempo (based on the metronome settings on the click page) will update the tempo to the newest value. When <span class="lcd">CLOCK=MIDI</span>, this field will read <span class="lcd">TEMPO=EXT</span> to indicate that the tempo is controlled by incoming MIDI clocks, and cannot be edited.</p>
 <p>When a song is selected, the range is expressed as a percentage of the sequence tempo — changing the song tempo offset automatically adjusts the tempo of each the sequences in the song by a percent, within the legal limits of 25-250 BPM. When <span class="lcd">TEMPO=+00</span> the sequences in the song will play at their designated tempo.</p>
 <p>When a Song Tempo Track is selected, editing this value will record tempo change events.</p>
@@ -661,7 +661,7 @@
 <p>Allows you to set the current step size which will be added to the current track location (TIME) whenever you use the <span class="lcd">*STEP*</span> command, or when <span class="lcd">AUTOSTEP=ON</span>. The range of step sizes is from whole notes (1/1) to 1/64th note triplets (1/64T). Dotted note values are also available</p>
 <p>(1/1D to 1/16D).</p>
 <p>Note Name           Setting   Beat.Clock         Note Name         Setting   Beat.Clock</p>
-<table class="data-table"><tbody><tr><td>Whole note</td><td>1/1</td><td>4.00</td><td>32nd note</td><td>1/32</td><td>0.12</td></tr><tr><td>Whole note triplet</td><td>1/1T</td><td>2.64</td><td>32nd note triplet</td><td>1/32T</td><td>0.08</td></tr><tr><td>Half note</td><td>1/2</td><td>2.00</td><td>64th note</td><td>1/64</td><td>0.06</td></tr><tr><td>Half note triplet</td><td>1/2T</td><td>1.32</td><td>64th note triplet</td><td>1/64T</td><td>0.04</td></tr><tr><td>Quarter note</td><td>1/4</td><td>1.00</td><td>Dotted whole note</td><td>1/1D</td><td>6.00</td></tr><tr><td>Quarter note triplet</td><td>1/4T</td><td>0.64</td><td>Dotted half note</td><td>1/2D</td><td>3.00</td></tr><tr><td>Eighth note</td><td>1/8</td><td>0.48</td><td>Dotted quarter note</td><td>1/4D</td><td>1.48</td></tr><tr><td>Eighth note triplet</td><td>1/8T</td><td>0.32</td><td>Dotted eighth note</td><td>1/8D</td><td>0.72</td></tr><tr><td>Sixteenth note</td><td>1/16</td><td>0.24</td><td>Dotted 16th note</td><td>1/16D</td><td>0.36</td></tr></tbody></table>
+<table class="data-table lookup"><tbody><tr><td>Whole note</td><td>1/1</td><td>4.00</td><td>32nd note</td><td>1/32</td><td>0.12</td></tr><tr><td>Whole note triplet</td><td>1/1T</td><td>2.64</td><td>32nd note triplet</td><td>1/32T</td><td>0.08</td></tr><tr><td>Half note</td><td>1/2</td><td>2.00</td><td>64th note</td><td>1/64</td><td>0.06</td></tr><tr><td>Half note triplet</td><td>1/2T</td><td>1.32</td><td>64th note triplet</td><td>1/64T</td><td>0.04</td></tr><tr><td>Quarter note</td><td>1/4</td><td>1.00</td><td>Dotted whole note</td><td>1/1D</td><td>6.00</td></tr><tr><td>Quarter note triplet</td><td>1/4T</td><td>0.64</td><td>Dotted half note</td><td>1/2D</td><td>3.00</td></tr><tr><td>Eighth note</td><td>1/8</td><td>0.48</td><td>Dotted quarter note</td><td>1/4D</td><td>1.48</td></tr><tr><td>Eighth note triplet</td><td>1/8T</td><td>0.32</td><td>Dotted eighth note</td><td>1/8D</td><td>0.72</td></tr><tr><td>Sixteenth note</td><td>1/16</td><td>0.24</td><td>Dotted 16th note</td><td>1/16D</td><td>0.36</td></tr></tbody></table>
 <p>Sixteenth note triplet   1/16T        0.16</p>
 <h4 id="step-4" class="param-name">*STEP*</h4>
 <p>Pressing this soft button will advance the track location (TIME) by the amount set in the STEP parameter. Notice the TIME parameter adjusts to the new location on the track when the <span class="lcd">*STEP*</span> button is pressed.</p>

@@ -98,6 +98,7 @@ TITLES = {
     "11-seq-params-edit.html": "Section 11 — Sequencer Parameters (Edit)",
     "11-seq-params-locate.html": "Section 11 — Sequencer Parameters (Locate & Click)",
     "12-midi-applications.html": "Section 12 — Sequencing/MIDI Applications",
+    "12-delay-tempo-chart.html": "Delay Times/Tempo BPM Chart",
     "12-general-midi.html": "Section 12 — General MIDI",
     "13-storage.html": "Section 13 — Storage",
     "14-sampled-sounds.html": "Section 14 — Understanding Sampled Sounds",
@@ -127,6 +128,7 @@ NAV_ORDER = [
     "11-seq-params-edit.html",
     "11-seq-params-locate.html",
     "12-midi-applications.html",
+    "12-delay-tempo-chart.html",
     "12-general-midi.html",
     "13-storage.html",
     "14-sampled-sounds.html",
@@ -624,6 +626,190 @@ INLINE_FIGURES = [
     },
     {
         "after": re.compile(
+            r"^Small Plate Reverb & Large Plate Reverb 1 Signal Routing$"
+        ),
+        "skip_until": re.compile(
+            r"^These two plate reverb algorithms share exactly the same signal routing topology"
+        ),
+        "src": "plate-reverb-routing.png",
+        "alt": (
+            "Small Plate and Large Plate Reverb 1 signal routing: FX1 and FX2 left/right "
+            "inputs through Diffuser and Definition (Decay Diffuser) with feedback, "
+            "cross-mix, LPF, and Main Outputs L/R"
+        ),
+        "caption": "Small Plate and Large Plate Reverb 1 signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^HALL REVERB 2 Signal Routing$"),
+        "skip_until": re.compile(
+            r"^The signal enters a low pass filter and goes directly through the diffusers"
+        ),
+        "src": "hall-reverb-2-routing.png",
+        "alt": (
+            "HALL REVERB 2 signal routing: FX1 and FX2 left/right inputs through LPF, "
+            "Diffuser, Echo Time taps, Definition (Decay Diffuser) with feedback, "
+            "cross-mix, and Main Outputs L/R"
+        ),
+        "caption": "HALL REVERB 2 signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^Non Linear Reverb Signal Routing$"),
+        "skip_until": re.compile(
+            r"^The signal goes directly through a diffuser which smears the signal"
+        ),
+        "src": "nonlinear-reverb-routing.png",
+        "alt": (
+            "Non Linear Reverb signal routing: FX-1 and FX-2 left/right inputs through "
+            "Diffuser, Echo Time taps, Density, cross-mix, LPF, and Main Outputs L/R"
+        ),
+        "caption": "Non Linear Reverb signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(
+            r"^ENVELOPE LEVEL 1\s+ENVELOPE LEVEL 2\s+ENVELOPE LEVEL 9$"
+        ),
+        "skip_until": re.compile(r"^ENVELOPE LEVELS \(1 to 9\)"),
+        "src": "nonlinear-envelope-levels.png",
+        "alt": (
+            "Envelope levels 1 through 9: signal level over time with tap points "
+            "for ENVELOPE LEVEL 1, 2, and 9 across the density"
+        ),
+        "caption": "Envelope levels 1–9 across the Non Linear Reverb density.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^Gated Reverb with a High Retrigger Threshold"),
+        "skip_until": re.compile(r"^Gated Reverb with a Low Retrigger Threshold"),
+        "src": "gated-reverb-high.png",
+        "alt": (
+            "Gated reverb with high retrigger threshold: signal level over time with "
+            "Trigger, Retrigger, Attack Time, Hold Time, and Release marked on the envelope"
+        ),
+        "caption": "Gated reverb with a high retrigger threshold.",
+    },
+    {
+        "after": re.compile(r"^Gated Reverb with a Low Retrigger Threshold"),
+        "skip_until": re.compile(r"^HF DAMPING\s+Range:"),
+        "src": "gated-reverb-low.png",
+        "alt": (
+            "Gated reverb with low retrigger threshold: repeated signal crossings above "
+            "Trigger and Retrigger stack overlapping Hold Time periods"
+        ),
+        "caption": "Gated reverb with a low retrigger threshold.",
+    },
+    {
+        "after": re.compile(r"^EQ- -STEREO DELAYLFO Signal Routing$"),
+        "skip_until": re.compile(
+            r"^The EFFECT MIX FX-1 and FX-2 DELAYLFO parameters can be routed"
+        ),
+        "src": "eq-stereo-delaylfo.png",
+        "alt": (
+            "EQ-STEREO DELAYLFO signal routing: FX-1 and FX-2 left/right inputs through "
+            "EQ Trim, EQ, Left/Right Delay with LFO modulation, Delay-Regen, Damping (LPF), "
+            "Cross Regen, Delay Input R, Output Level R, and Main Outputs L/R"
+        ),
+        "caption": "EQ- -STEREO DELAYLFO signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^EIGHT VOICE CHORUS Signal Routing$"),
+        "skip_until": re.compile(r"^CHORUS RATE\s+Range:"),
+        "src": "eight-voice-chorus-routing.png",
+        "alt": (
+            "Eight Voice Chorus signal routing: FX-1 and FX-2 left/right inputs summed "
+            "per channel through 4 Voice Chorus (with Chorus Regen) and Delay paths; "
+            "Delay Regen cross-couples left and right delays; Main Outputs L/R"
+        ),
+        "caption": "Eight Voice Chorus signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^EQ- -CHORUS \+ EQ- -DDL Signal Routing$"),
+        "skip_until": re.compile(
+            r"^The signal enters a programmable EQ"
+        ),
+        "src": "eq-chorus-eq-ddl-routing.png",
+        "alt": (
+            "EQ- -CHORUS + EQ- -DDL signal routing: FX-1 and FX-2 left/right inputs through "
+            "linked Input Level Trim and EQ; left path through Chorus (Delay) with Regen "
+            "Control and Echo (Echo Level) to Main Output L; right path through Chorus with "
+            "cross-feed from left regen to Main Output R"
+        ),
+        "caption": "EQ- -CHORUS + EQ- -DDL signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^EQ- -FLANGER \+ DELAY Signal Routing$"),
+        "skip_until": re.compile(r"^In this algorithm the signal enters"),
+        "src": "eq-flanger-delay-routing.png",
+        "alt": (
+            "EQ- -FLANGER + DELAY signal routing: FX-1 and FX-2 left/right inputs through "
+            "linked Input Level Trim and EQ; left path through Flanger with Delay Feedback "
+            "and Echo (Echo Level) to Main Output L; right path through Flanger with "
+            "cross-feed from left delay to Main Output R"
+        ),
+        "caption": "EQ- -FLANGER + DELAY signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^PHASER \+ DELAY Signal Routing$"),
+        "skip_until": re.compile(r"^PHASER CENTER\s+Range:"),
+        "src": "phaser-delay-routing.png",
+        "alt": (
+            "PHASER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed per "
+            "channel through Phaser (LFO) with linked Phaser Regen; left path feeds Delay "
+            "with Delay Regen feedback to left and cross-feed to Main Output R; "
+            "Main Outputs L/R"
+        ),
+        "caption": "PHASER + DELAY signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^EQ- -TREMOLO \+ DELAY Signal Routing$"),
+        "skip_until": re.compile(r"^The signal enters an input level trim"),
+        "src": "eq-tremolo-delay-routing.png",
+        "alt": (
+            "EQ- -TREMOLO + DELAY signal routing: FX-1 left/right through linked Input "
+            "Level Trim, EQ, and Tremolo; FX-2 summed with left path through Delay and "
+            "Echo (Echo Level) to Main Output L; right tremolo direct to Main Output R "
+            "with Regen cross-feed from delay"
+        ),
+        "caption": "EQ- -TREMOLO + DELAY signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^EQ- -VIBRATO \+ DELAY Signal Routing$"),
+        "skip_until": re.compile(
+            r"^The signal enters a programmable EQ"
+        ),
+        "src": "eq-vibrato-delay-routing.png",
+        "alt": (
+            "EQ- -VIBRATO + DELAY signal routing: FX-1 left/right through EQ Trim, EQ, "
+            "and Vibrato; left path through Delay and Echo (Echo Level) to Main "
+            "Output L; right vibrato direct to Main Output R with Delay Regen "
+            "cross-feed"
+        ),
+        "caption": "EQ- -VIBRATO + DELAY signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(r"^FLNG- -CMP- -DIST \+ REV Signal Routing$"),
+        "skip_until": re.compile(r"^COMPRESSOR THRESH\s+Range:"),
+        "src": "flng-cmp-dist-rev-routing.png",
+        "alt": (
+            "FLNG- -CMP- -DIST + REV signal routing: DRY bypasses to Main Outputs; "
+            "FX1 through Flange, Comp, Distort, and EQ to Bus1; FX2 to Bus2; both "
+            "buses feed Reverb with Reverb-to-Compressor feedback; summed L/R "
+            "Main Outputs"
+        ),
+        "caption": "FLNG- -CMP- -DIST + REV signal routing.",
+        "keep_trigger": False,
+    },
+    {
+        "after": re.compile(
             r"The XFADE-TIME adds time to the duration of both the current step and the next step"
         ),
         "skip_until": re.compile(r"^DEPTH\b"),
@@ -669,8 +855,37 @@ RUNNING_PHRASES = re.compile(
 )
 PAGE_NUM_RE = re.compile(r"^[ivxIVX]+$|^\d{1,3}$|^[IVX]+$")
 ALGO_RE = re.compile(r"^(\d{2})\s+([A-Z0-9].{2,40})$")
+GATED_REVERB_DIAGRAM_RE = re.compile(
+    r"^Gated Reverb with a (High|Low) Retrigger Threshold\b",
+    re.I,
+)
 RANGE_RE = re.compile(
     r"^(.{1,48}?)\s{2,}Ranges?:\s*(.+)$"
+)
+# Parameter + algo-specific range (e.g. "Non Lin 1, 3 Range:", "D-1 (L and R) Ranges:").
+NAMED_RANGE_PARAM_RE = re.compile(
+    r"^(.{1,48}?)\s{2,}(.+\sRanges?:\s*.+)$"
+)
+# Prose that follows a range value on the same PDF line.
+PROSE_AFTER_RANGE = re.compile(
+    r"\s+(?=(?:Controls|Sets|The|This|When|Determines|Allows|Selects|Press|If|In|For|"
+    r"On any|Higher|Increasing|Acts|Smears|Adjusts|We recommend|A setting|Experiment|"
+    r"Preechoes|Pre-echoes|However|decay,)\b)",
+    re.I,
+)
+# Split multiple algo-specific range clauses for one parameter.
+NAMED_RANGE_CLAUSE_SPLIT = re.compile(
+    r"\s+(?=(?:Non Lin\s+\d+(?:,\s*\d+)?|Large Plate\s+\d|Large Room|Wide Ambience|"
+    r"Small Plate|Medium Room|Tight Ambience|Hall Reverb\s+\d|Song|Seq|"
+    r"D-\d+\s+\(L and R\))\s+Ranges?:\s*)",
+    re.I,
+)
+# Second-line range clauses that belong to the previous parameter heading.
+SECONDARY_RANGE_LINE_RE = re.compile(
+    r"^(?:Non Lin\s+\d+|Large Plate\s+\d|Large Room|Wide Ambience|Small Plate|"
+    r"Medium Room|Tight Ambience|Hall Reverb\s+\d|Song|Seq|"
+    r"D-\d+\s+\(L and R\))\s+Ranges?:",
+    re.I,
 )
 NOT_HEADING_START = re.compile(
     r"^(Press |When |If |The |There |This |These |You |It |In |For |With |"
@@ -713,6 +928,7 @@ DEFN_ROW_SPLIT = re.compile(
 )
 
 SLUG_COUNTS: dict[str, int] = {}
+USED_IDS: set[str] = set()
 # Effect algorithm cross-links (Section 7 pages). Built in main().
 EFFECT_ALGO_INDEX: dict[str, tuple[str, str]] = {}
 EFFECT_PARAM_NAMES: list[str] = []
@@ -731,14 +947,23 @@ HEADING_SMALL_WORDS = {
     "a", "an", "the", "of", "and", "or", "to", "in", "for", "with", "your",
     "from", "on", "at", "by", "as", "when", "into", "than", "more", "one",
 }
+# IDs reserved by the page shell (<article id="main">, skip link, etc.).
+PAGE_SHELL_IDS = {"main"}
 
 
 def slugify(text: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     s = s[:70] or "section"
     n = SLUG_COUNTS.get(s, 0) + 1
-    SLUG_COUNTS[s] = n
-    return s if n == 1 else f"{s}-{n}"
+    if s in PAGE_SHELL_IDS and n == 1:
+        n = 2
+    while True:
+        slug = s if n == 1 else f"{s}-{n}"
+        if slug not in USED_IDS:
+            SLUG_COUNTS[s] = n
+            USED_IDS.add(slug)
+            return slug
+        n += 1
 
 
 def load_pages() -> list[str]:
@@ -1026,6 +1251,48 @@ def _is_continuation(s: str) -> bool:
     )
 
 
+IDENTICAL_PARAMS_STUB_RE = re.compile(
+    r"^These parameters are identical to the previous ones\b",
+    re.I,
+)
+
+
+def consume_identical_params_stub_run(lines: list[str], i: int) -> int | None:
+    """Skip bare param h4s naming params already documented for FX2."""
+    if classify(lines[i]) != "h4":
+        return None
+    j = i
+    count = 0
+    while j < len(lines):
+        s = lines[j].strip()
+        if not s:
+            j += 1
+            continue
+        if classify(s) != "h4":
+            break
+        k = j + 1
+        while k < len(lines) and not lines[k].strip():
+            k += 1
+        if k < len(lines) and classify(lines[k]) == "range":
+            break
+        count += 1
+        j += 1
+    if not count:
+        return None
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j >= len(lines) or not IDENTICAL_PARAMS_STUB_RE.match(lines[j].strip()):
+        return None
+    return j
+
+
+def gated_reverb_diagram_title(line: str) -> str | None:
+    m = GATED_REVERB_DIAGRAM_RE.match(line.strip())
+    if not m:
+        return None
+    return f"Gated Reverb with a {m.group(1).title()} Retrigger Threshold"
+
+
 def range_incomplete(rng: str) -> bool:
     """True when a Range: value was split by a PDF line wrap."""
     if not rng:
@@ -1040,6 +1307,71 @@ def range_incomplete(rng: str) -> bool:
     if re.search(r"(,$|\bor$|\band$|\bto$)", rng, re.I):
         return True
     return False
+
+
+def is_param_range_name(name: str) -> bool:
+    if NOT_HEADING_START.match(name) or toc_heading_kind(name):
+        return False
+    if is_param_heading(name):
+        return True
+    if len(name) > 48:
+        return False
+    if not re.match(r"^[A-Z0-9*][A-Z0-9 ()+\-/a-z]*$", name):
+        return False
+    letters = [c for c in name if c.isalpha()]
+    if not letters:
+        return False
+    upper_ratio = sum(c.isupper() for c in letters) / len(letters)
+    return upper_ratio >= 0.45
+
+
+def match_named_range_param(line: str) -> re.Match[str] | None:
+    s = line.strip()
+    if RANGE_RE.match(s):
+        return None
+    m = NAMED_RANGE_PARAM_RE.match(s)
+    if not m:
+        return None
+    name = m.group(1).strip()
+    if not is_param_range_name(name):
+        return None
+    return m
+
+
+def parse_range_line(line: str) -> tuple[str, str] | None:
+    s = line.strip()
+    m = RANGE_RE.match(s)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    m = match_named_range_param(s)
+    if m:
+        return m.group(1).strip(), m.group(2).strip()
+    return None
+
+
+def split_range_clause_and_desc(text: str) -> tuple[str, str | None]:
+    text = re.sub(r"\s+", " ", text).strip()
+    m = PROSE_AFTER_RANGE.search(text)
+    if m:
+        return text[: m.start()].strip(), text[m.start() :].strip()
+    return text, None
+
+
+def is_secondary_range_line(line: str) -> bool:
+    s = line.strip()
+    if SECONDARY_RANGE_LINE_RE.match(s):
+        return True
+    m = RANGE_RE.match(s)
+    return bool(m and m.group(1).strip() in ("Song", "Seq"))
+
+
+def parse_secondary_range_line(line: str) -> tuple[str, str | None]:
+    s = line.strip()
+    m = RANGE_RE.match(s)
+    if m and m.group(1).strip() in ("Song", "Seq"):
+        clause = f"{m.group(1).strip()}  Range: {m.group(2).strip()}"
+        return split_range_clause_and_desc(clause)
+    return split_range_clause_and_desc(s)
 
 
 def range_join(prev: str, s: str) -> str | None:
@@ -1078,6 +1410,79 @@ def is_bullet_item(s: str) -> bool:
     if is_enum_heading(s):
         return False
     return s.startswith("•") or bool(re.match(r"^\d+\)\s", s))
+
+
+VOICE_ROUTING_BULLET_RE = re.compile(
+    r"^•\s+(?:Voices assigned to|The output of Effect)\b",
+    re.I,
+)
+
+
+def is_voice_routing_bullet(s: str) -> bool:
+    return bool(VOICE_ROUTING_BULLET_RE.match(s.strip()))
+
+
+def tag_fx_bus_names(html_text: str) -> str:
+    """Wrap bare FX1/FX2 in span.param without double-wrapping."""
+    parts = re.split(r"(<[^>]+>)", html_text)
+    depth = 0
+    for i, part in enumerate(parts):
+        if part.startswith("<"):
+            if part.startswith("</"):
+                depth = max(0, depth - 1)
+            elif not part.endswith("/>") and not part.startswith("<!"):
+                depth += 1
+            continue
+        if depth == 0:
+            parts[i] = re.sub(
+                r"\b(FX[12])\b",
+                r'<span class="param">\1</span>',
+                part,
+            )
+    return "".join(parts)
+
+
+def render_voice_routing_block(
+    bullets: list[str], terms: dict[str, list[str]], fname: str
+) -> str:
+    lines: list[str] = []
+    for idx, bullet in enumerate(bullets):
+        tagged = tag_fx_bus_names(
+            apply_tags(bullet, terms, source_file=fname)
+        )
+        if idx == 0:
+            lines.append(tagged)
+        else:
+            lines.append(f"<br>\n   {tagged}")
+    return f"<p>{''.join(lines)}</p>"
+
+
+def consume_voice_routing_block(
+    lines: list[str],
+    i: int,
+    terms: dict[str, list[str]],
+    fname: str,
+) -> tuple[str | None, int]:
+    s = lines[i].strip()
+    if not is_voice_routing_bullet(s):
+        return None, i
+    bullets = [s]
+    j = i + 1
+    while j < len(lines):
+        k = j
+        while k < len(lines) and not lines[k].strip():
+            k += 1
+        if k >= len(lines):
+            break
+        nxt = lines[k].strip()
+        if is_voice_routing_bullet(nxt):
+            bullets.append(nxt)
+            j = k + 1
+            continue
+        break
+    if len(bullets) < 2:
+        return None, i
+    return render_voice_routing_block(bullets, terms, fname), j
 
 
 def bullet_join(prev: str, s: str) -> str | None:
@@ -1306,7 +1711,10 @@ def is_figure_label_row(line: str) -> bool:
 CHART_REF_PATTERNS = [
     (re.compile(r"the Envelope Times chart(?: below)?", re.I), "#envelope-times"),
     (re.compile(r"the LFO Frequencies chart(?: below)?", re.I), "#lfo-frequencies"),
-    (re.compile(r"Delay Times/Tempo BPM Chart", re.I), "#delay-times-tempo-bpm-chart"),
+    (
+        re.compile(r"Delay Times/Tempo BPM Chart", re.I),
+        "12-delay-tempo-chart.html#delay-times-tempo-bpm-chart",
+    ),
     (re.compile(r"the table below(?= shows the frequency)", re.I), "#lfo-frequencies"),
 ]
 
@@ -1384,11 +1792,19 @@ def section_ref_join(prev: str, nxt: str) -> str | None:
 
 def format_range_html(rng: str) -> str:
     rng = re.sub(r"\s+", " ", rng).strip()
-    parts = re.split(r"\s+(?=Held Range:)", rng, maxsplit=1, flags=re.I)
-    bits = [f"Range: {link_chart_refs(html.escape(parts[0]))}"]
-    if len(parts) > 1:
-        bits.append(link_chart_refs(html.escape(parts[1])))
-    return "<br>".join(bits)
+    if not rng:
+        return ""
+    if not re.search(r"\bRanges?:", rng):
+        parts = re.split(r"\s+(?=Held Range:)", rng, maxsplit=1, flags=re.I)
+        bits = [f"Range: {link_chart_refs(html.escape(parts[0]))}"]
+        if len(parts) > 1:
+            bits.append(link_chart_refs(html.escape(parts[1])))
+        return "<br>".join(bits)
+    if NAMED_RANGE_CLAUSE_SPLIT.search(rng):
+        parts = NAMED_RANGE_CLAUSE_SPLIT.split(rng)
+        parts = [p.strip() for p in parts if p.strip()]
+        return "<br>".join(link_chart_refs(html.escape(p)) for p in parts)
+    return link_chart_refs(html.escape(rng))
 
 
 def unwrap(lines: list[str]) -> list[str]:
@@ -1514,6 +1930,10 @@ def classify(line: str) -> str:
     if TIP_RE.match(line):
         return "tip"
     if RANGE_RE.match(line):
+        if RANGE_RE.match(line).group(1).strip() in ("Song", "Seq"):
+            return "named-range-cont"
+        return "range"
+    if match_named_range_param(line):
         return "range"
     if ALGO_RE.match(line) and len(line) < 48:
         return "algo"
@@ -1579,6 +1999,8 @@ def classify(line: str) -> str:
         return "h3"
     if is_prose_heading(line):
         return "h3"
+    if gated_reverb_diagram_title(line):
+        return "h4"
     if is_vfd_line(line):
         return "vfd"
     return "p"
@@ -1670,6 +2092,33 @@ DELAY_LABEL_RE = re.compile(
     re.I,
 )
 DELAY_HEADERS = ["BPM", "1/4 NOTE", "1/8th NOTE", "1/8 TRIPLET", "1/16th NOTE"]
+DELAY_TEMPO_CHART_FNAME = "12-delay-tempo-chart.html"
+DELAY_TEMPO_BPM_CHART_ID = "delay-times-tempo-bpm-chart"
+DELAY_TEMPO_CHART_INTRO_RE = re.compile(
+    r"^Delay Times/Tempo BPM Chart\b",
+    re.I,
+)
+DELAY_TEMPO_CHART_INTRO = (
+    "This chart shows the relationship between delay times and tempo beats per "
+    "minute. Values shown are accurate to 2 decimal places—since most delay "
+    "devices are not accurate to 2 decimal places, you may have to round off "
+    "these values. You can use this chart to set the effect delay times to sync "
+    "to your sequence or song."
+)
+DELAY_TEMPO_CHART_TIP = (
+    "Assign a controller to modulate the effect delay times, ands select a "
+    "specified minimum and maximum range so that you can create unique "
+    "poly-rhythms in real-time."
+)
+DELAY_TEMPO_CALC_NOTES = [
+    ("1/4 note", 60000),
+    ("Dotted 1/4", 90000),
+    ("1/8 note", 30000),
+    ("Dotted 1/8", 45000),
+    ("1/8 triplet", 20000),
+    ("1/16 note", 15000),
+    ("Dotted 1/16", 22500),
+]
 SETTING_HEADERS = [
     "Setting",
     "Local Voices Affected",
@@ -1694,6 +2143,104 @@ def numeric_lookup_cells(line: str) -> list[str] | None:
         if len(parts) >= 5 and all(NUM_CELL_RE.match(p) for p in parts):
             return list(parts)
     return None
+
+
+def delay_tempo_ms_values(bpm: int) -> list[str]:
+    """Delay times in ms for quarter, eighth, eighth-triplet, and sixteenth notes."""
+    return [
+        f"{60000 / bpm:.2f}",
+        f"{30000 / bpm:.2f}",
+        f"{20000 / bpm:.2f}",
+        f"{15000 / bpm:.2f}",
+    ]
+
+
+def delay_tempo_bpm_chart_pairs() -> list[tuple[int, int]]:
+    """Two-column layout: each row pairs BPM n with n+45 (covers 40–205 and 85–250)."""
+    return [(40 + i, 85 + i) for i in range(166)]
+
+
+def render_delay_tempo_bpm_chart(terms: dict[str, list[str]]) -> str:
+    headers = DELAY_HEADERS * 2
+    caption = "Delay Times/Tempo BPM Chart"
+    parts = [
+        f'<table class="data-table delay-tempo-chart" id="{DELAY_TEMPO_BPM_CHART_ID}">',
+        f'<caption><a href="#{DELAY_TEMPO_BPM_CHART_ID}">{html.escape(caption)}</a></caption>',
+        "<thead><tr>",
+        "".join(f"<th>{apply_tags(h, terms)}</th>" for h in headers),
+        "</tr></thead><tbody>",
+    ]
+    for left_bpm, right_bpm in delay_tempo_bpm_chart_pairs():
+        row: list[str] = [
+            str(left_bpm),
+            *delay_tempo_ms_values(left_bpm),
+            str(right_bpm),
+            *delay_tempo_ms_values(right_bpm),
+        ]
+        parts.append(
+            "<tr>"
+            + "".join(f"<td>{html.escape(cell)}</td>" for cell in row)
+            + "</tr>"
+        )
+    parts.append("</tbody></table>")
+    return "".join(parts)
+
+
+def render_delay_tempo_calculator() -> str:
+    rows = "".join(
+        f'<tr><th scope="row">{html.escape(label)}</th>'
+        f'<td class="delay-ms" data-numerator="{num}">—</td></tr>'
+        for label, num in DELAY_TEMPO_CALC_NOTES
+    )
+    return (
+        '<section class="delay-tempo-calculator" aria-labelledby="delay-tempo-calculator-heading">'
+        '<h2 id="delay-tempo-calculator-heading">Delay Time Calculator</h2>'
+        "<p>Enter a tempo to see sync delay times in milliseconds.</p>"
+        '<form class="delay-tempo-calc-form" id="delay-tempo-calc" action="#">'
+        '<label for="delay-tempo-bpm-input">Tempo (BPM)</label>'
+        '<input type="number" id="delay-tempo-bpm-input" name="bpm" '
+        'min="1" max="999" step="1" value="120" inputmode="numeric">'
+        "</form>"
+        '<table class="data-table delay-tempo-calc-results">'
+        "<thead><tr><th>Note length</th><th>Delay (ms)</th></tr></thead>"
+        f"<tbody>{rows}</tbody></table></section>"
+    )
+
+
+def build_delay_tempo_chart_page_body(terms: dict[str, list[str]]) -> str:
+    intro = apply_tags(DELAY_TEMPO_CHART_INTRO, terms)
+    tip = apply_tags(DELAY_TEMPO_CHART_TIP, terms)
+    return (
+        f"<p>{intro}</p>\n"
+        f"{render_delay_tempo_calculator()}\n"
+        f'<aside class="tip"><p>{tip}</p></aside>\n'
+        f"{render_delay_tempo_bpm_chart(terms)}"
+    )
+
+
+def is_delay_tempo_chart_intro(line: str) -> bool:
+    return bool(DELAY_TEMPO_CHART_INTRO_RE.match(line.strip()))
+
+
+def skip_delay_tempo_chart_section(lines: list[str], i: int) -> int:
+    """Skip intro, OCR chart rows, and the following tip (moved to its own page)."""
+    j = i + 1
+    while j < len(lines):
+        s = lines[j].strip()
+        if not s:
+            j += 1
+            continue
+        if TIP_RE.match(s):
+            return j + 1
+        if (
+            classify(lines[j]) == "num-table"
+            or delay_chart_parts(s)
+            or is_numeric_chart_line(s)
+        ):
+            j += 1
+            continue
+        break
+    return j
 
 
 def delay_chart_parts(line: str) -> list[str] | None:
@@ -2289,6 +2836,159 @@ def consume_effect_param_ref_table(
     return html, j
 
 
+def split_col_row(line: str, *, min_gap: int = 4) -> list[str] | None:
+    s = line.strip()
+    if not s:
+        return None
+    parts = [p.strip() for p in re.split(rf"\s{{{min_gap},}}", s) if p.strip()]
+    return parts if len(parts) >= 2 else None
+
+
+PARAM_COL_EXCLUDE_RE = re.compile(
+    r"FX-?[12]?\s*(?:Left|Right)"
+    r"|(?:Left|Right)\s+(?:Output|Delay|Regen|LFO|Main|Echo|Shifter|Vc|Pre-Dist|Level)"
+    r"|^\(LFO\)"
+    r"|\bOutput Level\b"
+    r"|\bPre-Dist\b",
+    re.I,
+)
+LABEL_CELL_RE = re.compile(r"^[A-Za-z0-9*][A-Za-z0-9 ()+\-/]*:?$")
+
+
+def is_param_col_cell(cell: str) -> bool:
+    if not cell or len(cell) > 24 or NOT_HEADING_START.match(cell):
+        return False
+    if cell.endswith(".") and len(cell) > 12:
+        return False
+    if len(cell) == 1:
+        return cell.isalnum()
+    return bool(LABEL_CELL_RE.match(cell))
+
+
+def split_param_col_row(line: str) -> list[str] | None:
+    s = line.strip()
+    if not s or s.startswith("•") or RANGE_RE.match(s) or TIP_RE.match(s):
+        return None
+    if PARAM_COL_EXCLUDE_RE.search(s):
+        return None
+    parts = split_col_row(s)
+    if not parts or not (2 <= len(parts) <= 6):
+        return None
+    if not all(is_param_col_cell(p) for p in parts):
+        return None
+    if any(p in ("L", "R", "V") for p in parts) and any(
+        re.search(r"FX|Delay|Pre-Dist|Main|Echo|Regen|Flanger|Level|Shifter", p, re.I)
+        for p in parts
+    ):
+        return None
+    return parts
+
+
+def render_param_col_grid(
+    rows: list[list[str]], terms: dict[str, list[str]], fname: str
+) -> str:
+    ncols = len(rows[0])
+    cls = f'param-cols cols-{ncols}' if ncols > 2 else "param-cols"
+    parts = [f'<table class="{cls}"><tbody>']
+    for row in rows:
+        cells = row + [""] * (ncols - len(row))
+        tds = "".join(
+            f"<td>{apply_tags(c, terms, source_file=fname) if c else '&nbsp;'}</td>"
+            for c in cells
+        )
+        parts.append(f"<tr>{tds}</tr>")
+    parts.append("</tbody></table>")
+    return "".join(parts)
+
+
+def consume_param_col_grid(
+    lines: list[str], i: int, terms: dict[str, list[str]], fname: str
+) -> tuple[str | None, int]:
+    rows: list[list[str]] = []
+    j = i
+    while j < len(lines):
+        s = lines[j].strip()
+        if not s:
+            break
+        parts = split_param_col_row(s)
+        if not parts:
+            break
+        if rows and len(parts) != len(rows[0]):
+            break
+        rows.append(parts)
+        j += 1
+    if not rows:
+        return None, i
+    if len(rows) == 1 and len(rows[0]) < 3:
+        return None, i
+    return render_param_col_grid(rows, terms, fname), j
+
+
+def is_data_col_cell(cell: str) -> bool:
+    if not cell or len(cell) > 30:
+        return False
+    if re.fullmatch(r"[#OXox\d]+", cell):
+        return True
+    if NOT_HEADING_START.match(cell):
+        return False
+    if re.search(r"\b(the|this|when|will|page|parameter|uses normal|default setting)\b", cell, re.I):
+        return False
+    if cell.startswith("•"):
+        return False
+    return True
+
+
+def split_data_col_row(line: str) -> list[str] | None:
+    s = line.strip()
+    if not s or s.startswith("•") or RANGE_RE.match(s) or TIP_RE.match(s):
+        return None
+    if PARAM_COL_EXCLUDE_RE.search(s):
+        return None
+    parts = split_col_row(s)
+    if not parts or not (2 <= len(parts) <= 8):
+        return None
+    if not all(is_data_col_cell(p) for p in parts):
+        return None
+    return parts
+
+
+def render_data_col_grid(
+    rows: list[list[str]], terms: dict[str, list[str]], fname: str
+) -> str:
+    ncols = len(rows[0])
+    parts = ['<table class="data-table lookup"><tbody>']
+    for row in rows:
+        cells = row + [""] * (ncols - len(row))
+        tds = "".join(
+            f"<td>{apply_tags(c, terms, source_file=fname) if c else '&nbsp;'}</td>"
+            for c in cells
+        )
+        parts.append(f"<tr>{tds}</tr>")
+    parts.append("</tbody></table>")
+    return "".join(parts)
+
+
+def consume_data_col_grid(
+    lines: list[str], i: int, terms: dict[str, list[str]], fname: str
+) -> tuple[str | None, int]:
+    rows: list[list[str]] = []
+    j = i
+    while j < len(lines):
+        s = lines[j].strip()
+        if not s:
+            break
+        parts = split_data_col_row(s)
+        if not parts:
+            break
+        if rows and len(parts) != len(rows[0]):
+            break
+        rows.append(parts)
+        j += 1
+    if len(rows) < 3:
+        return None, i
+    return render_data_col_grid(rows, terms, fname), j
+
+
 def render_bullet_grid(rows: list[list[str]], terms: dict[str, list[str]]) -> str:
     ncols = max(len(r) for r in rows)
     out = ['<table class="bullet-cols">']
@@ -2637,6 +3337,8 @@ def consume_numeric_table(
         groups = max(1, (ncols + 4) // 5)
         head = DELAY_HEADERS * groups
         head = head[:ncols] + [""] * max(0, ncols - len(head))
+        if not caption:
+            caption = "Delay Times/Tempo BPM Chart"
         return render_data_table(body, terms, caption=caption, headers=head[:ncols]), j
     if headers:
         body = [tidy_lookup_row(r) for r in body]
@@ -3336,6 +4038,99 @@ def button_float(name: str) -> str:
     )
 
 
+PITCH_SHIFTER_DELAY_INTRO_RE = re.compile(
+    r"^PITCH\s+SHIFTER \+ DELAY combines"
+)
+PITCH_SHIFTER_DELAY_PARAMS_RE = re.compile(r"^VOICE-1 SEMI\s+Range:")
+
+VCF_DISTORTION_VCF_ROUTING_RE = re.compile(
+    r"^VCF- -DISTORTION- -VCF Signal Routing$"
+)
+VCF_DISTORTION_VCF_PARAMS_RE = re.compile(r"^DIST LEVEL - IN\s+Range:")
+VCF_DISTORTION_VCF_MIX_PROSE_RE = re.compile(
+    r"^(The EFFECT MIX|Dry/Wet mixes\.)"
+)
+
+
+def consume_vcf_distortion_vcf_routing(
+    lines: list[str],
+    i: int,
+    terms: dict[str, list[str]],
+    fname: str,
+) -> tuple[str | None, int]:
+    """Algo 66: routing figure; skip diagram OCR; keep Dry/Wet mix prose."""
+    if fname != "07-effects-60-73.html":
+        return None, i
+    if not VCF_DISTORTION_VCF_ROUTING_RE.match(lines[i].strip()):
+        return None, i
+    parts: list[str] = []
+    src = "vcf-distortion-vcf-routing.png"
+    alt = (
+        "VCF- -DISTORTION- -VCF signal routing: FX-1 and FX-2 left/right inputs "
+        "summed to mono through Variable HiPass Filter and Pre-Dist VCF (Env Fol); "
+        "Distortion Level In, Clip, and Level Out with Bypass switch; Post-Dist "
+        "VCF (Env Fol) to Main Outputs L and R"
+    )
+    caption = "VCF- -DISTORTION- -VCF signal routing."
+    if (IMAGES / src).exists():
+        parts.append(
+            f'<figure class="figure"><img src="images/{html.escape(src)}" '
+            f'alt="{html.escape(alt)}">'
+            f"<figcaption>{apply_tags(caption, terms)}</figcaption></figure>"
+        )
+    j = i + 1
+    while j < len(lines):
+        s = lines[j].strip()
+        if VCF_DISTORTION_VCF_PARAMS_RE.match(s):
+            break
+        if VCF_DISTORTION_VCF_MIX_PROSE_RE.match(s):
+            parts.append(f"<p>{apply_tags(s, terms, source_file=fname)}</p>")
+            j += 1
+            continue
+        j += 1
+    return "\n".join(parts), j
+
+
+def consume_pitch_shifter_delay_block(
+    lines: list[str],
+    i: int,
+    terms: dict[str, list[str]],
+    fname: str,
+) -> tuple[str | None, int]:
+    """Algo 59: intro prose (OCR table row) + routing figure, skip diagram OCR."""
+    if fname != "07-effects-41-59.html":
+        return None, i
+    s = lines[i].strip()
+    if not PITCH_SHIFTER_DELAY_INTRO_RE.match(s):
+        return None, i
+    intro = re.sub(
+        r"^PITCH\s+SHIFTER \+ DELAY\s+",
+        "PITCH SHIFTER + DELAY ",
+        s,
+    )
+    parts = [f"<p>{apply_tags(intro, terms, source_file=fname)}</p>"]
+    src = "pitch-shifter-delay-routing.png"
+    alt = (
+        "PITCH SHIFTER + DELAY signal routing: FX-1 and FX-2 left/right inputs "
+        "summed and cross-fed to Vc 1 and Vc 2 stereo shifters with Regen "
+        "feedback; delay mixer combines shifter outputs and Dry Level; panned "
+        "shifter outputs and Delay Mix to Main Outputs L and R"
+    )
+    caption = "PITCH SHIFTER + DELAY signal routing."
+    if (IMAGES / src).exists():
+        parts.append(
+            f'<figure class="figure"><img src="images/{html.escape(src)}" '
+            f'alt="{html.escape(alt)}">'
+            f"<figcaption>{apply_tags(caption, terms)}</figcaption></figure>"
+        )
+    j = i + 1
+    while j < len(lines):
+        if PITCH_SHIFTER_DELAY_PARAMS_RE.match(lines[j].strip()):
+            break
+        j += 1
+    return "\n".join(parts), j
+
+
 def consume_inline_figure(
     line: str, lines: list[str], i: int, chunks: list[str]
 ) -> int | None:
@@ -3538,6 +4333,16 @@ def to_html_body(
             chunks.append(ref_html)
             i = ref_i
             continue
+        grid_html, ni = consume_param_col_grid(lines, i, terms, fname)
+        if grid_html:
+            chunks.append(grid_html)
+            i = ni
+            continue
+        grid_html, ni = consume_data_col_grid(lines, i, terms, fname)
+        if grid_html:
+            chunks.append(grid_html)
+            i = ni
+            continue
         if looks_like_memory_map(line):
             chunks.append(render_memory_map(terms))
             while i < len(lines) and lines[i].strip() != "Using the BankSet Button":
@@ -3596,6 +4401,26 @@ def to_html_body(
                 chunks.append(grid_html)
                 i = ni
                 continue
+        if fname.startswith("07-effects-") and is_voice_routing_bullet(line.strip()):
+            block_html, ni = consume_voice_routing_block(lines, i, terms, fname)
+            if block_html:
+                chunks.append(block_html)
+                i = ni
+                continue
+        inline_early = next(
+            (
+                spec
+                for spec in INLINE_FIGURES
+                if spec["after"].search(line.strip())
+                and not spec.get("keep_trigger", True)
+            ),
+            None,
+        )
+        if inline_early:
+            ni = consume_inline_figure(line, lines, i, chunks)
+            if ni is not None:
+                i = ni
+                continue
         if kind == "num-table":
             table_html, ni = consume_numeric_table(lines, i, terms)
             if table_html:
@@ -3603,6 +4428,13 @@ def to_html_body(
                 i = ni
                 continue
         if kind == "table":
+            block_html, ni = consume_pitch_shifter_delay_block(
+                lines, i, terms, fname
+            )
+            if block_html:
+                chunks.append(block_html)
+                i = ni
+                continue
             table_html, ni = consume_defn_table(lines, i, terms)
             if table_html:
                 chunks.append(table_html)
@@ -3626,6 +4458,17 @@ def to_html_body(
             i = ni if ni is not None else i + 1
             continue
         if kind == "h4":
+            block_html, ni = consume_vcf_distortion_vcf_routing(
+                lines, i, terms, fname
+            )
+            if block_html:
+                chunks.append(block_html)
+                i = ni
+                continue
+            stub_i = consume_identical_params_stub_run(lines, i)
+            if stub_i is not None:
+                i = stub_i
+                continue
             j = i + 1
             while j < len(lines) and not lines[j].strip():
                 j += 1
@@ -3643,16 +4486,19 @@ def to_html_body(
                     chunks.append(table_html)
                     i = ni
                     continue
-            sid = slugify(line)
             cls = ""
+            diagram_title = gated_reverb_diagram_title(line)
+            heading = diagram_title or line
             if (
-                is_param_heading(line)
+                not diagram_title
+                and is_param_heading(line)
                 and not is_enum_heading(line)
                 and not toc_heading_kind(line)
             ):
                 cls = ' class="param-name"'
+            sid = slugify(heading)
             chunks.append(
-                f'<h4 id="{sid}"{cls}>{tags(line, heading=True)}</h4>'
+                f'<h4 id="{sid}"{cls}>{tags(heading, heading=True)}</h4>'
             )
             ni = consume_inline_figure(line, lines, i, chunks)
             i = ni if ni is not None else i + 1
@@ -3667,9 +4513,19 @@ def to_html_body(
             )
             i += 1
             continue
+        if kind == "named-range-cont":
+            i += 1
+            continue
         if kind == "range":
-            m = RANGE_RE.match(line)
-            name, rng = m.group(1).strip(), m.group(2).strip()
+            parsed = parse_range_line(line)
+            name, rng = parsed
+            line_buf = line
+            clauses: list[str] = []
+            trailing_desc: str | None = None
+            clause, desc = split_range_clause_and_desc(rng)
+            if clause:
+                clauses.append(clause)
+            trailing_desc = desc
             j = i + 1
             while j < len(lines):
                 s = lines[j].strip()
@@ -3677,21 +4533,47 @@ def to_html_body(
                     k = j + 1
                     while k < len(lines) and not lines[k].strip():
                         k += 1
-                    if k >= len(lines) or not range_incomplete(rng):
+                    if k >= len(lines):
                         break
-                    j = k
-                    s = lines[j].strip()
-                joined = range_join(line, s)
+                    if is_secondary_range_line(lines[k]):
+                        j = k
+                        s = lines[j].strip()
+                    elif parse_range_line(lines[k]):
+                        break
+                    elif not range_incomplete(
+                        RANGE_RE.match(line_buf).group(2).strip()
+                        if RANGE_RE.match(line_buf)
+                        else ""
+                    ):
+                        break
+                    else:
+                        j = k
+                        s = lines[j].strip()
+                if is_secondary_range_line(s):
+                    c, d = parse_secondary_range_line(s)
+                    if c:
+                        clauses.append(c)
+                    if d:
+                        trailing_desc = d
+                    j += 1
+                    continue
+                joined = range_join(line_buf, s)
                 if not joined:
                     break
-                line = joined
-                rng = RANGE_RE.match(line).group(2).strip()
+                line_buf = joined
+                clause, desc = split_range_clause_and_desc(
+                    RANGE_RE.match(line_buf).group(2).strip()
+                )
+                clauses = [clause] if clause else clauses
+                trailing_desc = desc or trailing_desc
                 j += 1
             sid = slugify(name)
             chunks.append(
                 f'<h4 id="{sid}" class="param-name"><span class="param">{html.escape(name)}</span>'
-                f'<span class="range">{format_range_html(rng)}</span></h4>'
+                f'<span class="range">{format_range_html(" ".join(clauses))}</span></h4>'
             )
+            if trailing_desc:
+                chunks.append(f"<p>{tags(trailing_desc)}</p>")
             i = j
             continue
         if kind == "tip":
@@ -3724,6 +4606,9 @@ def to_html_body(
                 chunks.append(table_html)
                 i = ni
                 continue
+        if is_delay_tempo_chart_intro(line):
+            i = skip_delay_tempo_chart_section(lines, i)
+            continue
         tagged = tags(line)
         inline_spec = next(
             (spec for spec in INLINE_FIGURES if spec["after"].search(line)), None
@@ -3784,7 +4669,12 @@ def to_html_body(
     return model + "".join(figs) + "\n".join(chunks)
 
 
-def chrome(filename: str, body: str) -> str:
+def chrome(
+    filename: str,
+    body: str,
+    *,
+    extra_scripts: list[str] | None = None,
+) -> str:
     title = TITLES[filename]
     idx = NAV_ORDER.index(filename) if filename in NAV_ORDER else -1
     prev_l = next_l = ""
@@ -3805,6 +4695,11 @@ def chrome(filename: str, body: str) -> str:
     h1_id = ""
     if title.startswith("Section "):
         h1_id = f' id="{section_anchor(title)}"'
+    scripts = ""
+    if extra_scripts:
+        scripts = "\n" + "\n".join(
+            f'  <script src="{html.escape(s)}"></script>' for s in extra_scripts
+        )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3837,7 +4732,7 @@ def chrome(filename: str, body: str) -> str:
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
     This is a working HTML transcription for the Toniq project; original pagination
     and the printed Index are omitted.
-  </footer>
+  </footer>{scripts}
 </body>
 </html>
 """
@@ -3892,6 +4787,17 @@ def split_parts(lines: list[str], parts: list[tuple[str, str | None]]) -> dict[s
     return out
 
 
+def write_delay_tempo_chart_page(terms: dict[str, list[str]]) -> None:
+    body = build_delay_tempo_chart_page_body(terms)
+    html_out = chrome(
+        DELAY_TEMPO_CHART_FNAME,
+        body,
+        extra_scripts=["js/delay-tempo-calculator.js"],
+    )
+    (OUT / DELAY_TEMPO_CHART_FNAME).write_text(html_out, encoding="utf-8")
+    print("wrote", DELAY_TEMPO_CHART_FNAME)
+
+
 def write_page(
     fname: str,
     lines: list[str],
@@ -3899,6 +4805,9 @@ def write_page(
     catalog: dict,
 ) -> None:
     SLUG_COUNTS.clear()
+    USED_IDS.clear()
+    # Page shell IDs are not generated through slugify but must stay unique.
+    USED_IDS.add("main")
     body = to_html_body(lines, terms, fname, catalog)
     (OUT / fname).write_text(chrome(fname, body), encoding="utf-8")
     print("wrote", fname, "lines", len(lines))
@@ -3918,6 +4827,7 @@ def main() -> None:
         chunks = split_parts(collect_range(pages, start, end), parts)
         for fname, _pat in parts:
             write_page(fname, chunks[fname], terms, catalog)
+    write_delay_tempo_chart_page(terms)
     print("done")
 
 

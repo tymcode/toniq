@@ -46,7 +46,7 @@
 <p>Each Song Track has its own sound program and a full set of track/performance parameters, just like a sequence track. The length of the song tracks is defined by the combined length of the steps and repetitions which make up the song. Song tracks are selected from the Seq/Song Tracks 1-6 and 7-12 pages when a song is selected.</p>
 <p>This means that after you’ve completed a number of sequences and linked them together to form a song, you have 12 more linear tracks which run the entire length of the song. This gives you 24 tracks to work with.</p>
 <p>Sequencer “Transport Controls” The three buttons at the bottom of the Sequencer section serve to start, stop and continue the sequencer, and to put it into Record and Overdub modes. In addition to these three buttons, either of the Foot Switches can be assigned to function just like the transport control buttons, when both hands are busy.</p>
-<p>Record    Stop      Play</p>
+<table class="param-cols cols-3"><tbody><tr><td>Record</td><td>Stop</td><td>Play</td></tr></tbody></table>
 <p>Left Foot Switch           Right Foot Switch</p>
 <p>Continue</p>
 <h4 id="sw-10-foot-switch" class="param-name">SW-10 Foot Switch</h4>
@@ -98,20 +98,20 @@
 <p>Seq/Song Tracks 1-6 and 7-12.</p>
 <p>Let’s take a look at the Seq/Song Tracks pages:</p>
 <p>Press <kbd class="button">Seq/Song Tracks 1-6</kbd>. This takes you to the first of the two pages:</p>
-<p>Track 1               Track 2              Track 3</p>
-<div class="vfd-callouts top"><div>Replace</div><div>1-6</div><div>7-12</div></div>
+<table class="param-cols cols-3"><tbody><tr><td>Track 1</td><td>Track 2</td><td>Track 3</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>Replace</td><td>1-6</td><td>7-12</td></tr></tbody></table>
 <h4 id="track-sound" class="param-name">Track Sound</h4>
 <p>Replace w/FX</p>
 <h4 id="seq-song-tracks" class="param-name">Seq/Song Tracks</h4>
-<p>Track 4               Track 5              Track 6</p>
+<table class="param-cols cols-3"><tbody><tr><td>Track 4</td><td>Track 5</td><td>Track 6</td></tr></tbody></table>
 <p>The LED above the <kbd class="button">Seq/Song Tracks 1-6</kbd> button lights, and the display shows the names of the programs on the six tracks of the current song or sequence. Press the soft button next to a track to select that track.</p>
 <p>Press <kbd class="button">Seq/Song Tracks 7-12</kbd>. This takes you to the second of the two Tracks pages:</p>
-<p>Track 7              Track 8               Track 9</p>
-<div class="vfd-callouts top"><div>Replace</div><div>1-6</div><div>7-12</div></div>
+<table class="param-cols cols-3"><tbody><tr><td>Track 7</td><td>Track 8</td><td>Track 9</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td>Replace</td><td>1-6</td><td>7-12</td></tr></tbody></table>
 <h4 id="track-sound-2" class="param-name">Track Sound</h4>
 <p>Replace w/FX</p>
 <h4 id="seq-song-tracks-2" class="param-name">Seq/Song Tracks</h4>
-<p>Track 10             Track 11             Track 12</p>
+<table class="param-cols cols-3"><tbody><tr><td>Track 10</td><td>Track 11</td><td>Track 12</td></tr></tbody></table>
 <p>The LED in the <kbd class="button">Seq/Song Tracks 7-12</kbd> button lights, and the display shows the names of the programs on the remaining 6 sequence tracks. Tracks which show –UNDEFINED– instead of a program name have not yet been defined (to define an undefined track you just select it).</p>
 <p>A dot to the left of the track location indicates that there is recorded data on the track.</p>
 <p>On these two pages you can select and layer the tracks of a sequence (by clicking or doubleclicking) just as you would on regular program bank pages. You can go back and forth between Seq/Song Tracks 1-6 and 7-12 without losing what was selected or layered in the other half. The LEDs above the two <kbd class="button">Seq/Song Tracks</kbd> buttons tell you where you are.</p>
@@ -351,7 +351,7 @@
 <p>• While holding down the soft button, type the number of the program change on the <kbd class="button">Bank</kbd> buttons beneath the display. For example, to record program change #12, press 1, then 2; to record program change #106, press 1, then 0, then 6; and so on.</p>
 <p>• At the instant you want the program change recorded, release the soft button. The program change is recorded (and sent to the remote MIDI device) when the soft button is released, so you can type the number in advance and let the button go at the exact instant you want the program change sent.</p>
 <p>To send/record a MIDI program change:</p>
-<div class="vfd-callouts top"><div>Bank</div><div>0</div><div>1</div></div>
+<table class="param-cols cols-6"><tbody><tr><td>Bank   0</td><td>1</td><td>2</td><td>3   4   5   6</td><td>7   8</td><td>9</td></tr></tbody></table>
 <p>1) Press and hold the track&#x27;s soft button</p>
 <div class="vfd-callouts top"><div>2) &quot;Type&quot; the program</div><div>3) Release the # on the bank buttons</div><div>soft button</div></div>
 <p>• This same procedure can be used at any time to send a program change to a remote MIDI device, whether the sequencer is in record or not.</p>
@@ -460,34 +460,10 @@
 <p>• Step 3 is Sequence 03 (a 4-bar Sequence) for 1 Repeat.</p>
 <p>Your Song would look like this:</p>
 <h4 id="song" class="param-name">SONG</h4>
-<div class="vfd-callouts top"><div>Song Step 1: Sequence 01 (4 bars)</div><div>Song Step 2: Sequence 02 (8 bars)</div><div>Song Step 3: Sequence 03 (4 bars)</div></div>
-<p>Sequence Track 1                  Sequence Track 1                Sequence Track 1</p>
-<p>Sequence Track 2                  Sequence Track 2                Sequence Track 2</p>
-<p>Sequence Track 3                  Sequence Track 3                Sequence Track 3</p>
-<p>Sequence Track 4                  Sequence Track 4                Sequence Track 4</p>
-<p>Sequence Track 5                  Sequence Track 5                Sequence Track 5</p>
-<p>Sequence Track 6                  Sequence Track 6                Sequence Track 6</p>
-<p>Sequence Track 7                  Sequence Track 7                Sequence Track 7</p>
-<p>Sequence Track 8                  Sequence Track 8                Sequence Track 8</p>
-<p>Sequence Track 9                  Sequence Track 9                Sequence Track 9</p>
-<p>Sequence Track 10                 Sequence Track 10               Sequence Track 10</p>
-<p>Sequence Track 11                 Sequence Track 11               Sequence Track 11</p>
-<p>Sequence Track 12                 Sequence Track 12               Sequence Track 12</p>
+<table class="param-cols cols-3"><tbody><tr><td>Song Step 1:</td><td>Song Step 2:</td><td>Song Step 3:</td></tr><tr><td>Sequence 01 (4 bars)</td><td>Sequence 02 (8 bars)</td><td>Sequence 03 (4 bars)</td></tr><tr><td>Sequence Track 1</td><td>Sequence Track 1</td><td>Sequence Track 1</td></tr><tr><td>Sequence Track 2</td><td>Sequence Track 2</td><td>Sequence Track 2</td></tr><tr><td>Sequence Track 3</td><td>Sequence Track 3</td><td>Sequence Track 3</td></tr><tr><td>Sequence Track 4</td><td>Sequence Track 4</td><td>Sequence Track 4</td></tr><tr><td>Sequence Track 5</td><td>Sequence Track 5</td><td>Sequence Track 5</td></tr><tr><td>Sequence Track 6</td><td>Sequence Track 6</td><td>Sequence Track 6</td></tr><tr><td>Sequence Track 7</td><td>Sequence Track 7</td><td>Sequence Track 7</td></tr><tr><td>Sequence Track 8</td><td>Sequence Track 8</td><td>Sequence Track 8</td></tr><tr><td>Sequence Track 9</td><td>Sequence Track 9</td><td>Sequence Track 9</td></tr><tr><td>Sequence Track 10</td><td>Sequence Track 10</td><td>Sequence Track 10</td></tr><tr><td>Sequence Track 11</td><td>Sequence Track 11</td><td>Sequence Track 11</td></tr><tr><td>Sequence Track 12</td><td>Sequence Track 12</td><td>Sequence Track 12</td></tr></tbody></table>
 <p>Now, with the song selected, you can press the <kbd class="button">Seq/Song Tracks 1-6</kbd> and <kbd class="button">7-12</kbd> buttons and see an entirely new set of empty tracks. These are the song tracks. Continuing with the above example, the song tracks might look like this:</p>
 <h4 id="song-2" class="param-name">SONG</h4>
-<div class="vfd-callouts top"><div>Song Step 1: Sequence 01 (4 bars)</div><div>Song Step 2: Sequence 02 (8 bars)</div><div>Song Step 3: Sequence 03 (4 bars)</div></div>
-<p>Sequence Track 1                   Sequence Track 1                 Sequence Track 1</p>
-<p>Sequence Track 2                   Sequence Track 2                 Sequence Track 2</p>
-<p>Sequence Track 3                   Sequence Track 3                 Sequence Track 3</p>
-<p>Sequence Track 4                   Sequence Track 4                 Sequence Track 4</p>
-<p>Sequence Track 5                   Sequence Track 5                 Sequence Track 5</p>
-<p>Sequence Track 6                   Sequence Track 6                 Sequence Track 6</p>
-<p>Sequence Track 7                   Sequence Track 7                 Sequence Track 7</p>
-<p>Sequence Track 8                   Sequence Track 8                 Sequence Track 8</p>
-<p>Sequence Track 9                   Sequence Track 9                 Sequence Track 9</p>
-<p>Sequence Track 10                  Sequence Track 10                Sequence Track 10</p>
-<p>Sequence Track 11                  Sequence Track 11                Sequence Track 11</p>
-<p>Sequence Track 12                  Sequence Track 12                Sequence Track 12</p>
+<table class="param-cols cols-3"><tbody><tr><td>Song Step 1:</td><td>Song Step 2:</td><td>Song Step 3:</td></tr><tr><td>Sequence 01 (4 bars)</td><td>Sequence 02 (8 bars)</td><td>Sequence 03 (4 bars)</td></tr><tr><td>Sequence Track 1</td><td>Sequence Track 1</td><td>Sequence Track 1</td></tr><tr><td>Sequence Track 2</td><td>Sequence Track 2</td><td>Sequence Track 2</td></tr><tr><td>Sequence Track 3</td><td>Sequence Track 3</td><td>Sequence Track 3</td></tr><tr><td>Sequence Track 4</td><td>Sequence Track 4</td><td>Sequence Track 4</td></tr><tr><td>Sequence Track 5</td><td>Sequence Track 5</td><td>Sequence Track 5</td></tr><tr><td>Sequence Track 6</td><td>Sequence Track 6</td><td>Sequence Track 6</td></tr><tr><td>Sequence Track 7</td><td>Sequence Track 7</td><td>Sequence Track 7</td></tr><tr><td>Sequence Track 8</td><td>Sequence Track 8</td><td>Sequence Track 8</td></tr><tr><td>Sequence Track 9</td><td>Sequence Track 9</td><td>Sequence Track 9</td></tr><tr><td>Sequence Track 10</td><td>Sequence Track 10</td><td>Sequence Track 10</td></tr><tr><td>Sequence Track 11</td><td>Sequence Track 11</td><td>Sequence Track 11</td></tr><tr><td>Sequence Track 12</td><td>Sequence Track 12</td><td>Sequence Track 12</td></tr></tbody></table>
 <p>Song Track 1 (16 bars)</p>
 <p>Song Track 2 (16 bars)</p>
 <p>Song Track 3 (16 bars)</p>
