@@ -48,14 +48,14 @@
 <p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the feedback signals. The higher the number, the more the signals are dampened.</p>
 <h2 id="43-eq-stereo-delaylfo" class="algo">43 EQ- -STEREO DELAYLFO</h2>
 <p>EQ- -<span class="param">STEREO</span> DELAYLFO features a parametric EQ and a stereo digital delay that provides LFO modulation of a wide range of delays. This algorithm sounds great with an electric piano, but try it with any source!</p>
-<h4 id="eq-stereo-delaylfo-signal-routing" class="param-name"><span class="param">EQ- -STEREO DELAYLFO Signal Routing</span></h4>
 <figure class="figure"><img src="images/eq-stereo-delaylfo.png" alt="EQ-STEREO DELAYLFO signal routing: FX-1 and FX-2 left/right inputs through EQ Trim, EQ, Left/Right Delay with LFO modulation, Delay-Regen, Damping (LPF), Cross Regen, Delay Input R, Output Level R, and Main Outputs L/R"><figcaption>EQ- -<span class="value">STEREO</span> DELAYLFO signal routing.</figcaption></figure>
 <p>The EFFECT <span class="param">MIX FX-1 and FX-2</span> DELAYLFO parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="lfo-rate" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the rate of pitch modulation which is the LFO. To achieve a chorusing effect, this rate must be very slow.</p>
 <h4 id="width" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the excursion of pitch modulation. Since the rate is usually very slow, the width is usually large.</p>
-<h4 id="l-r-lfo" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or IN-PHASE<</span></h4>
+<h4 id="l-r-lfo" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
+<p>IN-PHASE</p>
 <p>When this parameter is IN-PHASE, the left and right choruses will modulate their detunes together. When set to <span class="param">OUT</span>-OF-PHASE, the detune on the left channel will go up while the detune on the right will go down.</p>
 <h4 id="delay-input-r" class="param-name"><span class="param">DELAY INPUT R</span><span class="range">Range: OFF or ON</span></h4>
 <p>Disables the input into the right side delay line. The right delay line will still get input from the</p>
@@ -85,7 +85,6 @@
 <h2 id="44-eight-voice-chorus" class="algo">44 EIGHT VOICE CHORUS</h2>
 <p>EIGHT  VOICE CHORUS offers a symphonic chorused sound having eight different voices and using eight separately randomized LFOs. This algorithm also offers a user programmable stereo delay in a cross coupled configuration between the left and right chorused outputs (see diagram).</p>
 <p>This algorithm is good for creating an ensemble of instruments from single sources (there is no internal filtering applied to any of the chorused voices). The EFFECT <span class="param">MIX FX-1 and FX-2</span> CHORUS parameters can be routed into the effect with different Dry/Wet mixes. For this algorithm we recommend a mix of around 50 for a starting point.</p>
-<h4 id="eight-voice-chorus-signal-routing" class="param-name"><span class="param">Eight Voice Chorus Signal Routing</span></h4>
 <figure class="figure"><img src="images/eight-voice-chorus-routing.png" alt="Eight Voice Chorus signal routing: FX-1 and FX-2 left/right inputs summed per channel through 4 Voice Chorus (with Chorus Regen) and Delay paths; Delay Regen cross-couples left and right delays; Main Outputs L/R"><figcaption>Eight Voice Chorus signal routing.</figcaption></figure>
 <h4 id="chorus-rate" class="param-name"><span class="param">CHORUS RATE</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the eight ganged rates of modulation of the respective voices and produces an effect similar to both vibrato and tremolando occurring at the same time.</p>
@@ -256,7 +255,6 @@
 <p>For a complete description of the remaining parameters, refer to the <a class="algo" href="07-effects-00-21.html#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
 <h2 id="50-eq-chorus-eq-ddl" class="algo">50 EQ- -CHORUS + EQ- -DDL</h2>
 <p>EQ- -CHORUS + EQ- -DDL combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard chorus effect, designed with very long delays to provide a modulated detune effect. This algorithm sounds great with a guitar sound, but try it with any source!</p>
-<h4 id="eq-chorus-eq-ddl-routing" class="param-name">EQ- -CHORUS + EQ- -DDL Signal Routing</h4>
 <figure class="figure"><img src="images/eq-chorus-eq-ddl-routing.png" alt="EQ- -CHORUS + EQ- -DDL signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Chorus (Delay) with Regen Control and Echo (Echo Level) to Main Output L; right path through Chorus with cross-feed from left regen to Main Output R"><figcaption>EQ- -CHORUS + EQ- -DDL signal routing.</figcaption></figure>
 <p>The signal enters a programmable EQ, which is preceded by an input level trim (<span class="param">EQ TRIM</span>). The signal is then routed to the chorus which is heard directly at the output. There is also a delayed unchorused signal (sharing the same delay lines) that is routed back into the chorus. There is also a second signal from the delay line that is routed to the right side. There are two discrete echo times tapped out before the chorus delay line. These are unchorused echoes. The signal from the echoes is routed directly to the outputs. There is also a dry signal (not shown) that goes directly from the input to the Main Output (<span class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> CHORUS parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="chorus-center-2" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 00 to 99</span></h4>
@@ -317,7 +315,6 @@
 <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
 <h2 id="52-eq-flanger-delay" class="algo">52 EQ- -FLANGER + DELAY</h2>
 <p>EQ- -FLANGER + DELAY combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft woosh” effect.</p>
-<h4 id="eq-flanger-delay-routing" class="param-name">EQ- -FLANGER + DELAY Signal Routing</h4>
 <figure class="figure"><img src="images/eq-flanger-delay-routing.png" alt="EQ- -FLANGER + DELAY signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Flanger with Delay Feedback and Echo (Echo Level) to Main Output L; right path through Flanger with cross-feed from left delay to Main Output R"><figcaption>EQ- -FLANGER + DELAY signal routing.</figcaption></figure>
 <p>In this algorithm the signal enters an input level trim (<span class="param">EQ TRIM</span>) followed by a programmable EQ, and then is routed to the flanger. The flanger is routed directly to the output. The left channel signal passes through the delay and is routed back into the flanger. Another signal from the delay is routed to the output on the right side. The <span class="param">DELAY - REGEN</span> parameter controls both delay levels. There are two discrete echoes that are sent to the left and right outputs respectively.</p>
 <p>The signal from both echoes has one level control (<span class="param">ECHO - LEVEL</span>). There is also an external dry signal (not shown) that goes directly from the input to the Main Output (<span class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
@@ -385,7 +382,6 @@
 <h2 id="54-phaser-delay" class="algo">54 PHASER + DELAY</h2>
 <p>PHASER + DELAY combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches in the signal spectrum, whereas a flanger creates harmonic spacing. This phaser implements a stereo twelve pole phasing network to achieve time delay which is a function of-frequency; this is what differentiates the phaser from the flanger. The phasing effect is achieved within the phaser topology, so it does not depend upon the external mix. A delay is included at the left output of the phaser that feeds back into the phaser (see the diagram). Setting the phaser <span class="param">REGEN</span> parameter (shown at the knobs) to 00 will disable this delay function. The</p>
 <p>DELAY  <span class="param">REGEN</span> also controls the delay feed forward level of another tap sent to the right channel. This delay topology achieves a 1.5 second ping-pong effect, and is very effective as a “poor man’s reverb.” The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="phaser-delay-signal-routing" class="param-name"><span class="param">PHASER + DELAY Signal Routing</span></h4>
 <figure class="figure"><img src="images/phaser-delay-routing.png" alt="PHASER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed per channel through Phaser (LFO) with linked Phaser Regen; left path feeds Delay with Delay Regen feedback to left and cross-feed to Main Output R; Main Outputs L/R"><figcaption>PHASER + DELAY signal routing.</figcaption></figure>
 <h4 id="phaser-center-2" class="param-name"><span class="param">PHASER CENTER</span><span class="range">Range: -99 to +99</span></h4>
 <p>Controls the phaser pole center. High values raise the nominal spectral location of the “woosh” sound, while low values lower the “woosh.” The range from high to low is controlled with the phaser width.</p>
@@ -411,8 +407,6 @@
 <p>Controls the feed forward delay time for the right side. This is the “pong.”</p>
 <h2 id="55-eq-tremolo-delay" class="algo">55 EQ- -TREMOLO + DELAY</h2>
 <p>EQ- -TREMOLO + DELAY combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital delay.</p>
-
-<h4 id="eq-tremolo-delay-routing" class="param-name">EQ- -TREMOLO + DELAY Signal Routing</h4>
 <figure class="figure"><img src="images/eq-tremolo-delay-routing.png" alt="EQ- -TREMOLO + DELAY signal routing: FX-1 left/right through linked Input Level Trim, EQ, and Tremolo; FX-2 summed with left path through Delay and Echo (Echo Level) to Main Output L; right tremolo direct to Main Output R with Regen cross-feed from delay"><figcaption>EQ- -TREMOLO + DELAY signal routing.</figcaption></figure>
 <p>The signal enters an input level trim (<span class="param">EQ TRIM</span>) followed by a programmable EQ, and is then routed to the tremolo. The tremolo is routed directly to the output. The left channel signal passes through the digital delay and is routed back into the delay. There is another signal from the delay that is routed to the output on the right side. One regen parameter (<span class="param">DELAY - REGEN</span>) between the delay sends controls the left and right delay level. This constitutes the “ping-pong” effect. There are two echoes that are sent to the left and right outputs respectively. The signal from the two discrete echoes has one level control. There is also an external Dry signal (not shown) that goes directly from the input to the output. The EFFECT <span class="param">MIX</span> FX-1 POST-DDL and <span class="param">FX-2</span> DDL parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="tremolo-rate" class="param-name"><span class="param">TREMOLO RATE</span><span class="range">Range: 000 to 130</span></h4>
@@ -491,8 +485,8 @@
 <p>Allows you to adjust the level of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
 <h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
 <p>Allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would be far right.</p>
-<p>VOICE-2 SEMI                               <span class="param">LEVEL</span></p>
-<p><span class="param">FINE</span> <span class="param">PAN</span> These parameters are identical to the VOICE-1 parameters, and allow you to define a second voice for independent pitch shifting.</p>
+<table class="param-cols"><tbody><tr><td>VOICE-2 SEMI</td><td><span class="param">LEVEL</span></td></tr><tr><td><span class="param">FINE</span></td><td><span class="param">PAN</span></td></tr></tbody></table>
+<p>These parameters are identical to the VOICE-1 parameters, and allow you to define a second voice for independent pitch shifting.</p>
 <h4 id="pitch-shifter-quality" class="param-name"><span class="param">PITCH SHIFTER - QUALITY</span><span class="range">Range: LONG/SMOOTH or SHORT/COARSE</span></h4>
 <p>Allows you to choose between a long/smooth setting, or a short/coarse setting. A smooth setting would sound best with slower sustaining chords, whereas a coarse setting would enhance a rapidly played musical passage. Depending on your sound source and musical needs, set this parameter accordingly. This parameter actually controls the effect transport delay; smooth yields a long transport delay, coarse yields a short transport delay.</p>
 <h4 id="lfo-rate-2" class="param-name"><span class="param">LFO - RATE</span><span class="range">Range: 00 to 99</span></h4>
@@ -519,7 +513,6 @@
 <h4 id="width-13" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very large.</p>
 <h2 id="59-pitch-shifter-delay" class="algo">59 PITCH SHIFTER + DELAY</h2>
-<h4 id="pitch-shifter-delay-routing" class="param-name">PITCH SHIFTER + DELAY Signal Routing</h4>
 <p>PITCH SHIFTER + DELAY combines a pitch shifter with a digital delay. PITCH SHIFTER + DELAY uses a continual crossfading technique of pitch shifting. This technique maintains the stereo field exactly. This pitch shifter works best for large pitch shift ratios, in some circumstances. Another feature of this algorithm is a digital delay that feeds back into the pitch shift. This feature allows spiraling upward or downward pitch shifts. The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes. This algorithm sounds best with a Mix of wet and dry. Try using a modulation controller for this parameter to fade in or fade out the pitch shifted signal.</p>
 <figure class="figure"><img src="images/pitch-shifter-delay-routing.png" alt="PITCH SHIFTER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed and cross-fed to Vc 1 and Vc 2 stereo shifters with Regen feedback; delay mixer combines shifter outputs and Dry Level; panned shifter outputs and Delay Mix to Main Outputs L and R"><figcaption>PITCH SHIFTER + DELAY signal routing.</figcaption></figure>
 <h4 id="voice-1-semi-2" class="param-name"><span class="param">VOICE-1 SEMI</span><span class="range">Range: -12 to +12</span></h4>
@@ -530,8 +523,8 @@
 <p>This parameter adjusts the volume of Voice-1.</p>
 <h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
 <p>Allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would be far right.</p>
-<p>VOICE-2 SEMI                                <span class="param">LEVEL</span></p>
-<p><span class="param">FINE</span> <span class="param">PAN</span> These parameters are identical to the previous ones, and control Voice-2.</p>
+<table class="param-cols"><tbody><tr><td>VOICE-2 SEMI</td><td><span class="param">LEVEL</span></td></tr><tr><td><span class="param">FINE</span></td><td><span class="param">PAN</span></td></tr></tbody></table>
+<p>These parameters are identical to the previous ones, and control Voice-2.</p>
 <h4 id="delay-regen-7" class="param-name"><span class="param">DELAY REGEN</span><span class="range">Range: -99 to +99</span></h4>
 <p>Controls the amount of feedback from the output of the delay back into the input of the pitch shifter. This allows you to create special effects with ascending/descending delays.</p>
 <h4 id="time-l-and-r-8" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
