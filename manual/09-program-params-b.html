@@ -206,10 +206,12 @@
   
 </figure>
 <h4 id="mod-destination" class="param-name"><span class="param">MOD-DESTINATION</span><span class="range">Range: *-NONE-*, START-STEP, LOOP-START, END-STEP, TRAVELER, or START+LOOP</span></h4>
-<p>• When set to <span class="lcd">START-STEP</span>, the output level of the <span class="lcd">START-MODSRC</span> at the time of the note-on will determine which step the <dfn class="term">Wave-List</dfn> will begin playing at. A positive <span class="param">MODAMT</span> will cause <span class="param">MODSRC</span> output to increment the <span class="lcd">START-STEP</span> above the manual level. A negative <span class="param">MODAMT</span> will decrement the <span class="lcd">START-STEP</span> below the manual level. The manual level is determined by the <span class="lcd">START-STEP</span> parameter. After the appropriate <span class="lcd">START-STEP</span> has played for its duration, the <dfn class="term">Wave-List</dfn> will play through all of the successive steps, up to the END step, and then will loop back around to play the <span class="param">LOOPSTART</span> Step. If the output of the <span class="param">MODSRC</span> causes the <dfn class="term">Wave-List</dfn> to begin playing at a Step that is past the END Step, the appropriate <span class="lcd">START-STEP</span> will play for its duration, and then the <dfn class="term">Wave-List</dfn> will loop back to play the <span class="param">LOOPSTART</span> Step. The <dfn class="term">Wave-List</dfn> will continue to loop between the <span class="param">LOOPSTART</span> Step and the END Step, until the voice is turned off.</p>
-<p>• When set to either <span class="lcd">LOOP-START</span> or <span class="lcd">END-STEP</span>, the <span class="param">LOOPSTART</span> Step or the END Step values will be modulated in a non-real-time manner, similar to when <span class="lcd">MOD-DESTINATION=START-STEP</span>. With either setting, if the output of the <span class="param">MODSRC</span> causes the END Step to be lower than the <span class="param">LOOPSTART</span> Step, the <dfn class="term">Wave-List</dfn> will simply repeat the <span class="param">LOOPSTART</span> Step.</p>
-<p>• When set to <span class="lcd">TRAVELER</span>, Step Duration will be ignored, and <span class="param">MODSRC</span> output will directly control which Step will play, within the boundaries of the <span class="lcd">START-STEP</span> and the END Step, continuously, in real-time. With <span class="param">MODSRC</span> output at zero, a positive <span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the <span class="lcd">START-STEP</span>. With <span class="param">MODSRC</span> output at full, a positive <span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the END Step. A negative <span class="param">MODAMT</span> will have the opposite effects.</p>
-<p>• When set to <span class="lcd">START+LOOP</span>, the <span class="param">MODSRC</span> will modulate the <span class="lcd">START-STEP</span>, <span class="param">LOOPSTART</span> Step and END Step values all simultaneously, relative to one another, and all in a real-time manner similar to when <span class="lcd">MOD-DESTINATION=TRAVELER</span>. The integrity of the loop will be maintained as the Step values are modulated. <span class="lcd">START+LOOP</span> allows you to move a fixed- length window over a definable range of the <dfn class="term">Wave-List</dfn>.</p>
+<ul>
+  <li>When set to <span class="lcd">START-STEP</span>, the output level of the <span class="lcd">START-MODSRC</span> at the time of the note-on will determine which step the <dfn class="term">Wave-List</dfn> will begin playing at. A positive <span class="param">MODAMT</span> will cause <span class="param">MODSRC</span> output to increment the <span class="lcd">START-STEP</span> above the manual level. A negative <span class="param">MODAMT</span> will decrement the <span class="lcd">START-STEP</span> below the manual level. The manual level is determined by the <span class="lcd">START-STEP</span> parameter. After the appropriate <span class="lcd">START-STEP</span> has played for its duration, the <dfn class="term">Wave-List</dfn> will play through all of the successive steps, up to the END step, and then will loop back around to play the <span class="param">LOOPSTART</span> Step. If the output of the <span class="param">MODSRC</span> causes the <dfn class="term">Wave-List</dfn> to begin playing at a Step that is past the END Step, the appropriate <span class="lcd">START-STEP</span> will play for its duration, and then the <dfn class="term">Wave-List</dfn> will loop back to play the <span class="param">LOOPSTART</span> Step. The <dfn class="term">Wave-List</dfn> will continue to loop between the <span class="param">LOOPSTART</span> Step and the END Step, until the voice is turned off.</li>
+  <li>When set to either <span class="lcd">LOOP-START</span> or <span class="lcd">END-STEP</span>, the <span class="param">LOOPSTART</span> Step or the END Step values will be modulated in a non-real-time manner, similar to when <span class="lcd">MOD-DESTINATION=START-STEP</span>. With either setting, if the output of the <span class="param">MODSRC</span> causes the END Step to be lower than the <span class="param">LOOPSTART</span> Step, the <dfn class="term">Wave-List</dfn> will simply repeat the <span class="param">LOOPSTART</span> Step.</li>
+  <li>When set to <span class="lcd">TRAVELER</span>, Step Duration will be ignored, and <span class="param">MODSRC</span> output will directly control which Step will play, within the boundaries of the <span class="lcd">START-STEP</span> and the END Step, continuously, in real-time. With <span class="param">MODSRC</span> output at zero, a positive <span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the <span class="lcd">START-STEP</span>. With <span class="param">MODSRC</span> output at full, a positive <span class="param">MODAMT</span> will cause the <dfn class="term">Wave-List</dfn> to play only the END Step. A negative <span class="param">MODAMT</span> will have the opposite effects.</li>
+  <li>When set to <span class="lcd">START+LOOP</span>, the <span class="param">MODSRC</span> will modulate the <span class="lcd">START-STEP</span>, <span class="param">LOOPSTART</span> Step and END Step values all simultaneously, relative to one another, and all in a real-time manner similar to when <span class="lcd">MOD-DESTINATION=TRAVELER</span>. The integrity of the loop will be maintained as the Step values are modulated. <span class="lcd">START+LOOP</span> allows you to move a fixed- length window over a definable range of the <dfn class="term">Wave-List</dfn>.</li>
+</ul>
 <h4 id="modsrc-2" class="param-name"><span class="param">MODSRC</span><span class="range">Range: 00 to 99</span></h4>
 <p>Here you choose which of the 15 modulators will control the movement of the wave-list. Any of the modulators can be selected.</p>
 <h4 id="modamt-3" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -15 to +15</span></h4>
@@ -220,8 +222,10 @@
 <aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the OCTAVE and SEMITONE values on the <span class="page-name">PITCH page</span> will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <dfn class="term">Drum-Map</dfn> Editor.</p></aside>
 <h2 id="mod-mixer-page">Mod Mixer Page</h2>
 <p>The Mod Mixer is a unique feature which allows you to:</p>
-<p>• combine and assign two modulators to a single modulation input</p>
-<p>• scale and/or shape the response of one of those modulators according to one of 16 Mod</p>
+<ul>
+  <li>combine and assign two modulators to a single modulation input</li>
+  <li>scale and/or shape the response of one of those modulators according to one of 16 Mod</li>
+</ul>
 <h4 id="shaper-curves" class="param-name">Shaper Curves</h4>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Select Voice</div></td></tr></table></aside>
 <p>Select the voice you want to edit on the <span class="page-name">Select Voice page</span>, and then press <kbd class="button">Mod Mixer</kbd>. The display shows:</p>
@@ -305,38 +309,40 @@
 </figure>
 <h4 id="type" class="param-name"><span class="param">Type</span><span class="range">Range: various</span></h4>
 <p>Allows you to define a sound class for your sound. This setting can be used by third-party editor librarian software for “automatic-sorting” of sounds by type. The available types are:</p>
-<p>• ACPIANOS          Acoustic pianos, honky-tonk, toy pianos, and piano forte</p>
-<p>• ELPIANOS          Electric and electronic piano sounds</p>
-<p>• ORGANS            Pipe organs, electric, and electronic organs</p>
-<p>• ALTKEYS           Other keyboard sounds such as harpsichord, accordion, and piano layered with other sounds</p>
-<p>• SYNLEAD           Lead synth sounds</p>
-<p>• SYNPAD            Sustaining synth pads</p>
-<p>• SYNOTHER          Other synth sounds: hybrids, fat power-synths, synth bells</p>
-<p>• GUITARS           Acoustic guitars, clean electric guitars and distortion guitars</p>
-<p>• ALTPLUCK          Other plucked strings: harps, banjo, dulcimer, sitar, etc.</p>
-<p>• SOLOSTRG          Plucked and bowed solo strings (violin, viola, cello, bass)</p>
-<p>• STRGSECT          Plucked and bowed string sections and small ensembles</p>
-<p>• SOLOBRAS          Solo brass: trumpet, trombone, tuba, French horns</p>
-<p>• BRASSECT          Brass sections: trumpet, trombone, tuba, French horns</p>
-<p>• SOLOSAX           Solo saxophones</p>
-<p>• SOLOWIND          Solo woodwinds/reeds (including harmonica)</p>
-<p>• WINDSECT          Woodwind/reed/saxophone sections and small ensembles</p>
-<p>• VOCALS            Vocal sounds: choirs and synth-vox</p>
-<p>• ACOUBASS          Acoustic basses</p>
-<p>• ELECBASS          Electric basses</p>
-<p>• SYNBASS           Synth basses</p>
-<p>• DRUMS-E           Drum kits that use the ENSONIQ Drum Map</p>
-<p>• DRUMS-GM          Drum kits that use the <span class="mode">General MIDI</span> Drum Map</p>
-<p>• PERCUSSN          Percussion kits and solo untuned percussion (e.g. taiko)</p>
-<p>• TUNEPERC          Tuned percussion: marimba, xylophone, timpani, orchestral hits</p>
-<p>• SOUND-FX          Realistic (e.g. broken glass) and fantasy (e.g. spacecraft) sound effects</p>
-<p>• SPLITS            Combination keyboard splits of 2 or more different sounds</p>
-<p>• TRANS-WV          Distinctly <dfn class="term">TransWave</dfn>-type sounds</p>
-<p>• HYPER-WV          Distinctly HyperWave texture sounds</p>
-<p>• GROOVES           Rhythm loop groove patterns and pulsed performance sounds</p>
-<p>• UTILITY           Utility resources: default template sounds, pitch tables, etc.</p>
-<p>• OTHER             Unclassified miscellaneous sounds (e.g. didgeridoo), and unnatural acoustic layers (e.g. violin scrape layered with a shakuhachi)</p>
-<p>• CUSTOM            Use this to define your own special purpose sound type: ENSONIQ sounds will never be released with <span class="lcd">TYPE=CUSTOM</span>.</p>
+<ul>
+  <li>ACPIANOS          Acoustic pianos, honky-tonk, toy pianos, and piano forte</li>
+  <li>ELPIANOS          Electric and electronic piano sounds</li>
+  <li>ORGANS            Pipe organs, electric, and electronic organs</li>
+  <li>ALTKEYS           Other keyboard sounds such as harpsichord, accordion, and piano layered with other sounds</li>
+  <li>SYNLEAD           Lead synth sounds</li>
+  <li>SYNPAD            Sustaining synth pads</li>
+  <li>SYNOTHER          Other synth sounds: hybrids, fat power-synths, synth bells</li>
+  <li>GUITARS           Acoustic guitars, clean electric guitars and distortion guitars</li>
+  <li>ALTPLUCK          Other plucked strings: harps, banjo, dulcimer, sitar, etc.</li>
+  <li>SOLOSTRG          Plucked and bowed solo strings (violin, viola, cello, bass)</li>
+  <li>STRGSECT          Plucked and bowed string sections and small ensembles</li>
+  <li>SOLOBRAS          Solo brass: trumpet, trombone, tuba, French horns</li>
+  <li>BRASSECT          Brass sections: trumpet, trombone, tuba, French horns</li>
+  <li>SOLOSAX           Solo saxophones</li>
+  <li>SOLOWIND          Solo woodwinds/reeds (including harmonica)</li>
+  <li>WINDSECT          Woodwind/reed/saxophone sections and small ensembles</li>
+  <li>VOCALS            Vocal sounds: choirs and synth-vox</li>
+  <li>ACOUBASS          Acoustic basses</li>
+  <li>ELECBASS          Electric basses</li>
+  <li>SYNBASS           Synth basses</li>
+  <li>DRUMS-E           Drum kits that use the ENSONIQ Drum Map</li>
+  <li>DRUMS-GM          Drum kits that use the <span class="mode">General MIDI</span> Drum Map</li>
+  <li>PERCUSSN          Percussion kits and solo untuned percussion (e.g. taiko)</li>
+  <li>TUNEPERC          Tuned percussion: marimba, xylophone, timpani, orchestral hits</li>
+  <li>SOUND-FX          Realistic (e.g. broken glass) and fantasy (e.g. spacecraft) sound effects</li>
+  <li>SPLITS            Combination keyboard splits of 2 or more different sounds</li>
+  <li>TRANS-WV          Distinctly <dfn class="term">TransWave</dfn>-type sounds</li>
+  <li>HYPER-WV          Distinctly HyperWave texture sounds</li>
+  <li>GROOVES           Rhythm loop groove patterns and pulsed performance sounds</li>
+  <li>UTILITY           Utility resources: default template sounds, pitch tables, etc.</li>
+  <li>OTHER             Unclassified miscellaneous sounds (e.g. didgeridoo), and unnatural acoustic layers (e.g. violin scrape layered with a shakuhachi)</li>
+  <li>CUSTOM            Use this to define your own special purpose sound type: ENSONIQ sounds will never be released with <span class="lcd">TYPE=CUSTOM</span>.</li>
+</ul>
 <aside class="tip"><p>With the <span class="function">SoundFinder</span> feature, when a sound name is selected, pressing the <kbd class="button">Replace Track Sound</kbd> button and then continued presses of the Up or <kbd class="button">Down Arrow</kbd> buttons will scroll through all sounds in memory that are assigned the same TYPE.</p></aside>
 <h4 id="option" class="param-name"><span class="param">OPTION</span><span class="range">Range: *-NONE-*, PITCHTBL, WAVELIST, or DRUM-MAP</span></h4>
 <p>The setting of this parameter indicates whether a Custom <dfn class="term">Pitch-Table</dfn>, a <dfn class="term">Wave-List</dfn>, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “REPLACE VOICES 5+6 WITH PITCH–TABLE, <span class="lcd">WAVE-LIST</span>, DRUM–MAP, or <span class="lcd">*EXIT*</span>.” If you choose <span class="lcd">*EXIT*</span>, then the setting of the parameter is not changed.</p>
@@ -445,7 +451,9 @@
 <h4 id="fine-tune-parameter" class="param-name"><span class="param">Fine Tune Parameter</span><span class="range">Range: 00 to 99 cents</span></h4>
 <p>Enables you to fine tune the pitch, or create micro-tunings and other alternate tunings.</p>
 <h4 id="exit" class="param-name">*EXIT*</h4>
-<p>• Press <span class="lcd">*EXIT*</span> to return to the first <span class="page-name">Program Control sub-page</span>, eliminating any edits you may have made on the <span class="page-name">Pitch-Table Editor sub-page</span>.</p>
+<ul>
+  <li>Press <span class="lcd">*EXIT*</span> to return to the first <span class="page-name">Program Control sub-page</span>, eliminating any edits you may have made on the <span class="page-name">Pitch-Table Editor sub-page</span>.</li>
+</ul>
 <p>To display the <span class="page-name">Extrapolate/Interpolate sub-page</span>, press the <span class="lcd">*CALCULATOR*</span> soft button. The display shows:</p>
 <figure class="vfd-unit">
   
@@ -485,7 +493,9 @@
 <h4 id="interpolate" class="param-name">INTERPOLATE</h4>
 <p>INTERPOLATE takes the interval between two notes on the keyboard and divides all the keys in between into equally-spaced fractions of that interval.</p>
 <p>After a key-range has been defined, press the INTERPOLATE soft button. The display briefly reads PITCH-TABLE <span class="lcd">*CALCULATOR*</span>, then returns with the newly defined range across the whole keyboard.</p>
-<p>• Press <span class="lcd">*EXIT*</span> to return to the first <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn> sub-page</span>, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate sub-page</span>.</p>
+<ul>
+  <li>Press <span class="lcd">*EXIT*</span> to return to the first <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn> sub-page</span>, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate sub-page</span>.</li>
+</ul>
 <h3 id="warning">Warning:</h3>
 <p>You must save the program containing your custom pitch-table, or copy the custom pitch-table into the system, or you will lose it as soon as you edit another sound.</p>
 <p>Copy  <dfn class="term">Pitch-Table</dfn> Parameters Pressing <kbd class="button">Copy</kbd> <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn> sub-page</span> will display the <span class="page-name">Copy page</span>:</p>
@@ -522,8 +532,10 @@
 <p>The MAKE COPY parameter allows you to make a copy of the complete pitch-table from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer.</p>
 <p>The RECALL parameter allows you to recall the complete pitch-table from the Copy Buffer into an edited version of the current program if 1) the current program has a pitch-table installed in it and 2) the Copy buffer contains a pitch-table. If you attempt to recall a <dfn class="term">Pitch-Table</dfn> into a program without just previously having copied a pitch-table into the Copy buffer, the copy is not completed and an error message is displayed.</p>
 <p>The SYSTEM parameter allows you to install an alternate tuning into the System pitch-table. As an added feature, the System pitch-table itself is user-definable. For instance, if you want to hear what other programs sound like using the custom pitch-table from a program, you can redefine the System pitch-table. Or, if your main tuning is “just intonation,” then it might be convenient for you to use this or some other alternate tuning as your System tuning.</p>
-<p>• Press the soft button beneath SYSTEM. The display briefly reads COPY TO SYSTEM PITCH-TABLE, and the custom pitch-table is installed into the TS-10 Operating System where it is available for use by any program.</p>
-<p>• Press <kbd class="button">System</kbd> four times to view the <span class="page-name">System PITCH-TABLE sub-page</span>.</p>
+<ul>
+  <li>Press the soft button beneath SYSTEM. The display briefly reads COPY TO SYSTEM PITCH-TABLE, and the custom pitch-table is installed into the TS-10 Operating System where it is available for use by any program.</li>
+  <li>Press <kbd class="button">System</kbd> four times to view the <span class="page-name">System PITCH-TABLE sub-page</span>.</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -554,7 +566,9 @@
   
   
 </figure>
-<p>• Note that the SYSTEM PITCH-TABLE parameter has been set to CUSTOM. Now all programs whose voices are set to use the system pitch-table (which is most programs) will use the custom pitch-table.</p>
+<ul>
+  <li>Note that the SYSTEM PITCH-TABLE parameter has been set to CUSTOM. Now all programs whose voices are set to use the system pitch-table (which is most programs) will use the custom pitch-table.</li>
+</ul>
 <p>To return all programs to standard equi-tempered tuning, set the System PITCH-TABLE parameter back to <span class="value">NORMAL</span>. Switching back to CUSTOM will restore your custom System pitch-table. You can switch back and forth as often as you wish. You can also try installing other custom pitch-tables in the System, but the System pitch-table can only contain one Custom pitchtable at a time.</p>
 <h2 id="wave-list-editor-parameters">Wave-List Editor Parameters</h2>
 <p>The following parameters are only available when <span class="lcd">OPTION=WAVE-LIST</span> on the <span class="page-name">Program Control Page</span>. To access the <dfn class="term">Wave-List</dfn> Editor parameters for a program that does not contain a <dfn class="term">Wave-List</dfn>:</p>

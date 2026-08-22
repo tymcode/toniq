@@ -51,30 +51,36 @@
 <p>Continue</p>
 <h4 id="sw-10-foot-switch" class="param-name">SW-10 Foot Switch</h4>
 <p>Assuming the Autopunch function is off:</p>
-<p>• Pressing <kbd class="button">Play</kbd> will start the current sequence or song (whichever is selected) playing from the beginning.</p>
-<p>• Any Foot Switch assigned to PLAY/STOP will duplicate the behavior of alternate presses of the <kbd class="button">Play</kbd> button and the <kbd class="button">Stop/Continue</kbd> button.</p>
-<p>• Pressing <kbd class="button">Stop/Continue</kbd> will stop the sequencer (if pressed while it is running); or will play the current sequence or song from wherever it was last stopped (if pressed while the sequencer is stopped).</p>
-<p>• Any Foot Switch assigned to STOP/CONT will duplicate the behavior of the <kbd class="button">Stop/Continue</kbd> button.</p>
-<p>• Pressing <kbd class="button">Play</kbd> while holding down <kbd class="button">Record</kbd> will start the sequencer recording on the current track from the beginning of the sequence or song.</p>
-<p>• Pressing <kbd class="button">Stop/Continue</kbd> while holding down <kbd class="button">Record</kbd> will start the sequencer recording on the current track from wherever it was last stopped.</p>
-<p>• Pressing <kbd class="button">Record</kbd> while the sequencer is playing will put the sequencer into “Punch in” Standby mode. It will wait for you to either start playing or press <kbd class="button">Record</kbd> again before going into Record on the current track.</p>
-<p>• Pressing any Foot Switch assigned to either PLAY/STOP or STOP/CONT will initiate recording while the sequencer is in “Punch in” Standby mode.</p>
+<ul>
+  <li>Pressing <kbd class="button">Play</kbd> will start the current sequence or song (whichever is selected) playing from the beginning.</li>
+  <li>Any Foot Switch assigned to PLAY/STOP will duplicate the behavior of alternate presses of the <kbd class="button">Play</kbd> button and the <kbd class="button">Stop/Continue</kbd> button.</li>
+  <li>Pressing <kbd class="button">Stop/Continue</kbd> will stop the sequencer (if pressed while it is running); or will play the current sequence or song from wherever it was last stopped (if pressed while the sequencer is stopped).</li>
+  <li>Any Foot Switch assigned to STOP/CONT will duplicate the behavior of the <kbd class="button">Stop/Continue</kbd> button.</li>
+  <li>Pressing <kbd class="button">Play</kbd> while holding down <kbd class="button">Record</kbd> will start the sequencer recording on the current track from the beginning of the sequence or song.</li>
+  <li>Pressing <kbd class="button">Stop/Continue</kbd> while holding down <kbd class="button">Record</kbd> will start the sequencer recording on the current track from wherever it was last stopped.</li>
+  <li>Pressing <kbd class="button">Record</kbd> while the sequencer is playing will put the sequencer into “Punch in” Standby mode. It will wait for you to either start playing or press <kbd class="button">Record</kbd> again before going into Record on the current track.</li>
+  <li>Pressing any Foot Switch assigned to either PLAY/STOP or STOP/CONT will initiate recording while the sequencer is in “Punch in” Standby mode.</li>
+</ul>
 <p>When the Autopunch function is on, the sequencer will only enter and exit Record mode at the points specified by the Edit Times on the <span class="page-name">Locate page</span>.</p>
 <h3 id="sequencer-status">Sequencer Status</h3>
 <p>On most sequencer pages the lower-left-hand corner of the display indicates the Sequencer Status.</p>
 <p>The sequencer is always in one of the following states:</p>
 <h4 id="stop-sequencer-at-rest" class="param-name">STOP — Sequencer at rest</h4>
-<p>• PLAY — Playing current sequence (sequence selected)</p>
-<p>• SNGS — Song Stop: sequencer at rest with a song selected</p>
+<ul>
+  <li>PLAY — Playing current sequence (sequence selected)</li>
+  <li>SNGS — Song Stop: sequencer at rest with a song selected</li>
+</ul>
 <h4 id="sngp-song-play-playing-current-song" class="param-name">SNGP — Song Play: playing current song</h4>
 <h4 id="rec-recording-on-current-track-first-pass" class="param-name">REC — Recording on current track, first pass</h4>
 <h4 id="odub-overdub-re-recording-current-track" class="param-name">ODUB — Overdub: re-recording current track</h4>
-<p>• CNTF — Countoff playing prior to going into Play, Record, or Overdub</p>
-<p>• REC (flashing) — Record Standby: waiting for you to play before going into Record (first track only)</p>
-<p>• ODUB (flashing) — “Punch-in” Standby: waiting for you to play before going into Overdub</p>
-<p>• MREC (flashing) — MIDI sync Record Standby: same as Record Standby except that the sequencer is synced to external MIDI clocks (CLOCK-MIDI on the <span class="page-name">Seq Control page</span>) and is waiting for MIDI clocks as well as notes before going into Record. If the <kbd class="button">Stop/Continue</kbd> button is pressed while MREC is flashing, the sequencer waits 5 seconds before exiting MIDI sync Record Standby.</p>
-<p>• AUDP — Audition Play. This State is entered automatically from Record when the end of the sequence is reached (assuming <span class="lcd">LOOP=ON)</span>. After leaving Record and entering Audition Play, the sequence will continue to play in this state, with the newly recorded track, until you press the <kbd class="button">Stop/Continue</kbd> button. Pressing <kbd class="button">Stop/Continue</kbd> from this state will put you on the <span class="page-name">PLAY/KEEP Page</span> (see below).</p>
-<p>• AUDS — Audition Stop is entered when you stop the sequencer from the Audition Play state.</p>
+<ul>
+  <li>CNTF — Countoff playing prior to going into Play, Record, or Overdub</li>
+  <li>REC (flashing) — Record Standby: waiting for you to play before going into Record (first track only)</li>
+  <li>ODUB (flashing) — “Punch-in” Standby: waiting for you to play before going into Overdub</li>
+  <li>MREC (flashing) — MIDI sync Record Standby: same as Record Standby except that the sequencer is synced to external MIDI clocks (CLOCK-MIDI on the <span class="page-name">Seq Control page</span>) and is waiting for MIDI clocks as well as notes before going into Record. If the <kbd class="button">Stop/Continue</kbd> button is pressed while MREC is flashing, the sequencer waits 5 seconds before exiting MIDI sync Record Standby.</li>
+  <li>AUDP — Audition Play. This State is entered automatically from Record when the end of the sequence is reached (assuming <span class="lcd">LOOP=ON)</span>. After leaving Record and entering Audition Play, the sequence will continue to play in this state, with the newly recorded track, until you press the <kbd class="button">Stop/Continue</kbd> button. Pressing <kbd class="button">Stop/Continue</kbd> from this state will put you on the <span class="page-name">PLAY/KEEP Page</span> (see below).</li>
+  <li>AUDS — Audition Stop is entered when you stop the sequencer from the Audition Play state.</li>
+</ul>
 <p>To exit Audition Stop and return to the normal stop state, you must first instruct the TS-10 to KEEP either the new or the original track (see <span class="page-name">Audition Play/Keep Page</span> later in this section).</p>
 <h3 id="sequencer-banks">Sequencer Banks</h3>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Seqs/Songs</div></td></tr></table></aside>
@@ -86,8 +92,10 @@
 <p>The names of sequences and songs which contain actual recorded track data are preceded by a dot (.) on sequencer bank pages. Locations which have not yet been defined as a song or sequence show “-BLANK-”.</p>
 <p>Selecting an undefined (-BLANK-) field will initiate the Create New Sequence or Song function (see Creating New Sequence or Song, later in this section).</p>
 <h3 id="selecting-a-sequence-or-song">Selecting a Sequence or Song</h3>
-<p>• Press <kbd class="button">Seqs/Songs</kbd>, then press the <kbd class="button">Bank</kbd> buttons labeled 0-9 to see the ten Sequence Bank pages.</p>
-<p>• Pressing the soft button next to any of the six locations on a page selects that as the current song or sequence.</p>
+<ul>
+  <li>Press <kbd class="button">Seqs/Songs</kbd>, then press the <kbd class="button">Bank</kbd> buttons labeled 0-9 to see the ten Sequence Bank pages.</li>
+  <li>Pressing the soft button next to any of the six locations on a page selects that as the current song or sequence.</li>
+</ul>
 <p>When you select a song or sequence it becomes underlined. The currently selected song or sequence is always underlined.</p>
 <p>Playing Sequences and Songs Try selecting a sequence, and pressing the <kbd class="button">Play</kbd> button in the Sequencer section, to the right of the display. The selected sequence will begin to play.</p>
 <p>While one sequence is playing you can select another one. An underline will begin to flash beneath the new sequence, but the original one will continue to play. When the first sequence is finished, the underline will switch to the new sequence, and it will play. In this fashion you can string sequences together in real time, as they play. The display always tells you which is playing (underline) and which is selected to play next (flashing underline).</p>
@@ -116,48 +124,62 @@
 <p>A dot to the left of the track location indicates that there is recorded data on the track.</p>
 <p>On these two pages you can select and layer the tracks of a sequence (by clicking or doubleclicking) just as you would on regular program bank pages. You can go back and forth between Seq/Song Tracks 1-6 and 7-12 without losing what was selected or layered in the other half. The LEDs above the two <kbd class="button">Seq/Song Tracks</kbd> buttons tell you where you are.</p>
 <p>Replacing  the Sound on a Sequence or Song Track To replace the TS-10 sound on a given Sequence or Song track with a sound of your choice:</p>
-<p>• While on either of the Seq/Song Tracks pages, select one of the six tracks.</p>
-<p>• Press the <kbd class="button">Replace Track Sound</kbd> button. The display will show program bank pages, but the Sounds LED will flash, indicating that you are in <span class="function">Replace Track Sound</span> mode.</p>
-<p>• Use the <kbd class="button">BankSet</kbd> button to choose between User RAM, ROM, or Sampled Sounds, as you would when selecting sounds normally.</p>
-<p>• Use the <kbd class="button">Bank</kbd> buttons to locate the bank containing the sound you want.</p>
-<p>• Underline the program you want to put on the track.</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> to return to the <span class="page-name">Seq/Song Tracks page</span> with the new sound on the track. Note that all of the track’s Track Parameters (except for those marked with an asterisk “*” below) are left just as they were previously. The settings for the Track Parameters that are stored with each sound are installed onto the track with the sound; the other sequencer Track Parameters are never altered unless you edit them intentionally.</p>
+<ul>
+  <li>While on either of the Seq/Song Tracks pages, select one of the six tracks.</li>
+  <li>Press the <kbd class="button">Replace Track Sound</kbd> button. The display will show program bank pages, but the Sounds LED will flash, indicating that you are in <span class="function">Replace Track Sound</span> mode.</li>
+  <li>Use the <kbd class="button">BankSet</kbd> button to choose between User RAM, ROM, or Sampled Sounds, as you would when selecting sounds normally.</li>
+  <li>Use the <kbd class="button">Bank</kbd> buttons to locate the bank containing the sound you want.</li>
+  <li>Underline the program you want to put on the track.</li>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> to return to the <span class="page-name">Seq/Song Tracks page</span> with the new sound on the track. Note that all of the track’s Track Parameters (except for those marked with an asterisk “*” below) are left just as they were previously. The settings for the Track Parameters that are stored with each sound are installed onto the track with the sound; the other sequencer Track Parameters are never altered unless you edit them intentionally.</li>
+</ul>
 <p>To copy a sound along with its effect into the sequence (replacing the current sequence effect with the one in the sound), you follow the same procedure as above, with the addition of doubleclicking the <span class="function">Replace Track Sound</span>.</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track.</p>
-<p>• Double-click (press two times quickly) <kbd class="button">Replace Track Sound</kbd>.</p>
-<p>• Use the <kbd class="button">BankSet</kbd> button, the <kbd class="button">Bank</kbd> buttons, and the soft buttons to pick a sound as before; but now each time you pick a new sound its effect will become the sequence effect.</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> to return to the <span class="page-name">Seq/Song Tracks page</span> with the new sound on the track, and its effect used by the sequence.</p>
+<ul>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track.</li>
+  <li>Double-click (press two times quickly) <kbd class="button">Replace Track Sound</kbd>.</li>
+  <li>Use the <kbd class="button">BankSet</kbd> button, the <kbd class="button">Bank</kbd> buttons, and the soft buttons to pick a sound as before; but now each time you pick a new sound its effect will become the sequence effect.</li>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> to return to the <span class="page-name">Seq/Song Tracks page</span> with the new sound on the track, and its effect used by the sequence.</li>
+</ul>
 <aside class="tip"><p>You can use the <span class="function">Replace Track Sound</span> feature to audition different sounds while the sequence is playing. However, to permanently change the sound on a track, the sequencer must be stopped.</p></aside>
 <p>Using <span class="function">SoundFinder</span> in <span class="mode">Sequencer Mode</span> Here’s how to select Programs that have the same defined Program Type in Sequencer mode. For this example, we’ll replace the Program on a sequence track from a sequence used in the DEMO-SONG found on the TSD-200 floppy disk that came with the TS-10. Note that loading in any sequence file that has a flashing “P” will replace the RAM programs. If you have any customized Programs that you want to save, do so before proceeding:</p>
-<p>• Insert the TSD-200 disk into the disk drive.</p>
-<p>• Press the <kbd class="button">Storage</kbd> button.</p>
-<p>• Press the bottom center soft button beneath DISK.</p>
-<p>• Press the bottom center soft button beneath <span class="lcd">*LOAD*</span>.</p>
-<p>• Use the Data Entry Controls to select the file <span class="lcd">TYPE=30-SEQ/SONGS</span>. The display shows:</p>
-<p>• Press the soft button above <span class="lcd">*YES*</span>.</p>
-<p>• The display momentarily shows LOADING TUTORIAL, followed by DISK COMMAND COMPLETED, then it will return to the <span class="page-name">LOAD FILE page</span>.</p>
-<p>• Press the <kbd class="button">Seqs/Songs</kbd> button.</p>
-<p>• Press the <kbd class="button">Bank 0</kbd> button. The display shows:</p>
-<p>• Press the lower right soft button beneath LAYERS OUT. We will be replacing a track sound assignment in this sequence.</p>
-<p>• Press the <kbd class="button">Sequencer Control</kbd> button and set <span class="lcd">LOOP=ON</span>. This way you can hear the LAYERS OUT sequence repeat continuously, allowing you to audition several different Programs without having to restart the sequence each time.</p>
+<ul>
+  <li>Insert the TSD-200 disk into the disk drive.</li>
+  <li>Press the <kbd class="button">Storage</kbd> button.</li>
+  <li>Press the bottom center soft button beneath DISK.</li>
+  <li>Press the bottom center soft button beneath <span class="lcd">*LOAD*</span>.</li>
+  <li>Use the Data Entry Controls to select the file <span class="lcd">TYPE=30-SEQ/SONGS</span>. The display shows:</li>
+  <li>Press the soft button above <span class="lcd">*YES*</span>.</li>
+  <li>The display momentarily shows LOADING TUTORIAL, followed by DISK COMMAND COMPLETED, then it will return to the <span class="page-name">LOAD FILE page</span>.</li>
+  <li>Press the <kbd class="button">Seqs/Songs</kbd> button.</li>
+  <li>Press the <kbd class="button">Bank 0</kbd> button. The display shows:</li>
+  <li>Press the lower right soft button beneath LAYERS OUT. We will be replacing a track sound assignment in this sequence.</li>
+  <li>Press the <kbd class="button">Sequencer Control</kbd> button and set <span class="lcd">LOOP=ON</span>. This way you can hear the LAYERS OUT sequence repeat continuously, allowing you to audition several different Programs without having to restart the sequence each time.</li>
+</ul>
 <aside class="note"><p>Note: The sequencer must be stopped in order to permanently change a track sound assignment. When the sequencer is playing, you can audition sounds, but when the sequencer stops, or when it loops, the original track sound is reinstalled.</p></aside>
-<p>• Press the <kbd class="button">Play</kbd> button if you would like to hear this sequence. When you are finished listening to the sequence, press <kbd class="button">Stop•Continue</kbd>.</p>
-<p>• Press the <kbd class="button">Seq/Song Tracks 1-6</kbd> button. The display shows:</p>
-<p>• Press the lower right soft button beneath BEST-PAD.</p>
-<p>• Press the <kbd class="button">Play</kbd> button.</p>
-<p>• Press the <kbd class="button">Replace Track Sound</kbd> button, followed by the <kbd class="button">Down Arrow</kbd> button. The display shows:</p>
+<ul>
+  <li>Press the <kbd class="button">Play</kbd> button if you would like to hear this sequence. When you are finished listening to the sequence, press <kbd class="button">Stop•Continue</kbd>.</li>
+  <li>Press the <kbd class="button">Seq/Song Tracks 1-6</kbd> button. The display shows:</li>
+  <li>Press the lower right soft button beneath BEST-PAD.</li>
+  <li>Press the <kbd class="button">Play</kbd> button.</li>
+  <li>Press the <kbd class="button">Replace Track Sound</kbd> button, followed by the <kbd class="button">Down Arrow</kbd> button. The display shows:</li>
+</ul>
 <p>The sequence will now be playing GLASS-KEYS where BEST-PAD used to be.</p>
-<p>• Press the <kbd class="button">Down Arrow</kbd> button three more times. The display shows:</p>
+<ul>
+  <li>Press the <kbd class="button">Down Arrow</kbd> button three more times. The display shows:</li>
+</ul>
 <p>This is the sound that we want to use to replace BEST-PAD.</p>
-<p>• Press the <kbd class="button">Stop•Continue</kbd> button, followed by the <kbd class="button">Seq/Song Tracks 1-6</kbd> button. Notice that Seq/Song Track #6 still shows BEST-PAD. That’s because you can’t change a track sound assignment when the sequencer is playing.</p>
-<p>• Now that we’ve auditioned Programs within the same Program Type and found the Program that we want to use to replace BEST-PAD, press the <kbd class="button">Replace Track Sound</kbd> button.</p>
-<p>• The display shows the last viewed <span class="page-name">Sound Bank page</span>. In this case it’s R2-8. Press the soft button beneath WARMSAW.</p>
-<p>• Press the <kbd class="button">Replace Track Sound</kbd> button (its LED will turn off), and you will be returned to the <span class="page-name">Seq/Song Tracks 1-6 page</span>. You have just successfully replaced a track sound assignment (BEST-PAD) with one of a similar Program Type (WARMSAW) within a sequence.</p>
+<ul>
+  <li>Press the <kbd class="button">Stop•Continue</kbd> button, followed by the <kbd class="button">Seq/Song Tracks 1-6</kbd> button. Notice that Seq/Song Track #6 still shows BEST-PAD. That’s because you can’t change a track sound assignment when the sequencer is playing.</li>
+  <li>Now that we’ve auditioned Programs within the same Program Type and found the Program that we want to use to replace BEST-PAD, press the <kbd class="button">Replace Track Sound</kbd> button.</li>
+  <li>The display shows the last viewed <span class="page-name">Sound Bank page</span>. In this case it’s R2-8. Press the soft button beneath WARMSAW.</li>
+  <li>Press the <kbd class="button">Replace Track Sound</kbd> button (its LED will turn off), and you will be returned to the <span class="page-name">Seq/Song Tracks 1-6 page</span>. You have just successfully replaced a track sound assignment (BEST-PAD) with one of a similar Program Type (WARMSAW) within a sequence.</li>
+</ul>
 <aside class="tip"><p>If you manually select a Program of a different type while the <span class="function">Replace Track Sound</span> LED is lit, pressing the <kbd class="button">Up/Down Arrow</kbd> buttons will now select Programs from the new type.</p></aside>
 <p>Layering Sounds on The Tracks Pages In a preset, a maximum of two sounds may be layered with the selected sound. Within a sequence, you can layer as many as 11 sounds with the selected sound. You can have up to 12 tracks layered (stacked) on one key, or up to 12 different tracks split across the keyboard by using the Key Zone function described in <a class="refer-to" href="04-presets.html#section-4-understanding-presets">Section 4 — Understanding Presets</a>.</p>
 <p>Layering sounds is the same as in a normal Preset <span class="page-name">Track Parameter page</span>:</p>
-<p>• Select a primary sound on either of the Seq/Song Tracks pages.</p>
-<p>• Double-click the soft button for the track you wish to layer. Layered tracks are identified by a blinking underline. If a track is layered, it can be un-layered by pressing its soft button.</p>
+<ul>
+  <li>Select a primary sound on either of the Seq/Song Tracks pages.</li>
+  <li>Double-click the soft button for the track you wish to layer. Layered tracks are identified by a blinking underline. If a track is layered, it can be un-layered by pressing its soft button.</li>
+</ul>
 <p>Sequencer Tracks and the Track Parameters Every sequencer track has a full set of Track parameters which are saved with the sequence or song. The values of the following are remembered for each track:</p>
 <table class="bullet-cols"><tr><td>• Mix</td><td>• Sostenuto On/Off</td></tr><tr><td>• Pan &amp; Pan Mode</td><td>• Pitch Bend On/Off</td></tr><tr><td>• Attack *</td><td>• Mod Wheel On/Off</td></tr><tr><td>• Release *</td><td>• Reset Controllers On/Off</td></tr><tr><td>• Brightness *</td><td>• All-Notes-Off On/Off</td></tr><tr><td>• Timbre *</td><td>• <kbd class="button">Patch Select</kbd> Mode *</td></tr><tr><td>• External MIDI Controller (<span class="param">XCTRL</span>) *</td><td>• Pressure Mode *</td></tr><tr><td>• Key Zone</td><td>• Volume Pedal Mode</td></tr><tr><td>• Velocity Range</td><td>• MIDI Status</td></tr><tr><td>• Velocity Sensitivity</td><td>• MIDI Channel</td></tr><tr><td>• Transpose</td><td>• MIDI Program *</td></tr><tr><td>• Detune</td><td>• MIDI Bank Select *</td></tr><tr><td>• Rate (LFO and/or Wave List Duration) *</td><td>• Effects Bus Routing</td></tr><tr><td>• Sustain On/Off</td><td>• Effect Mod Control</td></tr></table>
 <p>Track Parameters marked with an asterisk “*” are stored with each sound.</p>
@@ -170,8 +192,10 @@
 <h4 id="parameter-value" class="param-name">Parameter Value</h4>
 <h4 id="parameter-value-2" class="param-name">Parameter Value</h4>
 <p>Let’s look at a Sequencer Track Performance parameter, and you’ll get a better idea how this works. Using the Brightness/<span class="page-name">Timbre page</span> as an example:</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>. The display shows one the Tracks pages with the names of the programs on those six tracks.</p>
-<p>• Press the <kbd class="button">Brightness/Timbre</kbd> button. This takes you to the <span class="page-name">Brightness page</span>:</p>
+<ul>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>. The display shows one the Tracks pages with the names of the programs on those six tracks.</li>
+  <li>Press the <kbd class="button">Brightness/Timbre</kbd> button. This takes you to the <span class="page-name">Brightness page</span>:</li>
+</ul>
 <p>Each of the six parameter values corresponds to one of the 12 track locations (the LED above the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button will be lit to tell you which half you are in). You can verify this by pressing the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button again. Repeatedly pressing either the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button will toggle between the <span class="page-name">TRAX Page</span> and the last-selected Track Performance parameter. This will help you keep track of what you’re editing. Notice that the upper left corner of the display still shows the <span class="page-name">Track Parameter Page</span> name, but it may appear differently for Sequence tracks, because there is more room to display full page name. Other than that, Track parameter editing for a sequencer track is the same as for presets. All Track parameter values are remembered for each track of each sequence and song.</p>
 <h3 id="important">Important:</h3>
 <p>In Sequencer mode, selecting and editing a track from a <span class="page-name">Track Parameter page</span> does not change what is selected or layered on the Seq/Song Tracks 1-6 and 7-12 pages — i.e. it does not affect what you hear when you play the keyboard. This means that you can edit a track parameter value for one (or more) of the tracks within a group of layered sounds without changing the layer.</p>
@@ -180,110 +204,154 @@
 <p>You should get in the habit of always selecting a track from the <span class="page-name">Seq/Song Tracks 1-6 or 7-12 page</span> before going into record.</p>
 <p>The Tempo Track and the Track Parameters Note that the Tempo Track feature offers no Track Parameter values, and appears on all of the track parameter pages as TEMPO. For example, the Track Parameters <span class="page-name">Mix page</span> would look something like this:</p>
 <p>Copying a Preset into 3 Sequencer Tracks You can copy the three tracks of a preset, with all Track Parameter settings preserved, into three tracks of the current song or sequence. The preset will be copied whole into the three tracks on the upper or lower line of either the Seq/Song Tracks 1-6 or the 7-12 page:</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select any of the tracks on the line (upper or lower) to which you want to copy the preset.</p>
-<p>• Press <kbd class="button">Preset</kbd> and use the <dfn class="term">BankSet</dfn> and <kbd class="button">Bank</kbd> buttons to select the preset you want to copy.</p>
-<p>• While holding down the <kbd class="button">Preset</kbd> button, press the same <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button as you did in the first step. The preset tracks are copied into the upper or lower line of that half of the <span class="page-name">TRAX page</span>.</p>
+<ul>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select any of the tracks on the line (upper or lower) to which you want to copy the preset.</li>
+  <li>Press <kbd class="button">Preset</kbd> and use the <dfn class="term">BankSet</dfn> and <kbd class="button">Bank</kbd> buttons to select the preset you want to copy.</li>
+  <li>While holding down the <kbd class="button">Preset</kbd> button, press the same <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button as you did in the first step. The preset tracks are copied into the upper or lower line of that half of the <span class="page-name">TRAX page</span>.</li>
+</ul>
 <p>When you copy a preset into a sequence, the values of all the Track Parameters are copied.</p>
 <p>However, the selected and layered status of the tracks in the preset is not copied. Whichever tracks in the sequence are selected or layered when the preset is copied will remain so after it is copied. This also does not affect the track data in the sequence. The sequencer can only record one track at a time (except in <span class="function">Multi-Track</span> Record, described later in this section). If you want the preset to play a sequence track, you must copy the sequence data to the other two tracks, if needed.</p>
 <p>Copying a Preset Along With its Effect into 3 Sequencer Tracks To copy a preset along with its effect into the sequence (replacing the current sequence effect with the one in the preset), follow the same procedure as above, with the addition of pressing the</p>
 <p><kbd class="button">Track Effects</kbd> button before pressing <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> in the last step.</p>
-<p>• While holding the <kbd class="button">Preset</kbd> button down, first press the <kbd class="button">Track Effects</kbd> button, then press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>. The Preset is copied to three tracks of the sequence and its effect becomes the sequence effect.</p>
+<ul>
+  <li>While holding the <kbd class="button">Preset</kbd> button down, first press the <kbd class="button">Track Effects</kbd> button, then press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>. The Preset is copied to three tracks of the sequence and its effect becomes the sequence effect.</li>
+</ul>
 <p>Creating  a New Sequence Creating a new sequence or song is easy:</p>
-<p>• On any of the Sequencer Bank pages, pressing the soft button nearest an undefined -BLANK- location will display the following prompt:</p>
-<p>• Press the soft button above <span class="lcd">*SEQUENCE*</span>. The display shows:</p>
-<p>• Name the new sequence (or press <span class="lcd">*YES*</span> to accept the default name). Under the first character is a cursor (underline). Use the data entry controls to edit the character, then use the soft (cursor) buttons beneath the words LEFT and RIGHT to move the underline to another character and edit that. Continue this until the display shows the name you want (or you can use the keyboard to enter the name data if the <span class="param">KBD-NAMING</span> function is enabled on the <span class="page-name">System page</span>).</p>
-<p>• Press <span class="lcd">*YES*</span>. The display shows:</p>
-<p>• Set the Time Signature. The time signature is set at the creation of a new sequence and cannot be changed later. Use the data entry controls to adjust the top half of the fraction, then press the soft button beneath the time signature to move the underline to bottom half, and adjust that. Continued presses of the soft button beneath the time signature will toggle between the upper and lower fraction values.</p>
-<p>• Press <span class="lcd">*YES*</span>. The TS-10 returns to the current <span class="page-name">Sequencer Bank page</span> with the new sequence selected.</p>
+<ul>
+  <li>On any of the Sequencer Bank pages, pressing the soft button nearest an undefined -BLANK- location will display the following prompt:</li>
+  <li>Press the soft button above <span class="lcd">*SEQUENCE*</span>. The display shows:</li>
+  <li>Name the new sequence (or press <span class="lcd">*YES*</span> to accept the default name). Under the first character is a cursor (underline). Use the data entry controls to edit the character, then use the soft (cursor) buttons beneath the words LEFT and RIGHT to move the underline to another character and edit that. Continue this until the display shows the name you want (or you can use the keyboard to enter the name data if the <span class="param">KBD-NAMING</span> function is enabled on the <span class="page-name">System page</span>).</li>
+  <li>Press <span class="lcd">*YES*</span>. The display shows:</li>
+  <li>Set the Time Signature. The time signature is set at the creation of a new sequence and cannot be changed later. Use the data entry controls to adjust the top half of the fraction, then press the soft button beneath the time signature to move the underline to bottom half, and adjust that. Continued presses of the soft button beneath the time signature will toggle between the upper and lower fraction values.</li>
+  <li>Press <span class="lcd">*YES*</span>. The TS-10 returns to the current <span class="page-name">Sequencer Bank page</span> with the new sequence selected.</li>
+</ul>
 <h3 id="creating-a-new-song">Creating a New Song</h3>
-<p>• On any <span class="page-name">Sequencer Bank page</span>, select a -BLANK- sequencer location, as described above. The display will show the CREATE NEW <span class="lcd">*SONG*</span> OR <span class="lcd">*SEQUENCE*</span> screen.</p>
-<p>• Press the soft button above <span class="lcd">*SONG*</span>. The display shows:</p>
+<ul>
+  <li>On any <span class="page-name">Sequencer Bank page</span>, select a -BLANK- sequencer location, as described above. The display will show the CREATE NEW <span class="lcd">*SONG*</span> OR <span class="lcd">*SEQUENCE*</span> screen.</li>
+  <li>Press the soft button above <span class="lcd">*SONG*</span>. The display shows:</li>
+</ul>
 <p>Song names are always preceded by “$” to indicate their special nature. Note that you cannot change this $ character. The other ten characters can be edited.</p>
-<p>• Name the new song (or press <span class="lcd">*YES*</span> to accept the default name, which is $SONG-##). Use the data entry controls and the soft buttons labeled LEFT and RIGHT to edit the song name to create the name you desire.</p>
-<p>• Press <span class="lcd">*YES*</span>. The TS-10 returns to the current <span class="page-name">Sequencer Bank page</span> with the new song selected.</p>
+<ul>
+  <li>Name the new song (or press <span class="lcd">*YES*</span> to accept the default name, which is $SONG-##). Use the data entry controls and the soft buttons labeled LEFT and RIGHT to edit the song name to create the name you desire.</li>
+  <li>Press <span class="lcd">*YES*</span>. The TS-10 returns to the current <span class="page-name">Sequencer Bank page</span> with the new song selected.</li>
+</ul>
 <p>Erasing All Sequencer Memory When you want to erase all sequences and songs in the TS-10 sequencer memory, first make sure you have saved any important data to disk, then:</p>
-<p>• Press and hold the <kbd class="button">Presets</kbd> button.</p>
-<p>• While holding down the <kbd class="button">Presets</kbd> button, press the middle of the three soft buttons in the top row above the fluorescent display.</p>
-<p>• The TS-10 asks: “ERASE ALL SEQUENCER MEMORY?”</p>
-<p>• Press <span class="lcd">*YES*</span>. The TS-10 erases all sequences and songs from memory. After the memory is erased, there will be one blank song and one blank sequence in locations 00 and 01 (there is always one song and one sequence in memory).</p>
+<ul>
+  <li>Press and hold the <kbd class="button">Presets</kbd> button.</li>
+  <li>While holding down the <kbd class="button">Presets</kbd> button, press the middle of the three soft buttons in the top row above the fluorescent display.</li>
+  <li>The TS-10 asks: “ERASE ALL SEQUENCER MEMORY?”</li>
+  <li>Press <span class="lcd">*YES*</span>. The TS-10 erases all sequences and songs from memory. After the memory is erased, there will be one blank song and one blank sequence in locations 00 and 01 (there is always one song and one sequence in memory).</li>
+</ul>
 <p>Recording a Sequence Here we will describe recording a new sequence from scratch. First we will concentrate on sequencing with the TS-10 alone, and then cover sequencing remote MIDI devices.</p>
 <p>1) Create a New Sequence:</p>
-<p>• Following the steps outlined earlier in this section, create a new sequence.</p>
+<ul>
+  <li>Following the steps outlined earlier in this section, create a new sequence.</li>
+</ul>
 <p>2) Select a Track:</p>
-<p>• Press the <kbd class="button">Seq/Song Tracks 1-6</kbd> button. The display shows the first six tracks of the new sequence. Seq/Song Track 1 is already defined and selected (there is always one track selected in a sequence) and the current program has been placed on the track. All other tracks are as yet -UNDEFINED-.</p>
-<p>• If you want to begin recording the sequence with a track other than Track 1, press the soft button next to that track. This defines the track and puts the currently selected sound on it.</p>
+<ul>
+  <li>Press the <kbd class="button">Seq/Song Tracks 1-6</kbd> button. The display shows the first six tracks of the new sequence. Seq/Song Track 1 is already defined and selected (there is always one track selected in a sequence) and the current program has been placed on the track. All other tracks are as yet -UNDEFINED-.</li>
+  <li>If you want to begin recording the sequence with a track other than Track 1, press the soft button next to that track. This defines the track and puts the currently selected sound on it.</li>
+</ul>
 <p>Otherwise, you can just leave Track 1 selected and start from there.</p>
 <p>3) Select a Sound for the Track:</p>
-<p>• Press <kbd class="button">Replace Track Sound</kbd>. The display shows Program Bank pages; the Sounds LED is flashing.</p>
-<p>• Select a sound as you normally would, using the <kbd class="button">BankSet</kbd> button and the ten <kbd class="button">Bank</kbd> buttons to locate the sound you want, and then selecting it by pressing its soft button.</p>
-<p>• Press <kbd class="button">Replace Track Sound</kbd> again to return to the <span class="page-name">Seq/Song Tracks page</span>. The new sound is now assigned to the track.</p>
+<ul>
+  <li>Press <kbd class="button">Replace Track Sound</kbd>. The display shows Program Bank pages; the Sounds LED is flashing.</li>
+  <li>Select a sound as you normally would, using the <kbd class="button">BankSet</kbd> button and the ten <kbd class="button">Bank</kbd> buttons to locate the sound you want, and then selecting it by pressing its soft button.</li>
+  <li>Press <kbd class="button">Replace Track Sound</kbd> again to return to the <span class="page-name">Seq/Song Tracks page</span>. The new sound is now assigned to the track.</li>
+</ul>
 <p>4) Check the CLICK and COUNTOFF settings:</p>
-<p>• Press <kbd class="button">Click</kbd>. This page controls all the functions of the TS-10’s built-in metronome. Underline the CLICK parameter and set to <span class="lcd">CLICK=REC</span>. This will provide a click track when you are in record, but not during playback.</p>
-<p>• Underline the COUNTOFF parameter and set to <span class="lcd">COUNTOFF=REC</span>. This will play a one bar countoff before recording (but not when playing back) all tracks after the first. The TS-10 will display CNTF in the lower-left-hand corner of the display during countoff (when enabled on the <span class="page-name">Click page</span>):</p>
+<ul>
+  <li>Press <kbd class="button">Click</kbd>. This page controls all the functions of the TS-10’s built-in metronome. Underline the CLICK parameter and set to <span class="lcd">CLICK=REC</span>. This will provide a click track when you are in record, but not during playback.</li>
+  <li>Underline the COUNTOFF parameter and set to <span class="lcd">COUNTOFF=REC</span>. This will play a one bar countoff before recording (but not when playing back) all tracks after the first. The TS-10 will display CNTF in the lower-left-hand corner of the display during countoff (when enabled on the <span class="page-name">Click page</span>):</li>
+</ul>
 <p>CNTF appears during sequencer countoff</p>
 <p>5) Record the First Track:</p>
 <p>The length of the first track defines the length of the sequence. For this reason, there is a special procedure for recording the first track of a new sequence.</p>
-<p>• While holding down <kbd class="button">Record</kbd>, press <kbd class="button">Play</kbd>. The click track starts playing, giving the tempo. The first beat of each measure is emphasized.</p>
-<p>• Adjust the tempo. Press <kbd class="button">Locate</kbd>. The Tempo parameter is always selected on this page. Use the <kbd class="button">Data Entry Slider</kbd> and the <kbd class="button">Up/Down Arrow</kbd> buttons to set it to the tempo you want. Or, with the sequencer running, you can tap on the soft button below the TEMPO parameter at the desired tempo.</p>
-<p>• Play the keyboard to begin recording. The bar in which you start playing becomes Bar 1 of the sequence.</p>
-<p>• Press <kbd class="button">Stop/Continue</kbd> (or the assigned AUX Foot Switch) to end recording.</p>
+<ul>
+  <li>While holding down <kbd class="button">Record</kbd>, press <kbd class="button">Play</kbd>. The click track starts playing, giving the tempo. The first beat of each measure is emphasized.</li>
+  <li>Adjust the tempo. Press <kbd class="button">Locate</kbd>. The Tempo parameter is always selected on this page. Use the <kbd class="button">Data Entry Slider</kbd> and the <kbd class="button">Up/Down Arrow</kbd> buttons to set it to the tempo you want. Or, with the sequencer running, you can tap on the soft button below the TEMPO parameter at the desired tempo.</li>
+  <li>Play the keyboard to begin recording. The bar in which you start playing becomes Bar 1 of the sequence.</li>
+  <li>Press <kbd class="button">Stop/Continue</kbd> (or the assigned AUX Foot Switch) to end recording.</li>
+</ul>
 <p>The display will ask “KEEP FIRST TRACK?” The length (in bars) of the first track is shown in the lower left corner of the display. This will determine the length of the sequence.</p>
-<p>• Press <span class="lcd">*YES*</span> to keep the track, defining the length of the sequence, or</p>
-<p>• Press <span class="lcd">*NO*</span> to erase the first track and start over again.</p>
+<ul>
+  <li>Press <span class="lcd">*YES*</span> to keep the track, defining the length of the sequence, or</li>
+  <li>Press <span class="lcd">*NO*</span> to erase the first track and start over again.</li>
+</ul>
 <p>6) Record Additional Tracks:</p>
 <p>After you have answered <span class="lcd">*YES*</span> to the question “KEEP FIRST TRACK?,” all other recording, including re-recording the first track, will follow the same basic routine. The length of the sequence is now defined (by the length of the first track). The rest of the tracks will automatically have the same length.</p>
-<p>• Press the <kbd class="button">Seq/Song Tracks 1-6</kbd> button, and select a second track by pressing the soft button of any -UNDEFINED- track (or leave the first track selected if you want to record over it). The name of the sound and all the track parameters from the previous track are copied onto to the new track.</p>
-<p>• Select a sound for the track. As shown in step 3 above, use the <span class="function">Replace Track Sound</span> function to put the sound of your choice on the selected track.</p>
-<p>• Press <kbd class="button">Record/Play</kbd> to begin recording. The click track will play for one measure (assuming COUNTOFF= REC or CLICK), then the sequencer will enter record mode. It will record whatever you play on the new track until:</p>
+<ul>
+  <li>Press the <kbd class="button">Seq/Song Tracks 1-6</kbd> button, and select a second track by pressing the soft button of any -UNDEFINED- track (or leave the first track selected if you want to record over it). The name of the sound and all the track parameters from the previous track are copied onto to the new track.</li>
+  <li>Select a sound for the track. As shown in step 3 above, use the <span class="function">Replace Track Sound</span> function to put the sound of your choice on the selected track.</li>
+  <li>Press <kbd class="button">Record/Play</kbd> to begin recording. The click track will play for one measure (assuming COUNTOFF= REC or CLICK), then the sequencer will enter record mode. It will record whatever you play on the new track until:</li>
+</ul>
 <p>1) the end of the sequence is reached, or</p>
 <p>2) you press <kbd class="button">Stop/Continue</kbd> (or press the assigned AUX Foot Switch).</p>
 <p>At the end of the sequence, the TS-10 will leave record mode and (assuming <span class="lcd">LOOP=ON)</span> enter</p>
 <p>Audition mode.</p>
 <h2 id="about-the-audition-play-keep-page">About the Audition Play/Keep Page</h2>
-<p>• Press <kbd class="button">Stop/Continue</kbd> or the assigned AUX Foot Switch to stop the Sequencer. This puts you onto the <span class="page-name">Audition Play/Keep page</span>:</p>
-<p>• Press PLAY ORIGINAL TRACK to hear the track as it was before you recorded the new track.</p>
+<ul>
+  <li>Press <kbd class="button">Stop/Continue</kbd> or the assigned AUX Foot Switch to stop the Sequencer. This puts you onto the <span class="page-name">Audition Play/Keep page</span>:</li>
+  <li>Press PLAY ORIGINAL TRACK to hear the track as it was before you recorded the new track.</li>
+</ul>
 <p>The first time you record a particular track, this isn’t very useful, but it is invaluable when you begin to do second and third takes, since it allows you to compare the tracks before deciding which to keep.</p>
-<p>• Press PLAY NEW TRACK to hear what you just recorded.</p>
-<p>• Press KEEP ORIGINAL TRACK to leave the track as it was in memory, and delete the one you just recorded. If the track was empty before recording, pressing this button will leave it empty.</p>
-<p>• Press KEEP NEW TRACK to save the new track into memory, replacing whatever was on the track before.</p>
+<ul>
+  <li>Press PLAY NEW TRACK to hear what you just recorded.</li>
+  <li>Press KEEP ORIGINAL TRACK to leave the track as it was in memory, and delete the one you just recorded. If the track was empty before recording, pressing this button will leave it empty.</li>
+  <li>Press KEEP NEW TRACK to save the new track into memory, replacing whatever was on the track before.</li>
+</ul>
 <p>The <span class="page-name">Audition page</span> appears after all track recording and after all track edit functions. The TS-10 always gives you a chance to audition changes to the track data before deciding whether to keep them.</p>
 <p>Playing Tracks in Audition Mode It is possible to alternate between playing Original and New tracks in Audition mode without having the track restart from the beginning, making comparisons more convenient. If the sequencer is playing, each time Play New or Play Original is selected, the context will instantly switch. Pressing <kbd class="button">Play</kbd> will play the selected track from the beginning.</p>
 <p>When ineligible buttons are pressed while in Audition mode, a message appears to indicate that it is necessary to decide which version of the most recently recorded track is to be kept before the desired action can be performed. The message appears momentarily, and then the display changes back to the <span class="page-name">Audition page</span>.</p>
 <h3 id="punching-in-on-a-track">“Punching In” on a Track</h3>
 <p>The TS-10 offers two methods for “punching in” (or re-recording) a specific part of a track. When <span class="lcd">AUTOPUNCH=OFF</span> (on either the Locate or <span class="page-name">Sequencer Control sub-page</span>), you can punch in manually just by playing the keyboard to start recording. When <span class="lcd">AUTOPUNCH=ON</span>, the TS-10 will enter and exit Record mode automatically at the precise times that you specify on the <span class="page-name">Locate sub-page</span>.</p>
 <p>To Punch in manually on a track (meaning <span class="lcd">AUTOPUNCH=OFF</span> on the <span class="page-name">Locate page</span>):</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track you want to record on.</p>
-<p>• Press <kbd class="button">Play</kbd> to start the sequence or song playing.</p>
-<p>• Press <kbd class="button">Record</kbd>. This puts the TS-10 in Overdub Standby — ODUB flashes in the lower left corner of the display and the sequencer is waiting for you to play keys before going into record.</p>
-<p>• Start playing at the point where you want to punch in. As soon as you play anything the TS-10 goes into overdub (or record for a new track) and records what you play, leaving intact the part of the track before the punch in. Unless you then press <kbd class="button">Stop/Continue</kbd> or the assigned AUX Foot Switch, new track data will be recorded from the point where you punched in to the end of the sequence or song.</p>
-<p>• Press <kbd class="button">Stop/Continue</kbd>. You will see the <span class="page-name">Audition page</span> as shown earlier, letting you audition the new or the old track before deciding which to keep.</p>
+<ul>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track you want to record on.</li>
+  <li>Press <kbd class="button">Play</kbd> to start the sequence or song playing.</li>
+  <li>Press <kbd class="button">Record</kbd>. This puts the TS-10 in Overdub Standby — ODUB flashes in the lower left corner of the display and the sequencer is waiting for you to play keys before going into record.</li>
+  <li>Start playing at the point where you want to punch in. As soon as you play anything the TS-10 goes into overdub (or record for a new track) and records what you play, leaving intact the part of the track before the punch in. Unless you then press <kbd class="button">Stop/Continue</kbd> or the assigned AUX Foot Switch, new track data will be recorded from the point where you punched in to the end of the sequence or song.</li>
+  <li>Press <kbd class="button">Stop/Continue</kbd>. You will see the <span class="page-name">Audition page</span> as shown earlier, letting you audition the new or the old track before deciding which to keep.</li>
+</ul>
 <p>To Punch in and out automatically on a track (meaning <span class="lcd">AUTOPUNCH=ON)</span>:</p>
-<p>• Set the Edit IN and OUT times on the <span class="page-name">Locate sub-page</span> as described earlier in this section.</p>
+<ul>
+  <li>Set the Edit IN and OUT times on the <span class="page-name">Locate sub-page</span> as described earlier in this section.</li>
+</ul>
 <p>These define the exact bar, beat and clock at which the TS-10 will enter and exit record.</p>
-<p>• Press <kbd class="button">Record/Play</kbd> to start the sequencer. It will begin to play but will not go into record until the Edit IN time is reached. You can play along with the sequence if you wish without being recorded.</p>
-<p>• When the Edit IN time is reached the sequencer will automatically enter record, and will record whatever you play until the Edit OUT time is reached.</p>
-<p>• At the Edit OUT time the sequencer automatically exits record and goes into Audition Play mode.</p>
-<p>• Audition the new track as usual from the <span class="page-name">Audition page</span> before deciding whether to keep the new or the old track.</p>
+<ul>
+  <li>Press <kbd class="button">Record/Play</kbd> to start the sequencer. It will begin to play but will not go into record until the Edit IN time is reached. You can play along with the sequence if you wish without being recorded.</li>
+  <li>When the Edit IN time is reached the sequencer will automatically enter record, and will record whatever you play until the Edit OUT time is reached.</li>
+  <li>At the Edit OUT time the sequencer automatically exits record and goes into Audition Play mode.</li>
+  <li>Audition the new track as usual from the <span class="page-name">Audition page</span> before deciding whether to keep the new or the old track.</li>
+</ul>
 <p>When <span class="lcd">AUTOPUNCH=ON</span>, the TS-10 will record events only within the window of time specified by the Edit times, no matter how you enter record. Thus if you press <kbd class="button">Play</kbd>, then <kbd class="button">Record</kbd> the TS-10 will wait for you to play before entering record, but recording will only be triggered by notes within the Edit times window. Notes played before the Edit IN time or after the Edit OUT time will not initiate recording.</p>
 <p>If the RECORD <span class="lcd">MODE=LOOPED</span> (on the <span class="page-name">Sequencer Control page</span>) and <span class="lcd">AUTOPUNCH=ON</span>, the sequencer will continue to go in and out of record at the Edit points each time the sequence repeats, for as long as you let it play.</p>
 <p>Finding the <dfn class="term">BankSet</dfn>, Bank, and Display Location for Sounds on Sequencer Tracks To find the <dfn class="term">BankSet</dfn>, Bank and Display location (U0-1.5, U1-3.1, R2-7.4, etc.) for the sounds assigned to sequencer tracks:</p>
-<p>• Select the sequence or song using the Seqs•Songs button, the <kbd class="button">Bank</kbd> buttons (0-9), and the appropriate soft button in the display.</p>
-<p>• Press the <kbd class="button">Seq/Song Tracks 1-6 (or 7-12)</kbd> button. The <span class="page-name">Seq/Song Tracks page</span> shows:</p>
+<ul>
+  <li>Select the sequence or song using the Seqs•Songs button, the <kbd class="button">Bank</kbd> buttons (0-9), and the appropriate soft button in the display.</li>
+  <li>Press the <kbd class="button">Seq/Song Tracks 1-6 (or 7-12)</kbd> button. The <span class="page-name">Seq/Song Tracks page</span> shows:</li>
+</ul>
 <p>Seq/Song Tracks with Sampled Sounds that are loaded Seq/Song Tracks with Programs show Program Name and UNMUTED show the Sampled Sound name</p>
 <p>Seq/Song Tracks with Sampled Sounds that are Empty Seq/Song Tracks will show -UNDEFINED-MUTED, or NOT LOADED show the <dfn class="term">BankSet</dfn> and Bank location of the Sampled Sound</p>
-<p>• To identify the locations of the first six sequencer tracks, press and hold the <kbd class="button">Seq/Song Tracks 1-6 (or 7-12)</kbd> button, and then press <kbd class="button">Sounds</kbd>. The display will now show:</p>
+<ul>
+  <li>To identify the locations of the first six sequencer tracks, press and hold the <kbd class="button">Seq/Song Tracks 1-6 (or 7-12)</kbd> button, and then press <kbd class="button">Sounds</kbd>. The display will now show:</li>
+</ul>
 <p>Seq/Song Tracks with Sampled Sounds that Seq/Song Tracks with Programs now show the are loaded and UNMUTED now show the <dfn class="term">BankSet</dfn>, Bank, and Display location of the Program Sampled Sound <dfn class="term">BankSet</dfn> and Bank location</p>
 <p>Seq/Song Tracks with Sampled Sounds that are MUTED or          Empty Seq/Song Tracks will show <span class="lcd">******</span></p>
 <p>NOT  LOADED now show <dfn class="term">BankSet</dfn>, Bank, and Display location of the <dfn class="term">Surrogate Program</dfn> assigned to the Track</p>
-<p>• Release both buttons and the <kbd class="button">Seq/Song Tracks</kbd> page will be re-displayed.</p>
+<ul>
+  <li>Release both buttons and the <kbd class="button">Seq/Song Tracks</kbd> page will be re-displayed.</li>
+</ul>
 <p>See <a class="refer-to" href="14-sampled-sounds.html#section-14-understanding-sampled-sounds">Section 14 — Understanding Sampled Sounds</a> for more information about Surrogate Programs.</p>
 <p><span class="page-name">Edit Sequence Page</span> — Sequence Edit Functions Pressing the <kbd class="button">Edit Sequence</kbd> button displays the sequence editing page. Pressing the button twice will display the sub-page containing the Add and Delete Bars functions.</p>
 <p>The following functions can be selected from the <span class="page-name">Edit Song page</span>:</p>
-<p>• APPEND — Lets you append (attach) one sequence onto another.</p>
-<p>• INFO — Provides information about the sequence; lets you adjust the tempo and, indirectly, the elapsed time.</p>
-<p>• ERASE — Erase and undefine the sequence.</p>
-<p>• COPY — Copy the sequence to another sequencer location.</p>
-<p>• ADD &amp; DELETE BARS — Increase or decrease the length of the sequence.</p>
+<ul>
+  <li>APPEND — Lets you append (attach) one sequence onto another.</li>
+  <li>INFO — Provides information about the sequence; lets you adjust the tempo and, indirectly, the elapsed time.</li>
+  <li>ERASE — Erase and undefine the sequence.</li>
+  <li>COPY — Copy the sequence to another sequencer location.</li>
+  <li>ADD &amp; DELETE BARS — Increase or decrease the length of the sequence.</li>
+</ul>
 <h3 id="the-midi-connection">The MIDI Connection</h3>
 <p>Almost everyone is familiar with MIDI — that magical connection that lets you play one instrument (or a whole roomful of them) from another. MIDI (Musical Instrument Digital Interface) is a standard that has been agreed upon by manufacturers for translating musical events into specific numbers which are transmitted and received by MIDI instruments.</p>
 <p>When you play middle C on the TS-10, for instance, it instantly sends to its MIDI Out jack a series of numbers representing a Key Down event, along with the location of the note on the keyboard and how hard the key was struck. When you release the key the TS-10 sends a number meaning Key Up. A MIDI instrument connected to the TS-10 can receive and translate those numbers, and will play the middle C itself. The same thing happens whenever you move a controller, such as the Pitch or Mod Wheel, or when you select a new sound — each of these events is translated into a series of numbers which are transmitted by the MIDI Out jack.</p>
@@ -308,15 +376,19 @@
 <p>In other words, once you have made the appropriate connections, and set up the MIDI configuration of the tracks and all remote MIDI devices, you can use the TS-10’s keyboard and its front panel to control and record all the remote MIDI devices in your rig.</p>
 <p>MIDI  Mode and Channel — Remote MIDI Device The next step is to set up each remote MIDI device to receive only the MIDI information that is intended for it. When each of the receiving units is set to receive on a different MIDI channel (or a number of them, for multi-timbral units) you can control them all right from the TS-10.</p>
 <p>For each remote MIDI device:</p>
-<p>• Set to <span class="value">POLY</span> (<span class="value">OMNI</span> <span class="value">OFF</span>) or <span class="value">MULTI</span> Mode. Each remote MIDI device must be in a mode where it receives only on its selected MIDI channel (or channels). This is usually referred to as <span class="value">POLY</span> (or <span class="value">OMNI</span> <span class="value">OFF</span>) Mode for receiving on a single channel, or <span class="value">MULTI</span> mode for receiving independently on multiple channels. Consult the owner’s manual if there is any question about a particular instrument.</p>
-<p>• Select a MIDI channel or channels. The best idea is to assign each destination Instrument its own MIDI channel(s) and leave it that way. If you know, for instance, that a certain synth is always set to receive on MIDI channel 4, you can quickly set up a track to drive that synth by simply selecting an undefined track, then assigning that track MIDI Status and MIDI channel 4 on the <span class="page-name">Track MIDI page</span>. Also when each destination instrument is always set to its own distinct MIDI channel, it means that different sequences and songs recorded at different times will always play the right instrument on the right track.</p>
+<ul>
+  <li>Set to <span class="value">POLY</span> (<span class="value">OMNI</span> <span class="value">OFF</span>) or <span class="value">MULTI</span> Mode. Each remote MIDI device must be in a mode where it receives only on its selected MIDI channel (or channels). This is usually referred to as <span class="value">POLY</span> (or <span class="value">OMNI</span> <span class="value">OFF</span>) Mode for receiving on a single channel, or <span class="value">MULTI</span> mode for receiving independently on multiple channels. Consult the owner’s manual if there is any question about a particular instrument.</li>
+  <li>Select a MIDI channel or channels. The best idea is to assign each destination Instrument its own MIDI channel(s) and leave it that way. If you know, for instance, that a certain synth is always set to receive on MIDI channel 4, you can quickly set up a track to drive that synth by simply selecting an undefined track, then assigning that track MIDI Status and MIDI channel 4 on the <span class="page-name">Track MIDI page</span>. Also when each destination instrument is always set to its own distinct MIDI channel, it means that different sequences and songs recorded at different times will always play the right instrument on the right track.</li>
+</ul>
 <p>Once you have assigned MIDI channels to each instrument in your rig, write them down, and keep the paper handy for quick reference.</p>
 <p>MIDI  Track Configuration After you have made the MIDI connections, and set up your remote MIDI devices as described above, you now configure the tracks of a sequence to send to those remote MIDI devices. Let’s suppose that you are sequencing several remote MIDI devices, as depicted in the illustration on the previous page.</p>
 <p>For each track which you want to drive a remote MIDI device:</p>
-<p>• Select a track. Go to the <span class="page-name">Seq/Song Tracks 1-6 or 7-12 page</span> and press the soft button corresponding to a track location to select a track.</p>
-<p>• Assign the track MIDI Status. Press the <kbd class="button">Track MIDI</kbd> button once to display the <span class="page-name">STATUS sub page</span>. The selected track is underlined. Use the data entry controls to set the track to <span class="lcd">LOCAL-OFF</span> status. You will notice that when you play the keyboard now, it doesn’t sound on the TS-10.</p>
-<p>• Assign the track a MIDI Channel. Press the <kbd class="button">Track MIDI</kbd> button again — the <span class="page-name">CHANNEL sub page</span> appears. Set the track to the MIDI channel of the remote MIDI device you want to sequence from that track. Playing the TS-10 keyboard should now play the Receiving Instrument.</p>
-<p>• Set the Program Number. Press the <kbd class="button">Track MIDI</kbd> button a third time — the <span class="page-name">PROGRAM sub page</span> appears. Now you can use the data entry controls to change the program that the receiving unit is playing. While playing the TS-10 Keyboard, adjust the program number until the external instrument is playing the sound you want.</p>
+<ul>
+  <li>Select a track. Go to the <span class="page-name">Seq/Song Tracks 1-6 or 7-12 page</span> and press the soft button corresponding to a track location to select a track.</li>
+  <li>Assign the track MIDI Status. Press the <kbd class="button">Track MIDI</kbd> button once to display the <span class="page-name">STATUS sub page</span>. The selected track is underlined. Use the data entry controls to set the track to <span class="lcd">LOCAL-OFF</span> status. You will notice that when you play the keyboard now, it doesn’t sound on the TS-10.</li>
+  <li>Assign the track a MIDI Channel. Press the <kbd class="button">Track MIDI</kbd> button again — the <span class="page-name">CHANNEL sub page</span> appears. Set the track to the MIDI channel of the remote MIDI device you want to sequence from that track. Playing the TS-10 keyboard should now play the Receiving Instrument.</li>
+  <li>Set the Program Number. Press the <kbd class="button">Track MIDI</kbd> button a third time — the <span class="page-name">PROGRAM sub page</span> appears. Now you can use the data entry controls to change the program that the receiving unit is playing. While playing the TS-10 Keyboard, adjust the program number until the external instrument is playing the sound you want.</li>
+</ul>
 <p>From now on, whenever you select that sequence, or when it plays as a step in a song, this track will send out this program change on its selected MIDI channel.</p>
 <aside class="note"><p>Note: When sequencing, you should always select the sounds for remote MIDI devices from the TS-10 as described above, and not from the remote MIDI device itself. This assures that the track has the proper program number for that instrument in each sequence.</p></aside>
 <p>Recording MIDI Tracks Once everything is set up, you can proceed with recording MIDI tracks exactly as you would for tracks with local or both status. Tracks that are sent out MIDI are treated the same as internal tracks in terms of recording, overdubbing, punching in, editing, etc. Follow the same steps outlined earlier in this section for recording the first track and then for additional tracks.</p>
@@ -335,79 +407,101 @@
 <h3 id="changes">Changes)</h3>
 <p>The TS-10 can change track sounds in a sequence or song, allowing you to change the sound that is playing on the track as the track plays. There are two ways to do this. Both methods will have the same effect, but the first is best suited for local tracks, the second for MIDI tracks.</p>
 <p>To change a sound within a local track:</p>
-<p>• On the <span class="page-name">Sequencer Control page</span>, set the Record Mode to RECORD-<span class="param">MODE</span>= ADD.</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track that you want to change the sound.</p>
-<p>• Press <kbd class="button">Replace Track Sound</kbd>, press the <kbd class="button">BankSet</kbd> and proper <kbd class="button">Bank</kbd> button to locate the sound you want to change to. Don’t select the sound yet, just leave its bank showing on the display.</p>
-<p>• Hold down <kbd class="button">Record</kbd> and press <kbd class="button">Play</kbd> to start the sequencer recording.</p>
-<p>• At the point where you want to insert the new sound, press the soft button next to the new sound. The track will begin to play the new sound and the change is inserted into the track.</p>
-<p>• You can continue selecting new sounds in this mode as long as the sequence is in record. Each time the change will be recorded.</p>
+<ul>
+  <li>On the <span class="page-name">Sequencer Control page</span>, set the Record Mode to RECORD-<span class="param">MODE</span>= ADD.</li>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track that you want to change the sound.</li>
+  <li>Press <kbd class="button">Replace Track Sound</kbd>, press the <kbd class="button">BankSet</kbd> and proper <kbd class="button">Bank</kbd> button to locate the sound you want to change to. Don’t select the sound yet, just leave its bank showing on the display.</li>
+  <li>Hold down <kbd class="button">Record</kbd> and press <kbd class="button">Play</kbd> to start the sequencer recording.</li>
+  <li>At the point where you want to insert the new sound, press the soft button next to the new sound. The track will begin to play the new sound and the change is inserted into the track.</li>
+  <li>You can continue selecting new sounds in this mode as long as the sequence is in record. Each time the change will be recorded.</li>
+</ul>
 <aside class="tip"><p>To change the sound and install its effect as the current sequence or song effect, double-click the</p></aside>
 <p><kbd class="button">Replace Track Sound</kbd> button in step three above. Note that when Track <span class="lcd">STATUS=VOICE-OFF</span>, <span class="lcd">LOCAL-OFF</span>, or MIDI-<span class="param">LOOP</span> program changes +60 will not change the effect. This is good for sending numbers above 60 to external devices.</p>
 <p>To change a sound within a MIDI track:</p>
-<p>• On the <span class="page-name">Sequencer Control page</span>, set the Record Mode to RECORD-<span class="param">MODE</span>= ADD.</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track on which you want to change the sound.</p>
-<p>• Hold down <kbd class="button">Record</kbd> and press <kbd class="button">Play</kbd> to start the sequencer recording.</p>
-<p>• Press and hold down the soft button next to the track on which you want to record the program change.</p>
-<p>• While holding down the soft button, type the number of the program change on the <kbd class="button">Bank</kbd> buttons beneath the display. For example, to record program change #12, press 1, then 2; to record program change #106, press 1, then 0, then 6; and so on.</p>
-<p>• At the instant you want the program change recorded, release the soft button. The program change is recorded (and sent to the remote MIDI device) when the soft button is released, so you can type the number in advance and let the button go at the exact instant you want the program change sent.</p>
+<ul>
+  <li>On the <span class="page-name">Sequencer Control page</span>, set the Record Mode to RECORD-<span class="param">MODE</span>= ADD.</li>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track on which you want to change the sound.</li>
+  <li>Hold down <kbd class="button">Record</kbd> and press <kbd class="button">Play</kbd> to start the sequencer recording.</li>
+  <li>Press and hold down the soft button next to the track on which you want to record the program change.</li>
+  <li>While holding down the soft button, type the number of the program change on the <kbd class="button">Bank</kbd> buttons beneath the display. For example, to record program change #12, press 1, then 2; to record program change #106, press 1, then 0, then 6; and so on.</li>
+  <li>At the instant you want the program change recorded, release the soft button. The program change is recorded (and sent to the remote MIDI device) when the soft button is released, so you can type the number in advance and let the button go at the exact instant you want the program change sent.</li>
+</ul>
 <p>To send/record a MIDI program change:</p>
 <table class="param-cols cols-6"><tbody><tr><td>Bank   0</td><td>1</td><td>2</td><td>3   4   5   6</td><td>7   8</td><td>9</td></tr></tbody></table>
 <p>1) Press and hold the track&#x27;s soft button</p>
 <div class="vfd-callouts top"><div>2) &quot;Type&quot; the program</div><div>3) Release the # on the bank buttons</div><div>soft button</div></div>
-<p>• This same procedure can be used at any time to send a program change to a remote MIDI device, whether the sequencer is in record or not.</p>
+<ul>
+  <li>This same procedure can be used at any time to send a program change to a remote MIDI device, whether the sequencer is in record or not.</li>
+</ul>
 <aside class="note"><p>Note: If the track status is both, program changes recorded into the track will affect both the local and the MIDI program when the track is played back. This is true whichever of the above methods was used to insert the program change, even though the second method shown above does not change the local program at the time of recording.</p></aside>
 <p>Defining Track  Pressure in <span class="mode">Sequencer Mode</span> When Track <span class="lcd">PRESSURE=OFF</span>:</p>
-<p>• Local voices played from the keyboard or the sequencer will not respond to pressure.</p>
-<p>• The sequencer will not record pressure into any tracks you record.</p>
-<p>• The sequencer will not play back any <dfn class="term">Poly-Key</dfn> or Channel pressure messages recorded on the track.</p>
-<p>• The instrument will not transmit or receive pressure of either type via incoming MIDI.</p>
+<ul>
+  <li>Local voices played from the keyboard or the sequencer will not respond to pressure.</li>
+  <li>The sequencer will not record pressure into any tracks you record.</li>
+  <li>The sequencer will not play back any <dfn class="term">Poly-Key</dfn> or Channel pressure messages recorded on the track.</li>
+  <li>The instrument will not transmit or receive pressure of either type via incoming MIDI.</li>
+</ul>
 <aside class="note"><p>Note: You should select Track <span class="lcd">PRESSURE=OFF</span> whenever you don’t want or need pressure for a given sound, particularly when sequencing. Pressure data eats up sequencer memory rapidly, so whenever you record a track with a sound that doesn’t respond to pressure, set this parameter to <span class="value">OFF</span>. This will avoid wasting valuable sequencer memory, and will avoid clogging up the MIDI data stream with a lot of unnecessary pressure information. Existing pressure information can also be removed from a track using the Filter command on the <span class="page-name">Edit Track page</span>.</p></aside>
 <p>When <span class="lcd">PRESSURE=KEY</span>:</p>
-<p>• Local voices played from the TS-10 keyboard will respond to <dfn class="term">Poly-Key</dfn> pressure only.</p>
-<p>• The sequencer will record <dfn class="term">Poly-Key</dfn> pressure into any tracks you record.</p>
-<p>• The sequencer will play back any <dfn class="term">Poly-Key</dfn> pressure messages recorded on the track, and will ignore any Channel pressure on the track.</p>
-<p>• The TS-10 keyboard will only transmit <dfn class="term">Poly-Key</dfn> pressure out via MIDI; however,</p>
-<p>• Either Channel pressure or <dfn class="term">Poly-Key</dfn> pressure will be received via incoming MIDI.</p>
+<ul>
+  <li>Local voices played from the TS-10 keyboard will respond to <dfn class="term">Poly-Key</dfn> pressure only.</li>
+  <li>The sequencer will record <dfn class="term">Poly-Key</dfn> pressure into any tracks you record.</li>
+  <li>The sequencer will play back any <dfn class="term">Poly-Key</dfn> pressure messages recorded on the track, and will ignore any Channel pressure on the track.</li>
+  <li>The TS-10 keyboard will only transmit <dfn class="term">Poly-Key</dfn> pressure out via MIDI; however,</li>
+  <li>Either Channel pressure or <dfn class="term">Poly-Key</dfn> pressure will be received via incoming MIDI.</li>
+</ul>
 <p>When PRESSURE <span class="lcd">MODE=CHAN</span>:</p>
-<p>• Local voices played from the TS-10 keyboard will respond to Channel pressure only.</p>
-<p>• The sequencer will record Channel pressure into any tracks you record.</p>
-<p>• The sequencer will play back any Channel pressure messages recorded on the track, and will ignore any <dfn class="term">Poly-Key</dfn> pressure on the track.</p>
-<p>• The TS-10 keyboard will only transmit Channel pressure out via MIDI, however.</p>
-<p>• Either Channel pressure or <dfn class="term">Poly-Key</dfn> pressure will be received via incomng MIDI.</p>
+<ul>
+  <li>Local voices played from the TS-10 keyboard will respond to Channel pressure only.</li>
+  <li>The sequencer will record Channel pressure into any tracks you record.</li>
+  <li>The sequencer will play back any Channel pressure messages recorded on the track, and will ignore any <dfn class="term">Poly-Key</dfn> pressure on the track.</li>
+  <li>The TS-10 keyboard will only transmit Channel pressure out via MIDI, however.</li>
+  <li>Either Channel pressure or <dfn class="term">Poly-Key</dfn> pressure will be received via incomng MIDI.</li>
+</ul>
 <aside class="note"><p>Note: When <span class="lcd">REC-SOURCE=MULTI</span> on the <span class="page-name">Sequencer Control page</span>, the TS-10 sequencer will always record both Channel and <dfn class="term">Poly-Key</dfn> pressure (received via incoming MIDI), no matter what the Track PRESSURE parameter is set to.</p></aside>
 <p>At present, Channel pressure is recognized by more MIDI devices than <dfn class="term">Poly-Key</dfn> pressure. If you are playing or sequencing an external MIDI device from the TS-10 and pressure doesn’t seem to have an effect, it could be the TS-10 is set to transmit <dfn class="term">Poly-Key</dfn> pressure and the receiving instrument only recognizes Channel pressure. In this case, set Track <span class="lcd">PRESSURE=CHAN</span> when playing or sequencing that instrument.</p>
 <p>Assigning a Track to the AUX Outputs Until you change it, each sequencer track will be sent to the output bus which is programmed into the sound. In almost all cases this means that the track will be sent to the Main stereo outputs. To assign a track to the AUX outputs for separate processing:</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track.</p>
-<p>• Press the <kbd class="button">Track Effects</kbd> button. The display shows the Effects Bus Override status for each track, with the current track underlined:</p>
-<p>• Use the data entry controls to set the track to -AUX-. Anything played or recorded on that track will now be sent directly to the AUX outputs, bypassing the effects.</p>
+<ul>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the track.</li>
+  <li>Press the <kbd class="button">Track Effects</kbd> button. The display shows the Effects Bus Override status for each track, with the current track underlined:</li>
+  <li>Use the data entry controls to set the track to -AUX-. Anything played or recorded on that track will now be sent directly to the AUX outputs, bypassing the effects.</li>
+</ul>
 <p>This page serves as a mixer for the various tracks, letting you determine how each track is routed to (or around) the effects. The available settings are:</p>
-<p>• VOICE            uses normal voice routing as programmed into the sound — this is the default setting in the track</p>
-<p>• -FX1-            forces FX2 voices to FX1; FX1 and DRY are unaffected</p>
-<p>• -FX2-            forces FX1 voices to FX2; FX2 and DRY are unaffected</p>
-<p>• -DRY-            forces all voices to the dry bus</p>
-<p>• -AUX-            forces all voices to the AUX outputs, bypassing the effects</p>
+<ul>
+  <li>VOICE            uses normal voice routing as programmed into the sound — this is the default setting in the track</li>
+  <li>-FX1-            forces FX2 voices to FX1; FX1 and DRY are unaffected</li>
+  <li>-FX2-            forces FX1 voices to FX2; FX2 and DRY are unaffected</li>
+  <li>-DRY-            forces all voices to the dry bus</li>
+  <li>-AUX-            forces all voices to the AUX outputs, bypassing the effects</li>
+</ul>
 <p>Using the AUX Outputs as Separate Mono Outs If you want to use the two AUX outputs as independent mono outputs, use the track Pan control in conjunction with the Effects Bus Override:</p>
-<p>• Select a track, press the <kbd class="button">Track Effects</kbd> button and assign the track to –AUX– as shown above.</p>
-<p>• Press <kbd class="button">Mix/Pan</kbd> twice to get to the <span class="page-name">PAN page</span>. Set to -63 to assign the track to the left AUX output only; or set to +64 to assign the track to the right AUX output. You can also press the soft button for the track and define if the AUX jacks will receive a stereo or mono signal.</p>
+<ul>
+  <li>Select a track, press the <kbd class="button">Track Effects</kbd> button and assign the track to –AUX– as shown above.</li>
+  <li>Press <kbd class="button">Mix/Pan</kbd> twice to get to the <span class="page-name">PAN page</span>. Set to -63 to assign the track to the left AUX output only; or set to +64 to assign the track to the right AUX output. You can also press the soft button for the track and define if the AUX jacks will receive a stereo or mono signal.</li>
+</ul>
 <p><span class="page-name">Edit Track Page</span> — Track Edit Functions Pressing the <kbd class="button">Edit Track</kbd> button displays the top level track editing page. Pressing the button twice will display the track edit options sub-page. These edit functions will affect the currently selected track. If a sequence is selected, the current sequence track will be edited; if a song is selected, the current song track will be edited.</p>
 <p>The following functions can be selected from the <span class="page-name">Edit Track page</span>:</p>
-<p>• SHIFT — Shift track forward or back in time by a number of clocks.</p>
-<p>• QUANTIZE — Auto-correct notes to the nearest beat.</p>
-<p>• ERASE — Erase all or part of the track.</p>
-<p>• COPY — Copy all or part of the track to another track in any sequence.</p>
-<p>• <span class="param">TRANSPOSE</span> — Raise or lower the pitch of all or part of the track by octaves and semitones.</p>
-<p>• SCALE — Scale (increase or decrease the level of) one or more controller(s) in the track.</p>
-<p>• EVENT-LIST — Provides a comprehensive event editor allowing you to locate and edit any event in the track.</p>
-<p>• FILTER — This powerful function lets you remove, or copy to another track, any range of notes, controllers, program changes, etc.</p>
-<p>• MERGE — Merge, or combine, the data from one track with another.</p>
+<ul>
+  <li>SHIFT — Shift track forward or back in time by a number of clocks.</li>
+  <li>QUANTIZE — Auto-correct notes to the nearest beat.</li>
+  <li>ERASE — Erase all or part of the track.</li>
+  <li>COPY — Copy all or part of the track to another track in any sequence.</li>
+  <li><span class="param">TRANSPOSE</span> — Raise or lower the pitch of all or part of the track by octaves and semitones.</li>
+  <li>SCALE — Scale (increase or decrease the level of) one or more controller(s) in the track.</li>
+  <li>EVENT-LIST — Provides a comprehensive event editor allowing you to locate and edit any event in the track.</li>
+  <li>FILTER — This powerful function lets you remove, or copy to another track, any range of notes, controllers, program changes, etc.</li>
+  <li>MERGE — Merge, or combine, the data from one track with another.</li>
+</ul>
 <p>Track Mix Functions — Mixing, Muting and Soloing Tracks Once you have recorded a few tracks of a sequence, you will want to balance the levels of the tracks, and maybe listen to them one or two at a time. This is done from the <span class="page-name">Mix/Pan page</span>.</p>
 <p>Select a track from the <span class="page-name">Seq/Song Tracks 1-6 or 7-12 page</span>, then press the <kbd class="button">Mix/Pan</kbd> button. The display shows:</p>
 <p>From this page, in addition to balancing the levels of the tracks in the sequence, you can solo and mute individual tracks just as you can with voices on the select voice page. Notice that the levels for any tracks without recorded data will appear in brackets:</p>
-<p>• Press the soft button corresponding to a track to select the track for editing. The data entry controls will now adjust the level of the selected track from 00 to 127.</p>
-<p>• Press the soft button of the selected track again to Mute the track. Muted tracks will have brackets around the volume number, as in tracks 5 and 6 above. Pressing a muted track’s button will un-mute it, removing the brackets. If the track has no recorded data, you cannot unmute it.</p>
-<p>• Rapidly double-click on a track’s soft button to solo it. Asterisks will appear on either side of the soloed track, and all other tracks will get brackets to indicate that they are muted.</p>
-<p>• Pressing the soft button of a soloed track will “un-solo” the track, returning all tracks to their previous status.</p>
-<p>• When a track is soloed, you can select another track, then press its button again to “solo” it along with the other soloed track. In this way you can un-mute tracks one at a time to listen to any combination. Just press the soft button of any of the soloed tracks again to return all tracks to their previous status.</p>
+<ul>
+  <li>Press the soft button corresponding to a track to select the track for editing. The data entry controls will now adjust the level of the selected track from 00 to 127.</li>
+  <li>Press the soft button of the selected track again to Mute the track. Muted tracks will have brackets around the volume number, as in tracks 5 and 6 above. Pressing a muted track’s button will un-mute it, removing the brackets. If the track has no recorded data, you cannot unmute it.</li>
+  <li>Rapidly double-click on a track’s soft button to solo it. Asterisks will appear on either side of the soloed track, and all other tracks will get brackets to indicate that they are muted.</li>
+  <li>Pressing the soft button of a soloed track will “un-solo” the track, returning all tracks to their previous status.</li>
+  <li>When a track is soloed, you can select another track, then press its button again to “solo” it along with the other soloed track. In this way you can un-mute tracks one at a time to listen to any combination. Just press the soft button of any of the soloed tracks again to return all tracks to their previous status.</li>
+</ul>
 <h3 id="song-mode">Song Mode</h3>
 <p>The TS-10’s Song Mode is the key to unlocking its true power as a Performance/Composition Synthesizer. In song mode, you can chain a number of sequences together to form a song. Songs are made up of Steps — for each song step, you can choose a sequence to play and the number of repetitions of that sequence, as well as mute and transpose status for each track of the sequence.</p>
 <p>But wait, there’s more. Each TS-10 song also contains its own effects set-up (see below) and 12 additional tracks which are independent of the tracks in the component sequences that form the song steps. This gives you a 24 track sequencer with tremendous flexibility. You can choose which musical parts you want to put into the component sequences, and which parts you put in the song tracks. Discussion of song tracks begins on the next page.</p>
@@ -416,48 +510,70 @@
 <p>The same holds true when selecting sequences. Each sequence has its own effects set-up, which is completely programmable and is saved with the sequence. When you select a sequence, if the new one has a different effect than the previous one there will be a brief muting of the output.</p>
 <p>This can pose a problem when playing a song — as a new song step begins to play, if the sequence in that step has a different effect than the previous one, there might be a muting of the audio output. Since it is usually not desirable during sequencer play to mute the output, the TS-10 offers some alternatives.</p>
 <p>The SONG STEP EFFECT parameter on the <span class="page-name">Sequencer Control page</span> determines which effect(s) will be heard when a song is played:</p>
-<p>• When SONG STEP <span class="lcd">EFFECT=SEQ</span>, each time a new sequence begins as a step in a song, its effect will be loaded, resulting in a brief muting of the output (unless the new effect is the same as in the previous sequence).</p>
-<p>• When SONG STEP <span class="lcd">EFFECT=SONG</span>, the effect which is stored in the song will be used for all the song steps and there will never be any muting or “glitching” of the output when new sequences play.</p>
+<ul>
+  <li>When SONG STEP <span class="lcd">EFFECT=SEQ</span>, each time a new sequence begins as a step in a song, its effect will be loaded, resulting in a brief muting of the output (unless the new effect is the same as in the previous sequence).</li>
+  <li>When SONG STEP <span class="lcd">EFFECT=SONG</span>, the effect which is stored in the song will be used for all the song steps and there will never be any muting or “glitching” of the output when new sequences play.</li>
+</ul>
 <p>The setting of this parameter is saved with each song. Whenever a new song is created, it defaults to SONG STEP <span class="lcd">EFFECT=SONG</span>. This ensures that there will be no output muting, but it also means that a sequence might sound different in a song than when it is played on its own.</p>
 <p>If you use the SONG STEP <span class="lcd">EFFECT=SEQ</span> setting for a given song, you can minimize the muting by doing the following:</p>
-<p>• Whenever possible, use the same effects algorithm in sequences which will be adjacent to each other in the song.</p>
-<p>• Program a rest into the beginning of sequences where the effect will switch to a different algorithm from the previous one. Or create a silent one-bar sequence whose only function is to switch to a new effect. Then make sure the sequences that follow use the same effect.</p>
+<ul>
+  <li>Whenever possible, use the same effects algorithm in sequences which will be adjacent to each other in the song.</li>
+  <li>Program a rest into the beginning of sequences where the effect will switch to a different algorithm from the previous one. Or create a silent one-bar sequence whose only function is to switch to a new effect. Then make sure the sequences that follow use the same effect.</li>
+</ul>
 <p><span class="page-name">Edit Song Page</span> — Song Edit Functions Pressing the <kbd class="button">Edit Song</kbd> button displays the top level song editing page. Pressing the button twice will display the Song Step Editor. If you press the <kbd class="button">Edit Song</kbd> button when a sequence is selected, the display will respond SONG NOT SELECTED and will not allow you onto this page.</p>
 <p>The following functions can be selected from the <span class="page-name">Edit Song page</span>:</p>
-<p>• ADD-TEMPO-TRK — Allows you to add a tempo track to an existing song</p>
-<p>• INFO — Provides information about the song and lets you adjust the tempo</p>
+<ul>
+  <li>ADD-TEMPO-TRK — Allows you to add a tempo track to an existing song</li>
+  <li>INFO — Provides information about the song and lets you adjust the tempo</li>
+</ul>
 <h4 id="erase-erase-and-undefine-the-song" class="param-name">ERASE — Erase and undefine the song</h4>
-<p>• COPY — Copy the song to another sequencer location</p>
-<p>• EDIT STEPS — Edit the song steps, chaining sequences together to form the basic song structure</p>
+<ul>
+  <li>COPY — Copy the song to another sequencer location</li>
+  <li>EDIT STEPS — Edit the song steps, chaining sequences together to form the basic song structure</li>
+</ul>
 <p>Editing Song  Steps — Using the Song Step Editor For each Song Step you want to create, on the <span class="page-name">Edit Song Page</span>:</p>
-<p>• Select the Sequence Name field, which for Step 1 of a new song will read SEQ= <span class="lcd">*SONG-END*</span>.</p>
-<p>• Press the Up or <kbd class="button">Down Arrow</kbd> button to define the song step and select among the sequences in memory until the display is showing the name of the sequence you want to play during that step.</p>
+<ul>
+  <li>Select the Sequence Name field, which for Step 1 of a new song will read SEQ= <span class="lcd">*SONG-END*</span>.</li>
+  <li>Press the Up or <kbd class="button">Down Arrow</kbd> button to define the song step and select among the sequences in memory until the display is showing the name of the sequence you want to play during that step.</li>
+</ul>
 <aside class="tip"><p>When the cursor is beneath either STEP or SEQ, pressing and holding one of the <kbd class="button">Bank 0-9</kbd> buttons, followed by a soft button in the display will automatically select that sequence for the defined song step.</p></aside>
-<p>• Select the number of Repeats (REPS=##), and adjust the number of times you want the sequence to play during the step. If you only want the sequence to play once during the song step, leave it set to 01.</p>
-<p>• Press TRACKS on the <span class="page-name">Edit Song page</span> to reveal the <span class="page-name">Mute/Transpose sub-page</span> shown above. If you want to mute any tracks for that step, select the character(s) representing the track(s) on the upper line of the display and set to M. To transpose tracks during the step, select the character(s) representing the track(s) on the lower line of the display and set to T. Select and adjust the Transpose amount.</p>
-<p>• Press STEP=## once to select it, and again to return to the <span class="page-name">Song Step Editor page</span>.</p>
-<p>• Once the Sequence and number of Reps is correct, select STEP=## and press the <kbd class="button">Up Arrow</kbd> button to select the next step (<span class="lcd">STEP=*SONG-END*)</span> and edit that in the same way. For each successive Song Step, select the Sequence Name and use the <kbd class="button">Up/Down Arrow</kbd> buttons to choose a sequence; then set the number of repeats, then proceed to the next step.</p>
-<p>• There is always one final step which reads <span class="lcd">SEQ=*SONG-END*)</span> after the last defined step in the Song.</p>
+<ul>
+  <li>Select the number of Repeats (REPS=##), and adjust the number of times you want the sequence to play during the step. If you only want the sequence to play once during the song step, leave it set to 01.</li>
+  <li>Press TRACKS on the <span class="page-name">Edit Song page</span> to reveal the <span class="page-name">Mute/Transpose sub-page</span> shown above. If you want to mute any tracks for that step, select the character(s) representing the track(s) on the upper line of the display and set to M. To transpose tracks during the step, select the character(s) representing the track(s) on the lower line of the display and set to T. Select and adjust the Transpose amount.</li>
+  <li>Press STEP=## once to select it, and again to return to the <span class="page-name">Song Step Editor page</span>.</li>
+  <li>Once the Sequence and number of Reps is correct, select STEP=## and press the <kbd class="button">Up Arrow</kbd> button to select the next step (<span class="lcd">STEP=*SONG-END*)</span> and edit that in the same way. For each successive Song Step, select the Sequence Name and use the <kbd class="button">Up/Down Arrow</kbd> buttons to choose a sequence; then set the number of repeats, then proceed to the next step.</li>
+  <li>There is always one final step which reads <span class="lcd">SEQ=*SONG-END*)</span> after the last defined step in the Song.</li>
+</ul>
 <p>To go to a different Step in the Song:</p>
-<p>• Underline Step Number, and use the <kbd class="button">Up/Down Arrow</kbd> buttons to go to any step within the song. After you have finished editing the Song Steps (or at any point during the process, for that matter) you can go back through the song to check that all the steps are right.</p>
+<ul>
+  <li>Underline Step Number, and use the <kbd class="button">Up/Down Arrow</kbd> buttons to go to any step within the song. After you have finished editing the Song Steps (or at any point during the process, for that matter) you can go back through the song to check that all the steps are right.</li>
+</ul>
 <p>To change anything in an existing Song Step:</p>
-<p>• To change any of the variables (sequence name, number of reps, track mute or transpose status) within a Song Step which has already been created, simply go to that step, as described above, select the thing you want to edit and change it.</p>
+<ul>
+  <li>To change any of the variables (sequence name, number of reps, track mute or transpose status) within a Song Step which has already been created, simply go to that step, as described above, select the thing you want to edit and change it.</li>
+</ul>
 <p>To Insert a step anywhere in the song:</p>
-<p>• Press STEP=## and go to the step before where you want to insert the step. That is, if you want to insert a step between Step 2 and Step 3, go to Step 3.</p>
-<p>• Press INSERT. A Blank step (the display reads SEQ = -BLANK-) is created.</p>
-<p>• Select the Sequence Name field and use the <kbd class="button">Up/Down Arrow</kbd> buttons to select a sequence for the new Step.</p>
-<p>• Set the number of repeats and any mute or transpose settings for the step as shown earlier.</p>
+<ul>
+  <li>Press STEP=## and go to the step before where you want to insert the step. That is, if you want to insert a step between Step 2 and Step 3, go to Step 3.</li>
+  <li>Press INSERT. A Blank step (the display reads SEQ = -BLANK-) is created.</li>
+  <li>Select the Sequence Name field and use the <kbd class="button">Up/Down Arrow</kbd> buttons to select a sequence for the new Step.</li>
+  <li>Set the number of repeats and any mute or transpose settings for the step as shown earlier.</li>
+</ul>
 <p>To Delete a step anywhere in the song:</p>
-<p>• Press STEP=## and go to the step which you want to delete.</p>
-<p>• Press DELETE. The step is erased and all steps after it are moved down by one.</p>
+<ul>
+  <li>Press STEP=## and go to the step which you want to delete.</li>
+  <li>Press DELETE. The step is erased and all steps after it are moved down by one.</li>
+</ul>
 <p>When you are done editing the song, press <kbd class="button">Locate</kbd> (or any other sequencer page button) to exit.</p>
 <p>You can then press <kbd class="button">Play</kbd> to hear your new song.</p>
 <h3 id="song-tracks">Song Tracks</h3>
 <p>A Song on the TS-10 is much more than simply a group of sequences chained together. Once you have created a song and edited its steps, you can record another complete set of 12 song-length tracks. These Song Tracks are completely independent from the individual sequence tracks; each has its own sound and complete set of track parameters. The length of the song tracks is determined by the combined length of the song’s component sequences.</p>
 <p>Let’s suppose you have constructed a song. For our example, we will take three sequences, each using up to 12 tracks, and combined those sequences into a song:</p>
-<p>• Step 1 of the Song is Sequence 01 (a 4-bar Sequence) for 1 Repeat;</p>
-<p>• Step 2 is Sequence 02 (an 8-bar Sequence) for 1 Repeat; and</p>
-<p>• Step 3 is Sequence 03 (a 4-bar Sequence) for 1 Repeat.</p>
+<ul>
+  <li>Step 1 of the Song is Sequence 01 (a 4-bar Sequence) for 1 Repeat;</li>
+  <li>Step 2 is Sequence 02 (an 8-bar Sequence) for 1 Repeat; and</li>
+  <li>Step 3 is Sequence 03 (a 4-bar Sequence) for 1 Repeat.</li>
+</ul>
 <p>Your Song would look like this:</p>
 <h4 id="song" class="param-name">SONG</h4>
 <table class="param-cols cols-3"><tbody><tr><td>Song Step 1:</td><td>Song Step 2:</td><td>Song Step 3:</td></tr><tr><td>Sequence 01 (4 bars)</td><td>Sequence 02 (8 bars)</td><td>Sequence 03 (4 bars)</td></tr><tr><td>Sequence Track 1</td><td>Sequence Track 1</td><td>Sequence Track 1</td></tr><tr><td>Sequence Track 2</td><td>Sequence Track 2</td><td>Sequence Track 2</td></tr><tr><td>Sequence Track 3</td><td>Sequence Track 3</td><td>Sequence Track 3</td></tr><tr><td>Sequence Track 4</td><td>Sequence Track 4</td><td>Sequence Track 4</td></tr><tr><td>Sequence Track 5</td><td>Sequence Track 5</td><td>Sequence Track 5</td></tr><tr><td>Sequence Track 6</td><td>Sequence Track 6</td><td>Sequence Track 6</td></tr><tr><td>Sequence Track 7</td><td>Sequence Track 7</td><td>Sequence Track 7</td></tr><tr><td>Sequence Track 8</td><td>Sequence Track 8</td><td>Sequence Track 8</td></tr><tr><td>Sequence Track 9</td><td>Sequence Track 9</td><td>Sequence Track 9</td></tr><tr><td>Sequence Track 10</td><td>Sequence Track 10</td><td>Sequence Track 10</td></tr><tr><td>Sequence Track 11</td><td>Sequence Track 11</td><td>Sequence Track 11</td></tr><tr><td>Sequence Track 12</td><td>Sequence Track 12</td><td>Sequence Track 12</td></tr></tbody></table>
@@ -477,80 +593,102 @@
 <p>Song Track 11 (16 bars)</p>
 <p>Tempo Track or Song Track 12 (16 bars)</p>
 <p>Song tracks are treated like normal sequence tracks whose length is equivalent to the combined length of all the sequences which make up the song. The length of the song tracks is set according to the song length at the time the first song track is recorded. Changes made to the song structure after the first song track is recorded will not affect the length of the song tracks.</p>
-<p>• You can change the program on a song track using the <span class="function">Replace Track Sound</span> function, just as you would a sequence track.</p>
-<p>• You can enter record (by holding down <kbd class="button">Record</kbd> and pressing <kbd class="button">Play</kbd>) and record on any of the twelve song tracks. Follow the same procedures (as outlined earlier in this section) for recording song tracks like you would for sequence tracks. The only difference is that a song track is associated with the song itself and not with the individual sequences that comprise the song.</p>
-<p>• You can edit the song tracks using any of the Track Parameter functions. Selecting any Track Parameter when a song is selected will cause the current song track to be edited.</p>
-<p>• You can use the Sequence Edit functions to edit the song tracks as a group, erasing them, adding and deleting bars, or copying the song tracks to another sequence. When a song is selected, the Sequence Edit functions will affect the song tracks, as if they were a sequence.</p>
-<p>• You can solo, mute, and adjust the mix of song tracks from the <span class="page-name">Mix/Pan page</span> as with sequence tracks.</p>
-<p>• You can “mix down” the volume and pan of song tracks over the length of the song (see the description on the following page).</p>
+<ul>
+  <li>You can change the program on a song track using the <span class="function">Replace Track Sound</span> function, just as you would a sequence track.</li>
+  <li>You can enter record (by holding down <kbd class="button">Record</kbd> and pressing <kbd class="button">Play</kbd>) and record on any of the twelve song tracks. Follow the same procedures (as outlined earlier in this section) for recording song tracks like you would for sequence tracks. The only difference is that a song track is associated with the song itself and not with the individual sequences that comprise the song.</li>
+  <li>You can edit the song tracks using any of the Track Parameter functions. Selecting any Track Parameter when a song is selected will cause the current song track to be edited.</li>
+  <li>You can use the Sequence Edit functions to edit the song tracks as a group, erasing them, adding and deleting bars, or copying the song tracks to another sequence. When a song is selected, the Sequence Edit functions will affect the song tracks, as if they were a sequence.</li>
+  <li>You can solo, mute, and adjust the mix of song tracks from the <span class="page-name">Mix/Pan page</span> as with sequence tracks.</li>
+  <li>You can “mix down” the volume and pan of song tracks over the length of the song (see the description on the following page).</li>
+</ul>
 <p>Viewing Sequence Tracks in Song Mode When a song is selected, what you see on the Seq/Song Tracks pages and the track parameter pages depends on the setting of the EDIT TRACKS parameter on the <span class="page-name">Sequencer Control page</span>.</p>
-<p>• When EDIT <span class="lcd">TRACKS=SONG</span>, the Seq/Song Tracks pages and the Track Parameter pages will show the song tracks. Any changes you make will affect the song tracks only.</p>
-<p>• When EDIT <span class="lcd">TRACKS=SEQ</span>, the Seq/Song Tracks pages and the Track Parameter pages will show the tracks for the individual sequences which make up the song steps. Any changes made to these tracks when a song is selected will not be remembered after the song step is done playing. To change anything about a sequence track you must first select the sequence and then change it there.</p>
+<ul>
+  <li>When EDIT <span class="lcd">TRACKS=SONG</span>, the Seq/Song Tracks pages and the Track Parameter pages will show the song tracks. Any changes you make will affect the song tracks only.</li>
+  <li>When EDIT <span class="lcd">TRACKS=SEQ</span>, the Seq/Song Tracks pages and the Track Parameter pages will show the tracks for the individual sequences which make up the song steps. Any changes made to these tracks when a song is selected will not be remembered after the song step is done playing. To change anything about a sequence track you must first select the sequence and then change it there.</li>
+</ul>
 <p>When a song is selected and <span class="lcd">EDIT-TRACKS=SEQ</span>, the LED’s above the <kbd class="button">Seq/Song Tracks 1-6</kbd> and <kbd class="button">7-12</kbd> buttons will flash to remind you that the track data is for the currently selected sequence in the song step and not the actual song tracks.</p>
 <aside class="tip"><p>There is a shortcut for toggling between EDIT TRACKS= SEQ and SONG — While on either of the Seq/Song Tracks pages, rapidly double-click the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button. This switches between the song tracks and the sequence tracks, just as if you had changed the setting of the EDIT TRACKS parameter. The LED above the tracks button flashes when you are looking at sequence tracks; it remains solidly lit when you are looking at song tracks.</p></aside>
 <p>Mixing Down Sequence and Song Tracks in Song Mode After you have created and edited a song, you can “mix down” the volume and pan of the sequence tracks that make up the song steps, and of the song tracks themselves. The mixdown process does not affect the data in the individual sequences that compose the song steps; it creates a song-length Mixdown Track (which is actually a part of the song track) on which you can record mix and pan changes which will affect the sequence and/or song tracks over the course of the entire song. You can use this function to fine-tune the dynamics of certain tracks during part of a song, or to simply fade them out at the end of the song.</p>
 <h3 id="to-record-mix-or-pan-changes-to-sequence-tracks-in-a-song">To Record Mix or Pan Changes to Sequence Tracks in a Song:</h3>
-<p>• Select a song containing sequence tracks you want to mix down.</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the song track corresponding to the sequence track you want to mix down. For example, if you want to record volume or pan changes to Track 3 of each sequence throughout the song, you must make sure that song track 3 is selected on the <span class="page-name">Seq/Song Tracks 1-6 page</span>.</p>
-<p>• Press <kbd class="button">Sequencer Control</kbd>, and set the Record Mode parameter to RECORD <span class="param">MODE</span>= MIXDOWN.</p>
-<p>• Press <kbd class="button">Sequencer Control</kbd> again, set the Edit Tracks parameter to EDIT <span class="lcd">TRACKS=SEQ</span> (or, you can double-click the <kbd class="button">Seq/Song Tracks 1-6</kbd> button; see above).</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the sequence track you want to mix down.</p>
-<p>• Press <kbd class="button">Mix/Pan</kbd>. The display shows the mix levels for the tracks, with the current track underlined (or press <kbd class="button">Mix/Pan</kbd> again to record dynamic panning changes).</p>
-<p>• While holding down <kbd class="button">Record</kbd>, press <kbd class="button">Play</kbd>. The TS-10 enters Overdub.</p>
-<p>• Use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons mix the volume (or pan) of the selected track. All changes you make will be recorded.</p>
-<p>• At the end of the song, or when you press <kbd class="button">Stop/Continue</kbd>, the <span class="page-name">Audition Play/Keep page</span> appears. Here you can audition the changes before deciding whether to keep the new or the original track.</p>
-<p>• To mix another track, press <kbd class="button">Sequencer Control</kbd> twice and set the Edit Tracks parameter to EDIT <span class="lcd">TRACKS=SONG</span>; press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select a different track; then set the Edit Tracks parameter back to EDIT <span class="lcd">TRACKS=SEQ</span>. Now press <kbd class="button">Mix/Pan</kbd> and repeat the procedure.</p>
+<ul>
+  <li>Select a song containing sequence tracks you want to mix down.</li>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the song track corresponding to the sequence track you want to mix down. For example, if you want to record volume or pan changes to Track 3 of each sequence throughout the song, you must make sure that song track 3 is selected on the <span class="page-name">Seq/Song Tracks 1-6 page</span>.</li>
+  <li>Press <kbd class="button">Sequencer Control</kbd>, and set the Record Mode parameter to RECORD <span class="param">MODE</span>= MIXDOWN.</li>
+  <li>Press <kbd class="button">Sequencer Control</kbd> again, set the Edit Tracks parameter to EDIT <span class="lcd">TRACKS=SEQ</span> (or, you can double-click the <kbd class="button">Seq/Song Tracks 1-6</kbd> button; see above).</li>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the sequence track you want to mix down.</li>
+  <li>Press <kbd class="button">Mix/Pan</kbd>. The display shows the mix levels for the tracks, with the current track underlined (or press <kbd class="button">Mix/Pan</kbd> again to record dynamic panning changes).</li>
+  <li>While holding down <kbd class="button">Record</kbd>, press <kbd class="button">Play</kbd>. The TS-10 enters Overdub.</li>
+  <li>Use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons mix the volume (or pan) of the selected track. All changes you make will be recorded.</li>
+  <li>At the end of the song, or when you press <kbd class="button">Stop/Continue</kbd>, the <span class="page-name">Audition Play/Keep page</span> appears. Here you can audition the changes before deciding whether to keep the new or the original track.</li>
+  <li>To mix another track, press <kbd class="button">Sequencer Control</kbd> twice and set the Edit Tracks parameter to EDIT <span class="lcd">TRACKS=SONG</span>; press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select a different track; then set the Edit Tracks parameter back to EDIT <span class="lcd">TRACKS=SEQ</span>. Now press <kbd class="button">Mix/Pan</kbd> and repeat the procedure.</li>
+</ul>
 <h3 id="to-record-mix-or-pan-changes-to-a-song-track">To Record Mix or Pan Changes to a Song Track:</h3>
-<p>• Select a song containing song tracks you want to mix down.</p>
-<p>• Press <kbd class="button">Sequencer Control</kbd>, set the Record Mode parameter to RECORD <span class="param">MODE</span>= MIXDOWN.</p>
-<p>• Press <kbd class="button">Sequencer Control</kbd> again and set the Edit Tracks parameter to EDIT <span class="lcd">TRACKS=SONG</span>.</p>
+<ul>
+  <li>Select a song containing song tracks you want to mix down.</li>
+  <li>Press <kbd class="button">Sequencer Control</kbd>, set the Record Mode parameter to RECORD <span class="param">MODE</span>= MIXDOWN.</li>
+  <li>Press <kbd class="button">Sequencer Control</kbd> again and set the Edit Tracks parameter to EDIT <span class="lcd">TRACKS=SONG</span>.</li>
+</ul>
 <p>(Note that you can toggle between Song tracks and Sequence tracks in song mode by doubleclicking the <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> button.)</p>
-<p>• Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the song track you want to mix down.</p>
-<p>• Press <kbd class="button">Mix/Pan</kbd>. The display shows the volume levels for the tracks, with the current track underlined (or press <kbd class="button">Mix/Pan</kbd> again to record dynamic panning changes).</p>
-<p>• While holding down <kbd class="button">Record</kbd>, press <kbd class="button">Play</kbd>. The TS-10 enters Overdub.</p>
-<p>• Use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons mix the volume (or pan) of the selected track. All changes you make will be recorded.</p>
-<p>• At the end of the song, or when you press <kbd class="button">Stop/Continue</kbd>, the <span class="page-name">Audition Play/Keep page</span> appears. Here you can audition your changes before deciding which to keep.</p>
+<ul>
+  <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and select the song track you want to mix down.</li>
+  <li>Press <kbd class="button">Mix/Pan</kbd>. The display shows the volume levels for the tracks, with the current track underlined (or press <kbd class="button">Mix/Pan</kbd> again to record dynamic panning changes).</li>
+  <li>While holding down <kbd class="button">Record</kbd>, press <kbd class="button">Play</kbd>. The TS-10 enters Overdub.</li>
+  <li>Use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons mix the volume (or pan) of the selected track. All changes you make will be recorded.</li>
+  <li>At the end of the song, or when you press <kbd class="button">Stop/Continue</kbd>, the <span class="page-name">Audition Play/Keep page</span> appears. Here you can audition your changes before deciding which to keep.</li>
+</ul>
 <h3 id="important-2">Important:</h3>
 <p>The mixdown data is always recorded into the song track which is selected on the <span class="page-name">Seq/Song Tracks page</span>, whether you are mixing a sequence track or a song track. You must, therefore, select the appropriate-numbered song track (while EDIT <span class="lcd">TRACKS=SONG</span> on the <span class="page-name">Sequencer Control page</span>) before entering Record, even if you then switch to EDIT <span class="lcd">TRACKS=SEQ</span> to mix a Sequence track. For example, if you want to mix down Sequence track 3 over the length of the song, you must have song track 3 selected.</p>
 <aside class="tip"><p>In Song Mode, if you want to fade a sequence track in from a 000 value, you must first select the individual sequence and set the appropriate track to 000, otherwise when starting overdub, the sequence track will default to its original setting.</p></aside>
 <h3 id="a-few-notes-about-mixdown-mode">A Few Notes About Mixdown Mode</h3>
 <p>Mixdown volume and pan are recorded on the song track in a special form of ADD mode. When you record mixdown volume or pan, the information is added to the data in the song tracks. This means that:</p>
-<p>• If you have recorded Mixdown volume or pan into a track and want to erase and re-record it, you must first remove the original volume or pan using the Filter command on the <span class="page-name">Edit Track page</span>. Otherwise new mixdown information would be added to (and thus conflict with) the existing information.</p>
-<p>• If you erase the song track, the mixdown volume and pan data will be lost. Recording notes, controllers, etc. on the song track does not affect the mixdown information, but erasing the track (using the Erase command on the Edit Track) page will remove the mixdown data.</p>
+<ul>
+  <li>If you have recorded Mixdown volume or pan into a track and want to erase and re-record it, you must first remove the original volume or pan using the Filter command on the <span class="page-name">Edit Track page</span>. Otherwise new mixdown information would be added to (and thus conflict with) the existing information.</li>
+  <li>If you erase the song track, the mixdown volume and pan data will be lost. Recording notes, controllers, etc. on the song track does not affect the mixdown information, but erasing the track (using the Erase command on the Edit Track) page will remove the mixdown data.</li>
+</ul>
 <p>Whenever possible, you should use this function as the last step in the production chain, after you have finished changing the song length, recording and erasing song tracks, etc.</p>
 <aside class="note"><p>Note: The dynamic mixdown discussed here, which allows recording mix and pan changes over time, applies only to sequence and song tracks while in song mode. In sequence mode, the settings on the Mix and Pan pages are saved for each track of the sequence, but the setting will not change over the course of the sequence.</p></aside>
 <aside class="tip"><p>You can use the optional CVP-1 foot pedal to record volume changes into a sequence track while the sequence is selected. Just set to <span class="lcd">PEDAL=VOL</span> on the <span class="page-name">System page</span>, and then record the foot pedal changes in ADD mode. This will record Volume (MIDI controller #7) messages into the track which are separate from the mixdown volume described above.</p></aside>
 <h3 id="sequencer-tempo-track">Sequencer Tempo Track</h3>
 <p>As of software version 2.0, songs are created with Song Track 12 assigned to be a Tempo Track by default. This allows you to record continuous tempo changes to the sequences that make up a song. Here’s how:</p>
-<p>• First create a song by selecting a -BLANK- <kbd class="button">Seqs/Songs</kbd> location. Name the song if you wish.</p>
-<p>• Press the <kbd class="button">Edit Song</kbd> button, and press the soft button beneath EDIT STEPS.</p>
-<p>• Press the lower middle soft button to select the SEQ parameter, and use the Data Entry</p>
+<ul>
+  <li>First create a song by selecting a -BLANK- <kbd class="button">Seqs/Songs</kbd> location. Name the song if you wish.</li>
+  <li>Press the <kbd class="button">Edit Song</kbd> button, and press the soft button beneath EDIT STEPS.</li>
+  <li>Press the lower middle soft button to select the SEQ parameter, and use the Data Entry</li>
+</ul>
 <p>Controls to select a sequence for this song step. The song must be made of at least one sequence (with recorded data) in order for the Tempo Track feature to work.</p>
-<p>• Press the <kbd class="button">Seq/Song Tracks 7-12</kbd> button. Notice that Song Track 12 shows <span class="lcd">*TEMPO-TRK*</span> in the display.</p>
-<p>• Press the soft button underneath <span class="lcd">*TEMPO-TRK*</span> to select it. If you play the keyboard, you will hear nothing. That’s because a Tempo Track functions differently than tracks that contain sounds, and can only record and play tempo events.</p>
-<p>• Press the <kbd class="button">Sequencer Control</kbd> button. The display shows something like this:</p>
+<ul>
+  <li>Press the <kbd class="button">Seq/Song Tracks 7-12</kbd> button. Notice that Song Track 12 shows <span class="lcd">*TEMPO-TRK*</span> in the display.</li>
+  <li>Press the soft button underneath <span class="lcd">*TEMPO-TRK*</span> to select it. If you play the keyboard, you will hear nothing. That’s because a Tempo Track functions differently than tracks that contain sounds, and can only record and play tempo events.</li>
+  <li>Press the <kbd class="button">Sequencer Control</kbd> button. The display shows something like this:</li>
+</ul>
 <p>When the Tempo Track is selected on the <span class="page-name">Seq/Song Track 7-12 page</span>, the AUTOPUNCH switch (normally found in the bottom center of the <span class="page-name">Sequencer Control page</span>) is replaced with the ACTUAL tempo value. The Song TEMPO parameter allows you to increase or decrease the tempo(s) of the sequences that make up the song: When <span class="lcd">TEMPO=+00</span>, the ACTUAL value shows the actual tempo of the sequence corresponding to the song step that is currently playing.</p>
 <p>Raising or lowering the TEMPO value will re-compute the actual sequence tempo, and the actual value will show the sequence tempo biased by the TEMPO value. The TEMPO value range for songs is -64 to +63.</p>
-<p>• We recommend setting the RECORD-<span class="param">MODE</span> parameter to either REPLACE or ADD when recording a Tempo Track (LOOPED and MIXDOWN are not recommended)</p>
-<p>• Press the soft button beneath the TEMPO value.</p>
-<p>• While holding down the <kbd class="button">Record</kbd> button, press <kbd class="button">Play</kbd>.</p>
-<p>• At this point, you can use the Data Entry Controls to adjust the tempo. The sequencer will record the tempo changes as you make them. At the end of the song, or when you press <kbd class="button">Stop/Continue</kbd>, the <span class="page-name">Audition Play/Keep page</span> appears. Here you can audition the tempo changes before deciding whether to keep the new or original track.</p>
+<ul>
+  <li>We recommend setting the RECORD-<span class="param">MODE</span> parameter to either REPLACE or ADD when recording a Tempo Track (LOOPED and MIXDOWN are not recommended)</li>
+  <li>Press the soft button beneath the TEMPO value.</li>
+  <li>While holding down the <kbd class="button">Record</kbd> button, press <kbd class="button">Play</kbd>.</li>
+  <li>At this point, you can use the Data Entry Controls to adjust the tempo. The sequencer will record the tempo changes as you make them. At the end of the song, or when you press <kbd class="button">Stop/Continue</kbd>, the <span class="page-name">Audition Play/Keep page</span> appears. Here you can audition the tempo changes before deciding whether to keep the new or original track.</li>
+</ul>
 <aside class="note"><p>Note: Do not load any Seq/Songs that have been saved with Tempo Track events into a TS-10 using software earlier than version 2.0. The Tempo Track feature is incompatible with older software.</p></aside>
 <p>Removing the Song Tempo Track When the Tempo Track feature is used, you are limited to 23 Seq/Song Tracks. If you do not need to record continuous tempo changes, you can gain back the Song Track 12 for recording a sound, but you will lose any continuous tempo changes that you may have recorded.</p>
 <h3 id="to-remove-the-song-tempo-track">To Remove the Song Tempo Track:</h3>
-<p>• With a song selected, press the <kbd class="button">Seq/Song Tracks 7-12</kbd> button. Its LED should be solidly lit (showing the song tracks). If the Seq/Song Tracks LED is flashing (showing sequence tracks), double-click the button. The display should show <span class="lcd">*TEMPO-TRK*</span> in the Song Track 12 location (bottom right in the display).</p>
-<p>• Press the soft button beneath <span class="lcd">*TEMPO-TRK*</span> to select it.</p>
-<p>• Press the <kbd class="button">Edit Track</kbd> button, and select the ERASE command by pressing its soft button.</p>
-<p>• The display asks ERASE TRACK 12? Press the soft button above <span class="lcd">*YES*</span>. The display will return to the <span class="page-name">Seq/Song Tracks 7-12 page</span>, and the Tempo Track will now be -UNDEFINED-.</p>
-<p>• You can now select Song Track 12 to assign it the last selected sound. You can then use the <kbd class="button">Replace Track Sound</kbd> button, just as you would for any other track, to change the sound on Song Track 12.</p>
+<ul>
+  <li>With a song selected, press the <kbd class="button">Seq/Song Tracks 7-12</kbd> button. Its LED should be solidly lit (showing the song tracks). If the Seq/Song Tracks LED is flashing (showing sequence tracks), double-click the button. The display should show <span class="lcd">*TEMPO-TRK*</span> in the Song Track 12 location (bottom right in the display).</li>
+  <li>Press the soft button beneath <span class="lcd">*TEMPO-TRK*</span> to select it.</li>
+  <li>Press the <kbd class="button">Edit Track</kbd> button, and select the ERASE command by pressing its soft button.</li>
+  <li>The display asks ERASE TRACK 12? Press the soft button above <span class="lcd">*YES*</span>. The display will return to the <span class="page-name">Seq/Song Tracks 7-12 page</span>, and the Tempo Track will now be -UNDEFINED-.</li>
+  <li>You can now select Song Track 12 to assign it the last selected sound. You can then use the <kbd class="button">Replace Track Sound</kbd> button, just as you would for any other track, to change the sound on Song Track 12.</li>
+</ul>
 <p>If you change your mind, you can use the ADD-TEMPO-TRK command on the <span class="page-name">Edit Song page</span> to regain the Song Tempo Track feature. See <a class="refer-to" href="11-seq-params-edit.html#section-11-sequencer-parameters-edit">Section 11 — Sequencer Parameters</a> for more about the ADD-TEMPO-TRK feature.</p>
 <p>Tempo Track  Edit Functions The following Edit Track commands will function normally when a Tempo Track is selected:</p>
-<p>• SHIFT — causes the tempo changes to move ahead or back in time by a specified number of clocks.</p>
-<p>• ERASE — is used to erase a Tempo Track, and convert it into a normal song track.</p>
-<p>• COPY — can be used to copy a Tempo Track from one song to another song. However, you can only copy a Tempo Track to another Tempo Track. If you try to copy a Tempo Track to a different sequence or song track, the following error message will be displayed:</p>
-<p>• EVENT-LIST — allows you to individually edit each Tempo Track event. For this function, Tempo Track events appear as TMP (see below).</p>
-<p>• FILTER — can be used to selectively remove Tempo Track events.</p>
-<p>• MERGE — functions in a similar way to the COPY command; you can only merge a Tempo Track to another Tempo Track.</p>
+<ul>
+  <li>SHIFT — causes the tempo changes to move ahead or back in time by a specified number of clocks.</li>
+  <li>ERASE — is used to erase a Tempo Track, and convert it into a normal song track.</li>
+  <li>COPY — can be used to copy a Tempo Track from one song to another song. However, you can only copy a Tempo Track to another Tempo Track. If you try to copy a Tempo Track to a different sequence or song track, the following error message will be displayed:</li>
+  <li>EVENT-LIST — allows you to individually edit each Tempo Track event. For this function, Tempo Track events appear as TMP (see below).</li>
+  <li>FILTER — can be used to selectively remove Tempo Track events.</li>
+  <li>MERGE — functions in a similar way to the COPY command; you can only merge a Tempo Track to another Tempo Track.</li>
+</ul>
 <aside class="note"><p>Note: The Edit Track QUANTIZE, <span class="param">TRANSPOSE</span>, and SCALE commands will not function when a Tempo Track is selected. The above error message will be displayed when a Tempo Track is selected and these commands are invoked.</p></aside>
 <p>Thinning Out Tempo Changes Using the Event Editor When you record Tempo changes with the Tempo Track feature, the Data Entry Controls will “scroll” through every value between where you start and where you want to end. For instance, if your song Tempo Track value starts at +00, at the bridge in your song (song step 3), and you want to slowly increase the tempo to +05, and then at the beginning of the second verse (song step 4) instantly return to +00, the Tempo Track events will scroll through all values between +05 and +00. These extra Tempo Track events can be eliminated using the Edit Track EVENT-LIST command. Here’s how:</p>
 <p>1) First create a song with at least four song steps, as explained later in this section.</p>
@@ -600,29 +738,35 @@
 <p>If external sync is being used (<span class="lcd">CLOCK=MIDI)</span>, recording begins with the first clock received after the MIDI Start command. If internal sync is selected (<span class="lcd">CLOCK=INT)</span>, then recording begins when the first note is received.</p>
 <aside class="note"><p>Note: With the SQX-70 installed, the sequencer can record over 97,00 notes. However the sequencer record buffer is of a limited size, and can only record 16, 00 notes at one time. As a result, you may see an OUT OF MEMORY message if you exceed the size of the record buffer. (this is most common in multi-track record). If this occurs, try editing the incoming data into several smaller sequences; then, once recorded into the TS-10 sequencer, append them together.</p></aside>
 <p>Basic Multi-track Recording from an External Sequencer The following procedure is the basic method for recording a multi-track sequence from an external sequencer into the TS-10.</p>
-<p>• Set <span class="lcd">MODE=MULTI</span> on <span class="page-name">MIDI Control page</span>.</p>
-<p>• Set <span class="lcd">CLOCK=MIDI</span> and <span class="lcd">REC-SOURCE=MULTI</span> on the <span class="page-name">Sequencer Control page</span>(s).</p>
-<p>• Disable count-off on both systems to avoid problems.</p>
-<p>• Disable sequence looping on the external sequencer.</p>
-<p>• Create a new sequence with the correct time signature.</p>
-<p>• Make sure that the external sequencer will send its track data on MIDI channels that the TS-10 is set up to receive (track MIDI channels 1..12 by default).</p>
-<p>• Make sure that the external sequencer will send program changes at the start of each track to automatically define the necessary tracks on the TS-10, or define them yourself on the TS-10 manually.</p>
-<p>• Press <kbd class="button">Record</kbd> to enter MIDI Record mode (MREC will be flashing indicating that the TS-10 is waiting for MIDI Start and Clock messages).</p>
-<p>• Start your external sequencer playing its sequence. When the external sequence stops, or when you press <kbd class="button">Stop</kbd> on the TS-10, the TS-10 will show “EDITING DATA...” for a time and then display the <span class="page-name">Locate page</span>.</p>
-<p>• Set <span class="lcd">CLOCK=INT</span> on the <span class="page-name">Sequencer Control page</span> and press <kbd class="button">Play</kbd> to hear what you have recorded. You may then decide that the results are satisfactory, or if not, you can try again or erase the sequence.</p>
+<ul>
+  <li>Set <span class="lcd">MODE=MULTI</span> on <span class="page-name">MIDI Control page</span>.</li>
+  <li>Set <span class="lcd">CLOCK=MIDI</span> and <span class="lcd">REC-SOURCE=MULTI</span> on the <span class="page-name">Sequencer Control page</span>(s).</li>
+  <li>Disable count-off on both systems to avoid problems.</li>
+  <li>Disable sequence looping on the external sequencer.</li>
+  <li>Create a new sequence with the correct time signature.</li>
+  <li>Make sure that the external sequencer will send its track data on MIDI channels that the TS-10 is set up to receive (track MIDI channels 1..12 by default).</li>
+  <li>Make sure that the external sequencer will send program changes at the start of each track to automatically define the necessary tracks on the TS-10, or define them yourself on the TS-10 manually.</li>
+  <li>Press <kbd class="button">Record</kbd> to enter MIDI Record mode (MREC will be flashing indicating that the TS-10 is waiting for MIDI Start and Clock messages).</li>
+  <li>Start your external sequencer playing its sequence. When the external sequence stops, or when you press <kbd class="button">Stop</kbd> on the TS-10, the TS-10 will show “EDITING DATA...” for a time and then display the <span class="page-name">Locate page</span>.</li>
+  <li>Set <span class="lcd">CLOCK=INT</span> on the <span class="page-name">Sequencer Control page</span> and press <kbd class="button">Play</kbd> to hear what you have recorded. You may then decide that the results are satisfactory, or if not, you can try again or erase the sequence.</li>
+</ul>
 <p>Recording into the Sequencer in a MIDI Loop Use the following basic procdure if you want to record into the TS-10’s sequencer from its own keyboardin a MIDI loop. You can record to a single track, or to multiple stacked tracks, depending on which tracks are selected, and how you set the REC-SOURCE parameter on the</p>
 <h3 id="sequencer-control-page"><span class="page-name">Sequencer Control page</span>:</h3>
-<p>• Set <span class="lcd">MIDI-TRK-NAMES=ON</span> on the <span class="page-name">System page</span>.</p>
-<p>• Set <span class="lcd">MODE=MULTI</span>, <span class="lcd">LOOP=ON</span>, <span class="param">START/STOP</span>=</p>
+<ul>
+  <li>Set <span class="lcd">MIDI-TRK-NAMES=ON</span> on the <span class="page-name">System page</span>.</li>
+  <li>Set <span class="lcd">MODE=MULTI</span>, <span class="lcd">LOOP=ON</span>, <span class="param">START/STOP</span>=</li>
+</ul>
 <h3 id="off-and-prog-chg">OFF and PROG-CHG=</h3>
 <p><span class="value">OFF</span> all on the MIDI Control pages.</p>
-<p>• Set <span class="lcd">REC-SOURCE=MIDI</span> (to record onto a single track with Audition) or <span class="lcd">REC-SOURCE=MULTI</span> (to record onto multiple stacked tracks with no Audition) on the <span class="page-name">Sequencer Control page</span>.</p>
-<p>• Enter <kbd class="button">Seqs/Songs</kbd> mode and create a new Sequence. Select and define all 12 tracks.</p>
-<p>• Set the Track STAT (Status) to MIDI-<span class="param">LOOP</span> for all 12 tracks.</p>
-<p>• Set each of the tracks to a discrete MIDI channel (we recommend assigning tracks 1-12 to MIDI channels 1-12 to avoid confusion).</p>
-<p>• Connect the MIDI Out jack of the TS-10 to the MIDI In jack of the TS-10 with a single MIDI cable.</p>
-<p>• Select or stack the track(s) that you want to record on. Playing the keyboard will transmit out the MIDI Out jack, back in the MIDI In jack, and will play the sounds that are assigned to the selected and stacked tracks.</p>
-<p>• Enter record as usual. If <span class="lcd">REC-SOURCE=MIDI</span>, data will only be recorded on the primary</p>
+<ul>
+  <li>Set <span class="lcd">REC-SOURCE=MIDI</span> (to record onto a single track with Audition) or <span class="lcd">REC-SOURCE=MULTI</span> (to record onto multiple stacked tracks with no Audition) on the <span class="page-name">Sequencer Control page</span>.</li>
+  <li>Enter <kbd class="button">Seqs/Songs</kbd> mode and create a new Sequence. Select and define all 12 tracks.</li>
+  <li>Set the Track STAT (Status) to MIDI-<span class="param">LOOP</span> for all 12 tracks.</li>
+  <li>Set each of the tracks to a discrete MIDI channel (we recommend assigning tracks 1-12 to MIDI channels 1-12 to avoid confusion).</li>
+  <li>Connect the MIDI Out jack of the TS-10 to the MIDI In jack of the TS-10 with a single MIDI cable.</li>
+  <li>Select or stack the track(s) that you want to record on. Playing the keyboard will transmit out the MIDI Out jack, back in the MIDI In jack, and will play the sounds that are assigned to the selected and stacked tracks.</li>
+  <li>Enter record as usual. If <span class="lcd">REC-SOURCE=MIDI</span>, data will only be recorded on the primary</li>
+</ul>
 <p>(solidly selected) track, and any stacked tracks will be de-selected after Audition. If <span class="lcd">REC-SOURCE=MULTI</span>, data wil be recorded on all selected and stacked tracks, but there will be no</p>
 <p>Audition.</p>
 <p>Using the <span class="function">Step Entry</span> Recorder All notes played and all control changes made in <span class="function">Step Entry</span> mode will always be recorded into the new track.</p>
@@ -636,19 +780,23 @@
 <p>Entering Audition Mode from <span class="function">Step Entry</span> As with the normal mode of recording, when you have completed recording a track in <span class="function">Step Entry</span> mode, either by pressing <kbd class="button">Stop/Continue</kbd> or by reaching the end of the track, you will enter Audition mode, which behaves as it always has.</p>
 <p>Entering <span class="function">Step Entry</span> Record after Locating or from Play You can use the <span class="page-name">Locate page</span> to get to the place in the track where you wish to begin <span class="function">Step Entry</span> recording, and then hold <kbd class="button">Record</kbd> and press <kbd class="button">Stop/Continue</kbd> to enter record at that point. You may also be in PLAY and press the <kbd class="button">Record</kbd> button at the point where you want to start <span class="function">Step Entry</span> recording. Note that autopunch does not affect <span class="function">Step Entry</span> recording.</p>
 <p>About the SAVE CHANGES... Page Along with the notes, controllers, and program changes that are recorded on each track, there are many other parameters that are saved with each sequence or song. These are:</p>
-<p>• the name and the tempo of the sequence or song</p>
-<p>• the sound assigned to each track on the Seq/Song Tracks 1-6 and 7-12 pages, including Sampled Sounds and Surrogate Programs</p>
-<p>• all Track Parameters for each track of the sequence or song</p>
-<p>• which tracks are selected and layered on the Seq/Song Tracks 1-6 and 7-12 pages</p>
-<p>• The Track Command edit times</p>
-<p>• the setting of the <span class="param">LOOP</span> switch on the <span class="page-name">Sequencer Control page</span></p>
-<p>• the Sequence or Song effect algorithm and its settings</p>
-<p>• the setting of the CLICK parameter on the <span class="page-name">Click page</span></p>
-<p>• for Songs, the settings of the EDIT TRACKS and SONG STEP EFFECT parameters</p>
+<ul>
+  <li>the name and the tempo of the sequence or song</li>
+  <li>the sound assigned to each track on the Seq/Song Tracks 1-6 and 7-12 pages, including Sampled Sounds and Surrogate Programs</li>
+  <li>all Track Parameters for each track of the sequence or song</li>
+  <li>which tracks are selected and layered on the Seq/Song Tracks 1-6 and 7-12 pages</li>
+  <li>The Track Command edit times</li>
+  <li>the setting of the <span class="param">LOOP</span> switch on the <span class="page-name">Sequencer Control page</span></li>
+  <li>the Sequence or Song effect algorithm and its settings</li>
+  <li>the setting of the CLICK parameter on the <span class="page-name">Click page</span></li>
+  <li>for Songs, the settings of the EDIT TRACKS and SONG STEP EFFECT parameters</li>
+</ul>
 <p>Whenever you record any track of a sequence or song, all of these values are automatically saved — that is, they will be remembered by the TS-10 if you leave the sequence (by selecting another one) and return to it later. However, if the SAVE CHANGES parameter is set to ASK, and you edit any of the above values, and then select a new sequence or song before you record any new track data, the following message will appear:</p>
-<p>• Pressing <span class="lcd">*YES*</span> saves the sequence or song, with the current settings of all the parameters listed above, into sequencer memory.</p>
-<p>• Pressing <span class="lcd">*NO*</span> leaves the settings of the parameters listed above as they were when you last recorded a track, or last answered <span class="lcd">*YES*</span> when exiting the same sequence.</p>
-<p>• Pressing <span class="lcd">*EXIT*</span> aborts the decision, keeping you in the same sequence or song, with all of the settings for the above parameter unchanged, but still not permanent. This is useful if you’re not sure, and want to check before deciding.</p>
+<ul>
+  <li>Pressing <span class="lcd">*YES*</span> saves the sequence or song, with the current settings of all the parameters listed above, into sequencer memory.</li>
+  <li>Pressing <span class="lcd">*NO*</span> leaves the settings of the parameters listed above as they were when you last recorded a track, or last answered <span class="lcd">*YES*</span> when exiting the same sequence.</li>
+  <li>Pressing <span class="lcd">*EXIT*</span> aborts the decision, keeping you in the same sequence or song, with all of the settings for the above parameter unchanged, but still not permanent. This is useful if you’re not sure, and want to check before deciding.</li>
+</ul>
 <p>No matter which response you select, the recorded track data (notes, controllers and program changes) are always saved. Sometimes it’s hard to remember, when you get this page, exactly what you changed. As a general rule, if you are happy with the sequence or song as it is, answer <span class="lcd">*YES*</span>. If you have just been experimenting with different tempos, Programs, MIDI configurations, etc., and want to leave the sequence as it was before your experiments, answer <span class="lcd">*NO*</span>. If you’re not sure whether you want to save or discard your changes, and you want to reexamine the sequence or song, press <span class="lcd">*EXIT*</span>.</p>
 <aside class="tip"><p>There is a quick way to save any changes you make to a sequence or song. After you have changed any of the values listed above and want to save them, press the <kbd class="button">Seqs/Songs</kbd> button to return to the sequence bank page, and select the same sequence or song again. The display will ask “SAVE CHANGES TO &lt;SEQ NAME&gt;?” Answer <span class="lcd">*YES*</span> and the changes you made to the sequence or song will be saved.</p></aside>
 <p>As mentioned earlier, you can avoid being asked to save changes by setting the SAVE CHANGES parameter on the <span class="page-name">Sequencer Control page</span> to NO. For live performance, and other applications in which you want to experiment with tempo, track parameters, etc. without being bothered about saving the changes, this is the preferred setting. And if you are always willing to commit to your edits as you go, SAVE <span class="lcd">CHANGES=AUTO</span> is the preferred setting.</p>

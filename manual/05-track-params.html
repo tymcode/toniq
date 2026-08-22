@@ -27,7 +27,9 @@
     <p>This section offers detailed descriptions of the commands and parameters used in selecting, creating, and editing Performance Presets as well as sequencer tracks. For an overview of the concepts involved, refer to <a class="refer-to" href="04-presets.html#section-4-understanding-presets">Section 4 — Understanding Presets</a>.</p>
 <p>The default settings for several of the Track Parameters are stored with Programs. These default settings are installed whenever a Program is put on the Track. Editing these values at the track level will not edit the default settings stored with the program. If you want to edit the valuesthat are stored with a Program, they are available on the first sub-page of the <span class="page-name">Program Control page</span>.</p>
 <p>Unless otherwise noted in the detailed descriptions which follow, use the <kbd class="button">Up/Down Arrow</kbd> buttons or the <kbd class="button">Data Entry Slider</kbd> to adjust the value of the parameter.</p>
-<p>• Press the <kbd class="button">Mix/Pan</kbd> button to get to the <span class="page-name">Mix page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Mix/Pan</kbd> button to get to the <span class="page-name">Mix page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -61,7 +63,9 @@
 <h4 id="mix-page" class="param-name"><span class="param">Mix Page</span><span class="range">Range: 000 to 127</span></h4>
 <p>The <span class="page-name">Mix Page</span> enables you to make volume changes to the individual tracks, allowing you to balance the TS-10 sounds and/or control the volume of external MIDI devices. In sequencer mode, the <span class="page-name">MIX page</span> has a special function which allows you to click or double-click on specific tracks to mute or solo them during playback of sequences or songs.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">VOICE-OFF</span>, or <span class="lcd">LOCAL-OFF</span> will send a MIDI Volume Change message (controller 7) with the indicated value whenever this parameter is edited. Sequencer and preset tracks will also send the current volume for each track when a sequence or preset is selected.</p>
-<p>• Press the <kbd class="button">Mix/Pan</kbd> button again to get to the <span class="page-name">Pan page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Mix/Pan</kbd> button again to get to the <span class="page-name">Pan page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -97,7 +101,9 @@
 <p>Press the soft button underneath the <span class="param">PAN</span> value again to select either <span class="value">STEREO</span> or <span class="lcd">-MONO-</span>.</p>
 <p>When <span class="lcd">-MONO-</span> is selected, it will override the settings originally programmed on the <span class="page-name">Output page</span> and force ALL of the voices of the sound to the new pan location. <span class="lcd">-MONO-</span> is the optimal setting when using parallel effects, because it allows for discrete routing into the two components of the FX-1 effect. When this is set to <span class="value">STEREO</span>, and the <span class="param">PAN</span> is set to +00, the voices of a sound are panned according to the settings originally programmed on the <span class="page-name">Output page</span>.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 10) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected.</p>
-<p>• Press the <kbd class="button">Attack/Release</kbd> button to get to the <span class="page-name">Attack page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Attack/Release</kbd> button to get to the <span class="page-name">Attack page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -134,7 +140,9 @@
 <p>The current value of Attack is saved with the sound whenever a sound is written, and is restored whenever the sound is selected or placed on a track.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 73) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected.</p>
 <p>The default value of Attack is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>. This parameter does not affect Sampled Sounds.</p>
-<p>• Press the <kbd class="button">Attack/Release</kbd> button again to get to the <span class="page-name">Release page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Attack/Release</kbd> button again to get to the <span class="page-name">Release page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -170,7 +178,9 @@
 <p>In order for a Program to be controlled by this parameter, one or more of the envelopes in the Program must be programmed with the Envelope <span class="param">RELEASE</span> parameter set to a value with a star (* ) suffix. For example, if a voice’s ENV3 TIMES - <span class="lcd">RELEASE=50*</span> instead of simply 50, then the release time of that Envelope 3 can be adjusted from the Track Release parameter. It is typical to have at least Envelope 3 controlled by the parameter on this page.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 72) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected.</p>
 <p>The default value of Release is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>.</p>
-<p>• Press the <kbd class="button">Brightness/Timbre</kbd> button to get to the <span class="page-name">Brightness page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Brightness/Timbre</kbd> button to get to the <span class="page-name">Brightness page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -206,7 +216,9 @@
 <p>In order a Program to be controlled by this parameter, at least one of the two Filter <span class="param">CUTOFF</span> parameters for at least one voice in the Program must be programmed with the <span class="param">CUTOFF</span> parameter set to a value with a star ( * ) suffix. For example, if a voice’s FILTER1 <span class="lcd">CUTOFF=125*</span> instead of simply 125, then the brightness of that voice can be adjusted from the Track Brightness parameter.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 74) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected.</p>
 <p>The default value of Brightness is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>.</p>
-<p>• Press the <kbd class="button">Brightness/Timbre</kbd> button again to get to the <span class="page-name">Timbre page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Brightness/Timbre</kbd> button again to get to the <span class="page-name">Timbre page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -243,7 +255,9 @@
 <p>The Timbre parameter also controls the relative volume modulation amounts for each of the six program voices (assigned on the <span class="page-name">TIMBRE sub-page</span> found on the <span class="page-name">Program Control Page</span>). This allows you to determine how much louder or softer each voice will become as the Timbre modulation controller is increased or decreased.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 71) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected. This parameter does not affect Sampled Sounds.</p>
 <p>The default value of Timbre is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>.</p>
-<p>• Press the <kbd class="button">Brightness/Timbre</kbd> button a third time to get to the <span class="page-name">External Control page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Brightness/Timbre</kbd> button a third time to get to the <span class="page-name">External Control page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -279,7 +293,9 @@
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (on the controller number assigned to the <span class="param">XCTRL</span> parameter on the <span class="page-name">MIDI Control page</span>) with the indicated value whenever this parameter is edited.</p>
 <p>Preset tracks will also send this controller message when a preset is selected.</p>
 <p>The default value of <span class="param">XCTRL</span> is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>.</p>
-<p>• Press the <kbd class="button">Key Zone/Velocity</kbd> button to get to the <span class="page-name">Key Zone page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Key Zone/Velocity</kbd> button to get to the <span class="page-name">Key Zone page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -325,7 +341,9 @@
 <p><span class="page-name">Track page</span> (explained in <a class="refer-to" href="11-seq-params-edit.html#section-11-sequencer-parameters-edit">Section 11 — Sequencer Parameters</a>).</p>
 <h3 id="be-careful">Be Careful!</h3>
 <p>If the key zone is accidentally set to a range where the High Key is below the Low Key, then the track will not play. To correct this situation, you can re-program the zone manually or you can reselect the sound from the <span class="page-name">Sound bank page</span>, which will automatically reset the key zone to the sound’s original range.</p>
-<p>• Press the <kbd class="button">Key Zone/Velocity</kbd> button again to get to the <span class="page-name">Velocity Range page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Key Zone/Velocity</kbd> button again to get to the <span class="page-name">Velocity Range page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -362,7 +380,9 @@
 <p>In the example above, a soft velocity will only play the MEGASTRINGS sound, and a harder velocity will only play the TENOR-SAX sound. HYPER-<span class="param">LOOP</span> is not layered (underlined), so it will not be heard. If you could double-click on the soft button above HYPER-<span class="param">LOOP</span>, you would hear HYPER-<span class="param">LOOP</span> with both soft and hard velocity.</p>
 <aside class="note"><p>Note:    This parameter will not regulate what notes are recorded into the Sequencer, but will affect</p></aside>
 <p>Sequencer playback. VELR acts as a filter on Sequencer playback.</p>
-<p>• Press the <kbd class="button">Key Zone/Velocity</kbd> button again to get to the <span class="page-name">Velocity Sensitivity page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Key Zone/Velocity</kbd> button again to get to the <span class="page-name">Velocity Sensitivity page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -397,7 +417,9 @@
 <p>The <span class="page-name">Velocity Sensitivity page</span> controls a velocity offset for each Track. The value for this parameter is added to or subtracted from the velocity value generated by the keyboard. This velocity offset will affect both local voices and MIDI transmission/reception of velocity. The Velocity Sensitivity parameter is useful for balancing the velocity response of different Sounds, and for matching the velocity response of TS-10 sounds with external MIDI sound sources.</p>
 <aside class="note"><p>Note: The manner in which the Track VELS setting will affect MIDI transmission/reception of velocity is controlled by the <span class="param">VELS/XPOS</span> parameter on the <span class="page-name">MIDI Control page</span>.</p></aside>
 <table class="data-table"><thead><tr><th>Setting</th><th>Local Voices Affected</th><th>MIDI Reception Affected</th><th>MIDI Transmission Affected</th></tr></thead><tbody><tr><td><span class="param">SEND</span></td><td>Yes</td><td>No</td><td>Yes</td></tr><tr><td>RECV</td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td>BOTH</td><td>Yes</td><td>Yes</td><td>Yes</td></tr></tbody></table>
-<p>• Press the <kbd class="button">Tuning</kbd> button to get to the <span class="page-name">Transpose page</span>: <span class="page-name">Transpose Page</span>                               Octave Range: -4 to +4 octaves Semitone Range: -11 to +11 semitones</p>
+<ul>
+  <li>Press the <kbd class="button">Tuning</kbd> button to get to the <span class="page-name">Transpose page</span>: <span class="page-name">Transpose Page</span>                               Octave Range: -4 to +4 octaves Semitone Range: -11 to +11 semitones</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -433,7 +455,9 @@
 <p>Pressing the soft button for an already selected track will toggle the underline (showing the active field) between octave and semitone.</p>
 <aside class="tip"><p>It is possible to extend the transposition outside of the normal range by using the <kbd class="button">Up/Down Arrow</kbd> buttons to edit the semitone value to a maximum of + or - 9 octaves and 11 semitones, although this may cause unexpected results.</p></aside>
 <p>In Sequencer mode, the Transpose function provides a way to transpose tracks in real-time without changing the data in the track. However, you should take care never to transpose a track whose status is <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">VOICE-OFF</span>, or <span class="lcd">LOCAL-OFF</span> while holding keys down or while the sequencer is running. This could cause the key-up events to be missed by the receiving MIDI device, causing notes to “hang.”</p>
-<p>• Press the <kbd class="button">Tuning</kbd> button again to get to the <span class="page-name">Detune page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Tuning</kbd> button again to get to the <span class="page-name">Detune page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -466,7 +490,9 @@
 </figure>
 <h4 id="detune-page" class="param-name"><span class="param">Detune Page</span><span class="range">Range: -99 to +99</span></h4>
 <p>The detuning screen allows you to fine tune each track, without getting into more complex programming.</p>
-<p>• Press the <kbd class="button">Tuning</kbd> button a third time to get to the <span class="page-name">Rate page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Tuning</kbd> button a third time to get to the <span class="page-name">Rate page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -503,7 +529,9 @@
 <p>When one or more voices in a Program are assigned to play a Wave List in a HyperWave Program, the Track Rate parameter will modulate the DURATION and XFADE times relative to one another. This allows you to fine tune the rate of Wave List playback to conform to a particular musical context. It is often useful to disable the Track LFO Rate control (i.e.: turn off the star) in voices that are assigned to play a Wave List; this will avoid unwanted LFO Rate modulation when adjusting Wave List times.</p>
 <p>All tracks whose MIDI Status is set to <span class="lcd">SEND/RECV</span>, <span class="lcd">SEND/----</span>, <span class="lcd">LOCAL-OFF</span> or <span class="lcd">VOICE-OFF</span> will send a MIDI Continuous Controller message (controller 75) with the indicated value whenever this parameter is edited. Preset tracks will also send this controller message when a preset is selected.</p>
 <p>The default value of Rate is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>.</p>
-<p>• Press the <kbd class="button">Controllers On/Off</kbd> button to get to the <span class="page-name">Sustain page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Controllers On/Off</kbd> button to get to the <span class="page-name">Sustain page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -536,12 +564,16 @@
 </figure>
 <h4 id="sustain-page" class="param-name"><span class="param">Sustain Page</span><span class="range">Range: OFF or ON</span></h4>
 <p>The <span class="page-name">Sustain page</span> allows you to determine whether each of the individual tracks will respond to sustain controller events. The effect of all sustain events, whether from the SW-2 Foot Switch (when the corresponding foot switch is set to <span class="param">SUSTAIN</span> on the <span class="page-name">System page</span>) or sustain commands received from MIDI, is controlled by this switch.</p>
-<p>• ON — sustain events will affect all notes played within the active key zone for this track.</p>
-<p>• <span class="value">OFF</span> — sustain events will have no effect on the notes played on this track.</p>
+<ul>
+  <li>ON — sustain events will affect all notes played within the active key zone for this track.</li>
+  <li><span class="value">OFF</span> — sustain events will have no effect on the notes played on this track.</li>
+</ul>
 <p>For example, it may be useful to turn off sustain events on a track set up as a bass sound in a split keyboard configuration. This allows you to play staccato bass lines on the lower part of the keyboard while playing chords on the upper part of the keyboard and using the sustain pedal.</p>
 <p>The bass notes will not be affected by the sustain pedal because the track is set to <span class="value">OFF</span>, but the chords will sustain.</p>
 <p>Sustain Pedal Off events are always transmitted via MIDI (except if track status is set to ---/RECV or <span class="lcd">MIDI-OFF</span>) whenever the Sustain Pedal Enable switch setting on the track is changed. This is done to ensure that external MIDI devices are not left with the sustain pedal controller “stuck” in the held down state.</p>
-<p>• Press the <kbd class="button">Controllers On/Off</kbd> button again to get to the <span class="page-name">Sostenuto page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Controllers On/Off</kbd> button again to get to the <span class="page-name">Sostenuto page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -574,10 +606,14 @@
 </figure>
 <h4 id="sostenuto-page" class="param-name"><span class="param">Sostenuto Page</span><span class="range">Range: OFF or ON</span></h4>
 <p>The <span class="page-name">Sostenuto Page</span>, similar to the <span class="page-name">Sustain page</span>, allows you to determine whether each of the individual tracks will respond to sostenuto controller events. The effect of all sostenuto events, whether from the SW-2 Foot Switch (when the corresponding foot switch is set to <span class="param">SOSTENUTO</span> on the <span class="page-name">System page</span>) or sostenuto commands received from MIDI, is controlled by this switch.</p>
-<p>• ON — sostenuto events will affect all notes played within the active key zone for this track.</p>
-<p>• <span class="value">OFF</span> — sostenuto events will have no effect on the notes played on this track.</p>
+<ul>
+  <li>ON — sostenuto events will affect all notes played within the active key zone for this track.</li>
+  <li><span class="value">OFF</span> — sostenuto events will have no effect on the notes played on this track.</li>
+</ul>
 <p>Sostenuto Pedal Off events are always transmitted via MIDI (except if track status is set to <span class="lcd">----/RECV</span> or <span class="lcd">MIDI-OFF</span>) whenever the Sostenuto Pedal Enable switch setting on the track is changed. This is done to ensure that external MIDI devices are not left with the sostenuto pedal controller “stuck” in the held down state.</p>
-<p>• Press the <kbd class="button">Controllers On/Off</kbd> button a third time to get to the <span class="page-name">Pitch Bend page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Controllers On/Off</kbd> button a third time to get to the <span class="page-name">Pitch Bend page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -611,7 +647,9 @@
 <h4 id="pitch-bend-page" class="param-name"><span class="param">Pitch Bend Page</span><span class="range">Range: OFF or ON</span></h4>
 <p>The <span class="page-name">Pitch Bend Page</span> is used to determine which track(s) will respond to the Pitch Bend</p>
 <p>Controller.</p>
-<p>• Press the <kbd class="button">Controllers On/Off</kbd> button a fourth time to get to the <span class="page-name">Mod Wheel page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Controllers On/Off</kbd> button a fourth time to get to the <span class="page-name">Mod Wheel page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -644,7 +682,9 @@
 </figure>
 <h4 id="mod-wheel-page" class="param-name"><span class="param">Mod Wheel Page</span><span class="range">Range: OFF or ON</span></h4>
 <p>The <span class="page-name">Mod Wheel Page</span> is used to determine which track(s) will respond to the Modulation Wheel, when assigned as a controller for any of the modulatable parameters.</p>
-<p>• Press the <kbd class="button">Controllers On/Off</kbd> button a fifth time to get to the <span class="page-name">All-Notes-Off page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Controllers On/Off</kbd> button a fifth time to get to the <span class="page-name">All-Notes-Off page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -678,7 +718,9 @@
 <h4 id="all-notes-off-page" class="param-name"><span class="param">All-Notes-Off Page</span><span class="range">Range: OFF or ON</span></h4>
 <p>The All-Notes-Off Track parameter determines how the sequencer will handle note-off transmission. This parameter is visible on Preset Tracks, but does not really apply to Presets.</p>
 <p>When <span class="value">OFF</span>, the TS-10 will transmit key-up messages for every note currently sounding when the Sequencer <kbd class="button">Stop/Continue</kbd> button is pressed to stop the Sequencer. When ON, the TS-10 will send an ALL-NOTES-<span class="value">OFF</span> message in addition to all of the key-ups when the Sequencer <kbd class="button">Stop/Continue</kbd> button is pressed to stop the sequencer.</p>
-<p>• Press the <kbd class="button">Controllers On/Off</kbd> button a sixth time to get to the <span class="page-name">Reset Controllers page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Controllers On/Off</kbd> button a sixth time to get to the <span class="page-name">Reset Controllers page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -716,7 +758,9 @@
 <p>2) each time a Song Step ends</p>
 <p>3) each time a Song loops back to the beginning.</p>
 <p>This parameter is visible on Preset Tracks, but does not really apply to Presets.</p>
-<p>• Press the <kbd class="button">Performance Options</kbd> button to get to the <span class="page-name">Patch Select page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Performance Options</kbd> button to get to the <span class="page-name">Patch Select page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -758,7 +802,9 @@
 <p>Latching is more permanent than holding because once latched, the patch will remain assigned to the track even if the patch select buttons are touched again later.</p>
 <p>While the <span class="page-name">Patch Select page</span> is being displayed in either Preset or Sequencer modes, it is possible to instantly “latch” the current state of the patch select buttons into a track by pressing the soft button for the currently selected track. If neither of the patch select buttons are being held down when this function is performed, the parameter setting will revert to LIVE status. If you wish to set the status to 00, then use the <kbd class="button">Up/Down Arrow</kbd> buttons to change the fixed setting. To latch the patch select setting for a different track, first press the soft button to select the track, then press it again while holding one or both patch select buttons to latch the setting.</p>
 <p>For more information on programming the Patch Selects, refer to <a class="refer-to" href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>
-<p>• Press the <kbd class="button">Performance Options</kbd> button again to get to the <span class="page-name">Pressure page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Performance Options</kbd> button again to get to the <span class="page-name">Pressure page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -791,15 +837,21 @@
 </figure>
 <h4 id="pressure-page" class="param-name"><span class="param">Pressure Page</span><span class="range">Range: (described below)</span></h4>
 <p>The <span class="page-name">Pressure page</span> enables you to assign one of three pressure modes to each Track.</p>
-<p>• <span class="value">OFF</span> — Pressure information will not be transmitted via MIDI or recorded by the sequencer, nor will the sound assigned to the track respond to pressure locally.</p>
-<p>• KEY — This setting enables the track to send and receive via MIDI the most expressive kind of pressure — <dfn class="term">Poly-Key</dfn>™ pressure. ENSONIQ’s exclusive <dfn class="term">Poly-Key</dfn> pressure lets you add pressure modulation to each note independently. If you press down on any particular key within a chord, only that note will be affected by pressure — all others remain unaffected.</p>
+<ul>
+  <li><span class="value">OFF</span> — Pressure information will not be transmitted via MIDI or recorded by the sequencer, nor will the sound assigned to the track respond to pressure locally.</li>
+  <li>KEY — This setting enables the track to send and receive via MIDI the most expressive kind of pressure — <dfn class="term">Poly-Key</dfn>™ pressure. ENSONIQ’s exclusive <dfn class="term">Poly-Key</dfn> pressure lets you add pressure modulation to each note independently. If you press down on any particular key within a chord, only that note will be affected by pressure — all others remain unaffected.</li>
+</ul>
 <p>When a sequencer track is set to KEY, <dfn class="term">Poly-Key</dfn> pressure will be recorded into the track, even if the sound is not programmed to respond to it (see the note below about conserving sequencer memory).</p>
-<p>• CHAN — This enables the track to send and receive via MIDI the most common type of pressure — channel pressure. With channel pressure, after a note is played, pressing down harder on a key modulates every note currently playing. Like a mod wheel, channel pressure is “global,” it affects the entire keyboard when activated. When a sequencer track is set to CHAN, Channel pressure will be recorded into the track.</p>
+<ul>
+  <li>CHAN — This enables the track to send and receive via MIDI the most common type of pressure — channel pressure. With channel pressure, after a note is played, pressing down harder on a key modulates every note currently playing. Like a mod wheel, channel pressure is “global,” it affects the entire keyboard when activated. When a sequencer track is set to CHAN, Channel pressure will be recorded into the track.</li>
+</ul>
 <p>You should consult the MIDI implementation chart of the remote MIDI device you will be using in conjunction with the TS-10 to see which (if any) type of pressure it responds to and transmits.</p>
 <p>For best results, set the TS-10 Pressure parameter to match the type of pressure supported by the external MIDI device which will send to or receive from the track you are setting.</p>
 <p>The default value of Pressure Mode is stored with the Program, and is restored whenever the Program is selected or placed on a track. The default value can be edited on the <span class="page-name">Program Control page</span>.</p>
 <aside class="note"><p>Note: You should select Track <span class="lcd">PRES=OFF</span> whenever you don’t want or need pressure for a given sound, particularly when sequencing. Pressure data eats up sequencer memory rapidly, so whenever you record a track with a sound that doesn’t respond to pressure, set this parameter to <span class="value">OFF</span>. This will avoid wasting valuable sequencer memory, and will avoid clogging up the MIDI data stream with a lot of unnecessary pressure information. Existing pressure information can also be removed from a track using the Filter command on the <span class="page-name">Edit Track page</span>.</p></aside>
-<p>• Press the <kbd class="button">Performance Options</kbd> button again to get to the <span class="page-name">Pedal page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Performance Options</kbd> button again to get to the <span class="page-name">Pedal page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -832,7 +884,9 @@
 </figure>
 <h4 id="pedal-page" class="param-name"><span class="param">Pedal Page</span><span class="range">Range: (described below)</span></h4>
 <p>The Pedal parameter disables (when <span class="value">OFF</span>) or controls the polarity of the CV•Pedal, when <span class="lcd">PEDAL=VOL</span> on the <span class="page-name">SYSTEM page</span>. Inverted polarity can be used to crossfade between layered tracks with the volume pedal.</p>
-<p>• Press the <kbd class="button">Track/MIDI</kbd> button to get to the <span class="page-name">MIDI Status page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Track/MIDI</kbd> button to get to the <span class="page-name">MIDI Status page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -869,7 +923,9 @@
 <aside class="note"><p>Note: When <span class="lcd">MIDI-TRK-NAMES=OFF</span> on the <span class="page-name">System page</span>, Tracks with a MIDI Status of <span class="lcd">VOICE-OFF</span> or <span class="lcd">LOCAL-OFF</span> or MIDI-<span class="param">LOOP</span> will display *MIDI-CH-## in place of the name of the sound on the track.</p></aside>
 <p>This chart details the behavior of sequencer tracks for each MIDI status:</p>
 <table class="data-table"><thead><tr><th>Track Status</th><th><span class="lcd">SEND/RECV</span></th><th><span class="lcd">SEND/----</span></th><th><span class="lcd">----/RECV</span></th><th><span class="lcd">MIDI-OFF</span></th><th><span class="lcd">VOICE-OFF</span></th><th><span class="lcd">LOCAL-OFF</span></th><th>MIDI-<span class="param">LOOP</span></th></tr></thead><tbody><tr><td>Playing the keyboard plays local voices</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td><td>NO</td><td>NO</td></tr><tr><td>Playing the keyboard sends out MIDI</td><td>YES</td><td>YES</td><td>NO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>Playing the keyboard will be recorded by the sequencer</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>Incoming MIDI data plays local voices</td><td>YES</td><td>NO</td><td>YES</td><td>NO</td><td>NO</td><td>YES</td><td>YES</td></tr><tr><td>Incoming MIDI data will be recorded by the sequencer</td><td>YES</td><td>NO</td><td>YES</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>Playing the sequencer track (pressing <kbd class="button">Play</kbd>) plays local voices</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td><td>YES</td><td>NO</td></tr><tr><td>Playing the sequencer track sends out MIDI</td><td>YES</td><td>YES</td><td>NO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr></tbody></table>
-<p>• Press the <kbd class="button">Track/MIDI</kbd> button again to get to the <span class="page-name">MIDI Channel page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Track/MIDI</kbd> button again to get to the <span class="page-name">MIDI Channel page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -906,7 +962,9 @@
 <p>Receive Controls which channel an individual sequencer track will receive data on if <span class="lcd">MODE=MULTI</span> or MONO B mode is selected on the <span class="page-name">MIDI Control Page</span>. In <span class="value">POLY</span> or</p>
 <p>MONO  A modes, the TS-10 will receive only on the base MIDI channel no matter which track, program, or preset is selected. Individual preset tracks will not receive on different MIDI channels; for presets, this is a send-only function.</p>
 <aside class="note"><p>Note: If several tracks have the same MIDI channel, only the lowest-numbered track (1 to 12) will receive the incoming MIDI events. See <a class="refer-to" href="12-midi-applications.html#section-12-sequencing-midi-applications">Section 12 — Sequencing/MIDI Applications</a> for more information about <span class="value">MULTI</span> mode.</p></aside>
-<p>• Press the <kbd class="button">Track/MIDI</kbd> button a third time to get to the <span class="page-name">MIDI Program Number page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Track/MIDI</kbd> button a third time to get to the <span class="page-name">MIDI Program Number page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -944,7 +1002,9 @@
 <p>You can set this number to any other legal Program number if you wish to override the default value. This can be useful in presets and sequencer tracks, which will transmit a MIDI Program</p>
 <p>Change message for every MIDI-enabled track when selected.</p>
 <p>Entering Program Change Numbers Directly While this page is displayed (or from the Tracks 1-6 and 7-12 pages in sequencer mode), it is possible to send MIDI program change messages by holding the soft button nearest the track sound name and then entering the MIDI program change number using the numbered <kbd class="button">Bank</kbd> buttons. When you release the soft button, the program change will be sent, and the program number will be updated in the display. The range of acceptable numbers is 000 to 127. You do not have to enter leading zeroes (for example, to send 003, simply press 3 and release the soft button).</p>
-<p>• Press the <kbd class="button">Track/MIDI</kbd> button again to get to the <span class="page-name">MIDI Bank Select page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Track/MIDI</kbd> button again to get to the <span class="page-name">MIDI Bank Select page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -981,16 +1041,20 @@
 <p>The default Bank Select number that appears is usually the number of the internal TS-10 sound assigned to the track. This number is automatically set whenever a sound is selected from the Sound Bank pages. Assigning a new sound to a Preset track from <span class="function">Replace Track Sound</span> mode does not change the Bank Select number automatically, but sequencer tracks will acquire the new sound’s Bank Select number. When sequencer playback loops back to the beginning of a track, all Track Bank Select values will be restored to their stored values.</p>
 <p>You can set this number to any other legal Bank Select number if you wish to override the default value. This can be useful in presets and sequencer tracks, which will transmit a MIDI Bank Select message for every MIDI-enabled track when selected.</p>
 <p>Program Changes and Bank Selects in the TS-10 When sounds are assigned to a track from a <span class="page-name">Sound Bank page</span>, their Program Change number and Bank Select number are automatically set according to the following scheme:</p>
-<p>• User RAM programs (<dfn class="term">BankSet</dfn> U0) are numbered from 000 to 059; Bank Select is 000 LSB.</p>
-<p>• User RAM programs (<dfn class="term">BankSet</dfn> U1) are also numbered from 000 to 059; Bank Select is 001 LSB.</p>
-<p>• ROM programs (<dfn class="term">BankSet</dfn> R2) are numbered from 000 to 059; Bank Select is 002 LSB.</p>
-<p>• ROM programs (<dfn class="term">BankSet</dfn> R3) are also numbered from 000 to 059; Bank Select is 003 LSB.</p>
-<p>• ROM programs (<dfn class="term">BankSet</dfn> R4) are also numbered from 000 to 059; Bank Select is 004 LSB.</p>
-<p>• Sampled Sounds* (<dfn class="term">BankSet</dfn> S8) are numbered from 000 to 009; Bank Select is 008 LSB.</p>
-<p>• Sampled Sounds* (<dfn class="term">BankSet</dfn> S9) are also numbered from 000 to 009; Bank Select is 009 LSB.</p>
+<ul>
+  <li>User RAM programs (<dfn class="term">BankSet</dfn> U0) are numbered from 000 to 059; Bank Select is 000 LSB.</li>
+  <li>User RAM programs (<dfn class="term">BankSet</dfn> U1) are also numbered from 000 to 059; Bank Select is 001 LSB.</li>
+  <li>ROM programs (<dfn class="term">BankSet</dfn> R2) are numbered from 000 to 059; Bank Select is 002 LSB.</li>
+  <li>ROM programs (<dfn class="term">BankSet</dfn> R3) are also numbered from 000 to 059; Bank Select is 003 LSB.</li>
+  <li>ROM programs (<dfn class="term">BankSet</dfn> R4) are also numbered from 000 to 059; Bank Select is 004 LSB.</li>
+  <li>Sampled Sounds* (<dfn class="term">BankSet</dfn> S8) are numbered from 000 to 009; Bank Select is 008 LSB.</li>
+  <li>Sampled Sounds* (<dfn class="term">BankSet</dfn> S9) are also numbered from 000 to 009; Bank Select is 009 LSB.</li>
+</ul>
 <p>Refer to <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control Page</span> Parameters</a> for more information on how the TS-10 receives program changes.</p>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Track Effects</div></td></tr></table></aside>
-<p>• Press the <kbd class="button">Track Effects</kbd> button to get to the <span class="page-name">Effects Bus Routing page</span>:</p>
+<ul>
+  <li>Press the <kbd class="button">Track Effects</kbd> button to get to the <span class="page-name">Effects Bus Routing page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -1023,12 +1087,14 @@
 </figure>
 <h4 id="effects-bus-routing-page" class="param-name"><span class="param">Effects Bus Routing Page</span><span class="range">Range: VOICE, -FX1-, -FX2-, -DRY-, or -AUX-On</span></h4>
 <p>the <span class="page-name">Effects Bus Routing page</span>, you can re-route the voices for each track without editing the sound itself. This may be useful when two sounds are split or layered, and the effect is not appropriate for both. Also this is used to assign a track to the AUX Outputs for separate processing or mixing. The available Effects Bus Routing options are:</p>
-<p>• VOICE — uses the normal voice routing from the sound on the track</p>
-<p>• FX1 — forces all voices to FX1</p>
-<p>• FX2 — forces all voices to FX2</p>
-<p>• DRY — forces all voices in a track to the DRY bus</p>
-<p>• AUX — This bypasses the effects on all voices in a track, and allows you to process them separately by sending them directly to the AUX Outputs. Any track that has -AUX- selected will not be heard out of the Main outputs.</p>
-<p>• Press the <kbd class="button">Track Effects</kbd> button again to get to the <span class="page-name">Effects Controller page</span>:</p>
+<ul>
+  <li>VOICE — uses the normal voice routing from the sound on the track</li>
+  <li>FX1 — forces all voices to FX1</li>
+  <li>FX2 — forces all voices to FX2</li>
+  <li>DRY — forces all voices in a track to the DRY bus</li>
+  <li>AUX — This bypasses the effects on all voices in a track, and allows you to process them separately by sending them directly to the AUX Outputs. Any track that has -AUX- selected will not be heard out of the Main outputs.</li>
+  <li>Press the <kbd class="button">Track Effects</kbd> button again to get to the <span class="page-name">Effects Controller page</span>:</li>
+</ul>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -1061,7 +1127,9 @@
 </figure>
 <h4 id="effects-controller-page" class="param-name"><span class="param">Effects Controller Page</span><span class="range">Range: NO-CNTRL or CNTRL-FX</span></h4>
 <p>In effects which allow real-time control, it is sometimes desirable to limit which tracks send controller information to the effect. This is particularly true when using multiple MIDI input channels from a sequencer. If more than one track is set to <span class="param">CNTRL-FX</span>, “controller fights” can occur. If set to <span class="param">NO-CNTRL</span>, a track will remain routed to the effects, but its controllers (such as <span class="param">TIMBRE</span>, WHEEL, <span class="param">PEDAL</span>, etc.) will not modulate the effect.</p>
-<p>• Press the <kbd class="button">Track Effects</kbd> button again to get to the <span class="page-name">Effect Selector page</span>. Here you can redefine the Effect Algorithm for use in the preset, sequence, or song.</p>
+<ul>
+  <li>Press the <kbd class="button">Track Effects</kbd> button again to get to the <span class="page-name">Effect Selector page</span>. Here you can redefine the Effect Algorithm for use in the preset, sequence, or song.</li>
+</ul>
 <p>Continued presses of the <kbd class="button">Track Effects</kbd> button will scroll through the parameters related to the currently selected Effect Algorithm. These are identical to the effects parameters in the Programming section of the TS-10 (see <a class="refer-to" href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effects Parameters</a> for descriptions of these parameters).</p>
 <aside class="tip"><p>By double-clicking the <kbd class="button">Track Effects</kbd> button, you can instantly bypass the effect. The effect bus routing is temporarily set to <span class="lcd">*BYP*</span> on all tracks except those set to AUX. Only the dry signal will be heard. Double-clicking again will restore the previous effect bus routing settings.</p></aside>
   </article>

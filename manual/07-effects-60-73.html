@@ -41,8 +41,10 @@
 <p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
 <h4 id="speed" class="param-name"><span class="param">SPEED</span><span class="range">Range: SLOW or FAST</span></h4>
 <p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:</p>
-<p>• WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>(ure), KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than ROTOR <span class="param">FAST</span>.</p>
-<p>• KEYDN, PATCH, <span class="param">SUSTN</span>, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</p>
+<ul>
+  <li>WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>(ure), KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than ROTOR <span class="param">FAST</span>.</li>
+  <li>KEYDN, PATCH, <span class="param">SUSTN</span>, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</li>
+</ul>
 <h4 id="decay-time" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0</span></h4>
 <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
 <h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>

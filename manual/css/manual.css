@@ -221,6 +221,15 @@ body {
   margin: 0.7rem 0;
 }
 
+.manual ul:not(.tips) {
+  margin: 0.35rem 0 0.55rem;
+  padding-left: 1.65rem;
+}
+
+.manual ul:not(.tips) li {
+  margin: 0.08rem 0;
+}
+
 .manual a {
   color: var(--ensoniq);
 }
@@ -648,12 +657,13 @@ table.bullet-cols {
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
-  margin: 0.55rem 0 1rem;
+  margin: 0.35rem 0 0.7rem;
+  padding-left: 0.4rem;
 }
 
 table.bullet-cols td {
   vertical-align: top;
-  padding: 0.12rem 1.1rem 0.12rem 0;
+  padding: 0.04rem 1.1rem 0.04rem 0;
 }
 
 table.param-cols {
@@ -686,6 +696,49 @@ table.param-cols.cols-5 td {
 
 table.param-cols.cols-6 td {
   width: 16.66%;
+}
+
+table.wave-catalog {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0.85rem 0 1.2rem;
+  font-size: 0.82em;
+  border: 3px solid var(--ink);
+}
+
+table.wave-catalog > tbody > tr > td {
+  width: 20%;
+  vertical-align: top;
+  padding: 0.2rem;
+  border: 2px solid var(--ensoniq);
+}
+
+table.wave-catalog table.wave-group {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 0.4rem;
+  border: 1px solid var(--accent);
+}
+
+table.wave-catalog table.wave-group:last-child {
+  margin-bottom: 0;
+}
+
+table.wave-catalog table.wave-group th {
+  text-align: left;
+  font-family: var(--font-ui);
+  font-weight: 650;
+  padding: 0.12rem 0.3rem;
+  border: 1px solid var(--accent);
+  background: var(--note-bg);
+}
+
+table.wave-catalog table.wave-group td {
+  text-align: left;
+  padding: 0.02rem 0.3rem;
+  border: 1px dotted var(--rule);
+  white-space: nowrap;
 }
 
 table.data-table {
@@ -806,6 +859,18 @@ table.data-table.lookup th {
 }
 
 .memory-map .memory-col table.data-table {
+  margin: 0;
+}
+
+.twin-tables {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 1.2rem 0 1.4rem;
+  align-items: start;
+}
+
+.twin-tables table.data-table {
   margin: 0;
 }
 
@@ -930,6 +995,9 @@ dl.parameter dt {
     width: 7rem;
   }
   .memory-map {
+    grid-template-columns: 1fr;
+  }
+  .twin-tables {
     grid-template-columns: 1fr;
   }
   .preset-anatomy {

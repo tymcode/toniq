@@ -1476,16 +1476,13 @@ def tag_fx_bus_names(html_text: str) -> str:
 def render_voice_routing_block(
     bullets: list[str], terms: dict[str, list[str]], fname: str
 ) -> str:
-    lines: list[str] = []
-    for idx, bullet in enumerate(bullets):
+    items: list[str] = []
+    for bullet in bullets:
         tagged = tag_fx_bus_names(
-            apply_tags(bullet, terms, source_file=fname)
+            apply_tags(re.sub(r"^•\s*", "", bullet), terms, source_file=fname)
         )
-        if idx == 0:
-            lines.append(tagged)
-        else:
-            lines.append(f"<br>\n   {tagged}")
-    return f"<p>{''.join(lines)}</p>"
+        items.append(f"<li>{tagged}</li>")
+    return f"<ul>{''.join(items)}</ul>"
 
 
 def consume_voice_routing_block(
@@ -3057,6 +3054,32 @@ def consume_bullet_grid(
     if len(rows) < 2:
         return None, i
     return render_bullet_grid(rows, terms), j
+
+
+def consume_bullet_list(
+    lines: list[str],
+    i: int,
+    terms: dict[str, list[str]],
+    fname: str,
+) -> tuple[str | None, int]:
+    """Consecutive `•` lines as one <ul>, stopping before an inline-figure trigger."""
+    s = lines[i].strip()
+    if not s.startswith("•") or not is_bullet_item(s):
+        return None, i
+    items: list[str] = []
+    while i < len(lines):
+        s = lines[i].strip()
+        if not s.startswith("•") or not is_bullet_item(s):
+            break
+        body = re.sub(r"^•\s*", "", s)
+        items.append(f"<li>{apply_tags(body, terms, source_file=fname)}</li>")
+        if any(spec["after"].search(s) for spec in INLINE_FIGURES):
+            i += 1
+            break
+        i += 1
+    if not items:
+        return None, i
+    return f"<ul>{''.join(items)}</ul>", i
 
 
 def tidy_lookup_row(parts: list[str]) -> list[str]:
@@ -4653,6 +4676,13 @@ def to_html_body(
                 continue
         if is_delay_tempo_chart_intro(line):
             i = skip_delay_tempo_chart_section(lines, i)
+            continue
+        list_html, ni = consume_bullet_list(lines, i, terms, fname)
+        if list_html:
+            chunks.append(list_html)
+            last = ni - 1
+            fig = consume_inline_figure(lines[last], lines, last, chunks)
+            i = fig if fig is not None else ni
             continue
         tagged = tags(line)
         inline_spec = next(

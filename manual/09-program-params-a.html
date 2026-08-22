@@ -75,7 +75,7 @@
 <p>Selects a modulation source for LFO DEPTH from among the 15 available modulators.</p>
 <h4 id="depth-modamt" class="param-name"><span class="param">DEPTH MODAMT</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the assigned DEPTH modulator will affect the LFO DEPTH.</p>
-<p>The effect of DEPTH <span class="param">MODAMT</span> is added to the effect of the LFO DEPTH parameter.</p>
+<p>The effect of <span class="param">DEPTH MODAMT</span> is <em>added to</em> the effect of the LFO DEPTH parameter.</p>
 <p>Press the <kbd class="button">LFO</kbd> button again to access the second sub-page of the <span class="page-name">LFO page</span>. The display reads:</p>
 <figure class="vfd-unit has-page">
   
@@ -91,7 +91,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell">WAVESHAPE=TRIANGLE</td><td class="cell">RESTART-MODE=ON</td><td class="cell">&nbsp;</td></tr>
+      <tr><td class="cell page-label">LFO</td><td class="cell" colspan="3">WAVESHAPE=<span class="selected">TRIANGLE</span>  RESTART-MODE=ON</td></tr>
       <tr><td class="cell page-label">&nbsp;</td><td class="cell">PHASE=035</td><td class="cell">DELAY=25</td><td class="cell">NOISE-RATE=70</td></tr>
     </tbody>
     <tfoot>
@@ -109,13 +109,15 @@
 </figure>
 <h4 id="waveshape" class="param-name"><span class="param">WAVESHAPE</span><span class="range">Range: various (see below)</span></h4>
 <p>The Waveshape determines how the LFO signal will rise and fall. There are seven possible values:</p>
-<p>• TRIANGLE — the triangle wave is commonly used to modulate pitch to produce vibrato.</p>
-<p>• SINE — the sine wave is a pure fundamental frequency, more rounded in its peaks and valleys than the triangle wave.</p>
-<p>• SINE/TRI — a mixture of a sine and triangle wave, a sort of pointy sine wave.</p>
-<p>• POS/SINE — the POS/SINE is a positive-only sine wave, similar in application to the POS/TRI.</p>
-<p>• POS/TRI — the POS/TRI is a positive-only triangle wave useful for simulating vibrato on sounds like the guitar, where vibrato techniques are limited to bending the note up.</p>
-<p>• SAWTOOTH — the sawtooth wave is commonly used for special effects.</p>
-<p>• SQUARE — this positive-only square wave is useful for producing in-tune trill effects.</p>
+<ul>
+  <li>TRIANGLE — the triangle wave is commonly used to modulate pitch to produce vibrato.</li>
+  <li>SINE — the sine wave is a pure fundamental frequency, more rounded in its peaks and valleys than the triangle wave.</li>
+  <li>SINE/TRI — a mixture of a sine and triangle wave, a sort of pointy sine wave.</li>
+  <li>POS/SINE — the POS/SINE is a positive-only sine wave, similar in application to the POS/TRI.</li>
+  <li>POS/TRI — the POS/TRI is a positive-only triangle wave useful for simulating vibrato on sounds like the guitar, where vibrato techniques are limited to bending the note up.</li>
+  <li>SAWTOOTH — the sawtooth wave is commonly used for special effects.</li>
+  <li>SQUARE — this positive-only square wave is useful for producing in-tune trill effects.</li>
+</ul>
 <figure class="figure"><img src="images/lfo-waveshapes.png" alt="Seven LFO waveshapes: TRIANGLE, SINE, SINE/TRI, POS/SINE, POS/TRI, SAWTOOTH, and SQUARE"><figcaption>LFO waveshapes.</figcaption></figure>
 <h4 id="restart-mode" class="param-name"><span class="param">RESTART-MODE</span><span class="range">Range: OFF or ON</span></h4>
 <p>Determines whether the LFO will restart with each keystrike. When set to <span class="value">OFF</span>, the LFO will cycle continuously without resetting. When set to ON, the LFO waveform will always start at the starting phase, as determined by the PHASE parameter, each time a new key is struck.</p>
@@ -129,16 +131,20 @@
 <p>NOISE-RATE determines how frequently the random level will change. Low values will cause it to change very slowly; with high values the level will change quickly.</p>
 <h3 id="env1-env2-env3-ts-10-envelopes">ENV1, ENV2, ENV3 — TS-10 Envelopes</h3>
 <p>An Envelope is a shape, or contour, which we apply to a signal source to make it change over time. Each TS-10 voice has three envelopes. These envelopes are automatically routed to the pitch, filter frequency and amplitude of the voice, though ENV1 and ENV2 can also be assigned elsewhere, wherever a modulator is selectable.</p>
-<p>• ENV1 is routed to the pitch of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods page</span> which lets you adjust the amount by which ENV1 will modulate the voice’s pitch.</p>
-<p>• ENV2 is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the ENV2 parameter on the <span class="page-name">Filters page</span> controls the ENV2 depth.</p>
-<p>• ENV3 is routed to the amplitude (volume) of the voice. ENV3 always controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output page</span> will occur before ENV3 in the signal flow.</p>
+<ul>
+  <li>ENV1 is routed to the pitch of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods page</span> which lets you adjust the amount by which ENV1 will modulate the voice’s pitch.</li>
+  <li>ENV2 is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the ENV2 parameter on the <span class="page-name">Filters page</span> controls the ENV2 depth.</li>
+  <li>ENV3 is routed to the amplitude (volume) of the voice. ENV3 always controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output page</span> will occur before ENV3 in the signal flow.</li>
+</ul>
 <p>The TS-10 envelopes are descended from the venerable ADSR (attack, decay, sustain, release) envelope, but with many refinements. While the ADSR envelope gives you control over three time segments and one level, the TS-10 envelopes give you control over four levels and five time segments.</p>
 <p>The illustration below shows the make-up of a TS-10 envelope:</p>
 <figure class="figure"><img src="images/envelope-stages.png" alt="TS-10 envelope: ATTACK, DECAY 1–3, KEY HELD, and RELEASE with PEAK, BREAK1, BREAK2, and SUSTAIN levels"><figcaption>Make-up of a TS-10 envelope.</figcaption></figure>
 <p>Each envelope page consists of three sub-pages, which are reached by repeatedly pressing the <kbd class="button">Env 1</kbd>, <kbd class="button">Env 2</kbd>, or <kbd class="button">Env 3</kbd> button. For each envelope page:</p>
-<p>• The first sub-page contains the five time segments: <span class="param">ATTACK</span>, DECAY1, DECAY2, DECAY3 and <span class="param">RELEASE</span>.</p>
-<p>• The second sub-page contains the four levels: PEAK, BREAK1, BREAK2, <span class="param">SUSTAIN</span>; this sub- page also contains the VEL-LEV velocity-to-levels modulation amount.</p>
-<p>• The third sub-page contains the Envelope mode, keyboard scaling, and several parameters for shaping the velocity response of the envelope.</p>
+<ul>
+  <li>The first sub-page contains the five time segments: <span class="param">ATTACK</span>, DECAY1, DECAY2, DECAY3 and <span class="param">RELEASE</span>.</li>
+  <li>The second sub-page contains the four levels: PEAK, BREAK1, BREAK2, <span class="param">SUSTAIN</span>; this sub- page also contains the VEL-LEV velocity-to-levels modulation amount.</li>
+  <li>The third sub-page contains the Envelope mode, keyboard scaling, and several parameters for shaping the velocity response of the envelope.</li>
+</ul>
 <h2 id="env1-env2-and-env3-pages">ENV1, ENV2 and ENV3 Pages</h2>
 <p>The ENV1, ENV2 and ENV3 Pages, parameters and ranges are all the same except where indicated below. We will use ENV3 as our example, since its effect on the volume of the voice is immediately apparent.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button to get to the first <span class="page-name">ENV3 sub-page</span> containing the five TIME parameters:</p>
@@ -172,14 +178,18 @@
 <p>The Velocity level parameter will lower all envelope level settings with a softer keystrike. This means the settings you assign to PEAK, BREAK 1, and BREAK 2 and <span class="param">SUSTAIN</span> are maximum levels — the levels that will be reached with the hardest keystrike. The amount of VEL-LEV will determine how much those levels will be reduced as you play softer. With this parameter you can have continuous dynamic control over the five levels by varying how hard you play. The Velocity Curve (VEL-CURVE on next sub-page) controls the response of the VEL-LEV parameter, reshaping the way that velocity modulates the envelope levels. This provides further control over the velocity response of the envelope.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button again. This displays the final sub-page for ENV 3:</p>
 <h4 id="mode-env-1-and-env-2" class="param-name"><span class="param">MODE (ENV 1 and ENV 2)</span><span class="range">Range: NORMAL, FINISH, or REPEAT</span></h4>
-<p>• <span class="value">NORMAL</span> — The envelope plays through normally.</p>
-<p>• FINISH — The envelope runs its full cycle — finishes playing through all its stages — ignoring the key-up event. The envelope spends no time at the sustain stage. As soon as DECAY 3 is finished, instead of stopping at the sustain stage the envelope immediately goes into the release stage. This is good for percussive-type sounds where you want the envelope to be the same for every note, no matter how long the key is held down.</p>
-<p>• REPEAT — In this mode, at the end of the DECAY3 stage, instead of sustaining, the envelope goes immediately back to the beginning of the envelope and repeats. When the key is released, the envelope stops repeating, and moves into the release stage. This type of envelope can be used to create complex LFO-type effects. When ENV3 is set to <span class="lcd">MODE=REPEAT</span>, each time Envelope 3 restarts it will restart the Wave from its SAMPLE-START-OFFSET value.</p>
+<ul>
+  <li><span class="value">NORMAL</span> — The envelope plays through normally.</li>
+  <li>FINISH — The envelope runs its full cycle — finishes playing through all its stages — ignoring the key-up event. The envelope spends no time at the sustain stage. As soon as DECAY 3 is finished, instead of stopping at the sustain stage the envelope immediately goes into the release stage. This is good for percussive-type sounds where you want the envelope to be the same for every note, no matter how long the key is held down.</li>
+  <li>REPEAT — In this mode, at the end of the DECAY3 stage, instead of sustaining, the envelope goes immediately back to the beginning of the envelope and repeats. When the key is released, the envelope stops repeating, and moves into the release stage. This type of envelope can be used to create complex LFO-type effects. When ENV3 is set to <span class="lcd">MODE=REPEAT</span>, each time Envelope 3 restarts it will restart the Wave from its SAMPLE-START-OFFSET value.</li>
+</ul>
 <h4 id="mode-env-3" class="param-name"><span class="param">MODE (ENV 3)</span><span class="range">Range: NORMAL, FINISH, or REPEAT</span></h4>
 <p>Voice Triggering/Stealing Notes Since Env 3 controls the volume of the voice, there are a number of special considerations to be aware of when using the different envelope modes:</p>
-<p>• In <span class="value">NORMAL</span> mode, if you set a delay on the voice, and you release the key before the designated delay time elapses, the voice will not sound.</p>
-<p>• In FINISH mode, if you set a delay on the voice and you release the key before the designated delay time elapses, the note will sound anyway, and then envelope will run through its full cycle. The envelope finishes what you set it up to do.</p>
-<p>• In REPEAT mode, the envelope will repeatedly cycle through the PEAK and BREAK 1 and 2 LEVELS, using the <span class="param">ATTACK</span> and all three DECAY times, for as long as the key is held down.</p>
+<ul>
+  <li>In <span class="value">NORMAL</span> mode, if you set a delay on the voice, and you release the key before the designated delay time elapses, the voice will not sound.</li>
+  <li>In FINISH mode, if you set a delay on the voice and you release the key before the designated delay time elapses, the note will sound anyway, and then envelope will run through its full cycle. The envelope finishes what you set it up to do.</li>
+  <li>In REPEAT mode, the envelope will repeatedly cycle through the PEAK and BREAK 1 and 2 LEVELS, using the <span class="param">ATTACK</span> and all three DECAY times, for as long as the key is held down.</li>
+</ul>
 <p>When envelope gets to the <span class="param">SUSTAIN</span> level, it goes back to the INITIAL level. The TS-10 restarts the wave at its SAMPLE-START-OFFSET every time the envelope repeats.</p>
 <p>In order to maximize the use of the TS-10’s 32 voices, and to manage the “voice stealing” it is sometimes useful to understand when a given voice will be assigned and when it will be released, or “put back” into the pool for use by other sounds. This depends on a combination of envelope mode and the wave type.</p>
 <p>A looped (sustaining) wave will continue to use the voice until the envelope reaches zero. For a sustaining wave, when the Envelope Mode is Normal: 99 = Envelope</p>
@@ -212,12 +222,14 @@
 <p>Enables Glide (portamento) and several forms of monophonic voice assignment in each voice.</p>
 <p>There are six <span class="param">GLIDE</span> modes available:</p>
 <p>For monophonic voice assignment without glide, set GLIDEMODE to LEGATO, TRIGGER, or MINIMODE, and set <span class="lcd">TIME=0</span>.</p>
-<p>• NONE — Glide is off. This is normal polyphonic operation, with no portamento.</p>
-<p>• <span class="param">PEDAL</span> — Enables the sustain pedal to start polyphonic glide. In this mode, the glide and polyphony are controlled by the sustain pedal. When the pedal is up, there is no glide and the voice is fully polyphonic. When the sustain pedal is depressed, the glide is enabled, and the polyphony is limited to the number of notes being sounded at the moment. For example, with the pedal up play a three-note chord. Press the sustain pedal and lift your fingers off the keys (the three notes will sustain). Now press another key: one of these sustaining notes will be stolen and will glide to the new note. The envelopes and waves are retriggered, or restarted, each time there is a new key down. Holding a key down will prevent the note from being stolen. This allows controlled voice leading.</p>
-<p>• MONO — Similar to mono mode on old analog synths. The voice will play with one-note polyphony, and new notes will always glide from the previous note. The envelopes and waves are always retriggered, or restarted, each time there is a new key down.</p>
-<p>• LEGATO — Enables monophonic voice assignment, allowing only one note of polyphony to be active in the voice. If a key is depressed before another is released (i.e.: if you play legato), the voice will glide from the old note to the new one. If you play a key with no other keys down (i.e.: if you play staccato), the voice will not glide. The envelopes and waves are retriggered, or restarted, from the beginning each time there is a new key down.</p>
-<p>• TRIGGER — This mode plays monophonically, with the envelopes and waves retriggering, or restarting, each time there is a new key down. This mode works just like LEGATO mode, except that it has no “note memory”. It is ideal for adding monophonic piano “thuds” to piano sounds.</p>
-<p>• MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the <span class="param">PEDAL</span>, MONO, LEGATO or TRIGGER modes, the envelopes and waves are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</p>
+<ul>
+  <li>NONE — Glide is off. This is normal polyphonic operation, with no portamento.</li>
+  <li><span class="param">PEDAL</span> — Enables the sustain pedal to start polyphonic glide. In this mode, the glide and polyphony are controlled by the sustain pedal. When the pedal is up, there is no glide and the voice is fully polyphonic. When the sustain pedal is depressed, the glide is enabled, and the polyphony is limited to the number of notes being sounded at the moment. For example, with the pedal up play a three-note chord. Press the sustain pedal and lift your fingers off the keys (the three notes will sustain). Now press another key: one of these sustaining notes will be stolen and will glide to the new note. The envelopes and waves are retriggered, or restarted, each time there is a new key down. Holding a key down will prevent the note from being stolen. This allows controlled voice leading.</li>
+  <li>MONO — Similar to mono mode on old analog synths. The voice will play with one-note polyphony, and new notes will always glide from the previous note. The envelopes and waves are always retriggered, or restarted, each time there is a new key down.</li>
+  <li>LEGATO — Enables monophonic voice assignment, allowing only one note of polyphony to be active in the voice. If a key is depressed before another is released (i.e.: if you play legato), the voice will glide from the old note to the new one. If you play a key with no other keys down (i.e.: if you play staccato), the voice will not glide. The envelopes and waves are retriggered, or restarted, from the beginning each time there is a new key down.</li>
+  <li>TRIGGER — This mode plays monophonically, with the envelopes and waves retriggering, or restarting, each time there is a new key down. This mode works just like LEGATO mode, except that it has no “note memory”. It is ideal for adding monophonic piano “thuds” to piano sounds.</li>
+  <li>MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the <span class="param">PEDAL</span>, MONO, LEGATO or TRIGGER modes, the envelopes and waves are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</li>
+</ul>
 <aside class="note"><p>Note: MONO, LEGATO and MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p></aside>
 <table class="data-table" id="glide-modes"><caption>GLIDE MODES</caption><thead><tr><th><span class="param">MODE</span></th><th>Staccato Glide</th><th>Legato Glide</th><th>Legato Envelope Retrigger</th><th>Note Memory</th></tr></thead><tbody><tr><td><span class="param">PEDAL</span> (WITH <span class="param">PEDAL</span> DOWN)</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MONO</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>LEGATO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>TRIGGER</td><td>NO</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MINIMODE</td><td>NO</td><td>YES</td><td>NO</td><td>YES</td></tr></tbody></table>
 <h4 id="glidetime" class="param-name"><span class="param">GLIDETIME</span><span class="range">Range: 00 to 99</span></h4>
@@ -236,9 +248,11 @@
 <p>When you create a custom pitch-table, the TS-10 stores the pitch-table inside the program.</p>
 <p>Within the program, the custom pitch-table uses the space normally used to store the parameters for voices 5 and 6. Therefore, when there is a custom pitch-table in a program, voices 5 and 6 are not available. They are replaced on the <span class="page-name">Select Voice page</span> by the EDIT PITCH TABLE function.</p>
 <p>Of the remaining four voices, each individual voice can be assigned to use either the SYSTEM pitch-table, no pitch-table (ALL-C4), or the CUSTOM pitch-table that resides within the program.</p>
-<p>• SYSTEM — Uses whatever is selected as the system pitch-table on the <span class="page-name">System page</span>. Normally this is standard twelve-tone equal temperament tuning across the keyboard. However, a custom pitch-table can be copied into the system pitch-table for use by all sounds. The PITCH-TABLE parameter on the <span class="page-name">System page</span> determines what the System pitch-table will be.</p>
-<p>• ALL-C4 — No pitch tracking — the same pitch (C4) plays across the keyboard.</p>
-<p>• CUSTOM — User definable pitch-table. This option is only available if a custom pitch-table has been created in the program.</p>
+<ul>
+  <li>SYSTEM — Uses whatever is selected as the system pitch-table on the <span class="page-name">System page</span>. Normally this is standard twelve-tone equal temperament tuning across the keyboard. However, a custom pitch-table can be copied into the system pitch-table for use by all sounds. The PITCH-TABLE parameter on the <span class="page-name">System page</span> determines what the System pitch-table will be.</li>
+  <li>ALL-C4 — No pitch tracking — the same pitch (C4) plays across the keyboard.</li>
+  <li>CUSTOM — User definable pitch-table. This option is only available if a custom pitch-table has been created in the program.</li>
+</ul>
 <h4 id="env1" class="param-name"><span class="param">ENV1</span><span class="range">Range: -99 to +99</span></h4>
 <p>This hard-wired modulation routing determines the amount by which Envelope 1 will affect pitch. Unlike applying ENV-1 as a pitch modulator with the generic pitch <span class="param">MODSRC</span> parameter, the hard-wired ENV1 parameter forces Envelope 1 to always sustain at the manual pitch setting on the <span class="page-name">Pitch page</span>. The Envelope 1 <span class="param">SUSTAIN</span> level no longer controls the pitch at which Envelope 1 will sustain. Instead, it becomes an &quot;equator-shift&quot; value, determining which Envelope 1 level values will cause the pitch to rise above the manual pitch setting and which level values will drive it below. Envelope 1 level values equal to the <span class="param">SUSTAIN</span> level value will sound at the manual setting. Higher level values will shift the pitch upward from the manual pitch setting, and lower values will shift the pitch downward. This feature allows for the creation of bidirectional pitch envelope shapes, while conveniently ensuring that voices will always sustain at the manual pitch setting, without the need to offset the manual pitch setting on the <span class="page-name">Pitch page</span>.</p>
 <h4 id="lfo" class="param-name"><span class="param">LFO</span><span class="range">Range: -99 to +99</span></h4>
@@ -424,8 +438,10 @@
 </figure>
 <h4 id="destination-bus" class="param-name"><span class="param">DESTINATION-BUS</span><span class="range">Range: FX1, FX2, DRY, or AUX</span></h4>
 <p>Each voice within a sound can be routed to one of four stereo “busses:”</p>
-<p>• FX1, FX2, and DRY feed the main stereo outputs of the TS-10.</p>
-<p>• AUX sends the voice directly to the AUX Outputs. Note that voices sent to the AUX Outputs are always dry; that is, they bypass the effects processor.</p>
+<ul>
+  <li>FX1, FX2, and DRY feed the main stereo outputs of the TS-10.</li>
+  <li>AUX sends the voice directly to the AUX Outputs. Note that voices sent to the AUX Outputs are always dry; that is, they bypass the effects processor.</li>
+</ul>
 <p>The diagram below shows a common routing of the signals for each bus. See the sections on “Effects” for more on programming specific effects.</p>
 <figure class="figure"><img src="images/destination-bus.png" alt="Voice volume and pan feeding DESTINATION-BUS FX1, FX2, DRY, or AUX to Main or Aux outputs"><figcaption>Destination-bus signal routing.</figcaption></figure>
 <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -64 to +63</span></h4>

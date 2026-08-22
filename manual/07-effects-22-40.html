@@ -308,9 +308,11 @@
 <h2 id="36-nonlinear-reverb-2" class="algo">36 NONLINEAR REVERB 2</h2>
 <h2 id="37-nonlinear-reverb-3" class="algo">37 NONLINEAR REVERB 3</h2>
 <p>Non Linear Reverbs can be used to obtain blooming reverb, gated reverb, reverse reverb and early reflections. In general, they do not produce an exponentially decaying reverb. Unlike the hall, room, and plate reverbs, NONLINEAR REVERB 1, 2, and 3 pass the input signal through the reverb diffusers only once. For this reason the reverb diffusers are called Density, to distinguish them from the other reverb diffusers (called Definition). Density controls the amount of echo density, as opposed to the rate of increase of echo density. Other reverbs give limited control of early reflections. The Non Linear reverbs deliberately impose a coloration on the resulting sound.</p>
-<p>• NONLINEAR REVERB 1 is optimized for shorter duration effects (approx. 0.5 sec.)</p>
-<p>• NONLINEAR REVERB 2 offers approx. a 1.5 sec. duration</p>
-<p>• NONLINEAR REVERB 3 is sonically similar to NONLINEAR REVERB 1, but there is less stereo movement, making it better suited for drum tracks</p>
+<ul>
+  <li>NONLINEAR REVERB 1 is optimized for shorter duration effects (approx. 0.5 sec.)</li>
+  <li>NONLINEAR REVERB 2 offers approx. a 1.5 sec. duration</li>
+  <li>NONLINEAR REVERB 3 is sonically similar to NONLINEAR REVERB 1, but there is less stereo movement, making it better suited for drum tracks</li>
+</ul>
 <figure class="figure"><img src="images/nonlinear-reverb-routing.png" alt="Non Linear Reverb signal routing: FX-1 and FX-2 left/right inputs through Diffuser, Echo Time taps, Density, cross-mix, LPF, and Main Outputs L/R"><figcaption>Non Linear Reverb signal routing.</figcaption></figure>
 <p>The signal goes directly through a diffuser which smears the signal. The signal is then routed to a decay diffuser (Density), and is diffused over a period of time. Within the density the signal goes through a high-frequency damper. The signal is then routed to the output. After the density, the signal passes through a low pass filter. There are two echo times between the diffuser and the density. There is also an external dry signal (not shown) that goes directly from the input to the Main Output (<span class="param">DRY</span>). The FX-1 and <span class="param">FX-2</span> <span class="param">MIX</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <table class="param-cols cols-3"><tbody><tr><td>ENVELOPE <span class="param">LEVEL</span> 1</td><td>ENVELOPE <span class="param">LEVEL</span> 2</td><td>ENVELOPE <span class="param">LEVEL</span> 9</td></tr></tbody></table>

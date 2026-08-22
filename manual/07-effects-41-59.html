@@ -157,9 +157,9 @@
 <p>Experiment with different levels between the diffuser parameters to find the settings that are right for your source. We recommend settings of 50 for starters.</p>
 <h2 id="47-ddl-chorus-revrb-1" class="algo">47 DDL- -CHORUS + REVRB 1</h2>
 <p>This effect algorithm is a serial version of the DDL+CHORUS+REV parallel effect, combining a digital delay with a chorus and a plate reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<p>• Voices assigned to <span class="param">FX1</span> are sent to Effect A (DDL)<br>
-   • The output of Effect A is sent to Effect B (CHORUS)<br>
-   • Voices assigned to <span class="param">FX2</span> are sent to a plate reverb (REV)</p>
+<ul>
+  <li>Voices assigned to <span class="param">FX1</span> are sent to Effect A (DDL)</li><li>The output of Effect A is sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to a plate reverb (REV)</li>
+</ul>
 <h4 id="sends-a-b" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to 99</span></h4>
 <p>Controls the amount of Effect A (DDL) being sent into Effect B (the chorus). A setting of 99 would yield a serial connection between Effect A and the chorus for voices sent to FX1 and panned hard left (on the <span class="page-name">Output page</span>). A setting of 00 would offer no chorusing.</p>
 <h4 id="b-revrb" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
@@ -232,9 +232,9 @@
 <p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
 <h2 id="49-eq-chorus-reverb" class="algo">49 EQ- -CHORUS + REVERB</h2>
 <p>This algorithm offers a serial version of the PARAM EQ+CHORUS+REV parallel effect. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<p>• Voices assigned to <span class="param">FX1</span> are sent to Effect A (PARAM EQ)<br>
-   • The output of Effect A is sent to Effect B (CHORUS)<br>
-   • Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</p>
+<ul>
+  <li>Voices assigned to <span class="param">FX1</span> are sent to Effect A (PARAM EQ)</li><li>The output of Effect A is sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+</ul>
 <p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#47-ddl-chorus-revrb-1">DDL- -CHORUS + REVRB 1</a> algorithm found earlier in this section.</p>
 <h4 id="input" class="param-name"><span class="param">INPUT</span><span class="range">Range: 00 to 99</span></h4>
 <p>Allows you to adjust the input level trim to the EQs to eliminate the possibility of clipping boosted signals.</p>
@@ -473,9 +473,11 @@
 <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
 <h2 id="57-pitch-shifter" class="algo">57 PITCH SHIFTER</h2>
 <p>The Pitch Shifters allow you to change the pitch of a signal to any pitch desired within a range of one octave in either direction. The TS-10 offers three different pitch shift algorithms, each designed with a different purpose:</p>
-<p>• PITCH SHIFTER offers a splicer type pitch shifter.</p>
-<p>• <span class="param">FAST</span> PITCH SHIFTER is a pitch shifter designed for pitch correction.</p>
-<p>• PITCH SHIFTER + DELAY combines a pitch shifter with a DDL (described later).</p>
+<ul>
+  <li>PITCH SHIFTER offers a splicer type pitch shifter.</li>
+  <li><span class="param">FAST</span> PITCH SHIFTER is a pitch shifter designed for pitch correction.</li>
+  <li>PITCH SHIFTER + DELAY combines a pitch shifter with a DDL (described later).</li>
+</ul>
 <p>These algorithms sound best with an Effect Mix of wet and dry. You can assign a modulation controller for the Effect Mix parameters to bring in or fade out the pitch shifted signal. Try the different pitch shifters until you find the one that works best with your sound source, and for your application. This first algorithm is a “splicer type” of pitch shifter, which means that it drops or adds small sections of the original signal to the effect. PITCH SHIFTER does not incorporate zero crossing detection. This pitch shifter is best used for a doubling effect. Splicer type pitch shifters are popular because for low pitch shift ratios, splicing is infrequent. These pitch shifters can create very interesting stereo fields by panning each of two pitch shifted voices selectively, and because of the inherent time delay modulation of the algorithm. The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
 <h4 id="voice-1-semi" class="param-name"><span class="param">VOICE-1 SEMI</span><span class="range">Range: -12 to +12</span></h4>
 <p>Allows you to adjust the pitch of Voice-1 to an octave above or below the original pitch in semitones (half steps).</p>
