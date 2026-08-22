@@ -27,6 +27,7 @@
     <p>In this section, we will show you how to edit a TS-10 Program. For detailed descriptions of the many parameters, refer to the following section.</p>
 <h2 id="what-is-a-program">What is a Program?</h2>
 <p>A program (or sound as we sometimes refer to it) is made up of six voices and one effect. The status of the two <kbd class="button">Patch Select</kbd> buttons determines which of those six voices will play at any given time. The diagram below illustrates the make-up of a TS-10 program:</p>
+<figure class="figure"><img src="images/program-structure.png" alt="TS-10 program structure: Patch Select variations, six voices, destination bus, dynamic effects, Main and Aux outputs"><figcaption>TS-10 program structure.</figcaption></figure>
 <p>Understanding Voices and Polyphony When referring to the number of voices in a program, we are not talking about polyphony (as in “you can only play so many notes”). Instead, we are referring to the number of voices that will sound on each key as you play the program. The TS-10 is unique in that it lets you choose the number of voices (from one to six) per key for each program.</p>
 <p>The TS-10 has a total of 32 voices which are dynamically assigned to the different sounds that you play (31 voices when Sampled Sounds are loaded into Dynamic RAM). How many voices a sound uses on each key depends on the program. Many sounds use only one voice — in the case of these sounds, you can play 32 notes before “voice stealing” occurs. On programs that use two voices, you can play 16 notes before any voices are stolen. Three voices, 10 notes, and so on. Up to six voices can be active in one program.</p>
 <p>The TS-10 is “smart” about voice allocation — there are a number of things you can do to increase the apparent polyphony of a sound and to minimize the effects of voice stealing. For example:</p>
@@ -58,17 +59,70 @@
 <p>• determine which of the six voices will play (and which will be muted) for each of the four <kbd class="button">Patch Select</kbd> variations, or</p>
 <p>• temporarily solo any one of the voices without disturbing the other settings on the page.</p>
 <p>Press <kbd class="button">Select Voice</kbd>. The display looks something like this:</p>
-<p>Voice 1 is selected</p>
-<p>Voices 1, 2 and 3 are active</p>
-<p>Voices 4, 5 and 6 are muted</p>
-<p><kbd class="button">Patch Select</kbd> status</p>
+<figure class="vfd-unit has-page">
+  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Voice 1 is selected</div><div></div><div>Voices 1, 2 and 3 are active</div></div>
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">SELV</td><td class="cell selected">STRINGS</td><td class="cell">STRINGS</td><td class="cell">FLUGELHRN</td></tr>
+      <tr><td class="cell page-label">00</td><td class="cell">(SITAR)</td><td class="cell">(PIZZ-SECT)</td><td class="cell">(LOOP-KICK)</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  <div class="vfd-callouts bottom has-page"><div>Patch Select status</div><div></div><div></div><div>Voices 4, 5 and 6 are muted</div></div>
+  
+</figure>
 <p>The six locations on the screen represent the six voices which are available within the program.</p>
 <p>For each voice, the display shows the name of the wave that the voice is assigned to play, and the mute status of the voice in the current patch. When you press the soft button above or below one of these voices, it becomes underlined, indicating that it is the currently selected voice, the one that will be affected by any editing you do.</p>
 <p>Voices shown without brackets are active and will play in the current patch. If you press the <kbd class="button">Down Arrow</kbd> button while on a selected voice, it will mute that voice. Brackets (or parentheses) around the voice name indicate that the voice is muted in the current patch. Pressing the <kbd class="button">Up Arrow</kbd> button on a muted voice will un-mute it.</p>
 <p>Pressing the <kbd class="button">Up Arrow</kbd> on an active (un-muted) voice will solo that voice. Solo voices are displayed enclosed by asterisks, with all other voices muted. Pressing the <kbd class="button">Down Arrow</kbd> on a soloed voice will return it and all other voices to their normal status.</p>
-<p>Voice 1 is soloed</p>
-<p>Voices 2 and 3 are muted</p>
-<p>Voices 4, 5 and 6 are muted</p>
+<figure class="vfd-unit has-page">
+  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Voice 1 is soloed</div><div></div><div>Voices 2 and 3 are muted</div></div>
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">SELV</td><td class="cell selected">*STRINGS*</td><td class="cell">(STRINGS)</td><td class="cell">(FLUGELHRN)</td></tr>
+      <tr><td class="cell page-label">00</td><td class="cell">(SITAR)</td><td class="cell">(PIZZ-SECT)</td><td class="cell">(LOOP-KICK)</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div></div><div></div><div>Voices 4, 5 and 6 are muted</div></div>
+  
+</figure>
 <p>Using  the soft buttons as a shortcut Once a voice is selected (underlined):</p>
 <p>• If it is active, pressing its soft button again will mute it.</p>
 <p>• If it is muted, pressing its soft button will un-mute it.</p>
@@ -96,6 +150,36 @@
 <p><span class="page-name">Write Page</span> — Saving a New Program Into Memory Once you have modified an existing program or created an entirely new one, you can write or save that program to any User RAM location using the <span class="page-name">Write Page</span>. This page is also used to rename the program with the name of your choice.</p>
 <p>When you are ready to save a program into memory, first decide on a name of up to eleven characters for your new program. Then:</p>
 <p>• Press <kbd class="button">Write Program</kbd>. The <span class="page-name">Write Program page</span> appears as below, with the current program name showing. You will see a cursor, or underline, beneath the first letter of that name.</p>
+<figure class="vfd-unit">
+  
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell">WRITE EDIT PROGRAM</td><td class="cell selected">NAME=SAMPLED NAME</td><td class="cell">&nbsp;</td></tr>
+      <tr><td class="cell">*EXIT*</td><td class="cell">LEFT -CURSOR- RIGHT</td><td class="cell">&nbsp;</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  
+</figure>
 <p>• Edit the Program Name using the <kbd class="button">Data Entry Slider</kbd> and the two Move Cursor soft buttons, labeled LEFT and RIGHT. You can move the <kbd class="button">Data Entry Slider</kbd> up and down to scroll through the available characters, or step through them one at a time with the <kbd class="button">Up/Down Arrow</kbd> buttons. Find the first letter you want, then press the RIGHT button to move the cursor to the next location. Repeat this procedure until the display shows the name you have chosen (or if the <span class="param">KBD-NAMING</span> parameter on the <span class="page-name">System page</span> is ON, you can use the keyboard to enter the name, as explained in <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System Page</span> Parameters</a>).</p>
 <aside class="tip"><p>Moving the <kbd class="button">Data Entry Slider</kbd> all the way down gives you a blank space. Also, using dashes, periods and slashes between characters can make a sound name hold together better when displayed on Program Bank and Preset pages.</p></aside>
 <p>• Select a memory location for your new program. Press one of the <kbd class="button">Bank</kbd> buttons (0-9). As long as you hold the button down, the display will show the sound select page for that bank, with two differences:</p>
@@ -121,12 +205,7 @@
 <p>• Press the soft button beneath MAKE COPY. This puts the current program into the copy buffer. The display briefly shows COPY COMPLETED and then returns to the <span class="page-name">Copy page</span>.</p>
 <p>• Press the RECALL soft button. This puts you back on the <span class="page-name">Write page</span>, with the new program showing. Now proceed exactly as described above to write the program to the new location.</p>
 <p>Voice Programming This section covers those functions which can be edited independently for each individual voice within the program.</p>
-<p>Programming</p>
-<table class="param-cols cols-3"><tbody><tr><td>LFO</td><td>Env 1   Env 2</td><td>Env 3</td></tr></tbody></table>
-<table class="param-cols"><tbody><tr><td>Pitch</td><td>Voice Programming Pages</td></tr><tr><td>Pitch  Filters</td><td>Output Mods</td></tr></tbody></table>
-<table class="param-cols cols-3"><tbody><tr><td>Mod</td><td>Program</td><td>Program</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td>Wave</td><td>Mixer</td><td>Control</td><td>Effects</td></tr></tbody></table>
-<p>Layer       Effects</p>
+<figure class="figure"><img src="images/voice-programming-pages.png" alt="Programming-section buttons: LFO, Env 1–3, Pitch, Pitch Mods, Filters, Output, Wave, and Mod Mixer outlined as Voice Programming Pages; Program Control/Layer and Program Effects sit beside them"><figcaption>Voice programming pages in the Programming section.</figcaption></figure>
 <h3 id="ts-10-voice-configuration">TS-10 Voice Configuration</h3>
 <p>Each of the six voices within a TS-10 program consists of:</p>
 <p>• a digital oscillator playing one of the 254 waves from the TS-10 wave memory</p>
@@ -143,7 +222,36 @@
 <p>Selecting a Modulator On the programming pages where a modulator can be selected to vary the level of some function within an TS-10 voice, the display shows <span class="param">MODSRC</span>=_______ (Modulation Source=). A modulator is chosen by selecting (underlining) that parameter with the appropriate soft button, and then using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons to select among the 15 available modulation sources.</p>
 <aside class="tip"><p>Moving the <kbd class="button">Data Entry Slider</kbd> all the way up selects <span class="lcd">*<span class="value">OFF</span>*</span>, which is handy if you don’t want a modulator applied in a particular location.</p></aside>
 <p>Let’s take, for example, the <span class="page-name">Pitch Mods page</span>, which is where you apply modulation to the pitch of a voice. Press <kbd class="button">Pitch Mods</kbd>. In addition to Envelope 1 and the LFO, which are always available, you can choose an additional modulator to alter the pitch:</p>
-<p>Modulation Source         Modulation Amount</p>
+<figure class="vfd-unit has-page">
+  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Modulation Source</div><div>Modulation Amount</div><div></div></div>
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn pressed" data-pos="tl" aria-label="Top left soft button" aria-pressed="true"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">PITCH</td><td class="cell selected">MODSRC=*OFF*</td><td class="cell">MODAMT=+00</td><td class="cell">BEND=SYS</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PITCHTBL=SYSTEM</td><td class="cell">ENV1=+00</td><td class="cell">LFO=+04</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  
+  
+</figure>
 <h4 id="modamt-modulation-amount">MODAMT — Modulation Amount</h4>
 <p>As shown above, where a modulation source is selected, the parameter immediately to its right controls the Modulation Amount (the display shows <span class="param">MODAMT</span>=±##), which controls how deeply the selected modulator will affect the level to which it is being applied.</p>
 <p>Press the soft button above <span class="param">MODAMT</span>=, and use the data entry controls to adjust the modulation amount. Modulation amount can be positive or negative. A modulation amount of +00 has the same effect as turning the modulator <span class="lcd">*<span class="value">OFF</span>*</span>.</p>
@@ -152,8 +260,10 @@
 <h3 id="modulation-sources">Modulation Sources</h3>
 <p>The 15 Modulation Sources available on the TS-10 are as follows:</p>
 <table class="bullet-cols"><tr><td>• LFO — Low Frequency Oscillator</td><td>• PITCH — Pitch Bend Wheel</td></tr><tr><td>• NOISE — Noise Generator</td><td>• <span class="param">PEDAL</span> — Voltage Control Foot Pedal</td></tr><tr><td>• ENV-1 — Envelope 1</td><td>• TIMBR — Timbre Control</td></tr><tr><td>• ENV-2 — Envelope 2</td><td>• <span class="param">XCTRL</span> — External Controller (MIDI)</td></tr><tr><td>• MIXER — Mod Mixer/Shaper</td><td>• <span class="param">PRESS</span> — Pressure (After-touch)</td></tr><tr><td>• WL + PR — Wheel + Pressure</td><td>• KEYBD — Keyboard Tracking</td></tr><tr><td>• PR + VL — Pressure + Velocity</td><td>• VELOC — Velocity</td></tr><tr><td>• WHEEL — Modulation Wheel</td><td>• <span class="lcd">*<span class="value">OFF</span>*</span> — no modulation</td></tr></table>
-<p>• LFO — Low Frequency Oscillator The Low Frequency Oscillator generates only very low frequency waves, below the audio spectrum, which can produce vibrato, tremolo, and many other effects, depending on the LFO wave selected, and where it is applied as a modulator. There are seven possible waveshapes for the LFO.</p>
-<p>• NOISE — Noise Generator The Noise generator creates a randomly changing level. It is useful for modulating, among other things, the pitch of a voice (<span class="page-name">Pitch Mods page</span>). Applied to pitch with large modulation amounts, it tends to create strange “computer sound” effects. Small modulation amounts (around +02 to +04) can create a subtle random movement in the sound, which can impart a more natural quality.</p>
+<h4 id="lfo-low-frequency-oscillator" class="param-name">LFO — Low Frequency Oscillator</h4>
+<p>The Low Frequency Oscillator generates only very low frequency waves, below the audio spectrum, which can produce vibrato, tremolo, and many other effects, depending on the LFO wave selected, and where it is applied as a modulator. There are seven possible waveshapes for the LFO.</p>
+<h4 id="noise-noise-generator" class="param-name">NOISE — Noise Generator</h4>
+<p>The Noise generator creates a randomly changing level. It is useful for modulating, among other things, the pitch of a voice (<span class="page-name">Pitch Mods page</span>). Applied to pitch with large modulation amounts, it tends to create strange “computer sound” effects. Small modulation amounts (around +02 to +04) can create a subtle random movement in the sound, which can impart a more natural quality.</p>
 <p>On the second sub-page of the <span class="page-name">LFO page</span> (press <kbd class="button">LFO</kbd> twice) there is a parameter labeled NOISE-RATE=##, which adjusts the rate at which the level of this modulator will change.</p>
 <figure class="vfd-unit has-page">
   
@@ -185,28 +295,31 @@
   
   
 </figure>
+<h4 id="env-1-env-2-env-3" class="param-name">ENV-1, ENV-2, (ENV-3)</h4>
 <p>The TS-10 has three complex Envelopes. Envelopes are used to create changes, over time, in pitch, brightness, volume, etc.</p>
 <p>&gt; ENV-1 is permanently routed to the pitch of the voice, though it can be assigned as a modulator elsewhere if you wish.</p>
 <p>&gt; ENV-2 is permanently routed to the filter cutoff frequency. It also can be assigned as a modulator elsewhere.</p>
 <p>&gt; ENV-3 is a special case. ENV 3 always controls the volume of the voice, and cannot be selected as a modulator anywhere else.</p>
-<p>• MIXER — Mod Mixer/Shaper</p>
+<h4 id="mixer-mod-mixer-shaper" class="param-name">MIXER — Mod Mixer/Shaper</h4>
 <p>The Mod Mixer/Shaper is a powerful feature which allows you to assign two modulation sources to one input, and to scale and shape the response of one of those modulators. The controls on the <span class="page-name">Mod Mixer page</span> are used to determine what will happen when MIXER is chosen as a modulator.</p>
-<p>• WL + PR — Wheel + Pressure</p>
+<h4 id="wl-pr-wheel-pressure" class="param-name">WL + PR — Wheel + Pressure</h4>
 <p>This is one of two “combination” modulators. When selected, both the mod wheel and pressure will affect the level which is being modulated. This can be good for modulating LFO depth when using the LFO for vibrato. That way the player can use either to get vibrato.</p>
-<p>• PR + VL — Pressure + Velocity Another combination modulator. When this modulator is selected, both pressure and velocity will affect the level which is being modulated.</p>
-<p>• WHEEL — Modulation Wheel</p>
+<h4 id="pr-vl-pressure-velocity" class="param-name">PR + VL — Pressure + Velocity</h4>
+<p>Another combination modulator. When this modulator is selected, both pressure and velocity will affect the level which is being modulated.</p>
+<h4 id="wheel-modulation-wheel" class="param-name">WHEEL — Modulation Wheel</h4>
 <p>The Mod Wheel to the left of the keyboard is assignable wherever a modulator is selected. To use the mod wheel for vibrato (one common application) WHEEL must be assigned to modulate the LFO, and the LFO Amount set to some number other than zero on the <span class="page-name">Pitch Mods Page</span>. The mod wheel’s effect is positive-going only, from 0 (wheel towards you) to +99 (wheel away from you). Negative modulation amounts will reverse the effect.</p>
-<p>• PITCH — Pitch Bend Wheel</p>
+<h4 id="pitch-pitch-bend-wheel" class="param-name">PITCH — Pitch Bend Wheel</h4>
 <p>This assigns the Pitch Wheel, located to the left of the mod wheel, as a modulator. It allows you to have the Pitch Wheel, in addition to bending the pitch of a note (its normal function), also affect some other level. Applied to the filter cutoff frequency, for example, this would cause notes to become brighter as you bend them upwards, and more muted as you bend them down (or the opposite with negative modulation amounts).</p>
-<p>• <span class="param">PEDAL</span> — Voltage Control Foot Pedal</p>
+<h4 id="pedal-voltage-control-foot-pedal" class="param-name">PEDAL — Voltage Control Foot Pedal</h4>
 <p>This selects the CVP-1 Foot Pedal, which can be plugged into the Pedal•CV jack on the TS-10 rear panel, as a modulator. Its effect will be the same as that of the mod wheel. It can be applied wherever a Modulator is selected.</p>
 <p>Note that the Foot Pedal will only act as a modulator when the Pedal Function Select parameter is set to <span class="lcd">PEDAL=MOD</span> on the <span class="page-name">System Page</span>. When that parameter is set to <span class="lcd">PEDAL=VOL</span> the Foot Pedal will act as a volume pedal, not as a modulator (though this has no effect on incoming MIDI Foot Pedal data). See <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System Page</span> Parameters</a> for more details.</p>
-<p>• TIMBR — Timbre Control</p>
+<h4 id="timbr-timbre-control" class="param-name">TIMBR — Timbre Control</h4>
 <p>This is a special modulator, which is intended as an “extra” real-time performance controller.</p>
 <p>TIMBR can be assigned like any other modulator wherever a modulation source is selected. It is controlled from the <span class="page-name">Timbre page</span> in the Track Parameters section.</p>
 <p>The Timbre parameter also controls the relative volume modulation amounts for each of the six program voices (assigned on the <span class="page-name">TIMBRE sub-page</span> found on the <span class="page-name">Program Control Page</span>). This allows you to determine how much louder or softer each voice will become as the Timbre modulation controller is increased or decreased.</p>
 <p>Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button twice to get to the <span class="page-name">Timbre sub-page</span>, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the Timbre modulator. Note that because it can be assigned to modulate any mod destination within a voice or effect, the Timbre control will not always necessarily adjust the tone color (which is what we normally associate with the word timbre) of a given sound, depending on what the programmer has chosen to do with it. As a rule, however, programmers are encouraged to make sure that Timbre always does something interesting to the sound.</p>
-<p>• <span class="param">XCTRL</span> — External Controller Like the TIMBR modulator, the External Controller (<span class="param">XCTRL</span>) modulator can be assigned to modulate any voice or effect modulation destination. Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button three times to get to the <span class="page-name">XCTRL sub-page</span>, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the <span class="param">XCTRL</span> modulator.</p>
+<h4 id="xctrl-external-controller" class="param-name">XCTRL — External Controller</h4>
+<p>Like the TIMBR modulator, the External Controller (<span class="param">XCTRL</span>) modulator can be assigned to modulate any voice or effect modulation destination. Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button three times to get to the <span class="page-name">XCTRL sub-page</span>, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the <span class="param">XCTRL</span> modulator.</p>
 <p>In addition to using the Track <span class="param">XCTRL</span> parameter, an external controller such as a Breath Controller, <kbd class="button">Data Entry Slider</kbd>, etc., that is received via MIDI from another synthesizer or MIDI controller, will modulate any voice or effect parameter that has <span class="param">XCTRL</span> assigned as a modulator. On the <span class="page-name">MIDI Control Page</span>, you select the MIDI Controller number of the external controller that will be recognized by the TS-10.</p>
 <p>You don’t have to be playing the TS-10 from an external instrument for this to work. For example, if you have a keyboard with a Breath Controller:</p>
 <p>1) Connect its MIDI Out to the TS-10 MIDI In</p>
@@ -214,55 +327,52 @@
 <p>3) Select Breath Controller as the external controller that will be received by the TS-10 (<span class="lcd">XCTRL=02</span>, also on the <span class="page-name">MIDI Control Page</span>)</p>
 <p>4) assign <span class="param">XCTRL</span> as a Modulator for LFO level, Filter Cutoff frequency, or some other manual level within a voice</p>
 <p>5) play the sound from the TS-10 keyboard, while blowing into the Breath Controller connected to the sending instrument. The modulation will have the same effect as if you were playing from the sending instrument.</p>
-<p>• <span class="param">PRESS</span> — Pressure (After-touch) Pressure, also called after-touch, is a modulator which varies a manual level within a voice depending on how hard you press down on a key or keys. After you have struck a key, and while the note is sustaining, continuing to press down harder on the key brings in pressure.</p>
+<h4 id="press-pressure-after-touch" class="param-name">PRESS — Pressure (After-touch)</h4>
+<p>Pressure, also called after-touch, is a modulator which varies a manual level within a voice depending on how hard you press down on a key or keys. After you have struck a key, and while the note is sustaining, continuing to press down harder on the key brings in pressure.</p>
 <p>The TS-10 keyboard generates pressure, and by using this modulator you can add a tremendous amount of expression to your sounds without ever taking your hands off the keyboard.</p>
 <p>Pressure comes in two varieties — <dfn class="term">Poly-Key</dfn>™ pressure (or Polyphonic pressure), which affects each note individually, and Channel pressure (or Mono pressure) which affects all notes that are playing when you exert pressure on any key. Either type of pressure is available on the TS-10, and both types are received via MIDI.</p>
 <p>There is a Pressure parameter on a sub-page of the <span class="page-name">Performance Options Page</span> (press <kbd class="button">Performance Options</kbd> twice) which determines which of the two types of pressure will be used by the program. This control can also be set to NONE, in which case the program will not respond to pressure internally, nor will it send or receive it via MIDI (see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a> for more details).</p>
 <p>Note that not all sounds are necessarily programmed to respond to pressure. If pressure seems to have no effect when you play certain sounds, it is likely that pressure is not assigned as a modulator anywhere within the sound.</p>
 <p>The effect of pressure as a modulator is positive-going only, though assigning a negative modulation depth will cause increased pressure to reduce manual levels.</p>
-<p>• KEYBD — Keyboard Tracking</p>
-<p>This uses the position of a note on the keyboard as a modulator. The scaling effect of this</p>
-<p>Modulator is based on a 76-note keyboard:</p>
-<p>+100</p>
-<p>+50</p>
-<p>-50</p>
-<p>-100</p>
-<p>TS-10 keyboard</p>
-<p>76-note keyboard</p>
-<p>MIDI  Key numbers 0-127 As the above illustration shows, the effect of KEYBD as a modulator goes negative as well as positive. The effect of KEYBD is to reduce the Level on notes below the break point (F4+), and increase levels above that point. Negative Modulation depths will do the opposite.</p>
-<p>• VELOC — Velocity Velocity means how hard you strike a key. Selecting VELOC as a Modulator allows you to modulate any manual level with velocity. Velocity as a modulation source only goes positive (though assigning a negative modulation amount will make the net result be to reduce the level with increased velocity).</p>
-<p>• <span class="lcd">*<span class="value">OFF</span>*</span> Modulation is disabled.</p>
+<h4 id="keybd-keyboard-tracking" class="param-name">KEYBD — Keyboard Tracking</h4>
+<p>This uses the position of a note on the keyboard as a modulator. The scaling effect of this Modulator is based on a 76-note keyboard:</p>
+<figure class="figure"><img src="images/keybd-tracking.png" alt="KEYBD modulator graph from -100 to +100 over MIDI keys 0–127: flat at -100 below a 76-note span, linear through that span (TS-10 keyboard nested inside), then flat at +100"><figcaption>KEYBD modulator scaling across the keyboard.</figcaption></figure>
+<p>As the above illustration shows, the effect of KEYBD as a modulator goes negative as well as positive. The effect of KEYBD is to reduce the Level on notes below the break point (F4+), and increase levels above that point. Negative Modulation depths will do the opposite.</p>
+<h4 id="veloc-velocity" class="param-name">VELOC — Velocity</h4>
+<p>Velocity means how hard you strike a key. Selecting VELOC as a Modulator allows you to modulate any manual level with velocity. Velocity as a modulation source only goes positive (though assigning a negative modulation amount will make the net result be to reduce the level with increased velocity).</p>
+<h4 id="off" class="param-name">*OFF*</h4>
+<p>Modulation is disabled.</p>
 <h2 id="wave-page">Wave Page</h2>
 <p>Each TS-10 voice will play one of the 254 waves in its memory. These waves are the “raw material” from which TS-10 programs are crafted. On the <span class="page-name">Wave page</span> you can choose which wave the currently selected voice will play, and modify the various playback parameters of the wave.</p>
 <h4 id="wave-class">Wave Class</h4>
 <p>The TS-10 waves are divided into 16 categories, or Wave Classes:</p>
-<table class="param-cols"><tbody><tr><td><span class="lcd">KEYBOARD</span></td><td><span class="lcd">PERCUSSION</span></td></tr><tr><td><span class="lcd">STRING-SOUND</span></td><td><span class="lcd">TUNED-PERCUS</span></td></tr><tr><td><span class="lcd">BRASS+HORNS</span></td><td><span class="lcd">SOUND-EFFECT</span></td></tr><tr><td><span class="lcd">WIND+REEDS</span></td><td><span class="lcd">WAVEFORM</span></td></tr><tr><td><span class="lcd">VOCAL-SOUND</span></td><td><span class="lcd">INHARMONIC</span></td></tr><tr><td><span class="lcd">BASS-SOUND</span></td><td><span class="lcd">TRANSWAVE</span></td></tr><tr><td><span class="lcd">DRUM-SOUND</span></td><td><span class="lcd">WAVE-LIST</span></td></tr><tr><td><span class="lcd">CYMBALS</span></td><td><span class="lcd">DRUM-MAP</span></td></tr></tbody></table>
+<table class="param-cols"><tbody><tr><td><span class="param">KEYBOARD</span></td><td><span class="param">PERCUSSION</span></td></tr><tr><td><span class="param">STRING-SOUND</span></td><td><span class="param">TUNED-PERCUS</span></td></tr><tr><td><span class="param">BRASS+HORNS</span></td><td><span class="param">SOUND-EFFECT</span></td></tr><tr><td><span class="param">WIND+REEDS</span></td><td><span class="param">WAVEFORM</span></td></tr><tr><td><span class="param">VOCAL-SOUND</span></td><td><span class="param">INHARMONIC</span></td></tr><tr><td><span class="param">BASS-SOUND</span></td><td><span class="param">TRANSWAVE</span></td></tr><tr><td><span class="param">DRUM-SOUND</span></td><td><span class="param">WAVE-LIST</span></td></tr><tr><td><span class="param">CYMBALS</span></td><td><span class="param">DRUM-MAP</span></td></tr></tbody></table>
 <p>The first eleven wave classes contain samples of real acoustic and electronic sounds, which can be used as the basis for a wide variety of realistic musical sounds. Where necessary, these waves have been multi-sampled (sampled at many points through the range of the instrument) for maximum accuracy.</p>
 <p>The next three wave classes contain a variety of sampled and algorithmically generated waves that are more “synthesizer” oriented:</p>
-<p>• <span class="lcd">WAVEFORM</span> - A waveform is a single cycle of a sound repeated over and over. The TS-10 contains both sampled and synthetic waveforms. Waveforms such as Sawtooth and Square can be used to reproduce a wide array of analog synth sounds.</p>
-<p>• <span class="lcd">INHARMONIC</span> - Inharmonic loops are similar to waveforms except that they contain many cycles of the sound and can therefore contain inharmonics — frequencies which are not exact multiples of the fundamental frequency.</p>
-<p>• <span class="lcd">TRANSWAVE</span> - is a special class of waves. Each Transwave consists of many single-cycle waveforms, each with a different harmonic spectrum. The playback parameters allow you to start the wave playing at any one of these waveforms and move through the wavetable, continually varying the timbre of the sound, using any of the 15 modulators.</p>
-<p>The last two wave classes are unique in that they are only available when <span class="lcd">OPTION=WAVE-LIST</span> or <span class="lcd">DRUM-MAP</span> on the <span class="page-name">Program Control page</span>:</p>
-<p>• <span class="lcd">WAVE-LIST</span> - up to sixteen user-definable waveforms are linked together to create a single wave-list. Any of the internal waveforms can be used, and can be played in any order, forward or backward, to create effects and “jam-loops.”</p>
-<p>• <span class="lcd">DRUM-MAP</span> - Up to 61 different waves can be assigned to each key of the keyboard to create “custom” drum-maps. Individual keys can be assigned their own volume levels, panning, pitch, and voice parameter template.</p>
+<p>• <span class="param">WAVEFORM</span> - A waveform is a single cycle of a sound repeated over and over. The TS-10 contains both sampled and synthetic waveforms. Waveforms such as Sawtooth and Square can be used to reproduce a wide array of analog synth sounds.</p>
+<p>• <span class="param">INHARMONIC</span> - Inharmonic loops are similar to waveforms except that they contain many cycles of the sound and can therefore contain inharmonics — frequencies which are not exact multiples of the fundamental frequency.</p>
+<p>• <span class="param">TRANSWAVE</span> - is a special class of waves. Each Transwave consists of many single-cycle waveforms, each with a different harmonic spectrum. The playback parameters allow you to start the wave playing at any one of these waveforms and move through the wavetable, continually varying the timbre of the sound, using any of the 15 modulators.</p>
+<p>The last two wave classes are unique in that they are only available when <span class="param">OPTION=WAVE-LIST</span> or <span class="param">DRUM-MAP</span> on the <span class="page-name">Program Control page</span>:</p>
+<p>• <span class="param">WAVE-LIST</span> - up to sixteen user-definable waveforms are linked together to create a single wave-list. Any of the internal waveforms can be used, and can be played in any order, forward or backward, to create effects and “jam-loops.”</p>
+<p>• <span class="param">DRUM-MAP</span> - Up to 61 different waves can be assigned to each key of the keyboard to create “custom” drum-maps. Individual keys can be assigned their own volume levels, panning, pitch, and voice parameter template.</p>
 <p>Complete  TS-10 ROM Wave Catalog The wave class is shown in bold at the top of each ROM Wave group.</p>
-<table class="param-cols cols-5"><tbody><tr><td><span class="lcd">KEYBOARD</span>:</td><td><span class="lcd">WIND+REEDS</span>:</td><td><span class="lcd">DRUM-SOUND</span></td><td><span class="lcd">TUNED-PERCUS</span>:</td><td><span class="lcd">INHARMONIC</span>:</td></tr></tbody></table>
+<table class="param-cols cols-5"><tbody><tr><td><span class="param">KEYBOARD</span>:</td><td><span class="param">WIND+REEDS</span>:</td><td><span class="param">DRUM-SOUND</span></td><td><span class="param">TUNED-PERCUS</span>:</td><td><span class="param">INHARMONIC</span>:</td></tr></tbody></table>
 <table class="data-table lookup"><tbody><tr><td>GND-PIANO</td><td>SOPRN-SAX</td><td>(continued):</td><td>VIBRAPHON</td><td>TUBULAR</td></tr><tr><td>PNO-THUD</td><td>SOPRN-SAX2</td><td>SIDESTK-2</td><td>MARIMBA</td><td>BIG-BELL</td></tr><tr><td>EL-PIANO1</td><td>ALTO-SAX</td><td>BRUSH-SCR</td><td>XYLOPHONE</td><td>CRYSTAL</td></tr><tr><td>EL-PIANO2</td><td>TENOR-SAX</td><td>BRUSH-TAP</td><td>GLOCKEN</td><td>SYNTHBELL</td></tr><tr><td>EL-PIANO3</td><td>CLARINET</td><td>BRUSH-OPN</td><td>TYMPANI</td><td>NOISE</td></tr><tr><td>EL-PIANO4</td><td>OBOE</td><td>BRUSH-HIT</td><td>TUNED-TOM</td><td>AIR-<span class="param">LOOP</span></td></tr><tr><td>EL-PIANO5</td><td>OBOE-VAR</td><td>DANCE-SNR</td><td>TUNED-LOG</td><td>SPINNER-1</td></tr><tr><td>WURLIE-LO</td><td>FLUTE</td><td>HIPHOP-SN</td><td>STEEL-DRM</td><td>SPINNER-2</td></tr><tr><td>WURLIE-HI</td><td>FOLKFLUTE</td><td>SYNSNAR-1</td><td>KALIMBA</td><td>TEXTURE-1</td></tr><tr><td>ROCK-ORGN</td><td>PANFLUTE</td><td>SYNSNAR-2</td><td>GAM-BELL</td><td>TEXTURE-2</td></tr><tr><td>JAZZ-ORGN</td><td>CHIFFLUTE</td><td>SYNSNAR-3</td><td>DOORBELL</td><td>METL-<span class="param">LOOP</span></td></tr></tbody></table>
 <table class="param-cols cols-4"><tbody><tr><td>ROTARYORG</td><td>SHAKU</td><td>SYN-STICK</td><td>WHISTLE</td></tr></tbody></table>
-<table class="param-cols cols-5"><tbody><tr><td>ORGAN-1</td><td>HARMONICA</td><td>DRY-TOM</td><td>DANCE-HIT</td><td><span class="lcd">TRANSWAVE</span>:</td></tr><tr><td>ORGAN-1</td><td>ACCORDION</td><td>ROOM-TOM1</td><td>ORCH-HIT</td><td>BELL-XWV1</td></tr></tbody></table>
+<table class="param-cols cols-5"><tbody><tr><td>ORGAN-1</td><td>HARMONICA</td><td>DRY-TOM</td><td>DANCE-HIT</td><td><span class="param">TRANSWAVE</span>:</td></tr><tr><td>ORGAN-1</td><td>ACCORDION</td><td>ROOM-TOM1</td><td>ORCH-HIT</td><td>BELL-XWV1</td></tr></tbody></table>
 <table class="param-cols cols-3"><tbody><tr><td>PIPE-ORGN</td><td>ROOM-TOM2</td><td>BELL-XWV2</td></tr></tbody></table>
-<table class="param-cols cols-5"><tbody><tr><td>REED-ORGN</td><td><span class="lcd">VOCAL-SOUND</span>:</td><td>BRUSH-TOM</td><td><span class="lcd">SOUND-EFFECT</span>:</td><td>RESONANCE</td></tr><tr><td>CELESTE</td><td>CHOIR</td><td>SYN-DRUM1</td><td>BIRD-SONG</td><td>XWAVE-EE</td></tr><tr><td>HARPSICRD</td><td>VOCAL-OOH</td><td>SYN-DRUM2</td><td>APPLAUSE</td><td>XWAVE-AY</td></tr><tr><td>SYNTH-PAD</td><td>VOCAL-AAH</td><td>SYN-DRUM3</td><td>TELEPHONE</td><td>XWAVE-AA</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td>SYNTH-ANA</td><td>VOCAL-SYN</td><td>AN-<span class="value">OLD</span>-45</td><td>XWAVE-OH</td></tr><tr><td>SYNTH-VOX</td><td><span class="lcd">CYMBALS</span>:</td><td>MACHINE</td><td>XWAVE-Z</td></tr></tbody></table>
-<table class="param-cols cols-3"><tbody><tr><td><span class="lcd">BASS-SOUND</span>:</td><td>CLO-HAT-1</td><td>CLICKER-1</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td><span class="lcd">STRING-SOUND</span>:</td><td>EL-BASS-1</td><td>CLO-HAT-2</td><td>CLICKER-2</td></tr><tr><td>NYLON-GTR</td><td>EL-BASS-2</td><td>OPN-HAT-1</td><td>BELL-<span class="param">LOOP</span></td></tr></tbody></table>
+<table class="param-cols cols-5"><tbody><tr><td>REED-ORGN</td><td><span class="param">VOCAL-SOUND</span>:</td><td>BRUSH-TOM</td><td><span class="param">SOUND-EFFECT</span>:</td><td>RESONANCE</td></tr><tr><td>CELESTE</td><td>CHOIR</td><td>SYN-DRUM1</td><td>BIRD-SONG</td><td>XWAVE-EE</td></tr><tr><td>HARPSICRD</td><td>VOCAL-OOH</td><td>SYN-DRUM2</td><td>APPLAUSE</td><td>XWAVE-AY</td></tr><tr><td>SYNTH-PAD</td><td>VOCAL-AAH</td><td>SYN-DRUM3</td><td>TELEPHONE</td><td>XWAVE-AA</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>SYNTH-ANA</td><td>VOCAL-SYN</td><td>AN-<span class="value">OLD</span>-45</td><td>XWAVE-OH</td></tr><tr><td>SYNTH-VOX</td><td><span class="param">CYMBALS</span>:</td><td>MACHINE</td><td>XWAVE-Z</td></tr></tbody></table>
+<table class="param-cols cols-3"><tbody><tr><td><span class="param">BASS-SOUND</span>:</td><td>CLO-HAT-1</td><td>CLICKER-1</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td><span class="param">STRING-SOUND</span>:</td><td>EL-BASS-1</td><td>CLO-HAT-2</td><td>CLICKER-2</td></tr><tr><td>NYLON-GTR</td><td>EL-BASS-2</td><td>OPN-HAT-1</td><td>BELL-<span class="param">LOOP</span></td></tr></tbody></table>
 <table class="param-cols cols-3"><tbody><tr><td>STEEL-GTR</td><td>EL-BASS-3</td><td>OPN-HAT-2</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td>GTR-VAR</td><td>SLAP-BASS</td><td><span class="param">PEDAL</span>-HAT</td><td><span class="lcd">WAVEFORM</span>:</td></tr><tr><td>FRETNOISE</td><td>PICK-BASS</td><td>CRASH-CYM</td><td>SINE-WAVE</td></tr><tr><td>NYLON-HRM</td><td>MUTE-BASS</td><td>CHINA-CYM</td><td>SQUARE-WV</td></tr><tr><td>ELEC-GTR1</td><td>BASS-TAP</td><td>RIDE-CYM</td><td>SAW-WAVE1</td></tr><tr><td>ELEC-GTR2</td><td>FRETLESS</td><td>RIDE-BELL</td><td>SAW-WAVE2</td></tr><tr><td>ELEC-GTR3</td><td>BS-HARMS</td><td>SYN-HAT-CL</td><td>TRI-WAVE</td></tr><tr><td>DIST-GTR</td><td>AC-BASS</td><td>SYN-HAT-OP</td><td>ORG-WAVE1</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>GTR-VAR</td><td>SLAP-BASS</td><td><span class="param">PEDAL</span>-HAT</td><td><span class="param">WAVEFORM</span>:</td></tr><tr><td>FRETNOISE</td><td>PICK-BASS</td><td>CRASH-CYM</td><td>SINE-WAVE</td></tr><tr><td>NYLON-HRM</td><td>MUTE-BASS</td><td>CHINA-CYM</td><td>SQUARE-WV</td></tr><tr><td>ELEC-GTR1</td><td>BASS-TAP</td><td>RIDE-CYM</td><td>SAW-WAVE1</td></tr><tr><td>ELEC-GTR2</td><td>FRETLESS</td><td>RIDE-BELL</td><td>SAW-WAVE2</td></tr><tr><td>ELEC-GTR3</td><td>BS-HARMS</td><td>SYN-HAT-CL</td><td>TRI-WAVE</td></tr><tr><td>DIST-GTR</td><td>AC-BASS</td><td>SYN-HAT-OP</td><td>ORG-WAVE1</td></tr></tbody></table>
 <table class="param-cols cols-3"><tbody><tr><td>MUTE-GTR</td><td>BASS-THUD</td><td>ORG-WAVE2</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td>GTR-HARM</td><td>FM-BASS</td><td><span class="lcd">PERCUSSION</span>:</td><td>ORG-WAVE3</td></tr><tr><td>HARP</td><td>SYNBASS-1</td><td>CONGA-MT</td><td>ORG-WAVE4</td></tr><tr><td>OCT-HARP</td><td>SYNBASS-2</td><td>CONGA-SLP</td><td>ORG-WAVE5</td></tr><tr><td>STRINGS</td><td>SYNBASS-3</td><td>CONGA-HI</td><td>ORG-WAVE6</td></tr><tr><td>PIZZ-SECT</td><td>ANABASS-1</td><td>CONGA-LO</td><td>CH-ORG-WV</td></tr><tr><td>SOLOVIOLN</td><td>ANABASS-2</td><td>TIMBALI</td><td>BEL-WAVE1</td></tr><tr><td>SOLOCELLO</td><td>ANABASS-3</td><td>BONGO</td><td>BEL-WAVE2</td></tr><tr><td>SOLO-PIZZ</td><td>ANABASS-4</td><td>TABLA-SLP</td><td>BEL-WAVE3</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>GTR-HARM</td><td>FM-BASS</td><td><span class="param">PERCUSSION</span>:</td><td>ORG-WAVE3</td></tr><tr><td>HARP</td><td>SYNBASS-1</td><td>CONGA-MT</td><td>ORG-WAVE4</td></tr><tr><td>OCT-HARP</td><td>SYNBASS-2</td><td>CONGA-SLP</td><td>ORG-WAVE5</td></tr><tr><td>STRINGS</td><td>SYNBASS-3</td><td>CONGA-HI</td><td>ORG-WAVE6</td></tr><tr><td>PIZZ-SECT</td><td>ANABASS-1</td><td>CONGA-LO</td><td>CH-ORG-WV</td></tr><tr><td>SOLOVIOLN</td><td>ANABASS-2</td><td>TIMBALI</td><td>BEL-WAVE1</td></tr><tr><td>SOLOCELLO</td><td>ANABASS-3</td><td>BONGO</td><td>BEL-WAVE2</td></tr><tr><td>SOLO-PIZZ</td><td>ANABASS-4</td><td>TABLA-SLP</td><td>BEL-WAVE3</td></tr></tbody></table>
 <table class="param-cols cols-3"><tbody><tr><td>TECHSTRNG</td><td>TABLA-HI</td><td>BEL-WAVE4</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td>GOTO</td><td><span class="lcd">DRUM-SOUND</span>:</td><td>TABLA-LO</td><td>BEL-WAVE5</td></tr><tr><td>BIWA</td><td>ROOM-KICK</td><td>TAIKO</td><td>BEL-WAVE6</td></tr><tr><td>SHAMISEN</td><td>REAL-KICK</td><td>SHAKER</td><td>BEL-WAVE7</td></tr><tr><td>SITAR</td><td>ROCK-KICK</td><td>CABASA</td><td>DBL-REED</td></tr><tr><td>BANJO</td><td>JAZZ-KICK</td><td>MARACAS</td><td>SNGL-REED</td></tr><tr><td>DULCIMER</td><td>FAT-KICK</td><td>HI-BLOCK</td><td>CLAV-WAVE</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td>GOTO</td><td><span class="param">DRUM-SOUND</span>:</td><td>TABLA-LO</td><td>BEL-WAVE5</td></tr><tr><td>BIWA</td><td>ROOM-KICK</td><td>TAIKO</td><td>BEL-WAVE6</td></tr><tr><td>SHAMISEN</td><td>REAL-KICK</td><td>SHAKER</td><td>BEL-WAVE7</td></tr><tr><td>SITAR</td><td>ROCK-KICK</td><td>CABASA</td><td>DBL-REED</td></tr><tr><td>BANJO</td><td>JAZZ-KICK</td><td>MARACAS</td><td>SNGL-REED</td></tr><tr><td>DULCIMER</td><td>FAT-KICK</td><td>HI-BLOCK</td><td>CLAV-WAVE</td></tr></tbody></table>
 <table class="param-cols cols-3"><tbody><tr><td>R+B-KICK</td><td>LO-BLOCK</td><td>PAD-WAVE1</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td><span class="lcd">BRASS+HORNS</span>:</td><td>KICK-1</td><td>CLAVE</td><td>PAD-WAVE2</td></tr><tr><td>TRUMPET</td><td>SYNKICK-1</td><td>CASTANETS</td><td>PAD-WAVE3</td></tr><tr><td>FLUGELHRN</td><td>SYNKICK-2</td><td>GUIRO</td><td>PAD-WAVE4</td></tr><tr><td>MUTE-TRMP</td><td>SYNKICK-3</td><td>CUICA</td><td>PAD-WAVE5</td></tr><tr><td>PICO-TRMP</td><td>DANCE-KIK</td><td>VIBRASLAP</td><td>PAD-WAVE6</td></tr><tr><td>TROMBONE</td><td><span class="param">LOOP</span>-KICK</td><td>COWBELL</td><td>5THS-WAVE</td></tr><tr><td>TUBA</td><td>REALSNARE</td><td>AGOGO-BEL</td><td>VOCAL-WV</td></tr><tr><td>TRUMP-SEC</td><td>ROCKSNARE</td><td>TAMBORINE</td><td>DIGI-WAVE</td></tr><tr><td>FRHRN-SEC</td><td>DEEPSNARE</td><td>TAMB-<span class="param">LOOP</span></td><td>ANDROMEDA</td></tr><tr><td>TBONE-SEC</td><td>GATESNARE</td><td>TRIANGLE</td><td>SYNKEY-WV</td></tr></tbody></table>
+<table class="param-cols cols-4"><tbody><tr><td><span class="param">BRASS+HORNS</span>:</td><td>KICK-1</td><td>CLAVE</td><td>PAD-WAVE2</td></tr><tr><td>TRUMPET</td><td>SYNKICK-1</td><td>CASTANETS</td><td>PAD-WAVE3</td></tr><tr><td>FLUGELHRN</td><td>SYNKICK-2</td><td>GUIRO</td><td>PAD-WAVE4</td></tr><tr><td>MUTE-TRMP</td><td>SYNKICK-3</td><td>CUICA</td><td>PAD-WAVE5</td></tr><tr><td>PICO-TRMP</td><td>DANCE-KIK</td><td>VIBRASLAP</td><td>PAD-WAVE6</td></tr><tr><td>TROMBONE</td><td><span class="param">LOOP</span>-KICK</td><td>COWBELL</td><td>5THS-WAVE</td></tr><tr><td>TUBA</td><td>REALSNARE</td><td>AGOGO-BEL</td><td>VOCAL-WV</td></tr><tr><td>TRUMP-SEC</td><td>ROCKSNARE</td><td>TAMBORINE</td><td>DIGI-WAVE</td></tr><tr><td>FRHRN-SEC</td><td>DEEPSNARE</td><td>TAMB-<span class="param">LOOP</span></td><td>ANDROMEDA</td></tr><tr><td>TBONE-SEC</td><td>GATESNARE</td><td>TRIANGLE</td><td>SYNKEY-WV</td></tr></tbody></table>
 <table class="param-cols cols-3"><tbody><tr><td>FUNKSNARE</td><td>METALPIPE</td><td>ANA-WAVE1</td></tr></tbody></table>
 <table class="param-cols"><tbody><tr><td>JAZZSNARE</td><td>WINDCHIME   ANA-WAVE2</td></tr><tr><td>SNARE-ROL</td><td>WNDCHIME2   ANA-WAVE3</td></tr><tr><td>RIMSHOT-1</td><td>FNGR-SNAP   ANA-WAVE4</td></tr><tr><td>RIMSHOT-2</td><td>SYN-CLAPS   METL-WAVE</td></tr><tr><td>SIDESTK-1</td><td>SYN-KISS</td></tr></tbody></table>
 <h4 id="rattle" class="param-name">RATTLE</h4>

@@ -439,6 +439,17 @@ INLINE_FIGURES = [
         "caption": "TS-10 program structure.",
     },
     {
+        "after": re.compile(r"^Voice Programming\b"),
+        "skip_until": re.compile(r"^TS-10 Voice Configuration"),
+        "src": "voice-programming-pages.png",
+        "alt": (
+            "Programming-section buttons: LFO, Env 1–3, Pitch, Pitch Mods, "
+            "Filters, Output, Wave, and Mod Mixer outlined as Voice Programming "
+            "Pages; Program Control/Layer and Program Effects sit beside them"
+        ),
+        "caption": "Voice programming pages in the Programming section.",
+    },
+    {
         "after": re.compile(
             r"The diagram on the following page shows the configuration of one TS-10 voice"
         ),
@@ -911,7 +922,7 @@ LCD_FIELDS = [
 ]
 PAGE_TITLE_RE = re.compile(r"^[A-Z0-9*].{0,48}\sPages?$", re.I)
 MID_PHRASE_END = re.compile(
-    r"(?:the|a|an|to|of|in|or|and|for|with|by|from|as|that|which|when|will)$",
+    r"\b(?:the|a|an|to|of|in|or|and|for|with|by|from|as|that|which|when|will)$",
     re.I,
 )
 # Compact LCD-style names in 2-column setting/description tables (00 PATCH, DRUM-FX1).
@@ -1195,7 +1206,27 @@ def is_enum_heading(line: str) -> bool:
     return True
 
 
+def is_bullet_param_heading(line: str) -> bool:
+    """Printed `• LFO — Low Frequency Oscillator` / `• *OFF*` labels, not option bullets."""
+    s = line.strip()
+    m = re.match(r"^•\s+(.+)$", s)
+    if not m or len(s) > 48 or s.endswith((".", ",", ";", "?", "!")):
+        return False
+    rest = m.group(1).strip()
+    if "•" in rest:
+        return False
+    parts = re.split(r"\s+[—–]\s+", rest, maxsplit=1)
+    name = parts[0].strip()
+    if not re.match(r"^[A-Z*][A-Z0-9* +\-/(),]*$", name):
+        return False
+    if len(parts) == 2 and parts[1][:1].islower():
+        return False
+    return True
+
+
 def is_param_heading(line: str) -> bool:
+    if is_bullet_param_heading(line):
+        return True
     if len(line) > 48 or line.endswith((".", ",", ";", "?", "!")):
         return False
     if line in DIAGRAM_HEADING_SKIP:
@@ -1407,7 +1438,7 @@ def range_join(prev: str, s: str) -> str | None:
 
 
 def is_bullet_item(s: str) -> bool:
-    if is_enum_heading(s):
+    if is_enum_heading(s) or is_bullet_param_heading(s):
         return False
     return s.startswith("•") or bool(re.match(r"^\d+\)\s", s))
 
@@ -3473,10 +3504,21 @@ def callout_key(labels: list[str]) -> str:
 def render_callouts(labels: list[str], side: str, *, page: str = "") -> str:
     if not any(labels):
         return ""
-    spacer = '<div class="page-spacer"></div>' if page else ""
+    labs = list(labels)
+    page_lab = ""
+    if page:
+        if len(labs) >= 4:
+            page_lab, labs = labs[0], labs[1:4]
+        spacer = (
+            f"<div>{html.escape(page_lab)}</div>"
+            if page_lab
+            else '<div class="page-spacer"></div>'
+        )
+    else:
+        spacer = ""
     cells = "".join(
         f"<div>{html.escape(lab)}</div>" if lab else "<div></div>"
-        for lab in (labels + ["", "", ""])[:3]
+        for lab in (labs + ["", "", ""])[:3]
     )
     cls = f"vfd-callouts {side}" + (" has-page" if page else "")
     return f'<div class="{cls}">{spacer}{cells}</div>'
@@ -3534,8 +3576,9 @@ def skip_screen_leftovers(lines: list[str], i: int, screen: dict) -> int:
     def hits_until(s: str) -> bool:
         if not until:
             return False
-        t = s.lstrip("• ").strip()
-        return t.startswith(until)
+        t = re.sub(r"\s+", " ", s.lstrip("• ").strip())
+        u = re.sub(r"\s+", " ", until.strip())
+        return t.startswith(u)
 
     while i < len(lines):
         s = lines[i].strip()
@@ -4489,6 +4532,8 @@ def to_html_body(
             cls = ""
             diagram_title = gated_reverb_diagram_title(line)
             heading = diagram_title or line
+            if is_bullet_param_heading(line):
+                heading = re.sub(r"^•\s+", "", line.strip())
             if (
                 not diagram_title
                 and is_param_heading(line)
