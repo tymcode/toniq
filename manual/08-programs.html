@@ -2634,7 +2634,7 @@
       <li>Press <kbd class="button">Program Control</kbd>.</li>
       <li>Underline <span class="lcd">OPTIONS=PITCHTBL</span>.</li>
       <li>Press the <kbd class="button">Down Arrow</kbd> button.</li>
-      <li>The TS-10 will ask <span class="lcd">ERASE CURRENT PITCH-TABLE?</span></li>
+      <li>The TS-10 will ask <span class="lcd">ERASE CURRENT PITCH-TABLE ?</span></li>
       <li>Press <span class="lcd">*YES*</span>. You are returned to the <span class="page-name">Select Voice page</span>,
       the custom pitch-table is gone, and voices 5 and 6 are reset to the default voice.</li>
     </ul>
@@ -2643,8 +2643,7 @@
       pitch-table, let’s start over. This time we’ll work with an ancient tuning system, called Pythagorean. Then, we’ll
       work with the TS-10 built-in pitch-table calculator, and two new procedures: Extrapolation and Interpolation.</p>
     <h4 id="creating-and-extrapolating-a-custom-pitch-table">Creating and Extrapolating a Custom Pitch-Table</h4>
-      <p>The EXTRAPOLATE command takes the
-      pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
+      <p>The EXTRAPOLATE command takes the pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
     <ul>
       <li>If you have a custom pitch-table from the previous exercise, remove as shown above.</li>
       <li>Select a program into which you want to write a custom pitch-table.</li>
@@ -2814,7 +2813,7 @@
     <ul>
       <li>Using the procedure described earlier, create a custom pitch-table, and select <span
         class="lcd">PITCH-TABLE=CUSTOM</span> on the <span class="page-name">Pitch Mods page</span>.</li>
-      <li>On the <span class="page-name">Select Voice page</span>, press the soft button for EDIT PITCH-TABLE.</li>
+      <li>On the <span class="page-name">Select Voice page</span>, press the soft button for <span class="function">EDIT PITCH-TABLE</span>.</li>
       <li>Set KEY C2 = C3 AND 00 CENTS. Next, set KEY C7 = C4 AND 00 CENTS.</li>
     </ul>
     <p>We’ve just established an interval of an octave between C2 and C7.</p>
@@ -2832,26 +2831,24 @@
     <ul>
       <li>Select a program which contains a custom pitch-table.</li>
       <li>Press <kbd class="button">Select Voice</kbd>.</li>
-      <li>Press either soft button beneath EDIT PITCH-TABLE.</li>
+      <li>Press either soft button beneath <span class="function">EDIT PITCH-TABLE</span>.</li>
       <li>Press the <kbd class="button">Copy</kbd> button. The display reads:</li>
     </ul>
     <p>Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Pitch-Table Editor page</span> will
-      display the COPY PITCHTABLE</p>
-    <p>PARAMETERS page with the following options:</p>
-    <p>The MAKE COPY option allows you to make a copy of the complete pitch-table from the currently selected program
-      (or the <span class="function">Compare</span> Buffer) into the Copy Buffer.</p>
+      display the <span class="page-name">Copy Pitch-Table Parameters page</span> with the following options:</p>
+    <p>The <span class="function">MAKE COPY</span> option allows you to make a copy of the complete pitch-table from the currently selected program
+      (or the Compare Buffer) into the Copy Buffer.</p>
     <p>The RECALL option allows you to recall the complete pitch-table from the Copy Buffer into an edited version of
-      the current program if 1) the current program has a pitch-table installed in it and</p>
-    <p>2) the Copy buffer contains a pitch-table. If you attempt to recall a <dfn class="term">Pitch-Table</dfn> into a
+      the current program if 1) the current program has a pitch-table installed in it and 2) the Copy buffer contains a pitch-table. If you attempt to recall a <dfn class="term">Pitch-Table</dfn> into a
       program without just previously having copied a pitch-table into the Copy buffer, the copy is not completed and an
       error message is displayed.</p>
-    <p>SYSTEM— As an added feature, the System pitch-table itself is user-definable. For instance, if you want to hear
+    <p>The <span class="param">SYSTEM</span> parameter allows you to install an alternate tuning into the System pitch-table. As an added feature, the System pitch-table itself is user-definable. For instance, if you want to hear
       what other programs sound like using the custom pitch-table from a program, you can redefine the System
       pitch-table. Or, if your main tuning is “just intonation,” then it might be convenient for you to use this or some
       other alternate tuning as your System tuning.</p>
-    <p>To install an alternate tuning into the System pitch-table:</p>
+    <h4 id="to-install-an-alternate-tuning-into-the-system-pitch-table">To install an alternate tuning into the System pitch-table:</h4>
     <ul>
-      <li>Press the soft button beneath SYSTEM. The display briefly reads COPY TO SYSTEM PITCH-TABLE, and the custom
+      <li>Press the soft button beneath <span class="lcd">SYSTEM</span>. The display briefly reads <span class="lcd">COPY TO SYSTEM PITCH-TABLE</span>, and the custom
       pitch-table is installed into the TS-10 operating system where it is available for use by any program.</li>
       <li>Press the <kbd class="button">System</kbd> button four times. The display shows:</li>
     </ul>
@@ -2934,9 +2931,9 @@
     <p>For more information about the MIDI <span class="param">MODE</span> parameter, see <a class="refer-to"
         href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control
           Page</span> Parameters</a>.</p>
-    <p>About <dfn class="term">Wave-Lists</dfn> <dfn class="term">Hyper-Wave</dfn>™ architecture allows up to 16 waves
-      to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn
-        class="term">Hyper-Waves</dfn> are created by selecting <span class="lcd">WAVE-LIST</span> with the OPTION
+    <h3 id="about-wave-lists">About Wave-Lists</h3>
+      <p><dfn class="term">Hyper-Wave</dfn>™ architecture allows up to 16 waves to be defined in a list, which can be swept through, or cross-faded for timbre-shifting and Jam-Loops. <dfn
+        class="term">Hyper-Waves</dfn> are created by selecting <span class="lcd">WAVE-LIST</span> with the <span class="param">OPTION</span>
       parameter found on the <span class="page-name">Program Control page</span> (replacing voices 5 and 6 in a
       program). Note that when using a <dfn class="term">Wave-List</dfn>, your polyphony is halved. This is to allow
       smooth transitions with the <dfn class="term">Wave-List</dfn> XFADE-TIME (crossfade time) parameter, which
@@ -2948,9 +2945,54 @@
       <li>Select a program into which you want to install a custom wave-list.</li>
       <li>Press <kbd class="button">Program Control</kbd>. The display shows the <span class="page-name">Program Control
         page</span>:</li>
+        <figure class="vfd-unit">
+
+          <div class="vfd-bezel">
+            <table>
+              <colgroup>
+                <col class="param-col">
+                <col class="param-col">
+                <col class="param-col">
+              </colgroup>
+              <thead>
+                <tr class="soft-row top">
+    
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+                  </th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr>
+                  <td class="cell" colspan="2">PROGRAM TYPE=KEYBOARD</td>
+                  <td class="cell">OPTION=*-NONE-*</td>
+                </tr>
+                <tr>
+                  <td class="cell">PRESS=KEY</td>
+                  <td class="cell">PATCH=LIVE</td>
+                  <td class="cell">RESTRIKE=35</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+    
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+                  </td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+                  </td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+    
+    
+        </figure>
       <li>Make sure <span class="lcd">OPTION=*-NONE-*</span> is underlined.</li>
       <li>Press the <kbd class="button">Up Arrow</kbd> button. The display reads:</li>
-    </ul>
+  
     <figure class="vfd-unit">
 
       <div class="vfd-bezel">
@@ -2997,12 +3039,13 @@
 
 
     </figure>
+  </ul>
     <p>Whenever you create a wave-list, the TS-10 will delete voices 5 and 6, and use the memory normally occupied by
       those parameters to store the wave-list.</p>
     <ul>
       <li>Press the soft button underneath <span class="lcd">WAVE-LIST</span> to replace voices 5 &amp; 6, and create a
       new default wave-list in the program. Selecting <span class="lcd">WAVE-LIST</span> will also display the <span
-        class="page-name">Select Voice page</span> with the EDIT <span class="lcd">WAVE-LIST</span> option activated.
+        class="page-name">Select Voice page</span> with the  <span class="function">EDIT WAVE-LIST</span> option activated.
       Note that the <span class="page-name">Program Control page</span> will now show <span
         class="lcd">OPTION=WAVELIST</span> to indicate that a wave-list is active in the program. The display shows:</li>
     </ul>
@@ -3028,7 +3071,7 @@
           <tbody class="vfd-screen">
             <tr>
               <td class="cell page-label">SELV</td>
-              <td class="cell">SAW-WAVE2</td>
+              <td class="cell selected">SAW-WAVE2</td>
               <td class="cell">(SAW-WAVE2)</td>
               <td class="cell">(SAW-WAVE2)</td>
             </tr>
@@ -3111,11 +3154,11 @@
     </figure>
     <ul>
       <li>Press the <kbd class="button">Select Voice</kbd> button. Your edited program now contains a <dfn
-        class="term">Wave-List</dfn> and voice #1 will now play the <dfn class="term">Wave-List</dfn>.</li>
+        class="term">Wave-List</dfn> and voice #1 will now play the Wave-List.</li>
     </ul>
     <aside class="note">
-      <p>Note: Voices that play the <dfn class="term">Wave-List</dfn> will use two notes of polyphony for each note
-        played. This is necessary to allow smooth crossfades between each Step in the <dfn class="term">Wave-List</dfn>.
+      <p> Voices that play the Wave-List will use two notes of polyphony for each note
+        played. This is necessary to allow smooth crossfades between each Step in the Wave-List.
       </p>
     </aside>
     <p>Editing a <dfn class="term">Wave-List</dfn> When a wave-list is active within the current program, the <span
@@ -3172,34 +3215,29 @@
       and 6 would normally be shown are occupied by the <span class="function">EDIT WAVE-LIST</span> command.</p>
     <p>When the displayed wave name for a voice is <span class="lcd">WAVE-LIST</span>, the actual individual wave name
       for each step of the wave-list is shown only on the <span class="page-name">Wave-List Editor page</span> (accessed
-      by selecting EDIT <span class="lcd">WAVE-LIST</span>). If a voice’s displayed wave name is anything other than
+      by selecting <span class="function">EDIT WAVE-LIST</span>). If a voice’s displayed wave name is anything other than
       <span class="lcd">WAVE-LIST</span>, and it is active (no brackets around the wave name), then that voice will
       sound using the displayed wave whenever a key is pressed.</p>
     <ul>
-      <li>Press either soft button beneath EDIT <span class="lcd">WAVE-LIST</span>. This takes you to the <span
+      <li>Press either soft button beneath <span class="lcd">EDIT WAVE-LIST</span>. This takes you to the <span
         class="page-name">Wave-List Editor page</span>, where you can select any internal ROM waveform for each of the
       16 different wave steps, set its start time, length, relative volume level, crossfade time, depth, pitch,
-      transposition, detune amount, and its direction within the wave-list. For complete descriptions of the <dfn
-        class="term">Wave-List</dfn> Editor parameters, see <a class="refer-to"
-        href="09-program-params-a.html#section-9-program-parameters-lfo-envelopes-pitch-filters">Section 9 — Program
-        Parameters</a>.</li>
+      transposition, detune amount, and its direction within the wave-list. For complete descriptions of the Wave-List Editor parameters, see <a class="refer-to"
+        href="09-program-params-a.html#section-9-program-parameters-lfo-envelopes-pitch-filters">Section 9 — Program Parameters</a>.</li>
     </ul>
     <aside class="note">
       <p>Note: Remember to save the edited program after you have created and edited a wave-list.</p>
     </aside>
     <h4 id="removing-a-wave-list">Removing a Wave-List</h4>
       <p>If a program contains a custom wave-list and you want to remove it
-      (thus restoring voices 5 and</p>
-    <p>6) you can do so from the <span class="page-name">Program Control page</span>:</p>
-    <p>To remove a custom wave-list:</p>
+      (thus restoring voices 5 and 6) you can do so from the <span class="page-name">Program Control page</span>:</p>
+    <h4 id="to-remove-a-custom-wave-list">To remove a custom wave-list:</h4>
     <ul>
-      <li>Press <kbd class="button">Program Control</kbd> to display the <span class="page-name">Program Control
-        page</span>.</li>
-      <li>Underline <span class="lcd">OPTION=WAVELIST</span>.</li>
+      <li>Press <kbd class="button">Program Control</kbd> to display the <span class="page-name">Program Control page</span>.</li>
+      <li>Underline <span class="lcd">OPTION=WAVE-LIST</span>.</li>
       <li>Press the <kbd class="button">Down Arrow</kbd> button.</li>
-      <li>The TS-10 will ask ERASE CURRENT <span class="lcd">WAVE-LIST</span> ?</li>
-      <li>Press <span class="lcd">*YES*</span>. You are returned to the <span class="page-name">Select Voice page</span>,
-      the custom wave-list is gone, and voices 5 and 6 are reset to their default voices.</li>
+      <li>The TS-10 will ask <span class="lcd">ERASE CURRENT WAVE-LIST ?</span></li>
+      <li>Press <span class="lcd">*YES*</span>. You are returned to the <span class="page-name">Select Voice page</span>, the custom wave-list is gone, and voices 5 and 6 are reset to their default voices.</li>
     </ul>
     <p>Using the <span class="page-name">Copy page</span> with <dfn class="term">Wave-Lists</dfn> Pressing <kbd
         class="button">Copy</kbd> from the <span class="page-name">Wave-List Editor page</span> will display the <span
@@ -3882,7 +3920,7 @@
         page</span>.</li>
       <li>Underline <span class="lcd">OPTION=DRUM-MAP</span>.</li>
       <li>Press the <kbd class="button">Down Arrow</kbd> button.</li>
-      <li>The TS-10 will ask ERASE CURRENT <span class="lcd">DRUM-MAP</span> ?</li>
+      <li>The TS-10 will ask <span class="lcd">ERASE CURRENT DRUM-MAP ?</span> </li>
       <li>Press <span class="lcd">*YES*</span>. You are returned to the <span class="page-name">Select Voice page</span>,
       the custom drum-map is gone, and voices 5 and 6 are reset to their default voices.</li>
     </ul>
