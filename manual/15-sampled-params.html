@@ -25,8 +25,56 @@
       <h1 id="section-15-sampled-sound-parameters">Section 15 — Sampled Sound Parameters</h1>
     </header>
     <p>This section offers detailed descriptions of the specific parameters used in editing Sampled Sounds. A Sampled Sound must be selected in Sounds mode in order for these parameter pages to be displayed. Most parameters are available on a per <dfn class="term">WaveSample</dfn> basis, except for the parameters on the <span class="page-name">Layer</span> page that apply to all <dfn class="term">WaveSamples</dfn> in entire layers. For an overview of the concepts involved, refer to the previous section.</p>
-<h3 id="edit-key-down-key-up-layers-page-copy-button"><span class="page-name">Edit KEY-DOWN/KEY-UP LAYERS</span> Page (<kbd class="button">Copy</kbd> button)</h3>
+<h3 id="edit-key-down-key-up-layers-page-copy-button">Edit KEY-DOWN/KEY-UP LAYERS Page (<kbd class="button">Copy</kbd> button)</h3>
 <p>The parameters on this page control which layer(s) will be triggered when the keyboard is played. To access these parameters press <kbd class="button">Copy</kbd>, which is the Sampled Sound Edit KEY-DOWN/KEY-UP button.</p>
+
+<figure class="vfd-unit has-page">
+
+  <div class="vfd-bezel">
+    <table>
+      <colgroup>
+        <col class="page-col">
+        <col class="param-col">
+        <col class="param-col">
+        <col class="param-col">
+      </colgroup>
+      <thead>
+        <tr class="soft-row top">
+          <th class="page-tag-slot"></th>
+          <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+          <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+          </th>
+          <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+        </tr>
+      </thead>
+      <tbody class="vfd-screen">
+        <tr>
+          <td class="cell page-label">EDIT</td>
+          <td class="cell">&nbsp;</td>
+          <td class="cell" colspan="2" style="text-align: right;">KEY-DOWN LAYERS=<span class="selected">1</span>23456--</td>
+        </tr>
+        <tr>
+          <td class="cell page-label">&nbsp;</td>
+          <td class="cell">PATCH=LIVE</td>
+          <td class="cell" colspan="2" style="text-align: right;">KEY-UP-LAYERS=------78</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="soft-row bottom">
+          <th class="page-tag-slot"></th>
+          <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+          </td>
+          <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+          </td>
+          <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+
+</figure>
 <h4 id="key-down-layers" class="param-name"><span class="param">KEY-DOWN-LAYERS</span><span class="range">Range: various combinations of layers</span></h4>
 <p>This parameter determines which layer(s) will be triggered when a key is pressed down.</p>
 <ul>
@@ -40,9 +88,59 @@
 </ul>
 <h4 id="patch" class="param-name"><span class="param">PATCH</span><span class="range">Range: LIVE, 00, -0*-, -*0-, -**-, HELD</span></h4>
 <p>Selects the default patch select mode for the Sampled Sound. When set to LIVE, it uses the current state of the buttons to select a patch. When set to HELD, it uses the patch set by the first key hit while touching the patch select buttons. When set to any of the 4 patches (00, -0*-, -*0-, -**-), the Sampled Sound will ignore the patch selects and will always play the layers in the selected patch. For more information about patch selects, refer to Sections <a class="refer-to" href="04-presets.html#section-4-understanding-presets">4</a> and <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">5</a>. This is the default setting that will be installed into a track when the Sampled Sound is selected.</p>
-<h3 id="trk-defaults-page-write-program-button"><span class="page-name">TRK Defaults</span> Page (<kbd class="button">Write Program</kbd> button)</h3>
-<p>The parameters on this page are the default settings for the Track parameters that are stored with the Sampled Sound when it is saved as a SAMPLE-EDITS file. For more information about how these parameters function, see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>. To access these parameters press <kbd class="button">Write Program</kbd>, which is the Sampled Sound TRK button.</p>
+<h3 id="trk-defaults-page-write-program-button">TRK Defaults Page (Write Program Button)</h3>
+<p>The parameters on this page are the default settings for the Track parameters that are stored with the Sampled Sound when it is saved as a SAMPLE-EDITS file. For more information about how these parameters function, see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>. To access these parameters press <kbd class="button">Write&nbsp;Program</kbd>, which is the Sampled Sound TRK button.</p>
 <p>The Sampled Sound TRK page contains copies of track parameters that are saved in the Sampled Sound. When a Sampled Sound is selected or put on a track, values of these parameters are installed in the track as the default initial settings. They can be edited on the track pages without affecting the Sampled Sound default settings, but must be edited on this page in order to be saved with the SAMPLE-EDITS feature. Changes made here will be copied to the current primary track.</p>
+<figure class="vfd-unit has-page">
+
+  <div class="vfd-bezel">
+    <table>
+      <colgroup>
+        <col class="page-col">
+        <col class="param-col">
+        <col class="param-col">
+        <col class="param-col">
+      </colgroup>
+      <thead>
+        <tr class="soft-row top">
+          <th class="page-tag-slot"></th>
+          <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+          <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+          </th>
+          <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+        </tr>
+      </thead>
+      <tbody class="vfd-screen">
+        <tr>
+          <td class="cell page-label">TRK</td>
+          <td class="cell">XPOS=<span class="selected">+0</span></td>
+          <td class="cell">BRIGHT=+0</td>
+          <td class="cell">RATE=+0</td>
+        </tr>
+        <tr>
+          <td class="cell page-label">&nbsp;</td>
+          <td class="cell">RELS=+0</td>
+          <td class="cell">PRESS=KEY</td>
+          <td class="cell">XCTRL=0</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="soft-row bottom">
+          <th class="page-tag-slot"></th>
+          <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+          </td>
+          <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+          </td>
+          <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+
+</figure>
+
 <h4 id="xpos" class="param-name"><span class="param">XPOS</span><span class="range">Range: -64 to +63</span></h4>
 <p>This parameter is the default transposition for the Sampled Sound. It is a transposition offset independent of the Track <span class="param">TRANSPOSE</span> setting, and determines the pitch of the Sampled Sound when Track <span class="param">TRANSPOSE</span> is set to +0 +00 (i.e.: nominal pitch). Editing this parameter will not edit the Track <span class="param">TRANSPOSE</span> value.</p>
 <h4 id="bright" class="param-name"><span class="param">BRIGHT</span><span class="range">Range: -64 to +63</span></h4>
@@ -54,8 +152,9 @@
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: OFF, KEY, or CHAN</span></h4>
 <p>Allows you to select <dfn class="term">Poly-Key</dfn>, Channel, or no pressure for the Sampled Sound. Generally, if a Sampled Sound doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the Sampled Sound is selected.</p>
 <h4 id="xctrl" class="param-name"><span class="param">XCTRL</span><span class="range">Range: 000 to 127</span></h4>
-<p>Editing the XCTRLparameter default values will simultaneously edit the Track <span class="param">XCTRL</span> Parameter values on the track that the Sampled Sound is occupying. This parameter will only function if <span class="param">XCTRL</span> has been assigned as a modulator within the selected Sampled Sound. This is the default setting that will be installed into a track when the Sampled Sound is selected.</p>
-<p><span class="page-name">LFO</span> Page The <span class="page-name">LFO</span> Page contains the parameters related to the Low Frequency Oscillator. Each <dfn class="term">WaveSample</dfn> has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo, and other effects.</p>
+<p>Editing the XCTRL parameter default values will simultaneously edit the <span class="param">Track XCTRL</span> parameter values on the track that the Sampled Sound is occupying. This parameter will only function if <span class="param">XCTRL</span> has been assigned as a modulator within the selected Sampled Sound. This is the default setting that will be installed into a track when the Sampled Sound is selected.</p>
+<h3 id="lfo-page">LFO Page</h3>
+  <p>The <span class="page-name">LFO</span> Page contains the parameters related to the Low Frequency Oscillator. Each <dfn class="term">WaveSample</dfn> has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo, and other effects.</p>
 <p>Press the <kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the <span class="page-name">LFO</span> page:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>LFO Rate</div><div>Rate Modulator</div><div>Rate Modulation Amount</div></div>
@@ -71,8 +170,8 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell">RATE=60*</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+16</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">DEPTH=35</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+99</td></tr>
+      <tr><td class="cell page-label">LFO</td><td class="cell">RATE=<span class="selected">+40</span></td><td class="cell">MODSRC=PRESS</td><td class="cell">MODAMT=+0</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">DEPTH=0</td><td class="cell">MODSRC=WHEEL</td><td class="cell">MODAMT=+99</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -88,19 +187,46 @@
   
 </figure>
 <h4 id="rate-2" class="param-name"><span class="param">RATE</span><span class="range">Range: 0 to 99</span></h4>
-<p>Determines the speed of the LFO. <a href="#lfo-frequencies">The table below</a> shows the frequency (in hertz) for each value:</p>
-<table class="data-table lookup" id="lfo-frequencies"><caption>LFO FREQUENCIES</caption><thead><tr><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th></tr></thead><tbody><tr><td>0</td><td>.05</td><td>20</td><td>1.25</td><td>40</td><td>6.25</td><td>60</td><td>11.25</td><td>80</td><td>16.25</td></tr><tr><td>1</td><td>.05</td><td>21</td><td>1.50</td><td>41</td><td>6.50</td><td>61</td><td>11.50</td><td>81</td><td>16.50</td></tr><tr><td>2</td><td>.06</td><td>22</td><td>1.75</td><td>42</td><td>6.75</td><td>62</td><td>11.75</td><td>82</td><td>16.75</td></tr><tr><td>3</td><td>.06</td><td>23</td><td>2.00</td><td>43</td><td>7.00</td><td>63</td><td>12.00</td><td>83</td><td>17.00</td></tr><tr><td>4</td><td>.06</td><td>24</td><td>2.25</td><td>44</td><td>7.25</td><td>64</td><td>12.25</td><td>84</td><td>17.25</td></tr><tr><td>5</td><td>.07</td><td>25</td><td>2.50</td><td>45</td><td>7.50</td><td>65</td><td>12.50</td><td>85</td><td>17.50</td></tr><tr><td>6</td><td>.07</td><td>26</td><td>2.75</td><td>46</td><td>7.75</td><td>66</td><td>12.75</td><td>86</td><td>17.75</td></tr><tr><td>7</td><td>.08</td><td>27</td><td>3.00</td><td>47</td><td>8.00</td><td>67</td><td>13.00</td><td>87</td><td>18.00</td></tr><tr><td>8</td><td>.08</td><td>28</td><td>3.25</td><td>48</td><td>8.25</td><td>68</td><td>13.25</td><td>88</td><td>18.25</td></tr><tr><td>9</td><td>.09</td><td>29</td><td>3.50</td><td>49</td><td>8.50</td><td>69</td><td>13.50</td><td>89</td><td>18.50</td></tr><tr><td>10</td><td>.10</td><td>30</td><td>3.75</td><td>50</td><td>8.75</td><td>70</td><td>13.75</td><td>90</td><td>18.75</td></tr><tr><td>11</td><td>.11</td><td>31</td><td>4.00</td><td>51</td><td>9.00</td><td>71</td><td>14.00</td><td>91</td><td>19.00</td></tr><tr><td>12</td><td>.13</td><td>32</td><td>4.25</td><td>52</td><td>9.25</td><td>72</td><td>14.25</td><td>92</td><td>19.25</td></tr><tr><td>13</td><td>.14</td><td>33</td><td>4.50</td><td>53</td><td>9.50</td><td>73</td><td>14.50</td><td>93</td><td>19.50</td></tr><tr><td>14</td><td>.17</td><td>34</td><td>4.75</td><td>54</td><td>9.75</td><td>74</td><td>14.75</td><td>94</td><td>19.75</td></tr><tr><td>15</td><td>.20</td><td>35</td><td>5.00</td><td>55</td><td>10.00</td><td>75</td><td>15.00</td><td>95</td><td>20.00</td></tr><tr><td>16</td><td>.25</td><td>36</td><td>5.25</td><td>56</td><td>10.25</td><td>76</td><td>15.25</td><td>96</td><td>20.25</td></tr><tr><td>17</td><td>.33</td><td>37</td><td>5.50</td><td>57</td><td>10.50</td><td>77</td><td>15.50</td><td>97</td><td>20.50</td></tr><tr><td>18</td><td>.50</td><td>38</td><td>5.75</td><td>58</td><td>10.75</td><td>78</td><td>15.75</td><td>98</td><td>20.75</td></tr><tr><td>19</td><td>1.0</td><td>39</td><td>6.00</td><td>59</td><td>11.00</td><td>79</td><td>16.00</td><td>99</td><td>21.00</td></tr></tbody></table>
+<p>Determines the speed of the LFO. The table below shows the frequency (in hertz) for each value:</p>
+<table class="data-table lookup" id="lfo-frequencies-table">
+  <caption>LFO FREQUENCIES TABLE</caption>
+  <thead>
+    <tr><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th><th>Value</th><th>Time (in Hz)</th></tr>
+</thead>
+<tbody>
+  <tr><td>0</td><td>.05</td><td>20</td><td>1.25</td><td>40</td><td>6.25</td><td>60</td><td>11.25</td><td>80</td><td>16.25</td></tr>
+  <tr><td>1</td><td>.05</td><td>21</td><td>1.50</td><td>41</td><td>6.50</td><td>61</td><td>11.50</td><td>81</td><td>16.50</td></tr>
+  <tr><td>2</td><td>.06</td><td>22</td><td>1.75</td><td>42</td><td>6.75</td><td>62</td><td>11.75</td><td>82</td><td>16.75</td></tr>
+  <tr><td>3</td><td>.06</td><td>23</td><td>2.00</td><td>43</td><td>7.00</td><td>63</td><td>12.00</td><td>83</td><td>17.00</td></tr>
+  <tr><td>4</td><td>.06</td><td>24</td><td>2.25</td><td>44</td><td>7.25</td><td>64</td><td>12.25</td><td>84</td><td>17.25</td></tr>
+  <tr><td>5</td><td>.07</td><td>25</td><td>2.50</td><td>45</td><td>7.50</td><td>65</td><td>12.50</td><td>85</td><td>17.50</td></tr>
+  <tr><td>6</td><td>.07</td><td>26</td><td>2.75</td><td>46</td><td>7.75</td><td>66</td><td>12.75</td><td>86</td><td>17.75</td></tr>
+  <tr><td>7</td><td>.08</td><td>27</td><td>3.00</td><td>47</td><td>8.00</td><td>67</td><td>13.00</td><td>87</td><td>18.00</td></tr>
+  <tr><td>8</td><td>.08</td><td>28</td><td>3.25</td><td>48</td><td>8.25</td><td>68</td><td>13.25</td><td>88</td><td>18.25</td></tr>
+  <tr><td>9</td><td>.09</td><td>29</td><td>3.50</td><td>49</td><td>8.50</td><td>69</td><td>13.50</td><td>89</td><td>18.50</td></tr>
+  <tr><td>10</td><td>.10</td><td>30</td><td>3.75</td><td>50</td><td>8.75</td><td>70</td><td>13.75</td><td>90</td><td>18.75</td></tr>
+  <tr><td>11</td><td>.11</td><td>31</td><td>4.00</td><td>51</td><td>9.00</td><td>71</td><td>14.00</td><td>91</td><td>19.00</td></tr>
+  <tr><td>12</td><td>.13</td><td>32</td><td>4.25</td><td>52</td><td>9.25</td><td>72</td><td>14.25</td><td>92</td><td>19.25</td></tr>
+  <tr><td>13</td><td>.14</td><td>33</td><td>4.50</td><td>53</td><td>9.50</td><td>73</td><td>14.50</td><td>93</td><td>19.50</td></tr>
+  <tr><td>14</td><td>.17</td><td>34</td><td>4.75</td><td>54</td><td>9.75</td><td>74</td><td>14.75</td><td>94</td><td>19.75</td></tr>
+  <tr><td>15</td><td>.20</td><td>35</td><td>5.00</td><td>55</td><td>10.00</td><td>75</td><td>15.00</td><td>95</td><td>20.00</td></tr>
+  <tr><td>16</td><td>.25</td><td>36</td><td>5.25</td><td>56</td><td>10.25</td><td>76</td><td>15.25</td><td>96</td><td>20.25</td></tr>
+  <tr><td>17</td><td>.33</td><td>37</td><td>5.50</td><td>57</td><td>10.50</td><td>77</td><td>15.50</td><td>97</td><td>20.50</td></tr>
+  <tr><td>18</td><td>.50</td><td>38</td><td>5.75</td><td>58</td><td>10.75</td><td>78</td><td>15.75</td><td>98</td><td>20.75</td></tr>
+  <tr><td>19</td><td>1.0</td><td>39</td><td>6.00</td><td>59</td><td>11.00</td><td>79</td><td>16.00</td><td>99</td><td>21.00</td></tr>
+</tbody>
+</table>
 <h4 id="rate-modsrc" class="param-name"><span class="param">RATE MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for LFO RATE from among the 15 available modulators.</p>
 <h4 id="rate-modamt" class="param-name"><span class="param">RATE MODAMT</span><span class="range">Range: 0 to 99</span></h4>
-<p>Determines the amount by which the assigned RATE modulator will affect the LFO RATE. The effect of RATE <span class="param">MODAMT</span> is added to the effect of the LFO RATE parameter.</p>
+<p>Determines the amount by which the assigned RATE modulator will affect the LFO RATE. The effect of <span class="param">RATE MODAMT</span> is added to the effect of the <span class="param">LFO RATE</span> parameter.</p>
 <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 0 to 99</span></h4>
 <p>Sets the “manual” level of the LFO. DEPTH controls the initial amount of LFO.</p>
 <h4 id="depth-modsrc" class="param-name"><span class="param">DEPTH MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for LFO DEPTH from among the 15 available modulators.</p>
 <h4 id="depth-modamt" class="param-name"><span class="param">DEPTH MODAMT</span><span class="range">Range: 0 to 99</span></h4>
 <p>Determines the amount by which the assigned DEPTH modulator will affect the LFO DEPTH.</p>
-<p>The effect of DEPTH <span class="param">MODAMT</span> is added to the effect of the LFO DEPTH parameter.</p>
+<p>The effect of <span class="param">DEPTH MODAMT</span> is added to the effect of the <span class="param">LFO DEPTH</span> parameter.</p>
 <p>Press the <kbd class="button">LFO</kbd> button again to access the second sub-page of the <span class="page-name">LFO</span> page. The display reads:</p>
 <figure class="vfd-unit has-page">
   
@@ -116,8 +242,8 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">LFO</td><td class="cell">WAVESHAPE=TRIANGLE</td><td class="cell">RESTART-MODE=ON</td><td class="cell">&nbsp;</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PHASE=035</td><td class="cell">DELAY=25</td><td class="cell">NOISE-RATE=70</td></tr>
+      <tr><td class="cell page-label">LFO</td><td class="cell">WAVESHAPE=<span class="selected">TRIANGLE</span></td><td class="cell" colspan="2" style="text-align: right;">RESTART-MODE=OFF</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell">DELAY=40</td><td class="cell">NOISE-RATE=15</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -152,7 +278,9 @@
 <p>One of the TS-10’s 15 available modulation sources is NOISE. The NOISE modulator produces a randomly changing level. Its main use is to randomize or “humanize” pitch when applied as a pitch modulator. It can also be used to randomize any other modulation destination. Typically, the NOISE signal might look like this:</p>
 <figure class="figure"><img src="images/noise-rate.png" alt="Stepped random NOISE modulator with a bracket marking Noise Rate"><figcaption>Typical NOISE modulator signal.</figcaption></figure>
 <p>NOISE-RATE determines how frequently the random level will change. Low values will cause it to change very slowly; with high values the level will change quickly.</p>
-<p><dfn class="term">WaveSample</dfn> Envelopes Each <dfn class="term">WaveSample</dfn> has three envelopes associated with it. These envelopes are hard-wired to the pitch, filter cutoff frequency, and amplitude of the <dfn class="term">WaveSample</dfn>. Env 1 and Env 2 can also be assigned elsewhere, wherever a modulator is selectable. Each of the three envelope buttons are directly above the page buttons for the function that they are hard-wired to:</p>
+
+<h2 id="wavesample-envelopes">WaveSample Envelopes</h2>
+  <p>Each <dfn class="term">WaveSample</dfn> has three envelopes associated with it. These envelopes are hard-wired to the pitch, filter cutoff frequency, and amplitude of the <dfn class="term">WaveSample</dfn>. Env 1 and Env 2 can also be assigned elsewhere, wherever a modulator is selectable. Each of the three envelope buttons are directly above the page buttons for the function that they are hard-wired to:</p>
 <ul>
   <li>Env 1 is hard-wired to <dfn class="term">WaveSample</dfn> pitch modulation.</li>
   <li>Env 2 is hard-wired to <dfn class="term">WaveSample</dfn> filter cutoff frequency.</li>
@@ -160,49 +288,153 @@
 </ul>
 <h4 id="about-env-3">About ENV 3</h4>
 <p>The ENV3 LEVEL parameters and the <dfn class="term">WaveSample</dfn> <span class="value">VOL</span> parameter on the <span class="page-name">Output</span> page both use the same (non linear) response curve. As shown below, setting any of these volume controls to 50 will attenuate a sound by 16 dB.</p>
-<p><span class="value">HARD</span> OR <span class="value">SOFT</span> LEVEL                                         LEVEL AMPLITUDE</p>
-<h4 id="response-db" class="param-name">RESPONSE (dB)</h4>
-<p>99 0 dB 75 -8 dB 50 -16 dB 25 -32 dB 6 -56 dB 0 -∞ (infinity)</p>
+<table class="data-table" id="level-response-db">
+  <thead>
+    <caption>ENV3 Response Curve</caption>
+    <tr><th>Hard or Soft Level Response</th><th>Level Amplitude</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>99</td><td>0 dB</td></tr>
+    <tr><td>75</td><td>-8 dB</td></tr>
+    <tr><td>50</td><td>-16 dB</td></tr>
+    <tr><td>25</td><td>-32 dB</td></tr>
+    <tr><td>6</td><td>-56 dB</td></tr>
+    <tr><td>0</td><td>-∞ (infinity)</td></tr>
+  </tbody>
+</table>
+  </figure>
 <p>Typical <dfn class="term">WaveSample</dfn>  Envelope The figure below shows a typical <dfn class="term">WaveSample</dfn> envelope shape:</p>
-<p>2nd release</p>
-<table class="param-cols cols-5"><tbody><tr><td>T1   T2</td><td>T3</td><td>T4</td><td>Key held</td><td>T5   time</td></tr></tbody></table>
-<p>1             3</p>
-<h4 id="levels-vel-hard" class="param-name">LEVELS-VEL-HARD</h4>
-<p>2                    5</p>
-<p>2nd release</p>
-<table class="param-cols"><tbody><tr><td>4</td><td>level</td></tr><tr><td>1</td><td>5</td></tr></tbody></table>
-<h4 id="levels-soft" class="param-name">LEVELS--SOFT</h4>
-<table class="param-cols cols-3"><tbody><tr><td>Key</td><td>TIME</td><td>Key</td></tr></tbody></table>
-<p>Down                                               Up</p>
-<p>The <dfn class="term">WaveSample</dfn> envelopes have six times and six levels. The envelope parameters allow you to describe two entirely different shapes; one for maximum velocity (VEL-<span class="value">HARD</span>) and one for minimum velocity (<span class="value">SOFT</span>). When a key is struck, the envelope generator interpolates between the two, creating a curve that is a combination of the two based on the incoming velocity.</p>
+
+<figure class="figure"><img src="images/wave-sample-envelope.png" alt="Typical WaveSample envelope shape"><figcaption>Typical WaveSample envelope shape.</figcaption></figure>
+
+<p>The <dfn class="term">WaveSample</dfn> envelopes have six <dfn class="term">times</dfn> and six <dfn class="term">levels</dfn>. The envelope parameters allow you to describe two entirely different shapes; one for maximum velocity (<span class="param">VEL-HARD</span>) and one for minimum velocity (<span class="param">SOFT</span>). When a key is struck, the envelope generator <dfn class="term">interpolates</dfn> between the two, creating a curve that is a combination of the two based on the incoming velocity.</p>
+
 <h2 id="env1-env2-env3-pages">ENV1, ENV2, ENV3 Pages</h2>
 <p>The ENV1, ENV2, and ENV3 Pages, parameters and ranges are all the same except where indicated below. We will use ENV3 as our example, since its effect on the volume of the <dfn class="term">WaveSample</dfn> is immediately apparent.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button. The display shows the first <span class="page-name">ENV3</span> sub-page.</p>
+
+<div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">ENV3</td>   <td class="cell"style="text-align: center;">LEVELS -</td>       <td class="cell">VEL-HARD=<span class="selected">0&nbsp;</span></td>  <td class="cell">99 78 66 62</td></tr>
+      <tr><td class="cell page-label" style="text-align: right;">TIMES=</td> <td class="cell">10 64 52 40 30</td> <td class="cell" style="text-align: right;"">SOFT=0</td>                                          <td class="cell">78 70 62 50</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+  </figure>
 <h4 id="levels-vel-hard-2" class="param-name"><span class="param">LEVELS - VEL-HARD</span><span class="range">Range: 0 to 99</span></h4>
 <p>VEL-<span class="value">HARD</span> shows the five levels for the envelope that will be used with maximum velocity.</p>
 <p>Level-1 is the initial level. In a traditional ADSR shape, Level-1 is always set to zero. Level-5 is the sustain level.</p>
 <h4 id="levels-soft-2" class="param-name"><span class="param">LEVELS - SOFT</span><span class="range">Range: 0 to 99</span></h4>
 <p><span class="value">SOFT</span> shows the five levels for the envelope that will be used with minimum velocity.</p>
-<p>3      4</p>
+<figure class="figure"><img src="images/velocity-levels.png" alt="Levels for Hard and Soft Velocity."></figure>
+
 <h4 id="times" class="param-name"><span class="param">TIMES</span><span class="range">Range: 0 to 99</span></h4>
-<p>TIMES shows five time parameters. The first four are the times between the five levels. The fifth time is the (first) release time.</p>
-<p>Note that the numbers shown here represent times, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
-<p>2nd release</p>
-<div class="vfd-callouts top"><div>T1</div><div>T2</div><div>T3</div></div>
+<p><span class="param-name">TIME</span> shows five time parameters. The first four are the times between the five levels. The fifth time is the (first) release time.</p>
+<p>Note that the numbers shown here represent durations, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
+<figure class="figure"><img src="images/times-between-levels.png" alt="Times between envelope Levels."></figure>
+
 <table class="data-table lookup" id="envelope-times"><caption>ENVELOPE TIMES</caption><thead><tr><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th></tr></thead><tbody><tr><td>0</td><td>.00</td><td>20</td><td>.20</td><td>40</td><td>.82</td><td>60</td><td>3.2</td><td>80</td><td>13</td></tr><tr><td>1</td><td>.01</td><td>21</td><td>.22</td><td>41</td><td>.88</td><td>61</td><td>3.5</td><td>81</td><td>14</td></tr><tr><td>2</td><td>.02</td><td>22</td><td>.23</td><td>42</td><td>.94</td><td>62</td><td>3.7</td><td>82</td><td>15</td></tr><tr><td>3</td><td>.03</td><td>23</td><td>.25</td><td>43</td><td>1.0</td><td>63</td><td>4.0</td><td>83</td><td>16</td></tr><tr><td>4</td><td>.04</td><td>24</td><td>.27</td><td>44</td><td>1.0</td><td>64</td><td>4.3</td><td>84</td><td>17</td></tr><tr><td>5</td><td>.06</td><td>25</td><td>.29</td><td>45</td><td>1.1</td><td>65</td><td>4.6</td><td>85</td><td>18</td></tr><tr><td>6</td><td>.07</td><td>26</td><td>.31</td><td>46</td><td>1.2</td><td>66</td><td>4.9</td><td>86</td><td>19</td></tr><tr><td>7</td><td>.08</td><td>27</td><td>.33</td><td>47</td><td>1.3</td><td>67</td><td>5.3</td><td>87</td><td>21</td></tr><tr><td>8</td><td>.08</td><td>28</td><td>.35</td><td>48</td><td>1.4</td><td>68</td><td>5.7</td><td>88</td><td>22</td></tr><tr><td>9</td><td>.09</td><td>29</td><td>.38</td><td>49</td><td>1.5</td><td>69</td><td>6.1</td><td>89</td><td>24</td></tr><tr><td>10</td><td>.10</td><td>30</td><td>.41</td><td>50</td><td>1.6</td><td>70</td><td>6.5</td><td>90</td><td>26</td></tr><tr><td>11</td><td>.11</td><td>31</td><td>.44</td><td>51</td><td>1.7</td><td>71</td><td>7.0</td><td>91</td><td>28</td></tr><tr><td>12</td><td>.11</td><td>32</td><td>.47</td><td>52</td><td>1.8</td><td>72</td><td>7.5</td><td>92</td><td>30</td></tr><tr><td>13</td><td>.12</td><td>33</td><td>.50</td><td>53</td><td>2.0</td><td>73</td><td>8.1</td><td>93</td><td>32</td></tr><tr><td>14</td><td>.13</td><td>34</td><td>.54</td><td>54</td><td>2.1</td><td>74</td><td>8.6</td><td>94</td><td>34</td></tr><tr><td>15</td><td>.14</td><td>35</td><td>.58</td><td>55</td><td>2.3</td><td>75</td><td>9.3</td><td>95</td><td>37</td></tr><tr><td>16</td><td>.15</td><td>36</td><td>.62</td><td>56</td><td>2.4</td><td>76</td><td>9.9</td><td>96</td><td>39</td></tr><tr><td>17</td><td>.16</td><td>37</td><td>.66</td><td>57</td><td>2.6</td><td>77</td><td>10</td><td>97</td><td>42</td></tr><tr><td>18</td><td>.17</td><td>38</td><td>.71</td><td>58</td><td>2.8</td><td>78</td><td>11</td><td>98</td><td>45</td></tr><tr><td>19</td><td>.19</td><td>39</td><td>.76</td><td>59</td><td>3.0</td><td>79</td><td>12</td><td>99</td><td>49</td></tr></tbody></table>
+
 <p>Press the <kbd class="button">Env 3</kbd> button again. The display shows the second <span class="page-name">ENV3</span> sub-page.</p>
+<div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">ENV3</td>   <td class="cell" colspan="2">2nd-RELEASE-TIME=<span class="selected">0&nbsp;</span></td>        <td class="cell">REL-LEVEL=-99</td></tr>
+      <tr><td class="cell page-label" style="text-align: center;" colspan="2">KBD-TIME-SCALING=+0</td> <td class="cell" colspan="2" style="text-align: center;"">VEL-ATCK-TIME=0</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+  </figure>
 <h4 id="2nd-release-time" class="param-name"><span class="param">2ND-RELEASE-TIME</span><span class="range">Range: 0 to 99</span></h4>
 <h4 id="rel-level" class="param-name"><span class="param">REL-LEVEL</span><span class="range">Range: -99 to +99</span></h4>
-<p>2ND-<span class="param">RELEASE</span>- TIME and REL-LEVEL provide one more breakpoint in the envelope that occurs after the release time (TIME-5). The LEVEL value controls where the breakpoint will be placed relative to the current output level of the envelope at the time the key was released.</p>
-<p>The following diagram illustrates how the 2ND-<span class="param">RELEASE</span>-TIME and REL-LEVEL interact with the VEL-<span class="value">HARD</span> and <span class="value">SOFT</span> levels of a typical envelope shape.</p>
-<p>2nd release</p>
-<div class="vfd-callouts top"><div>T1</div><div>T2</div><div>T3</div></div>
-<p>2nd release level</p>
+<p><span class="param">2ND-RELEASE-TIME</span> and <span class="param">REL-LEVEL</span> provide one more breakpoint in the envelope that occurs after the release time (TIME-5). The <span class="param">LEVEL</span> value controls where the breakpoint will be placed relative to the current output level of the envelope at the time the key was released.</p>
+<p>The following diagram illustrates how the <span class="param">2ND-RELEASE-TIME</span> and <span class="param">REL-LEVEL</span> interact with the <span class="param">VEL-HARD</span> and <span class="param">SOFT</span> levels of a typical envelope shape.</p>
+<figure class="figure"><img src="images/second-release-time.png" alt="2nd-RELEASE-TIME and REL-LEVEL interaction."></figure>
+
 <h4 id="kbd-time-scaling" class="param-name"><span class="param">KBD-TIME-SCALING</span><span class="range">Range: -99 to +99</span></h4>
-<p>KBD-TIME-SCALING makes the envelope times shorter or longer above and below the <dfn class="term">WaveSample</dfn> root key depending on the key played. Positive values will make all envelope times shorter for keys above the root key, and longer for keys below the root key. Negative values will have the opposite effect. Envelope times for the <dfn class="term">WaveSample</dfn> root key are not affected by this parameter. 2ND-<span class="param">RELEASE</span>-TIME is also not affected by this parameter.</p>
+<p><span class="param">KBD-TIME-SCALING</span> makes the envelope times shorter or longer above and below the WaveSample root key depending on the key played. Positive values will make all envelope times shorter for keys above the root key, and longer for keys below the root key. Negative values will have the opposite effect. Envelope times for the WaveSample root key are not affected by this parameter. <span class="param">2ND-RELEASE-TIME</span> is also not affected by this parameter.</p>
 <h4 id="vel-atck-time" class="param-name"><span class="param">VEL-ATCK-TIME</span><span class="range">Range: 0 to 99</span></h4>
 <p>This parameter makes envelope attack time (TIME-1) respond to velocity. Raising the VEL-ATCK-TIME value above zero makes TIME-1 shorter with harder keystrikes. If TIME-1 is set to zero this parameter will have no effect.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button again. The display shows the third <span class="page-name">ENV3</span> sub-page.</p>
+<div class="vfd-bezel">
+  <table>
+    <colgroup>
+      <col class="page-col">
+      <col class="param-col">
+      <col class="param-col">
+      <col class="param-col">
+    </colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+        </th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr>
+        <td class="cell page-label">ENV3</td>
+        <td class="cell">MODE=<span class="selected">NORMAL</span></td>
+        <td class="cell" colspan="2">SOFT-VEL-CURVE=OFF</td>
+      </tr>
+      <tr>
+        <td class="cell page-label">&nbsp;</td>
+        <td class="cell">&nbsp</td>
+        <td class="cell">&nbsp</td>
+        <td class="cell">&nbsp</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+        </td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+        </td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+  </figure>
 <h4 id="envelope-mode" class="param-name"><span class="param">Envelope MODE</span><span class="range">Range: NORMAL, FINISH, REPEAT</span></h4>
 <p>The <span class="param">MODE</span> parameter has three states:</p>
 <ul>
@@ -217,27 +449,113 @@
   <li><span class="value">OFF</span> — The envelope uses only the VEL-<span class="value">HARD</span> levels, regardless of velocity.</li>
   <li>VEL, VEL1, or VEL2 — Incoming velocity will modulate the envelope levels between the <span class="value">SOFT</span> and VEL-<span class="value">HARD</span> level settings, according to one of the following velocity curves:</li>
 </ul>
-<table class="param-cols cols-3"><tbody><tr><td>VEL</td><td>VEL1</td><td>VEL2</td></tr></tbody></table>
-<div class="vfd-callouts top"><div>(linear) 100</div><div>(convex) 100</div><div>(concave) 100 Hard Vel</div></div>
-<p>Level</p>
-<h4 id="soft-vel" class="param-name">Soft Vel</h4>
-<table class="param-cols cols-4"><tbody><tr><td>0</td><td>0</td><td>0</td><td>Level</td></tr></tbody></table>
-<p>0       50       100         0      50       100             50       100</p>
-<table class="param-cols cols-3"><tbody><tr><td>Keyboard</td><td>Keyboard</td><td>Keyboard</td></tr><tr><td>Velocity</td><td>Velocity</td><td>Velocity</td></tr></tbody></table>
+<figure class="figure"><img src="images/soft-velocity-curve.png" alt="Velocity Curves."></figure>
+
 <h2 id="pitch-page">Pitch Page</h2>
 <p>The <span class="page-name">Pitch</span> page parameters determine the playback pitch for each <dfn class="term">WaveSample</dfn>.</p>
 <p>Press the <kbd class="button">Pitch</kbd> button. The display shows the <span class="page-name">PITCH</span> page.</p>
+
+<div class="vfd-bezel">
+  <table>
+    <colgroup>
+      <col class="page-col">
+      <col class="param-col">
+      <col class="param-col">
+      <col class="param-col">
+    </colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+        </th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr>
+        <td class="cell page-label">PITCH</td>
+        <td class="cell" colspan="2">WS-ROOT-KEY=<span class="selected">D3+</span></td>
+        <td class="cell">FINE-TUNE=+44</td>
+      </tr>
+      <tr>
+        <td class="cell page-label">&nbsp;</td>
+        <td class="cell">&nbsp;</td>
+        <td class="cell">&nbsp;</td>
+        <td class="cell">&nbsp;</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+        </td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+        </td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+  </figure>
 <h4 id="ws-root-key" class="param-name"><span class="param">WS-ROOT-KEY</span><span class="range">Range: K00 to K20, A0 to C8</span></h4>
 <p>This parameter allows you to change the <dfn class="term">WaveSample</dfn> root key. The root key is the key at which the <dfn class="term">WaveSample</dfn> plays back at the same pitch as it was recorded.</p>
 <aside class="note"><p>Note: Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
 <h4 id="fine-tune" class="param-name"><span class="param">FINE-TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
 <p>This parameter adjusts the <dfn class="term">WaveSample</dfn> fine-tuning.</p>
+
 <h2 id="pitch-mods-page">Pitch Mods Page</h2>
 <p>The <span class="page-name">Pitch Mods</span> page parameters control <dfn class="term">WaveSample</dfn> pitch modulation.</p>
 <p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the <span class="page-name">Pitch Mods</span> page.</p>
-<aside class="note"><p>Note: When <span class="lcd">STEREO=ON</span>, all pitch modulation in the right layer will be slaved to the settings in the <dfn class="term">WaveSamples</dfn> assigned to the same or overlapping key zones in the left layer. This includes</p></aside>
-<p>BEND  Range, NOISE RATE, and all pitch modulation. Pitch modulation settings for <dfn class="term">WaveSamples</dfn> in the right layer will be ignored.</p>
-<h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
+<div class="vfd-bezel">
+  <table>
+    <colgroup>
+      <col class="page-col">
+      <col class="param-col">
+      <col class="param-col">
+      <col class="param-col">
+    </colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+        </th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr>
+        <td class="cell page-label">PITCH</td>
+        <td class="cell">MODSRC=<span class="selected">ENV-2</span></td>
+        <td class="cell">MODAMT=+0</td>
+        <td class="cell">BEND=SYS</td>
+      </tr>
+      <tr>
+        <td class="cell page-label">&nbsp;</td>
+        <td class="cell">NOISE=+0</td>
+        <td class="cell">ENV1=+0.0</td>
+        <td class="cell">LFO=+1.0</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+        </td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+        </td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+  </figure>
+<aside class="note"><p>Note: When <span class="lcd">STEREO=ON</span>, all pitch modulation in the right layer will be slaved to the settings in the WaveSamples assigned to the same or overlapping key zones in the left layer. This includes BEND  Range, NOISE RATE, and all pitch modulation. Pitch modulation settings for WaveSamples in the right layer will be ignored.</p>
+</aside>
+  <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the pitch of the <dfn class="term">WaveSample</dfn> from among the 15 available modulators.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the assigned pitch modulator will affect pitch.</p>
@@ -249,13 +567,16 @@
 <p>This parameter controls the amount by which ENV1 will affect pitch.</p>
 <h4 id="lfo" class="param-name"><span class="param">LFO</span><span class="range">Range: -15.7 to +15.7 semitones</span></h4>
 <p>Determines the amount by which the LFO (Low Frequency Oscillator) will affect pitch.</p>
-<h3 id="ts-10-filters">TS-10 Filters</h3>
-<p>Each TS-10 <dfn class="term">WaveSample</dfn> has its own pair of digital filters, F1 and F2, that are connected in series.</p>
+
+<h2 id="ts-10-filters">TS-10 Filters</h2>
+<p>Each TS-10 WaveSample has its own pair of digital filters, F1 and F2, that are connected in series.</p>
 <p>The filter settings determine which frequencies will be allowed to pass through to the output.</p>
 <h4 id="low-pass-and-high-pass">Low-Pass and High-Pass</h4>
 <p>A low-pass filter allows only those frequencies below the filter cutoff frequency to pass—higher frequencies are filtered out. The reverse is true for the high-pass filters. In the TS-10, the first filter (F1) is always a low-pass filter. The second filter (F2) can be either a high-pass or low-pass filter.</p>
-<p>Poles — Rolloff Curves “Pole” is an engineering term that describes the steepness of a filter. Each additional pole gives a filter a steeper rolloff curve. In the TS-10, four poles are available, but they are divided between two filters; either as 2 and 2, or as 3 and 1. A single-pole filter will rolloff at 6 dB per octave; a 2- pole, 12 dB per octave; a 3-pole, 18 dB per octave; and 4-pole, 24 dB per octave. To reproduce a 4- pole low-pass filter (for that “classic” analog synth sound) you would set both filters to 2-pole low-pass. Each filter would then roll-off at 12 dB per octave, resulting in a total 24 dB per octave rolloff.</p>
-<p>Cutoff Frequency Every filter has a “knee” in the response curve, known as the cutoff frequency. This is the frequency at which the filter begins filtering out frequencies. The filter cutoff frequency can remain fixed over time, or it can be varied by modulating the filter with an envelope, LFO, velocity, etc. You can create some very interesting filter configurations by using a different modulator for each filter. For instance, try using pressure to modulate the filter. You can drive one filter up with pressure, while simultaneously driving the other down.</p>
+<h4 id="poles-rolloff-curves" class="param-name">Poles — Rolloff Curves</h4>
+  <p>“Pole” is an engineering term that describes the steepness of a filter. Each additional pole gives a filter a steeper rolloff curve. In the TS-10, four poles are available, but they are divided between two filters; either as 2 and 2, or as 3 and 1. A single-pole filter will rolloff at 6 dB per octave; a 2- pole, 12 dB per octave; a 3-pole, 18 dB per octave; and 4-pole, 24 dB per octave. To reproduce a 4- pole low-pass filter (for that “classic” analog synth sound) you would set both filters to 2-pole low-pass. Each filter would then roll-off at 12 dB per octave, resulting in a total 24 dB per octave rolloff.</p>
+<h4 id="cutoff-frequency" class="param-name">Cutoff Frequency</h4>
+  <p>Every filter has a “knee” in the response curve, known as the cutoff frequency. This is the frequency at which the filter begins filtering out frequencies. The filter cutoff frequency can remain fixed over time, or it can be varied by modulating the filter with an envelope, LFO, velocity, etc. You can create some very interesting filter configurations by using a different modulator for each filter. For instance, try using pressure to modulate the filter. You can drive one filter up with pressure, while simultaneously driving the other down.</p>
 <h2 id="edit-filters-page">Edit/Filters Page</h2>
 <p>Use the parameters on this page to adjust the filters.</p>
 <h4 id="mode-filter-mode">MODE (Filter Mode)</h4>
@@ -278,8 +599,8 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">FILTER1</td><td class="cell">LO-PASS/2</td><td class="cell">CUTOFF=003*</td><td class="cell">KBD=+00</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=LFO</td><td class="cell">MODAMT=+29</td><td class="cell">ENV2=+70</td></tr>
+      <tr><td class="cell page-label">FILTER1</td><td class="cell selected">LO-PASS/3</td><td class="cell">CUTOFF=150</td><td class="cell">KBD=+0</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=PRESS</td><td class="cell">MODAMT=+0</td><td class="cell">ENV2=+99</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -307,6 +628,7 @@
 <p>Determines the amount by which the assigned filter modulator will affect the filter cutoff frequency.</p>
 <h4 id="env2" class="param-name"><span class="param">ENV2</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which Envelope 2 will affect the filter cutoff frequency.</p>
+
 <h2 id="filter-2-page">FILTER 2 Page</h2>
 <p>Press the <kbd class="button">Filters</kbd> button again. The display shows the <span class="page-name">FILTER2</span> page:</p>
 <figure class="vfd-unit has-page">
@@ -323,8 +645,8 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">FILTER2</td><td class="cell">HI-PASS/2</td><td class="cell">CUTOFF=000*</td><td class="cell">KBD=+00</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=LFO</td><td class="cell">MODAMT=+29</td><td class="cell">ENV2=+70</td></tr>
+      <tr><td class="cell page-label">FILTER2</td><td class="cell selected">LO-PASS/1</td><td class="cell">CUTOFF=150</td><td class="cell">KBD=+0</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=PRESS</td><td class="cell">MODAMT=+0</td><td class="cell">ENV2=+99</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -344,19 +666,46 @@
 <p>The remaining parameters and ranges are the same as for FILTER1.</p>
 <h2 id="output-page">Output Page</h2>
 <p>The parameters on this page control the amplitude (or volume) of the <dfn class="term">WaveSample</dfn>.</p>
+<figure class="vfd-unit has-page">
+ <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">OUTPUT</td><td class="cell">BOOST=<span class="selected">OFF</span></td><td class="cell">LO/HI-KEY</td><td class="cell">C3+-C8</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">VOL=99</td><td class="cell">MODSRC=PRESS</td><td class="cell">MODAMT=+0</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  </figure>
+
 <h4 id="boost" class="param-name"><span class="param">BOOST</span><span class="range">Range: OFF or ON</span></h4>
-<p>Setting this parameter to ON gives the selected <dfn class="term">WaveSample</dfn> a +12dB boost in volume. Be careful that adding boost to a sample doesn’t cause it to become so loud that it starts to clip.</p>
+<p>Setting this parameter to ON gives the selected WaveSample a +12dB boost in volume. This should actually be considered a headroom control; when removing that 12dB of headroom by enabling boost may leave the sample vulnerable to clipping from other processes like effects. Be careful that adding boost to a sample doesn’t cause it to become so loud that it starts to clip.</p>
 <h4 id="lo-hi-key" class="param-name"><span class="param">LO/HI-KEY</span><span class="range">Range: K00 to K20, A0 to C8</span></h4>
-<p>This parameter determines the key range the selected <dfn class="term">WaveSample</dfn> will cover. Select the WS</p>
-<p>RNG  LO parameter, play the key that you want to be the low key, the cursor will then automatically switch to the HI parameter, which can then be set in the same fashion.</p>
+<p>This parameter determines the key range the selected WaveSample will cover. Select the <span class="param">WS RNG LO</span> parameter, play the key that you want to be the low key, the cursor will then automatically switch to the <span class="param">HI</span> parameter, which can then be set in the same fashion.</p>
 <aside class="note"><p>Note: Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
-<aside class="note"><p>Note: If you accidentally set the High Key below the Low Key, the selected <dfn class="term">WaveSample</dfn> will not be heard.</p></aside>
+<aside class="note"><p>Note: If you accidentally set the High Key below the Low Key, the selected WaveSample will not be heard.</p></aside>
 <h4 id="vol" class="param-name"><span class="param">VOL</span><span class="range">Range: 0 to 99</span></h4>
-<p>Determines the volume of each <dfn class="term">WaveSample</dfn>. Since Envelope 3 is permanently routed to control the volume of the <dfn class="term">WaveSample</dfn>, this parameter also determines the amount by which ENV3 will affect volume.</p>
+<p>Determines the volume of each WaveSample. Since Envelope 3 is permanently routed to control the volume of the WaveSample, this parameter also determines the amount by which ENV3 will affect volume.</p>
 <h4 id="modsrc-3" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
-<p>Selects a modulation source for the output volume of the <dfn class="term">WaveSample</dfn> from among the 15 available modulators. This is in addition to ENV3, which is always routed to volume.</p>
+<p>Selects a modulation source for the output volume of the WaveSample from among the 15 available modulators. This is in addition to ENV3, which is always routed to volume.</p>
 <h4 id="modamt-3" class="param-name"><span class="param">MODAMT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount by which the assigned volume modulator will affect the output volume of the <dfn class="term">WaveSample</dfn>. Raising this value will lower the unmodulated volume of the <dfn class="term">WaveSample</dfn>(s), creating the headroom necessary for the volume modulation. Note that the AMOUNT value is positive-going only. To obtain negative volume modulation, you must use the <span class="value">VOL</span> <span class="param">MODSRC</span> SHAPER (see later in this Section).</p>
+<p>Determines the amount by which the assigned volume modulator will affect the output volume of the WaveSample. Raising this value will lower the unmodulated volume of the <dfn class="term">WaveSample</dfn>(s), creating the headroom necessary for the volume modulation. Note that the AMOUNT value is positive-going only. To obtain negative volume modulation, you must use the <span class="value">VOL</span> <span class="param">MODSRC</span> SHAPER (see later in this Section).</p>
 <p>Press the <kbd class="button">Output</kbd> button again. The display shows the second OUTPUT sub-page:</p>
 <figure class="vfd-unit has-page">
   
@@ -372,8 +721,8 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">OUTPUT</td><td class="cell">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell">DESTINATION-BUS=DRY</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PAN=+00</td><td class="cell">MODSRC=KEYBD</td><td class="cell">MODAMT=+25</td></tr>
+      <tr><td class="cell page-label">OUTPUT</td><td class="cell">&nbsp;</td><td class="cell" colspan="2" style="text-align: right;">DESTINATION-BUS=<span class="selected">FX1</span></td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PAN=+0</td><td class="cell">MODSRC=LFO</td><td class="cell">MODAMT=+0</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -389,7 +738,7 @@
   
 </figure>
 <h4 id="destination-bus" class="param-name"><span class="param">DESTINATION-BUS</span><span class="range">Range: FX1, FX2, DRY, or AUX</span></h4>
-<p>Each <dfn class="term">WaveSample</dfn> within a Sampled Sound can be routed to one of four stereo “busses:”</p>
+<p>Each WaveSample within a Sampled Sound can be routed to one of four stereo “busses:”</p>
 <ul>
   <li>FX1, FX2, and DRY feed the main stereo outputs of the TS-10.</li>
   <li>AUX sends the voice directly to the AUX Outputs. Note that voices sent to the AUX Outputs are always dry; that is, they bypass the effects processor.</li>
@@ -397,43 +746,126 @@
 <p>The diagram below shows a common routing of the signals for each bus. See the sections on “Effects” for more on programming specific effects.</p>
 <figure class="figure"><img src="images/destination-bus.png" alt="Voice volume and pan feeding DESTINATION-BUS FX1, FX2, DRY, or AUX to Main or Aux outputs"><figcaption>Destination-bus signal routing.</figcaption></figure>
 <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Pans the <dfn class="term">WaveSample</dfn> within the stereo field. A setting of -99 is panned hard left, and +99 is panned hard right. A value of +00 pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
+<p>Pans the WaveSample within the stereo field. A setting of -99 is panned hard left, and +99 is panned hard right. A value of +00 pans the voice center. The effect of a pan modulator (below) will be added to this.</p>
 <h4 id="modsrc-4" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
-<p>Selects a modulation source for the <dfn class="term">WaveSample</dfn> pan from among the 15 available modulators.</p>
-<p>This will cause the <dfn class="term">WaveSample</dfn>’s location in the stereo field to vary with the output level of the modulation source.</p>
+<p>Selects a modulation source for the WaveSample pan from among the 15 available modulators.</p>
+<p>This will cause the WaveSample’s location in the stereo field to vary with the output level of the modulation source.</p>
 <h4 id="modamt-4" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the amount by which the assigned volume modulator will affect the pan of the <dfn class="term">WaveSample</dfn>.</p>
+<p>Determines the amount by which the assigned volume modulator will affect the pan of the WaveSample.</p>
 <h2 id="wave-page">Wave Page</h2>
-<p>The parameters on this page control all the <dfn class="term">WaveSample</dfn> pointers such as sample start, sample end, loop points, etc. Also on this page, you can choose the playback mode and set up modulation of the sample start and/or various loop modulation options.</p>
-<aside class="note"><p>Note: The <span class="page-name">Wave</span> page parameters can only be edited when the <span class="page-name">Edit Context</span> page is set up to edit a single <dfn class="term">WaveSample</dfn> (WAVESAMPLE=###). The LAYER EDIT NOT ALLOWED message will be displayed if you try to edit those parameters with the Edit Context set up to edit an entire layer or an entire Sampled Sound.</p></aside>
+<p>The parameters on this page control all the WaveSample pointers such as sample start, sample end, loop points, etc. Also on this page, you can choose the playback mode and set up modulation of the sample start and/or various loop modulation options.</p>
+<aside class="note"><p>Note: The <span class="page-name">Wave</span> page parameters can only be edited when the <span class="page-name">Edit Context</span> page is set up to edit a single WaveSample (WAVESAMPLE=###). The LAYER EDIT NOT ALLOWED message will be displayed if you try to edit those parameters with the Edit Context set up to edit an entire layer or an entire Sampled Sound.</p></aside>
 <p>Press the <kbd class="button">Wave</kbd> button. The first WAVE sub-page is displayed.</p>
+<figure class="vfd-unit has-page">
+    <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">WAVE</td><td class="cell" colspan="3" style="text-align: center;">PLAYBACK-MODE=<span class="selected">LOOP FORWARD</span></td></tr>
+      <tr><td class="cell page-label" colspan="2">SAMPLE-START=0</td><td class="cell" colspan="2">(0 ) END=68907   (99)</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  </figure>
 <h4 id="playback-mode" class="param-name"><span class="param">PLAYBACK-MODE</span><span class="range">Range: various</span></h4>
-<p>This parameter allows you to select one of five possible <dfn class="term">WaveSample</dfn> playback modes.</p>
+<p>This parameter allows you to select one of five possible WaveSample playback modes.</p>
 <ul>
-  <li><span class="value">FORWARD</span>-NO <span class="param">LOOP</span> — The TS-10 plays through the <dfn class="term">WaveSample</dfn> once, from sample start to sample end.</li>
-  <li>BACKWARD-NO <span class="param">LOOP</span> — The TS-10 plays through the <dfn class="term">WaveSample</dfn> once, only in reverse, from sample end to sample start.</li>
-  <li><span class="param">LOOP</span> <span class="value">FORWARD</span> — The TS-10 will play forward from sample start to loop end and return to loop start and will continue playing the loop while the key is depressed. Once the key is released the loop continues playing as the <dfn class="term">WaveSample</dfn> envelopes away.</li>
-  <li><span class="param">LOOP</span> BIDIRECTION — The TS-10 will play forward from sample start. At loop end, the TS-10 will play the <dfn class="term">WaveSample</dfn> in reverse to the loop start, playing the loop section back and forth until the key is released.</li>
-  <li><span class="param">LOOP</span> AND <span class="param">RELEASE</span> — The TS-10 will play forward from sample start and will continue playing the loop while the key is depressed. As soon as the key is released the TS-10 will go into release mode from wherever it is and will keep playing until the end of the <dfn class="term">WaveSample</dfn>, playing data after the loop. <span class="param">LOOP</span> AND <span class="param">RELEASE</span> works in conjunction with Envelope 3, which needs to have its <span class="param">MODE</span> parameter set to FINISH, and its TIME and LEVEL values adjusted appropriately.</li>
+  <li><span class="value">FORWARD</span>-NO <span class="param">LOOP</span> — The TS-10 plays through the WaveSample once, from sample start to sample end.</li>
+  <li>BACKWARD-NO <span class="param">LOOP</span> — The TS-10 plays through the WaveSample once, only in reverse, from sample end to sample start.</li>
+  <li><span class="param">LOOP</span> <span class="value">FORWARD</span> — The TS-10 will play forward from sample start to loop end and return to loop start and will continue playing the loop while the key is depressed. Once the key is released the loop continues playing as the WaveSample envelopes away.</li>
+  <li><span class="param">LOOP</span> BIDIRECTION — The TS-10 will play forward from sample start. At loop end, the TS-10 will play the WaveSample in reverse to the loop start, playing the loop section back and forth until the key is released.</li>
+  <li><span class="param">LOOP</span> AND <span class="param">RELEASE</span> — The TS-10 will play forward from sample start and will continue playing the loop while the key is depressed. As soon as the key is released the TS-10 will go into release mode from wherever it is and will keep playing until the end of the WaveSample, playing data after the loop. <span class="param">LOOP</span> AND <span class="param">RELEASE</span> works in conjunction with Envelope 3, which needs to have its <span class="param">MODE</span> parameter set to FINISH, and its TIME and LEVEL values adjusted appropriately.</li>
 </ul>
 <h4 id="sample-start" class="param-name">SAMPLE-START</h4>
 <p>This parameter allows you to set the sample start point.</p>
 <p>When the SAMPLE START or SAMPLE END parameters are displayed there are two ways to adjust them — you can move in large steps by adjusting the percent setting, or move one sample at a time by choosing the fine adjust.</p>
 <p>Sample Start Number (fine adjust)    Location in percent of entire wavesample (coarse adjust)</p>
 <p>The Coarse Adjust reading is the one in parentheses. Changing this value will move the Sample</p>
-<p>Start in steps of one percent of the entire <dfn class="term">WaveSample</dfn>. Use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons to move the Sample Start ahead until the dead space is gone when you play.</p>
-<p>Once you have gotten close using the percent setting, press the <kbd class="button">Left Arrow</kbd> button to underline the Fine Adjust setting. Now the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons will move the SAMPLE-START in small steps (less than 1%), letting you fine-tune its exact position while playing the <dfn class="term">WaveSample</dfn>.</p>
+<p>Start in steps of one percent of the entire WaveSample. Use the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons to move the Sample Start ahead until the dead space is gone when you play.</p>
+<p>Once you have gotten close using the percent setting, press the <kbd class="button">Left Arrow</kbd> button to underline the Fine Adjust setting. Now the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons will move the SAMPLE-START in small steps (less than 1%), letting you fine-tune its exact position while playing the WaveSample.</p>
 <h4 id="sample-end" class="param-name">Sample END</h4>
 <p>Allows you to set the sample end point. Again you see the sample number (Fine Adjust) and the percent (Coarse Adjust). Use the data entry controls to edit this parameter in the same fashion as the SAMPLE-START parameter.</p>
 <p>Press the <kbd class="button">Wave</kbd> button again. The second WAVE sub-page is displayed.</p>
+
+<figure class="vfd-unit has-page">
+  <div class="vfd-bezel">
+<table>
+  <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+  <thead>
+    <tr class="soft-row top">
+      <th class="page-tag-slot"></th>
+      <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+      <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+      <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+    </tr>
+  </thead>
+  <tbody class="vfd-screen">
+    <tr><td class="cell page-label">WAVE</td><td class="cell">&nbsp;</td><td class="cell" colspan="2" style="text-align: center;">LOOP-POSITION=<span class="selected">66431   </span>(96)</td></tr>
+    <tr><td class="cell page-label" colspan="2">LOOPSTART=66431    (96)</td><td class="cell" colspan="2" style="text-align: right;"> END=67065  .50 (97)</td></tr>
+  </tbody>
+  <tfoot>
+    <tr class="soft-row bottom">
+      <th class="page-tag-slot"></th>
+      <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+      <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+      <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</figure>
+
 <h4 id="loop-position" class="param-name">LOOP-POSITION</h4>
 <p>This parameter displays the <span class="lcd">LOOP-START</span> but moves both <span class="lcd">LOOP-START</span> and END, keeping the size of the loop the same. It lets you search for the perfect loop location after you’ve set up an optimal loop length.</p>
 <h4 id="loopstart" class="param-name">LOOPSTART</h4>
 <p>This parameter allows you to set the loop start point. After making a sample it is often necessary to “loop” (play over and over) a portion of the sound, so that it can sustain indefinitely when the key is held down.</p>
-<h4 id="loop-end" class="param-name">Loop END</h4>
+<h4 id="loop-end" class="param-name">LOOP END</h4>
 <p>This parameter allows you to set or change the loop end point.</p>
 <aside class="note"><p>Note:    The maximum loop length is 1.5 MegaWords.</p></aside>
 <p>Press the <kbd class="button">Wave</kbd> button a third time. The final WAVE sub-page is displayed.</p>
+<figure class="vfd-unit has-page">
+  <div class="vfd-bezel">
+<table>
+  <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+  <thead>
+    <tr class="soft-row top">
+      <th class="page-tag-slot"></th>
+      <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+      <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+      <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+    </tr>
+  </thead>
+  <tbody class="vfd-screen">
+    <tr><td class="cell page-label">WAVE</td><td class="cell">&nbsp;</td><td class="cell" colspan="2" style="text-align: center;">WAVE-MODULATION-TYPE=<span class="selected">OFF</span></td></tr>
+    <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODSRC=PRESS</td><td class="cell" style="text-align: center;">MODAMT=+0</td><td class="cell" style="text-align: right;">MODRANGE=32 K</td></tr>
+  </tbody>
+  <tfoot>
+    <tr class="soft-row bottom">
+      <th class="page-tag-slot"></th>
+      <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+      <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+      <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</figure>
 <h4 id="wave-modulation-type" class="param-name"><span class="param">WAVE-MODULATION-TYPE</span><span class="range">Range: various (see below)</span></h4>
 <p>This parameter allows you to modulate certain <span class="page-name">WAVE</span> page parameters with any of the 15 modulation sources. The WAVE-MODULATION-TYPE parameter specifies which of the <span class="page-name">WAVE</span> page parameters the modulation will affect. There are seven possible modulation types:</p>
 <ul>
@@ -457,8 +889,37 @@
 </ul>
 <p>To determine what value to set the RANGE parameter to, go to the Sample END parameter and examine at the value. This value tells you how large the selected <dfn class="term">WaveSample</dfn> is. You can then select the RANGE value that comes closest to the actual size of the <dfn class="term">WaveSample</dfn>.</p>
 <p>If you were working with a very small <dfn class="term">WaveSample</dfn>, you would adjust the wave modulation amount to something like this <span class="value">MOD</span> <span class="lcd">AMT=+99</span> <span class="lcd">RANGE=128</span>. If you were working with a much larger <dfn class="term">WaveSample</dfn>, you would adjust the wave modulation to <span class="value">MOD</span> <span class="lcd">AMT=+99</span> <span class="lcd">RANGE=1</span> MG (MegaSample). Think of RANGE as a multiplier, and <span class="value">MOD</span> <span class="lcd">AMT=-99</span> TO +99 as fine tuning.</p>
-<p><span class="page-name">Volume Mod  Source Shaper</span> Page Press the <kbd class="button">Mod Mixer</kbd> button. The <span class="value">VOL</span> <span class="param">MODSRC</span> SHAPER page is displayed.</p>
-<h4 id="a-b-fade-in-to" class="param-name"><span class="param">A - B FADE-IN - TO</span><span class="range">Range: 0 to 127</span></h4>
+<h2 id="volume-mod-source-shaper-page">Volume Mod Source Shaper Page </h2>
+  <p>Press the <kbd class="button">Mod Mixer</kbd> button. The <span class="page-name">VOL MODSRC SHAPER</span> page is displayed.</p>
+  <figure class="vfd-unit has-page">
+    <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">VEL</td><td class="cell">MODSRC SHAPER</td><td class="cell" colspan="2" style="text-align: right;">A-B FADE-IN=<span class="selected">0  </span> TO=127</td></tr>
+      <tr><td class="cell page-label" colspan="2">CURVE=CROSSFADE</td><td class="cell" colspan="2" style="text-align: right;"> C-D FADE-OUT=127 to=127</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+  </figure>
+
+  <h4 id="a-b-fade-in-to" class="param-name"><span class="param">A - B FADE-IN - TO</span><span class="range">Range: 0 to 127</span></h4>
 <h4 id="c-d-fade-out-to" class="param-name"><span class="param">C - D FADE-OUT - TO</span><span class="range">Range: 0 to 127</span></h4>
 <p>The volume modulator cross fade breakpoints (A and B, C and D) allow you to scale the effect of the volume modulator (selected on the <span class="page-name">Output</span> page <span class="param">MODSRC</span> parameter) to create keyboard, velocity, or other types of cross fades. Using the cross fade breakpoints, you can customize how the volume modulator will affect the volume of the <dfn class="term">WaveSample</dfn> across the range (or throw) of its output. This lets you use velocity, keyboard position, pressure or any other modulator to cross fade between <dfn class="term">WaveSamples</dfn>.</p>
 <p>Think of the A-B FADE-IN/C-D FADE-OUT parameters as a trapezoid, whose shape will affect the output of the modulator assigned to the <span class="page-name">Output</span> page <span class="param">MODSRC</span> parameter. The A-B FADE IN value sets the point along the throw of the volume modulator that the modulator’s output value will begin to rise above zero (i.e. fade in). The A-B FADE TO value sets the point along the throw of the volume modulator that the modulator’s output value will have risen to its maximum output. The C-D FADE OUT value sets the point along the throw of the volume modulator that the modulator’s output value will begin to fall from maximum (i.e. fade out). The C-D FADE TO value sets the point along the throw of the volume modulator that the modulator’s output value will have fallen to zero.</p>
