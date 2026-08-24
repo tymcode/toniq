@@ -39,7 +39,7 @@
 <h4 id="to-sync-the-ts-10-to-a-drum-machine">To Sync the TS-10 to a Drum Machine:</h4>
 <ul>
   <li>Connect the MIDI Out of the drum machine to the MIDI In of the TS-10.</li>
-  <li>Set the TS-10 to sync to MIDI clocks. On the <span class="page-name">Sequencer Control page</span>, select <span class="lcd">CLOCK=MIDI</span>.</li>
+  <li>Set the TS-10 to sync to MIDI clocks. On the <span class="page-name">Sequencer Control</span> page, select <span class="lcd">CLOCK=MIDI</span>.</li>
   <li>Set the drum machine to not send channel info, or to send on a MIDI Channel that is not being used by any of the TS-10 tracks. Again, MIDI Clocks, Start, Stop and Continue are sent and received regardless of MIDI channel or mode.</li>
   <li>The TS-10 should now sync to the drum machine’s clock. Starting, Stopping or Continuing the drum machine will Start, Stop and Continue the TS-10.</li>
 </ul>
@@ -48,17 +48,17 @@
   <li>Connect the MIDI Out of the TS-10 to the MIDI In of the drum machine.</li>
   <li>Set the drum machine to Tape Sync or External Clock, or any setting other than Internal or MIDI Clock. This way it will not play it’s own patterns, but will act only as a sound- producing device, sequenced from a track of the TS-10.</li>
   <li>Set the drum machine to <span class="value">POLY</span> (<span class="value">OMNI</span> Off) mode, and select a MIDI Channel.</li>
-  <li>From the <span class="page-name">Track MIDI Page</span>, assign a track on the TS-10 MIDI Status, and set it to the same MIDI Channel you assigned the drum machine.</li>
+  <li>From the <span class="page-name">Track MIDI</span> Page, assign a track on the TS-10 MIDI Status, and set it to the same MIDI Channel you assigned the drum machine.</li>
   <li>You should now be able to play the drum machine from the TS-10 keyboard. You can then record a track on the TS-10, from the TS-10 keyboard, which will play on the drum machine — just as if you were sequencing an external synthesizer. The advantage of this approach is that some drum machines respond better to velocity when played from MIDI than when played from their own front panels. Thus you may get more dynamic range out of your drum machine if you use this approach. The disadvantage is that you use up TS-10 sequencer memory to sequence the drum machine.</li>
 </ul>
 <p>Song Position Pointers The TS-10 transmits and receives Song Position Pointers via MIDI. Song Position Pointers are MIDI commands that tell a sequencer or drum machine where to locate within a song or sequence.</p>
 <p>When the TS-10 receives a Song Position Pointer, it will locate to the appropriate place in the selected song or sequence.</p>
-<p>The TS-10 sends a Song Position Pointer over MIDI whenever you use the Auto-Locate control (the GOTO function on the <span class="page-name">Locate Page</span>). Any receiving unit which recognizes Song Position</p>
+<p>The TS-10 sends a Song Position Pointer over MIDI whenever you use the Auto-Locate control (the GOTO function on the <span class="page-name">Locate</span> Page). Any receiving unit which recognizes Song Position</p>
 <p>Pointers will locate to the same spot.</p>
 <p>Not all remote MIDI devices recognize Song Position Pointers. Consult the manual of any other sequencing device you are using, to see if it does.</p>
 <h3 id="midi-song-selects">MIDI Song Selects</h3>
 <p>MIDI  Song Selects allow a sequencer such as the TS-10 to instruct a remote MIDI sequencer or drum machine to select a new song whenever you select a Sequence or Song on the TS-10.</p>
-<p>Whether or not the TS-10 sends or receives Song Selects depends on the setting of the <span class="param">SONG-SEL</span> parameter on the <span class="page-name">MIDI Control sub-page</span>.</p>
+<p>Whether or not the TS-10 sends or receives Song Selects depends on the setting of the <span class="param">SONG-SEL</span> parameter on the <span class="page-name">MIDI Control</span> sub-page.</p>
 <p>The TS-10 transmits and receives MIDI Song Selects in Sequence Mode as well as Song Mode (depending again on the setting on the <span class="param">SONG-SEL</span> parameter). This allows you to select any TS-10 sequencer location from a remote sequencer, computer or drum machine, and vice versa.</p>
 <p>They are set up as follows:</p>
 <ul>
@@ -77,7 +77,7 @@
   <li>You see that from the Seq/Song Tracks 1-6 or 7-12 pages, you can change what plays from the TS-10 keyboard simply by selecting different tracks. You can layer tracks together by double- clicking their soft buttons. You can adjust the mix, key range, transpose, etc. for any of the tracks.</li>
   <li>Now create another sequence. (The TS-10 will ask you SAVE CHANGES TO &lt;SEQ NAME&gt;?</li>
 </ul>
-<p>Answer <span class="lcd">*YES*</span>.) Name this sequence MIDI-OUT-2. For the tracks of the new sequence, go through the same procedure as before, but assigning different program numbers to the external instruments. (Remember always to change programs from the TS-10’s <span class="page-name">Track MIDI sub-page</span>.)</p>
+<p>Answer <span class="lcd">*YES*</span>.) Name this sequence MIDI-OUT-2. For the tracks of the new sequence, go through the same procedure as before, but assigning different program numbers to the external instruments. (Remember always to change programs from the TS-10’s <span class="page-name">Track MIDI</span> sub-page.)</p>
 <ul>
   <li>Again, you can play a different external instrument, or the TS-10 alone, or the TS-10 and an external instrument, depending on which track(s) you select.</li>
 </ul>
@@ -87,7 +87,7 @@
 <p>1) Every time you select a new sequence, each track can send a program change to an external instrument. You can change the sound that every remote MIDI device in your rig is playing with one press of a button. Also the same tracks will be selected or layered as when you last saved the sequence.</p>
 <p>2) When you select any track of a sequence, the TS-10 keyboard plays whatever program is on that track, or sends on the track’s MIDI channel, or both. Select a different track and you have a different configuration. From the Seq/Song Tracks 1-6 and 7-12 pages you select any combination of local and/or MIDI sounds.</p>
 <p>Of course you can record data on any of these sequences if you want. Whether you do or not, they will still work as templates. You can play external instruments from the TS-10 or from their own keyboards. You can have a track send a program change to a MIDI effects processor (like the ENSONIQ DP/4); have it send program changes to a sampler (like the ASR-10) to load sounds, or to a drum machine to change patterns, just by selecting a new sequence. No doubt you will come up with some applications of your own, based on your equipment and your needs.</p>
-<p><span class="value">MULTI</span>  Mode — Receiving on up to 12 MIDI channels When you select <span class="lcd">MODE=MULTI</span> on the <span class="page-name">MIDI Control Page</span>, the 12 tracks of the current sequence or song become like 12 “virtual instruments,” each receiving independently on its own MIDI channel, but all sharing the same 32 voices and the same effects set-up.</p>
+<p><span class="value">MULTI</span>  Mode — Receiving on up to 12 MIDI channels When you select <span class="lcd">MODE=MULTI</span> on the <span class="page-name">MIDI Control</span> Page, the 12 tracks of the current sequence or song become like 12 “virtual instruments,” each receiving independently on its own MIDI channel, but all sharing the same 32 voices and the same effects set-up.</p>
 <ul>
   <li>Press <kbd class="button">MIDI Control</kbd>. Set <span class="lcd">MODE=MULTI</span>. The 12 tracks of the current sequence will now each receive on its own MIDI channel, which you can select independently for each track.</li>
   <li>Create a new sequence. You might want to name this sequence *<span class="value">MULTI</span>-IN, or something similar, to indicate that it is specially set up as a multi-channel MIDI receiver.</li>
@@ -100,8 +100,8 @@
 <p>Incoming MIDI program changes will change the program on the track. Incoming MIDI volume messages will adjust the level of the track. Press <kbd class="button">Seq/Song Tracks 7-12</kbd> and do the same for the 6 tracks there.</p>
 <p>If (as is often the case) you don’t want all 12 MIDI channels to receive:</p>
 <ul>
-  <li>Press <kbd class="button">Track MIDI</kbd> until you return to the <span class="page-name">Status sub-page</span> and set the track(s) you want to disable to <span class="lcd">SEND/----</span>. Any tracks set to <span class="lcd">SEND/----</span> will not respond to incoming MIDI (though they will send MIDI when played from the TS-10 keyboard).</li>
-  <li>Press the <kbd class="button">Seqs/Songs</kbd> button to go to the <span class="page-name">Sequencer Bank page</span>, and select the same sequence again (press the soft button above or below the sequence location that’s already underlined).</li>
+  <li>Press <kbd class="button">Track MIDI</kbd> until you return to the <span class="page-name">Status</span> sub-page and set the track(s) you want to disable to <span class="lcd">SEND/----</span>. Any tracks set to <span class="lcd">SEND/----</span> will not respond to incoming MIDI (though they will send MIDI when played from the TS-10 keyboard).</li>
+  <li>Press the <kbd class="button">Seqs/Songs</kbd> button to go to the <span class="page-name">Sequencer Bank</span> page, and select the same sequence again (press the soft button above or below the sequence location that’s already underlined).</li>
 </ul>
 <p>The display will ask SAVE CHANGES TO &lt;SEQ NAME&gt;. Answer <span class="lcd">*YES*</span>. This saves the track assignments you made. You might want to save this sequence to disk for future use.</p>
 <ul>
@@ -112,9 +112,9 @@
   <li>When the TS-10 is in <span class="value">MULTI</span> mode, only the 12 tracks of the <span class="value">MULTI</span> mode will receive MIDI information. Sounds and presets selected in the normal fashion will not respond to MIDI at all.</li>
   <li>Each of the 12 sequencer tracks (six in Seq/Song Tracks 1-6, six in 7-12) is completely independent and polyphonic. The TS-10’s Dynamic Voice Allocation means each track can have up to all 32 voices if it needs them. If all 32 voices are in use and a track needs a voice, it will “steal” the voice from the oldest note (or the one with the lowest voice priority).</li>
   <li>The 12 tracks respond independently to MIDI program changes, allowing you to assign a new sound to a track via MIDI. The selected sound’s effect does not normally come with it — all of the 12 tracks in the sequence or song share the same effects setup, which can normally can be changed only by editing the effect from within sequence.</li>
-  <li>You can, however, cause a sound’s effects set-up to become the sequence effect (which will then be applied to all 12 tracks) by sending a program change for the desired program number plus 60 (i.e. 60 to 119) (see “Receiving Program Changes,” in <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control Page</span> Parameters</a>).</li>
+  <li>You can, however, cause a sound’s effects set-up to become the sequence effect (which will then be applied to all 12 tracks) by sending a program change for the desired program number plus 60 (i.e. 60 to 119) (see “Receiving Program Changes,” in <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control</span> Page Parameters</a>).</li>
   <li>Only one track can receive on a given MIDI Channel. If two (or more) tracks are set to the same MIDI Channel, the lower-numbered track will receive on that channel and any higher- numbered track(s) set to the same channel will not receive at all.</li>
-  <li>You may not want all 12 Tracks to receive. Tracks that you leave in the UNDEFINED state will not receive any MIDI data. Just define as many tracks as you need. Or set some tracks to <span class="lcd">SEND/----</span> on the <span class="page-name">Track MIDI page</span>. Tracks set to <span class="lcd">SEND/----</span> will not respond to incoming</li>
+  <li>You may not want all 12 Tracks to receive. Tracks that you leave in the UNDEFINED state will not receive any MIDI data. Just define as many tracks as you need. Or set some tracks to <span class="lcd">SEND/----</span> on the <span class="page-name">Track MIDI</span> page. Tracks set to <span class="lcd">SEND/----</span> will not respond to incoming</li>
 </ul>
 <p>MIDI data.</p>
 <p>Using the TS-10 with an External MIDI Sequencer For optimal results when using it with an external multi track sequencer, the TS-10 should be set up as described above to receive in Multi Mode, and the 12 tracks of the current sequence assigned to receive on the desired MIDI channels.</p>
@@ -143,13 +143,13 @@
 </ul>
 <p>&gt; For tracks which you want to play one of the other MIDI devices, but not play a TS-10 sound, set the Status to <span class="lcd">LOCAL-OFF</span>. The track will send MIDI to the sequencer, but will not play locally when the data is received. The MIDI Thru jack will send the information along to the remote MIDI devices.</p>
 <p>Using The TS-10 with a MIDI Guitar Controller The TS-10 makes an ideal voice module to use with any MIDI Guitar Controller which is capable of sending in MONO Mode. MONO Mode (MIDI Mode 4) allows a guitar controller to send the notes played on each string on a different MIDI Channel. This has the advantage of letting each string send pitch bends independently, which is the only way to truly recreate guitar technique on a synthesizer.</p>
-<p>Some earlier guitar synths do not support MONO mode. You will have to consult the manual of your particular model to see if it does. If you have a guitar synth which only sends in <span class="value">POLY</span> Mode (i.e. sends all six strings on the same MIDI Channel) you should use the TS-10 in <span class="value">POLY</span> Mode (or <span class="value">OMNI</span> Mode) and set the guitar controller to send on the MIDI Channel that is selected for the Base Channel on the <span class="page-name">MIDI Page</span>.</p>
+<p>Some earlier guitar synths do not support MONO mode. You will have to consult the manual of your particular model to see if it does. If you have a guitar synth which only sends in <span class="value">POLY</span> Mode (i.e. sends all six strings on the same MIDI Channel) you should use the TS-10 in <span class="value">POLY</span> Mode (or <span class="value">OMNI</span> Mode) and set the guitar controller to send on the MIDI Channel that is selected for the Base Channel on the <span class="page-name">MIDI</span> Page.</p>
 <p>For MIDI Guitar Controllers which do support MONO Mode, the TS-10 provides two types of MONO mode reception. The first is MONO A Mode, which is a simple and straightforward way of using MONO mode without getting involved with tracks or other complications:</p>
 <ul>
   <li>Connect the MIDI Out of the guitar controller (or its MIDI converter) to the MIDI In of the TS-10.</li>
   <li>Set your guitar controller to send in MONO Mode on Channels 1-6. (Some models have an easy shortcut for getting into this state.)</li>
-  <li>On the <span class="page-name">MIDI Control page</span>, set the Base MIDI Channel to <span class="lcd">BASE-CHAN=01</span>.</li>
-  <li>Also on the <span class="page-name">MIDI Control page</span>, set the <span class="param">MODE</span> parameter to <span class="lcd">MODE=MONO</span> A. This sets up the TS-10 to respond monophonically to 12 consecutive MIDI channels starting from the Base Channel (consult <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control Page</span> Parameters</a> for a more complete description of MONO Mode).</li>
+  <li>On the <span class="page-name">MIDI Control</span> page, set the Base MIDI Channel to <span class="lcd">BASE-CHAN=01</span>.</li>
+  <li>Also on the <span class="page-name">MIDI Control</span> page, set the <span class="param">MODE</span> parameter to <span class="lcd">MODE=MONO</span> A. This sets up the TS-10 to respond monophonically to 12 consecutive MIDI channels starting from the Base Channel (consult <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control</span> Page Parameters</a> for a more complete description of MONO Mode).</li>
 </ul>
 <p>You can now select sounds or presets on the TS-10, either from the front panel or from MIDI program changes, and the guitar controller will play those sounds exactly as if they were played from the keyboard.</p>
 <p>If you are a little more adventurous, and would like the flexibility to put a different sound program on every string of the guitar, you can use MONO B mode, in which each track of the current sequence receives monophonically on its own MIDI channel, and can receive program changes independently. Where MONO A is like <span class="value">POLY</span> mode with monophonic reception,</p>
@@ -158,7 +158,7 @@
   <li>Press <kbd class="button">MIDI Control</kbd>. Set the MIDI In mode to <span class="param">MODE</span>= MONO B. The 12 tracks of the current sequence will now each receive monophonically on its own MIDI channel</li>
   <li>Create a new sequence. You might want to name it “MONO-B IN”, or something similar, to indicate that it is specially set up for this type of reception.</li>
   <li>Press <kbd class="button">Seq/Song Tracks 1-6</kbd>. All the tracks except the first are still UNDEFINED. Select each of the six tracks, defining them and putting the current program on them. You can leave Seq/Song Tracks 7-12 undefined.</li>
-  <li>Press <kbd class="button">Track MIDI</kbd> twice to go to the MIDI <span class="page-name">CHANNEL sub-page</span>. Here you select the MIDI channels for the different tracks:</li>
+  <li>Press <kbd class="button">Track MIDI</kbd> twice to go to the MIDI <span class="page-name">CHANNEL</span> sub-page. Here you select the MIDI channels for the different tracks:</li>
 </ul>
 <p>The default values are as shown above. If you want to receive on a different set of MIDI channels, select each track and edit it accordingly. Unlike MONO A, in this mode the consecutive channel assignments are not automatic. You must set the tracks to six consecutive channels.</p>
 <p>Now you’re ready to play. A few things to bear in mind:</p>

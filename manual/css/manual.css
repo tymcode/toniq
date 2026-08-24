@@ -246,7 +246,8 @@ ul.tips + ul.tips {
 aside.note,
 aside.tip,
 aside.model-note,
-aside.edition-note {
+aside.edition-note,
+aside.warning {
   margin: 1.15rem 0;
   padding: 0.8rem 1rem;
   font-family: var(--font-ui);
@@ -265,9 +266,15 @@ aside.model-note {
   border-left-color: #6b3fa0;
 }
 
+aside.warning {
+  background: #fdecea;
+  border-left-color: #b42318;
+}
+
 aside.tip::before,
 aside.model-note::before,
-aside.note::before {
+aside.note::before,
+aside.warning::before {
   display: block;
   font-weight: 700;
   font-size: 0.72rem;
@@ -279,6 +286,7 @@ aside.note::before {
 aside.tip::before { content: "Tip"; color: #8a6d10; }
 aside.model-note::before { content: "TS-10 / TS-12"; color: #6b3fa0; }
 aside.note::before { content: "Note"; color: var(--ensoniq); }
+aside.warning::before { content: "Warning"; color: #b42318; }
 
 dfn.term,
 span.term {
@@ -376,8 +384,8 @@ strong.panel {
   font-family: var(--font-ui);
   font-weight: 700;
   font-size: 0.88em;
-  background: #4a4a4a;
-  color: #f3f3f3;
+  background: #969696;
+  color: #ffffff;
   border-radius: 4px;
   padding: 0.08em 0.4em 0.12em;
   box-shadow: 0 1px 0 #000;

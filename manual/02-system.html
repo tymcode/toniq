@@ -24,7 +24,7 @@
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
       <h1 id="section-2-system-page-parameters">Section 2 — System Page Parameters</h1>
     </header>
-    <p>These parameters control instrument-wide system functions. The settings of these parameters will remain in effect at all times and are preserved while the power is off. You can back-up the settings of the <span class="page-name">System Page</span> parameters for quick recall by saving the System Set-up on the <span class="page-name">Storage page</span> (see <a class="refer-to" href="13-storage.html#section-13-storage">Section 13 — Storage</a> for more information). The <span class="page-name">System Page</span> has three subpages. Press the <kbd class="button">System</kbd> button to display the first sub-page:</p>
+    <p>These parameters control instrument-wide system functions. The settings of these parameters will remain in effect at all times and are preserved while the power is off. You can back-up the settings of the <span class="page-name">System</span> Page parameters for quick recall by saving the System Set-up on the <span class="page-name">Storage</span> page (see <a class="refer-to" href="13-storage.html#section-13-storage">Section 13 — Storage</a> for more information). The <span class="page-name">System</span> Page has three subpages. Press the <kbd class="button">System</kbd> button to display the first sub-page:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -53,13 +53,13 @@
   </table>
   </div>
   
-  <figcaption><span class="page-name">System page</span> — <span class="param">TUNE</span> selected</figcaption>
+  <figcaption><span class="page-name">System</span> page — <span class="param">TUNE</span> selected</figcaption>
 </figure>
 <h4 id="tune" class="param-name"><span class="param">TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
 <p>Adjusts the overall master tuning of the keyboard up or down as much as one semitone. A value of +00 will set the TS-10 to concert A= 440 tuning.</p>
 <h4 id="pitch-bend" class="param-name"><span class="param">PITCH-BEND</span><span class="range">00 to 12 semitones Held Range: 00H to 12H semitones</span></h4>
 <p>Adjusts the system pitch bend range, which is the maximum amount of pitch bend that can be applied with the pitch wheel. Each increment represents a semitone.</p>
-<p>The bend range will apply to all programs except those which have been programmed to override the system bend range. If you adjust the system bend range, and a program does not seem to pitch-bend the correct amount, check the setting of the BEND parameter on the <span class="page-name">Pitch Mods page</span> for each voice in that particular program. If <span class="lcd">BEND=SYS</span>, then the program uses the system bend range. Otherwise, the program has its own bend range and will ignore the system bend range.</p>
+<p>The bend range will apply to all programs except those which have been programmed to override the system bend range. If you adjust the system bend range, and a program does not seem to pitch-bend the correct amount, check the setting of the BEND parameter on the <span class="page-name">Pitch Mods</span> page for each voice in that particular program. If <span class="lcd">BEND=SYS</span>, then the program uses the system bend range. Otherwise, the program has its own bend range and will ignore the system bend range.</p>
 <p>The “H” suffix on the semitone value indicates that Held <kbd class="button">Pitch</kbd> Bend mode is active. In this mode, only keys that are actually being held down will be affected by the pitch bend wheel.</p>
 <h4 id="touch" class="param-name"><span class="param">TOUCH</span><span class="range">Range: (described below)</span></h4>
 <p>Allows you to adjust the velocity response of the keyboard to match your playing style and technique. All velocity curves affect both internal dynamic response and the velocity values transmitted via MIDI. There are 9 velocity response (Touch) settings, which offer a lot of control for a wide range of playing styles:</p>
@@ -127,7 +127,7 @@
   <li>PRESET-DN — each time the Foot Switch is pressed, the TS-10 selects the previous Preset (functioning just the opposite to PRESET-UP).</li>
   <li>PLAY/STOP — the Foot Switch will play and stop the sequencer, exactly reproducing the actions of the <kbd class="button">Play</kbd> and <kbd class="button">Stop</kbd> buttons on the front panel.</li>
   <li>STOP/CONT — the Foot Switch will stop and continue the sequencer, exactly reproducing the actions of the <kbd class="button">Stop/Continue</kbd> button on the front panel.</li>
-  <li>STEP-REC — this setting allows the Foot Switch to be used in Sequencer <span class="function">Step Entry</span> record mode to advance the track location by the amount set in the step size parameter on the <span class="page-name">Step Entry page</span>. This is the same as using the <span class="lcd">*STEP*</span> command on that page.</li>
+  <li>STEP-REC — this setting allows the Foot Switch to be used in Sequencer <span class="function">Step Entry</span> record mode to advance the track location by the amount set in the step size parameter on the <span class="page-name">Step Entry</span> page. This is the same as using the <span class="lcd">*STEP*</span> command on that page.</li>
   <li>SONG-STEP — if a song step has been programmed with <span class="lcd">REPS=FS</span>, each time you press the Foot Switch, the TS-10 will select the sequence that is the next step in the song.</li>
 </ul>
 <aside class="tip"><p>Both the Sustain and Sostenuto pedals can be used to dynamically “latch” the current amount of pressure being exerted on the keyboard. Here’s how:</p></aside>
@@ -175,12 +175,12 @@
   
 </figure>
 <h4 id="slider" class="param-name"><span class="param">SLIDER</span><span class="range">Range: NORMAL, TIMBRE, or XCTRL</span></h4>
-<p>Determines whether the <kbd class="button">Data Entry Slider</kbd> will act as the Timbre or <span class="param">XCTRL</span> modulator while on any <span class="page-name">Sounds or Presets bank page</span>. This allows you to vary the Track Timbre or Track <span class="param">XCTRL</span> setting of the primary selected sound without having to switch to the Timbre or <span class="param">XCTRL</span> Track Parameter pages. Refer to <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a> for more information about the</p>
+<p>Determines whether the <kbd class="button">Data Entry Slider</kbd> will act as the Timbre or <span class="param">XCTRL</span> modulator while on any <span class="page-name">Sounds or Presets bank</span> page. This allows you to vary the Track Timbre or Track <span class="param">XCTRL</span> setting of the primary selected sound without having to switch to the Timbre or <span class="param">XCTRL</span> Track Parameter pages. Refer to <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a> for more information about the</p>
 <p>Timbre modulator.</p>
 <ul>
-  <li><span class="value">NORMAL</span> — the <kbd class="button">Data Entry Slider</kbd> will act normally, and will be disabled while on any <span class="page-name">Sounds or Presets bank page</span>.</li>
-  <li><span class="param">TIMBRE</span> — the <kbd class="button">Data Entry Slider</kbd> will control the Track Timbre setting of the primary selected sound while any <span class="page-name">Sounds or Presets bank page</span> is displayed. As a performance controller, the slider will only affect the primary sound.</li>
-  <li><span class="param">XCTRL</span> — the <kbd class="button">Data Entry Slider</kbd> will control the Track <span class="param">XCTRL</span> setting of the primary selected sound while any <span class="page-name">Sounds or Presets bank page</span> is displayed. As a performance controller, the slider will only affect the primary sound.</li>
+  <li><span class="value">NORMAL</span> — the <kbd class="button">Data Entry Slider</kbd> will act normally, and will be disabled while on any <span class="page-name">Sounds or Presets bank</span> page.</li>
+  <li><span class="param">TIMBRE</span> — the <kbd class="button">Data Entry Slider</kbd> will control the Track Timbre setting of the primary selected sound while any <span class="page-name">Sounds or Presets bank</span> page is displayed. As a performance controller, the slider will only affect the primary sound.</li>
+  <li><span class="param">XCTRL</span> — the <kbd class="button">Data Entry Slider</kbd> will control the Track <span class="param">XCTRL</span> setting of the primary selected sound while any <span class="page-name">Sounds or Presets bank</span> page is displayed. As a performance controller, the slider will only affect the primary sound.</li>
 </ul>
 <aside class="note"><p>Note: If you play and hold a note, modulate the sound with the Timbre or <span class="param">XCTRL</span> Slider, and then select another sound, the Timbre slider will no longer affect the sound of the held note.</p></aside>
 <h4 id="voice-muting" class="param-name"><span class="param">VOICE-MUTING</span><span class="range">Range: OFF or ON</span></h4>
@@ -192,7 +192,7 @@
 <h4 id="midi-trk-names" class="param-name"><span class="param">MIDI-TRK-NAMES</span><span class="range">Range: OFF or ON</span></h4>
 <p>This parameter determines whether preset and sequencer tracks will show the sound name or show *MIDI-CHAN-# instead of the sound name.</p>
 <ul>
-  <li><span class="value">OFF</span> — When a track’s MIDI STATUS is set to <span class="lcd">VOICE-OFF</span>, <span class="lcd">LOCAL-OFF</span>, or MIDI-<span class="param">LOOP</span> on the <span class="page-name">Track MIDI page</span>, any displays that would normally show the track’s sound name (the Tracks 1-6 and 7-12 pages in sequence mode, and all Track Parameter pages in Presets mode) will show *MIDI-CHAN-# instead of the name. This is helpful when using the TS-10 as a MIDI controller, or when sequencing remote MIDI devices, as it shows you at a glance which tracks will play only over MIDI, and on which MIDI channels.</li>
+  <li><span class="value">OFF</span> — When a track’s MIDI STATUS is set to <span class="lcd">VOICE-OFF</span>, <span class="lcd">LOCAL-OFF</span>, or MIDI-<span class="param">LOOP</span> on the <span class="page-name">Track MIDI</span> page, any displays that would normally show the track’s sound name (the Tracks 1-6 and 7-12 pages in sequence mode, and all Track Parameter pages in Presets mode) will show *MIDI-CHAN-# instead of the name. This is helpful when using the TS-10 as a MIDI controller, or when sequencing remote MIDI devices, as it shows you at a glance which tracks will play only over MIDI, and on which MIDI channels.</li>
   <li>ON — The track’s sound name will always appear on the Tracks 1-6 and 7–12 pages (in <span class="mode">Sequencer Mode</span>), and the Track Parameter pages (in Presets mode), no matter what the track’s MIDI STATUS is set to.</li>
 </ul>
 <h4 id="kbd-naming" class="param-name"><span class="param">KBD-NAMING</span><span class="range">Range: OFF or ON</span></h4>
@@ -242,10 +242,10 @@
   <li>U1-PROGRAMS — This setting enables dynamic <dfn class="term">Pitch-Table</dfn> Selection, allowing you to easily switch between different system pitch-tables in performance situations. When <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> you can instantly load new CUSTOM system pitch-tables without affecting the sound you are playing by selecting pitch-table programs loaded into <dfn class="term">BankSet</dfn> U1.</li>
 </ul>
 <p>This allows you to change the tuning while playing, without having to select a different sound.</p>
-<p>In order for this feature to work correctly, you must set the system pitch-table switch to <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System page</span> before “selecting” a new pitch-table program. If the program you indicate contains a valid pitch-table, it will be installed into the</p>
+<p>In order for this feature to work correctly, you must set the system pitch-table switch to <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page before “selecting” a new pitch-table program. If the program you indicate contains a valid pitch-table, it will be installed into the</p>
 <p>CUSTOM  System pitch-table, and you will immediately hear the new tuning. If it does not, nothing will happen. In either case there will be no visible indication of your action. The program name will not be underlined when you “select” it, which is a good indication that you are using a pitch-table from a program in <dfn class="term">BankSet</dfn> U1.</p>
 <p>You may save programs (with or without pitch-tables) onto <dfn class="term">BankSet</dfn> U1 in the normal way. It is suggested that you name programs that are to be used to install pitch-tables with names that describe the pitch-table they contain. For example, naming a program PT-PYTHA-F describes it as follows: PT for pitch-table program; PYTHA for Pythagorean tuning; and F for the tone center. This naming scheme is useful in making pitch-table programs easily recognizable.</p>
-<p>In MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and MONO A, incoming MIDI program changes 0 to 59 will select pitch-tables from <dfn class="term">BankSet</dfn> U1, if <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System page</span>. For more information about the MIDI <span class="param">MODE</span> parameter, see <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — MIDI Control</a></p>
+<p>In MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and MONO A, incoming MIDI program changes 0 to 59 will select pitch-tables from <dfn class="term">BankSet</dfn> U1, if <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page. For more information about the MIDI <span class="param">MODE</span> parameter, see <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — MIDI Control</a></p>
 <p>Page Parameters.</p>
 <aside class="tip"><p>When this parameter is selected (underlined), you can move the Data Entry Controls in real-time to change the pitch -tables while the sequencer is playing. This can create some interesting and fun effects.</p></aside>
 <p>Various ROM System <dfn class="term">Pitch-Tables</dfn> By using the data entry controls, you can select from a large assortment of traditional, modern, ethnic, and exotic pitch-tables for use as the System pitch-table. These ROM pitch-tables are:</p>
@@ -298,7 +298,7 @@
 <ul>
   <li>Insert the TSD-100 floppy disk into the disk drive and press the <kbd class="button">Storage</kbd> button twice.</li>
 </ul>
-<aside class="tip"><p>Pressing the <kbd class="button">Storage</kbd> button twice will automatically take you to the <span class="page-name">Disk Load Page</span>.</p></aside>
+<aside class="tip"><p>Pressing the <kbd class="button">Storage</kbd> button twice will automatically take you to the <span class="page-name">Disk Load</span> Page.</p></aside>
 <ul>
   <li>Press the Up or <kbd class="button">Down Arrow</kbd> button until the display reads <span class="lcd">TYPE=60-PROGRAMS</span>.</li>
   <li>Press the upper left soft button above the words LOAD FILE=__________. Using the Up or <kbd class="button">Down Arrow</kbd> button, find the file named ETH/<span class="value">MOD</span> PTS .</li>

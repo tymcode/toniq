@@ -25,8 +25,8 @@
       <h1 id="section-9-program-parameters-lfo-envelopes-pitch-filters">Section 9 — Program Parameters (LFO, Envelopes, Pitch, Filters)</h1>
     </header>
     <p>This section covers the parameters which can be edited independently for each Voice within a Program. For a general overview of the program concepts involved, refer to the previous section.</p>
-<p><span class="page-name">LFO Page</span> The <span class="page-name">LFO Page</span> contains the parameters related to the Low Frequency Oscillator. Each voice in a program has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo and other effects.</p>
-<p>Press the <kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the <span class="page-name">LFO page</span>:</p>
+<p><span class="page-name">LFO</span> Page The <span class="page-name">LFO</span> Page contains the parameters related to the Low Frequency Oscillator. Each voice in a program has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo and other effects.</p>
+<p>Press the <kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the <span class="page-name">LFO</span> page:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>LFO Rate</div><div>Rate Modulator</div><div>Rate Modulation Amount</div></div>
   <div class="vfd-bezel">
@@ -76,7 +76,7 @@
 <h4 id="depth-modamt" class="param-name"><span class="param">DEPTH MODAMT</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the assigned DEPTH modulator will affect the LFO DEPTH.</p>
 <p>The effect of <span class="param">DEPTH MODAMT</span> is <em>added to</em> the effect of the LFO DEPTH parameter.</p>
-<p>Press the <kbd class="button">LFO</kbd> button again to access the second sub-page of the <span class="page-name">LFO page</span>. The display reads:</p>
+<p>Press the <kbd class="button">LFO</kbd> button again to access the second sub-page of the <span class="page-name">LFO</span> page. The display reads:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -132,9 +132,9 @@
 <h3 id="env1-env2-env3-ts-10-envelopes">ENV1, ENV2, ENV3 — TS-10 Envelopes</h3>
 <p>An Envelope is a shape, or contour, which we apply to a signal source to make it change over time. Each TS-10 voice has three envelopes. These envelopes are automatically routed to the pitch, filter frequency and amplitude of the voice, though ENV1 and ENV2 can also be assigned elsewhere, wherever a modulator is selectable.</p>
 <ul>
-  <li>ENV1 is routed to the pitch of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods page</span> which lets you adjust the amount by which ENV1 will modulate the voice’s pitch.</li>
-  <li>ENV2 is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the ENV2 parameter on the <span class="page-name">Filters page</span> controls the ENV2 depth.</li>
-  <li>ENV3 is routed to the amplitude (volume) of the voice. ENV3 always controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output page</span> will occur before ENV3 in the signal flow.</li>
+  <li>ENV1 is routed to the pitch of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods</span> page which lets you adjust the amount by which ENV1 will modulate the voice’s pitch.</li>
+  <li>ENV2 is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the ENV2 parameter on the <span class="page-name">Filters</span> page controls the ENV2 depth.</li>
+  <li>ENV3 is routed to the amplitude (volume) of the voice. ENV3 always controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output</span> page will occur before ENV3 in the signal flow.</li>
 </ul>
 <p>The TS-10 envelopes are descended from the venerable ADSR (attack, decay, sustain, release) envelope, but with many refinements. While the ADSR envelope gives you control over three time segments and one level, the TS-10 envelopes give you control over four levels and five time segments.</p>
 <p>The illustration below shows the make-up of a TS-10 envelope:</p>
@@ -147,7 +147,7 @@
 </ul>
 <h2 id="env1-env2-and-env3-pages">ENV1, ENV2 and ENV3 Pages</h2>
 <p>The ENV1, ENV2 and ENV3 Pages, parameters and ranges are all the same except where indicated below. We will use ENV3 as our example, since its effect on the volume of the voice is immediately apparent.</p>
-<p>Press the <kbd class="button">Env 3</kbd> button to get to the first <span class="page-name">ENV3 sub-page</span> containing the five TIME parameters:</p>
+<p>Press the <kbd class="button">Env 3</kbd> button to get to the first <span class="page-name">ENV3</span> sub-page containing the five TIME parameters:</p>
 <p>Note that the numbers shown here represent times, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
 <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 00 to 99 (see</span></h4>
 <p><a href="#envelope-times">the Envelope Times chart below</a> for a listing of the time values)</p>
@@ -165,7 +165,7 @@
 <h4 id="track-release-mod-selector" class="param-name"><span class="param">Track Release Mod Selector</span><span class="range">Range: enabled (*) or disabled (blank)</span></h4>
 <p>Press the soft button below the <span class="param">RELEASE</span> parameter again to enable or disable the Track <span class="param">RELEASE</span> parameter independently for each Envelope. When an asterisk (*) is displayed, the Track <span class="param">RELEASE</span> parameter will affect the Release Time of the Envelope. If there is no asterisk, then the Track <span class="param">RELEASE</span> parameter will have no effect on the Release Time of the Envelope. This allows you to define whether or not each Envelope in each Voice in a Program will have its Release Time modulated by the Track <span class="param">RELEASE</span> parameter. Successive presses of the soft button below <span class="param">RELEASE</span> will toggle between the Release value and the <span class="param">RELEASE</span> Mod selector.</p>
 <table class="data-table lookup" id="envelope-times"><caption>ENVELOPE TIMES</caption><thead><tr><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th><th>Value</th><th>Time (in sec)</th></tr></thead><tbody><tr><td>0</td><td>.00</td><td>20</td><td>.20</td><td>40</td><td>.82</td><td>60</td><td>3.2</td><td>80</td><td>13</td></tr><tr><td>1</td><td>.01</td><td>21</td><td>.22</td><td>41</td><td>.88</td><td>61</td><td>3.5</td><td>81</td><td>14</td></tr><tr><td>2</td><td>.02</td><td>22</td><td>.23</td><td>42</td><td>.94</td><td>62</td><td>3.7</td><td>82</td><td>15</td></tr><tr><td>3</td><td>.03</td><td>23</td><td>.25</td><td>43</td><td>1.0</td><td>63</td><td>4.0</td><td>83</td><td>16</td></tr><tr><td>4</td><td>.04</td><td>24</td><td>.27</td><td>44</td><td>1.0</td><td>64</td><td>4.3</td><td>84</td><td>17</td></tr><tr><td>5</td><td>.06</td><td>25</td><td>.29</td><td>45</td><td>1.1</td><td>65</td><td>4.6</td><td>85</td><td>18</td></tr><tr><td>6</td><td>.07</td><td>26</td><td>.31</td><td>46</td><td>1.2</td><td>66</td><td>4.9</td><td>86</td><td>19</td></tr><tr><td>7</td><td>.08</td><td>27</td><td>.33</td><td>47</td><td>1.3</td><td>67</td><td>5.3</td><td>87</td><td>21</td></tr><tr><td>8</td><td>.08</td><td>28</td><td>.35</td><td>48</td><td>1.4</td><td>68</td><td>5.7</td><td>88</td><td>22</td></tr><tr><td>9</td><td>.09</td><td>29</td><td>.38</td><td>49</td><td>1.5</td><td>69</td><td>6.1</td><td>89</td><td>24</td></tr><tr><td>10</td><td>.10</td><td>30</td><td>.41</td><td>50</td><td>1.6</td><td>70</td><td>6.5</td><td>90</td><td>26</td></tr><tr><td>11</td><td>.11</td><td>31</td><td>.44</td><td>51</td><td>1.7</td><td>71</td><td>7.0</td><td>91</td><td>28</td></tr><tr><td>12</td><td>.11</td><td>32</td><td>.47</td><td>52</td><td>1.8</td><td>72</td><td>7.5</td><td>92</td><td>30</td></tr><tr><td>13</td><td>.12</td><td>33</td><td>.50</td><td>53</td><td>2.0</td><td>73</td><td>8.1</td><td>93</td><td>32</td></tr><tr><td>14</td><td>.13</td><td>34</td><td>.54</td><td>54</td><td>2.1</td><td>74</td><td>8.6</td><td>94</td><td>34</td></tr><tr><td>15</td><td>.14</td><td>35</td><td>.58</td><td>55</td><td>2.3</td><td>75</td><td>9.3</td><td>95</td><td>37</td></tr><tr><td>16</td><td>.15</td><td>36</td><td>.62</td><td>56</td><td>2.4</td><td>76</td><td>9.9</td><td>96</td><td>39</td></tr><tr><td>17</td><td>.16</td><td>37</td><td>.66</td><td>57</td><td>2.6</td><td>77</td><td>10</td><td>97</td><td>42</td></tr><tr><td>18</td><td>.17</td><td>38</td><td>.71</td><td>58</td><td>2.8</td><td>78</td><td>11</td><td>98</td><td>45</td></tr><tr><td>19</td><td>.19</td><td>39</td><td>.76</td><td>59</td><td>3.0</td><td>79</td><td>12</td><td>99</td><td>49</td></tr></tbody></table>
-<p>Press <kbd class="button">Env 3</kbd> again. This takes you to the second <span class="page-name">ENV3 sub-page</span>, which shows the five LEVELS:</p>
+<p>Press <kbd class="button">Env 3</kbd> again. This takes you to the second <span class="page-name">ENV3</span> sub-page, which shows the five LEVELS:</p>
 <h4 id="peak" class="param-name"><span class="param">PEAK</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the level the envelope will reach at the end of the time defined by <span class="param">ATTACK</span>.</p>
 <h4 id="break-1" class="param-name"><span class="param">BREAK 1</span><span class="range">Range: 00 to 99</span></h4>
@@ -209,9 +209,9 @@
 <h4 id="vel-rels" class="param-name"><span class="param">VEL-RELS</span><span class="range">Range: -99 to +99</span></h4>
 <p>This parameter makes envelope <span class="param">RELEASE</span> time respond to velocity. When the value of VEL-RELS is positive, a harder keystrike will result in a longer release. Likewise, when the value of VEL-RELS is negative, a harder keystrike will result in a shorter release. Note that this parameter will have no effect if <span class="param">RELEASE</span> = 00.</p>
 <h2 id="pitch-page">Pitch Page</h2>
-<p>The <span class="page-name">Pitch page</span> parameters determine the “manual” levels for the pitch of the voice, as well as the poly/mono voice assignment mode.</p>
-<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the OCTAVE and SEMITONE values on the <span class="page-name">PITCH page</span> will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the Drum Map Editor.</p></aside>
-<p>Press the <kbd class="button">Pitch</kbd> button. The display shows the <span class="page-name">PITCH page</span>.</p>
+<p>The <span class="page-name">Pitch</span> page parameters determine the “manual” levels for the pitch of the voice, as well as the poly/mono voice assignment mode.</p>
+<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the OCTAVE and SEMITONE values on the <span class="page-name">PITCH</span> page will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the Drum Map Editor.</p></aside>
+<p>Press the <kbd class="button">Pitch</kbd> button. The display shows the <span class="page-name">PITCH</span> page.</p>
 <h4 id="octave" class="param-name"><span class="param">OCTAVE</span><span class="range">Range: -4 to +4 octaves</span></h4>
 <p>Changes the pitch of the voice by octaves.</p>
 <h4 id="semitone" class="param-name"><span class="param">SEMITONE</span><span class="range">Range: -11 to +11</span></h4>
@@ -235,26 +235,26 @@
 <h4 id="glidetime" class="param-name"><span class="param">GLIDETIME</span><span class="range">Range: 00 to 99</span></h4>
 <p>This parameter controls the time it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses Constant-Time Portamento. This means that it will take the same amount of time to glide between notes that are close together (i.e.: C4 to D4) as it will to glide between notes that are far apart (i.e.: C4 to C7).</p>
 <h2 id="pitch-mods-page">Pitch Mods Page</h2>
-<p>The <span class="page-name">Pitch Mods page</span> parameters control pitch modulation for the voice.</p>
-<p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the <span class="page-name">Pitch Mods page</span>.</p>
+<p>The <span class="page-name">Pitch Mods</span> page parameters control pitch modulation for the voice.</p>
+<p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the <span class="page-name">Pitch Mods</span> page.</p>
 <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the pitch of the voice from among the 15 available modulators.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the assigned pitch modulator will affect pitch.</p>
 <h4 id="bend" class="param-name"><span class="param">BEND</span><span class="range">Range: 00 to 12, 00H to 12H, or SYS</span></h4>
-<p>Determines whether each voice in the program will have its own independent pitch bend range, or whether it will use the system pitch bend range to determine the maximum pitch change that can be applied by the pitch bend wheel. When <span class="lcd">BEND=SYS</span>, the voice will use the system pitch bend range setting. See the description of the PITCH-BEND parameter on the <span class="page-name">System Page</span> in</p>
+<p>Determines whether each voice in the program will have its own independent pitch bend range, or whether it will use the system pitch bend range to determine the maximum pitch change that can be applied by the pitch bend wheel. When <span class="lcd">BEND=SYS</span>, the voice will use the system pitch bend range setting. See the description of the PITCH-BEND parameter on the <span class="page-name">System</span> Page in</p>
 <h4 id="pitchtbl" class="param-name"><span class="param">PITCHTBL</span><span class="range">Range: SYSTEM, ALL-C4, or CUSTOM</span></h4>
 <p>Pitch-tables allow you to map each key on the keyboard to play at any desired pitch. They provide a user-definable tuning table for each note on the keyboard. This parameter lets you select which pitch-table the voice will use.</p>
 <p>When you create a custom pitch-table, the TS-10 stores the pitch-table inside the program.</p>
-<p>Within the program, the custom pitch-table uses the space normally used to store the parameters for voices 5 and 6. Therefore, when there is a custom pitch-table in a program, voices 5 and 6 are not available. They are replaced on the <span class="page-name">Select Voice page</span> by the EDIT PITCH TABLE function.</p>
+<p>Within the program, the custom pitch-table uses the space normally used to store the parameters for voices 5 and 6. Therefore, when there is a custom pitch-table in a program, voices 5 and 6 are not available. They are replaced on the <span class="page-name">Select Voice</span> page by the EDIT PITCH TABLE function.</p>
 <p>Of the remaining four voices, each individual voice can be assigned to use either the SYSTEM pitch-table, no pitch-table (ALL-C4), or the CUSTOM pitch-table that resides within the program.</p>
 <ul>
-  <li>SYSTEM — Uses whatever is selected as the system pitch-table on the <span class="page-name">System page</span>. Normally this is standard twelve-tone equal temperament tuning across the keyboard. However, a custom pitch-table can be copied into the system pitch-table for use by all sounds. The PITCH-TABLE parameter on the <span class="page-name">System page</span> determines what the System pitch-table will be.</li>
+  <li>SYSTEM — Uses whatever is selected as the system pitch-table on the <span class="page-name">System</span> page. Normally this is standard twelve-tone equal temperament tuning across the keyboard. However, a custom pitch-table can be copied into the system pitch-table for use by all sounds. The PITCH-TABLE parameter on the <span class="page-name">System</span> page determines what the System pitch-table will be.</li>
   <li>ALL-C4 — No pitch tracking — the same pitch (C4) plays across the keyboard.</li>
   <li>CUSTOM — User definable pitch-table. This option is only available if a custom pitch-table has been created in the program.</li>
 </ul>
 <h4 id="env1" class="param-name"><span class="param">ENV1</span><span class="range">Range: -99 to +99</span></h4>
-<p>This hard-wired modulation routing determines the amount by which Envelope 1 will affect pitch. Unlike applying ENV-1 as a pitch modulator with the generic pitch <span class="param">MODSRC</span> parameter, the hard-wired ENV1 parameter forces Envelope 1 to always sustain at the manual pitch setting on the <span class="page-name">Pitch page</span>. The Envelope 1 <span class="param">SUSTAIN</span> level no longer controls the pitch at which Envelope 1 will sustain. Instead, it becomes an &quot;equator-shift&quot; value, determining which Envelope 1 level values will cause the pitch to rise above the manual pitch setting and which level values will drive it below. Envelope 1 level values equal to the <span class="param">SUSTAIN</span> level value will sound at the manual setting. Higher level values will shift the pitch upward from the manual pitch setting, and lower values will shift the pitch downward. This feature allows for the creation of bidirectional pitch envelope shapes, while conveniently ensuring that voices will always sustain at the manual pitch setting, without the need to offset the manual pitch setting on the <span class="page-name">Pitch page</span>.</p>
+<p>This hard-wired modulation routing determines the amount by which Envelope 1 will affect pitch. Unlike applying ENV-1 as a pitch modulator with the generic pitch <span class="param">MODSRC</span> parameter, the hard-wired ENV1 parameter forces Envelope 1 to always sustain at the manual pitch setting on the <span class="page-name">Pitch</span> page. The Envelope 1 <span class="param">SUSTAIN</span> level no longer controls the pitch at which Envelope 1 will sustain. Instead, it becomes an &quot;equator-shift&quot; value, determining which Envelope 1 level values will cause the pitch to rise above the manual pitch setting and which level values will drive it below. Envelope 1 level values equal to the <span class="param">SUSTAIN</span> level value will sound at the manual setting. Higher level values will shift the pitch upward from the manual pitch setting, and lower values will shift the pitch downward. This feature allows for the creation of bidirectional pitch envelope shapes, while conveniently ensuring that voices will always sustain at the manual pitch setting, without the need to offset the manual pitch setting on the <span class="page-name">Pitch</span> page.</p>
 <h4 id="lfo" class="param-name"><span class="param">LFO</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the LFO (Low Frequency Oscillator) will affect pitch.</p>
 <h2 id="filters-page">Filters Page</h2>
@@ -269,7 +269,7 @@
 <p>Filter Configurations The diagrams below show a number of possible filter configurations. On the left are the response curves of the two filters shown separately. On the right are some of the possible shapes of the combined filters.</p>
 <figure class="figure"><img src="images/filter-configurations.png" alt="Filter 1 plus Filter 2 response curves combining into 4-pole low-pass or bandpass shapes"><figcaption>Possible filter configurations.</figcaption></figure>
 <h2 id="filter-1-page">FILTER 1 Page</h2>
-<p>Press the <kbd class="button">Filters</kbd> button. The display shows the <span class="page-name">FILTER1 page</span>.</p>
+<p>Press the <kbd class="button">Filters</kbd> button. The display shows the <span class="page-name">FILTER1</span> page.</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Filter 1 Mode</div><div>Filter 1 Cutoff Frequency</div><div>Filter 1 Keyboard Scaling Amount</div></div>
   <div class="vfd-bezel">
@@ -317,7 +317,7 @@
 <h4 id="env2" class="param-name"><span class="param">ENV2</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which Envelope 2 will affect the filter cutoff frequency.</p>
 <h2 id="filter-2-page">FILTER 2 Page</h2>
-<p>Press the <kbd class="button">Filters</kbd> button again. The display shows the <span class="page-name">FILTER2 page</span>:</p>
+<p>Press the <kbd class="button">Filters</kbd> button again. The display shows the <span class="page-name">FILTER2</span> page:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Filter 2 Mode</div><div></div><div></div></div>
   <div class="vfd-bezel">
@@ -354,7 +354,7 @@
 <p>FILTER 2 can be configured as a 2-pole or 1-pole high-pass filter, or a 2-pole or 1-pole low-pass filter.</p>
 <p>The remaining parameters and ranges are the same as for FILTER 1.</p>
 <h2 id="output-page">Output Page</h2>
-<p>The parameters on the <span class="page-name">Output page</span>, along with Envelope 3, control the overall volume and panning of the voice, along with keyboard scaling, effects routing and voice “voice stealing” priority. The <span class="page-name">Output page</span> consists of three separate sub-pages.</p>
+<p>The parameters on the <span class="page-name">Output</span> page, along with Envelope 3, control the overall volume and panning of the voice, along with keyboard scaling, effects routing and voice “voice stealing” priority. The <span class="page-name">Output</span> page consists of three separate sub-pages.</p>
 <p>Press the <kbd class="button">Output</kbd>. button. The first OUTPUT sub-page is displayed.</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Keyboard Scale Amt. (or Zone)</div><div></div><div>High and Low keys for Keyboard Scaling or Zone</div></div>
@@ -399,8 +399,7 @@
 <p>This parameter determines the volume of each voice. Since Envelope 3 is permanently routed to control the volume of the voice, this parameter also determines the amount by which ENV3 will affect volume.</p>
 <p>Values above +00 dB are intended to let you compensate for the effects of heavy filtering or enveloping, and for the fact that some waves simply have less apparent loudness than others.</p>
 <p>For example, a percussion sample, which is by nature a quick peak, has less energy than a sustaining square wave. A higher <span class="value">VOL</span> setting lets you raise the level of such waves to equal that of “louder” waves.</p>
-<h3 id="warning">Warning:</h3>
-<p>We strongly recommended against setting high <span class="value">VOL</span> levels to all the waves in your sounds just to make them louder — doing so will result in clipping (distorting) when you play more than one or two notes.</p>
+<aside class="warning"><p>We strongly recommended against setting high <span class="value">VOL</span> levels to all the waves in your sounds just to make them louder — doing so will result in clipping (distorting) when you play more than one or two notes.</p></aside>
 <h4 id="modsrc-3" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the output volume of the voice from among the 15 available modulators. This is in addition to ENV3, which is always routed to volume.</p>
 <h4 id="modamt-3" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>

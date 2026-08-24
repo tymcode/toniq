@@ -907,6 +907,7 @@ NOT_HEADING_START = re.compile(
     re.I,
 )
 TIP_RE = re.compile(r"^Tip:\s*(.*)$", re.I)
+WARNING_RE = re.compile(r"^Warning[:!]?$", re.I)
 VFD_EQ_RE = re.compile(r"[A-Z0-9*][A-Z0-9+\-/*]*=[A-Z0-9+\-/*().]+")
 LCD_STAR_RE = re.compile(r"\*[A-Z0-9*][A-Z0-9+\-/*]*\*")
 # Complete field strings as they appear on the 2×40 (not parameter names).
@@ -1957,6 +1958,8 @@ def classify(line: str) -> str:
         return "blank"
     if TIP_RE.match(line):
         return "tip"
+    if WARNING_RE.match(line):
+        return "warning"
     if RANGE_RE.match(line):
         if RANGE_RE.match(line).group(1).strip() in ("Song", "Seq"):
             return "named-range-cont"
@@ -1975,7 +1978,7 @@ def classify(line: str) -> str:
         return "h2"
     if re.match(r"^(Dual|Parallel|Serial) Effects$", line):
         return "h2"
-    if line in ("Warning", "Important") or line.endswith(" Warning"):
+    if line == "Important" or line.endswith(" Warning"):
         return "h3"
     toc = toc_heading_kind(line)
     if toc:
@@ -3984,7 +3987,7 @@ def wrap_page_names(escaped: str, terms: dict[str, list[str]]) -> str:
         name = name.strip(" ,-")
         if not accept(name):
             return f"{name} {suffix}"
-        return f'<span class="page-name">{name} {suffix}</span>'
+        return f'<span class="page-name">{name}</span> {suffix}'
 
     def repl_on_the(m: re.Match[str]) -> str:
         return tag(m.group(1), m.group(2))
@@ -4648,6 +4651,25 @@ def to_html_body(
             rest = TIP_RE.match(line).group(1)
             chunks.append(f'<aside class="tip"><p>{tags(rest)}</p></aside>')
             i += 1
+            continue
+        if kind == "warning":
+            j = i + 1
+            buf = ""
+            while j < len(lines):
+                nxt = lines[j]
+                if classify(nxt) != "para":
+                    break
+                if not buf:
+                    buf = nxt
+                    j += 1
+                    continue
+                if buf.rstrip().endswith((".", "!", "?")):
+                    break
+                buf = f"{buf} {nxt}"
+                j += 1
+            if buf:
+                chunks.append(f'<aside class="warning"><p>{tags(buf)}</p></aside>')
+            i = j
             continue
         if kind == "vfd":
             mock = vfd_unit(line)

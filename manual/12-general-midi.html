@@ -139,7 +139,7 @@
   
   
 </figure>
-<p>2. On the first <span class="page-name">MIDI Control sub-page</span>, press the upper middle soft button on the display to select the <span class="param">GMIDI</span> parameter (it should be underlined).</p>
+<p>2. On the first <span class="page-name">MIDI Control</span> sub-page, press the upper middle soft button on the display to select the <span class="param">GMIDI</span> parameter (it should be underlined).</p>
 <p>3.   Press the <kbd class="button">Up Arrow</kbd> button to enter <span class="mode">General MIDI</span> mode.</p>
 <p>If the sequencer is running, the SEQUENCER MUST BE STOPPED message will be displayed. If the sequencer is stopped, the “SAVE CHANGES?” prompt will be displayed (if necessary). Otherwise, the following prompt will be displayed:</p>
 <figure class="vfd-unit">
@@ -172,8 +172,8 @@
   
   
 </figure>
-<p>4. Pressing the soft button beneath <span class="lcd">*NO*</span> will leave the TS-10 system unchanged, returning you to the first <span class="page-name">MIDI Control sub-page</span>.</p>
-<p>5. Pressing the soft button above <span class="lcd">*YES*</span> will enable <span class="mode">General MIDI</span> Mode. All LEDs will be off and all buttons (except the Arrow buttons and the soft buttons) will be disabled. The TS-10 will display the <span class="page-name">General MIDI Mode page</span> as follows:</p>
+<p>4. Pressing the soft button beneath <span class="lcd">*NO*</span> will leave the TS-10 system unchanged, returning you to the first <span class="page-name">MIDI Control</span> sub-page.</p>
+<p>5. Pressing the soft button above <span class="lcd">*YES*</span> will enable <span class="mode">General MIDI</span> Mode. All LEDs will be off and all buttons (except the Arrow buttons and the soft buttons) will be disabled. The TS-10 will display the <span class="page-name">General MIDI Mode</span> page as follows:</p>
 <figure class="vfd-unit">
   <div class="vfd-callouts top"><div>Press here for GM-PANIC RESET</div><div>MIDI reception ON/OFF</div><div>Press here to exit GM Mode</div></div>
   <div class="vfd-bezel">
@@ -234,14 +234,14 @@
 <p>MIDI  Channels: All Notes Off, Reset All Controllers, key-ups for all keys down, sustain and sostenuto pedal ups, and controllers will be normalized to the <span class="mode">General MIDI</span> default values.</p>
 <p>Program Changes will be transmitted corresponding to the sounds assigned to each of the 16</p>
 <p>Track/Channels.</p>
-<p>System and MIDI Control Settings in GM Mode The following System and <span class="page-name">MIDI Control page</span> parameter settings are installed in <span class="mode">General MIDI</span> mode (see Sections <a class="refer-to" href="02-system.html#section-2-system-page-parameters">2</a> and <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">3</a> for information about these parameters). All other parameters are reset to values appropriate for <span class="mode">General MIDI</span> reception:</p>
+<p>System and MIDI Control Settings in GM Mode The following System and <span class="page-name">MIDI Control</span> page parameter settings are installed in <span class="mode">General MIDI</span> mode (see Sections <a class="refer-to" href="02-system.html#section-2-system-page-parameters">2</a> and <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">3</a> for information about these parameters). All other parameters are reset to values appropriate for <span class="mode">General MIDI</span> reception:</p>
 <ul>
-  <li><span class="page-name">System page</span> <span class="param">TUNE</span> and PITCH-TABLE settings are retained.</li>
-  <li><span class="page-name">System page</span> <span class="param">TOUCH</span> and <span class="param">VEL-MAX</span> settings are retained.</li>
-  <li><span class="page-name">System page</span> <span class="param">PEDAL</span> is set to <span class="value">VOL</span>.</li>
-  <li><span class="page-name">System page</span> FOOT-SW1-R and SW2-R are set to <span class="param">SUSTAIN</span>.</li>
-  <li><span class="page-name">System page</span> FOOT-SW1-L and SW2-L are set to <span class="param">SOSTENUTO</span> if they were previously set to any value other than <span class="lcd">*UNUSED*</span>. If they were set to <span class="lcd">*UNUSED*</span>, they will remain <span class="lcd">*UNUSED*</span>.</li>
-  <li><span class="page-name">MIDI Control page</span> <span class="param">SYS-EX</span> setting is set to ON.</li>
+  <li><span class="page-name">System</span> page <span class="param">TUNE</span> and PITCH-TABLE settings are retained.</li>
+  <li><span class="page-name">System</span> page <span class="param">TOUCH</span> and <span class="param">VEL-MAX</span> settings are retained.</li>
+  <li><span class="page-name">System</span> page <span class="param">PEDAL</span> is set to <span class="value">VOL</span>.</li>
+  <li><span class="page-name">System</span> page FOOT-SW1-R and SW2-R are set to <span class="param">SUSTAIN</span>.</li>
+  <li><span class="page-name">System</span> page FOOT-SW1-L and SW2-L are set to <span class="param">SOSTENUTO</span> if they were previously set to any value other than <span class="lcd">*UNUSED*</span>. If they were set to <span class="lcd">*UNUSED*</span>, they will remain <span class="lcd">*UNUSED*</span>.</li>
+  <li><span class="page-name">MIDI Control</span> page <span class="param">SYS-EX</span> setting is set to ON.</li>
 </ul>
 <p>Exiting <span class="mode">General MIDI</span> will restore your original settings.</p>
 <h3 id="disabling-general-midi">Disabling General MIDI</h3>
@@ -261,7 +261,7 @@
 <table class="defn-table"><thead><tr><th>More</th><th>about SysEx Messages</th></tr></thead><tbody><tr><td><span class="lcd">F0 7E</span></td><td>Universal non-real-time SysEx header</td></tr><tr><td>&lt;Device ID&gt;</td><td>ID of target device (suggest using 7F: Broadcast)</td></tr><tr><td><span class="lcd">09</span></td><td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td></tr><tr><td><span class="lcd">02</span></td><td>sub-ID #<span class="lcd">2=G</span>eneral MIDI Off</td></tr><tr><td><span class="lcd">F7</span></td><td>EOX (end of SysEx)</td></tr></tbody></table>
 <ul>
   <li>The MIDI Control <span class="param">SYS-EX</span> parameter must be set to <span class="lcd">SYS-EX=ON</span> in order to receive Universal SysEx messages.</li>
-  <li>A Universal SysEx <span class="mode">General MIDI</span> On message acts the same as answering <span class="lcd">*YES*</span> to the “ENTER GENERAL MIDI <span class="param">MODE</span>?” prompt, and displays the <span class="page-name">General MIDI Mode page</span>. The SysEx message will be ignored if the sequencer is running, or if the system is already in <span class="mode">General MIDI</span> Mode. Sequencer changes will be saved automatically, unless <span class="lcd">SAVE-CHANGES=NO</span> (on the third <span class="page-name">Sequencer Control sub-page</span>).</li>
+  <li>A Universal SysEx <span class="mode">General MIDI</span> On message acts the same as answering <span class="lcd">*YES*</span> to the “ENTER GENERAL MIDI <span class="param">MODE</span>?” prompt, and displays the <span class="page-name">General MIDI Mode</span> page. The SysEx message will be ignored if the sequencer is running, or if the system is already in <span class="mode">General MIDI</span> Mode. Sequencer changes will be saved automatically, unless <span class="lcd">SAVE-CHANGES=NO</span> (on the third <span class="page-name">Sequencer Control</span> sub-page).</li>
   <li>If the TS-10 is already in <span class="mode">General MIDI</span> mode, a Universal SysEx <span class="mode">General MIDI</span> Off message acts the same as pressing <span class="lcd">*EXIT*</span> on the <span class="mode">General MIDI</span> mode screen. This exits <span class="mode">General MIDI</span> mode and returns the TS-10 to its previous state.</li>
   <li>When in <span class="mode">General MIDI</span> Mode, the Universal SysEx <span class="mode">General MIDI</span> Off message is the only SysEx message that will be received; all other SysEx messages are ignored.</li>
 </ul>
@@ -331,7 +331,7 @@
 <div class="vfd-callouts top"><div>Controller 120</div><div>NO</div><div>YES</div></div>
 <p>(All Sound Off)</p>
 <p>Controller 121 YES YES Reset Controller messages received will normalize only the controllers supported in General (Reset All Controllers) MIDI Mode. It is received independently on each of the 16 <span class="mode">General MIDI</span> Track/Channels.</p>
-<p>Controller 123 All Notes Off messages received will be responded to regardless of the setting of the <span class="param">ALL-OFF</span> (All Notes Off) YES YES parameter on the <span class="page-name">MIDI Control page</span>. It is received independently on each of the 16 General</p>
+<p>Controller 123 All Notes Off messages received will be responded to regardless of the setting of the <span class="param">ALL-OFF</span> (All Notes Off) YES YES parameter on the <span class="page-name">MIDI Control</span> page. It is received independently on each of the 16 General</p>
 <p>MIDI Track/Channels.</p>
 <p>Registered Parameters:                                   These Registered Parameters are received independently on each of the 16 <span class="mode">General MIDI</span></p>
 <div class="vfd-callouts top"><div>0 Pitch Bend Range 1 Fine Tuning 2 Coarse Tuning</div><div>NO NO NO</div><div>YES YES YES</div></div>
