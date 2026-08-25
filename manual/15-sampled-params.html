@@ -24,7 +24,7 @@
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
       <h1 id="section-15-sampled-sound-parameters">Section 15 — Sampled Sound Parameters</h1>
     </header>
-    <p>This section offers detailed descriptions of the specific parameters used in editing Sampled Sounds. A Sampled Sound must be selected in Sounds mode in order for these parameter pages to be displayed. Most parameters are available on a per <dfn class="term">WaveSample</dfn> basis, except for the parameters on the <span class="page-name">Layer</span> page that apply to all <dfn class="term">WaveSamples</dfn> in entire layers. For an overview of the concepts involved, refer to the previous section.</p>
+    <p>This section offers detailed descriptions of the specific parameters used in editing Sampled Sounds. A Sampled Sound must be selected in Sounds mode in order for these parameter pages to be displayed. Most parameters are available on a per WaveSample basis, except for the parameters on the <span class="page-name">Layer</span> page that apply to all WaveSamples in entire layers. For an overview of the concepts involved, refer to the previous section.</p>
 <h3 id="edit-key-down-key-up-layers-page-copy-button">Edit KEY-DOWN/KEY-UP LAYERS Page (<kbd class="button">Copy</kbd> button)</h3>
 <p>The parameters on this page control which layer(s) will be triggered when the keyboard is played. To access these parameters press <kbd class="button">Copy</kbd>, which is the Sampled Sound Edit KEY-DOWN/KEY-UP button.</p>
 
@@ -154,7 +154,7 @@
 <h4 id="xctrl" class="param-name"><span class="param">XCTRL</span><span class="range">Range: 000 to 127</span></h4>
 <p>Editing the XCTRL parameter default values will simultaneously edit the <span class="param">Track XCTRL</span> parameter values on the track that the Sampled Sound is occupying. This parameter will only function if <span class="param">XCTRL</span> has been assigned as a modulator within the selected Sampled Sound. This is the default setting that will be installed into a track when the Sampled Sound is selected.</p>
 <h3 id="lfo-page">LFO Page</h3>
-  <p>The <span class="page-name">LFO</span> Page contains the parameters related to the Low Frequency Oscillator. Each <dfn class="term">WaveSample</dfn> has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo, and other effects.</p>
+  <p>The <span class="page-name">LFO</span> Page contains the parameters related to the Low Frequency Oscillator. Each WaveSample has its own LFO, which can be assigned as a modulator wherever a modulation source is selected. LFO’s are commonly used to create vibrato, tremolo, and other effects.</p>
 <p>Press the <kbd class="button">LFO</kbd> button. This takes you to the first sub-page of the <span class="page-name">LFO</span> page:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>LFO Rate</div><div>Rate Modulator</div><div>Rate Modulation Amount</div></div>
@@ -280,14 +280,14 @@
 <p>NOISE-RATE determines how frequently the random level will change. Low values will cause it to change very slowly; with high values the level will change quickly.</p>
 
 <h2 id="wavesample-envelopes">WaveSample Envelopes</h2>
-  <p>Each <dfn class="term">WaveSample</dfn> has three envelopes associated with it. These envelopes are hard-wired to the pitch, filter cutoff frequency, and amplitude of the <dfn class="term">WaveSample</dfn>. Env 1 and Env 2 can also be assigned elsewhere, wherever a modulator is selectable. Each of the three envelope buttons are directly above the page buttons for the function that they are hard-wired to:</p>
+  <p>Each WaveSample has three envelopes associated with it. These envelopes are hard-wired to the pitch, filter cutoff frequency, and amplitude of the WaveSample. Env 1 and Env 2 can also be assigned elsewhere, wherever a modulator is selectable. Each of the three envelope buttons are directly above the page buttons for the function that they are hard-wired to:</p>
 <ul>
-  <li>Env 1 is hard-wired to <dfn class="term">WaveSample</dfn> pitch modulation.</li>
-  <li>Env 2 is hard-wired to <dfn class="term">WaveSample</dfn> filter cutoff frequency.</li>
-  <li>Env 3 is hard-wired to <dfn class="term">WaveSample</dfn> output volume.</li>
+  <li>Env 1 is hard-wired to WaveSample pitch modulation.</li>
+  <li>Env 2 is hard-wired to WaveSample filter cutoff frequency.</li>
+  <li>Env 3 is hard-wired to WaveSample output volume.</li>
 </ul>
 <h4 id="about-env-3">About ENV 3</h4>
-<p>The ENV3 LEVEL parameters and the <dfn class="term">WaveSample</dfn> <span class="value">VOL</span> parameter on the <span class="page-name">Output</span> page both use the same (non linear) response curve. As shown below, setting any of these volume controls to 50 will attenuate a sound by 16 dB.</p>
+<p>The ENV3 LEVEL parameters and the WaveSample <span class="value">VOL</span> parameter on the <span class="page-name">Output</span> page both use the same (non linear) response curve. As shown below, setting any of these volume controls to 50 will attenuate a sound by 16 dB.</p>
 <table class="data-table" id="level-response-db">
   <thead>
     <caption>ENV3 Response Curve</caption>
@@ -303,14 +303,14 @@
   </tbody>
 </table>
   </figure>
-<p>Typical <dfn class="term">WaveSample</dfn>  Envelope The figure below shows a typical <dfn class="term">WaveSample</dfn> envelope shape:</p>
+<p>Typical WaveSample  Envelope The figure below shows a typical WaveSample envelope shape:</p>
 
 <figure class="figure"><img src="images/wave-sample-envelope.png" alt="Typical WaveSample envelope shape"><figcaption>Typical WaveSample envelope shape.</figcaption></figure>
 
-<p>The <dfn class="term">WaveSample</dfn> envelopes have six <dfn class="term">times</dfn> and six <dfn class="term">levels</dfn>. The envelope parameters allow you to describe two entirely different shapes; one for maximum velocity (<span class="param">VEL-HARD</span>) and one for minimum velocity (<span class="param">SOFT</span>). When a key is struck, the envelope generator <dfn class="term">interpolates</dfn> between the two, creating a curve that is a combination of the two based on the incoming velocity.</p>
+<p>The WaveSample envelopes have six <dfn class="term">times</dfn> and six <dfn class="term">levels</dfn>. The envelope parameters allow you to describe two entirely different shapes; one for maximum velocity (<span class="param">VEL-HARD</span>) and one for minimum velocity (<span class="param">SOFT</span>). When a key is struck, the envelope generator <dfn class="term">interpolates</dfn> between the two, creating a curve that is a combination of the two based on the incoming velocity.</p>
 
 <h2 id="env1-env2-env3-pages">ENV1, ENV2, ENV3 Pages</h2>
-<p>The ENV1, ENV2, and ENV3 Pages, parameters and ranges are all the same except where indicated below. We will use ENV3 as our example, since its effect on the volume of the <dfn class="term">WaveSample</dfn> is immediately apparent.</p>
+<p>The ENV1, ENV2, and ENV3 Pages, parameters and ranges are all the same except where indicated below. We will use ENV3 as our example, since its effect on the volume of the WaveSample is immediately apparent.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button. The display shows the first <span class="page-name">ENV3</span> sub-page.</p>
 
 <div class="vfd-bezel">
@@ -452,7 +452,7 @@
 <figure class="figure"><img src="images/soft-velocity-curve.png" alt="Velocity Curves."></figure>
 
 <h2 id="pitch-page">Pitch Page</h2>
-<p>The <span class="page-name">Pitch</span> page parameters determine the playback pitch for each <dfn class="term">WaveSample</dfn>.</p>
+<p>The <span class="page-name">Pitch</span> page parameters determine the playback pitch for each WaveSample.</p>
 <p>Press the <kbd class="button">Pitch</kbd> button. The display shows the <span class="page-name">PITCH</span> page.</p>
 
 <div class="vfd-bezel">
@@ -500,13 +500,13 @@
 </div>
   </figure>
 <h4 id="ws-root-key" class="param-name"><span class="param">WS-ROOT-KEY</span><span class="range">Range: K00 to K20, A0 to C8</span></h4>
-<p>This parameter allows you to change the <dfn class="term">WaveSample</dfn> root key. The root key is the key at which the <dfn class="term">WaveSample</dfn> plays back at the same pitch as it was recorded.</p>
+<p>This parameter allows you to change the WaveSample root key. The root key is the key at which the WaveSample plays back at the same pitch as it was recorded.</p>
 <aside class="note"><p>Note: Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
 <h4 id="fine-tune" class="param-name"><span class="param">FINE-TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
-<p>This parameter adjusts the <dfn class="term">WaveSample</dfn> fine-tuning.</p>
+<p>This parameter adjusts the WaveSample fine-tuning.</p>
 
 <h2 id="pitch-mods-page">Pitch Mods Page</h2>
-<p>The <span class="page-name">Pitch Mods</span> page parameters control <dfn class="term">WaveSample</dfn> pitch modulation.</p>
+<p>The <span class="page-name">Pitch Mods</span> page parameters control WaveSample pitch modulation.</p>
 <p>Press the <kbd class="button">Pitch Mods</kbd> button. The display shows the <span class="page-name">Pitch Mods</span> page.</p>
 <div class="vfd-bezel">
   <table>
@@ -556,11 +556,11 @@
 <aside class="note"><p>Note: When <span class="lcd">STEREO=ON</span>, all pitch modulation in the right layer will be slaved to the settings in the WaveSamples assigned to the same or overlapping key zones in the left layer. This includes BEND  Range, NOISE RATE, and all pitch modulation. Pitch modulation settings for WaveSamples in the right layer will be ignored.</p>
 </aside>
   <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
-<p>Selects a modulation source for the pitch of the <dfn class="term">WaveSample</dfn> from among the 15 available modulators.</p>
+<p>Selects a modulation source for the pitch of the WaveSample from among the 15 available modulators.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
 <p>Determines the amount by which the assigned pitch modulator will affect pitch.</p>
 <h4 id="bend" class="param-name"><span class="param">BEND</span><span class="range">Range: 0 to 12 semitones or SYS</span></h4>
-<p>Determines whether each <dfn class="term">WaveSample</dfn> will have its own independent pitch bend range, or whether it will use the system pitch bend range to determine the maximum pitch change that can be applied by the pitch bend wheel. When <span class="lcd">BEND=SYS</span>, the <dfn class="term">WaveSample</dfn> will use the system pitch bend range setting. See the description of the PITCH-BEND parameter on the <span class="page-name">System</span> Page in <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System</span> Page Parameters</a> for more information on the system pitch bend range.</p>
+<p>Determines whether each WaveSample will have its own independent pitch bend range, or whether it will use the system pitch bend range to determine the maximum pitch change that can be applied by the pitch bend wheel. When <span class="lcd">BEND=SYS</span>, the WaveSample will use the system pitch bend range setting. See the description of the PITCH-BEND parameter on the <span class="page-name">System</span> Page in <a class="refer-to" href="02-system.html#section-2-system-page-parameters">Section 2 — System Page Parameters</a> for more information on the system pitch bend range.</p>
 <h4 id="noise" class="param-name"><span class="param">NOISE</span><span class="range">Range: -99 to +99</span></h4>
 <p>This parameter controls the amount by which the NOISE modulator will affect pitch.</p>
 <h4 id="env1" class="param-name"><span class="param">ENV1</span><span class="range">Range: -15.7 to +15.7 semitones</span></h4>
@@ -665,7 +665,7 @@
 <p>FILTER 2 can be configured as a 2-pole or 1-pole high-pass filter, or a 2-pole or 1-pole low-pass filter.</p>
 <p>The remaining parameters and ranges are the same as for FILTER1.</p>
 <h2 id="output-page">Output Page</h2>
-<p>The parameters on this page control the amplitude (or volume) of the <dfn class="term">WaveSample</dfn>.</p>
+<p>The parameters on this page control the amplitude (or volume) of the WaveSample.</p>
 <figure class="vfd-unit has-page">
  <div class="vfd-bezel">
   <table>
@@ -705,7 +705,7 @@
 <h4 id="modsrc-3" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the output volume of the WaveSample from among the 15 available modulators. This is in addition to ENV3, which is always routed to volume.</p>
 <h4 id="modamt-3" class="param-name"><span class="param">MODAMT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount by which the assigned volume modulator will affect the output volume of the WaveSample. Raising this value will lower the unmodulated volume of the <dfn class="term">WaveSample</dfn>(s), creating the headroom necessary for the volume modulation. Note that the AMOUNT value is positive-going only. To obtain negative volume modulation, you must use the <span class="value">VOL</span> <span class="param">MODSRC</span> SHAPER (see later in this Section).</p>
+<p>Determines the amount by which the assigned volume modulator will affect the output volume of the WaveSample. Raising this value will lower the unmodulated volume of the WaveSample(s), creating the headroom necessary for the volume modulation. Note that the AMOUNT value is positive-going only. To obtain negative volume modulation, you must use the <span class="value">VOL</span> <span class="param">MODSRC</span> SHAPER (see later in this Section).</p>
 <p>Press the <kbd class="button">Output</kbd> button again. The display shows the second OUTPUT sub-page:</p>
 <figure class="vfd-unit has-page">
   
@@ -870,11 +870,11 @@
 <p>This parameter allows you to modulate certain <span class="page-name">WAVE</span> page parameters with any of the 15 modulation sources. The WAVE-MODULATION-TYPE parameter specifies which of the <span class="page-name">WAVE</span> page parameters the modulation will affect. There are seven possible modulation types:</p>
 <ul>
   <li><span class="value">OFF</span> — Wave modulation is disabled.</li>
-  <li><span class="param">LOOP</span> POS — Selecting this setting will modulate the <span class="param">LOOP</span>-POSITION of the <dfn class="term">WaveSample</dfn>, moving it forward (towards the end of the <dfn class="term">WaveSample</dfn>) with positive <span class="param">MODAMT</span> values, and backward (toward the beginning of the <dfn class="term">WaveSample</dfn>) with negative <span class="param">MODAMT</span> values.</li>
+  <li><span class="param">LOOP</span> POS — Selecting this setting will modulate the <span class="param">LOOP</span>-POSITION of the WaveSample, moving it forward (towards the end of the WaveSample) with positive <span class="param">MODAMT</span> values, and backward (toward the beginning of the WaveSample) with negative <span class="param">MODAMT</span> values.</li>
   <li>START — The SAMPLE-START will be modulated.</li>
   <li>START+LP — Both the SAMPLE-START and the <span class="param">LOOP</span>-POSITION will be modulated. When START+LP is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value, rather than at the SAMPLE-START value.</li>
   <li>LOOPSTRT — Modulates the <span class="param">LOOPSTART</span> parameter. This will have the effect of either making the loop shorter (with positive <span class="param">MODAMT</span> values moving the <span class="param">LOOPSTART</span> point closer to the Loop END) or longer (with negative <span class="param">MODAMT</span> values moving the <span class="param">LOOPSTART</span> away from the Loop END).</li>
-  <li><span class="param">LOOP</span> END — Works the same as LOOPSTRT, but from the back end of the <dfn class="term">WaveSample</dfn>.</li>
+  <li><span class="param">LOOP</span> END — Works the same as LOOPSTRT, but from the back end of the WaveSample.</li>
   <li>LPSTRT–X — This setting works the same as LOOPSTRT, but a pitch correction scheme is now employed to keep the pitch constant as the loop gets longer and shorter.</li>
   <li>TRANSWAV — Similar to <span class="param">LOOP</span> POS, but the loop will move in increments of exactly one loop length. For example, with <span class="param">LOOPSTART</span> at 0 and Loop END at 100, a positive <span class="param">MODAMT</span> will cause the loop to jump to <span class="param">LOOPSTART</span> 100, Loop END 200, and then to <span class="param">LOOPSTART</span> 200, Loop END 300, etc. When TRANSWAV is selected, the MODRANGE parameter (see below) has no effect, but the <span class="param">MODAMT</span> (also below) sets the number of “jumps” that will happen over the full range of the modulator’s output.</li>
 </ul>
@@ -885,10 +885,10 @@
 <p>The <span class="param">MODAMT</span> and MODRANGE parameters determine the amount by which the assigned wave modulator will affect the <span class="page-name">WAVE</span> page parameters:</p>
 <ul>
   <li><span class="value">MOD</span> AMT — This parameter determines the amount of modulation that will be applied to the wave parameter specified in the WAVE-MODULATION-TYPE parameter. This parameter has a value range of -99 to +99, allowing both positive and negative modulation amounts.</li>
-  <li>RANGE — This parameter determines the range that will be covered by the <span class="param">MODAMT</span>. The RANGE is displayed in sample size. The reason for this parameter is due to the nature of Sampled Sounds. Whereas ROM-based synthesizers contain waveforms that have a defined length that will always be the same, the size of each individual <dfn class="term">WaveSample</dfn> will vary from Sampled Sound to Sampled Sound. The <span class="value">MOD</span> AMT parameter has no way of knowing this sample size, so the TS-10 uses the RANGE parameter to define it.</li>
+  <li>RANGE — This parameter determines the range that will be covered by the <span class="param">MODAMT</span>. The RANGE is displayed in sample size. The reason for this parameter is due to the nature of Sampled Sounds. Whereas ROM-based synthesizers contain waveforms that have a defined length that will always be the same, the size of each individual WaveSample will vary from Sampled Sound to Sampled Sound. The <span class="value">MOD</span> AMT parameter has no way of knowing this sample size, so the TS-10 uses the RANGE parameter to define it.</li>
 </ul>
-<p>To determine what value to set the RANGE parameter to, go to the Sample END parameter and examine at the value. This value tells you how large the selected <dfn class="term">WaveSample</dfn> is. You can then select the RANGE value that comes closest to the actual size of the <dfn class="term">WaveSample</dfn>.</p>
-<p>If you were working with a very small <dfn class="term">WaveSample</dfn>, you would adjust the wave modulation amount to something like this <span class="value">MOD</span> <span class="lcd">AMT=+99</span> <span class="lcd">RANGE=128</span>. If you were working with a much larger <dfn class="term">WaveSample</dfn>, you would adjust the wave modulation to <span class="value">MOD</span> <span class="lcd">AMT=+99</span> <span class="lcd">RANGE=1</span> MG (MegaSample). Think of RANGE as a multiplier, and <span class="value">MOD</span> <span class="lcd">AMT=-99</span> TO +99 as fine tuning.</p>
+<p>To determine what value to set the RANGE parameter to, go to the Sample END parameter and examine at the value. This value tells you how large the selected WaveSample is. You can then select the RANGE value that comes closest to the actual size of the WaveSample.</p>
+<p>If you were working with a very small WaveSample, you would adjust the wave modulation amount to something like this <span class="value">MOD</span> <span class="lcd">AMT=+99</span> <span class="lcd">RANGE=128</span>. If you were working with a much larger WaveSample, you would adjust the wave modulation to <span class="value">MOD</span> <span class="lcd">AMT=+99</span> <span class="lcd">RANGE=1</span> MG (MegaSample). Think of RANGE as a multiplier, and <span class="value">MOD</span> <span class="lcd">AMT=-99</span> TO +99 as fine tuning.</p>
 <h2 id="volume-mod-source-shaper-page">Volume Mod Source Shaper Page </h2>
   <p>Press the <kbd class="button">Mod Mixer</kbd> button. The <span class="page-name">VOL MODSRC SHAPER</span> page is displayed.</p>
   <figure class="vfd-unit has-page">
@@ -921,14 +921,15 @@
 
   <h4 id="a-b-fade-in-to" class="param-name"><span class="param">A - B FADE-IN - TO</span><span class="range">Range: 0 to 127</span></h4>
 <h4 id="c-d-fade-out-to" class="param-name"><span class="param">C - D FADE-OUT - TO</span><span class="range">Range: 0 to 127</span></h4>
-<p>The volume modulator cross fade breakpoints (A and B, C and D) allow you to scale the effect of the volume modulator (selected on the <span class="page-name">Output</span> page <span class="param">MODSRC</span> parameter) to create keyboard, velocity, or other types of cross fades. Using the cross fade breakpoints, you can customize how the volume modulator will affect the volume of the <dfn class="term">WaveSample</dfn> across the range (or throw) of its output. This lets you use velocity, keyboard position, pressure or any other modulator to cross fade between <dfn class="term">WaveSamples</dfn>.</p>
+<p>The volume modulator cross fade breakpoints (A and B, C and D) allow you to scale the effect of the volume modulator (selected on the <span class="page-name">Output</span> page <span class="param">MODSRC</span> parameter) to create keyboard, velocity, or other types of cross fades. Using the cross fade breakpoints, you can customize how the volume modulator will affect the volume of the WaveSample across the range (or throw) of its output. This lets you use velocity, keyboard position, pressure or any other modulator to cross fade between WaveSamples.</p>
 <p>Think of the A-B FADE-IN/C-D FADE-OUT parameters as a trapezoid, whose shape will affect the output of the modulator assigned to the <span class="page-name">Output</span> page <span class="param">MODSRC</span> parameter. The A-B FADE IN value sets the point along the throw of the volume modulator that the modulator’s output value will begin to rise above zero (i.e. fade in). The A-B FADE TO value sets the point along the throw of the volume modulator that the modulator’s output value will have risen to its maximum output. The C-D FADE OUT value sets the point along the throw of the volume modulator that the modulator’s output value will begin to fall from maximum (i.e. fade out). The C-D FADE TO value sets the point along the throw of the volume modulator that the modulator’s output value will have fallen to zero.</p>
 <p>The default values are “A-B FADE <span class="lcd">IN=0</span> TO 127” and “C-D FADE <span class="lcd">OUT=127</span> TO 127,” imposing the following shape on the output of the volume modulator. In this example the Mod Wheel is the volume modulator: max output BCD zero output A 0 127 modulator throw</p>
-<p>wheel down                     wheel up</p>
-<p>To reverse the polarity of the volume modulator, set the values as follows: “A-B FADE <span class="lcd">IN=0</span> TO 0” and “C-D FADE <span class="lcd">OUT=0</span> TO 127.” The shape imposed on the output of the volume modulation is as follows; again, the Mod Wheel is the volume modulator: max output BC</p>
-<p>A D zero output</p>
-<p>0 127 modulator throw wheel down                    wheel up</p>
-<aside class="note"><p>Note:    Whenever you cross fade between <dfn class="term">WaveSamples</dfn>, the <dfn class="term">WaveSamples</dfn> must be in different layers, since only one <dfn class="term">WaveSample</dfn> can occupy a given key within a single layer.</p></aside>
+<figure class="figure"><img src="images/volume-modulator-default.png" alt="Default Volume Modulation"><figcaption>Default Volume Modulation.</figcaption></figure>
+
+<p>To reverse the polarity of the volume modulator, set the values as follows: “A-B FADE <span class="lcd">IN=0</span> TO 0” and “C-D FADE <span class="lcd">OUT=0</span> TO 127.” The shape imposed on the output of the volume modulation is as follows; again, the Mod Wheel is the volume modulator:</p>
+<figure class="figure"><img src="images/volume-modulator-reversed.png" alt="Reverse Volume Modulation"><figcaption>Reverse Volume Modulation.</figcaption></figure>
+
+<aside class="note"><p>Note:    Whenever you cross fade between WaveSamples, the WaveSamples must be in different layers, since only one WaveSample can occupy a given key within a single layer.</p></aside>
 <h4 id="curve" class="param-name"><span class="param">CURVE</span><span class="range">Range: CROSSFADE or LINEAR</span></h4>
 <p>Determines what type of curve will be used when fading samples in and out between breakpoints A-B and C-D. There are two possible fadecurves:</p>
 <ul>
@@ -937,44 +938,71 @@
 </ul>
 <h2 id="layer-page">Layer Page</h2>
 <p>The parameters on this page control the layers within a Sampled Sound.</p>
-<p>Press the <kbd class="button">Layer (Program Control)</kbd> button. The first LAYER sub-page is displayed.</p>
+<p>Press the <kbd class="button">Layer</kbd> (Program Control) button. The first <span class="page-name">LAYER</span> sub-page is displayed.</p>
+
+<figure class="vfd-unit has-page">
+  <div class="vfd-bezel">
+<table>
+  <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+  <thead>
+    <tr class="soft-row top">
+      <th class="page-tag-slot"></th>
+      <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+      <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+      <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+    </tr>
+  </thead>
+  <tbody class="vfd-screen">
+    <tr><td class="cell page-label">LAYER</td><td class="cell">PITCHTBL=<span class="selected">SYSTEM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="cell" colspan="2" style="text-align: right;">STEREO=OFF</td></tr>
+    <tr><td class="cell page-label" colspan="2">GLIDEMODE=NONE</td><td class="cell"> TIME=0</td><td class="cell">LEGATO-LYR=1</td></tr>
+  </tbody>
+  <tfoot>
+    <tr class="soft-row bottom">
+      <th class="page-tag-slot"></th>
+      <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+      <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+      <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</figure>
+
 <h4 id="pitchtbl" class="param-name"><span class="param">PITCHTBL</span><span class="range">Range: SYSTEM, NO PITCH, Pitch Tables 1-8.</span></h4>
-<p>This parameter determines whether the layer will use the SYSTEM pitch-table, or play each <dfn class="term">WaveSample</dfn> in the layer at the pitch it would play on C4 (NO PITCH), or use any pitch-table that was stored with the Sampled Sound.</p>
+<p>This parameter determines whether the layer will use the SYSTEM pitch-table, or play each WaveSample in the layer at the pitch it would play on C4 (NO PITCH), or use any pitch-table that was stored with the Sampled Sound.</p>
 <h4 id="stereo" class="param-name"><span class="param">STEREO</span><span class="range">Range: OFF or ON</span></h4>
-<p>Stereo samples are stored in pairs of adjacent layers (1&amp;2, 3&amp;4, 5&amp;6, or 7&amp;8), with the LEFT channel always stored in an odd numbered layer (1, 3, 5 or 7), and the RIGHT channel stored across the same key range in the next higher even numbered layer. These paired adjacent layers are called companion layers.</p>
-<p>When the <span class="value">STEREO</span> parameter is turned ON in the selected LAYER, it is simultaneously turned ON in the companion layer. When <span class="value">STEREO</span>= ON, simultaneous editing of both channels of a Stereo Sample is enabled (see below).</p>
-<p>When <span class="value">STEREO</span>= ON, editing layer or <dfn class="term">WaveSample</dfn> parameters in one layer will edit the same parameter in the companion layer. Editing with the <kbd class="button">Data Entry Slider</kbd> will set the current parameter in both layers to the same absolute value. Editing with the <kbd class="button">Up/Down Arrow</kbd> buttons will edit parameter values in both layers relative to one another.</p>
-<p>When <span class="value">STEREO</span>= ON, all pitch modulation in the right layer will be slaved to the settings in the <dfn class="term">WaveSamples</dfn> assigned to the same or overlapping key zones in the left layer. This includes Pitch</p>
-<p>BEND  Range, NOISE-RATE, and all pitch modulation. Pitch modulation settings for <dfn class="term">WaveSamples</dfn> in the right layer will be ignored.</p>
-<p><span class="value">STEREO</span> can be turned <span class="value">OFF</span> to allow independent editing of layers that contain one channel of a stereo sample.</p>
-<p>If the companion layer does not exist, <span class="value">STEREO</span> cannot be turned ON in the selected layer. The screen will display NO <span class="value">STEREO</span> COMPANION LAYER.</p>
+<p>Stereo samples are stored in pairs of adjacent layers (1&amp;2, 3&amp;4, 5&amp;6, or 7&amp;8), with the LEFT channel always stored in an odd numbered layer (1, 3, 5 or 7), and the RIGHT channel stored across the same key range in the next higher even-numbered layer. These paired adjacent layers are called companion layers.</p>
+<p>When the <span class="param">STEREO</span> parameter is turned ON in the selected LAYER, it is simultaneously turned ON in the companion layer. When <span class="param">STEREO</span>= ON, simultaneous editing of both channels of a Stereo Sample is enabled (see below).</p>
+<p>When <span class="param">STEREO</span>= ON, editing layer or WaveSample parameters in one layer will edit the same parameter in the companion layer. Editing with the <kbd class="button">Data Entry Slider</kbd> will set the current parameter in both layers to the same absolute param. Editing with the <kbd class="button">Up/Down Arrow</kbd> buttons will edit parameter params in both layers <em>relative</em> to one another.</p>
+<p>When <span class="param">STEREO</span>= ON, all pitch modulation in the right layer will be slaved to the settings in the WaveSamples assigned to the same or overlapping key zones in the left layer. This includes Pitch <span class="param">BEND</span>  Range, <span class="param">NOISE-RATE</span>, and all pitch modulation. Pitch modulation settings for WaveSamples in the right layer will be ignored.</p>
+<p><span class="param">STEREO</span> can be turned <span class="value">OFF</span> to allow independent editing of layers that contain one channel of a stereo sample.</p>
+<p>If the companion layer does not exist, <span class="param">STEREO</span> cannot be turned ON in the selected layer. The screen will display <span class="lcd">NO STEREO COMPANION LAYER</span>.</p>
 <h4 id="glidemode" class="param-name"><span class="param">GLIDEMODE</span><span class="range">Range: various (see below)</span></h4>
-<p>Enables Glide (portamento) and several forms of monophonic voice assignment in each layer.</p>
-<p>There are five <span class="param">GLIDE</span> modes available:</p>
+<p>Enables Glide (portamento) and several forms of monophonic voice assignment in each layer. There are five <span class="param">GLIDE</span> modes available:</p>
 <p>For monophonic voice assignment without glide, set GLIDEMODE to LEGATO, TRIGGER, or MINIMODE, and set <span class="lcd">TIME=0</span>.</p>
 <ul>
   <li>NONE — Glide is off. This is normal polyphonic operation, with no portamento.</li>
-  <li>LEGATO — Enables monophonic voice assignment, allowing only one note of polyphony to be active in the layer. If a key is depressed before another is released (i.e.: if you play legato), the voice will glide from the old note to the new one. If you play a key with no other keys down (i.e.: if you play staccato), the voice will not glide. The envelopes and <dfn class="term">WaveSamples</dfn> are retriggered, or restarted, from the beginning each time there is a new key down. This is also the mode to use to enable the legato layer function.</li>
-  <li><span class="param">PEDAL</span> — Enables the sustain pedal to start polyphonic glide. In this mode, the glide and polyphony are controlled by the sustain pedal. When the pedal is up, there is no glide and the layer is fully polyphonic. When the sustain pedal is depressed, the glide is enabled, and the polyphony is limited to the number of notes being sounded at the moment. For example, with the pedal up play a three-note chord. Press the sustain pedal and lift your fingers off the keys (the three notes will sustain). Now press another key: one of these sustaining notes will be stolen and will glide to the new note. The envelopes and <dfn class="term">WaveSamples</dfn> are retriggered, or restarted, each time there is a new key down. Holding a key down will prevent the note from being stolen. This allows controlled voice leading.</li>
-  <li>TRIGGER — This mode plays monophonically, with the envelopes and <dfn class="term">WaveSamples</dfn> retriggering, or restarting, each time there is a new key down. This mode works just like LEGATO mode, except that it has no “note memory”. It is ideal for adding monophonic piano “thuds” to piano sounds.</li>
-  <li>MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the LEGATO, <span class="param">PEDAL</span>, or TRIGGER modes, the envelopes and <dfn class="term">WaveSamples</dfn> are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</li>
+  <li>LEGATO — Enables monophonic voice assignment, allowing only one note of polyphony to be active in the layer. If a key is depressed before another is released (i.e.: if you play legato), the voice will glide from the old note to the new one. If you play a key with no other keys down (i.e.: if you play staccato), the voice will not glide. The envelopes and WaveSamples are retriggered, or restarted, from the beginning each time there is a new key down. This is also the mode to use to enable the legato layer function.</li>
+  <li><span class="param">PEDAL</span> — Enables the sustain pedal to start polyphonic glide. In this mode, the glide and polyphony are controlled by the sustain pedal. When the pedal is up, there is no glide and the layer is fully polyphonic. When the sustain pedal is depressed, the glide is enabled, and the polyphony is limited to the number of notes being sounded at the moment. For example, with the pedal up play a three-note chord. Press the sustain pedal and lift your fingers off the keys (the three notes will sustain). Now press another key: one of these sustaining notes will be stolen and will glide to the new note. The envelopes and WaveSamples are retriggered, or restarted, each time there is a new key down. Holding a key down will prevent the note from being stolen. This allows controlled voice leading.</li>
+  <li>TRIGGER — This mode plays monophonically, with the envelopes and WaveSamples retriggering, or restarting, each time there is a new key down. This mode works just like LEGATO mode, except that it has no “note memory”. It is ideal for adding monophonic piano “thuds” to piano sounds.</li>
+  <li>MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the <span class="value">LEGATO</span>, <span class="value">PEDAL</span>, or <span class="value">TRIGGER</span> modes, the envelopes and WaveSamples are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</li>
 </ul>
 <aside class="note"><p>Note: LEGATO and MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p></aside>
 <table class="data-table" id="glide-modes"><caption>GLIDE MODES</caption><thead><tr><th>Mode</th><th>Staccato Glide</th><th>Legato Glide</th><th>Legato Envelope</th><th>Note Memory Retrigger</th></tr></thead><tbody><tr><td>LEGATO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td><span class="param">PEDAL</span> (with pedal down)</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>TRIGGER</td><td>NO</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MINIMODE</td><td>NO</td><td>YES</td><td>NO</td><td>YES</td></tr></tbody></table>
 <h4 id="time" class="param-name"><span class="param">TIME</span><span class="range">Range: 0 to 99</span></h4>
-<p>This parameter controls the time it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses Constant-Time Portamento. This means that it will take the same amount of time to glide between notes that are close together (i.e. C4 to D4) as it will to glide between notes that are far apart (i.e. C4 to C7).</p>
-<h4 id="legato-lyr" class="param-name"><span class="param">LEGATO-LYR</span><span class="range">Range: layers 1 to 8</span></h4>
+<p>This parameter controls the duration it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses Constant-Time Portamento. This means that it will take the same duration to glide between notes that are close together (i.e. C4 to D4) as it will to glide between notes that are far apart (i.e. C4 to C7).</p>
+<h4 id="legato-lyr" class="param-name"><span class="param">LEGATO-LYR</span><span class="range">Range: Layers 1 to 8</span></h4>
 <p>The legato layer is an ENSONIQ innovation that enables the TS-10 to capture the elusive nuances of acoustic Sampled Sounds. The sound of a wind Sampled Sound, the flute for example, is different when it is “tongued” than when notes are played in a connected manner (called legato).</p>
 <p>When two notes are “slurred” or “trilled” the characteristic attack of the second note is not present. The TS-10 allows a simulation of this effect when used with one of the glide modes.</p>
-<p>The rules for glide, described above, determine when one note will glide to another. The glide time determines how fast it will glide to the new note. The LEGATO-LYR parameter selects which layer, and therefore which <dfn class="term">WaveSample</dfn>(s), will play on the new note.</p>
+<p>The rules for glide, described above, determine when one note will glide to another. The glide time determines how fast it will glide to the new note. The LEGATO-LYR parameter selects which layer, and therefore which WaveSample(s), will play on the new note.</p>
 <p>For example, suppose that layer 1 is a flute sample with a tongued attack, and layer 2 is a flute sustain without any attack. To use this function:</p>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Select Voice</div></td></tr></table></aside>
 <p>On the Edit page (press the <kbd class="button">Select Voice</kbd> button):</p>
 <ul>
   <li>Enable both layer 1 and layer 2 in the current patch.</li>
 </ul>
-<p>The display reads: 00 <span class="lcd">LAYERS-IN-PATCH=1</span> 2 - - - - - -.</p>
-<p>On the Edit KEY-DOWN/KEY-UP LAYERS page (press the <kbd class="button">Copy</kbd> button):</p>
+<p>The display reads: <span class="lcd">00 LAYERS-IN-PATCH=12------</span> .</p>
+<p>On the <span class="page-name">KEY-DOWN/KEY-UP LAYERS</span> page (press the <kbd class="button">Copy</kbd> button):</p>
 <ul>
   <li>Enable layer 1, the attack, as a keydown layer. Disable layer two as a keydown layer. The display reads: <span class="lcd">KEY-DOWN-LAYERS=1</span> - - - - - - -.</li>
 </ul>
@@ -982,24 +1010,23 @@
 <ul>
   <li>Set <span class="lcd">GLIDEMODE=LEGATO</span>.</li>
   <li>Set <span class="lcd">LEGATO-LYR=2</span>.</li>
-  <li>Adjust Glide TIME as you see fit.</li>
+  <li>Adjust Glide <span class="param">TIME</span> as you see fit.</li>
 </ul>
-<p>If a key is depressed before another is released, the new note will play the <dfn class="term">WaveSample</dfn> in the LEGATO-LYR (layer 2).</p>
+<p>If a key is depressed before another is released, the new note will play the WaveSample in the LEGATO-LYR (layer 2).</p>
 <p>Press the <kbd class="button">Layer (Program Control)</kbd> button. The second LAYER sub-page is displayed.</p>
 <h4 id="velocity-window-lo-hi" class="param-name"><span class="param">VELOCITY-WINDOW LO &amp; HI</span><span class="range">Range: 000 to 127</span></h4>
 <p>The LO and HI parameters allow you to define the velocity range for each layer. The full velocity range (default) is <span class="lcd">LO=000</span> <span class="lcd">HI=127</span>. By adjusting these parameters, you can set specific velocity ranges for each layer. This allows velocity switching between different layers within the Sampled Sound. For example, if you set a solo violin voice to <span class="lcd">LO=000</span> <span class="lcd">HI=064</span>, and a string section voice to <span class="lcd">LO=064</span> <span class="lcd">HI=127</span>, a soft velocity will play only the solo violin, whereas a harder velocity will play only the string section. Ranges can over-lap for velocity cross-fade effects.</p>
 <h4 id="delay-2" class="param-name"><span class="param">DELAY</span><span class="range">Range: 0 to 5000 msec</span></h4>
-<p>This parameter determines how long <dfn class="term">WaveSamples</dfn> within the selected layer will wait after a key is struck before playing. A delay of up to 5 seconds is possible.</p>
+<p>This parameter determines how long WaveSamples within the selected layer will wait after a key is struck before playing. A delay of up to 5 seconds is possible.</p>
 <h4 id="vel-modamt" class="param-name"><span class="param">VEL-MODAMT</span><span class="range">Range: -99 to +99</span></h4>
-<p>This parameter determines the amount by which velocity will affect the layer DELAY time.</p>
-<p>Positive VEL-<span class="param">MODAMT</span> values will cause harder velocities to increase the DELAY time.</p>
-<p>Negative VEL-<span class="param">MODAMT</span> values will cause harder velocities to decrease the DELAY time.</p>
-<p>Setting the DELAY to zero will disable velocity modulation of layer DELAY time.</p>
+<p>This parameter determines the amount by which velocity will affect the layer DELAY time. 
+  Positive VEL-<span class="param">MODAMT</span> values will cause harder velocities to increase the DELAY time. 
+  Setting the DELAY to zero will disable velocity modulation of layer DELAY time.</p>
 <h4 id="restrike" class="param-name"><span class="param">RESTRIKE</span><span class="range">Range: 0 to 99</span></h4>
 <p>This parameter controls the layer Restrike time. When you play a particular note and then restrike it again immediately before the old note has finished sounding, the amount of time it takes for the first note to fadeout is determined by this parameter. By varying the setting of this parameter, you can control how long sounds overlap when a note is restruck.</p>
 <p>For example, if you have a slow string sound, it may sound more natural to use a longer <span class="param">RESTRIKE</span> value, which will cause the old note to decay more slowly, rather than end abruptly when the new note starts. Normal values are around 10. The higher the value, the longer the fadeout time.</p>
 <h3 id="sampled-sound-effects-page-program-effects-button"><span class="page-name">Sampled Sound Effects</span> Page (<kbd class="button">Program Effects</kbd> button)</h3>
-<p>Understanding the effect algorithms and their related parameters are described in detail in</p>
+<p>Understanding the effect algorithms and their related parameters are described in detail in <a class="refer-to" href="06-effects-concepts.html#section-6-understanding-effects">Section 6 — Understanding Effects</a> and <a class="refer-to" href="07-effects-00-21.html">Section 7 — Effect Parameters</a>.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
