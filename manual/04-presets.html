@@ -34,16 +34,15 @@
   <li>the values of all the Track parameters for that track</li>
 </ul>
 <p>A preset also has one Effects algorithm which is common to all three tracks.</p>
-<p>The most common context for the TS-10 to be in is Preset mode. Unless the TS-10 is in Sequencer mode, you may assume that you are in a preset. Aside from the presets that are saved, there is a preset buffer that is always active. A preset buffer is a kind of storage location that is used to temporarily store information.</p>
-<p>Whenever you select, layer or edit the Track Parameters for a sound, you are working within the preset buffer. The information in the preset buffer is temporary until you save it into one of the internal preset locations, and then it becomes permanent (it can be recalled). The track parameters of the preset, including mix, pan, transpose, etc. are always active and you should make sure that their settings are correct if you think that your programs are behaving strangely.</p>
-<p>Whenever you select a new sound from the Sound Bank pages, the track parameters are reset to their standard default settings. If you wish to change a program without resetting these parameters, use the <span class="function">Replace Track Sound</span> feature described later in this section.</p>
+<p>The most common context for the TS-10 to be in is Preset mode. Unless the TS-10 is in Sequencer mode, you may assume that you are in a preset. Aside from the presets that are saved, there is a <dfn class="term">Preset Buffer</dfn> that is always active. A preset buffer is a kind of storage location that is used to temporarily store information.</p>
+<p>Whenever you select, layer or edit the Track Parameters for a sound, you are working within the preset buffer. The information in the preset buffer is temporary until you save it into one of the internal preset locations, and then it becomes permanent (it can be recalled). The track parameters of the preset, including mix, pan, transpose, etc. are always active and you should make sure that their settings are correct if you think that your programs are behaving strangely. Whenever you select a new sound from the Sound Bank pages, the track parameters are reset to their standard default settings. If you wish to change a program without resetting these parameters, use the <span class="function">Replace Track Sound</span> feature described later in this section.</p>
 <h3 id="what-is-the-difference-between-preset-mode-and-sequencer-mode">What is the Difference between Preset Mode and Sequencer Mode?</h3>
-<p>There are three Tracks in a “normal” preset and twelve tracks in a sequence or song. A sequence or song, in addition to its ability to record data on its tracks, can be thought of as a giant twelvetrack “preset.” However, this giant “preset” is not available simultaneously with normal threetrack presets. The twelve tracks of a sequence or song are available from the keyboard only while in Sequencer mode — indicated by the LED above either Seq/Song Tracks 1-6 or 7–12 button being on. The twelve sequence or song tracks are always playable via incoming MIDI when the MIDI mode is set to <span class="value">MULTI</span> (on the <span class="page-name">MIDI Control</span> page).</p>
+<p>There are three Tracks in a “normal” preset and twelve tracks in a sequence or song. A sequence or song, in addition to its ability to record data on its tracks, can be thought of as a giant twelvetrack “preset.” However, this giant “preset” is not available simultaneously with normal threetrack presets. The twelve tracks of a sequence or song are available from the keyboard only while in Sequencer mode — indicated by the LED above either Seq/Song Tracks <kbd class="button">1-6</kbd> or <kbd class="button">7–12</kbd> button being on. The twelve sequence or song tracks are always playable via incoming MIDI when the MIDI mode is set to <span class="value">MULTI</span> (on the <span class="page-name">MIDI Control</span> page).</p>
 <h3 id="selecting-presets">Selecting Presets</h3>
-<aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Presets</div></td></tr></table></aside>
+
 <p>Press <kbd class="button">Presets</kbd>. The LED above the <kbd class="button">Presets</kbd> button lights, indicating that you are in Preset mode.</p>
 <p>The display shows you the currently selected bank of six presets, and the bottom left-hand corner of the display will show PSET. You can press the <kbd class="button">BankSet</kbd> button and the ten <kbd class="button">Bank</kbd> buttons (labeled 0-9) to select the various banks within Preset mode. Take a moment to select different presets by pressing the soft button closest to the preset (either above or below the preset name).</p>
-<p>Since Preset and Program banks look very similar (both Presets and Programs have six 11- character names per page), the bottom left-hand corner of the display will show PSET when you are in Presets mode. This helps to differentiate between the two modes, as shown below:</p>
+<p>Since Preset and Program banks look very similar (both Presets and Programs have six 11- character names per page), the bottom left-hand corner of the display will show <span class="lcd">PSET</span> when you are in Presets mode. This helps to differentiate between the two modes, as shown below:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -58,7 +57,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">R2-0</td><td class="cell selected">DIGIWARMTH</td><td class="cell">CHMBR-MUSIC</td><td class="cell">PLUCK-N-STR</td></tr>
+      <tr><td class="cell page-label">R2-0</td><td class="cell">DIGIWARMTH</td><td class="cell">CHMBR-MUSIC</td><td class="cell">PLUCK-N-STR</td></tr>
       <tr><td class="cell page-label">PSET</td><td class="cell">SAMPLE+HOLD</td><td class="cell">WARM-PAD</td><td class="cell">OVERTURE</td></tr>
     </tbody>
     <tfoot>
@@ -74,7 +73,7 @@
   
   
 </figure>
-<aside class="tip"><p>Because you can use the <kbd class="button">BankSet</kbd> button and the ten <kbd class="button">Bank</kbd> buttons to “shop around” in various banks before selecting a preset, it is possible to lose track of where the currently selected preset (the one you are hearing) is located. Try this shortcut for getting to the <dfn class="term">BankSet</dfn> and Bank that contains the selected preset: rapidly double-click the <kbd class="button">Preset</kbd> button. This will instantly return you to the location that contains the currently selected preset.</p></aside>
+<aside class="tip"><p>Because you can use the <kbd class="button">BankSet</kbd> button and the ten <kbd class="button">Bank</kbd> buttons to “shop around” in various banks before selecting a preset, it is possible to lose track of where the currently selected preset (the one you are hearing) is located. Try this shortcut for getting to the BankSet and Bank that contains the selected preset: rapidly double-click the <kbd class="button">Preset</kbd> button. This will instantly return you to the location that contains the currently selected preset.</p></aside>
 <p>Press the <kbd class="button">Presets</kbd> button again. Across the top line, the display shows the names of the three sounds that are on the three tracks. On the lower line you see “context” information about the current preset. The illustration below shows the relationship of the preset and its three tracks to what you see on the display:</p>
 <div class="preset-anatomy"><div class="preset-effect-main"><table class="data-table"><caption>Preset Effect</caption><thead><tr><th colspan="3">The Preset Effect Algorithm and its related parameters</th></tr><tr><th>Track 1</th><th>Track 2</th><th>Track 3</th></tr></thead><tbody><tr><td><ul><li>Sound</li><li>Track parameters</li></ul></td><td><ul><li>Sound</li><li>Track parameters</li></ul></td><td><ul><li>Sound</li><li>Track parameters</li></ul></td></tr></tbody></table><figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Track 1</div><div>Track 2</div><div>Track 3</div></div>
@@ -110,8 +109,8 @@
 <h2 id="how-many-presets-are-in-the-ts-10">How Many Presets are in the TS-10?</h2>
 <p>The TS-10 offers 300 internal Presets:</p>
 <ul>
-  <li>120 presets in User RAM — 60 in <dfn class="term">BankSet</dfn> U0 and 60 in <dfn class="term">BankSet</dfn> U1.</li>
-  <li>180 presets in ROM — 60 in <dfn class="term">BankSet</dfn> R2, 60 in <dfn class="term">BankSet</dfn> R3, and 60 in <dfn class="term">BankSet</dfn> R4.</li>
+  <li>120 presets in User RAM — 60 in BankSet&nbsp;U0 and 60 in BankSet&nbsp;U1.</li>
+  <li>180 presets in ROM — 60 in BankSet&nbsp;R2, 60 in BankSet&nbsp;R3, and 60 in BankSet&nbsp;R4.</li>
 </ul>
 <p>Editing a Preset In addition to the presets stored in memory, there is one more preset that you are using most of the time whether you know it or not. Whenever you are selecting or layering sounds in Sounds mode, you are also creating a preset. The TS-10 automatically “remembers” the last three sounds you selected and stores them in a special memory buffer called the Preset <dfn class="term">Edit Buffer</dfn>. Try this:</p>
 <ul>
@@ -120,7 +119,7 @@
   <li>Layer a third sound by double-clicking on it.</li>
 </ul>
 <p>You have created a preset with three sounds playing simultaneously. Suppose you wanted to adjust their relative volumes, or shorten the release time, or change the pan location of one of the sounds without losing the combination. You can do all of these things and a lot more with presets.</p>
-<p>In Preset mode, whenever you are hearing the Preset <dfn class="term">Edit Buffer</dfn>, the preset name is shown as <span class="value">*-EDITED--*</span> . You can always toggle between the edited and currently selected preset by pressing the soft button closest to the preset name.</p>
+<p>In Preset mode, whenever you are hearing the Preset <dfn class="term">Edit Buffer</dfn>, the preset name is shown as <span class="lcd">*-EDITED--*</span>. You can always toggle between the edited and currently selected preset by pressing the soft button closest to the preset name.</p>
 <p>As we have already discussed, a preset consists of three tracks, each of which has a sound and a set of track parameters. The track parameters are found in the Track Parameters section of the front panel. Presets can be saved, so that you can call them up at any time, or you can use the</p>
 <p>Preset <dfn class="term">Edit Buffer</dfn> in real-time as a powerful performance tool.</p>
 <p>While you still have three programs layered, press the <kbd class="button">Mix/Pan</kbd> button in the Track Parameter section. The display shows:</p>
@@ -138,7 +137,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIX</td><td class="cell">MEGASTRINGS</td><td class="cell">HYPER-LOOP</td><td class="cell">TENOR-SAX</td></tr>
+      <tr><td class="cell page-label">MIX</td><td class="cell selected">MEGASTRINGS</td><td class="cell">HYPER-LOOP</td><td class="cell">TENOR-SAX</td></tr>
       <tr><td class="cell page-label">&nbsp;</td><td class="cell selected">127</td><td class="cell">127</td><td class="cell">127</td></tr>
     </tbody>
     <tfoot>
@@ -177,8 +176,8 @@
 <p>Saving a preset to a User RAM location will erase the one that is currently there, so be careful.</p>
 <p>To save a preset, first decide which User RAM <dfn class="term">BankSet</dfn> and Bank location you want to save it to, then:</p>
 <ul>
-  <li>Press the <kbd class="button">Presets</kbd> button twice to view your edited preset. If the display does not show your edited preset, press the soft button in the lower left corner of the display. The display should show “<span class="value">*-EDITED--*</span>” in the lower left corner.</li>
-  <li>Press the lower right soft button underneath the word “<span class="lcd">*WRITE*</span>.”</li>
+  <li>Press the <kbd class="button">Presets</kbd> button twice to view your edited preset. If the display does not show your edited preset, press the soft button in the lower left corner of the display. The display should show <span class="lcd">*-EDITED--*</span> in the lower left corner.</li>
+  <li>Press the lower right soft button underneath the word <span class="lcd">*WRITE*</span>.</li>
   <li>The display shows the current name of the preset with a cursor (underline) beneath the first character. If you want to give the preset a new name, do so at this time. Use the <kbd class="button">Up/Down Arrow</kbd> buttons and the <kbd class="button">Data Entry Slider</kbd> to change the underlined character, and press the <kbd class="button">Left/Right Cursor</kbd> (soft buttons) to move the underline.</li>
 </ul>
 <figure class="vfd-unit">
@@ -212,7 +211,7 @@
   
 </figure>
 <ul>
-  <li>After you’ve named your preset, press and hold down the <kbd class="button">Presets</kbd> button. The word SAVE flashes in the lower left corner of the display. The display shows the names of the presets in the currently selected <kbd class="button">BankSet</kbd> and Bank. If you let go of the <kbd class="button">Presets</kbd> button, the display will return to show the Preset <span class="page-name">Write</span> page.</li>
+  <li>After you’ve named your preset, press and hold down the <kbd class="button">Presets</kbd> button. The word SAVE flashes in the lower left corner of the display. The display shows the names of the presets in the currently selected BankSet and Bank. If you let go of the <kbd class="button">Presets</kbd> button, the display will return to show the Preset <span class="page-name">Write</span> page.</li>
 </ul>
 <figure class="vfd-unit has-page">
   
@@ -242,39 +241,38 @@
   </table>
   </div>
   
-  <figcaption>SAVE flashes while you hold <kbd class="button">Presets</kbd>. U0-0 is the current <dfn class="term">BankSet</dfn> and bank.</figcaption>
+  <figcaption>SAVE flashes while you hold <kbd class="button">Presets</kbd>. U0-0 is the current BankSetand bank.</figcaption>
 </figure>
 <ul>
-  <li>Press and hold any of the <kbd class="button">Bank</kbd> buttons (0-9) to view the different preset banks. This allows you to select a Bank location within the current <dfn class="term">BankSet</dfn> for your edited preset. While holding down a <kbd class="button">Bank</kbd> button, press the <kbd class="button">BankSet</kbd> button to toggle between the two User RAM <dfn class="term">BankSets</dfn>.</li>
+  <li>Press and hold any of the <kbd class="button">Bank</kbd> buttons (0-9) to view the different preset banks. This allows you to select a Bank location within the current BankSetfor your edited preset. While holding down a <kbd class="button">Bank</kbd> button, press the <kbd class="button">BankSet</kbd> button to toggle between the two User RAM BankSets.</li>
 </ul>
-<figure class="figure"><img src="images/preset-save-bankset-buttons.png" alt="Hold the BankSet button and press a Bank 0–9 button: 0–1 User RAM, 2–7 ROM, 8–9 Sampled Sound BankSets"><figcaption>Hold <kbd class="button">BankSet</kbd> and press <kbd class="button">Bank 0–9</kbd> to choose a <dfn class="term">BankSet</dfn> (User RAM, ROM, or Sampled Sound).</figcaption></figure>
+<figure class="figure"><img src="images/preset-save-bankset-buttons.png" alt="Hold the BankSet button and press a Bank 0–9 button: 0–1 User RAM, 2–7 ROM, 8–9 Sampled Sound BankSets"><figcaption>Hold <kbd class="button">BankSet</kbd> and press <kbd class="button">Bank 0–9</kbd> to choose a BankSet (User RAM, ROM, or Sampled Sound).</figcaption></figure>
 <ul>
   <li>Once you’ve selected a <dfn class="term">BankSet</dfn> and a Bank location for your edited preset, while holding down either the <kbd class="button">Presets</kbd> button or the appropriate <kbd class="button">Bank</kbd> button, press the soft button for the preset location into which you want to save your preset. Your edited Preset will be saved into that location, erasing the existing preset.</li>
 </ul>
-<p>If you need to listen to a few presets in order to decide which one to replace, simply press the soft button beneath <span class="lcd">*EXIT*</span> and then select presets just as you normally would. The word <span class="lcd">*EDITED*</span> disappears from the screen, indicating that you are listening to saved presets. Your new preset is safe in the Preset <dfn class="term">Edit Buffer</dfn>. But make sure you don’t edit anything in any of the presets you audition, including selecting or layering sounds in Sound mode, or this will create a new Edit</p>
-<p>Preset, erasing the one you created.</p>
+<p>If you need to listen to a few presets in order to decide which one to replace, simply press the soft button beneath <span class="lcd">*EXIT*</span> and then select presets just as you normally would. The word <span class="lcd">*EDITED*</span> disappears from the screen, indicating that you are listening to saved presets. Your new preset is safe in the Preset <dfn class="term">Edit Buffer</dfn>. But make sure you don’t edit anything in any of the presets you audition, including selecting or layering sounds in Sound mode, or this will create a new Edit Preset, erasing the one you created.</p>
 <p>When you are ready to save the new preset, press the <kbd class="button">Presets</kbd> button, and then the lower left soft button. You will be returned to the Edit Preset (the word <span class="lcd">*EDITED*</span> should return on the display). Now you can save the preset as described above.</p>
 <p>Avoiding Confusion when using Presets Whenever you create and save a preset, the TS-10 only “remembers” the location of the three sounds in memory — not the actual sounds themselves. This is important to remember when you use User RAM programs in presets. If you move a sound, put another in its place, or transfer an entire <dfn class="term">BankSet</dfn> of sounds, the preset might still be “pointing to” a location that no longer contains the sound you had in mind.</p>
 <p>For example, if you create and save a preset containing a brass sound, a string sound and a piano sound, and you then write over the piano sound with a flute sound, the flute sound will now appear in the location originally occupied by the piano in your preset.</p>
-<p>Using  the <span class="function">Replace Track Sound</span> Function in <span class="mode">Presets Mode</span> The <span class="function">Replace Track Sound</span> function is primarily used for:</p>
+<h3 id="using-the-replace-track-sound-function-in-presets-mode">Using the Replace Track Sound Function in Presets Mode</h3>
+<p>The <span class="function">Replace Track Sound</span> function is primarily used for:</p>
 <ul>
   <li>Assigning sounds to tracks without changing the effects or other Track Parameters</li>
   <li>Determining the exact placement of sounds in a preset</li>
 </ul>
-<p>Normally, when sounds are selected from the sound bank pages, they are transferred to a track in the Preset <dfn class="term">Edit Buffer</dfn>, and many of the track parameters for that track are reset to standard default settings. However, you may wish to change which sound is assigned to a track in a preset without changing any of the other settings for that track. This is done using the <span class="function">Replace Track Sound</span> feature in <span class="mode">Presets Mode</span>. The <kbd class="button">Replace Track Sound</kbd> button is located next to the <kbd class="button">Seq/Song Tracks 1-6</kbd> and <kbd class="button">7-12</kbd> buttons on the bottom row in the Track Parameters section.</p>
+<p>Normally, when sounds are selected from the sound bank pages, they are transferred to a track in the Preset <dfn class="term">Edit Buffer</dfn>, and many of the track parameters for that track are reset to standard default settings. However, you may wish to change which sound is assigned to a track in a preset without changing any of the other settings for that track. This is done using the <span class="function">Replace Track Sound</span> feature in <span class="mode">Presets </span>Mode. The <kbd class="button">Replace Track Sound</kbd> button is located next to the <kbd class="button">Seq/Song Tracks 1-6</kbd> and <kbd class="button">7-12</kbd> buttons on the bottom row in the Track Parameters section.</p>
 <h3 id="replacing-a-sound-in-a-preset">Replacing a Sound in a Preset</h3>
 <ul>
   <li>Press one of the Track Parameter buttons, such as <kbd class="button">Mix/Pan</kbd>, to display the current preset, and make sure that the correct track is selected. The track whose sound will be replaced is indicated by the underlined parameter value on the lower line of the display. It does not matter which <span class="page-name">Track Parameter</span> page is displayed. Use the bottom three soft buttons below the display to select the correct track.</li>
   <li>Press the <kbd class="button">Replace Track Sound</kbd> button. The last selected sound bank page will be displayed and the LED above the <kbd class="button">Sounds</kbd> button will start to flash, indicating that you are in <span class="function">Replace Track Sound</span> mode.</li>
-  <li>Locate the sound that you wish to install into the track and press the soft button nearest to it.</li>
+  <li>Locate the sound that you wish to install into the track and press the soft button nearest to it. This sound is now installed on the track, and will acquire the status of the sound that was replaced if it was selected or layered. You may change <dfn class="term">BankSets</dfn>, Banks, and/or continue to select replacement sounds until you are satisfied that you have found the right one. If you replace the sound on a track that is not currently selected or layered in the preset, you will be immediately returned to the preset page that you were on.</li>
 </ul>
-<p>This sound is now installed on the track, and will acquire the status of the sound that was replaced if it was selected or layered. You may change <dfn class="term">BankSets</dfn>, Banks, and/or continue to select replacement sounds until you are satisfied that you have found the right one. If you replace the sound on a track that is not currently selected or layered in the preset, you will be immediately returned to the preset page that you were on.</p>
 <ul>
   <li>Press <kbd class="button">Replace Track Sound</kbd> again to exit <span class="function">Replace Track Sound</span> mode and return to the preset page to verify that your change was correct. Pressing <kbd class="button">Sounds</kbd> or any other page button will also exit <span class="function">Replace Track Sound</span> mode.</li>
 </ul>
-<p>The method described above is also used to change the sound assigned to a track in the current sequence or song. Unlike using <span class="function">Replace Track Sound</span> in a Preset, using it in <span class="mode">Sequencer Mode</span> will update the track Program and Bank Select number to the correct value for the sound selected.</p>
-<p>See <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a> for more information.</p>
-<p>Using <span class="function">SoundFinder</span> in <span class="mode">Presets Mode</span> Here’s how to scroll through Programs that have the same defined Program Type in Presets mode. For this example, load the 120-PROGRAMS file called USERBNKS V2 from the TSD-200 disk:</p>
+<p>The method described above is also used to change the sound assigned to a track in the current sequence or song. Unlike using <span class="function">Replace Track Sound</span> in a Preset, using it in <span class="mode">Sequencer Mode</span> will update the track Program and Bank Select number to the correct value for the sound selected. See <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a> for more information.</p>
+<h3 id="using-soundfinder-in-presets-mode">Using SoundFinder in Presets Mode</h3>
+<p>Here’s how to scroll through Programs that have the same defined Program Type in Presets mode. For this example, load the 120-PROGRAMS file called USERBNKS V2 from the TSD-200 disk:</p>
 <ul>
   <li>Press the <kbd class="button">Presets</kbd> button.</li>
   <li>While pressing the <kbd class="button">BankSet</kbd> button, press the <kbd class="button">Bank 3</kbd> button. This selects ROM <dfn class="term">BankSet</dfn> R3.</li>
@@ -311,7 +309,7 @@
   
 </figure>
 <ul>
-  <li>Press the upper left soft button to select AC-BS/PIANO (an upright bass and piano split).</li>
+  <li>Press the upper left soft button to select <span class="value">AC-BS/PIANO</span> (an upright bass and piano split).</li>
   <li>Press the <kbd class="button">Mix•Pan</kbd> button (pressing any Track Parameter button will allow you to view the three tracks that make up a Preset). The display shows:</li>
 </ul>
 <figure class="vfd-unit has-page">
@@ -328,7 +326,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIX</td><td class="cell flash-underline"><span>UPRITE-BASS</span></td><td class="cell">FULL-BODY</td><td class="cell">SCORING-STR</td></tr>
+      <tr><td class="cell page-label">MIX</td><td class="cell flash-underline"><span>UPRITE-BASS</span></td><td class="cell selected">FULL-BODY</td><td class="cell">SCORING-STR</td></tr>
       <tr><td class="cell page-label">&nbsp;</td><td class="cell">100</td><td class="cell selected">090</td><td class="cell">100</td></tr>
     </tbody>
     <tfoot>
@@ -344,9 +342,9 @@
   
   
 </figure>
-<p>In this Preset, FULL-BODY is the primary sound (solid underline) and UPRITE-BASS is layered (flashing underline) with it. In this scenario, we will use <span class="function">SoundFinder</span> to audition other Programs that have the same Program Type as the FULL-BODY Program.</p>
+<p>In this Preset, <span class="value">FULL-BODY</span> is the primary sound (solid underline) and <span class="value">UPRITE-BASS</span> is layered (flashing underline) with it. In this scenario, we will use <span class="function">SoundFinder</span> to audition other Programs that have the same Program Type as the <span class="value">FULL-BODY</span> Program.</p>
 <ul>
-  <li>Press the lower center soft button so that the cursor (underline) is beneath the FULL-BODY <span class="param">MIX</span> value (090). The display should look like this:</li>
+  <li>Press the lower center soft button so that the cursor (underline) is beneath the <span class="value">FULL-BODY</span> <span class="param">MIX</span> value (090). The display should look like this:</li>
 </ul>
 <figure class="vfd-unit has-page">
   
@@ -362,7 +360,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIX</td><td class="cell flash-underline"><span>UPRITE-BASS</span></td><td class="cell">FULL-BODY</td><td class="cell">SCORING-STR</td></tr>
+      <tr><td class="cell page-label">MIX</td><td class="cell flash-underline"><span>UPRITE-BASS</span></td><td class="cell selected">FULL-BODY</td><td class="cell">SCORING-STR</td></tr>
       <tr><td class="cell page-label">&nbsp;</td><td class="cell">100</td><td class="cell selected">090</td><td class="cell">100</td></tr>
     </tbody>
     <tfoot>
@@ -413,19 +411,21 @@
   
 </figure>
 <ul>
-  <li>BRITE-PNO is underlined because it is the next Program that has the same Program Type as FULL-BODY.</li>
-  <li>Press the <kbd class="button">Up Arrow</kbd> button again. Notice that <span class="function">SoundFinder</span> has moved from BRITE-PNO to the <span class="value">STEREO</span>-PNO Program. <span class="value">STEREO</span>-PNO is also defined with the same Program Type as FULL-BODY.</li>
+  <li><span class="value">BRITE-PNO</span> is underlined because it is the next Program that has the same Program Type as <span class="value">FULL-BODY</span>.</li>
+  <li>Press the <kbd class="button">Up Arrow</kbd> button again. Notice that <span class="function">SoundFinder</span> has moved from <span class="value">BRITE-PNO</span> to the <span class="value">STEREO-PNO</span> Program. <span class="value">STEREO-PNO</span> is also defined with the same Program Type as <span class="value">FULL-BODY</span>.</li>
   <li>Continued presses of the <kbd class="button">Up Arrow</kbd> will scroll forward through all of the Programs with the same Program Type. Continued presses of the <kbd class="button">Down Arrow</kbd> button will scroll backward through all of the Programs with the same Program Type.</li>
-  <li>When you’ve found the sound that you want, press the <kbd class="button">Replace Track Sound</kbd> button to exit <span class="function">SoundFinder</span>. The <span class="function">Replace Track Sound</span> LED will no longer be lit, and you will be returned to the <span class="page-name">MIX</span> page with the last sound selected replacing FULL-BODY.</li>
+  <li>When you’ve found the sound that you want, press the <kbd class="button">Replace Track Sound</kbd> button to exit <span class="function">SoundFinder</span>. The <span class="function">Replace Track Sound</span> LED will no longer be lit, and you will be returned to the <span class="page-name">MIX</span> page with the last sound selected replacing <span class="value">FULL-BODY</span>.</li>
 </ul>
-<p>Replacing  a Sound and the Effect in a Preset You can replace the sound on a track and make its effect become the preset’s effect by doubleclicking the <kbd class="button">Replace Track Sound</kbd> button:</p>
+<h3 id="replacing-a-sound-and-the-effect-in-a-preset">Replacing a Sound and the Effect in a Preset</h3>
+<p>You can replace the sound on a track and make its effect become the preset’s effect by double-clicking the <kbd class="button">Replace Track Sound</kbd> button:</p>
 <ul>
   <li>Select a preset and select the track whose sound you want to replace.</li>
   <li>Double-click <kbd class="button">Replace Track Sound</kbd>. The last selected sound bank page will be displayed and the LEDs above the <kbd class="button">Replace Track Sound</kbd> and the <kbd class="button">Sounds</kbd> button will both start to flash, indicating that you are in <span class="function">Replace Track Sound</span> mode.</li>
-  <li>Use the <dfn class="term">BankSet</dfn>, <kbd class="button">Bank</kbd> buttons, and soft buttons to pick a sound as before; but now each time you pick a new sound, its effect will become the preset effect.</li>
+  <li>Use the BankSet, <kbd class="button">Bank</kbd> buttons, and soft buttons to pick a sound as before; but now each time you pick a new sound, its effect will become the preset effect.</li>
   <li>Press <kbd class="button">Replace Track Sound</kbd> again to exit <span class="function">Replace Track Sound</span> mode and return to the preset page to verify that your change was correct.</li>
 </ul>
-<p>Display Location The following short cut for finding the locations of the sounds assigned to each Preset Track also shows the Display Location for each Program. For any Program or Preset Bank, the Display Locations are numbered as follows:</p>
+<h3 id="display-location">Display Location</h3>
+<p>The following short cut for finding the locations of the sounds assigned to each Preset Track also shows the Display Location for each Program. For any Program or Preset Bank, the Display Locations are numbered as follows:</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>.1</div><div>.2</div><div>.3</div></div>
   <div class="vfd-bezel">
@@ -456,9 +456,10 @@
   <div class="vfd-callouts bottom has-page"><div class="page-spacer"></div><div>.4</div><div>.5</div><div>.6</div></div>
   
 </figure>
-<p>Finding the <dfn class="term">BankSet</dfn>, Bank, and Display Location for Sounds on Preset Tracks To find the <dfn class="term">BankSet</dfn>, Bank and Display location (U0-1.5, U1-3.1, R2-7.4, etc.) for the sounds assigned to Preset tracks:</p>
+<h3 id="finding-the-bankset-bank-and-display-location-for-sounds-on-preset-tracks">Finding the BankSet, Bank, and Display Location for Sounds on Preset Tracks</h3>
+<p>To find the BankSet, Bank and Display location (U0-1.5, U1-3.1, R2-7.4, etc.) for the sounds assigned to Preset tracks:</p>
 <ul>
-  <li>Select a Preset to view (it should be underlined). For this example, we’ll use the DIGIWARMTH preset located in R2-0.</li>
+  <li>Select a Preset to view (it should be underlined). For this example, we’ll use the <span class="value">DIGIWARMTH</span> preset located in R2-0.</li>
   <li>Press <kbd class="button">Presets</kbd>.</li>
   <li>While holding down the <kbd class="button">BankSet</kbd> button, press the <kbd class="button">Bank 2</kbd> button.</li>
   <li>Press the <kbd class="button">Bank 0</kbd> button.</li>
@@ -528,7 +529,7 @@
   
 </figure>
 <table class="param-cols cols-3"><tbody><tr><td>Program <dfn class="term">BankSet</dfn> Location</td><td>Program Bank Location</td><td>Program Display Location</td></tr></tbody></table>
-<p>The <dfn class="term">BankSet</dfn>, Bank, and Display location for each of the track sounds are shown on the top line of the display.</p>
+<p>The BankSet, Bank, and Display location for each of the track sounds are shown on the top line of the display.</p>
 <ul>
   <li>Release both buttons and the track names will be redisplayed:</li>
 </ul>
@@ -546,7 +547,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">PSET</td><td class="cell selected">GLASS-KEYS</td><td class="cell flash-underline"><span>BEST-PAD</span></td><td class="cell">OL-FAITHFUL</td></tr>
+      <tr><td class="cell page-label">PSET</td><td class="cell flash-underline"><span>GLASS-KEYS</span></td><td class="cell selected"><span>BEST-PAD</span></td><td class="cell">OL-FAITHFUL</td></tr>
       <tr><td class="cell page-label">&nbsp;</td><td class="cell">DIGIWARMTH</td><td class="cell">BANK R2-0.1</td><td class="cell">*WRITE*</td></tr>
     </tbody>
     <tfoot>
@@ -563,17 +564,19 @@
   
 </figure>
 <ul>
-  <li>The Preset name and Preset <dfn class="term">BankSet</dfn>, Bank, and Display location are shown on the bottom line of the display. The <span class="lcd">*WRITE*</span> option allows you to rename and/or write the Preset into a new location.</li>
+  <li>The Preset name and Preset BankSet, Bank, and Display location are shown on the bottom line of the display. The <span class="lcd">*WRITE*</span> option allows you to rename and/or write the Preset into a new location.</li>
   <li>Press <kbd class="button">Presets</kbd> again to return to the <span class="page-name">Presets Bank</span> page.</li>
 </ul>
-<p>When a Sampled Sound is assigned to a Preset Track, it follows the same rules as explained in Finding the <dfn class="term">BankSet</dfn>, Bank, and Display Location for Sounds on Sequencer Tracks, found in <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a>.</p>
-<p>Performance Tip — Creating Keyboard Splits One of the most common uses of presets is a keyboard split, in which your left hand plays an “accompaniment” sound and your right hand plays a “solo” sound. This is easy to set up on the TS-10 by layering the two sounds and assigning them different key zones. You can save this arrangement as a preset so that any time you select that preset, you’ll recall the keyboard split.</p>
+<p>When a Sampled Sound is assigned to a Preset Track, it follows the same rules as explained in "Finding the BankSet, Bank, and Display Location for Sounds on Sequencer Tracks", found in <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a>.</p>
+<h3 id="performance-tip-creating-keyboard-splits">Performance Tip — Creating Keyboard Splits</h3>
+<p>One of the most common uses of presets is a keyboard split, in which your left hand plays an <span class="value">accompaniment</span> sound and your right hand plays a <span class="value">solo</span> sound. This is easy to set up on the TS-10 by layering the two sounds and assigning them different key zones. You can save this arrangement as a preset so that any time you select that preset, you’ll recall the keyboard split.</p>
 <p>Since each track in the keyboard split has its own Transpose value, you are not limited to bass notes on the piano just because it’s on the bottom of the keyboard. Just set the key zone to the keys you want to play and then transpose the sound up or down until it’s playing in the range you want.</p>
 <p>Once you have a keyboard split, you can change any of the sounds without affecting the split points by using the <kbd class="button">Replace Track Sound</kbd> button.</p>
-<p>Using Effects With Performance Presets All three tracks in each preset, and all twelve tracks in each sequence or song, share the same effects algorithm and settings. The effects settings for each preset is inherited from the primary (non-layered) selected sound, and any layered sounds in the preset will use that same effect. The effects settings for each sequence or song are inherited from the current sequencer effect at the time the sequence or song was created. If this effect is incompatible with other programs in the preset, sequence or song, there are several options:</p>
+<h3 id="using-effects-with-performance-presets">Using Effects With Performance Presets</h3>
+<p>All three tracks in each preset, and all twelve tracks in each sequence or song, share the same effects algorithm and settings. The effects settings for each preset is inherited from the primary (non-layered) selected sound, and any layered sounds in the preset will use that same effect. The effects settings for each sequence or song are inherited from the current sequencer effect at the time the sequence or song was created. If this effect is incompatible with other programs in the preset, sequence or song, there are several options:</p>
 <ul>
-  <li>set the effects bus routing to -DRY- for any of the programs that are incompatible</li>
-  <li>set the effects bus routing to -AUX- for programs that you want to process separately by sending them to the AUX Outputs</li>
+  <li>set the effects bus routing to <span class="value">-DRY-</span> for any of the programs that are incompatible</li>
+  <li>set the effects bus routing to <span class="value">-AUX-</span> for programs that you want to process separately by sending them to the AUX Outputs</li>
   <li>change the preset/sequence/song effect to be something more suitable</li>
 </ul>
 <p>When you press the <kbd class="button">Track Effects</kbd> button from preset or sequencer mode, the first page that appears is the Track <span class="page-name">Effects Bus Routing</span> page. On this page you can override the normal effects routing of the sound on each track. Subsequent sub-pages let you edit the effect for use in a preset, sequence, or song; these pages are identical to the effects programming pages under the <kbd class="button">Program Effects</kbd> button. See <a class="refer-to" href="06-effects-concepts.html#section-6-understanding-effects">Section 6 — Understanding Effects</a> for more information on effect selection and programming.</p>
