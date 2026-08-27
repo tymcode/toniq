@@ -1,464 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Section 7 — Effect Parameters (00–21 Parallel) — ENSONIQ TS-10/TS-12 Musician’s Manual</title>
   <link rel="stylesheet" href="css/manual.css">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="chrome">
       <a href="index.html"><span class="brand">ENSONIQ</span>
-      <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
+        <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
     </div>
   </header>
   <nav class="section-nav">
-    <div><a href="06-effects-concepts.html#section-6-understanding-effects">← Section 6 — Understanding Effects</a></div>
+    <div><a href="06-effects-concepts.html#section-6-understanding-effects">← Section 6 — Understanding Effects</a>
+    </div>
     <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
-    <div><a href="07-effects-22-40.html#section-7-effect-parameters-22-40-reverb">Section 7 — Effect Parameters (22–40 Reverb) →</a></div>
+    <div><a href="07-effects-22-40.html#section-7-effect-parameters-22-40-reverb">Section 7 — Effect Parameters (22–40
+        Reverb) →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
       <h1 id="section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters (00–21 Parallel)</h1>
     </header>
-    <p>This section offers detailed descriptions of the sub-pages and parameters used in selecting, creating, and editing effects. For a basic overview of the concepts involved, refer to the previous section.</p>
-<p>About Effect  Parameters The effect algorithms (shown in reverse type) described in this section have various sub-pages.</p>
-<p>Sub-pages are a group of parameters associated with the effect algorithm. Some of the parameters are common to many effect algorithms and some are specific to a particular effect algorithm. The first sub-page of parameters is almost identical for all of the algorithms. It contains the name of the effect algorithm and variations of this algorithm. The remaining subpages are variable and contain specific parameters that are relevant only to that effect. All of these parameters are programmable and can be used to customize each effect algorithm.</p>
-<p>Effect Modulation Parameters The Effect Modulation parameters are identical for all the algorithms, and are explained in detail in <a class="refer-to" href="06-effects-concepts.html#section-6-understanding-effects">Section 6 — Effect Concepts</a>.</p>
-<h2 id="00-dry-bypassed" class="algo">00 DRY/BYPASSED</h2>
-<p>This utility algorithm routes FX-1 and <span class="param">FX-2</span> permanently dry without any effects processing. This is useful when you want to hear a sound without any effects coloration.</p>
-<h4 id="mix-fx-1-and-fx-2" class="param-name"><span class="param">MIX FX-1 and FX-2</span><span class="range">Range: 00 to 99</span></h4>
-<p>These parameters control the mix of silence with a dry audio signal. The FX-1 and <span class="param">FX-2</span> parameters can be assigned different levels, and used as volume mix controllers for each track in a preset, sequence, or song. 00 is silent and 99 is full volume. By assigning the modulation controllers to these parameters, you can change volume mixes of the tracks in real-time.</p>
-<h2 id="parallel-effects">Parallel Effects</h2>
-<p>The first 21 algorithms in the TS-10 are called “parallel effects” and allow several effect types to be used at the same time. These algorithms can be very useful in Presets and Sequencer mode, where you would like different effects processing for each track. The key to parallel effects is how the voices are routed and how they are panned (on the <span class="page-name">Output</span> page). Many of the parallel effect parameters are identical, and are described the first time they appear.</p>
-<h2 id="01-ddl-chorus-rev" class="algo">01 DDL+CHORUS+REV</h2>
-<p>This parallel effect combines a digital delay with a chorus and a plate reverb. The second subpage (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to a plate reverb (REV)</li>
-</ul>
-<p>For more information about parallel effects routing, refer to the previous section.</p>
-<figure class="vfd-unit has-page">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+    <p>This section offers detailed descriptions of the sub-pages and parameters used in selecting, creating, and
+      editing effects. For a basic overview of the concepts involved, refer to the previous section.</p>
+    <h3 id="about-effect-parameters">About Effect Parameters</h3>
+    <p> <dfn class="term">Effect Parameters</dfn> are the parameters that control the behavior of the effect algorithms.
+      The effect algorithms (shown in reverse type) described in this section have various sub-pages. <dfn
+        class="term">Sub-pages</dfn> are a group of parameters associated with the effect algorithm. Some of the
+      parameters are common to many effect algorithms and some are specific to a particular effect algorithm. The first
+      sub-page of parameters is almost identical for all of the algorithms. It contains the name of the effect algorithm
+      and variations of this algorithm. The remaining subpages are variable and contain specific parameters that are
+      relevant only to that effect. All of these parameters are programmable and can be used to customize each effect
+      algorithm.</p>
+    <h3 id="effect-modulation-parameters">Effect Modulation Parameters</h3>
+    <p><dfn class="term">Effect Modulation Parameters</dfn> are the parameters that control the behavior of the effect
+      modulation. The Effect Modulation parameters are identical for all the algorithms, and are explained in detail in
+      <a class="refer-to" href="06-effects-concepts.html#section-6-understanding-effects">Section 6 — Effect
+        Concepts</a>.</p>
+    <h2 id="00-dry-bypassed" class="algo">00 DRY/BYPASSED</h2>
+    <p>This utility algorithm routes <dfn class="term">FX-1</dfn> and <dfn class="term">FX-2</dfn> permanently dry
+      without any effects processing. This is useful when you want to hear a sound without any effects coloration.</p>
+    <h4 id="mix-fx-1-and-fx-2" class="param-name"><span class="param">MIX FX-1 and FX-2</span><span class="range">Range:
+        00 to 99</span></h4>
+    <p>These parameters control the mix of silence with a dry audio signal. The <span class="param">FX-1</span> and
+      <span class="param">FX-2</span> parameters can be assigned different levels, and used as volume mix controllers
+      for each track in a preset, sequence, or song. <span class="value">00</span> is silent and <span
+        class="value">99</span> is full volume. By assigning the modulation controllers to these parameters, you can
+      change volume mixes of the tracks in real-time.</p>
+    <h2 id="parallel-effects">Parallel Effects</h2>
+    <p>The first 21 algorithms in the TS-10 are called “<dfn class="term">Parallel Effects</dfn>” and allow several
+      effect types to be used at the same time. These algorithms can be very useful in <span class="mode">Presets</span>
+      and <span class="mode">Sequencer</span> mode, where you would like different effects processing for each track.
+      The key to parallel effects is how the voices are routed and how they are panned (on the <span
+        class="page-name">Output</span> page). Many of the parallel effect parameters are identical, and are described
+      the first time they appear.</p>
+    <h2 id="01-ddl-chorus-rev" class="algo">01 DDL+CHORUS+REV</h2>
+    <p>This parallel effect combines a digital delay with a chorus and a plate reverb. The second subpage (not
+      user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to a plate reverb (REV)</li>
+    </ul>
+    <p>For more information about parallel effects routing, refer to the previous section.</p>
+    <figure class="vfd-unit has-page">
+
+      <div class="vfd-bezel">
+        <table>
+          <colgroup>
+            <col class="page-col">
+            <col class="param-col">
+            <col class="param-col">
+            <col class="param-col">
+          </colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+              </th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell page-label">SENDS</td>
+              <td class="cell">A--B=99</td>
+              <td class="cell">B--REVRB=05</td>
+              <td class="cell">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="cell page-label">&nbsp;</td>
+              <td class="cell">A--REVRB=00</td>
+              <td class="cell">FX2--REVRB=22</td>
+              <td class="cell">DRY=99</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+
+    </figure>
+    <h4 id="sends-a-b" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the amount of Effect A (<span class="value">DDL</span>) being sent into Effect B (the <span
+        class="value">CHORUS</span>). A setting of <span class="value">99</span> would yield a serial connection between
+      Effect A and the chorus for voices sent to FX1 and panned hard left (on the <span class="page-name">Output</span>
+      page).</p>
+    <h4 id="b-revrb" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect B (<span class="value">CHORUS</span>) being sent into the reverb. This would allow
+      you to add reverb to voices assigned to FX1 and panned hard right. A setting of <span class="value">99</span>
+      would yield a serial connection between the CHORUS and the reverb for voices sent to FX1 and panned hard right</p>
+    <p>(on the <span class="page-name">Output</span> page).</p>
+    <h4 id="a-revrb" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect A (<span class="value">DDL</span>) being sent into the reverb. This would allow you
+      to add reverb to voices assigned to FX1 and panned hard left, without having to add any chorusing.</p>
+    <h4 id="fx2-revrb" class="param-name"><span class="param">FX2- -REVRB</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Defines how much of the voices assigned to <span class="param">FX2</span> (on the <span
+        class="page-name">Output</span> page) will be sent into the Reverb. This allows you to fine tune the amount of
+      reverb coloration you want to add to your voices.</p>
+    <h4 id="dry" class="param-name"><span class="param">DRY</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter allows you to define how much of the <span class="param">FX2</span> signal you want to completely
+      bypass the Reverb. By setting this parameter to <span class="value">99</span> and the <span class="param">FX2-
+        -REVB</span> parameter to <span class="value">00</span>, you can assign voices to be completely dry.</p>
+    <h4 id="ddl-mix" class="param-name"><span class="param">DDL MIX</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the mix between the original signal and the delay. Setting this parameter to <span
+        class="value">00</span> will allow only the unprocessed signal to be heard, while a setting of <span
+        class="value">99</span> will eliminate it completely, with only the delay portion remaining.</p>
+    <h4 id="level" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the delayed signals against the original dry signal. A level of <span
+        class="value">00</span> will offer no audible delay.</p>
+    <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
+      hard left, and <span class="value">+99</span> is hard right. If set to either hard left or hard right, the delayed
+      signal for the opposite side is inaudible.</p>
+    <h4 id="ddl-regen-l" class="param-name"><span class="param">DDL REGEN L</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Determines the amount of signal that will be fed from the output of the left delay back into the input,
+      increasing the number of repeats in the delay. A setting of <span class="value">99</span> would offer an infinite
+      delay.</p>
+    <h4 id="damping" class="param-name"><span class="param">DAMPING</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the
+      feedback signals. The higher the number, the more the signals are dampened.</p>
+    <h4 id="delay-time-l-and-r" class="param-name"><span class="param">DELAY TIME L and R</span><span
+        class="range">Range: 0000 to 1000 msec</span></h4>
+    <p>Sets the amount of delay time for the independent delays. Each value increases the delay time by 1 millisecond.
+      Experiment with different settings to find the right mix for your sound source and application. Some interesting
+      effects can be implemented by using a real-time modulation controller for these parameters.</p>
+    <h4 id="chorus-mix" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the Dry/Wet mix within the chorus itself. For starters, we recommend settings of 50.</p>
+    <h4 id="level-2" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the chorused signal. A level of <span class="value">00</span> will offer no audible signal.
+    </p>
+    <h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Determines the location of the chorused signal in the stereo spectrum. A value of <span class="value">-99</span>
+      is panned hard left, and <span class="value">+99</span> is hard right.</p>
+    <h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Determines the location of the dry signal in the stereo spectrum. A value of <span class="value">-99</span> is
+      panned hard left, and <span class="value">+99</span> is hard right.</p>
+    <h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to
+        127</span></h4>
+    <p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
+    <p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the
+      <span class="param">REGEN</span> or the DDL delays.</p>
+    <h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
+    <p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and
+      tremolo.</p>
+    <h4 id="width" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
+    <p>Controls the depth of vibrato and tremolo.</p>
+    <h4 id="lfo-spread" class="param-name"><span class="param">LFO SPREAD</span><span class="range">Range: 000 to
+        128</span></h4>
+    <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
+      Some voices sound best with very low values.</p>
+    <h4 id="regen" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the
+      feedback. Feedback accentuates the complexity of the “swept” signal.</p>
+    <h4 id="reverb-decay-time" class="param-name"><span class="param">REVERB DECAY TIME</span><span class="range">Range:
+        0.40 to 140.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="pre-dly-time" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to
+        0300 msec</span></h4>
+    <p>This parameter creates a time delay before the original signal is fed into the reverb. The range is based in
+      milliseconds.</p>
+    <h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="definition" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate at which echo density increases with time. Higher values can cause the echo density to build at
+      a rate that exceeds the decay rate. For the best performance, try to select the highest value that works with your
+      sound source.</p>
+    <h4 id="diffusion" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower
+      values) or will be more diffused (higher values).</p>
+    <h2 id="02-eq-ddl-chorus-rev" class="algo">02 EQ- -DDL+CHORUS+REV</h2>
+    <p>This parallel effect combines a parametric EQ and a DDL with a chorus and a reverb. The second sub-page (not
+      user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">EQ- -DDL</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">CHORUS</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="eqddl-mix" class="param-name"><span class="param">EQDDL MIX</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the mix between the original signal and the EQ into the delay. Setting this parameter to <span
+        class="value">00</span> will allow only the unprocessed signal to be heard, while a setting of <span
+        class="value">99</span> will eliminate it completely, with only the delay portion remaining.</p>
+    <h4 id="level-3" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the delayed signals against the original dry signal. A level of <span
+        class="value">00</span> will offer no audible delay.</p>
+    <h4 id="pan-2" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
+      hard left, and <span class="value">+99</span> is hard right. If set to either hard left or hard right, the delayed
+      signal for the opposite side is inaudible.</p>
+    <h4 id="eq-fc" class="param-name"><span class="param">EQ FC</span><span class="range">Range: 0 Hz to 15 KHz</span>
+    </h4>
+    <p>Sets the center frequency of the parametric EQ.</p>
+    <h4 id="bw" class="param-name"><span class="param">BW</span><span class="range">Range: 0 Hz to 15 KHz</span></h4>
+    <p>Sets the bandwidth for the center frequency.</p>
+    <h4 id="level-4" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -99 to +48</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the <dfn class="term">parametric EQ</dfn> (equalizer).</p>
+    <h4 id="eqddl-regen" class="param-name"><span class="param">EQDDL REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the amount of regen (regeneration) applied to the delay time taps. The sign of the value determines the
+      polarity of the regen.</p>
+    <h4 id="damping-2" class="param-name"><span class="param">DAMPING</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Adjusts the cutoff of a low pass filter on the feedback signal, which controls the amount of damping to the
+      feedback signals. The higher the number, the more the signals are damped.</p>
+    <h4 id="time" class="param-name"><span class="param">TIME</span><span class="range">Range: 1 msec to 1K (1
+        sec)</span></h4>
+    <p>Determines the amount of time between the input signal and the delay outputs.</p>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="03-delaylfo-chorus-rev" class="algo">03 DELAYLFO+CHORUS+REV</h2>
+    <p>This parallel effect combines a digital delay that provides LFO modulation with a chorus and a reverb. The second
+      sub-page (not user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span
+          class="value">DELAYLFO</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span
+          class="value">CHORUS</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="value">REV</span>)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="delaylfo-level" class="param-name"><span class="param">DELAYLFO LEVEL</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the volume level of the original signal and the delay. Setting this parameter to <span
+        class="value">00</span> will eliminate the audio signal.</p>
+    <h4 id="pan-3" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
+      hard left, and <span class="value">+99</span> is hard right. If set to either hard left or hard right, the delayed
+      signal for the opposite side is inaudible.</p>
+    <h4 id="wet" class="param-name"><span class="param">WET</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter controls the volume of the delayed signal only. Setting this parameter to <span
+        class="value">00</span> will eliminate the delay portion completely.</p>
+    <h4 id="dry-2" class="param-name"><span class="param">DRY</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter allows you to define how much of the FX1 signal you want to completely bypass the Delay LFO.
+      Setting this parameter to <span class="value">00</span> will eliminate the dry signal. By setting this parameter
+      to <span class="value">99</span> and the <span class="param">WET</span> parameter to <span
+        class="value">00</span>, you can assign voices to be completely dry.</p>
+    <h4 id="delay-lfo-center" class="param-name"><span class="param">DELAY LFO CENTER</span><span class="range">Range:
+        000 to 127</span></h4>
+    <p>Controls the nominal delay time of the LFO about which the delay modulation occurs. Adjusting this parameter will
+      change the tonal character of the effect. Higher values offer a longer delay time.</p>
+    <h4 id="rate-2" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
+    <p>Controls the rate of pitch modulation which is the LFO. To achieve a chorusing effect, this rate must be very
+      slow.</p>
+    <h4 id="width-2" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span>
+    </h4>
+    <p>Controls the excursion of pitch modulation. Since the rate is usually very slow, the width is usually large.</p>
+    <h4 id="r-lfo-phase" class="param-name"><span class="param">R LFO PHASE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>When set to <span class="value">00</span>, the left and right choruses will modulate their detunes together. When
+      set to <span class="value">99</span> the detune on the right channel will go up while the detune on the left will
+      go down, creating an out-of-phase effect.</p>
+    <h4 id="regen-2" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of regen (regeneration) applied to the delay time taps. The sign of the value determines the
+      polarity of the regen.</p>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+
+    <h2 id="04-rotospkr-chorus-rev" class="algo">04 ROTOSPKR+CHORUS+REV</h2>
+    <p>This parallel effect combines a rotary speaker with a chorus and a reverb. The second sub-page (not
+      user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span
+          class="value">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span
+          class="value">CHORUS</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="value">REV</span>)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="stereo" class="param-name"><span class="param">STEREO</span><span class="range">Range: OFF or ON</span></h4>
+    <p>When set to <span class="value">OFF</span>, the same roto-speaker signal is heard in both channels. When set to
+      ON, the signal is 180˚ out-of-phase, to create stereo movement.</p>
+    <h4 id="level-5" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the rotary speaker signal. A level of 00 will offer no audible signal.</p>
+    <h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the rotary speaker signal in the stereo spectrum. A value of -99 is panned hard left,
+      and +99 is hard right.</p>
+    <h4 id="am-depth" class="param-name"><span class="param">AM DEPTH</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls how much the volume will fade away as the speaker rotates away from the listener.</p>
+    <p>Higher values will create a deeper rotating speaker effect.</p>
+    <h4 id="fm-depth" class="param-name"><span class="param">FM DEPTH</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of detuning applied to the rotating speaker. This can be used to create a “doppler” effect.
+    </p>
+    <h4 id="roto-slow" class="param-name"><span class="param">ROTO SLOW</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Determines the rate of the rotary speaker when in the “Slow” setting. <span class="param">ROTO SLOW</span>
+      determines the manual level for the rotary speaker rate when <span class="param">SPEED</span>= SLOW, or when the
+      selected modulator is at zero output level. Again, the higher the value, the faster the rate.</p>
+    <h4 id="fast" class="param-name"><span class="param">FAST</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Determines the rate of the rotary speaker when in the “<span class="param">FAST</span>” setting. The higher the
+      value, the faster the rate.</p>
+    <h4 id="inertia" class="param-name"><span class="param">INERTIA</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow
+      or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
+    <h4 id="speed" class="param-name"><span class="param">SPEED</span><span class="range">Range: SLOW or FAST</span>
+    </h4>
+    <p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately
+      reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span
+        class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span
+        class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:
+    </p>
+    <ul>
+      <li><span class="param">WHEEL</span>, <span class="param">PBEND</span>, <span class="param">PEDAL</span>, <span
+          class="param">TIMBR</span>, <span class="param">XCTRL</span>, <span class="param">PRESS</span>, <span
+          class="param">KEYBD</span>, and <span class="param">VELOC</span> — These modulation sources act like a switch
+        to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR
+          SLOW</span> faster than <span class="param">ROTOR FAST</span>.</li>
+      <li><span class="param">KEYDN</span>, <span class="param">PATCH</span>, <span class="param">SUSTN</span>, <span
+          class="param">SOSTU</span>, <span class="param">FX-SW</span> — These modulation sources toggle the rotor speed
+        between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating
+        speaker effect changes speeds from slow to fast or fast to slow.</li>
+    </ul>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="05-distort-chorus-rev" class="algo">05 DISTORT+CHORUS+REV</h2>
+    <p>This parallel effect combines a raspy distortion with a chorus and a reverb. The second sub-page (not
+      user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span
+          class="value">DISTORT</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span
+          class="value">CHORUS</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="value">REV</span>)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="dist-mix" class="param-name"><span class="param">DIST MIX</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the mix between the original signal and the distortion. Setting this parameter to <span
+        class="value">00</span> will allow only the unprocessed signal to be heard, while a setting of <span
+        class="value">99</span> will eliminate it completely, with only the distortion portion remaining.</p>
+    <h4 id="level-6" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the input level to the pre-amp, to eliminate the possibility of clipping boosted signals.</p>
+    <h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the distortion in the stereo spectrum. A value of <span class="value">-99</span> is
+      panned hard left, and <span class="value">+99</span> is hard right.</p>
+    <h4 id="preamp" class="param-name"><span class="param">PREAMP</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the amount of boost or cut applied to the incoming signal. We recommend lower settings, since these
+      emulations were optimized for distortion there. Lower preamp gains will result in less distortion, while higher
+      preamp gains will yield clipping distortion. For low preamp gain, it may be desirable to use low tube bias values.
+    </p>
+    <h4 id="main-2" class="param-name"><span class="param">MAIN</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the output level of the main amp after saturation, but before the filter.</p>
+    <h4 id="bias" class="param-name"><span class="param">BIAS</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Controls the emphasis of even to odd harmonics which determines the tone of the amp; mid values emphasize even
+      harmonics and offer a warmer (“glowing tube”) sound, while the highest values may sound like tubes going bad. For
+      low preamp gain, it may be desirable to use low tube bias values, because this more closely imitates the operation
+      of a real amplifier.</p>
+    <h4 id="tone" class="param-name"><span class="param">TONE</span><span class="range">Range: 0000 to 8000</span></h4>
+    <p>Controls the cutoff frequency. This is much like a tone control on a guitar amp. By applying a real-time
+      controller to modulate this parameter, you can create a wah-pedal effect.</p>
+    <h4 id="resonance" class="param-name"><span class="param">RESONANCE</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the bandwidth of the filter. Higher settings yield a narrower bandwidth.</p>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="06-param-eq-chorus-rev" class="algo">06 PARAM EQ+CHORUS+REV</h2>
+    <p>This parallel effect combines a parametric EQ with a chorus and a reverb. The second sub-page (not
+      user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">PARAM EQ</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">CHORUS</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="input" class="param-name"><span class="param">INPUT</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Allows you to adjust the input level trim to the EQs to eliminate the possibility of clipping boosted signals.
+    </p>
+    <h4 id="output" class="param-name"><span class="param">OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the output volume after the parametric EQ. With the <span class="param">LEVEL</span>, <span
+        class="param">BASS LEVEL</span>, and <span class="param">TREBLE LEVEL</span> set to high values, the <span
+        class="param">OUTPUT</span> parameter could be used to create a raspy distortion effect.</p>
+    <h4 id="pan-6" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the EQ in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard
+      right.</p>
+    <h4 id="mid-fc" class="param-name"><span class="param">MID FC</span><span class="range">Range: 00000 to 15000</span>
+    </h4>
+    <p>Sets the center of the mid-frequency parametric.</p>
+    <h4 id="bw-2" class="param-name"><span class="param">BW</span><span class="range">Range: 0 to 15K</span></h4>
+    <p>This parameter is a bandwidth control that determines the width of the resonant peak at the midfrequency band. By
+      lowering the value, you can produce a narrower bandwidth.</p>
+    <h4 id="level-7" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -99 to +48 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to this mid-frequency parametric.</p>
+    <h4 id="bass-level" class="param-name"><span class="param">BASS LEVEL</span><span class="range">Range: -99 to +48
+        dB</span></h4>
+    <p>Sets the amount of boost or cut applied to a 0 to 80Hz low-shelving filter.</p>
+    <h4 id="treble-level" class="param-name"><span class="param">TREBLE LEVEL</span><span class="range">Range: -99 to
+        +48 dB</span></h4>
+    <p>Sets the amount of boost or cut applied to a 10 to 15K high-shelving filter.</p>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="07-env-vcf-chorus-rev" class="algo">07 ENV VCF+CHORUS+REV</h2>
+    <p>This parallel effect combines a voltage control filter with a chorus and a reverb. The second subpage (not
+      user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ENV VCF)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="vcf-fc" class="param-name"><span class="param">VCF FC</span><span class="range">Range: 000 to 127</span>
+    </h4>
+    <p>Determines the filter cut off-frequency. Higher values have a brighter sound. This parameter can be modulated,
+      using a CV Pedal for a wah-wah pedal effect. To use as an EQ, set the desired value and make sure the <span
+        class="param">ENV AMT</span> is 0. To use as the auto-wah, set this parameter to a low value and turn on <span
+        class="param">ENV AMT</span>.</p>
+    <h4 id="level-8" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the output level of the Voltage control filter.</p>
+    <h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the VCF in the stereo spectrum. A value of <span class="value">-99</span> is panned
+      hard left, and <span class="value">+99</span> is hard right.</p>
+    <h4 id="bw-3" class="param-name"><span class="param">BW</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">VCF
+        FC</span> parameter determines where (at what frequency) this peak will occur, the BW setting controls the
+      presence of the peak. This setting is important for the auto-wah effect.</p>
+    <h4 id="env-amt" class="param-name"><span class="param">ENV AMT</span><span class="range">Range: 0 to 15</span></h4>
+    <p>Controls the peak frequency at the highest point of the attack. When set to 0, the <span
+        class="param">ATTACK</span>, <span class="param">DECAY</span>, <span class="param">SUSTN</span>, REL, and <span
+        class="param">TRIG</span> parameters have no effect.</p>
+    <h4 id="kbd-amt" class="param-name"><span class="param">KBD AMT</span><span class="range">Range: 0 to 15</span></h4>
+    <p>Keyboard tracking amount — the cutoff frequency will track based on the KYB AMT range. Set this parameter to work
+      with your signal.</p>
+    <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 50 µsec to 10.0
+        sec</span></h4>
+    <p>Sets the attack of the envelope follower (i.e. determines how closely the attack is followed) once the incoming
+      signal has been detected. Generally the attack should be short.</p>
+    <h4 id="decay" class="param-name"><span class="param">DECAY</span><span class="range">Range: 50 µsec to 10.0
+        sec</span></h4>
+    <p>Determines the amount of time after the attack time that the VCF will decay.</p>
+    <h4 id="sustn" class="param-name"><span class="param">SUSTN</span><span class="range">Range: 00 to 63</span></h4>
+    <p>Determines the amount of time the VCF will sustain before it decays.</p>
+    <h4 id="release" class="param-name"><span class="param">RELEASE</span><span class="range">Range: 50 µsec to 10.0
+        sec</span></h4>
+    <p>Sets the amount of time after the incoming signal has ceased for the envelope follower to shut down. Generally
+      these times are longer than the attack times.</p>
+    <h4 id="trig" class="param-name"><span class="param">TRIG</span><span class="range">Range: SINGLE or MULTI</span>
+    </h4>
+    <p>Determines whether the VCF will retrigger with each key-event or not.</p>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="08-ddl-phlangr-rev" class="algo">08 DDL+PHLANGR+REV</h2>
+    <p>This parallel effect combines a digital delay with a phlanger (a combination phaser and flanger effect) and a
+      reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <h4 id="sends-a-b-2" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the amount of Effect A (DDL) being sent into Effect B (the phlanger). A setting of 99 would yield a
+      serial connection between Effect A and the PHLANGR for voices sent to FX1 and panned hard left (on the <span
+        class="page-name">Output</span> page).</p>
+    <h4 id="b-revrb-2" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect B (PHLANGR) being sent into the reverb. This would allow you to add reverb to
+      voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the PHLANGR
+      and the reverb for voices sent to FX1 and panned hard right</p>
+    <p>(on the <span class="page-name">Output</span> page).</p>
+    <h4 id="a-revrb-2" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices
+      assigned to FX1 and panned hard left, without having to add any phasing/flanging.</p>
+      <table class="param-table">
+        <tr>
+          <td><span class="param">FX2- -REVRB</span></td>
+          <td width="40">&nbsp;</td>
+          <td><span class="param">PAN</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">DRY</span></td>
+          <td width="40">&nbsp;</td>
+          <td><span class="param">DDL REGEN L</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">DDL MIX</span></td>
+          <td width="40">&nbsp;</td>
+          <td><span class="param">DAMPING</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">LEVEL</span></td>
+          <td width="40">&nbsp;</td>
+          <td><span class="param">DELAY TIME L</span> and <span class="param">R</span></td>
+        </tr>
+      </table>
+    <p> For a complete description of these parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="phlngr-mix" class="param-name"><span class="param">PHLNGR MIX</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the Dry/Wet mix within the phlanger itself.</p>
+    <h4 id="level-9" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the phlanger signal. A level of 00 will offer no audible signal.</p>
+    <h4 id="pan-8" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the phlanger signal in the stereo spectrum. A value of -99 is panned hard left, and
+      +99 is hard right.</p>
+    <h4 id="rate-3" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
+    <p>Controls the rates of modulation of the phlanger.</p>
+    <h4 id="regen-3" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the phlanger. The sign of the value determines the polarity of the
+      feedback.</p>
+    <h4 id="phase-center" class="param-name"><span class="param">PHASE CENTER</span><span class="range">Range: -127 to
+        +127</span></h4>
+    <p>Controls the center of the phaser width.</p>
+    <h4 id="width-3" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span>
+    </h4>
+    <p>Controls the amount of modulation applied to phaser poles.</p>
+    <h4 id="flanger-center" class="param-name"><span class="param">FLANGER CENTER</span><span class="range">Range: 000
+        to 127</span></h4>
+    <p>Controls the center of the flanger width.</p>
+    <h4 id="width-4" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span>
+    </h4>
+    <p>Controls the range of the high to low-frequency sweep in the flanger effect.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="09-eq-ddl-phlangr-rev" class="algo">09 EQ- -DDL+PHLANGR+REV</h2>
+    <p>This parallel effect combines a parametric EQ into a digital delay with a phlanger (a combination phaser and
+      flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is
+      routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">EQ- -DDL</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">EQ- -DDL</span> parameters, refer to the <a class="algo"
+        href="#02-eq-ddl-chorus-rev">EQ- -DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PHLANGR</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="10-delaylfo-phlangr-rev" class="algo">10 DELAYLFO+PHLANGR+REV</h2>
+    <p>This parallel effect combines a digital delay that provides LFO modulation with a phlanger (a combination phaser
+      and flanger effect) and a reverb. The second sub-page (not userprogrammable) shows how this parallel effect is
+      routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DELAYLFO</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">DELAYLFO</span> parameters, refer to the <a class="algo"
+        href="#03-delaylfo-chorus-rev">DELAYLFO+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PHLANGR</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="11-rotospkr-phlangr-rev" class="algo">11 ROTOSPKR+PHLANGR+REV</h2>
+    <p>This parallel effect combines a rotary speaker with a <dfn class="term">phlanger</dfn> (a combination phaser and
+      flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is
+      routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span> )</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ROTOSPKR parameters</span>, refer to the <a class="algo"
+        href="#04-rotospkr-chorus-rev">ROTOSPKR+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PHLANGR</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="12-distort-phlangr-rev" class="algo">12 DISTORT+PHLANGR+REV</h2>
+    <p>This parallel effect combines a distortion with a phlanger (a combination phaser and flanger effect) and a
+      reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DISTORT</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">DISTORT</span> parameters, refer to the <a class="algo"
+        href="#05-distort-chorus-rev">DISTORT+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PHLANGR</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="13-param-eq-phlangr-rev" class="algo">13 PARAM EQ+PHLANGR+REV</h2>
+    <p>This parallel effect combines a parametric EQ with a phlanger (a combination phaser and flanger effect) and a
+      reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">PARAM EQ</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PARAM EQ</span> parameters, refer to the <a class="algo"
+        href="#06-param-eq-chorus-rev">PARAM EQ+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PHLANGR</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="14-env-vcf-phlangr-rev" class="algo">14 ENV VCF+PHLANGR+REV</h2>
+    <p>This parallel effect combines a voltage control filter with a phlanger (a combination phaser and flanger effect)
+      and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">ENV VCF</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ENV VCF</span> parameters, refer to the <a class="algo"
+        href="#07-env-vcf-chorus-rev">ENV VCF+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PHLANGR</span> parameters, refer to the <a class="algo"
+        href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="15-ddl-rotospkr-rev" class="algo">15 DDL+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a digital delay with a rotary speaker effect and a reverb. The second sub-page (not
+      user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <h4 id="sends-a-b-3" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the amount of Effect A (<span class="param">DDL</span>) being sent into Effect B (the rotary speaker). A
+      setting of 99 would yield a serial connection between Effect A and the rotary speaker effect for voices sent to
+      FX1 and panned hard left (on the <span class="page-name">Output</span> page).</p>
+    <h4 id="b-revrb-3" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect B (<span class="param">ROTSPKR</span>) being sent into the reverb. This would allow
+      you to add reverb to voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection
+      between the ROTSPKR and the reverb for voices sent to FX1 and panned hard right</p>
+    <p>(on the <span class="page-name">Output</span> page).</p>
+    <h4 id="a-revrb-3" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect A (<span class="param">DDL</span>) being sent into the reverb. This would allow you
+      to add reverb to voices assigned to FX1 and panned hard left, without having to add any of the rotary speaker
+      effect.</p>
+    <table class="param-table">
+      <tr>
+        <td><span class="param">FX2- -REVRB</span></td>
+        <td width="40">&nbsp;</td>
+        <td><span class="param">PAN</span></td>
       </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SENDS</td><td class="cell">A--B=99</td><td class="cell">B--REVRB=05</td><td class="cell">&nbsp;</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">A--REVRB=00</td><td class="cell">FX2--REVRB=22</td><td class="cell">DRY=99</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      <tr>
+        <td><span class="param">DRY</span></td>
+        <td width="40">&nbsp;</td>
+        <td><span class="param">DDL REGEN L</span></td>
       </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
-</figure>
-<h4 id="sends-a-b" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into Effect B (the chorus). A setting of 99 would yield a serial connection between Effect A and the chorus for voices sent to FX1 and panned hard left (on the <span class="page-name">Output</span> page).</p>
-<h4 id="b-revrb" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect B (CHORUS) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the CHORUS and the reverb for voices sent to FX1 and panned hard right</p>
-<p>(on the <span class="page-name">Output</span> page).</p>
-<h4 id="a-revrb" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard left, without having to add any chorusing.</p>
-<h4 id="fx2-revrb" class="param-name"><span class="param">FX2- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Defines how much of the voices assigned to <span class="param">FX2</span> (on the <span class="page-name">Output</span> page) will be sent into the Reverb. This allows you to fine tune the amount of reverb coloration you want to add to your voices.</p>
-<h4 id="dry" class="param-name"><span class="param">DRY</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter allows you to define how much of the <span class="param">FX2</span> signal you want to completely bypass the Reverb. By setting this parameter to 99 and the <span class="param">FX2- -REVB</span> parameter to 00, you can assign voices to be completely dry.</p>
-<h4 id="ddl-mix" class="param-name"><span class="param">DDL MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the mix between the original signal and the delay. Setting this parameter to 00 will allow only the unprocessed signal to be heard, while a setting of 99 will eliminate it completely, with only the delay portion remaining.</p>
-<h4 id="level" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the delayed signals against the original dry signal. A level of 00 will offer no audible delay.</p>
-<h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the delays in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right. If set to either hard left or hard right, the delayed signal for the opposite side is inaudible.</p>
-<h4 id="ddl-regen-l" class="param-name"><span class="param">DDL REGEN L</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the amount of signal that will be fed from the output of the left delay back into the input, increasing the number of repeats in the delay. A setting of 99 would offer an infinite delay.</p>
-<h4 id="damping" class="param-name"><span class="param">DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the feedback signals. The higher the number, the more the signals are dampened.</p>
-<h4 id="delay-time-l-and-r" class="param-name"><span class="param">DELAY TIME L and R</span><span class="range">Range: 0000 to 1000 msec</span></h4>
-<p>Sets the amount of delay time for the independent delays. Each value increases the delay time by 1 millisecond. Experiment with different settings to find the right mix for your sound source and application. Some interesting effects can be implemented by using a real-time modulation controller for these parameters.</p>
-<h4 id="chorus-mix" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the Dry/Wet mix within the chorus itself. For starters, we recommend settings of 50.</p>
-<h4 id="level-2" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the chorused signal. A level of 00 will offer no audible signal.</p>
-<h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the chorused signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the dry signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
-<p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the <span class="param">REGEN</span> or the DDL delays.</p>
-<h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and tremolo.</p>
-<h4 id="width" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the depth of vibrato and tremolo.</p>
-<h4 id="lfo-spread" class="param-name"><span class="param">LFO SPREAD</span><span class="range">Range: 000 to 128</span></h4>
-<p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h4 id="regen" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the feedback. Feedback accentuates the complexity of the “swept” signal.</p>
-<h4 id="reverb-decay-time" class="param-name"><span class="param">REVERB DECAY TIME</span><span class="range">Range: 0.40 to 140.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="pre-dly-time" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to 0300 msec</span></h4>
-<p>This parameter creates a time delay before the original signal is fed into the reverb. The range is based in milliseconds.</p>
-<h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="definition" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate at which echo density increases with time. Higher values can cause the echo density to build at a rate that exceeds the decay rate. For the best performance, try to select the highest value that works with your sound source.</p>
-<h4 id="diffusion" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h2 id="02-eq-ddl-chorus-rev" class="algo">02 EQ- -DDL+CHORUS+REV</h2>
-<p>This parallel effect combines a parametric EQ and a DDL with a chorus and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (EQ- -DDL)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="eqddl-mix" class="param-name"><span class="param">EQDDL MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the mix between the original signal and the EQ into the delay. Setting this parameter to 00 will allow only the unprocessed signal to be heard, while a setting of 99 will eliminate it completely, with only the delay portion remaining.</p>
-<h4 id="level-3" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the delayed signals against the original dry signal. A level of 00 will offer no audible delay.</p>
-<h4 id="pan-2" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the delays in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right. If set to either hard left or hard right, the delayed signal for the opposite side is inaudible.</p>
-<h4 id="eq-fc" class="param-name"><span class="param">EQ FC</span><span class="range">Range: 0 Hz to 15 KHz</span></h4>
-<p>Sets the center frequency of the parametric EQ.</p>
-<h4 id="bw" class="param-name"><span class="param">BW</span><span class="range">Range: 0 Hz to 15 KHz</span></h4>
-<p>Sets the bandwidth for the center frequency.</p>
-<h4 id="level-4" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -99 to +48</span></h4>
-<p>Sets the amount of boost or cut applied to the parametric.</p>
-<h4 id="eqddl-regen" class="param-name"><span class="param">EQDDL REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of regen (regeneration) applied to the delay time taps. The sign of the value determines the polarity of the regen.</p>
-<h4 id="damping-2" class="param-name"><span class="param">DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the cutoff of a low pass filter on the feedback signal, which controls the amount of damping to the feedback signals. The higher the number, the more the signals are damped.</p>
-<h4 id="time" class="param-name"><span class="param">TIME</span><span class="range">Range: 1 msec to 1K (1 sec)</span></h4>
-<p>Determines the amount of time between the input signal and the delay outputs.</p>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="03-delaylfo-chorus-rev" class="algo">03 DELAYLFO+CHORUS+REV</h2>
-<p>This parallel effect combines a digital delay that provides LFO modulation with a chorus and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DELAYLFO)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="delaylfo-level" class="param-name"><span class="param">DELAYLFO LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the volume level of the original signal and the delay. Setting this parameter to 00 will eliminate the audio signal.</p>
-<h4 id="pan-3" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the delays in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right. If set to either hard left or hard right, the delayed signal for the opposite side is inaudible.</p>
-<h4 id="wet" class="param-name"><span class="param">WET</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter controls the volume of the delayed signal only. Setting this parameter to 00 will eliminate the delay portion completely.</p>
-<h4 id="dry-2" class="param-name"><span class="param">DRY</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter allows you to define how much of the FX1 signal you want to completely bypass the Delay LFO. Setting this parameter to 00 will eliminate the dry signal. By setting this parameter to 99 and the <span class="param">WET</span> parameter to 00, you can assign voices to be completely dry.</p>
-<h4 id="delay-lfo-center" class="param-name"><span class="param">DELAY LFO CENTER</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the nominal delay time of the LFO about which the delay modulation occurs. Adjusting this parameter will change the tonal character of the effect. Higher values offer a longer delay time.</p>
-<h4 id="rate-2" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the rate of pitch modulation which is the LFO. To achieve a chorusing effect, this rate must be very slow.</p>
-<h4 id="width-2" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the excursion of pitch modulation. Since the rate is usually very slow, the width is usually large.</p>
-<h4 id="r-lfo-phase" class="param-name"><span class="param">R LFO PHASE</span><span class="range">Range: 00 to 99</span></h4>
-<p>When set to 00, the left and right choruses will modulate their detunes together. When set to 99 the detune on the right channel will go up while the detune on the left will go down, creating an out-of-phase effect.</p>
-<h4 id="regen-2" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of regen (regeneration) applied to the delay time taps. The sign of the value determines the polarity of the regen.</p>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="04-rotospkr-chorus-rev" class="algo">04 ROTOSPKR+CHORUS+REV</h2>
-<p>This parallel effect combines a rotary speaker with a chorus and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="stereo" class="param-name"><span class="param">STEREO</span><span class="range">Range: OFF or ON</span></h4>
-<p>When set to <span class="value">OFF</span>, the same roto-speaker signal is heard in both channels. When set to ON, the signal is 180˚ out-of-phase, to create stereo movement.</p>
-<h4 id="level-5" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the rotary speaker signal. A level of 00 will offer no audible signal.</p>
-<h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the rotary speaker signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="am-depth" class="param-name"><span class="param">AM DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls how much the volume will fade away as the speaker rotates away from the listener.</p>
-<p>Higher values will create a deeper rotating speaker effect.</p>
-<h4 id="fm-depth" class="param-name"><span class="param">FM DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of detuning applied to the rotating speaker. This can be used to create a “doppler” effect.</p>
-<h4 id="roto-slow" class="param-name"><span class="param">ROTO SLOW</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the rate of the rotary speaker when in the “Slow” setting. <span class="param">ROTO SLOW</span> determines the manual level for the rotary speaker rate when <span class="param">SPEED</span>= SLOW, or when the selected modulator is at zero output level. Again, the higher the value, the faster the rate.</p>
-<h4 id="fast" class="param-name"><span class="param">FAST</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the rate of the rotary speaker when in the “<span class="param">FAST</span>” setting. The higher the value, the faster the rate.</p>
-<h4 id="inertia" class="param-name"><span class="param">INERTIA</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
-<h4 id="speed" class="param-name"><span class="param">SPEED</span><span class="range">Range: SLOW or FAST</span></h4>
-<p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:</p>
-<ul>
-  <li>WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>, KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than ROTOR <span class="param">FAST</span>.</li>
-  <li>KEYDN, PATCH, <span class="param">SUSTN</span>, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</li>
-</ul>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="05-distort-chorus-rev" class="algo">05 DISTORT+CHORUS+REV</h2>
-<p>This parallel effect combines a raspy distortion with a chorus and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DISTORT)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="dist-mix" class="param-name"><span class="param">DIST MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the mix between the original signal and the distortion. Setting this parameter to 00 will allow only the unprocessed signal to be heard, while a setting of 99 will eliminate it completely, with only the distortion portion remaining.</p>
-<h4 id="level-6" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the input level to the pre-amp, to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the distortion in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="preamp" class="param-name"><span class="param">PREAMP</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the amount of boost or cut applied to the incoming signal. We recommend lower settings, since these emulations were optimized for distortion there. Lower preamp gains will result in less distortion, while higher preamp gains will yield clipping distortion. For low preamp gain, it may be desirable to use low tube bias values.</p>
-<h4 id="main-2" class="param-name"><span class="param">MAIN</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the output level of the main amp after saturation, but before the filter.</p>
-<h4 id="bias" class="param-name"><span class="param">BIAS</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the emphasis of even to odd harmonics which determines the tone of the amp; mid values emphasize even harmonics and offer a warmer (“glowing tube”) sound, while the highest values may sound like tubes going bad. For low preamp gain, it may be desirable to use low tube bias values, because this more closely imitates the operation of a real amplifier.</p>
-<h4 id="tone" class="param-name"><span class="param">TONE</span><span class="range">Range: 0000 to 8000</span></h4>
-<p>Controls the cutoff frequency. This is much like a tone control on a guitar amp. By applying a real-time controller to modulate this parameter, you can create a wah-pedal effect.</p>
-<h4 id="resonance" class="param-name"><span class="param">RESONANCE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the bandwidth of the filter. Higher settings yield a narrower bandwidth.</p>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="06-param-eq-chorus-rev" class="algo">06 PARAM EQ+CHORUS+REV</h2>
-<p>This parallel effect combines a parametric EQ with a chorus and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (PARAM EQ)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="input" class="param-name"><span class="param">INPUT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Allows you to adjust the input level trim to the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="output" class="param-name"><span class="param">OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the output volume after the parametric EQ. With the <span class="param">LEVEL</span>, <span class="param">BASS LEVEL</span>, and <span class="param">TREBLE LEVEL</span> set to high values, the <span class="param">OUTPUT</span> parameter could be used to create a raspy distortion effect.</p>
-<h4 id="pan-6" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the EQ in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="mid-fc" class="param-name"><span class="param">MID FC</span><span class="range">Range: 00000 to 15000</span></h4>
-<p>Sets the center of the mid-frequency parametric.</p>
-<h4 id="bw-2" class="param-name"><span class="param">BW</span><span class="range">Range: 0 to 15K</span></h4>
-<p>This parameter is a bandwidth control that determines the width of the resonant peak at the midfrequency band. By lowering the value, you can produce a narrower bandwidth.</p>
-<h4 id="level-7" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -99 to +48 dB</span></h4>
-<p>Sets the amount of boost or cut applied to this mid-frequency parametric.</p>
-<h4 id="bass-level" class="param-name"><span class="param">BASS LEVEL</span><span class="range">Range: -99 to +48 dB</span></h4>
-<p>Sets the amount of boost or cut applied to a 0 to 80Hz low-shelving filter.</p>
-<h4 id="treble-level" class="param-name"><span class="param">TREBLE LEVEL</span><span class="range">Range: -99 to +48 dB</span></h4>
-<p>Sets the amount of boost or cut applied to a 10 to 15K high-shelving filter.</p>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="07-env-vcf-chorus-rev" class="algo">07 ENV VCF+CHORUS+REV</h2>
-<p>This parallel effect combines a voltage control filter with a chorus and a reverb. The second subpage (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ENV VCF)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="vcf-fc" class="param-name"><span class="param">VCF FC</span><span class="range">Range: 000 to 127</span></h4>
-<p>Determines the filter cut off-frequency. Higher values have a brighter sound. This parameter can be modulated, using a CV Pedal for a wah-wah pedal effect. To use as an EQ, set the desired value and make sure the <span class="param">ENV AMT</span> is 0. To use as the auto-wah, set this parameter to a low value and turn on <span class="param">ENV AMT</span>.</p>
-<h4 id="level-8" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the output level of the Voltage control filter.</p>
-<h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the VCF in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="bw-3" class="param-name"><span class="param">BW</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the level and width of the resonant peak at the filter cutoff point. While the <span class="param">VCF FC</span> parameter determines where (at what frequency) this peak will occur, the BW setting controls the presence of the peak. This setting is important for the auto-wah effect.</p>
-<h4 id="env-amt" class="param-name"><span class="param">ENV AMT</span><span class="range">Range: 0 to 15</span></h4>
-<p>Controls the peak frequency at the highest point of the attack. When set to 0, the <span class="param">ATTACK</span>, <span class="param">DECAY</span>, <span class="param">SUSTN</span>, REL, and <span class="param">TRIG</span> parameters have no effect.</p>
-<h4 id="kbd-amt" class="param-name"><span class="param">KBD AMT</span><span class="range">Range: 0 to 15</span></h4>
-<p>Keyboard tracking amount — the cutoff frequency will track based on the KYB AMT range. Set this parameter to work with your signal.</p>
-<h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 50 µsec to 10.0 sec</span></h4>
-<p>Sets the attack of the envelope follower (i.e. determines how closely the attack is followed) once the incoming signal has been detected. Generally the attack should be short.</p>
-<h4 id="decay" class="param-name"><span class="param">DECAY</span><span class="range">Range: 50 µsec to 10.0 sec</span></h4>
-<p>Determines the amount of time after the attack time that the VCF will decay.</p>
-<h4 id="sustn" class="param-name"><span class="param">SUSTN</span><span class="range">Range: 00 to 63</span></h4>
-<p>Determines the amount of time the VCF will sustain before it decays.</p>
-<h4 id="release" class="param-name"><span class="param">RELEASE</span><span class="range">Range: 50 µsec to 10.0 sec</span></h4>
-<p>Sets the amount of time after the incoming signal has ceased for the envelope follower to shut down. Generally these times are longer than the attack times.</p>
-<h4 id="trig" class="param-name"><span class="param">TRIG</span><span class="range">Range: SINGLE or MULTI</span></h4>
-<p>Determines whether the VCF will retrigger with each key-event or not.</p>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="08-ddl-phlangr-rev" class="algo">08 DDL+PHLANGR+REV</h2>
-<p>This parallel effect combines a digital delay with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<h4 id="sends-a-b-2" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into Effect B (the phlanger). A setting of 99 would yield a serial connection between Effect A and the PHLANGR for voices sent to FX1 and panned hard left (on the <span class="page-name">Output</span> page).</p>
-<h4 id="b-revrb-2" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect B (PHLANGR) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the PHLANGR and the reverb for voices sent to FX1 and panned hard right</p>
-<p>(on the <span class="page-name">Output</span> page).</p>
-<h4 id="a-revrb-2" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard left, without having to add any phasing/flanging.</p>
-<p><span class="param">FX2- -REVRB</span>                                <span class="param">PAN</span></p>
-<h4 id="dry-ddl-regen-l-ddl-mix-damping" class="param-name">DRY DDL REGEN L DDL MIX DAMPING</h4>
-<p><span class="param">LEVEL</span>  <span class="param">DELAY <span class="param">TIME L</span> and R</span> For a complete description of these parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="phlngr-mix" class="param-name"><span class="param">PHLNGR MIX</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the Dry/Wet mix within the phlanger itself.</p>
-<h4 id="level-9" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the phlanger signal. A level of 00 will offer no audible signal.</p>
-<h4 id="pan-8" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the phlanger signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="rate-3" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the rates of modulation of the phlanger.</p>
-<h4 id="regen-3" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the phlanger. The sign of the value determines the polarity of the feedback.</p>
-<h4 id="phase-center" class="param-name"><span class="param">PHASE CENTER</span><span class="range">Range: -127 to +127</span></h4>
-<p>Controls the center of the phaser width.</p>
-<h4 id="width-3" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the amount of modulation applied to phaser poles.</p>
-<h4 id="flanger-center" class="param-name"><span class="param">FLANGER CENTER</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the center of the flanger width.</p>
-<h4 id="width-4" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the range of the high to low-frequency sweep in the flanger effect.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="09-eq-ddl-phlangr-rev" class="algo">09 EQ- -DDL+PHLANGR+REV</h2>
-<p>This parallel effect combines a parametric EQ into a digital delay with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (EQ- -DDL)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the EQ- -DDL parameters, refer to the <a class="algo" href="#02-eq-ddl-chorus-rev">EQ- -DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PHLANGR parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="10-delaylfo-phlangr-rev" class="algo">10 DELAYLFO+PHLANGR+REV</h2>
-<p>This parallel effect combines a digital delay that provides LFO modulation with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not userprogrammable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DELAYLFO)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the DELAYLFO parameters, refer to the <a class="algo" href="#03-delaylfo-chorus-rev">DELAYLFO+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PHLANGR parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="11-rotospkr-phlangr-rev" class="algo">11 ROTOSPKR+PHLANGR+REV</h2>
-<p>This parallel effect combines a rotary speaker with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ROTOSPKR parameters, refer to the <a class="algo" href="#04-rotospkr-chorus-rev">ROTOSPKR+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PHLANGR parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="12-distort-phlangr-rev" class="algo">12 DISTORT+PHLANGR+REV</h2>
-<p>This parallel effect combines a distortion with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DISTORT)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the DISTORT parameters, refer to the <a class="algo" href="#05-distort-chorus-rev">DISTORT+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PHLANGR parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="13-param-eq-phlangr-rev" class="algo">13 PARAM EQ+PHLANGR+REV</h2>
-<p>This parallel effect combines a parametric EQ with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (PARAM EQ)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PARAM EQ parameters, refer to the <a class="algo" href="#06-param-eq-chorus-rev">PARAM EQ+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PHLANGR parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="14-env-vcf-phlangr-rev" class="algo">14 ENV VCF+PHLANGR+REV</h2>
-<p>This parallel effect combines a voltage control filter with a phlanger (a combination phaser and flanger effect) and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ENV VCF)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ENV VCF parameters, refer to the <a class="algo" href="#07-env-vcf-chorus-rev">ENV VCF+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PHLANGR parameters, refer to the <a class="algo" href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="15-ddl-rotospkr-rev" class="algo">15 DDL+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a digital delay with a rotary speaker effect and a reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<h4 id="sends-a-b-3" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into Effect B (the rotary speaker). A setting of 99 would yield a serial connection between Effect A and the rotary speaker effect for voices sent to FX1 and panned hard left (on the <span class="page-name">Output</span> page).</p>
-<h4 id="b-revrb-3" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect B (ROTSPKR) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the ROTSPKR and the reverb for voices sent to FX1 and panned hard right</p>
-<p>(on the <span class="page-name">Output</span> page).</p>
-<h4 id="a-revrb-3" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard left, without having to add any of the rotary speaker effect.</p>
-<p><span class="param">FX2- -REVRB</span>                                <span class="param">PAN</span></p>
-<h4 id="dry-ddl-regen-l-ddl-mix-damping-2" class="param-name">DRY DDL REGEN L DDL MIX DAMPING</h4>
-<p><span class="param">LEVEL</span>  <span class="param">DELAY <span class="param">TIME L</span> and R</span> For a complete description of these parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h4 id="roto-stereo" class="param-name"><span class="param">ROTO STEREO</span><span class="range">Range: OFF or ON</span></h4>
-<p>Selects either a stereo or mono rotary speaker effect.</p>
-<h4 id="level-10" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the rotary speaker signal. A level of 00 will offer no audible signal.</p>
-<h4 id="pan-9" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the rotary speaker signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="am-depth-2" class="param-name"><span class="param">AM DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls how much the volume will fade away as the speaker rotates away from the listener.</p>
-<p>Higher values will create a deeper rotating speaker effect.</p>
-<h4 id="fm-depth-2" class="param-name"><span class="param">FM DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of detuning applied to the rotating speaker. This can be used to create a “doppler” effect.</p>
-<h4 id="roto-slow-2" class="param-name"><span class="param">ROTO SLOW</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the rate of the rotary speaker when in the “Slow” setting. <span class="param">ROTO SLOW</span> determines the manual level for the rotary speaker rate when <span class="param">SPEED</span>= SLOW, or when the selected modulator is at zero output level. Again, the higher the value, the faster the rate.</p>
-<h4 id="fast-2" class="param-name"><span class="param">FAST</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the rate of the rotary speaker when in the “Fast” setting. The higher the value, the faster the rate.</p>
-<h4 id="inertia-2" class="param-name"><span class="param">INERTIA</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
-<h4 id="speed-2" class="param-name"><span class="param">SPEED</span><span class="range">Range: SLOW or FAST</span></h4>
-<p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:</p>
-<ul>
-  <li>WHEEL, PBEND, <span class="param">PEDAL</span>, TIMBR, <span class="param">XCTRL</span>, <span class="param">PRESS</span>, KEYBD, and VELOC — These modulation sources act like a switch to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR SLOW</span> faster than ROTOR <span class="param">FAST</span>.</li>
-  <li>KEYDN, PATCH, <span class="param">SUSTN</span>, SOSTU, FX-SW — These modulation sources toggle the rotor speed between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating speaker effect changes speeds from slow to fast or fast to slow.</li>
-</ul>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="16-eq-ddl-rotospkr-rev" class="algo">16 EQ- -DDL+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a parametric EQ into a digital delay with a rotary speaker effect and a reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (EQ- -DDL)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the EQ- -DDL parameters, refer to the <a class="algo" href="#02-eq-ddl-chorus-rev">EQ- -DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ROTO parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="17-delaylfo-rotospkr-rev" class="algo">17 DELAYLFO+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a digital delay that provides LFO modulation with a rotary speaker effect and a reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DELAY LFO)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the DELAYLFO parameters, refer to the <a class="algo" href="#03-delaylfo-chorus-rev">DELAYLFO+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ROTO parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="18-rotospkr-rotospkr-rev" class="algo">18 ROTOSPKR+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a rotary speaker with another rotary speaker effect and a reverb.</p>
-<p>The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS and the ROTO parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="19-distort-rotospkr-rev" class="algo">19 DISTORT+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a raspy distortion with a rotary speaker and a reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DIST)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the DISTORT parameters, refer to the <a class="algo" href="#05-distort-chorus-rev">DISTORT+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ROTO parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="20-param-eq-rotospkr-rev" class="algo">20 PARAM EQ+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a parametric EQ with a rotary speaker and a reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (PARAM EQ)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the PARAM EQ parameters, refer to the <a class="algo" href="#06-param-eq-chorus-rev">PARAM EQ+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ROTOSPKR parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="21-env-vcf-rotospkr-rev" class="algo">21 ENV VCF+ROTOSPKR+REV</h2>
-<p>This parallel effect combines a voltage control filter with a rotary speaker and a reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ENV VCF)</li><li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ENV VCF parameters, refer to the <a class="algo" href="#07-env-vcf-chorus-rev">ENV VCF+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the ROTO parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
-<p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+      <tr>
+        <td><span class="param">DDL MIX</span></td>
+        <td width="40">&nbsp;</td>
+        <td><span class="param">DAMPING</span></td>
+      </tr>
+      <tr>
+        <td><span class="param">LEVEL</span></td>
+        <td width="40">&nbsp;</td>
+        <td><span class="param">DELAY TIME L</span> and <span class="param">R</span></td>
+      </tr>
+    </table>
+    <p>For a complete description of these parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h4 id="roto-stereo" class="param-name"><span class="param">ROTO STEREO</span><span class="range">Range: <span
+          class="value">OFF</span> or <span class="value">ON</span></span></h4>
+    <p>Selects either a stereo or mono rotary speaker effect.</p>
+    <h4 id="level-10" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the rotary speaker signal. A level of <span class="value">00</span> will offer no audible
+      signal.</p>
+    <h4 id="pan-9" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the rotary speaker signal in the stereo spectrum. A value of -99 is panned hard left,
+      and +99 is hard right.</p>
+    <h4 id="am-depth-2" class="param-name"><span class="param">AM DEPTH</span><span class="range">Range: <span
+          class="value">00</span> to <span class="value">99</span></span></h4>
+    <p>Controls how much the volume will fade away as the speaker rotates away from the listener.</p>
+    <p>Higher values will create a deeper rotating speaker effect.</p>
+    <h4 id="fm-depth-2" class="param-name"><span class="param">FM DEPTH</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of detuning applied to the rotating speaker. This can be used to create a “doppler” effect.
+    </p>
+    <h4 id="roto-slow-2" class="param-name"><span class="param">ROTO SLOW</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Determines the rate of the rotary speaker when in the “<span class="value">Slow</span>” setting. <span
+        class="param">ROTO SLOW</span> determines the manual level for the rotary speaker rate when <span
+        class="param">SPEED</span>= <span class="value">SLOW</span>, or when the selected modulator is at zero output
+      level. Again, the higher the value, the faster the rate.</p>
+    <h4 id="fast-2" class="param-name"><span class="param">FAST</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Determines the rate of the rotary speaker when in the “<span class="value">Fast</span>” setting. The higher the
+      value, the faster the rate.</p>
+    <h4 id="inertia-2" class="param-name"><span class="param">INERTIA</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Determines how long it will take for the rotor effect to speed up and slow down after switching from fast to slow
+      or vice versa. Adjust this parameter to simulate the effect of the rotary speaker gradually picking up speed.</p>
+    <h4 id="speed-2" class="param-name"><span class="param">SPEED</span><span class="range">Range: <span
+          class="value">SLOW</span> or <span class="value">FAST</span></span></h4>
+    <p>Determines how the rotary speaker will switch between slow and fast speeds. The behavior of the switch accurately
+      reflects an actual rotary speaker, taking time to speed up or slow down, based on the value of the <span
+        class="param">INERTIA</span> parameter (see previous description). Any effect modulator can act as the <span
+        class="param">SPEED</span> controller. How the modulators will switch the rotor speed fall into two categories:
+    </p>
+    <ul>
+      <li><span class="param">WHEEL</span>, <span class="param">PBEND</span>, <span class="param">PEDAL</span>, <span
+          class="param">TIMBR</span>, <span class="param">XCTRL</span>, <span class="param">PRESS</span>, <span
+          class="param">KEYBD</span>, and <span class="param">VELOC</span> — These modulation sources act like a switch
+        to turn on or off the fast rotor speed. To reverse the polarity of the switch, set <span class="param">ROTOR
+          SLOW</span> faster than ROTOR <span class="param">FAST</span>.</li>
+      <li><span class="param">KEYDN</span>, <span class="param">PATCH</span>, <span class="param">SUSTN</span>, <span
+          class="param">SOSTU</span>, <span class="param">FX-SW</span> — These modulation sources toggle the rotor speed
+        between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating
+        speaker effect changes speeds from slow to fast or fast to slow.</li>
+    </ul>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="16-eq-ddl-rotospkr-rev" class="algo">16 EQ- -DDL+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a parametric EQ into a digital delay with a rotary speaker effect and a reverb. The
+      second sub-page (not user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (EQ- -DDL)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">EQ- -DDL</span> parameters, refer to the <a class="algo"
+        href="#02-eq-ddl-chorus-rev">EQ- -DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ROTO</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="17-delaylfo-rotospkr-rev" class="algo">17 DELAYLFO+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a digital delay that provides LFO modulation with a rotary speaker effect and a
+      reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DELAY LFO)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">DELAYLFO</span> parameters, refer to the <a class="algo"
+        href="#03-delaylfo-chorus-rev">DELAYLFO+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ROTO</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="18-rotospkr-rotospkr-rev" class="algo">18 ROTOSPKR+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a rotary speaker with another rotary speaker effect and a reverb. The second
+      sub-page (not user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> and the <span class="param">ROTO</span>
+      parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier
+      in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+        class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="19-distort-rotospkr-rev" class="algo">19 DISTORT+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a raspy distortion with a rotary speaker and a reverb. The second sub-page (not
+      user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DIST)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">DISTORT</span> parameters, refer to the <a class="algo"
+        href="#05-distort-chorus-rev">DISTORT+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ROTO</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining Reverb parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="20-param-eq-rotospkr-rev" class="algo">20 PARAM EQ+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a parametric EQ with a rotary speaker and a reverb. The second sub-page (not
+      user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (PARAM EQ)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">PARAM EQ</span> parameters, refer to the <a class="algo"
+        href="#06-param-eq-chorus-rev">PARAM EQ+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ROTOSPKR</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="21-env-vcf-rotospkr-rev" class="algo">21 ENV VCF+ROTOSPKR+REV</h2>
+    <p>This parallel effect combines a voltage control filter with a rotary speaker and a reverb. The second sub-page
+      (not user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ENV VCF)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ENV VCF</span> parameters, refer to the <a class="algo"
+        href="#07-env-vcf-chorus-rev">ENV VCF+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the <span class="param">ROTO</span> parameters, refer to the <a class="algo"
+        href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
+    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a class="algo"
+        href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
@@ -466,4 +881,5 @@
     and the printed Index are omitted.
   </footer>
 </body>
+
 </html>

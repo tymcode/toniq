@@ -271,9 +271,15 @@ aside.warning {
   border-left-color: #b42318;
 }
 
+aside.reminder {
+  background: #e8f2f3;
+  border-left-color: var(--ensoniq);
+}
+
 aside.tip::before,
 aside.model-note::before,
 aside.note::before,
+aside.reminder::before,
 aside.warning::before {
   display: block;
   font-weight: 700;
@@ -287,6 +293,7 @@ aside.tip::before { content: "Tip"; color: #8a6d10; }
 aside.model-note::before { content: "TS-10 / TS-12"; color: #6b3fa0; }
 aside.note::before { content: "Note"; color: var(--ensoniq); }
 aside.warning::before { content: "Warning"; color: #b42318; }
+aside.reminder::before { content: "Remember"; color: var(--ensoniq); }
 
 dfn.term,
 span.term {
@@ -300,7 +307,7 @@ span.param,
   font-weight: 650;
 }
 
-span.value .message,
+span.value,
 .value {
   font-family: monospace;
   text-transform: uppercase;
@@ -343,6 +350,14 @@ span.mode {
   font-variant: small-caps;
   font-weight: 501;
   letter-spacing: 0.03em;
+}
+
+.message {
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.92em;
+  letter-spacing: 0.02em;
 }
 
 span.page-name {

@@ -24,7 +24,8 @@
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
       <h1 id="section-2-system-page-parameters">Section 2 — System Page Parameters</h1>
     </header>
-    <p>These parameters control instrument-wide system functions. The settings of these parameters will remain in effect at all times and are preserved while the power is off. You can back-up the settings of the <span class="page-name">System</span> Page parameters for quick recall by saving the System Set-up on the <span class="page-name">Storage</span> page (see <a class="refer-to" href="13-storage.html#section-13-storage">Section 13 — Storage</a> for more information). The <span class="page-name">System</span> Page has three subpages. Press the <kbd class="button">System</kbd> button to display the first sub-page:</p>
+    <p>These parameters control instrument-wide system functions. The settings of these parameters will remain in effect at all times and are preserved while the power is off. You can back-up the settings of the <span class="page-name">System</span> Page parameters for quick recall by saving the System Set-up on the <span class="page-name">Storage</span> page (see <a class="refer-to" href="13-storage.html#section-13-storage">Section 13 — Storage</a> for more information). </p>
+      <p>The <span class="page-name">System</span> Page has three subpages. Press the <kbd class="button">System</kbd> button to display the first sub-page:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -56,25 +57,25 @@
   <figcaption><span class="page-name">System</span> page — <span class="param">TUNE</span> selected</figcaption>
 </figure>
 <h4 id="tune" class="param-name"><span class="param">TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
-<p>Adjusts the overall master tuning of the keyboard up or down as much as one semitone. A value of +00 will set the TS-10 to concert A= 440 tuning.</p>
+<p>Adjusts the overall master tuning of the keyboard up or down as much as one semitone. A value of <span class="value">+00</span> will set the TS-10 to concert A=440 tuning.</p>
 <h4 id="pitch-bend" class="param-name"><span class="param">PITCH-BEND</span><span class="range">Range: 00 to 12 semitones <br>Held Range: 00H to 12H semitones</span></h4>
 <p>Adjusts the system pitch bend range, which is the maximum amount of pitch bend that can be applied with the pitch wheel. Each increment represents a semitone.</p>
-<p>The bend range will apply to all programs except those which have been programmed to override the system bend range. If you adjust the system bend range, and a program does not seem to pitch-bend the correct amount, check the setting of the BEND parameter on the <span class="page-name">Pitch Mods</span> page for each voice in that particular program. If <span class="lcd">BEND=SYS</span>, then the program uses the system bend range. Otherwise, the program has its own bend range and will ignore the system bend range.</p>
+<p>The bend range will apply to all programs except those which have been programmed to override the system bend range. If you adjust the system bend range, and a program does not seem to pitch-bend the correct amount, check the setting of the BEND parameter on the <span class="page-name">Pitch Mods</span> page for each voice in that particular program. If <span class="value">BEND=SYS</span>, then the program uses the system bend range. Otherwise, the program has its own bend range and will ignore the system bend range.</p>
 <p>The “H” suffix on the semitone value indicates that <span class="value">Held</span> Pitch Bend mode is active. In this mode, only keys that are actually being held down will be affected by the pitch bend wheel.</p>
 <h4 id="touch" class="param-name"><span class="param">TOUCH</span><span class="range">Range: (described below)</span></h4>
 <p>Allows you to adjust the velocity response of the keyboard to match your playing style and technique. All velocity curves affect both internal dynamic response and the velocity values transmitted via MIDI. There are 9 velocity response (Touch) settings, which offer a lot of control for a wide range of playing styles:</p>
 <ul>
-  <li>VELTBL-1 VELTBL-2 VELTBL-3 — These velocity tables are for someone with a soft touch. With one of these three settings, it is easier to reach the maximum level of any velocity controlled parameter. With one of these three settings, it is easier to reach the maximum level of any velocity controlled parameter.</li>
-  <li>VELTBL-4 — This default velocity table setting represents average velocity sensitivity; good for anyone with a medium touch. This setting should be right for most players.</li>
-  <li>VELTBL-5 VELTBL-6 VELTBL-7 — These velocity tables require harder playing to reach the maximum level of any velocity controlled parameter. With one of these three settings, it is harder to reach the maximum level of any velocity controlled parameter.</li>
-  <li>FIXED-64 — With this setting, the velocity curve always generates a fixed value, set at the halfway point. This may be useful in simulating old synth sounds that originally had no velocity control.</li>
-  <li>FIXED-127 — This setting is also a fixed velocity curve, with full volume. This is good for playing drum/percussion parts when you want a part without dynamic changes.</li>
+  <li><span class="value">VELTBL-1</span> <span class="value">VELTBL-2</span> <span class="value">VELTBL-3</span> — These velocity tables are for someone with a soft touch. With one of these three settings, it is easier to reach the maximum level of any velocity controlled parameter. With one of these three settings, it is easier to reach the maximum level of any velocity controlled parameter.</li>
+  <li><span class="value">VELTBL-4</span> — This default velocity table setting represents average velocity sensitivity; good for anyone with a medium touch. This setting should be right for most players.</li>
+  <li><span class="value">VELTBL-5</span> <span class="value">VELTBL-6</span> <span class="value">VELTBL-7</span> — These velocity tables require harder playing to reach the maximum level of any velocity controlled parameter. With one of these three settings, it is harder to reach the maximum level of any velocity controlled parameter.</li>
+  <li><span class="value">FIXED-64</span> — With this setting, the velocity curve always generates a fixed value, set at the halfway point. This may be useful in simulating old synth sounds that originally had no velocity control.</li>
+  <li><span class="value">FIXED-127</span> — This setting is also a fixed velocity curve, with full volume. This is good for playing drum/percussion parts when you want a part without dynamic changes.</li>
 </ul>
 <aside class="note"><p>Note: We recommend starting with the default setting (VELTBL-4), then going up or down to find your optimal setting.</p></aside>
 <h4 id="vel-max" class="param-name"><span class="param">VEL-MAX</span><span class="range">Range: 001 to 127</span></h4>
-<p>This parameter determines the maximum keyboard velocity value that will be recognized and transmitted by the TS-10. The default setting is 127, which allows for the normal full range of velocity values. Lower settings limit the maximum value that will be used internally and sent out via MIDI. This can be useful when controlling devices which do not respond to the full range of velocity values, or can be used in conjunction with the <span class="param">TOUCH</span> parameter to control just the top part of the velocity response curve. When <span class="lcd">TOUCH=FIXED-64</span> or 127, this parameter can be used to set the fixed velocity to any value.</p>
+<p>This parameter determines the maximum keyboard velocity value that will be recognized and transmitted by the TS-10. The default setting is 127, which allows for the normal full range of velocity values. Lower settings limit the maximum value that will be used internally and sent out via MIDI. This can be useful when controlling devices which do not respond to the full range of velocity values, or can be used in conjunction with the <span class="param">TOUCH</span> parameter to control just the top part of the velocity response curve. When <span class="value">TOUCH=FIXED-64</span> or <span class="value">127</span>, this parameter can be used to set the fixed velocity to any value.</p>
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: SOFT, MED, FIRM, and HARD</span></h4>
-<p>Allows you to adjust the pressure threshold of the keyboard to match your playing style and technique. <span class="param">PRESS</span> affects both internal pressure response and the pressure values transmitted via MIDI. When set to <span class="value">SOFT</span>, the least amount of pressure is required to generate channel or Poly- Key pressure. Similarly, <span class="value">HARD</span> requires the greatest amount of pressure to generate channel or <dfn class="term">Poly-Key</dfn> pressure.</p>
+<p>Allows you to adjust the pressure threshold of the keyboard to match your playing style and technique. <span class="param">PRESS</span> affects both internal pressure response and the pressure values transmitted via MIDI. When set to <span class="value">SOFT</span>, the least amount of pressure is required to generate channel or Poly-Key (polyphonic aftertouch) pressure. Similarly, <span class="value">HARD</span> requires the greatest amount of pressure to generate channel or Poly-Key pressure.</p>
 <p>Press the <kbd class="button">System</kbd> button again to display the second sub-page:</p>
 <!-- manual is missing these #lookup: Foot Switch 1, Left Pedal, Foot Switch 1, Right Pedal -->
 <figure class="vfd-unit has-page">
@@ -92,7 +93,7 @@
     </thead>
     <tbody class="vfd-screen">
       <tr><td class="cell page-label">SYSTEM</td><td class="cell selected">FOOT-SW1-L=*UNUSED*</td><td class="cell">&nbsp;</td><td class="cell">R=SUSTAIN</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">PEDAL=VOL</td><td class="cell">SW2-L=*UNUSED*</td><td class="cell">R=*UNUSED*</td></tr>
+      <tr><td class="cell page-label">&nbsp;PEDAL=VOL</td><td class="cell" colspan="2">SW2-L=*UNUSED*</td><td class="cell">R=*UNUSED*</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -108,26 +109,26 @@
   
 </figure>
 <p>When the optional SW-10 Dual Foot Switch is plugged into either Foot Switch jack, the settings of these parameters will control the function of the pedals. You can even use two SW-10 Dual Foot Switches plugged into both Foot Switch jacks, and have four completely independent controllers.</p>
-<p>If you are using the single SW-2 Foot Switch which came with the TS-10, you should keep both left foot switch parameters set to <span class="lcd">*UNUSED*</span>, and assign the right foot switch parameters to the desired function. The list of available parameters are:</p>
+<p>If you are using the single SW-2 Foot Switch which came with the TS-10, you should keep both left foot switch parameters set to <span class="value">*UNUSED*</span>, and assign the right foot switch parameters to the desired function. The list of available parameters are:</p>
 <ul>
-  <li><span class="lcd">*UNUSED*</span> — makes the TS-10 ignore the Foot Switch.</li>
-  <li><span class="param">SUSTAIN</span> — holding the Foot Switch down will cause notes to sustain after a key has been released, much like the sustain pedal on a piano. Transmitted via MIDI as Controller #64.</li>
-  <li><span class="param">SOSTENUTO</span> — makes the Foot Switch act similar to the sostenuto pedal on a piano. Any keys that are held down when you press the Foot Switch are sustained until you release the Foot Switch, but subsequent keys are not affected. Transmitted via MIDI as Controller #66.</li>
-  <li><span class="param">PATCH R</span> — makes the Foot Switch act like the right patch select button.</li>
-  <li><span class="param">PATCH L</span> — makes the Foot Switch act like the left patch select button.</li>
-  <li><span class="param">FX-SW-MOD</span> — makes the Foot Switch into an assignable effect modulator. Setting <span class="lcd">SRC=FX-SW</span> on any Effect's <span class="page-name">MOD</span> page allows you to use the Foot Switch to modulate the assigned parameter. Transmitted via MIDI as Controller #12.</li>
-  <li><span class="param">PRESET-UP</span> — each time the Foot Switch is pressed, the TS-10 advances to the next Preset.</li>
+  <li><span class="value">*UNUSED*</span> — makes the TS-10 ignore the Foot Switch.</li>
+  <li><span class="value">SUSTAIN</span> — holding the Foot Switch down will cause notes to sustain after a key has been released, much like the sustain pedal on a piano. Transmitted via MIDI as <span class="message">Controller #64</span>.</li>
+  <li><span class="value">SOSTENUTO</span> — makes the Foot Switch act similar to the sostenuto pedal on a piano. Any keys that are held down when you press the Foot Switch are sustained until you release the Foot Switch, but subsequent keys are not affected. Transmitted via MIDI as <span class="message">Controller #66</span>.</li>
+  <li><span class="value">PATCH R</span> — makes the Foot Switch act like the right patch select button.</li>
+  <li><span class="value">PATCH L</span> — makes the Foot Switch act like the left patch select button.</li>
+  <li><span class="value">FX-SW-MOD</span> — makes the Foot Switch into an assignable effect modulator. Setting <span class="value">SRC=FX-SW</span> on any Effect's <span class="page-name">MOD</span> page allows you to use the Foot Switch to modulate the assigned parameter. Transmitted via MIDI as <span class="message">Controller #12</span>.</li>
+  <li><span class="value">PRESET-UP</span> — each time the Foot Switch is pressed, the TS-10 advances to the next Preset.</li>
 </ul>
 <p>When the next preset is in a different <dfn class="term">BankSet</dfn> and/or bank, the preset BankSet and/or bank will also be switched. 
   For example, at preset #59 of <span class="param">RAM&nbsp;Bank&nbsp;U0-9</span>, it jumps to preset #00 of <span class="param">User&nbsp;RAM&nbsp;Bank&nbsp;U1-0</span>. 
   At preset #59 of <span class="param">User&nbsp;RAM&nbsp;Bank&nbsp;U1-9</span>, it jumps to preset #00 of <span class="param">ROM&nbsp;Bank&nbsp;R2-0</span>. 
   At the end of the ROM banks, it jumps back to <span class="param">User&nbsp;RAM&nbsp;Bank&nbsp;U0-0</span>.</p>
 <ul>
-  <li><span class="param">PRESET-DN</span> — each time the Foot Switch is pressed, the TS-10 selects the previous Preset (functioning just the opposite to PRESET-UP).</li>
-  <li><span class="param">PLAY/STOP</span> — the Foot Switch will play and stop the sequencer, exactly reproducing the actions of the <kbd class="button">Play</kbd> and <kbd class="button">Stop</kbd> buttons on the front panel.</li>
-  <li><span class="param">STOP/CONT</span> — the Foot Switch will stop and continue the sequencer, exactly reproducing the actions of the <kbd class="button">Stop/Continue</kbd> button on the front panel.</li>
-  <li><span class="param">STEP-REC</span> — this setting allows the Foot Switch to be used in Sequencer <span class="function">Step Entry</span> record mode to advance the track location by the amount set in the step size parameter on the <span class="page-name">Step Entry</span> page. This is the same as using the <span class="lcd">*STEP*</span> command on that page.</li>
-  <li><span class="param">SONG-STEP</span> — if a song step has been programmed with <span class="lcd">REPS=FS</span>, each time you press the Foot Switch, the TS-10 will select the sequence that is the next step in the song.</li>
+  <li><span class="value">PRESET-DN</span> — each time the Foot Switch is pressed, the TS-10 selects the previous Preset (functioning just the opposite to PRESET-UP).</li>
+  <li><span class="value">PLAY/STOP</span> — the Foot Switch will play and stop the sequencer, exactly reproducing the actions of the <kbd class="button">Play</kbd> and <kbd class="button">Stop</kbd> buttons on the front panel.</li>
+  <li><span class="value">STOP/CONT</span> — the Foot Switch will stop and continue the sequencer, exactly reproducing the actions of the <kbd class="button">Stop/Continue</kbd> button on the front panel.</li>
+  <li><span class="value">STEP-REC</span> — this setting allows the Foot Switch to be used in Sequencer <span class="function">Step Entry</span> record mode to advance the track location by the amount set in the step size parameter on the <span class="page-name">Step Entry</span> page. This is the same as using the <span class="value">*STEP*</span> command on that page.</li>
+  <li><span class="value">SONG-STEP</span> — if a song step has been programmed with <span class="value">REPS=FS</span>, each time you press the Foot Switch, the TS-10 will select the sequence that is the next step in the song.</li>
 </ul>
 <aside class="tip"><p>Both the Sustain and Sostenuto pedals can be used to dynamically “latch” the current amount of pressure being exerted on the keyboard. Here’s how:</p>
 <ol>
@@ -142,8 +143,8 @@
 <h4 id="pedal" class="param-name"><span class="param">PEDAL</span><span class="range">Range: VOL or MOD</span></h4>
 <p>Determines whether the optional CVP-1 foot pedal will act as a volume pedal or a modulator:</p>
 <ul>
-  <li><span class="value">VOL</span> — will control the volume of the currently selected or stacked Track(s). Transmitted via MIDI as Controller #7.</li>
-  <li><span class="value">MOD</span> — will affect any modulation destination that has <span class="param">PEDAL</span> assigned as a modulation source. Transmitted via MIDI as Controller #4.</li>
+  <li><span class="value">VOL</span> — will control the volume of the currently selected or stacked Track(s). Transmitted via MIDI as <span class="message">Controller #7</span>.</li>
+  <li><span class="value">MOD</span> — will affect any modulation destination that has <span class="param">PEDAL</span> assigned as a modulation source. Transmitted via MIDI as <span class="message">Controller #4</span>.</li>
 </ul>
 <p>Press the <kbd class="button">System</kbd> button again to show the third sub-page:</p>
 <!--manual is missing this. #lookup-->
@@ -195,14 +196,14 @@
 <h4 id="midi-trk-names" class="param-name"><span class="param">MIDI-TRK-NAMES</span><span class="range">Range: OFF or ON</span></h4>
 <p>This parameter determines whether preset and sequencer tracks will show the sound name or show *MIDI-CHAN-# instead of the sound name.</p>
 <ul>
-  <li><span class="value">OFF</span> — When a track’s MIDI STATUS is set to <span class="lcd">VOICE-OFF</span>, <span class="lcd">LOCAL-OFF</span>, or MIDI-<span class="param">LOOP</span> on the <span class="page-name">Track MIDI</span> page, any displays that would normally show the track’s sound name (the Tracks 1-6 and 7-12 pages in sequence mode, and all Track Parameter pages in Presets mode) will show *MIDI-CHAN-# instead of the name. This is helpful when using the TS-10 as a MIDI controller, or when sequencing remote MIDI devices, as it shows you at a glance which tracks will play only over MIDI, and on which MIDI channels.</li>
-  <li>ON — The track’s sound name will always appear on the Tracks 1-6 and 7–12 pages (in <span class="mode">Sequencer Mode</span>), and the Track Parameter pages (in Presets mode), no matter what the track’s MIDI STATUS is set to.</li>
+  <li><span class="value">OFF</span> — When a track’s <span class="param">MIDI STATUS</span> is set to <span class="value">VOICE-OFF</span>, <span class="value">LOCAL-OFF</span>, or <span class="value">MIDI-LOOP</span> on the <span class="page-name">Track MIDI</span> page, any displays that would normally show the track’s sound name (the Tracks <span class="page-name">1-6</span> and <span class="page-name">7-12</span> pages in <span class="mode">Sequencer Mode</span>, and all Track Parameter pages in <span class="mode">Presets Mode</span>) will show <span class="lcd">*MIDI-CHAN-#</span> instead of the name. This is helpful when using the TS-10 as a MIDI controller, or when sequencing remote MIDI devices, as it shows you at a glance which tracks will play only over MIDI, and on which MIDI channels.</li>
+  <li><span class="value">ON</span> — The track’s sound name will always appear on the Tracks <span class="page-name">1-6</span> and <span class="page-name">7-12</span> pages (in <span class="mode">Sequencer Mode</span>), and the Track Parameter pages (in <span class="mode">Presets Mode</span>), no matter what the track’s <span class="param">MIDI STATUS</span> is set to.</li>
 </ul>
 <h4 id="kbd-naming" class="param-name"><span class="param">KBD-NAMING</span><span class="range">Range: OFF or ON</span></h4>
 <p>When this switch is ON, the keyboard can be used for name data entry. Whenever a naming field is active, pressing a key on the keyboard will enter the character assigned to that key, or move the cursor. The 36 white keys are the digits 0..9 and letters A..Z, while the black keys provide a repeating set consisting of cursor left, cursor right, and 3 punctuation marks (space, dash, and plus). Period, slash and star are only available using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons</p>
 <figure class="figure"><img src="images/kbd-naming.png" alt="Keyboard naming map: white keys 0–9 and A–Z; black keys repeat Cursor Left, Cursor Right, Space, Dash, and Plus each octave"><figcaption>White keys enter 0–9 and A–Z. Each octave of black keys is Cursor Left, Cursor Right, Space, Dash, and Plus.</figcaption></figure>
-<p>When <span class="lcd">KBD-NAMING=OFF</span>, the characters on naming pages will be affected only by the Data Entry Controls and the Cursor Left/Right soft buttons.</p>
-<p>Press the <kbd class="button">System</kbd> button again to show the third sub-page:</p>
+<p>When <span class="value">KBD-NAMING=OFF</span>, the characters on naming pages will be affected only by the Data Entry Controls and the Cursor Left/Right soft buttons.</p>
+<p>Press the <kbd class="button">System</kbd> button again to show the fourth sub-page:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -217,8 +218,8 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">SYSTEM</td><td class="cell">&nbsp;</td><td class="cell">PITCH-TABLE=NORMAL</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell selected">WAKE-UP-MODE=DEFAULT</td></tr>
+      <tr><td class="cell page-label">SYSTEM</td><td class="cell">&nbsp;</td><td class="cell selected" colspan="2">PITCH-TABLE=NORMAL</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell" colspan="2">WAKE-UP-MODE=DEFAULT</td></tr>
     </tbody>
     <tfoot>
       <tr class="soft-row bottom">
@@ -234,22 +235,18 @@
   
 </figure>
 <h4 id="pitch-table" class="param-name"><span class="param">PITCH-TABLE</span><span class="range">Range: NORMAL, CUSTOM, U1-PROGRAMS, ROM</span></h4>
-<p>This parameter allows you to set the system pitch-table to either a <span class="value">NORMAL</span> (western 12-tone equal-temperament) or a CUSTOM (user-definable) pitch-table and affects all voices that have been programmed to use the SYSTEM pitch-table. For more information on pitch-tables, please refer to <a class="refer-to" href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>
+<p>This parameter allows you to set the system pitch-table to either a <span class="value">NORMAL</span> (western 12-tone equal-temperament) or a <span class="value">CUSTOM</span> (user-definable) pitch-table and affects all voices that have been programmed to use the <span class="param">SYSTEM</span> pitch-table. For more information on pitch-tables, please refer to <a class="refer-to" href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>
 <ul>
   <li><span class="value">NORMAL</span> — the TS-10 will use the western 12-tone equal-temperament tuning instead of the custom system pitch-table. Setting the System pitch-table to <span class="value">NORMAL</span> does not affect the custom pitch-table.</li>
-  <li>CUSTOM — the system pitch-table is set to a user-definable tuning. This is installed by creating a pitch-table in a program, and using the Copy function to copy it into the System.</li>
-</ul>
-<p>This is useful when you have one alternate tuning scheme that you want to use for many sounds.</p>
-<ul>
-  <li>U1-PROGRAMS — This setting enables dynamic <dfn class="term">Pitch-Table</dfn> Selection, allowing you to easily switch between different system pitch-tables in performance situations. When <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> you can instantly load new CUSTOM system pitch-tables without affecting the sound you are playing by selecting pitch-table programs loaded into BankSet U1.</li>
+  <li><span class="value">CUSTOM</span> — the system pitch-table is set to a user-definable tuning. This is installed by creating a pitch-table in a program, and using the Copy function to copy it into the System. This is useful when you have one alternate tuning scheme that you want to use for many sounds.</p>
+  <li><span class="value">U1-PROGRAMS</span> — This setting enables dynamic <dfn class="term">Pitch-Table</dfn> Selection, allowing you to easily switch between different system pitch-tables in performance situations. When <span class="value">PITCH-TABLE=U1-PROGRAMS</span> you can instantly load new CUSTOM system pitch-tables without affecting the sound you are playing by selecting pitch-table programs loaded into BankSet U1.</li>
 </ul>
 <p>This allows you to change the tuning while playing, without having to select a different sound.</p>
-<p>In order for this feature to work correctly, you must set the system pitch-table switch to <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page before “selecting” a new pitch-table program. If the program you indicate contains a valid pitch-table, it will be installed into the</p>
+<p>In order for this feature to work correctly, you must set the system pitch-table switch to <span class="value">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page before “selecting” a new pitch-table program. If the program you indicate contains a valid pitch-table, it will be installed into the <span class="value">CUSTOM</span> system pitch-table, and you will immediately hear the new tuning. If it does not, nothing will happen. In either case there will be no visible indication of your action. The program name will not be underlined when you “select” it, which is a good indication that you are using a pitch-table from a program in BankSet U1.</p>
 <p>CUSTOM  System pitch-table, and you will immediately hear the new tuning. If it does not, nothing will happen. In either case there will be no visible indication of your action. The program name will not be underlined when you “select” it, which is a good indication that you are using a pitch-table from a program in BankSet U1.</p>
 <p>You may save programs (with or without pitch-tables) onto BankSet U1 in the normal way. It is suggested that you name programs that are to be used to install pitch-tables with names that describe the pitch-table they contain. For example, naming a program PT-PYTHA-F describes it as follows: PT for pitch-table program; PYTHA for Pythagorean tuning; and F for the tone center. This naming scheme is useful in making pitch-table programs easily recognizable.</p>
-<p>In MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and MONO A, incoming MIDI program changes 0 to 59 will select pitch-tables from BankSet U1, if <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page. For more information about the MIDI <span class="param">MODE</span> parameter, see <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — MIDI Control</a></p>
-<p>Page Parameters.</p>
-<aside class="tip"><p>When this parameter is selected (underlined), you can move the Data Entry Controls in real-time to change the pitch -tables while the sequencer is playing. This can create some interesting and fun effects.</p></aside>
+<p>In MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and <span class="value">MONO A</span>, incoming MIDI program changes 0 to 59 will select pitch-tables from BankSet U1, if <span class="value">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page. For more information about the <span class="param">MIDI MODE</span> parameter, see <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — MIDI Control Page Parameters</a>.</p>
+<aside class="tip"><p>When this parameter is selected (underlined), you can move the Data Entry Controls in real-time to change the pitch-tables while the sequencer is playing. This can create some interesting and fun effects.</p></aside>
 <h4>Various ROM System Pitch-Tables</h4> 
   <p>By using the data entry controls, you can select from a large assortment of traditional, modern, ethnic, and exotic pitch-tables for use as the System pitch-table. These ROM pitch-tables are:</p>
 <ul>
@@ -292,51 +289,50 @@
 </ul>
 <h4>Selecting ROM Pitch-Tables</h4> 
   <p>Here’s how to select and use the Internal ROM pitch-tables:</p>
-<p>1) Start by selecting a sound from the internal memory of the TS-10. We recommend using a piano, organ, or guitar sound. Do not select a drum kit or percussion sound, as these sounds use the TS-10 <dfn class="term">Drum-Map</dfn> and will not respond to pitch-tables.</p>
-<p>2) Once you have found a sound you like, press the <kbd class="button">System</kbd> button four times. The display will read SYSTEM <span class="lcd">PITCH-TABLE=NORMAL</span>. The <span class="value">NORMAL</span> pitch-table is the default pitch- table of the TS-10 and is known as the western twelve tone equal-tempered tuning. Play a scale on the keyboard and listen to the pitch of each note.</p>
-<p>3) Press the <kbd class="button">Up Arrow</kbd> button three times to display the first ROM pitch-table (PYTHAGRN-C) and play the keyboard. Notice that the TS-10 is now using an alternate tuning. The first several ROM pitch-tables will make subtle changes in tuning, while the remainder of the ROM pitch-tables will have a more obvious affect.</p>
-<p>4) Press the <kbd class="button">Up Arrow</kbd> button again and play the keyboard. Continue scrolling through the remaining pitch-tables and listen to the tuning variations offered.</p>
-<p>If you would like to continue using a particular pitch-table with other sounds, press the <kbd class="button">Sounds</kbd> button to return to the TS-10’s internal sound banks. The currently selected System pitch-table will remain in affect even after turning the TS-10 power off and back on. In this way, if your music requires the same pitch-table all the time, you can simply turn on the TS-10 and start playing.</p>
+  <ol>
+    <li>Start by selecting a sound from the internal memory of the TS-10. We recommend using a piano, organ, or guitar sound. Do not select a drum kit or percussion sound, as these sounds use the TS-10 <dfn class="term">Drum-Map</dfn> and will not respond to pitch-tables.</li>
+    <li>Once you have found a sound you like, press the <kbd class="button">System</kbd> button four times. The display will read <span class="lcd">SYSTEM PITCH-TABLE=NORMAL</span>. The <span class="value">NORMAL</span> pitch-table is the default pitch-table of the TS-10 and is known as the western twelve tone equal-tempered tuning. Play a scale on the keyboard and listen to the pitch of each note.</li>
+    <li>Press the <kbd class="button">Up Arrow</kbd> button three times to display the first ROM pitch-table (PYTHAGRN-C) and play the keyboard. Notice that the TS-10 is now using an alternate tuning. The first several ROM pitch-tables will make subtle changes in tuning, while the remainder of the ROM pitch-tables will have a more obvious affect.</li>
+    <li>Press the <kbd class="button">Up Arrow</kbd> button again and play the keyboard. Continue scrolling through the remaining pitch-tables and listen to the tuning variations offered.</li>
+    <li>If you would like to continue using a particular pitch-table with other sounds, press the <kbd class="button">Sounds</kbd> button to return to the TS-10’s internal sound banks. The currently selected System pitch-table will remain in affect even after turning the TS-10 power off and back on. In this way, if your music requires the same pitch-table all the time, you can simply turn on the TS-10 and start playing.</li>
+  </ol>
 <h4>Using the U1-Programs Pitch-Tables</h4>
 <aside class="note"><p>Note: You will need the TSD-100 floppy disk that was included with the TS-10 to complete the following exercise. This disk contains two files of pitch-tables. They are stored as 60-PROGRAMS file types. The first pitch-table file is called HIST PTABLS and contains five different Historical pitch-tables with twelve root key versions of each scale. The second file is called ETH/<span class="value">MOD</span> PTS and contains a variety of Ethnic and Modern pitch-tables:</p></aside>
 <ul>
   <li>Insert the TSD-100 floppy disk into the disk drive and press the <kbd class="button">Storage</kbd> button twice.</li>
-</ul>
-<aside class="tip"><p>Pressing the <kbd class="button">Storage</kbd> button twice will automatically take you to the <span class="page-name">Disk Load</span> Page.</p></aside>
-<ul>
-  <li>Press the Up or <kbd class="button">Down Arrow</kbd> button until the display reads <span class="lcd">TYPE=60-PROGRAMS</span>.</li>
-  <li>Press the upper left soft button above the words LOAD FILE=__________. Using the Up or <kbd class="button">Down Arrow</kbd> button, find the file named ETH/<span class="value">MOD</span> PTS .</li>
+  <aside class="tip"><p>Pressing the <kbd class="button">Storage</kbd> button twice will automatically take you to the <span class="page-name">Disk Load</span> Page.</p></aside>
+  <li>Press the Up or <kbd class="button">Down Arrow</kbd> button until the display reads <span class="value">TYPE=60-PROGRAMS</span>.</li>
+  <li>Press the upper left soft button above the words <span class="lcd">LOAD FILE=__________</span>. Using the Up or <kbd class="button">Down Arrow</kbd> button, find the file named <span class="value">ETH/MOD PTS</span>.</li>
   <li>Press the bottom middle soft button beneath the words BANKSET U0, and press the <kbd class="button">Up Arrow</kbd> button once so the display reads BANKSET U1.</li>
   <li>Press the upper right soft button above the word <span class="lcd">*YES*</span>. This will load 60 new pitch-table Programs into User RAM BankSet 1.</li>
 </ul>
-<p>When the file has been loaded, the display will show DISK COMMAND COMPLETED.</p>
+<p>When the file has been loaded, the display will show <span class="lcd">DISK COMMAND COMPLETED</span>.</p>
 <ul>
-  <li>Press the <kbd class="button">System</kbd> button four times until the display reads SYSTEM PITCH-TABLE=&lt;last selected pitch-table&gt;. Press the Up or <kbd class="button">Down Arrow</kbd> button to set this value to <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span>.</li>
+  <li>Press the <kbd class="button">System</kbd> button four times until the display reads <span class="lcd">SYSTEM PITCH-TABLE=</span><span class="value">&lt;last selected pitch-table&gt;</span>. Press the Up or <kbd class="button">Down Arrow</kbd> button to set this value to <span class="value">PITCH-TABLE=U1-PROGRAMS</span>.</li>
   <li>Press the <kbd class="button">Sounds</kbd> button and select a sound of your choice from any BankSet other than BankSet U1.</li>
-  <li>While holding down the <kbd class="button">BankSet</kbd> button, press the <kbd class="button">Bank 1</kbd> button, then release both buttons.</li>
-</ul>
-<p>You have now selected User RAM BankSet U1.</p>
+  <li>While holding down the <kbd class="button">BankSet</kbd> button, press the <kbd class="button">Bank 1</kbd> button, then release both buttons.
+You have now selected User RAM BankSet U1.</li>
+  </ul>
 <aside class="note"><p>Note: At this point when you select locations in BankSet U1, you will be selecting from 60 pitch-tables instead of 60 Programs. The Programs that were originally stored in BankSet U1 have been replaced by the newly loaded pitch-table file.</p></aside>
-<ul>
-  <li>Press the <kbd class="button">Bank 0</kbd> button and then press the upper left soft button. Play the keyboard. This selects the first of the 60 pitch-tables that are instantaneously available.</li>
+ <ul>
+   <li>Press the <kbd class="button">Bank 0</kbd> button and then press the upper left soft button. Play the keyboard. This selects the first of the 60 pitch-tables that are instantaneously available.</li>
 </ul>
 <p>Try the other pitch-tables in Bank 0 by pressing the other soft buttons. Continue by selecting pitch-tables in Banks 1 through 9. Each Bank contains six pitch-tables.</p>
-<p>Using the above procedure, you can load the file named HIST PTABLS to try more pitch-tables.</p>
-<p>Loading a full set of 60 pitch-tables into the TS-10 internal memory in this way gives you the ability to select a variety of keyboard tunings in real-time while in the middle of a performance!</p>
-<p>Pitch-tables can even be remotely selected via incoming MIDI Program Changes.</p>
+<p>Using the above procedure, you can load the file named <span class="value">HIST PTABLS</span> to try more pitch-tables.</p>
+<p>Loading a full set of 60 pitch-tables into the TS-10 internal memory in this way gives you the ability to select a variety of keyboard tunings in real-time while in the middle of a performance! Pitch-tables can even be remotely selected via incoming MIDI Program Changes.</p>
 <h4 id="wake-up-mode" class="param-name"><span class="param">WAKE-UP-MODE</span><span class="range">Range: SOUNDS, PRESETS, SEQ/SONG, DEFAULT, PREVIOUS, LASTPAGE, GEN-MIDI</span></h4>
 <p>This parameter determines which mode the TS-10 will “wake-up” in after power-on.</p>
 <ul>
-  <li>SOUNDS — Power-on in Sounds mode with the last Sound selected before power-off selected.</li>
-  <li>PRESETS — Power-on in Presets mode with the last Preset selected before power-off selected.</li>
-  <li>SEQ/SONG — Power-on in Sequencer mode with the last Sequence or Song selected.</li>
-  <li>DEFAULT — Power-on in Sounds mode showing Program Bank U0-0. The default sound in ROM will be selected.</li>
-  <li>PREVIOUS — Power-on in the same mode the TS-10 was in when it was powered-off. Note that if the TS-10 was in <span class="mode">General MIDI</span> mode when it was powered-off, it will wake-up in Sounds mode.</li>
-  <li>LASTPAGE — Power-on showing the last page that the TS-10 was on when it was powered-off.
+  <li><span class="value">SOUNDS</span> — Power-on in Sounds mode with the last Sound selected before power-off selected.</li>
+  <li><span class="value">PRESETS</span> — Power-on in Presets mode with the last Preset selected before power-off selected.</li>
+  <li><span class="value">SEQ/SONG</span> — Power-on in Sequencer mode with the last Sequence or Song selected.</li>
+  <li><span class="value">DEFAULT</span> — Power-on in Sounds mode showing Program Bank U0-0. The default sound in ROM will be selected.</li>
+  <li><span class="value">PREVIOUS</span> — Power-on in the same mode the TS-10 was in when it was powered-off. Note that if the TS-10 was in <span class="mode">General MIDI</span> mode when it was powered-off, it will wake-up in Sounds mode.</li>
+  <li><span class="value">LASTPAGE</span> — Power-on showing the last page that the TS-10 was on when it was powered-off.
   This does not apply to some editing sub-pages. Note that if the TS-10 was in <span class="mode">General MIDI</span> mode when it was powered-off, it will wake-up showing the last page that the TS-10 was on before entering <span class="mode">General MIDI</span> mode.</li>
-  <li>GEN-MIDI — Power-on in <span class="mode">General MIDI</span> mode.</li>
+  <li><span class="value">GEN-MIDI</span> — Power-on in <span class="mode">General MIDI</span> mode.</li>
 </ul>
-<aside class="note"><p>Note: When <span class="lcd">WAKE-UP-<span class="param">MODE</span>=GEN-MIDI</span>, and Sampled Sounds had previously been loaded, the <span class="function">Auto-Load</span> prompt will be displayed <em>before</em> the TS-10 enters <span class="mode">General MIDI</span>. To prevent this, you can first erase all Sampled Sounds from memory, as described in <a class="refer-to" href="14-sampled-sounds.html#section-14-understanding-sampled-sounds">Section 14 — Understanding Sampled Sounds</a>.</p></aside>
+<aside class="note"><p>Note: When <span class="value">WAKE-UP-MODE=GEN-MIDI</span>, and Sampled Sounds had previously been loaded, the <span class="function">Auto-Load</span> prompt will be displayed <em>before</em> the TS-10 enters <span class="mode">General MIDI</span>. To prevent this, you can first erase all Sampled Sounds from memory, as described in <a class="refer-to" href="14-sampled-sounds.html#section-14-understanding-sampled-sounds">Section 14 — Understanding Sampled Sounds</a>.</p></aside>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
