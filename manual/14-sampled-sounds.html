@@ -72,7 +72,15 @@
 <p><dfn class="term">WaveSamples</dfn></p>
 <p><dfn class="term">WaveSample</dfn> Parameters <dfn class="term">WaveSample</dfn> Parameters <dfn class="term">WaveSample</dfn> Parameters   <dfn class="term">WaveSample</dfn> Parameters</p>
 <div class="vfd-callouts top"><div>1</div><div>2</div><div>3</div></div>
-<p>Loading a Sampled Sound Because Sampled Sounds are stored in dynamic RAM, they are not saved internally, and must be loaded each time the TS-10 is powered on. To load a Sampled Sound:</p>
+<h3 id="loading-a-sampled-sound">Loading a Sampled Sound</h3>
+<p>Because Sampled Sounds are stored in dynamic RAM, they are not saved internally, and must be loaded each time the TS-10 is powered on. To load a Sampled Sound:</p>
+<ol>
+  <li>Insert a disk containing a Sampled Sound into the TS-10 disk drive.</li>
+  <li>Press the <kbd class="button">Storage</kbd> button.</li>
+  <li>Press the soft button above the word <span class="lcd">*LOAD*</span> in the display. Note that the display will be slightly different than when loading normal sound programs:</li>
+  <li>Make sure the TYPE parameter is set to SAMPLEDSND (rather than DIRECTORY).</li>
+  <li>Select (underline) the LOAD FILE= parameter and use the <kbd class="button">Up/Down Arrow</kbd> buttons or the <kbd class="button">Data Entry Slider</kbd> to scroll through the listing of sounds available.</li>
+  <li>Once you’ve located a sound you’d like to load and hear, press the soft button above the word <span class="lcd">*YES*</span>. The display shows:</li>
 <p>1) Insert a disk containing a Sampled Sound into the TS-10 disk drive.</p>
 <aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Storage</div></td></tr></table></aside>
 <p>2) Press the <kbd class="button">Storage</kbd> button.</p>
@@ -87,7 +95,8 @@
 <p>Files on Sampled Sound disks are organized in directories. A directory is a group of up to 38 files. These files can be one of two possible file types: a Sampled Sound or another directory (called a sub-directory). Each sub-directory may contain up to 38 more files. If there are no subdirectories, the disk will only contain the 38 files of the Root (or Main) directory. The Root directory is the default top level directory selected when you change SCSI DEVICE ID numbers on the <span class="page-name">SCSI STATUS</span> page or after power-up. If you are familiar with the Macintosh computer, or MicroSoft Windows™ for IBM/PC Compatibles, sub-directories are similar to folders.</p>
 <p>As explained above, the TS-10 will only allow you to scroll through a list of up to 38 files at any one time without changing directories. However, any one (or more) of these files may be a subdirectory, which may contain up to 38 more files. Eventually this becomes a tree-like structure with the root directory as the trunk, and the various levels of sub-directories conceptually similar to the branches of the tree.</p>
 <p>For more information about SCSI and directories, refer to <a class="refer-to" href="13-storage.html#section-13-storage">Section 13 — Storage</a>.</p>
-<p>Loading  (Changing) a Directory Sampled Sounds are most often saved in the ROOT (top level) directory on a floppy disk.</p>
+<h3 id="loading-changing-a-directory">Loading (Changing) a Directory</h3>
+<p>Sampled Sounds are most often saved in the ROOT (top level) directory on a floppy disk.</p>
 <p>However, there may be an instance where a Sampled Sound file is stored within a different directory. To load and/or change a Directory:</p>
 <p>1) Insert a Sampled Sound disk containing a directory into the TS-10 disk drive.</p>
 <p>2) Press the <kbd class="button">Storage</kbd> button.</p>
@@ -228,15 +237,13 @@
 <aside class="note"><p>Note: When you power down, the TS-10 remembers the information about which Sampled Sounds or Sample Edits were loaded into each Sample Sound bank location (whether muted or unmuted).</p></aside>
 <p>If you do not want to reload certain Sampled Sound files when you power up, use the DELETE option found on the Sampled Sound <span class="page-name">OPTIONS</span> sub-page to delete any unwanted Sampled</p>
 <p>Sounds before you power down.</p>
-<p>Loading Sample-Edits with the <span class="function">Auto-Load</span> Feature If any Sample Edits files have been loaded into the TS-10, or have been saved to a TS-10 disk and are still loaded, they will also be reloaded by the <span class="function">Auto-Load</span> Feature. After you choose to Auto-</p>
-<h3 id="load-all-sampled-sound-files">Load all Sampled Sound files:</h3>
-<ul>
+<p>Loading Sample-Edits with the <span class="function">Auto-Load</span> Feature </h3>
+<p>If any Sample Edits files have been loaded into the TS-10, or have been saved to a TS-10 disk and are still loaded, they will also be reloaded by the <span class="function">Auto-Load</span> Feature. After you choose to Auto-</p>
+<ol>
   <li>The TS-10 will ask for the disk that contains the Sampled Sound data used by the Sample Edits file. Insert the requested disk into the disk drive (or connected SCSI Storage Device) and press the soft button above * OK * to automatically load the Sampled Sound file. The display will momentarily show:</li>
-</ul>
-<p>The display will then ask for the TS-10 formatted disk that has the Sample-Edits file:</p>
-<ul>
+  <li>The display will then ask for the TS-10 formatted disk that has the Sample-Edits file:</li>
   <li>Insert the requested disk into the disk drive and press the soft button above * OK * to automatically load the Sample Edits file, and apply the edits to the Sampled Sound Wave data.</li>
-</ul>
+</ol>
 <h2 id="when-does-auto-load-delete-all-sampled-sounds">When Does Auto-Load Delete All Sampled Sounds?</h2>
 <p>When you load a SAMPLE-BANKS file or a 60-SEQ/SONGS file that was saved with Sample Banks into the TS-10, and then answer <span class="lcd">*YES*</span> to the AUTO LOAD ALL SAMPLED SOUNDS prompt, it deletes all currently loaded Sampled Sounds and Sample Edits in the TS-10, with the following exceptions:</p>
 <ul>
@@ -273,7 +280,8 @@
 <p><kbd class="button">Data Entry Slider</kbd> or <kbd class="button">Up/Down Arrow</kbd> buttons to explore the range of values.</p>
 <aside class="tip"><p>When editing Sampled Sounds, alternate presses of the <kbd class="button">Edit</kbd> (<span class="function">Select Voice</span>) button will toggle between the last selected editing page or sub-page, and the <span class="page-name">Edit Context</span> page.</p></aside>
 <h3 id="layers-in-patch-layer-enable-disable">LAYERS-IN-PATCH (Layer Enable/Disable)</h3>
-<p>Using the <kbd class="button">Patch Select</kbd> Buttons The two patch select buttons above and to the left of the wheels can be programmed to provide instant access to up to four completely different sounds within each Sampled Sound. These variations might be a different set of samples, or the same samples with different envelopes, or a chorused version of the sound, or perhaps a different range of a wave sample.</p>
+<h3 id="using-the-patch-select-buttons">Using the Patch Select Buttons</h3>
+<p>The two patch select buttons above and to the left of the wheels can be programmed to provide instant access to up to four completely different sounds within each Sampled Sound. These variations might be a different set of samples, or the same samples with different envelopes, or a chorused version of the sound, or perhaps a different range of a wave sample.</p>
 <p>What you are doing when you press either or both of the patch select buttons is selecting different layers to play. A layer is a group of <dfn class="term">WaveSamples</dfn> spread across the keyboard — each Sampled Sound can have up to eight layers. For each of the four possible patches, any of these eight layers can be made to play or to remain silent.</p>
 <ul>
   <li>The patch select buttons are “momentary” — an alternate patch will play only on notes played while the button is held down unless you “lock in” a Patch.</li>
@@ -418,7 +426,8 @@
   <li>The SAMPLE-BANKS file should then be resaved to a TS-10 disk in its updated form.</li>
 </ul>
 <p>After performing this procedure, loading a <dfn class="term">Sample-Banks</dfn> file and answering <span class="lcd">*YES*</span> to the AUTO-LOAD prompt will properly load the Sampled Sounds and Sample Edits back into their original locations.</p>
-<p>Loading a Sampled Sound into an Occupied Sampled Sound Bank When loading a Sampled Sound, you can replace a currently loaded Sampled Sound with the one you want to load. For this example, we’ll replace GUITR STRUMS with RS PERCS (both of these Sampled Sound files are found on the SSD-100 disk that came with your TS-10). Here’s how:</p>
+<h3 id="loading-a-sampled-sound-into-an-occupied-sampled-sound-bank">Loading a Sampled Sound into an Occupied Sampled Sound Bank</h3>
+<p>When loading a Sampled Sound, you can replace a currently loaded Sampled Sound with the one you want to load. For this example, we’ll replace <span class="value">GUITR STRUMS</span> with <span class="value">RS PERCS</span> (both of these Sampled Sound files are found on the SSD-100 disk that came with your TS-10). Here’s how:</p>
 <ul>
   <li>Insert the SSD-100 disk into the disk drive.</li>
   <li>Press <kbd class="button">Storage</kbd>, press DISK, then press <span class="lcd">*LOAD*</span>. The display shows:</li>
@@ -440,7 +449,12 @@
   <li>To load RS PERCS into <dfn class="term">BankSet</dfn> 8, Bank 0 (replacing GUITR STRUMS), while holding down the <kbd class="button">Bank 0</kbd> button, press the lower right soft button in the display beneath the word <span class="lcd">*DELETE*</span>. The display momentarily shows LOADING RS PERCS, then reverts back to the <span class="page-name">LOAD FILE</span> page. You have just successfully loaded a Sampled Sound file into an occupied Sampled Sound Bank.</li>
   <li>If you press a <kbd class="button">Bank</kbd> button that does not have a Sampled Sound loaded (no LED lit), the TS-10 will immediately load the new Sampled Sound file.</li>
 </ul>
-<p>Loading Sample-Edits When loading a SAMPLE-EDITS file type, which contains edit parameter settings as well as the Sampled Sound effect, there are a few additional display requests. When a SAMPLE-EDITS file is loaded the following display appears:</p>
+<h3 id="loading-sample-edits">Loading Sample-Edits</h3>
+<p>When loading a <span class="value">SAMPLE-EDITS</span> file type, which contains edit parameter settings as well as the Sampled Sound effect, there are a few additional display requests. 
+  When a <span class="value">SAMPLE-EDITS</span> file is loaded the following display appears:</p>
+
+
+
 <p>Disk Label number</p>
 <p>Sampled Sound name</p>
 <p>This display shows you which disk needs to be inserted into the TS-10 disk drive that contains the Sampled Sound Wave Data information. Note that if the disk does not have a Disk Label number, the display will show UNKNOWN as the Disk Label number.</p>

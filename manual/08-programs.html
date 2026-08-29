@@ -79,19 +79,10 @@
     </ul>
     <p>The <kbd class="button">Patch Select</kbd> buttons are sent and received over MIDI as MIDI <span class="message">Controller #70</span>, and
       will be recorded and played back by the sequencer like any other controller.</p>
-    <p><span class="function">Compare</span> — Using the <kbd class="button">Compare</kbd> Button As soon as you change
-      any parameter in a program, the LED above the <kbd class="button">Compare</kbd> button will light. It will remain
+    <h3 id="using-the-compare-button">Using the Compare Button</h3>
+    <p>As soon as you change any parameter in a program, the LED above the <kbd class="button">Compare</kbd> button will light. It will remain
       lit until you select another program or save (write) the newly edited program into memory. This is a constant
       reminder that something in the program has been changed.</p>
-    <aside class="button-float">
-      <table class="button-id">
-        <tr>
-          <td><span class="keycap-fallback" aria-hidden="true"></span>
-            <div class="button-label">Compare</div>
-          </td>
-        </tr>
-      </table>
-    </aside>
     <p>To hear the original, unchanged program, press the <kbd class="button">Compare</kbd> button. The <span
         class="function">Compare</span> LED will go out, and you will hear the original sound and see the page with its
       original settings. Press <kbd class="button">Compare</kbd> again to return to your edited program. You can toggle
@@ -288,7 +279,7 @@
       the active voices simultaneously, double-click the <kbd class="button">Select Voice</kbd> button. The <span
         class="page-name">Select Voice</span> page will appear with all the active voices in the current patch selected.
       Now, parameter changes you make on any of the programming pages will affect all the voices currently playing.</p>
-    <p>Programming pages you select while in group edit mode will appear with “GRP” flashing in the lower left hand
+    <p>Programming pages you select while in group edit mode will appear with <span class="lcd">GRP</span> flashing in the lower left hand
       corner of the display to remind you that you are editing more than one voice.</p>
     <p>Note that while in group edit mode, pressing any of the soft buttons on the <span class="page-name">Select Voice</span>
         page will return it to its normal state, where only one voice can be selected at a time.</p>
@@ -324,8 +315,8 @@
       <p>There can be four variations of the program, one for each of the four possible
       patch select button positions. The patch selects are used to control which voices in a program are active and
       which ones are muted. The current patch select variation is shown in the lower-left corner of the display on the
-      <span class="page-name">Select Voice</span> page. For either button, a “0” indicates that the button is not being
-      pressed, and an asterisk ( *) indicates that the button is down.</p>
+      <span class="page-name">Select Voice</span> page. For either button, a <span class="lcd">0</span> indicates that the button is not being
+      pressed, and an asterisk (<span class="lcd">*</span>) indicates that the button is down.</p>
     <p>While on the <span class="page-name">Select Voice</span> Page, press the <kbd class="button">Patch Select</kbd>
       buttons and watch as the display changes to show the status of each patch variation. Note that for each of the
       four patch select variations, a different combination of voices can be active or muted. This lets you dynamically
@@ -424,9 +415,9 @@
     <li> the word <span class="lcd">SAVE</span> is flashing in the lower left-hand corner, below the page name.</li>
     </ol>
     <p>When you release the <kbd class="button">Bank</kbd> button, the display will return to the <span
-        class="page-name">Write</span> page. Press another Bank button and the display shows
-      you the programs for that bank. To look at the Programs in the other User RAM <dfn class="term">BankSet</dfn>,
-      simply press and hold down any of the ten Bank buttons as before, and then press <kbd
+        class="page-name">Write</span> page. Press another <kbd class="button">Bank</kbd> button (0-9) and the display shows
+      you the programs for that bank. To look at the Programs in the other <dfn class="term">User RAM BankSet</dfn>,
+      simply press and hold down any of the ten <kbd class="button">Bank</kbd> buttons (0-9) as before, and then press <kbd
         class="button">BankSet</kbd>. You can also press the <kbd
         class="button">Bank</kbd> buttons and the <kbd
         class="button">BankSet</kbd> button while holding down the <kbd class="button">Sounds</kbd> button to “shop
@@ -466,11 +457,10 @@
         class="page-name">Write</span> page:</p>
     <ul>
       <li>Select the program you want to copy.</li>
-      <li>Press the <kbd class="button">Copy</kbd> button. The Copy Context on the top line of the display shows PROGRAM
-      PARAMETERS.</li>
-      <li>Press the soft button beneath MAKE COPY. This puts the current program into the copy buffer. The display
-      briefly shows COPY COMPLETED and then returns to the <span class="page-name">Copy</span> page.</li>
-      <li>Press the RECALL soft button. This puts you back on the <span class="page-name">Write</span> page, with the new
+      <li>Press the <kbd class="button">Copy</kbd> button. The Copy Context on the top line of the display shows <span class="lcd">PROGRAM PARAMETERS.</span>
+      <li>Press the soft button beneath <span class="lcd">MAKE COPY</span>. This puts the current program into the copy buffer. The display
+      briefly shows <span class="lcd">COPY COMPLETED</span> and then returns to the <span class="page-name">Copy</span> page.</li>
+      <li>Press the <span class="lcd">RECALL</span> soft button. This puts you back on the <span class="page-name">Write</span> page, with the new
       program showing. Now proceed exactly as described above to write the program to the new location.</li>
     </ul>
     <h3 id="voice-programming">Voice Programming</h3>
@@ -582,48 +572,48 @@
       Modulation Amount (the display shows <span class="lcd">MODAMT=±##</span>), which controls how deeply the
       selected modulator will affect the level to which it is being applied.</p>
     <p>Press the soft button above <span class="lcd">MODAMT=</span>, and use the data entry controls to adjust the
-      modulation amount. Modulation amount can be positive or negative. A modulation amount of +00 has the same effect
-      as turning the modulator <span class="lcd">*OFF*</span>.</p>
+      modulation amount. Modulation amount can be positive or negative. A modulation amount of <span class="value">+00</span> has the same effect
+      as turning the modulator <span class="value">*OFF*</span>.</p>
     <aside class="tip">
-      <p>With modulation amount, as with all parameter values that have a center value (in this case, +00), there is an
+      <p>With modulation amount, as with all parameter values that have a center value (in this case, <span class="value">+00</span>), there is an
         easy way to reach that value. With the <span class="param">MODAMT</span> selected, press the <kbd
           class="button">Down Arrow</kbd> button and while holding it down, press the <kbd class="button">Up Arrow</kbd>
-        button, then quickly release both buttons. This automatically sets the modulation amount to +00.</p>
+        button, then quickly release both buttons. This automatically sets the modulation amount to <span class="value">+00</span>.</p>
     </aside>
 
     <h3 id="modulation-sources">Modulation Sources</h3>
     <p>The 15 Modulation Sources available on the TS-10 are as follows:</p>
     <table class="bullet-cols">
       <tr>
-        <td>• LFO — Low Frequency Oscillator</td>
-        <td>• PITCH — Pitch Bend Wheel</td>
+        <td>• <span class="value">LFO</span> — Low Frequency Oscillator</td>
+        <td>• <span class="value">PITCH</span> — Pitch Bend Wheel</td>
       </tr>
       <tr>
-        <td>• NOISE — Noise Generator</td>
+        <td>• <span class="value">NOISE</span> — Noise Generator</td>
         <td>• <span class="param">PEDAL</span> — Voltage Control Foot Pedal</td>
       </tr>
       <tr>
-        <td>• ENV-1 — Envelope 1</td>
-        <td>• TIMBR — Timbre Control</td>
+        <td>• <span class="value">ENV-1</span> — Envelope 1</td>
+        <td>• <span class="value">TIMBR</span> — Timbre Control</td>
       </tr>
       <tr>
-        <td>• ENV-2 — Envelope 2</td>
+        <td>• <span class="value">ENV-2</span> — Envelope 2</td>
         <td>• <span class="param">XCTRL</span> — External Controller (MIDI)</td>
       </tr>
       <tr>
-        <td>• MIXER — Mod Mixer/Shaper</td>
+        <td>• <span class="value">MIXER</span> — Mod Mixer/Shaper</td>
         <td>• <span class="param">PRESS</span> — Pressure (After-touch)</td>
       </tr>
       <tr>
-        <td>• WL + PR — Wheel + Pressure</td>
-        <td>• KEYBD — Keyboard Tracking</td>
+        <td>• <span class="value">WL + PR</span> — Wheel + Pressure</td>
+        <td>• <span class="value">KEYBD</span> — Keyboard Tracking</td>
       </tr>
       <tr>
-        <td>• PR + VL — Pressure + Velocity</td>
-        <td>• VELOC — Velocity</td>
+        <td>• <span class="value">PR + VL</span> — Pressure + Velocity</td>
+        <td>• <span class="value">VELOC</span> — Velocity</td>
       </tr>
       <tr>
-        <td>• WHEEL — Modulation Wheel</td>
+        <td>• <span class="value">WHEEL</span> — Modulation Wheel</td>
         <td>• <span class="lcd">*<span class="value">OFF</span>*</span> — no modulation</td>
       </tr>
     </table>
@@ -637,7 +627,7 @@
       tends to create strange “computer sound” effects. Small modulation amounts (around +02 to +04) can create a subtle
       random movement in the sound, which can impart a more natural quality.</p>
     <p>On the second sub-page of the <span class="page-name">LFO</span> page (press <kbd class="button">LFO</kbd> twice)
-      there is a parameter labeled NOISE-RATE=##, which adjusts the rate at which the level of this modulator will
+      there is a parameter labeled <span class="param">NOISE-RATE=</span><span class="value">##</span>, which adjusts the rate at which the level of this modulator will
       change.</p>
     <h4 id="env-1-env-2-env-3" class="param-name">ENV-1, ENV-2, (ENV-3)</h4>
     <p>The TS-10 has three complex Envelopes. Envelopes are used to create changes, over time, in pitch, brightness,
@@ -649,9 +639,9 @@
     <p>&gt; ENV-3 is a special case. ENV 3 always controls the volume of the voice, and cannot be selected as a
       modulator anywhere else.</p>
     <h4 id="mixer-mod-mixer-shaper" class="param-name">MIXER — Mod Mixer/Shaper</h4>
-    <p>The Mod Mixer/Shaper is a powerful feature which allows you to assign two modulation sources to one input, and to
+    <p>The <dfn class="term">Mod Mixer/Shaper</dfn> is a powerful feature which allows you to assign two modulation sources to one input, and to
       scale and shape the response of one of those modulators. The controls on the <span class="page-name">Mod Mixer</span>
-        page are used to determine what will happen when <span class="lcd">MIXER</span> is chosen as a modulator.</p>
+        page are used to determine what will happen when <span class="value">MIXER</span> is chosen as a modulator.</p>
     <h4 id="wl-pr-wheel-pressure" class="param-name">WL + PR — Wheel + Pressure</h4>
     <p>This is one of two “combination” modulators. When selected, both the mod wheel and pressure will affect the level
       which is being modulated. This can be good for modulating LFO depth when using the LFO for vibrato. That way the
@@ -671,32 +661,31 @@
       Applied to the filter cutoff frequency, for example, this would cause notes to become brighter as you bend them
       upwards, and more muted as you bend them down (or the opposite with negative modulation amounts).</p>
     <h4 id="pedal-voltage-control-foot-pedal" class="param-name">PEDAL — Voltage Control Foot Pedal</h4>
-    <p>This selects the CVP-1 Foot Pedal, which can be plugged into the Pedal•CV jack on the TS-10 rear panel, as a
+    <p>This selects the CVP-1 Foot Pedal, which can be plugged into the <kbd class="button">Pedal•CV</kbd> jack on the TS-10 rear panel, as a
       modulator. Its effect will be the same as that of the mod wheel. It can be applied wherever a Modulator is
       selected.</p>
     <p>Note that the Foot Pedal will only act as a modulator when the Pedal Function Select parameter is set to <span
-        class="lcd">PEDAL=MOD</span> on the <span class="page-name">System</span> Page. When that parameter is set to
-      <span class="lcd">PEDAL=VOL</span> the Foot Pedal will act as a volume pedal, not as a modulator (though this has
+        class="value">PEDAL=MOD</span> on the <span class="page-name">System</span> Page. When that parameter is set to
+      <span class="value">PEDAL=VOL</span> the Foot Pedal will act as a volume pedal, not as a modulator (though this has
       no effect on incoming MIDI Foot Pedal data). See <a class="refer-to"
-        href="02-system.html#section-2-system-page-parameters">Section 2 — <span class="page-name">System</span> Page
-        Parameters</a> for more details.</p>
+        href="02-system.html#section-2-system-page-parameters">Section 2 — System Page Parameters</a> for more details.</p>
     <h4 id="timbr-timbre-control" class="param-name">TIMBR — Timbre Control</h4>
     <p>This is a special modulator, which is intended as an “extra” real-time performance controller.</p>
-    <p>TIMBR can be assigned like any other modulator wherever a modulation source is selected. It is controlled from
+    <p><span class="param">TIMBR</span> can be assigned like any other modulator wherever a modulation source is selected. It is controlled from
       the <span class="page-name">Timbre</span> page in the Track Parameters section.</p>
-    <p>The Timbre parameter also controls the relative volume modulation amounts for each of the six program voices
+    <p>The <span class="param">Timbre</span> parameter also controls the relative volume modulation amounts for each of the six program voices
       (assigned on the <span class="page-name">TIMBRE</span> sub-page found on the <span class="page-name">Program
         Control</span> Page). This allows you to determine how much louder or softer each voice will become as the
       Timbre modulation controller is increased or decreased.</p>
     <p>Whenever you are playing a sound or preset, you can press the <kbd class="button">Brightness/Timbre</kbd> button
       twice to get to the <span class="page-name">Timbre</span> sub-page, and use the <kbd class="button">Data Entry
-        Slider</kbd> to change the level of the Timbre modulator. Note that because it can be assigned to modulate any
-      mod destination within a voice or effect, the Timbre control will not always necessarily adjust the tone color
+        Slider</kbd> to change the level of the <span class="param">TIMBR</span> modulator. Note that because it can be assigned to modulate any
+      mod destination within a voice or effect, the <span class="param">Timbre</span> control will not always necessarily adjust the tone color
       (which is what we normally associate with the word timbre) of a given sound, depending on what the programmer has
       chosen to do with it. As a rule, however, programmers are encouraged to make sure that Timbre always does
       something interesting to the sound.</p>
     <h4 id="xctrl-external-controller" class="param-name">XCTRL — External Controller</h4>
-    <p>Like the TIMBR modulator, the External Controller (<span class="param">XCTRL</span>) modulator can be assigned to
+    <p>Like the <span class="param">TIMBR</span> modulator, the External Controller (<span class="param">XCTRL</span>) modulator can be assigned to
       modulate any voice or effect modulation destination. Whenever you are playing a sound or preset, you can press the
       <kbd class="button">Brightness/Timbre</kbd> button three times to get to the <span class="page-name">XCTRL</span>
         sub-page, and use the <kbd class="button">Data Entry Slider</kbd> to change the level of the <span
@@ -712,11 +701,11 @@
       <li>Connect its MIDI Out to the TS-10 MIDI In</li>
     <li>Make sure both instruments have controllers enabled (<span class="page-name">MIDI Control</span> Page)</li>
     <li>Select Breath Controller as the external controller that will be received by the TS-10 (<span
-        class="lcd">XCTRL=02</span>, also on the <span class="page-name">MIDI Control</span> Page)</li>
+        class="value">XCTRL=02</span>, also on the <span class="page-name">MIDI Control</span> Page)</li>
     <li>assign <span class="param">XCTRL</span> as a Modulator for LFO level, Filter Cutoff frequency, or some other
       manual level within a voice</li>
     <li>play the sound from the TS-10 keyboard, while blowing into the Breath Controller connected to the sending
-      instrument. The modulation will have the same effect as if you were playing from the sending instrument.</li>
+      ins`trument. The modulation will have the same effect as if you were playing from the sending instrument.</li>
     </ol>
     <h4 id="press-pressure-after-touch" class="param-name">PRESS — Pressure (After-touch)</h4>
     <p>Pressure, also called after-touch, is a modulator which varies a manual level within a voice depending on how
@@ -2333,12 +2322,8 @@
     </p>
     <ul>
       <li><span class="param">SYSTEM</span> — This is the “global” or keyboard-wide pitch-table. As it comes out of the box, the TS-10’s System
-      pitch-table defaults to 12-tone equal-temperament tuning (standard tuning).</li>
-    </ul>
-    <p>However, you can copy a custom pitch-table into the system for use by all your programs.</p>
-    <p>The parameter for changing the system pitch-table is on the <span class="page-name">System</span> page. More on
-      this feature a bit later.</p>
-    <ul>
+      pitch-table defaults to 12-tone equal-temperament tuning (standard tuning). However, you can copy a custom pitch-table into the system for use by all your programs. The parameter for changing the system pitch-table is on the <span class="page-name">System</span> page. More on
+      this feature a bit later.</li>
       <li><span class="param">ALL-C4</span> — No pitch tracking — all notes tuned to C4 (middle C).</li>
       <li><span class="param">CUSTOM</span> — each program in the TS-10 can have its own “user-definable” (that is, you create it) pitch-table. When
       you create a custom pitch-table, wave-list, or drum-map, the TS-10 will remove voices 5 and 6 from the program to
@@ -2519,12 +2504,10 @@
     <p>Each voice in a program can be assigned to play either the System, no-pitch, or custom pitchtable. For example,
       Voice #1 can play the System pitch-table; Voice #2, a custom pitch-table; voices 3 and 4, No-pitch (C notes across
       the keyboard).</p>
-    <p>Editing a Custom <dfn class="term">Pitch-Table</dfn> As mentioned earlier, until you edit the custom pitch-table
-      — change the default note assignments — the custom pitch-table will sound the same as the system pitch-table. To
-      edit a custom pitch-table:</p>
+    <h3 id="editing-a-custom-pitch-table">Editing a Custom Pitch-Table</h3>
+    <p>As mentioned earlier, until you edit the custom pitch-table — change the default note assignments — the custom pitch-table will sound the same as the system pitch-table. To edit a custom pitch-table:</p>
     <ul>
-      <li>On the <span class="page-name">Select Voice</span> page, press either of the soft buttons beneath EDIT
-      PITCH-TABLE. This takes us to the <span class="page-name">EDIT PITCH-TABLE</span> page.</li>
+      <li>On the <span class="page-name">Select Voice</span> page, press either of the soft buttons beneath <span class="lcd">EDIT PITCH-TABLE</span>. This takes us to the <span class="page-name">EDIT PITCH-TABLE</span> page.</li>
     </ul>
     <figure class="vfd-unit">
       <div class="vfd-callouts top">
@@ -3214,7 +3197,8 @@
         played. This is necessary to allow smooth crossfades between each Step in the Wave-List.
       </p>
     </aside>
-    <p>Editing a <dfn class="term">Wave-List</dfn> When a wave-list is active within the current program, the <span
+    <h3 id="editing-a-wave-list">Editing a Wave-List</h3>
+    <p>When a wave-list is active within the current program, the <span
         class="page-name">Select Voice</span> page looks something like this:</p>
     <figure class="vfd-unit has-page">
 
@@ -3292,29 +3276,16 @@
       <li>The TS-10 will ask <span class="lcd">ERASE CURRENT WAVE-LIST ?</span></li>
       <li>Press <span class="lcd">*YES*</span>. You are returned to the <span class="page-name">Select Voice</span> page, the custom wave-list is gone, and voices 5 and 6 are reset to their default voices.</li>
     </ul>
-    <p>Using the <span class="page-name">Copy</span> page with <dfn class="term">Wave-Lists</dfn> Pressing <kbd
-        class="button">Copy</kbd> from the <span class="page-name">Wave-List Editor</span> page will display the <span
-        class="page-name">Copy</span> page with the following options:</p>
-    <figure class="vfd-unit has-page">
+      <h3 id="using-the-copy-page-with-wave-lists">Using the Copy Page with Wave-Lists</h3>
+      <p>Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Wave-List Editor</span> page will display the <span class="page-name">Copy</span> page with the following options:</p>
+      <figure class="vfd-unit has-page">
 
-      <div class="vfd-bezel">
-        <table>
-          <colgroup>
-            <col class="page-col">
-            <col class="param-col">
-            <col class="param-col">
-            <col class="param-col">
-          </colgroup>
-          <thead>
-            <tr class="soft-row top">
-              <th class="page-tag-slot"></th>
-              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
-              </th>
-              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-            </tr>
-          </thead>
-          <tbody class="vfd-screen">
+        <div class="vfd-bezel">
+          <table>
+            <colgroup>
+              <col class="page-col">
+              <col class="param-col">
+              <col class="param-col">
             <tr>
               <td class="cell page-label">COPY</td>
               <td class="cell">WAVE-LIST</td>

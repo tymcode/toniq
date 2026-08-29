@@ -37,7 +37,7 @@
 <p>The most common context for the TS-10 to be in is Preset mode. Unless the TS-10 is in Sequencer mode, you may assume that you are in a preset. Aside from the presets that are saved, there is a <dfn class="term">Preset Buffer</dfn> that is always active. A preset buffer is a kind of storage location that is used to temporarily store information.</p>
 <p>Whenever you select, layer or edit the Track Parameters for a sound, you are working within the preset buffer. The information in the preset buffer is temporary until you save it into one of the internal preset locations, and then it becomes permanent (it can be recalled). The track parameters of the preset, including mix, pan, transpose, etc. are always active and you should make sure that their settings are correct if you think that your programs are behaving strangely. Whenever you select a new sound from the Sound Bank pages, the track parameters are reset to their standard default settings. If you wish to change a program without resetting these parameters, use the <span class="function">Replace Track Sound</span> feature described later in this section.</p>
 <h3 id="what-is-the-difference-between-preset-mode-and-sequencer-mode">What is the Difference between Preset Mode and Sequencer Mode?</h3>
-<p>There are three Tracks in a “normal” preset and twelve tracks in a sequence or song. A sequence or song, in addition to its ability to record data on its tracks, can be thought of as a giant twelvetrack “preset.” However, this giant “preset” is not available simultaneously with normal threetrack presets. The twelve tracks of a sequence or song are available from the keyboard only while in Sequencer mode — indicated by the LED above either Seq/Song Tracks <kbd class="button">1-6</kbd> or <kbd class="button">7–12</kbd> button being on. The twelve sequence or song tracks are always playable via incoming MIDI when the MIDI mode is set to <span class="value">MULTI</span> (on the <span class="page-name">MIDI Control</span> page).</p>
+<p>There are three Tracks in a “normal” preset and twelve tracks in a sequence or song. A sequence or song, in addition to its ability to record data on its tracks, can be thought of as a giant twelve-track “preset.” However, this giant “preset” is not available simultaneously with normal threetrack presets. The twelve tracks of a sequence or song are available from the keyboard only while in Sequencer mode — indicated by the LED above either Seq/Song Tracks <kbd class="button">1-6</kbd> or <kbd class="button">7–12</kbd> button being on. The twelve sequence or song tracks are always playable via incoming MIDI when the MIDI mode is set to <span class="value">MULTI</span> (on the <span class="page-name">MIDI Control</span> page).</p>
 <h3 id="selecting-presets">Selecting Presets</h3>
 
 <p>Press <kbd class="button">Presets</kbd>. The LED above the <kbd class="button">Presets</kbd> button lights, indicating that you are in Preset mode.</p>
@@ -106,13 +106,14 @@
   
 </figure></div><div class="track-param-list"><table class="data-table"><caption>Track Parameters</caption><tbody><tr><td>Mix</td></tr><tr><td>Pan &amp; Pan Mode</td></tr><tr><td>Attack*</td></tr><tr><td>Release*</td></tr><tr><td>Brightness*</td></tr><tr><td>Timbre*</td></tr><tr><td>External MIDI Control (<span class="param">XCTRL</span>)*</td></tr><tr><td>Key Zone</td></tr><tr><td>Velocity Range</td></tr><tr><td>Velocity Sensitivity</td></tr><tr><td>Transpose</td></tr><tr><td>Detune</td></tr><tr><td>Rate* (LFO and/or <dfn class="term">Wave-List</dfn> Duration)</td></tr><tr><td>Sustain On/Off</td></tr><tr><td>Sostenuto On/Off</td></tr><tr><td>Pitch Bend On/Off</td></tr><tr><td>Mod Wheel On/Off</td></tr><tr><td>Reset Controllers On/Off</td></tr><tr><td>All-Notes-Off On/Off</td></tr><tr><td><kbd class="button">Patch Select</kbd> mode*</td></tr><tr><td>Pressure mode*</td></tr><tr><td>Volume Pedal Mode</td></tr><tr><td>MIDI Status</td></tr><tr><td>MIDI Channel</td></tr><tr><td>MIDI Program</td></tr><tr><td>MIDI BankSelect</td></tr><tr><td>Effects Bus Routing</td></tr><tr><td>Effect Mod Control</td></tr></tbody></table><p class="memory-note">(* indicates saved with Programs)</p></div></div>
 <p>Whenever the Presets LED is lit, it means that the TS-10 is in Preset mode, and the ten <kbd class="button">Bank</kbd> buttons beneath the display will select Preset Banks when you press them (rather than selecting Sound Banks, as they do when the Sounds LED is lit).</p>
-<h2 id="how-many-presets-are-in-the-ts-10">How Many Presets are in the TS-10?</h2>
+<h3 id="how-many-presets-are-in-the-ts-10">How Many Presets are in the TS-10?</h3>
 <p>The TS-10 offers 300 internal Presets:</p>
 <ul>
   <li>120 presets in User RAM — 60 in BankSet&nbsp;U0 and 60 in BankSet&nbsp;U1.</li>
   <li>180 presets in ROM — 60 in BankSet&nbsp;R2, 60 in BankSet&nbsp;R3, and 60 in BankSet&nbsp;R4.</li>
 </ul>
-<p>Editing a Preset In addition to the presets stored in memory, there is one more preset that you are using most of the time whether you know it or not. Whenever you are selecting or layering sounds in Sounds mode, you are also creating a preset. The TS-10 automatically “remembers” the last three sounds you selected and stores them in a special memory buffer called the Preset <dfn class="term">Edit Buffer</dfn>. Try this:</p>
+<h3 id="editing-a-preset">Editing a Preset</h3>
+  <p>In addition to the presets stored in memory, there is one more preset that you are using most of the time whether you know it or not. Whenever you are selecting or layering sounds in Sounds mode, you are also creating a preset. The TS-10 automatically “remembers” the last three sounds you selected and stores them in a special memory buffer called the Preset <dfn class="term">Edit Buffer</dfn>. Try this:</p>
 <ul>
   <li>Press <kbd class="button">Sounds</kbd> and select a sound by pressing its soft button.</li>
   <li>Layer another sound with the first by double-clicking its soft button.</li>
@@ -120,9 +121,8 @@
 </ul>
 <p>You have created a preset with three sounds playing simultaneously. Suppose you wanted to adjust their relative volumes, or shorten the release time, or change the pan location of one of the sounds without losing the combination. You can do all of these things and a lot more with presets.</p>
 <p>In Preset mode, whenever you are hearing the Preset <dfn class="term">Edit Buffer</dfn>, the preset name is shown as <span class="lcd">*-EDITED--*</span>. You can always toggle between the edited and currently selected preset by pressing the soft button closest to the preset name.</p>
-<p>As we have already discussed, a preset consists of three tracks, each of which has a sound and a set of track parameters. The track parameters are found in the Track Parameters section of the front panel. Presets can be saved, so that you can call them up at any time, or you can use the</p>
-<p>Preset <dfn class="term">Edit Buffer</dfn> in real-time as a powerful performance tool.</p>
-<p>While you still have three programs layered, press the <kbd class="button">Mix/Pan</kbd> button in the Track Parameter section. The display shows:</p>
+<p>As we have already discussed, a preset consists of three tracks, each of which has a sound and a set of track parameters. The track parameters are found in the <span class="key-group">Track Parameters</span> section of the front panel. Presets can be saved, so that you can call them up at any time, or you can use the Preset <dfn class="term">Edit Buffer</dfn> in real-time as a powerful performance tool.</p>
+<p>While you still have three programs layered, press the <kbd class="button">Mix/Pan</kbd> button in the <span class="key-group">Track Parameters</span> section. The display shows:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -137,7 +137,7 @@
       </tr>
     </thead>
     <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIX</td><td class="cell selected">MEGASTRINGS</td><td class="cell">HYPER-LOOP</td><td class="cell">TENOR-SAX</td></tr>
+      <tr><td class="cell page-label">MIX</td><td class="cell selected">MEGASTRINGS</td><td class="cell flash-underline"><span class="flash-underline">HYPER-LOOP</span></td><td class="cell flash-underline"><span class="flash-underline">TENOR-SAX</span></td></tr>
       <tr><td class="cell page-label">&nbsp;</td><td class="cell selected">127</td><td class="cell">127</td><td class="cell">127</td></tr>
     </tbody>
     <tfoot>
@@ -164,16 +164,16 @@
 <p>Preset/Track Parameters provide easy access and control for track and sound attributes, and are used in mixing/manipulating sequencer tracks and in creating presets.</p>
 <p>A group of Preset/Track Parameters is associated with each preset and sequencer track. These parameters control various aspects of the track, including some important and useful sound controls which may be easily adjusted during performance, or recorded into the sequencer. The settings of these parameters are saved with every preset. These instantly recallable presets include an effect setup and three programs on three tracks with a full set of programmable performance parameters, including key zones, transpositions, release times, timbral variations and others. The settings of all performance parameters on sequencer tracks are saved for each track while the power to the TS-10 is off, and are always available.</p>
 <p>The buttons which control the pages containing these parameters are found in the <span class="key-group">Track Parameters</span> section of the front panel to the right of the display.</p>
-<p>To view or adjust the setting of a particular type of track parameter, press the appropriate button in the Track Parameter section. The selected parameter type is indicated in the top-left corner of the display.</p>
+<p>To view or adjust the setting of a particular type of track parameter, press the appropriate button in the <span class="key-group">Track Parameters</span> section. The selected parameter type is indicated in the top-left corner of the display.</p>
 <p>On the Track Parameter pages, the top line of the display will show the names of three programs and their current layering status. The name of the parameter type is abbreviated to four characters in order to make room for the program names, and is shown in the top left corner of the display. The bottom line of the display shows the current values of the selected parameter for the three tracks of the preset.</p>
-<p>In Sequencer mode the current values of parameters for the six tracks (Tracks 1-6 or 7-12) will be displayed. You can press the <kbd class="button">Tracks 1-6 or 7-12</kbd> button again to toggle back and forth between the <span class="page-name">TRAX</span> page which shows the names of the programs on the tracks and the last selected track parameter page which shows parameter values.</p>
+<p>In Sequencer mode the current values of parameters for the six tracks (Tracks 1-6 or 7-12) will be displayed. You can press the Tracks <kbd class="button">1-6</kbd> or <kbd class="button">7-12</kbd> button again to toggle back and forth between the <span class="page-name">TRAX</span> page which shows the names of the programs on the tracks and the last selected track parameter page which shows parameter values.</p>
 <p>The currently selected track parameter will be underlined. This is the active parameter which will be modified. You may select a parameter for a different track by using the soft buttons.</p>
 <p>When programming performance presets, the lower row of soft buttons is used to select tracks.</p>
 <p>For sequencer or song tracks, both upper and lower soft buttons are used.</p>
 <p>Remember that you can edit parameters on tracks that you are not hearing. The tracks that you can hear are indicated with solid or flashing underlines on their names.</p>
 <p>Saving a Preset Once you have created a preset you like, you can save it to one of the 120 Preset locations in the User RAM memory (you cannot save presets or sounds to the ROM memory — it is read only).</p>
 <p>Saving a preset to a User RAM location will erase the one that is currently there, so be careful.</p>
-<p>To save a preset, first decide which User RAM <dfn class="term">BankSet</dfn> and Bank location you want to save it to, then:</p>
+<p>To save a preset, first decide which User RAM BankSet and Bank location you want to save it to, then:</p>
 <ul>
   <li>Press the <kbd class="button">Presets</kbd> button twice to view your edited preset. If the display does not show your edited preset, press the soft button in the lower left corner of the display. The display should show <span class="lcd">*-EDITED--*</span> in the lower left corner.</li>
   <li>Press the lower right soft button underneath the word <span class="lcd">*WRITE*</span>.</li>

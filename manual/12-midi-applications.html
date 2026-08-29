@@ -25,7 +25,8 @@
       <h1 id="section-12-sequencing-midi-applications">Section 12 — Sequencing/MIDI Applications</h1>
     </header>
     <p>This section covers a number of advanced sequencer applications, including using the TS-10 with a variety of external MIDI devices.</p>
-<p>Using the TS-10 with a Drum Machine When you use the TS-10 in conjunction with a drum machine or other rhythm sequencer, there are basically three ways to go:</p>
+<h3 id="using-the-ts-10-with-a-drum-machine">Using the TS-10 with a Drum Machine</h3>
+<p>When you use the TS-10 in conjunction with a drum machine or other rhythm sequencer, there are basically three ways to go:</p>
 <p>1) Sync the drum machine’s clock to the TS-10</p>
 <p>2) Sync the TS-10’s clock to the drum machine</p>
 <p>3) Sequence the drum machine from the TS-10 (just as you would a synthesizer)</p>
@@ -117,7 +118,8 @@
   <li>You may not want all 12 Tracks to receive. Tracks that you leave in the UNDEFINED state will not receive any MIDI data. Just define as many tracks as you need. Or set some tracks to <span class="lcd">SEND/----</span> on the <span class="page-name">Track MIDI</span> page. Tracks set to <span class="lcd">SEND/----</span> will not respond to incoming</li>
 </ul>
 <p>MIDI data.</p>
-<p>Using the TS-10 with an External MIDI Sequencer For optimal results when using it with an external multi track sequencer, the TS-10 should be set up as described above to receive in Multi Mode, and the 12 tracks of the current sequence assigned to receive on the desired MIDI channels.</p>
+<h3 id="using-the-ts-10-with-an-external-midi-sequencer">Using the TS-10 with an External MIDI Sequencer</h3>
+<p>For optimal results when using it with an external multi track sequencer, the TS-10 should be set up as described above to receive in Multi Mode, and the 12 tracks of the current sequence assigned to receive on the desired MIDI channels.</p>
 <p>The illustration below shows a typical configuration for using the TS-10 with an external MIDI sequencer in <span class="value">MULTI</span> Mode:</p>
 <p><span class="lcd">MODE=MULTI</span></p>
 <div class="vfd-callouts top"><div>Track</div><div>1 Chan=1</div><div>MIDI Out</div></div>
@@ -142,7 +144,8 @@
   <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> and set up your tracks for sequencing: &gt; For tracks that you want to play a TS-10 sound, set the Status to <span class="lcd">SEND/RECV</span>. The track will send MIDI to the sequencer, and then will play local TS-10 voices when it receives the information back at its MIDI input.</li>
 </ul>
 <p>&gt; For tracks which you want to play one of the other MIDI devices, but not play a TS-10 sound, set the Status to <span class="lcd">LOCAL-OFF</span>. The track will send MIDI to the sequencer, but will not play locally when the data is received. The MIDI Thru jack will send the information along to the remote MIDI devices.</p>
-<p>Using The TS-10 with a MIDI Guitar Controller The TS-10 makes an ideal voice module to use with any MIDI Guitar Controller which is capable of sending in MONO Mode. MONO Mode (MIDI Mode 4) allows a guitar controller to send the notes played on each string on a different MIDI Channel. This has the advantage of letting each string send pitch bends independently, which is the only way to truly recreate guitar technique on a synthesizer.</p>
+<h3 id="using-the-ts-10-with-a-midi-guitar-controller">Using The TS-10 with a MIDI Guitar Controller</h3>
+<p>The TS-10 makes an ideal voice module to use with any MIDI Guitar Controller which is capable of sending in MONO Mode. MONO Mode (MIDI Mode 4) allows a guitar controller to send the notes played on each string on a different MIDI Channel. This has the advantage of letting each string send pitch bends independently, which is the only way to truly recreate guitar technique on a synthesizer.</p>
 <p>Some earlier guitar synths do not support MONO mode. You will have to consult the manual of your particular model to see if it does. If you have a guitar synth which only sends in <span class="value">POLY</span> Mode (i.e. sends all six strings on the same MIDI Channel) you should use the TS-10 in <span class="value">POLY</span> Mode (or <span class="value">OMNI</span> Mode) and set the guitar controller to send on the MIDI Channel that is selected for the Base Channel on the <span class="page-name">MIDI</span> Page.</p>
 <p>For MIDI Guitar Controllers which do support MONO Mode, the TS-10 provides two types of MONO mode reception. The first is MONO A Mode, which is a simple and straightforward way of using MONO mode without getting involved with tracks or other complications:</p>
 <ul>

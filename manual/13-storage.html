@@ -312,13 +312,13 @@
 <p>If the 60-SEQ/SONGS file had Sample Banks saved with it, after answering <span class="lcd">*YES*</span> to load the 60-SEQ/SONGS file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span class="lcd">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask for the disk(s) to automatically load the Sampled Sound data. If you answer *NO *, the Sampled Sound bank information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not loaded.</p>
 <aside class="note"><p>Note: Do not load any 60-SEQ/SONGS files that have been saved with <dfn class="term">Sample-Banks</dfn> into a TS-10 that is running software earlier than version 2.0. The new feature is incompatible with older software.</p></aside>
 <p>To check which software version of the TS-10 you are running, while holding down the <kbd class="button">Presets</kbd> button, press the <kbd class="button">System</kbd> button.</p>
-<p>Using File  Banks to Locate Files for Loading As we mentioned earlier, File Banks provide a quick way to locate and select a file for loading.</p>
-<p>After you have selected LOAD from the DISK Storage menu, the ten <kbd class="button">Bank</kbd> buttons will select file banks. From the file banks you can directly select a file to be loaded instead of scrolling through the entire list of files.</p>
+<h3 id="using-file-banks-to-locate-files-for-loading">Using File Banks to Locate Files for Loading</h3>
+<p>As we mentioned earlier, File Banks provide a quick way to locate and select a file for loading. After you have selected <span class="command">LOAD</span> from the <span class="page-name">DISK Storage</span> menu, the ten <kbd class="button">Bank</kbd> buttons will select file banks. From the file banks you can directly select a file to be loaded instead of scrolling through the entire list of files.</p>
 <h3 id="here-s-how-file-banks-work">Here’s how file banks work:</h3>
 <ul>
-  <li>Press <kbd class="button">Storage</kbd> and select DISK, then LOAD to get to the Load File display.</li>
+  <li>Press <kbd class="button">Storage</kbd> and select <span class="command">DISK</span>, then <span class="command">LOAD</span> to get to the Load File display.</li>
   <li>Select the file type you want to load.</li>
-  <li>Press <kbd class="button">Bank</kbd> button 0 and hold it down. The display shows the first File Bank for that file type: File Bank Locations containing Files</li>
+  <li>Press <kbd class="button">Bank</kbd> button <span class="value">0</span> and hold it down. The display shows the first File Bank for that file type: File Bank Locations containing Files</li>
 </ul>
 <p>Empty File Bank Locations</p>
 <ul>
@@ -340,14 +340,14 @@
 <ul>
   <li>Insert the disk containing the file to be deleted into the disk drive.</li>
   <li>Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage</span> page.</li>
-  <li>Press DISK. The Disk Storage menu appears.</li>
-  <li>Press DELETE. The <span class="page-name">Delete File</span> page appears as shown above. The file type is underlined.</li>
+  <li>Press <span class="command">DISK</span>. The <span class="page-name">DISK Storage</span> menu appears.</li>
+  <li>Press <span class="command">DELETE</span>. The <span class="page-name">Delete File</span> page appears as shown above. The file type is underlined.</li>
   <li>Select the file type you want from among the available types.</li>
   <li>Press the soft button above the file name and use the data entry controls to find the file you want to delete. (Or you can press the <kbd class="button">Bank</kbd> buttons (0-9) and use the File Banks to select the file without scrolling, just as when loading.)</li>
-  <li>Press <span class="lcd">*YES*</span>. The display asks DELETE &lt;FILE NAME&gt;, and warns &lt;FILE TYPE&gt; FILE WILL BE ERASED.</li>
-  <li>Press <span class="lcd">*YES*</span>. The display reads DELETING &lt;FILE NAME&gt;… while the file is being removed.</li>
+  <li>Press <span class="value">*YES*</span>. The display asks <span class="lcd">DELETE &lt;FILE NAME&gt;</span>, and warns <span class="lcd">&lt;FILE TYPE&gt; FILE WILL BE ERASED.</span></li>
+  <li>Press <span class="value">*YES*</span>. The display reads <span class="lcd">DELETING &lt;FILE NAME&gt;…</span> while the file is being removed.</li>
 </ul>
-<p>Or press <span class="lcd">*NO*</span> to cancel the procedure for any reason.</p>
+<p>Or press <span class="value">*NO*</span> to cancel the procedure for any reason.</p>
 <ul>
   <li>After the file is deleted, the TS-10 returns to the <span class="page-name">Delete File</span> page so that you may delete any other files you may want. If you have no more files to delete, press <span class="lcd">*NO*</span> to exit.</li>
 </ul>
@@ -506,17 +506,17 @@
 <aside class="note"><p>Note: If during the reception of Sys-Ex data, the TS-10 display reads <span class="lcd">STATUS=INCOMPLETE</span>, this means it did not receive an “End Of Exclusive” after the System Exclusive message. This would indicate that the external MIDI device did not transmit a complete message for some reason.</p></aside>
 <p>Press <span class="lcd">*EXIT*</span> and try again.</p>
 <p>If the TS-10 display reads <span class="lcd">STATUS=MEMORY</span> FULL, this means it ran out of memory with which to “buffer” the incoming data (the maximum amount which can be received is 256, 767 with expanded memory, blocks for a standard TS-10). After receiving the Memory Full message you can still save the file, but it is almost certain that the last Sys-Ex message received is incomplete and will not be able to be received successfully when retransmitted.</p>
-<p>LOADING  System Exclusive Data from Disk to an External Device After you have saved a System Exclusive message from an external MIDI instrument, getting the data back to the original instrument involves three steps:</p>
-<p>1) First you prepare the receiving instrument(s) to receive System Exclusive messages via MIDI;</p>
-<p>2) next, you Load the data from the TS-10’s disk drive into memory; and then</p>
-<p>3) you send (transmit) the data to the remote MIDI device(s) from the TS-10.</p>
+<h3 id="loading-system-exclusive-data-from-disk-to-an-external-device">Loading System Exclusive Data from Disk to an External Device</h3>
+<p>After you have saved a System Exclusive message from an external MIDI instrument, getting the data back to the original instrument involves three steps:</p>
+<ol>
+  <li>First you prepare the receiving instrument(s) to receive System Exclusive messages via MIDI;</li>
+  <li>next, you Load the data from the TS-10’s disk drive into memory; and then</li>
+  <li>you send (transmit) the data to the remote MIDI device(s) from the TS-10.</li>
+</ol>
 <p>To Load and Transmit a System Exclusive File from disk:</p>
 <ul>
   <li>Connect the MIDI Out of the TS-10 to the MIDI In of the receiving device(s).</li>
-  <li>Enable the receiving instrument(s) to receive System Exclusive messages. Many devices have a switch or a parameter which enables or disables the receiving of System Exclusive messages.</li>
-</ul>
-<p>Consult the manual of each particular device for details.</p>
-<ul>
+  <li>Enable the receiving instrument(s) to receive System Exclusive messages. Many devices have a switch or a parameter which enables or disables the receiving of System Exclusive messages. Consult the manual of each particular device for details.</li>
   <li>Insert the disk containing the Sys-Ex data into the disk drive.</li>
   <li>Press <kbd class="button">Storage</kbd> to select the <span class="page-name">Storage</span> page.</li>
   <li>Press DISK. The Disk Storage menu appears.</li>
@@ -524,10 +524,7 @@
   <li>Use the data entry controls to select the file type <span class="param">SYS-EX</span> DATA.</li>
   <li>Press the soft button above the file name and use the data entry controls to find the file you want to transmit (or use the File Banks to quickly locate the file without scrolling as detailed earlier in this section).</li>
   <li>Press <span class="lcd">*YES*</span>.</li>
-  <li>If there is not enough free sequencer memory to hold the Sys-Ex data, the display shows SEQUENCER DATA WILL BE ERASED. If you have sequencer data in memory which hasn’t been saved, press <span class="lcd">*NO*</span> to return to the <span class="page-name">Storage</span> page and save it to disk before proceeding.</li>
-</ul>
-<p>Otherwise, press <span class="lcd">*YES*</span>.</p>
-<ul>
+  <li>If there is not enough free sequencer memory to hold the Sys-Ex data, the display shows <span class="lcd">SEQUENCER DATA WILL BE ERASED</span>. If you have sequencer data in memory which hasn’t been saved, press <span class="lcd">*NO*</span> to return to the <span class="page-name">Storage</span> page and save it to disk before proceeding. Otherwise, press <span class="lcd">*YES*</span>.</li>
   <li>The display reads LOADING &lt;FILENAME&gt; while the data is being loaded. Once the data is in memory, the Sys-Ex Recorder screen appears:</li>
   <li>Press <span class="param">SEND</span> to transmit the data. The display reads <span class="lcd">STATUS=SENDING</span>, and then returns to <span class="lcd">STATUS=READY..</span>., ready to send the data again if necessary.</li>
   <li>Check the receiving instrument(s) to see that the data was received correctly. If it wasn’t, make sure that: &gt; the MIDI connections are correct (TS-10’s MIDI Out to the receiving device’s MIDI In), &gt; the receiving device(s) is enabled to receive System Exclusive messages, &gt; the receiving device(s) is set to the same MIDI base channel(s) as when the data was initially sent to the TS-10.</li>

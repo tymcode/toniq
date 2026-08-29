@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Section 7 — Effect Parameters (41–59 Delay/Mod) — ENSONIQ TS-10/TS-12 Musician’s Manual</title>
   <link rel="stylesheet" href="css/manual.css">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="chrome">
       <a href="index.html"><span class="brand">ENSONIQ</span>
-      <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
+        <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
     </div>
   </header>
   <nav class="section-nav">
-    <div><a href="07-effects-22-40.html#section-7-effect-parameters-22-40-reverb">← Section 7 — Effect Parameters (22–40 Reverb)</a></div>
+    <div><a href="07-effects-22-40.html#section-7-effect-parameters-22-40-reverb">← Section 7 — Effect Parameters (22–40
+        Reverb)</a></div>
     <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
-    <div><a href="07-effects-60-73.html#section-7-effect-parameters-60-73-amp-filter">Section 7 — Effect Parameters (60–73 Amp/Filter) →</a></div>
+    <div><a href="07-effects-60-73.html#section-7-effect-parameters-60-73-amp-filter">Section 7 — Effect Parameters
+        (60–73 Amp/Filter) →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
@@ -25,516 +29,1022 @@
       <h1 id="section-7-effect-parameters-41-59-delay-mod">Section 7 — Effect Parameters (41–59 Delay/Mod)</h1>
     </header>
     <h2 id="41-stereo-delay-delay" class="algo">41 STEREO DELAY + DELAY</h2>
-<p>Two independent professional quality stereo digital delays. Both FX-1 and <span class="param">FX-2</span> can have different Mix, Feedback, and Delay Time settings.</p>
-<h4 id="effect-mix-fx-1-and-2-ddl" class="param-name"><span class="param">EFFECT MIX FX-1 (and 2) DDL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the mix between the original signal and each delay. Setting these parameters to 00 will allow only the unprocessed signal to be heard, while a setting of 99 will eliminate it completely, with only the delay portion remaining.</p>
-<h4 id="d-1-and-2-regen" class="param-name"><span class="param">D-1 (and 2) REGEN</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount of signal that will be fed from the output of each delay back into the input, increasing the number of repeats in the delay.</p>
-<h4 id="d-1-and-2-time-l-and-r" class="param-name"><span class="param">D-1 (and 2) TIME (L and R)</span><span class="range">D-1 (L and R) Ranges: 0000 to 2000<br>D-2 (L and R) Ranges: 0000 to 0150</span></h4>
-<p>Determines the amount of time between delays. Each value increases the delay time by 1 millisecond. The Left and Right channels are independently adjustable.</p>
-<h2 id="42-multitap-delay" class="algo">42 MULTITAP DELAY</h2>
-<p>MULTITAP  DELAY produces four independent controllable delays. The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different dry/wet mixes. This algorithm sounds best with a mix of wet and dry.</p>
-<h4 id="delay-1-time" class="param-name"><span class="param">DELAY-1 TIME</span><span class="range">Range: 0000 to 2201 msec</span></h4>
-<p>Sets the amount of delay time for the independent delays. Experiment with different settings to find the right mix for your sound source and application. Some interesting effects can be implemented by using a real-time modulation controller for these parameters.</p>
-<h4 id="level" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the delayed signals against the original dry signal. A level of 00 will offer no audible delay.</p>
-<h4 id="regen" class="param-name"><span class="param">REGEN</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount of signal that will be fed from the output back into the input, increasing the number of repeats in the delays. A setting of 99 would offer an infinite delay.</p>
-<h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the delays in the stereo spectrum. A value of -99 is panned far left, and +99 is far right.</p>
-<table class="param-cols cols-3"><tbody><tr><td>DELAY-2 <span class="param">TIME</span></td><td>DELAY-3 <span class="param">TIME</span></td><td>DELAY-4 <span class="param">TIME</span></td></tr><tr><td><span class="param">LEVEL</span></td><td><span class="param">LEVEL</span></td><td><span class="param">LEVEL</span></td></tr><tr><td><span class="param">REGEN</span></td><td><span class="param">REGEN</span></td><td><span class="param">REGEN</span></td></tr><tr><td><span class="param">PAN</span></td><td><span class="param">PAN</span></td><td><span class="param">PAN</span></td></tr></tbody></table>
-<p>Each of the four discrete delays has identical parameters and ranges as described above.</p>
-<h4 id="regen-damping" class="param-name"><span class="param">REGEN DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the feedback signals. The higher the number, the more the signals are dampened.</p>
-<h2 id="43-eq-stereo-delaylfo" class="algo">43 EQ- -STEREO DELAYLFO</h2>
-<p>EQ- -<span class="param">STEREO</span> DELAYLFO features a parametric EQ and a stereo digital delay that provides LFO modulation of a wide range of delays. This algorithm sounds great with an electric piano, but try it with any source!</p>
-<figure class="figure"><img src="images/eq-stereo-delaylfo.png" alt="EQ-STEREO DELAYLFO signal routing: FX-1 and FX-2 left/right inputs through EQ Trim, EQ, Left/Right Delay with LFO modulation, Delay-Regen, Damping (LPF), Cross Regen, Delay Input R, Output Level R, and Main Outputs L/R"><figcaption>EQ- -<span class="value">STEREO</span> DELAYLFO signal routing.</figcaption></figure>
-<p>The EFFECT <span class="param">MIX FX-1 and FX-2</span> DELAYLFO parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="lfo-rate" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of pitch modulation which is the LFO. To achieve a chorusing effect, this rate must be very slow.</p>
-<h4 id="width" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the excursion of pitch modulation. Since the rate is usually very slow, the width is usually large.</p>
-<h4 id="l-r-lfo" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
-<p>IN-PHASE</p>
-<p>When this parameter is IN-PHASE, the left and right choruses will modulate their detunes together. When set to <span class="param">OUT</span>-OF-PHASE, the detune on the left channel will go up while the detune on the right will go down.</p>
-<h4 id="delay-input-r" class="param-name"><span class="param">DELAY INPUT R</span><span class="range">Range: OFF or ON</span></h4>
-<p>Disables the input into the right side delay line. The right delay line will still get input from the</p>
-<p><span class="param">CROSS REGEN</span>. This allows a ping-pong delay effect.</p>
-<h4 id="output-level-r" class="param-name"><span class="param">OUTPUT LEVEL R</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the right output signal level.</p>
-<h4 id="delay-regen" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of regen (regeneration) applied to the delay time taps. The sign of the value determines the polarity of the regen.</p>
-<h4 id="time-l" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 0845 msec</span></h4>
-<p>Determines the amount of time between the input signal and the left delay output.</p>
-<h4 id="time-r" class="param-name"><span class="param">TIME R</span><span class="range">Range: 0000 to 0845 msec</span></h4>
-<p>Determines the amount of time between the input signal and the right delay output. Set this differently from the left delay time to achieve dotted 1/8th note type effects.</p>
-<h4 id="cross-regen" class="param-name"><span class="param">CROSS REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Allows you to feedback the delayed signals to their opposite sides; the left voice crosses to the right voice, and the right voice crosses to the left voice. A setting of +99 or -99 will cause infinite delay. Be careful, if the delay regen is set too high, it may cause this parameter to “blow up.”</p>
-<h4 id="regen-damping-2" class="param-name"><span class="param">REGEN DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the cutoff of a low pass filter on the feedback signal, which controls the amount of damping to the feedback signals. The higher the number, the more the signals are damped.</p>
-<h4 id="eq-trim" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00 dB</span></h4>
-<p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="bass-fc" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
-<p>Sets the cutoff-frequency of the lower-frequency band shelving filter.</p>
-<h4 id="level-2" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the low shelving filter.</p>
-<h4 id="treble-fc" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to 15KHz</span></h4>
-<p>Sets the cutoff-frequency of the high shelving filter.</p>
-<h4 id="level-3" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the high shelving filter.</p>
-<h2 id="44-eight-voice-chorus" class="algo">44 EIGHT VOICE CHORUS</h2>
-<p>EIGHT  VOICE CHORUS offers a symphonic chorused sound having eight different voices and using eight separately randomized LFOs. This algorithm also offers a user programmable stereo delay in a cross coupled configuration between the left and right chorused outputs (see diagram).</p>
-<p>This algorithm is good for creating an ensemble of instruments from single sources (there is no internal filtering applied to any of the chorused voices). The EFFECT <span class="param">MIX FX-1 and FX-2</span> CHORUS parameters can be routed into the effect with different Dry/Wet mixes. For this algorithm we recommend a mix of around 50 for a starting point.</p>
-<figure class="figure"><img src="images/eight-voice-chorus-routing.png" alt="Eight Voice Chorus signal routing: FX-1 and FX-2 left/right inputs summed per channel through 4 Voice Chorus (with Chorus Regen) and Delay paths; Delay Regen cross-couples left and right delays; Main Outputs L/R"><figcaption>Eight Voice Chorus signal routing.</figcaption></figure>
-<h4 id="chorus-rate" class="param-name"><span class="param">CHORUS RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the eight ganged rates of modulation of the respective voices and produces an effect similar to both vibrato and tremolando occurring at the same time.</p>
-<h4 id="width-2" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the excursion of the vibrato of all the individual voices.</p>
-<h4 id="regen-2" class="param-name"><span class="param">REGEN</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount of signal that will be fed from the output of the chorus back into the input of the chorus. A value of 00 will eliminate the regeneration effect.</p>
-<h4 id="stereo-spread" class="param-name"><span class="param">STEREO SPREAD</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter offers a synthesized stereo field. The highest value is true stereo, intermediate values have the left and right signals mixed on both sides, and the lowest value yields only the left input channel from the right and left outputs. This parameter, though not a stereo pan, provides some interesting stereo effects when controlled by a modulation source.</p>
-<h4 id="delay-regen-2" class="param-name"><span class="param">DELAY REGEN</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount of signal that will be fed from the delay output back into the chorus input, increasing the number of repeats in the delay for high values. A value of 00 will eliminate the delay effect.</p>
-<h4 id="time-l-2" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 0800 ms</span></h4>
-<p>Controls the amount of time that the non-chorused signal will delay for the left channel.</p>
-<h4 id="time-r-2" class="param-name"><span class="param">TIME R</span><span class="range">Range: 0000 to 0800 ms</span></h4>
-<p>Controls the amount of time that the non-chorused signal will delay for the right channel.</p>
-<h2 id="45-chorus-reverb-1" class="algo">45 CHORUS + REVERB 1</h2>
-<p>This effect combines a four-voice chorus with the standard reverb. Assign a voice to FX-1 to get reverb after chorus, or use <span class="param">FX-2</span> for reverb only.</p>
-<h4 id="chorus-mix" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the Dry/Wet mix within the chorus itself.</p>
-<h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and tremolo.</p>
-<h4 id="width-3" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of vibrato and tremolo.</p>
-<h4 id="regen-3" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the feedback. Feedback accentuates the complexity of the “swept” signal.</p>
-<h4 id="decay-time" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="early-ref-lev" class="param-name"><span class="param">EARLY REF LEV</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the level of pre-echoes of the input signal added directly to the reverb output.</p>
-<h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="lf-decay" class="param-name"><span class="param">LF DECAY</span><span class="range">Range: -99 to +99</span></h4>
-<p>Boosts or cuts the rate at which low frequencies will decay.</p>
-<h4 id="diffusion" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h4 id="detune-rate" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
-<h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h2 id="46-chorus-reverb-2" class="algo">46 CHORUS + REVERB 2</h2>
-<p>This effect combines a four-voice chorus with a plate reverb, sporting superior randomization and poly-phase interpolation. Assign a voice to FX-1 to get reverb after chorus, or use <span class="param">FX-2</span> for reverb only.</p>
-<h4 id="chorus-mix-2" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the Dry/Wet mix within the chorus itself.</p>
-<h4 id="rate-2" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and tremolo.</p>
-<h4 id="width-4" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of vibrato and tremolo.</p>
-<h4 id="stereo-spread-2" class="param-name"><span class="param">STEREO SPREAD</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter offers a synthesized stereo field. The highest value is true stereo, intermediate values have the left and right signals mixed on both sides, and the lowest value yields only the left input channel from the right and left outputs. This parameter, though not a stereo pan, provides some interesting stereo effects when controlled by a modulation source.</p>
-<h4 id="regen-4" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the feedback. Feedback accentuates the complexity of the “swept” signal.</p>
-<h4 id="revb-decay-time" class="param-name"><span class="param">REVB DECAY TIME</span><span class="range">Range: 0.40 to 140.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="pre-dly-time" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to 0300</span></h4>
-<p>Creates a delay in the amount of time it takes before the original signal is fed into the reverb. The range is based in milliseconds.</p>
-<h4 id="hf-damping-2" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth-2" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="detune-rate-2" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
-<h4 id="depth-2" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h4 id="definition" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate at which echo density is increased with time. Setting this parameter too high can cause the echo density to build at a rate which exceeds the decay rate.</p>
-<h4 id="diffusion-2" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>These values, in series with each other, smear the input signal transients, to diffuse and smooth the sound. Lower values will cause impulse sounds to appear as a series of discrete echoes, while higher values tend to increase the smear (smoother sounding with fewer discrete echoes).</p>
-<p>Experiment with different levels between the diffuser parameters to find the settings that are right for your source. We recommend settings of 50 for starters.</p>
-<h2 id="47-ddl-chorus-revrb-1" class="algo">47 DDL- -CHORUS + REVRB 1</h2>
-<p>This effect algorithm is a serial version of the DDL+CHORUS+REV parallel effect, combining a digital delay with a chorus and a plate reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> are sent to Effect A (DDL)</li><li>The output of Effect A is sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to a plate reverb (REV)</li>
-</ul>
-<h4 id="sends-a-b" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into Effect B (the chorus). A setting of 99 would yield a serial connection between Effect A and the chorus for voices sent to FX1 and panned hard left (on the <span class="page-name">Output</span> page). A setting of 00 would offer no chorusing.</p>
-<h4 id="b-revrb" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect B (CHORUS) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the CHORUS and the reverb for voices sent to FX1 and panned hard right</p>
-<p>(on the <span class="page-name">Output</span> page).</p>
-<h4 id="a-revrb" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices assigned to FX1, without having to add any chorusing.</p>
-<h4 id="fx2-revrb" class="param-name"><span class="param">FX2- -REVRB</span><span class="range">Range: 00 to 99</span></h4>
-<p>Defines how much of the voices assigned to <span class="param">FX2</span> (on the <span class="page-name">Output</span> page) will be sent into the Reverb. This allows you to fine tune the amount of reverb coloration you want to add to your voices.</p>
-<h4 id="dry" class="param-name"><span class="param">DRY</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter allows you to define how much of the <span class="param">FX2</span> signal you want to completely bypass the Reverb. By setting this parameter to 99 and the <span class="param">FX2- -REVB</span> parameter to 00, you can assign voices to be completely dry.</p>
-<h4 id="ddl-mix" class="param-name"><span class="param">DDL MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the mix between the original signal and the delay. Setting this parameter to 00 will allow only the unprocessed signal to be heard, while a setting of 99 will eliminate it completely, with only the delay portion remaining.</p>
-<h4 id="level-4" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the delayed signals against the original dry signal. A level of 00 will offer no audible delay.</p>
-<h4 id="pan-2" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the delays in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right. If set to either hard left or hard right, the delayed signal for the opposite side is inaudible.</p>
-<h4 id="ddl-regen-l" class="param-name"><span class="param">DDL REGEN L</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the amount of signal that will be fed from the output of the left delay back into the input, increasing the number of repeats in the delay. A setting of 99 would offer an infinite delay.</p>
-<h4 id="damping" class="param-name"><span class="param">DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the feedback signals. The higher the number, the more the signals are dampened.</p>
-<h4 id="delay-time-l-and-r" class="param-name"><span class="param">DELAY TIME L and R</span><span class="range">Range: 0000 to 1000 msec</span></h4>
-<p>Sets the amount of delay time for the independent delays. Each value increases the delay time by 1 millisecond. Experiment with different settings to find the right mix for your sound source and application. Some interesting effects can be implemented by using a real-time modulation controller for these parameters.</p>
-<h4 id="chorus-mix-3" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the Dry/Wet mix within the chorus itself. For starters, we recommend settings of 50.</p>
-<h4 id="level-5" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the volume of the chorused signal. A level of 00 will offer no audible signal.</p>
-<h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the chorused signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the dry signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
-<p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the <span class="param">REGEN</span> or the DDL delays.</p>
-<h4 id="rate-3" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and tremolo.</p>
-<h4 id="width-5" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
-<p>Controls the depth of vibrato and tremolo.</p>
-<h4 id="lfo-spread" class="param-name"><span class="param">LFO SPREAD</span><span class="range">Range: 000 to 128</span></h4>
-<p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h4 id="regen-5" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the feedback. Feedback accentuates the complexity of the “swept” signal.</p>
-<h4 id="reverb-decay-time" class="param-name"><span class="param">REVERB DECAY TIME</span><span class="range">Range: 0.40 to 140.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="pre-dly-time-2" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to 0300 msec</span></h4>
-<p>This parameter creates a time delay before the original signal is fed into the reverb. The range is based in milliseconds.</p>
-<h4 id="hf-damping-3" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth-3" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="definition-2" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate at which echo density increases with time. Higher values can cause the echo density to build at a rate that exceeds the decay rate. For the best performance, try to select the highest value that works with your sound source.</p>
-<h4 id="diffusion-3" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h2 id="48-ddl-chorus-revrb-2" class="algo">48 DDL- -CHORUS + REVRB 2</h2>
-<p>This effect algorithm, similar to the previous algorithm, offers a different reverb. For a complete description of the SENDS, DDL, and CHORUS parameters, refer to the previous algorithm in this section.</p>
-<h4 id="reverb-decay-time-2" class="param-name"><span class="param">REVERB DECAY TIME</span><span class="range">Range: 0.40 to 140.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="pre-dly-time-3" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to 0150 msec</span></h4>
-<p>This parameter creates a time delay before the original signal is fed into the reverb. The range is based in milliseconds.</p>
-<h4 id="hf-damping-4" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth-4" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="front-to-back-levs-1-to-3" class="param-name"><span class="param">FRONT-TO-BACK LEVS (1 to 3)</span><span class="range">Range: -99 to +99</span></h4>
-<p>These three fields simulate the depth of the room/hall. Think of these fields as three different microphones placed at various distances within the room/hall (the first is closest to the front, the third is farthest from the front). When the range (volume) is higher for the first value, the sound appears closer to the front, whereas a higher setting for the last value appears farther from the front, suggesting a deeper (wetter) room/hall.</p>
-<h4 id="definition-3" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate at which echo density increases with time. Higher values can cause the echo density to build at a rate that exceeds the decay rate. For the best performance, try to select the highest value that works with your sound source.</p>
-<h4 id="diffusion-4" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h2 id="49-eq-chorus-reverb" class="algo">49 EQ- -CHORUS + REVERB</h2>
-<p>This algorithm offers a serial version of the PARAM EQ+CHORUS+REV parallel effect. The second sub-page (not user-programmable) shows how this effect is routed:</p>
-<ul>
-  <li>Voices assigned to <span class="param">FX1</span> are sent to Effect A (PARAM EQ)</li><li>The output of Effect A is sent to Effect B (CHORUS)</li><li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
-</ul>
-<p>For a complete description of the SENDS parameters, refer to the <a class="algo" href="#47-ddl-chorus-revrb-1">DDL- -CHORUS + REVRB 1</a> algorithm found earlier in this section.</p>
-<h4 id="input" class="param-name"><span class="param">INPUT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Allows you to adjust the input level trim to the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="output" class="param-name"><span class="param">OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Adjusts the output volume after the parametric EQ. With the <span class="param">LEVEL</span>, <span class="param">BASS LEVEL</span>, and <span class="param">TREBLE LEVEL</span> set to high values, the <span class="param">OUTPUT</span> parameter could be used to create a raspy distortion effect.</p>
-<h4 id="pan-3" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Determines the location of the EQ in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard right.</p>
-<h4 id="mid-fc" class="param-name"><span class="param">MID FC</span><span class="range">Range: 00000 to 15000</span></h4>
-<p>Sets the center of the mid-frequency parametric.</p>
-<h4 id="bw" class="param-name"><span class="param">BW</span><span class="range">Range: 0 to 15K</span></h4>
-<p>This parameter is a bandwidth control that determines the width of the resonant peak at the midfrequency band. By lowering the value, you can produce a narrower bandwidth.</p>
-<h4 id="level-6" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -99 to +48 dB</span></h4>
-<p>Sets the amount of boost or cut applied to this mid-frequency parametric.</p>
-<h4 id="bass-level" class="param-name"><span class="param">BASS LEVEL</span><span class="range">Range: -99 to +48 dB</span></h4>
-<p>Sets the amount of boost or cut applied to a 0 to 80Hz low-shelving filter.</p>
-<h4 id="treble-level" class="param-name"><span class="param">TREBLE LEVEL</span><span class="range">Range: -99 to +48 dB</span></h4>
-<p>Sets the amount of boost or cut applied to a 10 to 15K high-shelving filter.</p>
-<p>For a complete description of the remaining parameters, refer to the <a class="algo" href="07-effects-00-21.html#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
-<h2 id="50-eq-chorus-eq-ddl" class="algo">50 EQ- -CHORUS + EQ- -DDL</h2>
-<p>EQ- -CHORUS + EQ- -DDL combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard chorus effect, designed with very long delays to provide a modulated detune effect. This algorithm sounds great with a guitar sound, but try it with any source!</p>
-<figure class="figure"><img src="images/eq-chorus-eq-ddl-routing.png" alt="EQ- -CHORUS + EQ- -DDL signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Chorus (Delay) with Regen Control and Echo (Echo Level) to Main Output L; right path through Chorus with cross-feed from left regen to Main Output R"><figcaption>EQ- -CHORUS + EQ- -DDL signal routing.</figcaption></figure>
-<p>The signal enters a programmable EQ, which is preceded by an input level trim (<span class="param">EQ TRIM</span>). The signal is then routed to the chorus which is heard directly at the output. There is also a delayed unchorused signal (sharing the same delay lines) that is routed back into the chorus. There is also a second signal from the delay line that is routed to the right side. There are two discrete echo times tapped out before the chorus delay line. These are unchorused echoes. The signal from the echoes is routed directly to the outputs. There is also a dry signal (not shown) that goes directly from the input to the Main Output (<span class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> CHORUS parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="chorus-center-2" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
-<p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the regen delays or the echo delays.</p>
-<h4 id="rate-4" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of pitch modulation which is the chorus. To achieve chorusing, this rate must be very slow.</p>
-<h4 id="width-6" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the excursion of pitch modulation. Since the rate is usually very slow, then the width is usually very large.</p>
-<h4 id="l-r-lfo-2" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
-<p>IN-PHASE</p>
-<p>When this parameter is IN-PHASE, the left and right choruses will modulate their detunes together. When set to <span class="param">OUT</span>-OF-PHASE, the detune on the left channel will go up while the detune on the right will go down.</p>
-<h4 id="delay-regen-3" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of regeneration applied to the delay time taps. The sign of the value determines the polarity of the regen.</p>
-<h4 id="time-l-and-r" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the time delay for the left and right channel regen delay, and have nothing to do with the chorus effect.</p>
-<h4 id="echo-level" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the volume of the discrete echo for both the left and right sides. Higher values offer louder echo, while a value of 00 will eliminate the echo. For sustained sounds, mid echo levels yield a “poor man’s reverb.”</p>
-<h4 id="time-l-and-r-2" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the chorus echo time. Higher settings yield a deeper echo. There are two discrete echoes, one to the left and one to the right.</p>
-<h4 id="eq-trim-2" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00 dB</span></h4>
-<p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="bass-fc-2" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
-<p>Sets the cutoff-frequency of the lower-frequency band shelving filter.</p>
-<h4 id="level-7" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the low shelving filter.</p>
-<h4 id="treble-fc-2" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to 15KHz</span></h4>
-<p>Sets the cutoff-frequency of the high shelving filter.</p>
-<h4 id="level-8" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the high shelving filter.</p>
-<h2 id="51-flanger-reverb" class="algo">51 FLANGER + REVERB</h2>
-<p>The FLANGER + REVERB algorithm is similar to the CHORUS + REVERB algorithm with a single LFO. Assign a voice to FX-1 to get reverb after flange, or use <span class="param">FX-2</span> for reverb only.</p>
-<h4 id="flanger-center" class="param-name"><span class="param">FLANGER CENTER</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the center of the flanger width.</p>
-<h4 id="rate-5" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of modulation of the flanger effect.</p>
-<h4 id="width-7" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the range of the high to low-frequency sweep in the flanger effect.</p>
-<h4 id="regen-6" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the flanger. The sign of the value determines the polarity of the feedback.</p>
-<h4 id="depth-3" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of the notches created by the flanging effect.</p>
-<h4 id="decay-time-2" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="early-ref-lev-2" class="param-name"><span class="param">EARLY REF LEV</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the level of pre-echoes of the input signal added directly to the reverb output.</p>
-<h4 id="hf-damping-5" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth-5" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="lf-decay-2" class="param-name"><span class="param">LF DECAY</span><span class="range">Range: -99 to +99</span></h4>
-<p>This control will boost or cut the rate at which low frequencies will decay.</p>
-<h4 id="diffusion-5" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h4 id="detune-rate-3" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
-<h4 id="depth-4" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h2 id="52-eq-flanger-delay" class="algo">52 EQ- -FLANGER + DELAY</h2>
-<p>EQ- -FLANGER + DELAY combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft woosh” effect.</p>
-<figure class="figure"><img src="images/eq-flanger-delay-routing.png" alt="EQ- -FLANGER + DELAY signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Flanger with Delay Feedback and Echo (Echo Level) to Main Output L; right path through Flanger with cross-feed from left delay to Main Output R"><figcaption>EQ- -FLANGER + DELAY signal routing.</figcaption></figure>
-<p>In this algorithm the signal enters an input level trim (<span class="param">EQ TRIM</span>) followed by a programmable EQ, and then is routed to the flanger. The flanger is routed directly to the output. The left channel signal passes through the delay and is routed back into the flanger. Another signal from the delay is routed to the output on the right side. The <span class="param">DELAY - REGEN</span> parameter controls both delay levels. There are two discrete echoes that are sent to the left and right outputs respectively.</p>
-<p>The signal from both echoes has one level control (<span class="param">ECHO - LEVEL</span>). There is also an external dry signal (not shown) that goes directly from the input to the Main Output (<span class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="flange-center" class="param-name"><span class="param">FLANGE CENTER</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the sweep center of the flanger effect. The larger the flanger center, the wider will be the available width.</p>
-<h4 id="rate-6" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of modulation of the flanger effect.</p>
-<h4 id="width-8" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the range of the high to low-frequency sweep in the flanger effect.</p>
-<h4 id="regen-7" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied from the output to the flanger input. The sign of the value determines the polarity of the feedback.</p>
-<h4 id="notch-depth" class="param-name"><span class="param">NOTCH DEPTH</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the depth of the notches created by the flanging effect. A setting of +00 will disable the flanging effect. A setting of +00 will also provide a doppler effect for wide moderately slow LFO rates.</p>
-<h4 id="s-h-rate" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span></h4>
-<p>Controls the sample rate of a sample and hold network. This is applied to the LFO within the flanger. When in hold, the effect will be to create momentarily fixed notches within thefrequency spectrum (if the notch depth is not +00). A setting of 001 will have the largest space between samples. Higher values will increase the number of holds per second, making the flanging flow more smoothly. The sample and hold function can be turned off (when set to 000).</p>
-<h4 id="l-r-lfo-3" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
-<p>IN-PHASE</p>
-<p>Determines whether the flanger on the left and right channels is modulating IN-PHASE or <span class="param">OUT</span>-OF-PHASE.</p>
-<h4 id="delay-regen-4" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the level of the delay time taps. The sign of the value determines the polarity of the feedback.</p>
-<h4 id="time-l-and-r-3" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the time delay for the left and right channel regen delays. The left is the “ping,” and the right is the “pong.”</p>
-<h4 id="echo-level-2" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the volume of the discrete echoes for both the left and right sides. A setting of 00 would eliminate any audible echo.</p>
-<h4 id="time-l-and-r-4" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the flanger echo times for the left and right sides. Higher values yield a deeper echo.</p>
-<h4 id="eq-trim-3" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00 dB</span></h4>
-<p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="bass-fc-3" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
-<p>Sets the cutoff-frequency of the lower-frequency band shelving filter.</p>
-<h4 id="level-9" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the low shelving filter.</p>
-<h4 id="treble-fc-3" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to 15KHz</span></h4>
-<p>Selects the cutoff of the upper-frequency band high shelving filter.</p>
-<h4 id="level-10" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the high shelving filter.</p>
-<h2 id="53-phaser-reverb" class="algo">53 PHASER + REVERB</h2>
-<p>A 12-pole phase shifter with reverb. Assign a sound to FX-1 for reverb after phase, to <span class="param">FX-2</span> for just reverb, or to <span class="param">DRY</span> to bypass the effect.</p>
-<h4 id="phaser-center" class="param-name"><span class="param">PHASER CENTER</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the center of the phaser width.</p>
-<h4 id="rate-7" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of modulation of the phaser poles.</p>
-<h4 id="width-9" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the amount of modulation applied to phaser poles.</p>
-<h4 id="regen-8" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the phaser. The sign of the value determines the polarity of the feedback.</p>
-<h4 id="depth-5" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of the notches created by the phasing.</p>
-<h4 id="decay-time-3" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to 100.0</span></h4>
-<p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input signal stops.</p>
-<h4 id="early-ref-lev-3" class="param-name"><span class="param">EARLY REF LEV</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the level of pre-echoes of the input signal added directly to the reverb output.</p>
-<h4 id="hf-damping-6" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays, some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter out increasing amounts of high-frequency energy.</p>
-<h4 id="bandwidth-6" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
-<h4 id="lf-decay-3" class="param-name"><span class="param">LF DECAY</span><span class="range">Range: -99 to +99</span></h4>
-<p>Boosts or cuts the rate at which low frequencies will decay.</p>
-<h4 id="diffusion-6" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be more diffused (higher values).</p>
-<h4 id="detune-rate-4" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
-<h4 id="depth-6" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound. Some voices sound best with very low values.</p>
-<h2 id="54-phaser-delay" class="algo">54 PHASER + DELAY</h2>
-<p>PHASER + DELAY combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches in the signal spectrum, whereas a flanger creates harmonic spacing. This phaser implements a stereo twelve pole phasing network to achieve time delay which is a function of-frequency; this is what differentiates the phaser from the flanger. The phasing effect is achieved within the phaser topology, so it does not depend upon the external mix. A delay is included at the left output of the phaser that feeds back into the phaser (see the diagram). Setting the phaser <span class="param">REGEN</span> parameter (shown at the knobs) to 00 will disable this delay function. The</p>
-<p>DELAY  <span class="param">REGEN</span> also controls the delay feed forward level of another tap sent to the right channel. This delay topology achieves a 1.5 second ping-pong effect, and is very effective as a “poor man’s reverb.” The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<figure class="figure"><img src="images/phaser-delay-routing.png" alt="PHASER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed per channel through Phaser (LFO) with linked Phaser Regen; left path feeds Delay with Delay Regen feedback to left and cross-feed to Main Output R; Main Outputs L/R"><figcaption>PHASER + DELAY signal routing.</figcaption></figure>
-<h4 id="phaser-center-2" class="param-name"><span class="param">PHASER CENTER</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the phaser pole center. High values raise the nominal spectral location of the “woosh” sound, while low values lower the “woosh.” The range from high to low is controlled with the phaser width.</p>
-<h4 id="rate-8" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>The LFO is within the phaser network. This parameter controls the rate of modulation of the phaser poles. The higher the value the faster the rate. Lower values work best with sustained signals.</p>
-<h4 id="width-10" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the width of the notch excursion. For large excursions set this parameter to 99. Doing so can give a very high “woosh” and a very low “woosh.”</p>
-<h4 id="regen-9" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback applied to the left and right channel phaser. The sign of the value determines the polarity of the feedback.</p>
-<h4 id="notch-depth-2" class="param-name"><span class="param">NOTCH DEPTH</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the depth of the notches created by the phasing. Deep notches occur in the phased spectrum when the parameter is set to 99. When this parameter is set to +00, there exists no phasing (i.e. notches), but there is a doppler effect with higher phase rates.</p>
-<h4 id="s-h-rate-2" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span></h4>
-<p>Controls the sample rate of a sample and hold network applied to the LFO within the phaser.</p>
-<p>When in hold, the effect will be to create momentarily fixed notches within the-frequency spectrum (if the notch depth is not +00). A setting of 001 will have the largest space between samples. Higher values will increase the number of holds per second, making the phasing flow more smoothly. The sample and hold function can be turned off (when set to 000).</p>
-<h4 id="l-r-lfo-4" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
-<p>IN-PHASE</p>
-<p>Determines whether the phaser on the left and right channels is modulating IN-PHASE or <span class="param">OUT</span>-OF-PHASE.</p>
-<h4 id="regen-10" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the feedback amount for the delay effect. The sign of the value determines the polarity of the feedback. A value of +00 will eliminate the delay effect. This parameter also controls the feed forward level.</p>
-<h4 id="time-l-3" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 1600 msec</span></h4>
-<p>This parameter sets the delay time for the left side. This is the “ping.”</p>
-<h4 id="dly-time-r" class="param-name"><span class="param">DLY TIME R</span><span class="range">Range: 0000 to 1600 msec</span></h4>
-<p>Controls the feed forward delay time for the right side. This is the “pong.”</p>
-<h2 id="55-eq-tremolo-delay" class="algo">55 EQ- -TREMOLO + DELAY</h2>
-<p>EQ- -TREMOLO + DELAY combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital delay.</p>
-<figure class="figure"><img src="images/eq-tremolo-delay-routing.png" alt="EQ- -TREMOLO + DELAY signal routing: FX-1 left/right through linked Input Level Trim, EQ, and Tremolo; FX-2 summed with left path through Delay and Echo (Echo Level) to Main Output L; right tremolo direct to Main Output R with Regen cross-feed from delay"><figcaption>EQ- -TREMOLO + DELAY signal routing.</figcaption></figure>
-<p>The signal enters an input level trim (<span class="param">EQ TRIM</span>) followed by a programmable EQ, and is then routed to the tremolo. The tremolo is routed directly to the output. The left channel signal passes through the digital delay and is routed back into the delay. There is another signal from the delay that is routed to the output on the right side. One regen parameter (<span class="param">DELAY - REGEN</span>) between the delay sends controls the left and right delay level. This constitutes the “ping-pong” effect. There are two echoes that are sent to the left and right outputs respectively. The signal from the two discrete echoes has one level control. There is also an external Dry signal (not shown) that goes directly from the input to the output. The EFFECT <span class="param">MIX</span> FX-1 POST-DDL and <span class="param">FX-2</span> DDL parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="tremolo-rate" class="param-name"><span class="param">TREMOLO RATE</span><span class="range">Range: 000 to 130</span></h4>
-<p>Sets the rate of modulation. Mid values create a faster wavering sound. When used in conjunction with the <span class="param">S/H RATE</span> parameter it can create some interesting staccato effects.</p>
-<h4 id="depth-7" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Sets the depth of amplitude modulation.</p>
-<h4 id="s-h-rate-3" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span></h4>
-<p>Controls the sample rate of a sample and hold network applied to the LFO within the tremolo.</p>
-<p>When in “Hold,” the effect will be to fix the instantaneous amplitude (if the depth is not 00). A setting of 001 will have the largest space between holds. Lower settings create a staccato effect, whereas higher values will increase the amount of samples, making the tremolo flow more smoothly. This parameter can also be turned off (when set to 000).</p>
-<h4 id="l-r-lfo-5" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
-<p>IN-PHASE</p>
-<p>Controls whether the left and right channels of the stereo tremolo will modulate IN-PHASE or <span class="param">OUT</span>-OF-PHASE.</p>
-<h4 id="delay-regen-5" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of regen applied to the delay time taps. The sign of the value determines the polarity of the regen. A value of +00 will eliminate the audible delay.</p>
-<h4 id="time-l-and-r-5" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the time delays for the left and right channel regen delays, and has nothing to do with the tremolo effect.</p>
-<h4 id="echo-level-3" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the volume of the discrete echo for both the left and right sides.</p>
-<h4 id="time-l-and-r-6" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the tremolo echo times for the left and right side. Higher settings yield a deeper echo.</p>
-<h4 id="eq-trim-4" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +0 dB</span></h4>
-<p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="bass-fc-4" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
-<p>Selects the cutoff-frequency of the lower-frequency band shelving filter.</p>
-<h4 id="level-11" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the low shelving filter.</p>
-<h4 id="treble-fc-4" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to 15KHz</span></h4>
-<p>Selects the cutoff-frequency of the upper-frequency band high shelving filter.</p>
-<h4 id="level-12" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the high shelving filter.</p>
-<h2 id="56-eq-vibrato-delay" class="algo">56 EQ- -VIBRATO + DELAY</h2>
-<p>EQ- -VIBRATO + DELAY combines an EQ and a vibrato effect (a pitch shifter modulating over a very small range), with a digital delay. Many vintage guitar amplifiers offered a vibrato control, but don’t feel that this effect is limited to guitar sounds, try this with other sources as well. There is a sample &amp; hold parameter that doesn’t hold the instantaneous pitch shift, but if set properly will provide a “chirping” effect when acting on the input signal.</p>
-<p>The signal enters a programmable EQ, which is preceded by an input level trim (<span class="param">EQ TRIM</span>). The signal is then routed to the vibrato. The vibrato is routed directly to the output. The vibrato also passes through the delay which is then regenerated back into the delay. A different delay signal is routed to the output on the right side. This constitutes a “ping-pong” delay effect. The delay <span class="param">REGEN</span> parameter between the delay sends controls the delay feedback amount. There are also two echoes that are sent to the left and right outputs respectively. The signal from the two echoes has one level control. There is also an external dry signal (not shown) that goes directly from the input to the Main Output (<span class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="vibrato-rate" class="param-name"><span class="param">VIBRATO RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Sets the amount of modulation. Higher values create a faster vibrating rate.</p>
-<h4 id="width-11" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter sets the width (adjusts the amount) of the modulation.</p>
-<h4 id="s-h-rate-4" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span></h4>
-<p>Controls the sample rate of a sample and hold network. This is applied to the LFO within the vibrato. When in hold (low values), it causes rhythmic chirps in the pitch of the audio signal.</p>
-<p>Higher values will increase the number of holds per second, making the vibrato flow more smoothly. The sample and hold function is turned off when set to 000.</p>
-<h4 id="l-r-lfo-6" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE or</span></h4>
-<p>IN-PHASE</p>
-<p>Controls the vibrato pitch direction of the left and right channels. When <span class="param">OUT</span>-OF-PHASE, the quadrature pitch change on the left channel will lag 90˚ from the right. When IN-PHASE, both channels will change pitch together.</p>
-<h4 id="delay-regen-6" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of positive or negative feedback applied to the regenerated delay. The sign of the value determines the polarity of the feedback. A value of +00 will eliminate any feedback.</p>
-<p>Controls both left and right levels.</p>
-<h4 id="time-l-4" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>Controls the time delay on the left regenerated delay.</p>
-<h4 id="time-r-3" class="param-name"><span class="param">TIME R</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>Controls the time delay on the right non regenerated delay.</p>
-<h4 id="echo-level-4" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the volume of the discrete echo for both the left and right sides. A setting of 00 will eliminate any audible echo.</p>
-<h4 id="time-l-and-r-7" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the echo times for the left and right sides. Higher settings yield a deeper echo. There are two discrete echoes, one to the left and one to the right.</p>
-<h4 id="eq-trim-5" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +0 dB</span></h4>
-<p>Allows you to adjust the input volume before the EQs to eliminate the possibility of clipping boosted signals.</p>
-<h4 id="bass-fc-5" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000 Hz</span></h4>
-<p>This parameter selects the cutoff-frequency of the low shelving filter.</p>
-<h4 id="level-13" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the low shelving filter.</p>
-<h4 id="treble-fc-5" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to 15KHz</span></h4>
-<p>Selects the cutoff of the upper-frequency band high shelving filter.</p>
-<h4 id="level-14" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span></h4>
-<p>Sets the amount of boost or cut applied to the high shelving filter.</p>
-<h2 id="57-pitch-shifter" class="algo">57 PITCH SHIFTER</h2>
-<p>The Pitch Shifters allow you to change the pitch of a signal to any pitch desired within a range of one octave in either direction. The TS-10 offers three different pitch shift algorithms, each designed with a different purpose:</p>
-<ul>
-  <li>PITCH SHIFTER offers a splicer type pitch shifter.</li>
-  <li><span class="param">FAST</span> PITCH SHIFTER is a pitch shifter designed for pitch correction.</li>
-  <li>PITCH SHIFTER + DELAY combines a pitch shifter with a DDL (described later).</li>
-</ul>
-<p>These algorithms sound best with an Effect Mix of wet and dry. You can assign a modulation controller for the Effect Mix parameters to bring in or fade out the pitch shifted signal. Try the different pitch shifters until you find the one that works best with your sound source, and for your application. This first algorithm is a “splicer type” of pitch shifter, which means that it drops or adds small sections of the original signal to the effect. PITCH SHIFTER does not incorporate zero crossing detection. This pitch shifter is best used for a doubling effect. Splicer type pitch shifters are popular because for low pitch shift ratios, splicing is infrequent. These pitch shifters can create very interesting stereo fields by panning each of two pitch shifted voices selectively, and because of the inherent time delay modulation of the algorithm. The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.</p>
-<h4 id="voice-1-semi" class="param-name"><span class="param">VOICE-1 SEMI</span><span class="range">Range: -12 to +12</span></h4>
-<p>Allows you to adjust the pitch of Voice-1 to an octave above or below the original pitch in semitones (half steps).</p>
-<h4 id="fine" class="param-name"><span class="param">FINE</span><span class="range">Range: -99 to +99</span></h4>
-<p>Lets you to fine tune the pitch of Voice-1.</p>
-<h4 id="level-15" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Allows you to adjust the level of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
-<h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would be far right.</p>
-<table class="param-cols"><tbody><tr><td>VOICE-2 SEMI</td><td><span class="param">LEVEL</span></td></tr><tr><td><span class="param">FINE</span></td><td><span class="param">PAN</span></td></tr></tbody></table>
-<p>These parameters are identical to the VOICE-1 parameters, and allow you to define a second voice for independent pitch shifting.</p>
-<h4 id="pitch-shifter-quality" class="param-name"><span class="param">PITCH SHIFTER - QUALITY</span><span class="range">Range: LONG/SMOOTH or SHORT/COARSE</span></h4>
-<p>Allows you to choose between a long/smooth setting, or a short/coarse setting. A smooth setting would sound best with slower sustaining chords, whereas a coarse setting would enhance a rapidly played musical passage. Depending on your sound source and musical needs, set this parameter accordingly. This parameter actually controls the effect transport delay; smooth yields a long transport delay, coarse yields a short transport delay.</p>
-<h4 id="lfo-rate-2" class="param-name"><span class="param">LFO - RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of pitch modulation that creates a chorusing effect. To achieve chorusing, this rate must be very low.</p>
-<h4 id="width-12" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very large.</p>
-<aside class="note"><p>Note: When KBD is selected as a <span class="value">MOD</span> SRC, and <span class="param">VOICE-1 SEMI</span> or VOICE-2 SEMI is selected as the DEST (destination), the pitch will increase one semitone at a time above middle C (C4), and decrease one semitone at a time below middle C (Middle C being zero). After each octave, the pitch shift will “wrap” and start again (the pitch can’t be modulated more than one octave in either direction).</p></aside>
-<h2 id="58-fast-pitch-shifter" class="algo">58 FAST PITCH SHIFTER</h2>
-<p><span class="param">FAST</span>  PITCH SHIFTER has a transport delay of only 10 msec and a maximum detune ratio of one semitone. Try shifting the voices slightly in both positive and negative values to create a fat sound. This algorithm should be used for pitch correction (for instance, try using the mod wheel as a pitch controller). The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes. Depending on its usage, this algorithm generally sounds best with a Mix of dry and wet. Try using the mod wheel with the Effect Mix parameter(s) to bring in or fade out the pitch shifted signal(s).</p>
-<h4 id="vc-1-fine" class="param-name"><span class="param">VC-1 FINE</span><span class="range">Range: -99 to +99</span></h4>
-<p>Allows you to fine tune the pitch of Voice-1.</p>
-<h4 id="level-16" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Allows you to adjust the volume of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
-<h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>This parameter allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would be far right.</p>
-<h4 id="vc-2-fine" class="param-name"><span class="param">VC-2 FINE</span><span class="range">Range: -99 to +99</span></h4>
-<p>This parameter allows you to fine tune the pitch of Voice-2.</p>
-<h4 id="level-17" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter allows you to adjust the volume of Voice-2. A setting of 00 would eliminate any audible pitch shift.</p>
-<h4 id="pan-6" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Allows you to assign the location of Voice-2 in the stereo field. A value of -99 would be far left, and +99 would be far right.</p>
-<h4 id="lfo-rate-3" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the rate of pitch modulation that creates a chorusing effect. To achieve chorusing, this rate must be very low.</p>
-<h4 id="width-13" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very large.</p>
-<h2 id="59-pitch-shifter-delay" class="algo">59 PITCH SHIFTER + DELAY</h2>
-<p>PITCH SHIFTER + DELAY combines a pitch shifter with a digital delay. PITCH SHIFTER + DELAY uses a continual crossfading technique of pitch shifting. This technique maintains the stereo field exactly. This pitch shifter works best for large pitch shift ratios, in some circumstances. Another feature of this algorithm is a digital delay that feeds back into the pitch shift. This feature allows spiraling upward or downward pitch shifts. The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes. This algorithm sounds best with a Mix of wet and dry. Try using a modulation controller for this parameter to fade in or fade out the pitch shifted signal.</p>
-<figure class="figure"><img src="images/pitch-shifter-delay-routing.png" alt="PITCH SHIFTER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed and cross-fed to Vc 1 and Vc 2 stereo shifters with Regen feedback; delay mixer combines shifter outputs and Dry Level; panned shifter outputs and Delay Mix to Main Outputs L and R"><figcaption>PITCH SHIFTER + DELAY signal routing.</figcaption></figure>
-<h4 id="voice-1-semi-2" class="param-name"><span class="param">VOICE-1 SEMI</span><span class="range">Range: -12 to +12</span></h4>
-<p>Allows you to adjust the pitch of Voice-1 up to an octave above or below the original pitch in semi-tones.</p>
-<h4 id="fine-2" class="param-name"><span class="param">FINE</span><span class="range">Range: -99 to +99</span></h4>
-<p>Allows you to fine tune the pitch of Voice-1.</p>
-<h4 id="level-18" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter adjusts the volume of Voice-1.</p>
-<h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would be far right.</p>
-<table class="param-cols"><tbody><tr><td>VOICE-2 SEMI</td><td><span class="param">LEVEL</span></td></tr><tr><td><span class="param">FINE</span></td><td><span class="param">PAN</span></td></tr></tbody></table>
-<p>These parameters are identical to the previous ones, and control Voice-2.</p>
-<h4 id="delay-regen-7" class="param-name"><span class="param">DELAY REGEN</span><span class="range">Range: -99 to +99</span></h4>
-<p>Controls the amount of feedback from the output of the delay back into the input of the pitch shifter. This allows you to create special effects with ascending/descending delays.</p>
-<h4 id="time-l-and-r-8" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to 1500 msec</span></h4>
-<p>These parameters control the amount of time for the pitch shifted signal to delay from the left and right inputs. The left and right delay times are completely independent.</p>
-<h4 id="mix" class="param-name"><span class="param">MIX</span><span class="range">Range: 00 to 99</span></h4>
-<p>Controls the mix between the delay signal and the pitch shifted signal. A setting of 00 would be all pitch shifter, and no delay. A setting of 99 will be all delay and no direct pitch shift.</p>
-<h4 id="dry-level" class="param-name"><span class="param">DRY LEVEL</span><span class="range">Range: 00 to 99</span></h4>
-<p>Lets you to bypass the pitch shifter with an internal dry signal, and send it through the digital delay. Higher values would send more of the dry signal to the delay. The purpose of this parameter is to mix the dry signal appropriately with the pitch shifted delay signals.</p>
+    <p>Two independent professional quality stereo digital delays. Both <span class="param">FX1</span> and <span
+        class="param">FX2</span> can have different Mix, Feedback, and Delay Time settings.</p>
+    <h4 id="effect-mix-fx-1-and-2-ddl" class="param-name"><span class="param">EFFECT MIX FX-1 (and 2) DDL</span><span
+        class="range">Range: 00 to 99</span></h4>
+    <p>Controls the mix between the original signal and each delay. Setting these parameters to <span
+        class="value">00</span> will allow only the unprocessed signal to be heard, while a setting of <span
+        class="value">99</span> will eliminate it completely, with only the delay portion remaining.</p>
+    <h4 id="d-1-and-2-regen" class="param-name"><span class="param">D-1 (and 2) REGEN</span><span class="range">Range:
+        00 to 99</span></h4>
+    <p>Determines the amount of signal that will be fed from the output of each delay back into the input, increasing
+      the number of repeats in the delay.</p>
+    <h4 id="d-1-and-2-time-l-and-r" class="param-name"><span class="param">D-1 (and 2) TIME (L and R)</span><span
+        class="range">D-1 (L and R) Ranges: 0000 to 2000<br>D-2 (L and R) Ranges: 0000 to 0150</span></h4>
+    <p>Determines the amount of time between delays. Each value increases the delay time by 1 millisecond. The Left and
+      Right channels are independently adjustable.</p>
+    <h2 id="42-multitap-delay" class="algo">42 MULTITAP DELAY</h2>
+    <p><dfn class="term">Multitap Delay</dfn> produces four independent controllable delays. The <span
+        class="param">EFFECT MIX FX1</span> and <span class="param">FX2</span> parameters can be routed into the effect
+      with different <span class="param">Dry/Wet</span> mixes. This algorithm sounds best with a mix of wet and dry.</p>
+    <h4 id="delay-1-time" class="param-name"><span class="param">DELAY-1 TIME</span><span class="range">Range: 0000 to
+        2201 msec</span></h4>
+    <p>Sets the amount of delay time for the independent delays. Experiment with different settings to find the right
+      mix for your sound source and application. Some interesting effects can be implemented by using a real-time
+      modulation controller for these parameters.</p>
+    <h4 id="level" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the delayed signals against the original dry signal. A level of <span
+        class="value">00</span> will offer no audible delay.</p>
+    <h4 id="regen" class="param-name"><span class="param">REGEN</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Determines the amount of signal that will be fed from the output back into the input, increasing the number of
+      repeats in the delays. A setting of <span class="value">99</span> would offer an infinite delay.</p>
+    <h4 id="pan" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the delays in the stereo spectrum. A value of <span class="value">-99</span> is panned
+      far left, and <span class="value">+99</span> is far right.</p>
+    <table class="param-cols cols-3">
+      <tbody>
+        <tr>
+          <td><span class="param">DELAY-2 TIME</span></td>
+          <td><span class="param">DELAY-3 TIME</span></td>
+          <td><span class="param">DELAY-4 TIME</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">LEVEL</span></td>
+          <td><span class="param">LEVEL</span></td>
+          <td><span class="param">LEVEL</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">REGEN</span></td>
+          <td><span class="param">REGEN</span></td>
+          <td><span class="param">REGEN</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">PAN</span></td>
+          <td><span class="param">PAN</span></td>
+          <td><span class="param">PAN</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Each of the four discrete delays has identical parameters and ranges as described above.</p>
+    <h4 id="regen-damping" class="param-name"><span class="param">REGEN DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the
+      feedback signals. The higher the number, the more the signals are dampened.</p>
+
+
+    <h2 id="43-eq-stereo-delaylfo" class="algo">43 EQ- -STEREO DELAYLFO</h2>
+    <p><span class="param">EQ- -STEREO DELAYLFO</span> features a parametric EQ and a stereo digital delay that provides
+      LFO modulation of a wide range of delays. This algorithm sounds great with an electric piano, but try it with any
+      source!</p>
+    <figure class="figure"><img src="images/eq-stereo-delaylfo.png"
+        alt="EQ-STEREO DELAYLFO signal routing: FX-1 and FX-2 left/right inputs through EQ Trim, EQ, Left/Right Delay with LFO modulation, Delay-Regen, Damping (LPF), Cross Regen, Delay Input R, Output Level R, and Main Outputs L/R">
+      <figcaption>EQ- -<span class="value">STEREO</span> DELAYLFO signal routing.</figcaption>
+    </figure>
+    <p>The <span class="param">EFFECT MIX FX1 and FX2</span> parameters can be routed into the effect with
+      different <span class="param">Dry/Wet</span> mixes.</p>
+    <h4 id="lfo-rate" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the rate of pitch modulation which is the LFO. To achieve a chorusing effect, this rate must be very
+      slow.</p>
+    <h4 id="width" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the excursion of pitch modulation. Since the rate is usually very slow, the width is usually large.</p>
+    <h4 id="l-r-lfo" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
+        or IN-PHASE</span></h4>
+    <p>When this parameter is <span class="value">IN-PHASE</span>, the left and right choruses will modulate their detunes together. When set to
+      <span class="param">OUT-OF-PHASE</span>, the detune on the left channel will go up while the detune on the right
+      will go down.</p>
+    <h4 id="delay-input-r" class="param-name"><span class="param">DELAY INPUT R</span><span class="range">Range: OFF or
+        ON</span></h4>
+    <p>Disables the input into the right side delay line. The right delay line will still get input from the <span class="param">CROSS REGEN</span>. This allows a <dfn class="term">ping-pong delay</dfn> effect.</p>
+    <h4 id="output-level-r" class="param-name"><span class="param">OUTPUT LEVEL R</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the right output signal level.</p>
+    <h4 id="delay-regen" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the amount of regen (regeneration) applied to the delay time taps. The sign of the value determines the
+      polarity of the regen.</p>
+    <h4 id="time-l" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 0845
+        msec</span></h4>
+    <p>Determines the amount of time between the input signal and the left delay output.</p>
+    <h4 id="time-r" class="param-name"><span class="param">TIME R</span><span class="range">Range: 0000 to 0845
+        msec</span></h4>
+    <p>Determines the amount of time between the input signal and the right delay output. Set this differently from the
+      left delay time to achieve dotted 1/8th note type effects.</p>
+    <h4 id="cross-regen" class="param-name"><span class="param">CROSS REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Allows you to feedback the delayed signals to their opposite sides; the left voice crosses to the right voice,
+      and the right voice crosses to the left voice. A setting of <span class="value">+99</span> or <span class="value">-99</span> will cause infinite delay. Be careful, if
+      the delay regen is set too high, it may cause this parameter to “blow up.”</p>
+    <h4 id="regen-damping-2" class="param-name"><span class="param">REGEN DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Adjusts the cutoff of a low pass filter on the feedback signal, which controls the amount of damping to the
+      feedback signals. The higher the number, the more the signals are damped.</p>
+    <h4 id="eq-trim" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00
+        dB</span></h4>
+    <p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
+    <h4 id="bass-fc" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000
+        Hz</span></h4>
+    <p>Sets the cutoff-frequency of the lower-frequency band shelving filter.</p>
+    <h4 id="level-2" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the low shelving filter.</p>
+    <h4 id="treble-fc" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to
+        15KHz</span></h4>
+    <p>Sets the cutoff-frequency of the high shelving filter.</p>
+    <h4 id="level-3" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
+
+    
+    <h2 id="44-eight-voice-chorus" class="algo">44 EIGHT VOICE CHORUS</h2>
+    <p>EIGHT VOICE CHORUS offers a symphonic chorused sound having eight different voices and using eight separately
+      randomized LFOs. This algorithm also offers a user programmable stereo delay in a cross coupled configuration
+      between the left and right chorused outputs (see diagram).</p>
+    <p>This algorithm is good for creating an ensemble of instruments from single sources (there is no internal
+      filtering applied to any of the chorused voices). The <span class="param">EFFECT MIX FX1 and FX2</span> CHORUS
+      parameters can be routed into the effect with different Dry/Wet mixes. For this algorithm we recommend a mix of
+      around 50 for a starting point.</p>
+    <figure class="figure"><img src="images/eight-voice-chorus-routing.png"
+        alt="Eight Voice Chorus signal routing: FX-1 and FX-2 left/right inputs summed per channel through 4 Voice Chorus (with Chorus Regen) and Delay paths; Delay Regen cross-couples left and right delays; Main Outputs L/R">
+      <figcaption>Eight Voice Chorus signal routing.</figcaption>
+    </figure>
+    <h4 id="chorus-rate" class="param-name"><span class="param">CHORUS RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the eight ganged rates of modulation of the respective voices and produces an effect similar to both
+      vibrato and tremolando occurring at the same time.</p>
+    <h4 id="width-2" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the excursion of the vibrato of all the individual voices.</p>
+    <h4 id="regen-2" class="param-name"><span class="param">REGEN</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Determines the amount of signal that will be fed from the output of the chorus back into the input of the chorus.
+      A value of 00 will eliminate the regeneration effect.</p>
+    <h4 id="stereo-spread" class="param-name"><span class="param">STEREO SPREAD</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>This parameter offers a synthesized stereo field. The highest value is true stereo, intermediate values have the
+      left and right signals mixed on both sides, and the lowest value yields only the left input channel from the right
+      and left outputs. This parameter, though not a stereo pan, provides some interesting stereo effects when
+      controlled by a modulation source.</p>
+    <h4 id="delay-regen-2" class="param-name"><span class="param">DELAY REGEN</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Determines the amount of signal that will be fed from the delay output back into the chorus input, increasing the
+      number of repeats in the delay for high values. A value of 00 will eliminate the delay effect.</p>
+    <h4 id="time-l-2" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 0800
+        ms</span></h4>
+    <p>Controls the amount of time that the non-chorused signal will delay for the left channel.</p>
+    <h4 id="time-r-2" class="param-name"><span class="param">TIME R</span><span class="range">Range: 0000 to 0800
+        ms</span></h4>
+    <p>Controls the amount of time that the non-chorused signal will delay for the right channel.</p>
+    <h2 id="45-chorus-reverb-1" class="algo">45 CHORUS + REVERB 1</h2>
+    <p>This effect combines a four-voice chorus with the standard reverb. Assign a voice to FX-1 to get reverb after
+      chorus, or use <span class="param">FX-2</span> for reverb only.</p>
+    <h4 id="chorus-mix" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the Dry/Wet mix within the chorus itself.</p>
+    <h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and
+      tremolo.</p>
+    <h4 id="width-3" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of vibrato and tremolo.</p>
+    <h4 id="regen-3" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the
+      feedback. Feedback accentuates the complexity of the “swept” signal.</p>
+    <h4 id="decay-time" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to
+        100.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="early-ref-lev" class="param-name"><span class="param">EARLY REF LEV</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the level of pre-echoes of the input signal added directly to the reverb output.</p>
+    <h4 id="hf-damping" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="lf-decay" class="param-name"><span class="param">LF DECAY</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Boosts or cuts the rate at which low frequencies will decay.</p>
+    <h4 id="diffusion" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be
+      more diffused (higher values).</p>
+    <h4 id="detune-rate" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the
+      reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
+    <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
+      Some voices sound best with very low values.</p>
+    <h2 id="46-chorus-reverb-2" class="algo">46 CHORUS + REVERB 2</h2>
+    <p>This effect combines a four-voice chorus with a plate reverb, sporting superior randomization and poly-phase
+      interpolation. Assign a voice to FX-1 to get reverb after chorus, or use <span class="param">FX-2</span> for
+      reverb only.</p>
+    <h4 id="chorus-mix-2" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the Dry/Wet mix within the chorus itself.</p>
+    <h4 id="rate-2" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and
+      tremolo.</p>
+    <h4 id="width-4" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of vibrato and tremolo.</p>
+    <h4 id="stereo-spread-2" class="param-name"><span class="param">STEREO SPREAD</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>This parameter offers a synthesized stereo field. The highest value is true stereo, intermediate values have the
+      left and right signals mixed on both sides, and the lowest value yields only the left input channel from the right
+      and left outputs. This parameter, though not a stereo pan, provides some interesting stereo effects when
+      controlled by a modulation source.</p>
+    <h4 id="regen-4" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the
+      feedback. Feedback accentuates the complexity of the “swept” signal.</p>
+    <h4 id="revb-decay-time" class="param-name"><span class="param">REVB DECAY TIME</span><span class="range">Range:
+        0.40 to 140.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="pre-dly-time" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to
+        0300</span></h4>
+    <p>Creates a delay in the amount of time it takes before the original signal is fed into the reverb. The range is
+      based in milliseconds.</p>
+    <h4 id="hf-damping-2" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth-2" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="detune-rate-2" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the
+      reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
+    <h4 id="depth-2" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
+      Some voices sound best with very low values.</p>
+    <h4 id="definition" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate at which echo density is increased with time. Setting this parameter too high can cause the
+      echo density to build at a rate which exceeds the decay rate.</p>
+    <h4 id="diffusion-2" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>These values, in series with each other, smear the input signal transients, to diffuse and smooth the sound.
+      Lower values will cause impulse sounds to appear as a series of discrete echoes, while higher values tend to
+      increase the smear (smoother sounding with fewer discrete echoes).</p>
+    <p>Experiment with different levels between the diffuser parameters to find the settings that are right for your
+      source. We recommend settings of 50 for starters.</p>
+    <h2 id="47-ddl-chorus-revrb-1" class="algo">47 DDL- -CHORUS + REVRB 1</h2>
+    <p>This effect algorithm is a serial version of the DDL+CHORUS+REV parallel effect, combining a digital delay with a
+      chorus and a plate reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> are sent to Effect A (DDL)</li>
+      <li>The output of Effect A is sent to Effect B (CHORUS)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to a plate reverb (REV)</li>
+    </ul>
+    <h4 id="sends-a-b" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the amount of Effect A (DDL) being sent into Effect B (the chorus). A setting of 99 would yield a serial
+      connection between Effect A and the chorus for voices sent to FX1 and panned hard left (on the <span
+        class="page-name">Output</span> page). A setting of 00 would offer no chorusing.</p>
+    <h4 id="b-revrb" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect B (CHORUS) being sent into the reverb. This would allow you to add reverb to voices
+      assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the CHORUS and the
+      reverb for voices sent to FX1 and panned hard right</p>
+    <p>(on the <span class="page-name">Output</span> page).</p>
+    <h4 id="a-revrb" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices
+      assigned to FX1, without having to add any chorusing.</p>
+    <h4 id="fx2-revrb" class="param-name"><span class="param">FX2- -REVRB</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Defines how much of the voices assigned to <span class="param">FX2</span> (on the <span
+        class="page-name">Output</span> page) will be sent into the Reverb. This allows you to fine tune the amount of
+      reverb coloration you want to add to your voices.</p>
+    <h4 id="dry" class="param-name"><span class="param">DRY</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter allows you to define how much of the <span class="param">FX2</span> signal you want to completely
+      bypass the Reverb. By setting this parameter to 99 and the <span class="param">FX2- -REVB</span> parameter to 00,
+      you can assign voices to be completely dry.</p>
+    <h4 id="ddl-mix" class="param-name"><span class="param">DDL MIX</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the mix between the original signal and the delay. Setting this parameter to 00 will allow only the
+      unprocessed signal to be heard, while a setting of 99 will eliminate it completely, with only the delay portion
+      remaining.</p>
+    <h4 id="level-4" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the delayed signals against the original dry signal. A level of 00 will offer no audible
+      delay.</p>
+    <h4 id="pan-2" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the delays in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard
+      right. If set to either hard left or hard right, the delayed signal for the opposite side is inaudible.</p>
+    <h4 id="ddl-regen-l" class="param-name"><span class="param">DDL REGEN L</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Determines the amount of signal that will be fed from the output of the left delay back into the input,
+      increasing the number of repeats in the delay. A setting of 99 would offer an infinite delay.</p>
+    <h4 id="damping" class="param-name"><span class="param">DAMPING</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the cutoff of a low pass filter on the feedback signal, which adjusts the amount of damping to the
+      feedback signals. The higher the number, the more the signals are dampened.</p>
+    <h4 id="delay-time-l-and-r" class="param-name"><span class="param">DELAY TIME L and R</span><span
+        class="range">Range: 0000 to 1000 msec</span></h4>
+    <p>Sets the amount of delay time for the independent delays. Each value increases the delay time by 1 millisecond.
+      Experiment with different settings to find the right mix for your sound source and application. Some interesting
+      effects can be implemented by using a real-time modulation controller for these parameters.</p>
+    <h4 id="chorus-mix-3" class="param-name"><span class="param">CHORUS MIX</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the Dry/Wet mix within the chorus itself. For starters, we recommend settings of 50.</p>
+    <h4 id="level-5" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the volume of the chorused signal. A level of 00 will offer no audible signal.</p>
+    <h4 id="wet-pan" class="param-name"><span class="param">WET PAN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Determines the location of the chorused signal in the stereo spectrum. A value of -99 is panned hard left, and
+      +99 is hard right.</p>
+    <h4 id="dry-pan" class="param-name"><span class="param">DRY PAN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Determines the location of the dry signal in the stereo spectrum. A value of -99 is panned hard left, and +99 is
+      hard right.</p>
+    <h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to
+        127</span></h4>
+    <p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
+    <p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the
+      <span class="param">REGEN</span> or the DDL delays.</p>
+    <h4 id="rate-3" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
+    <p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and
+      tremolo.</p>
+    <h4 id="width-5" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span>
+    </h4>
+    <p>Controls the depth of vibrato and tremolo.</p>
+    <h4 id="lfo-spread" class="param-name"><span class="param">LFO SPREAD</span><span class="range">Range: 000 to
+        128</span></h4>
+    <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
+      Some voices sound best with very low values.</p>
+    <h4 id="regen-5" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the chorus. The sign of the value determines the polarity of the
+      feedback. Feedback accentuates the complexity of the “swept” signal.</p>
+    <h4 id="reverb-decay-time" class="param-name"><span class="param">REVERB DECAY TIME</span><span class="range">Range:
+        0.40 to 140.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="pre-dly-time-2" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to
+        0300 msec</span></h4>
+    <p>This parameter creates a time delay before the original signal is fed into the reverb. The range is based in
+      milliseconds.</p>
+    <h4 id="hf-damping-3" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth-3" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="definition-2" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate at which echo density increases with time. Higher values can cause the echo density to build at
+      a rate that exceeds the decay rate. For the best performance, try to select the highest value that works with your
+      sound source.</p>
+    <h4 id="diffusion-3" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower
+      values) or will be more diffused (higher values).</p>
+    <h2 id="48-ddl-chorus-revrb-2" class="algo">48 DDL- -CHORUS + REVRB 2</h2>
+    <p>This effect algorithm, similar to the previous algorithm, offers a different reverb. For a complete description
+      of the SENDS, DDL, and CHORUS parameters, refer to the previous algorithm in this section.</p>
+    <h4 id="reverb-decay-time-2" class="param-name"><span class="param">REVERB DECAY TIME</span><span
+        class="range">Range: 0.40 to 140.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="pre-dly-time-3" class="param-name"><span class="param">PRE-DLY TIME</span><span class="range">Range: 0000 to
+        0150 msec</span></h4>
+    <p>This parameter creates a time delay before the original signal is fed into the reverb. The range is based in
+      milliseconds.</p>
+    <h4 id="hf-damping-4" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth-4" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="front-to-back-levs-1-to-3" class="param-name"><span class="param">FRONT-TO-BACK LEVS (1 to 3)</span><span
+        class="range">Range: -99 to +99</span></h4>
+    <p>These three fields simulate the depth of the room/hall. Think of these fields as three different microphones
+      placed at various distances within the room/hall (the first is closest to the front, the third is farthest from
+      the front). When the range (volume) is higher for the first value, the sound appears closer to the front, whereas
+      a higher setting for the last value appears farther from the front, suggesting a deeper (wetter) room/hall.</p>
+    <h4 id="definition-3" class="param-name"><span class="param">DEFINITION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate at which echo density increases with time. Higher values can cause the echo density to build at
+      a rate that exceeds the decay rate. For the best performance, try to select the highest value that works with your
+      sound source.</p>
+    <h4 id="diffusion-4" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>These parameters determine whether the early reflections will appear as a series of discrete echoes (lower
+      values) or will be more diffused (higher values).</p>
+    <h2 id="49-eq-chorus-reverb" class="algo">49 EQ- -CHORUS + REVERB</h2>
+    <p>This algorithm offers a serial version of the PARAM EQ+CHORUS+REV parallel effect. The second sub-page (not
+      user-programmable) shows how this effect is routed:</p>
+    <ul>
+      <li>Voices assigned to <span class="param">FX1</span> are sent to Effect A (PARAM EQ)</li>
+      <li>The output of Effect A is sent to Effect B (CHORUS)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+    </ul>
+    <p>For a complete description of the SENDS parameters, refer to the <a class="algo"
+        href="#47-ddl-chorus-revrb-1">DDL- -CHORUS + REVRB 1</a> algorithm found earlier in this section.</p>
+    <h4 id="input" class="param-name"><span class="param">INPUT</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Allows you to adjust the input level trim to the EQs to eliminate the possibility of clipping boosted signals.
+    </p>
+    <h4 id="output" class="param-name"><span class="param">OUTPUT</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Adjusts the output volume after the parametric EQ. With the <span class="param">LEVEL</span>, <span
+        class="param">BASS LEVEL</span>, and <span class="param">TREBLE LEVEL</span> set to high values, the <span
+        class="param">OUTPUT</span> parameter could be used to create a raspy distortion effect.</p>
+    <h4 id="pan-3" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Determines the location of the EQ in the stereo spectrum. A value of -99 is panned hard left, and +99 is hard
+      right.</p>
+    <h4 id="mid-fc" class="param-name"><span class="param">MID FC</span><span class="range">Range: 00000 to 15000</span>
+    </h4>
+    <p>Sets the center of the mid-frequency parametric.</p>
+    <h4 id="bw" class="param-name"><span class="param">BW</span><span class="range">Range: 0 to 15K</span></h4>
+    <p>This parameter is a bandwidth control that determines the width of the resonant peak at the midfrequency band. By
+      lowering the value, you can produce a narrower bandwidth.</p>
+    <h4 id="level-6" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -99 to +48 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to this mid-frequency parametric.</p>
+    <h4 id="bass-level" class="param-name"><span class="param">BASS LEVEL</span><span class="range">Range: -99 to +48
+        dB</span></h4>
+    <p>Sets the amount of boost or cut applied to a 0 to 80Hz low-shelving filter.</p>
+    <h4 id="treble-level" class="param-name"><span class="param">TREBLE LEVEL</span><span class="range">Range: -99 to
+        +48 dB</span></h4>
+    <p>Sets the amount of boost or cut applied to a 10 to 15K high-shelving filter.</p>
+    <p>For a complete description of the remaining parameters, refer to the <a class="algo"
+        href="07-effects-00-21.html#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
+    <h2 id="50-eq-chorus-eq-ddl" class="algo">50 EQ- -CHORUS + EQ- -DDL</h2>
+    <p>EQ- -CHORUS + EQ- -DDL combines an EQ and a chorus, with an EQ and a digital delay. This is the industry standard
+      chorus effect, designed with very long delays to provide a modulated detune effect. This algorithm sounds great
+      with a guitar sound, but try it with any source!</p>
+    <figure class="figure"><img src="images/eq-chorus-eq-ddl-routing.png"
+        alt="EQ- -CHORUS + EQ- -DDL signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Chorus (Delay) with Regen Control and Echo (Echo Level) to Main Output L; right path through Chorus with cross-feed from left regen to Main Output R">
+      <figcaption>EQ- -CHORUS + EQ- -DDL signal routing.</figcaption>
+    </figure>
+    <p>The signal enters a programmable EQ, which is preceded by an input level trim (<span class="param">EQ
+        TRIM</span>). The signal is then routed to the chorus which is heard directly at the output. There is also a
+      delayed unchorused signal (sharing the same delay lines) that is routed back into the chorus. There is also a
+      second signal from the delay line that is routed to the right side. There are two discrete echo times tapped out
+      before the chorus delay line. These are unchorused echoes. The signal from the echoes is routed directly to the
+      outputs. There is also a dry signal (not shown) that goes directly from the input to the Main Output (<span
+        class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> CHORUS parameters can be
+      routed into the effect with different Dry/Wet mixes.</p>
+    <h4 id="chorus-center-2" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
+    <p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the
+      regen delays or the echo delays.</p>
+    <h4 id="rate-4" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the rate of pitch modulation which is the chorus. To achieve chorusing, this rate must be very slow.</p>
+    <h4 id="width-6" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the excursion of pitch modulation. Since the rate is usually very slow, then the width is usually very
+      large.</p>
+    <h4 id="l-r-lfo-2" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
+        or</span></h4>
+    <p>IN-PHASE</p>
+    <p>When this parameter is IN-PHASE, the left and right choruses will modulate their detunes together. When set to
+      <span class="param">OUT</span>-OF-PHASE, the detune on the left channel will go up while the detune on the right
+      will go down.</p>
+    <h4 id="delay-regen-3" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the amount of regeneration applied to the delay time taps. The sign of the value determines the polarity
+      of the regen.</p>
+    <h4 id="time-l-and-r" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000 to
+        1500 msec</span></h4>
+    <p>These parameters control the time delay for the left and right channel regen delay, and have nothing to do with
+      the chorus effect.</p>
+    <h4 id="echo-level" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the volume of the discrete echo for both the left and right sides. Higher values offer louder echo,
+      while a value of 00 will eliminate the echo. For sustained sounds, mid echo levels yield a “poor man’s reverb.”
+    </p>
+    <h4 id="time-l-and-r-2" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the chorus echo time. Higher settings yield a deeper echo. There are two discrete
+      echoes, one to the left and one to the right.</p>
+    <h4 id="eq-trim-2" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00
+        dB</span></h4>
+    <p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
+    <h4 id="bass-fc-2" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000
+        Hz</span></h4>
+    <p>Sets the cutoff-frequency of the lower-frequency band shelving filter.</p>
+    <h4 id="level-7" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the low shelving filter.</p>
+    <h4 id="treble-fc-2" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to
+        15KHz</span></h4>
+    <p>Sets the cutoff-frequency of the high shelving filter.</p>
+    <h4 id="level-8" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
+    <h2 id="51-flanger-reverb" class="algo">51 FLANGER + REVERB</h2>
+    <p>The FLANGER + REVERB algorithm is similar to the CHORUS + REVERB algorithm with a single LFO. Assign a voice to
+      FX-1 to get reverb after flange, or use <span class="param">FX-2</span> for reverb only.</p>
+    <h4 id="flanger-center" class="param-name"><span class="param">FLANGER CENTER</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the center of the flanger width.</p>
+    <h4 id="rate-5" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the rate of modulation of the flanger effect.</p>
+    <h4 id="width-7" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the range of the high to low-frequency sweep in the flanger effect.</p>
+    <h4 id="regen-6" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the flanger. The sign of the value determines the polarity of the
+      feedback.</p>
+    <h4 id="depth-3" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of the notches created by the flanging effect.</p>
+    <h4 id="decay-time-2" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to
+        100.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="early-ref-lev-2" class="param-name"><span class="param">EARLY REF LEV</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the level of pre-echoes of the input signal added directly to the reverb output.</p>
+    <h4 id="hf-damping-5" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth-5" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="lf-decay-2" class="param-name"><span class="param">LF DECAY</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>This control will boost or cut the rate at which low frequencies will decay.</p>
+    <h4 id="diffusion-5" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be
+      more diffused (higher values).</p>
+    <h4 id="detune-rate-3" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the
+      reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
+    <h4 id="depth-4" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
+      Some voices sound best with very low values.</p>
+    <h2 id="52-eq-flanger-delay" class="algo">52 EQ- -FLANGER + DELAY</h2>
+    <p>EQ- -FLANGER + DELAY combines an EQ and a flanger, and a digital delay. Use flanging to get that “jet aircraft
+      woosh” effect.</p>
+    <figure class="figure"><img src="images/eq-flanger-delay-routing.png"
+        alt="EQ- -FLANGER + DELAY signal routing: FX-1 and FX-2 left/right inputs through linked Input Level Trim and EQ; left path through Flanger with Delay Feedback and Echo (Echo Level) to Main Output L; right path through Flanger with cross-feed from left delay to Main Output R">
+      <figcaption>EQ- -FLANGER + DELAY signal routing.</figcaption>
+    </figure>
+    <p>In this algorithm the signal enters an input level trim (<span class="param">EQ TRIM</span>) followed by a
+      programmable EQ, and then is routed to the flanger. The flanger is routed directly to the output. The left channel
+      signal passes through the delay and is routed back into the flanger. Another signal from the delay is routed to
+      the output on the right side. The <span class="param">DELAY - REGEN</span> parameter controls both delay levels.
+      There are two discrete echoes that are sent to the left and right outputs respectively.</p>
+    <p>The signal from both echoes has one level control (<span class="param">ECHO - LEVEL</span>). There is also an
+      external dry signal (not shown) that goes directly from the input to the Main Output (<span
+        class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into
+      the effect with different Dry/Wet mixes.</p>
+    <h4 id="flange-center" class="param-name"><span class="param">FLANGE CENTER</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the sweep center of the flanger effect. The larger the flanger center, the wider will be the available
+      width.</p>
+    <h4 id="rate-6" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the rate of modulation of the flanger effect.</p>
+    <h4 id="width-8" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the range of the high to low-frequency sweep in the flanger effect.</p>
+    <h4 id="regen-7" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied from the output to the flanger input. The sign of the value determines
+      the polarity of the feedback.</p>
+    <h4 id="notch-depth" class="param-name"><span class="param">NOTCH DEPTH</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the depth of the notches created by the flanging effect. A setting of +00 will disable the flanging
+      effect. A setting of +00 will also provide a doppler effect for wide moderately slow LFO rates.</p>
+    <h4 id="s-h-rate" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to 100</span>
+    </h4>
+    <p>Controls the sample rate of a sample and hold network. This is applied to the LFO within the flanger. When in
+      hold, the effect will be to create momentarily fixed notches within thefrequency spectrum (if the notch depth is
+      not +00). A setting of 001 will have the largest space between samples. Higher values will increase the number of
+      holds per second, making the flanging flow more smoothly. The sample and hold function can be turned off (when set
+      to 000).</p>
+    <h4 id="l-r-lfo-3" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
+        or</span></h4>
+    <p>IN-PHASE</p>
+    <p>Determines whether the flanger on the left and right channels is modulating IN-PHASE or <span
+        class="param">OUT</span>-OF-PHASE.</p>
+    <h4 id="delay-regen-4" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the level of the delay time taps. The sign of the value determines the polarity of the feedback.</p>
+    <h4 id="time-l-and-r-3" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the time delay for the left and right channel regen delays. The left is the “ping,” and
+      the right is the “pong.”</p>
+    <h4 id="echo-level-2" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the volume of the discrete echoes for both the left and right sides. A setting of 00 would eliminate any
+      audible echo.</p>
+    <h4 id="time-l-and-r-4" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the flanger echo times for the left and right sides. Higher values yield a deeper echo.
+    </p>
+    <h4 id="eq-trim-3" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +00
+        dB</span></h4>
+    <p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
+    <h4 id="bass-fc-3" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000
+        Hz</span></h4>
+    <p>Sets the cutoff-frequency of the lower-frequency band shelving filter.</p>
+    <h4 id="level-9" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the low shelving filter.</p>
+    <h4 id="treble-fc-3" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to
+        15KHz</span></h4>
+    <p>Selects the cutoff of the upper-frequency band high shelving filter.</p>
+    <h4 id="level-10" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
+    <h2 id="53-phaser-reverb" class="algo">53 PHASER + REVERB</h2>
+    <p>A 12-pole phase shifter with reverb. Assign a sound to FX-1 for reverb after phase, to <span
+        class="param">FX-2</span> for just reverb, or to <span class="param">DRY</span> to bypass the effect.</p>
+    <h4 id="phaser-center" class="param-name"><span class="param">PHASER CENTER</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the center of the phaser width.</p>
+    <h4 id="rate-7" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the rate of modulation of the phaser poles.</p>
+    <h4 id="width-9" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the amount of modulation applied to phaser poles.</p>
+    <h4 id="regen-8" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the phaser. The sign of the value determines the polarity of the
+      feedback.</p>
+    <h4 id="depth-5" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of the notches created by the phasing.</p>
+    <h4 id="decay-time-3" class="param-name"><span class="param">DECAY TIME</span><span class="range">Range: 0.20 to
+        100.0</span></h4>
+    <p>Controls the amount of time it takes for the reverberation to decay to a low level (-60 dB) after the input
+      signal stops.</p>
+    <h4 id="early-ref-lev-3" class="param-name"><span class="param">EARLY REF LEV</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the level of pre-echoes of the input signal added directly to the reverb output.</p>
+    <h4 id="hf-damping-6" class="param-name"><span class="param">HF - DAMPING</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of attenuation of high frequencies in the decay of the reverberation. As natural reverb decays,
+      some high frequencies tend to get absorbed by the environment. Increasing the value of this parameter will filter
+      out increasing amounts of high-frequency energy.</p>
+    <h4 id="bandwidth-6" class="param-name"><span class="param">BANDWIDTH</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Acts as a low pass filter on the signal going into the reverb, controlling the amount of high frequencies that
+      will pass into the effect. The higher the setting, the more high frequencies are allowed to pass.</p>
+    <h4 id="lf-decay-3" class="param-name"><span class="param">LF DECAY</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Boosts or cuts the rate at which low frequencies will decay.</p>
+    <h4 id="diffusion-6" class="param-name"><span class="param">DIFFUSION</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Determines whether the early reflections will appear as a series of discrete echoes (lower values) or will be
+      more diffused (higher values).</p>
+    <h4 id="detune-rate-4" class="param-name"><span class="param">DETUNE - RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the LFO rate of detuning incorporated within the reverb. Detuning creates a slight pitch shift into the
+      reverberated signal, giving it a more natural sounding decay by breaking up resonant nodes.</p>
+    <h4 id="depth-6" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
+      Some voices sound best with very low values.</p>
+    <h2 id="54-phaser-delay" class="algo">54 PHASER + DELAY</h2>
+    <p>PHASER + DELAY combines a phaser with a digital delay. The phaser creates non-harmonically spaced moving notches
+      in the signal spectrum, whereas a flanger creates harmonic spacing. This phaser implements a stereo twelve pole
+      phasing network to achieve time delay which is a function of-frequency; this is what differentiates the phaser
+      from the flanger. The phasing effect is achieved within the phaser topology, so it does not depend upon the
+      external mix. A delay is included at the left output of the phaser that feeds back into the phaser (see the
+      diagram). Setting the phaser <span class="param">REGEN</span> parameter (shown at the knobs) to 00 will disable
+      this delay function. The</p>
+    <p>DELAY <span class="param">REGEN</span> also controls the delay feed forward level of another tap sent to the
+      right channel. This delay topology achieves a 1.5 second ping-pong effect, and is very effective as a “poor man’s
+      reverb.” The FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different
+      Dry/Wet mixes.</p>
+    <figure class="figure"><img src="images/phaser-delay-routing.png"
+        alt="PHASER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed per channel through Phaser (LFO) with linked Phaser Regen; left path feeds Delay with Delay Regen feedback to left and cross-feed to Main Output R; Main Outputs L/R">
+      <figcaption>PHASER + DELAY signal routing.</figcaption>
+    </figure>
+    <h4 id="phaser-center-2" class="param-name"><span class="param">PHASER CENTER</span><span class="range">Range: -99
+        to +99</span></h4>
+    <p>Controls the phaser pole center. High values raise the nominal spectral location of the “woosh” sound, while low
+      values lower the “woosh.” The range from high to low is controlled with the phaser width.</p>
+    <h4 id="rate-8" class="param-name"><span class="param">RATE</span><span class="range">Range: 00 to 99</span></h4>
+    <p>The LFO is within the phaser network. This parameter controls the rate of modulation of the phaser poles. The
+      higher the value the faster the rate. Lower values work best with sustained signals.</p>
+    <h4 id="width-10" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the width of the notch excursion. For large excursions set this parameter to 99. Doing so can give a
+      very high “woosh” and a very low “woosh.”</p>
+    <h4 id="regen-9" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the amount of feedback applied to the left and right channel phaser. The sign of the value determines
+      the polarity of the feedback.</p>
+    <h4 id="notch-depth-2" class="param-name"><span class="param">NOTCH DEPTH</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the depth of the notches created by the phasing. Deep notches occur in the phased spectrum when the
+      parameter is set to 99. When this parameter is set to +00, there exists no phasing (i.e. notches), but there is a
+      doppler effect with higher phase rates.</p>
+    <h4 id="s-h-rate-2" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to
+        100</span></h4>
+    <p>Controls the sample rate of a sample and hold network applied to the LFO within the phaser.</p>
+    <p>When in hold, the effect will be to create momentarily fixed notches within the-frequency spectrum (if the notch
+      depth is not +00). A setting of 001 will have the largest space between samples. Higher values will increase the
+      number of holds per second, making the phasing flow more smoothly. The sample and hold function can be turned off
+      (when set to 000).</p>
+    <h4 id="l-r-lfo-4" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
+        or</span></h4>
+    <p>IN-PHASE</p>
+    <p>Determines whether the phaser on the left and right channels is modulating IN-PHASE or <span
+        class="param">OUT</span>-OF-PHASE.</p>
+    <h4 id="regen-10" class="param-name"><span class="param">REGEN</span><span class="range">Range: -99 to +99</span>
+    </h4>
+    <p>Controls the feedback amount for the delay effect. The sign of the value determines the polarity of the feedback.
+      A value of +00 will eliminate the delay effect. This parameter also controls the feed forward level.</p>
+    <h4 id="time-l-3" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 1600
+        msec</span></h4>
+    <p>This parameter sets the delay time for the left side. This is the “ping.”</p>
+    <h4 id="dly-time-r" class="param-name"><span class="param">DLY TIME R</span><span class="range">Range: 0000 to 1600
+        msec</span></h4>
+    <p>Controls the feed forward delay time for the right side. This is the “pong.”</p>
+    <h2 id="55-eq-tremolo-delay" class="algo">55 EQ- -TREMOLO + DELAY</h2>
+    <p>EQ- -TREMOLO + DELAY combines an EQ and a tremolo effect, which is a pulsating change in volume, with a digital
+      delay.</p>
+    <figure class="figure"><img src="images/eq-tremolo-delay-routing.png"
+        alt="EQ- -TREMOLO + DELAY signal routing: FX-1 left/right through linked Input Level Trim, EQ, and Tremolo; FX-2 summed with left path through Delay and Echo (Echo Level) to Main Output L; right tremolo direct to Main Output R with Regen cross-feed from delay">
+      <figcaption>EQ- -TREMOLO + DELAY signal routing.</figcaption>
+    </figure>
+    <p>The signal enters an input level trim (<span class="param">EQ TRIM</span>) followed by a programmable EQ, and is
+      then routed to the tremolo. The tremolo is routed directly to the output. The left channel signal passes through
+      the digital delay and is routed back into the delay. There is another signal from the delay that is routed to the
+      output on the right side. One regen parameter (<span class="param">DELAY - REGEN</span>) between the delay sends
+      controls the left and right delay level. This constitutes the “ping-pong” effect. There are two echoes that are
+      sent to the left and right outputs respectively. The signal from the two discrete echoes has one level control.
+      There is also an external Dry signal (not shown) that goes directly from the input to the output. The EFFECT <span
+        class="param">MIX</span> FX-1 POST-DDL and <span class="param">FX-2</span> DDL parameters can be routed into the
+      effect with different Dry/Wet mixes.</p>
+    <h4 id="tremolo-rate" class="param-name"><span class="param">TREMOLO RATE</span><span class="range">Range: 000 to
+        130</span></h4>
+    <p>Sets the rate of modulation. Mid values create a faster wavering sound. When used in conjunction with the <span
+        class="param">S/H RATE</span> parameter it can create some interesting staccato effects.</p>
+    <h4 id="depth-7" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Sets the depth of amplitude modulation.</p>
+    <h4 id="s-h-rate-3" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to
+        100</span></h4>
+    <p>Controls the sample rate of a sample and hold network applied to the LFO within the tremolo.</p>
+    <p>When in “Hold,” the effect will be to fix the instantaneous amplitude (if the depth is not 00). A setting of 001
+      will have the largest space between holds. Lower settings create a staccato effect, whereas higher values will
+      increase the amount of samples, making the tremolo flow more smoothly. This parameter can also be turned off (when
+      set to 000).</p>
+    <h4 id="l-r-lfo-5" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
+        or</span></h4>
+    <p>IN-PHASE</p>
+    <p>Controls whether the left and right channels of the stereo tremolo will modulate IN-PHASE or <span
+        class="param">OUT</span>-OF-PHASE.</p>
+    <h4 id="delay-regen-5" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the amount of regen applied to the delay time taps. The sign of the value determines the polarity of the
+      regen. A value of +00 will eliminate the audible delay.</p>
+    <h4 id="time-l-and-r-5" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the time delays for the left and right channel regen delays, and has nothing to do with
+      the tremolo effect.</p>
+    <h4 id="echo-level-3" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the volume of the discrete echo for both the left and right sides.</p>
+    <h4 id="time-l-and-r-6" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the tremolo echo times for the left and right side. Higher settings yield a deeper echo.
+    </p>
+    <h4 id="eq-trim-4" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +0
+        dB</span></h4>
+    <p>Allows you to adjust the input volume of the EQs to eliminate the possibility of clipping boosted signals.</p>
+    <h4 id="bass-fc-4" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000
+        Hz</span></h4>
+    <p>Selects the cutoff-frequency of the lower-frequency band shelving filter.</p>
+    <h4 id="level-11" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the low shelving filter.</p>
+    <h4 id="treble-fc-4" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to
+        15KHz</span></h4>
+    <p>Selects the cutoff-frequency of the upper-frequency band high shelving filter.</p>
+    <h4 id="level-12" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
+    <h2 id="56-eq-vibrato-delay" class="algo">56 EQ- -VIBRATO + DELAY</h2>
+    <p>EQ- -VIBRATO + DELAY combines an EQ and a vibrato effect (a pitch shifter modulating over a very small range),
+      with a digital delay. Many vintage guitar amplifiers offered a vibrato control, but don’t feel that this effect is
+      limited to guitar sounds, try this with other sources as well. There is a sample &amp; hold parameter that doesn’t
+      hold the instantaneous pitch shift, but if set properly will provide a “chirping” effect when acting on the input
+      signal.</p>
+    <p>The signal enters a programmable EQ, which is preceded by an input level trim (<span class="param">EQ
+        TRIM</span>). The signal is then routed to the vibrato. The vibrato is routed directly to the output. The
+      vibrato also passes through the delay which is then regenerated back into the delay. A different delay signal is
+      routed to the output on the right side. This constitutes a “ping-pong” delay effect. The delay <span
+        class="param">REGEN</span> parameter between the delay sends controls the delay feedback amount. There are also
+      two echoes that are sent to the left and right outputs respectively. The signal from the two echoes has one level
+      control. There is also an external dry signal (not shown) that goes directly from the input to the Main Output
+      (<span class="param">DRY</span>). The EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed
+      into the effect with different Dry/Wet mixes.</p>
+    <h4 id="vibrato-rate" class="param-name"><span class="param">VIBRATO RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Sets the amount of modulation. Higher values create a faster vibrating rate.</p>
+    <h4 id="width-11" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter sets the width (adjusts the amount) of the modulation.</p>
+    <h4 id="s-h-rate-4" class="param-name"><span class="param">S/H RATE</span><span class="range">Range: 000 to
+        100</span></h4>
+    <p>Controls the sample rate of a sample and hold network. This is applied to the LFO within the vibrato. When in
+      hold (low values), it causes rhythmic chirps in the pitch of the audio signal.</p>
+    <p>Higher values will increase the number of holds per second, making the vibrato flow more smoothly. The sample and
+      hold function is turned off when set to 000.</p>
+    <h4 id="l-r-lfo-6" class="param-name"><span class="param">L/R LFO</span><span class="range">Range: OUT-OF-PHASE
+        or</span></h4>
+    <p>IN-PHASE</p>
+    <p>Controls the vibrato pitch direction of the left and right channels. When <span
+        class="param">OUT</span>-OF-PHASE, the quadrature pitch change on the left channel will lag 90˚ from the right.
+      When IN-PHASE, both channels will change pitch together.</p>
+    <h4 id="delay-regen-6" class="param-name"><span class="param">DELAY - REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the amount of positive or negative feedback applied to the regenerated delay. The sign of the value
+      determines the polarity of the feedback. A value of +00 will eliminate any feedback.</p>
+    <p>Controls both left and right levels.</p>
+    <h4 id="time-l-4" class="param-name"><span class="param">TIME L</span><span class="range">Range: 0000 to 1500
+        msec</span></h4>
+    <p>Controls the time delay on the left regenerated delay.</p>
+    <h4 id="time-r-3" class="param-name"><span class="param">TIME R</span><span class="range">Range: 0000 to 1500
+        msec</span></h4>
+    <p>Controls the time delay on the right non regenerated delay.</p>
+    <h4 id="echo-level-4" class="param-name"><span class="param">ECHO - LEVEL</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the volume of the discrete echo for both the left and right sides. A setting of 00 will eliminate any
+      audible echo.</p>
+    <h4 id="time-l-and-r-7" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the echo times for the left and right sides. Higher settings yield a deeper echo. There
+      are two discrete echoes, one to the left and one to the right.</p>
+    <h4 id="eq-trim-5" class="param-name"><span class="param">EQ TRIM</span><span class="range">Range: -24 to +0
+        dB</span></h4>
+    <p>Allows you to adjust the input volume before the EQs to eliminate the possibility of clipping boosted signals.
+    </p>
+    <h4 id="bass-fc-5" class="param-name"><span class="param">BASS FC</span><span class="range">Range: 0000 to 1000
+        Hz</span></h4>
+    <p>This parameter selects the cutoff-frequency of the low shelving filter.</p>
+    <h4 id="level-13" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the low shelving filter.</p>
+    <h4 id="treble-fc-5" class="param-name"><span class="param">TREBLE FC</span><span class="range">Range: 01KHz to
+        15KHz</span></h4>
+    <p>Selects the cutoff of the upper-frequency band high shelving filter.</p>
+    <h4 id="level-14" class="param-name"><span class="param">LEVEL</span><span class="range">Range: -48 to +24 dB</span>
+    </h4>
+    <p>Sets the amount of boost or cut applied to the high shelving filter.</p>
+    <h2 id="57-pitch-shifter" class="algo">57 PITCH SHIFTER</h2>
+    <p>The Pitch Shifters allow you to change the pitch of a signal to any pitch desired within a range of one octave in
+      either direction. The TS-10 offers three different pitch shift algorithms, each designed with a different purpose:
+    </p>
+    <ul>
+      <li>PITCH SHIFTER offers a splicer type pitch shifter.</li>
+      <li><span class="param">FAST</span> PITCH SHIFTER is a pitch shifter designed for pitch correction.</li>
+      <li>PITCH SHIFTER + DELAY combines a pitch shifter with a DDL (described later).</li>
+    </ul>
+    <p>These algorithms sound best with an Effect Mix of wet and dry. You can assign a modulation controller for the
+      Effect Mix parameters to bring in or fade out the pitch shifted signal. Try the different pitch shifters until you
+      find the one that works best with your sound source, and for your application. This first algorithm is a “splicer
+      type” of pitch shifter, which means that it drops or adds small sections of the original signal to the effect.
+      PITCH SHIFTER does not incorporate zero crossing detection. This pitch shifter is best used for a doubling effect.
+      Splicer type pitch shifters are popular because for low pitch shift ratios, splicing is infrequent. These pitch
+      shifters can create very interesting stereo fields by panning each of two pitch shifted voices selectively, and
+      because of the inherent time delay modulation of the algorithm. The FX-1 and <span class="param">FX-2</span>
+      parameters can be routed into the effect with different Dry/Wet mixes.</p>
+    <h4 id="voice-1-semi" class="param-name"><span class="param">VOICE-1 SEMI</span><span class="range">Range: -12 to
+        +12</span></h4>
+    <p>Allows you to adjust the pitch of Voice-1 to an octave above or below the original pitch in semitones (half
+      steps).</p>
+    <h4 id="fine" class="param-name"><span class="param">FINE</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Lets you to fine tune the pitch of Voice-1.</p>
+    <h4 id="level-15" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Allows you to adjust the level of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
+    <h4 id="pan-4" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would
+      be far right.</p>
+    <table class="param-cols">
+      <tbody>
+        <tr>
+          <td>VOICE-2 SEMI</td>
+          <td><span class="param">LEVEL</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">FINE</span></td>
+          <td><span class="param">PAN</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These parameters are identical to the VOICE-1 parameters, and allow you to define a second voice for independent
+      pitch shifting.</p>
+    <h4 id="pitch-shifter-quality" class="param-name"><span class="param">PITCH SHIFTER - QUALITY</span><span
+        class="range">Range: LONG/SMOOTH or SHORT/COARSE</span></h4>
+    <p>Allows you to choose between a long/smooth setting, or a short/coarse setting. A smooth setting would sound best
+      with slower sustaining chords, whereas a coarse setting would enhance a rapidly played musical passage. Depending
+      on your sound source and musical needs, set this parameter accordingly. This parameter actually controls the
+      effect transport delay; smooth yields a long transport delay, coarse yields a short transport delay.</p>
+    <h4 id="lfo-rate-2" class="param-name"><span class="param">LFO - RATE</span><span class="range">Range: 00 to
+        99</span></h4>
+    <p>Controls the rate of pitch modulation that creates a chorusing effect. To achieve chorusing, this rate must be
+      very low.</p>
+    <h4 id="width-12" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very
+      large.</p>
+    <aside class="note">
+      <p>Note: When KBD is selected as a <span class="value">MOD</span> SRC, and <span class="param">VOICE-1 SEMI</span>
+        or VOICE-2 SEMI is selected as the DEST (destination), the pitch will increase one semitone at a time above
+        middle C (C4), and decrease one semitone at a time below middle C (Middle C being zero). After each octave, the
+        pitch shift will “wrap” and start again (the pitch can’t be modulated more than one octave in either direction).
+      </p>
+    </aside>
+    <h2 id="58-fast-pitch-shifter" class="algo">58 FAST PITCH SHIFTER</h2>
+    <p><span class="param">FAST</span> PITCH SHIFTER has a transport delay of only 10 msec and a maximum detune ratio of
+      one semitone. Try shifting the voices slightly in both positive and negative values to create a fat sound. This
+      algorithm should be used for pitch correction (for instance, try using the mod wheel as a pitch controller). The
+      FX-1 and <span class="param">FX-2</span> parameters can be routed into the effect with different Dry/Wet mixes.
+      Depending on its usage, this algorithm generally sounds best with a Mix of dry and wet. Try using the mod wheel
+      with the Effect Mix parameter(s) to bring in or fade out the pitch shifted signal(s).</p>
+    <h4 id="vc-1-fine" class="param-name"><span class="param">VC-1 FINE</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Allows you to fine tune the pitch of Voice-1.</p>
+    <h4 id="level-16" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Allows you to adjust the volume of Voice-1. A setting of 00 would eliminate any audible pitch shift.</p>
+    <h4 id="pan-5" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>This parameter allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far
+      left, and +99 would be far right.</p>
+    <h4 id="vc-2-fine" class="param-name"><span class="param">VC-2 FINE</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>This parameter allows you to fine tune the pitch of Voice-2.</p>
+    <h4 id="level-17" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter allows you to adjust the volume of Voice-2. A setting of 00 would eliminate any audible pitch
+      shift.</p>
+    <h4 id="pan-6" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Allows you to assign the location of Voice-2 in the stereo field. A value of -99 would be far left, and +99 would
+      be far right.</p>
+    <h4 id="lfo-rate-3" class="param-name"><span class="param">LFO RATE</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Controls the rate of pitch modulation that creates a chorusing effect. To achieve chorusing, this rate must be
+      very low.</p>
+    <h4 id="width-13" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the excursion of pitch modulation. Since the rate is usually very low, then the width is usually very
+      large.</p>
+    <h2 id="59-pitch-shifter-delay" class="algo">59 PITCH SHIFTER + DELAY</h2>
+    <p>PITCH SHIFTER + DELAY combines a pitch shifter with a digital delay. PITCH SHIFTER + DELAY uses a continual
+      crossfading technique of pitch shifting. This technique maintains the stereo field exactly. This pitch shifter
+      works best for large pitch shift ratios, in some circumstances. Another feature of this algorithm is a digital
+      delay that feeds back into the pitch shift. This feature allows spiraling upward or downward pitch shifts. The
+      EFFECT <span class="param">MIX FX-1 and FX-2</span> parameters can be routed into the effect with different
+      Dry/Wet mixes. This algorithm sounds best with a Mix of wet and dry. Try using a modulation controller for this
+      parameter to fade in or fade out the pitch shifted signal.</p>
+    <figure class="figure"><img src="images/pitch-shifter-delay-routing.png"
+        alt="PITCH SHIFTER + DELAY signal routing: FX-1 and FX-2 left/right inputs summed and cross-fed to Vc 1 and Vc 2 stereo shifters with Regen feedback; delay mixer combines shifter outputs and Dry Level; panned shifter outputs and Delay Mix to Main Outputs L and R">
+      <figcaption>PITCH SHIFTER + DELAY signal routing.</figcaption>
+    </figure>
+    <h4 id="voice-1-semi-2" class="param-name"><span class="param">VOICE-1 SEMI</span><span class="range">Range: -12 to
+        +12</span></h4>
+    <p>Allows you to adjust the pitch of Voice-1 up to an octave above or below the original pitch in semi-tones.</p>
+    <h4 id="fine-2" class="param-name"><span class="param">FINE</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Allows you to fine tune the pitch of Voice-1.</p>
+    <h4 id="level-18" class="param-name"><span class="param">LEVEL</span><span class="range">Range: 00 to 99</span></h4>
+    <p>This parameter adjusts the volume of Voice-1.</p>
+    <h4 id="pan-7" class="param-name"><span class="param">PAN</span><span class="range">Range: -99 to +99</span></h4>
+    <p>Allows you to assign the location of Voice-1 in the stereo field. A value of -99 would be far left, and +99 would
+      be far right.</p>
+    <table class="param-cols">
+      <tbody>
+        <tr>
+          <td>VOICE-2 SEMI</td>
+          <td><span class="param">LEVEL</span></td>
+        </tr>
+        <tr>
+          <td><span class="param">FINE</span></td>
+          <td><span class="param">PAN</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These parameters are identical to the previous ones, and control Voice-2.</p>
+    <h4 id="delay-regen-7" class="param-name"><span class="param">DELAY REGEN</span><span class="range">Range: -99 to
+        +99</span></h4>
+    <p>Controls the amount of feedback from the output of the delay back into the input of the pitch shifter. This
+      allows you to create special effects with ascending/descending delays.</p>
+    <h4 id="time-l-and-r-8" class="param-name"><span class="param">TIME (L and R)</span><span class="range">Range: 0000
+        to 1500 msec</span></h4>
+    <p>These parameters control the amount of time for the pitch shifted signal to delay from the left and right inputs.
+      The left and right delay times are completely independent.</p>
+    <h4 id="mix" class="param-name"><span class="param">MIX</span><span class="range">Range: 00 to 99</span></h4>
+    <p>Controls the mix between the delay signal and the pitch shifted signal. A setting of 00 would be all pitch
+      shifter, and no delay. A setting of 99 will be all delay and no direct pitch shift.</p>
+    <h4 id="dry-level" class="param-name"><span class="param">DRY LEVEL</span><span class="range">Range: 00 to 99</span>
+    </h4>
+    <p>Lets you to bypass the pitch shifter with an internal dry signal, and send it through the digital delay. Higher
+      values would send more of the dry signal to the delay. The purpose of this parameter is to mix the dry signal
+      appropriately with the pitch shifted delay signals.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
@@ -542,4 +1052,5 @@
     and the printed Index are omitted.
   </footer>
 </body>
+
 </html>

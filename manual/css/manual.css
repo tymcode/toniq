@@ -319,6 +319,7 @@ span.value,
 span.lcd {
   font-family: var(--font-vfd);
   break-inside: avoid;
+  white-space: nowrap;
   background: transparent;
   color: inherit;
   padding: 0;
@@ -356,6 +357,7 @@ span.mode {
   font-family: var(--font-ui);
   font-style: normal;
   font-weight: 600;
+  white-space: nowrap;
   font-size: 0.92em;
   letter-spacing: 0.02em;
 }
@@ -366,6 +368,7 @@ span.page-name {
   font-weight: 600;
   font-size: 0.92em;
   letter-spacing: 0.02em;
+  white-space: nowrap;
   color: var(--ensoniq);
   background: color-mix(in srgb, var(--ensoniq) 9%, white);
   border: 1px solid color-mix(in srgb, var(--ensoniq) 22%, transparent);
@@ -379,6 +382,7 @@ a.refer-to {
   font-style: italic;
   color: var(--accent);
   text-decoration: none;
+  white-space: nowrap;
   border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
@@ -405,6 +409,7 @@ strong.panel {
   font-size: 0.88em;
   background: #969696;
   color: #ffffff;
+  white-space: nowrap;
   border-radius: 4px;
   padding: 0.08em 0.4em 0.12em;
   box-shadow: 0 1px 0 #000;

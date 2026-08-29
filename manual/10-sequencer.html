@@ -140,7 +140,8 @@
   <li>Press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd> to return to the <span class="page-name">Seq/Song Tracks</span> page with the new sound on the track, and its effect used by the sequence.</li>
 </ul>
 <aside class="tip"><p>You can use the <span class="function">Replace Track Sound</span> feature to audition different sounds while the sequence is playing. However, to permanently change the sound on a track, the sequencer must be stopped.</p></aside>
-<p>Using <span class="function">SoundFinder</span> in <span class="mode">Sequencer Mode</span> Here’s how to select Programs that have the same defined Program Type in Sequencer mode. For this example, we’ll replace the Program on a sequence track from a sequence used in the DEMO-SONG found on the TSD-200 floppy disk that came with the TS-10. Note that loading in any sequence file that has a flashing “P” will replace the RAM programs. If you have any customized Programs that you want to save, do so before proceeding:</p>
+<h3 id="using-soundfinder-in-sequencer-mode">Using SoundFinder in Sequencer Mode</h3>
+<p>Here’s how to select Programs that have the same defined Program Type in Sequencer mode. For this example, we’ll replace the Program on a sequence track from a sequence used in the DEMO-SONG found on the TSD-200 floppy disk that came with the TS-10. Note that loading in any sequence file that has a flashing “P” will replace the RAM programs. If you have any customized Programs that you want to save, do so before proceeding:</p>
 <ul>
   <li>Insert the TSD-200 disk into the disk drive.</li>
   <li>Press the <kbd class="button">Storage</kbd> button.</li>
@@ -474,12 +475,14 @@
   <li>-DRY-            forces all voices to the dry bus</li>
   <li>-AUX-            forces all voices to the AUX outputs, bypassing the effects</li>
 </ul>
-<p>Using the AUX Outputs as Separate Mono Outs If you want to use the two AUX outputs as independent mono outputs, use the track Pan control in conjunction with the Effects Bus Override:</p>
+<h3 id="using-the-aux-outputs-as-separate-mono-outs">Using the AUX Outputs as Separate Mono Outs</h3>
+<p>If you want to use the two <span class="button">AUX</span> outputs as independent mono outputs, use the track Pan control in conjunction with the Effects Bus Override:</p>
 <ul>
-  <li>Select a track, press the <kbd class="button">Track Effects</kbd> button and assign the track to –AUX– as shown above.</li>
-  <li>Press <kbd class="button">Mix/Pan</kbd> twice to get to the <span class="page-name">PAN</span> page. Set to -63 to assign the track to the left AUX output only; or set to +64 to assign the track to the right AUX output. You can also press the soft button for the track and define if the AUX jacks will receive a stereo or mono signal.</li>
+  <li>Select a track, press the <kbd class="button">Track Effects</kbd> button and assign the track to <span class="value">–AUX–</span> as shown above.</li>
+  <li>Press <kbd class="button">Mix/Pan</kbd> twice to get to the <span class="page-name">PAN</span> page. Set to <span class="value">-63</span> to assign the track to the left AUX output only; or set to <span class="value">+64</span> to assign the track to the right AUX output. You can also press the soft button for the track and define if the AUX jacks will receive a stereo or mono signal.</li>
 </ul>
-<p><span class="page-name">Edit Track</span> Page — Track Edit Functions Pressing the <kbd class="button">Edit Track</kbd> button displays the top level track editing page. Pressing the button twice will display the track edit options sub-page. These edit functions will affect the currently selected track. If a sequence is selected, the current sequence track will be edited; if a song is selected, the current song track will be edited.</p>
+<h3 id="edit-track-page-track-edit-functions">Edit Track Page — Track Edit Functions</h3>
+<p>Pressing the <kbd class="button">Edit Track</kbd> button displays the top level track editing page. Pressing the button twice will display the track edit options sub-page. These edit functions will affect the currently selected track. If a sequence is selected, the current sequence track will be edited; if a song is selected, the current song track will be edited.</p>
 <p>The following functions can be selected from the <span class="page-name">Edit Track</span> page:</p>
 <ul>
   <li>SHIFT — Shift track forward or back in time by a number of clocks.</li>
@@ -531,7 +534,8 @@
   <li>COPY — Copy the song to another sequencer location</li>
   <li>EDIT STEPS — Edit the song steps, chaining sequences together to form the basic song structure</li>
 </ul>
-<p>Editing Song  Steps — Using the Song Step Editor For each Song Step you want to create, on the <span class="page-name">Edit Song</span> Page:</p>
+<h3 id="editing-song-steps-using-the-song-step-editor">Editing Song Steps — Using the Song Step Editor</h3>
+<p>For each Song Step you want to create, on the <span class="page-name">Edit Song</span> Page:</p>
 <ul>
   <li>Select the Sequence Name field, which for Step 1 of a new song will read SEQ= <span class="lcd">*SONG-END*</span>.</li>
   <li>Press the Up or <kbd class="button">Down Arrow</kbd> button to define the song step and select among the sequences in memory until the display is showing the name of the sequence you want to play during that step.</li>
@@ -721,7 +725,8 @@
 <p>27) Press the soft button above <span class="lcd">*EXIT*</span>.</p>
 <p>28) You can audition your tempo changes by pressing the soft button above PLAY NEW TRACK, and keep them by selecting KEEP NEW.</p>
 <p>You have just successfully eliminated four Tempo Track events (+04, +03, +02, and +01) using the Event Editor.</p>
-<p>Using <span class="function">Multi-Track</span> Record Tracks do not have to be selected in order to have data recorded on them, but they must be defined. Each channel of incoming MIDI data will be recorded on the lowest-numbered TS-10 track which has the corresponding MIDI channel number. For example, if both track 1 and track 2 are set to MIDI channel 1, only track 1 will receive and record any data because it is the lowestnumbered track set to MIDI channel 1. It is suggested that you set each track to a different MIDI channel to avoid confusion.</p>
+<h3 id="using-multi-track-record">Using Multi-Track Record</h3>
+<p>Tracks do not have to be selected in order to have data recorded on them, but they must be defined. Each channel of incoming MIDI data will be recorded on the lowest-numbered TS-10 track which has the corresponding MIDI channel number. For example, if both track 1 and track 2 are set to MIDI channel 1, only track 1 will receive and record any data because it is the lowestnumbered track set to MIDI channel 1. It is suggested that you set each track to a different MIDI channel to avoid confusion.</p>
 <p>A newly created sequence (or song) will have MIDI channels 1 to 12 automatically assigned to the 12 tracks in ascending order, but all of the tracks except track 1 are initially UNDEFINED.</p>
 <p>Selecting undefined tracks while on the <span class="page-name">Track Select</span> page (TRAX) will cause all the settings from the previously selected track to be copied to the new track, including the MIDI channel number.</p>
 <p>You will have to make sure that the channel assignments and other settings are correct after you have defined the appropriate number of tracks to record on.</p>
@@ -739,8 +744,8 @@
 <aside class="note"><p>Note: With the SQX-70 installed, the sequencer can record over 97,00 notes. However the sequencer record buffer is of a limited size, and can only record 16, 00 notes at one time. As a result, you may see an OUT OF MEMORY message if you exceed the size of the record buffer. (this is most common in multi-track record). If this occurs, try editing the incoming data into several smaller sequences; then, once recorded into the TS-10 sequencer, append them together.</p></aside>
 <p>Basic Multi-track Recording from an External Sequencer The following procedure is the basic method for recording a multi-track sequence from an external sequencer into the TS-10.</p>
 <ul>
-  <li>Set <span class="lcd">MODE=MULTI</span> on <span class="page-name">MIDI Control</span> page.</li>
-  <li>Set <span class="lcd">CLOCK=MIDI</span> and <span class="lcd">REC-SOURCE=MULTI</span> on the <span class="page-name">Sequencer Control</span> page(s).</li>
+  <li>Set <span class="param">MODE</span>=<span class="value">MULTI</span> on <span class="page-name">MIDI Control</span> page.</li>
+  <li>Set <span class="param">CLOCK</span>=<span class="value">MIDI</span> and <span class="param">REC-SOURCE</span>=<span class="value">MULTI</span> on the <span class="page-name">Sequencer Control</span> page(s).</li>
   <li>Disable count-off on both systems to avoid problems.</li>
   <li>Disable sequence looping on the external sequencer.</li>
   <li>Create a new sequence with the correct time signature.</li>
@@ -748,7 +753,7 @@
   <li>Make sure that the external sequencer will send program changes at the start of each track to automatically define the necessary tracks on the TS-10, or define them yourself on the TS-10 manually.</li>
   <li>Press <kbd class="button">Record</kbd> to enter MIDI Record mode (MREC will be flashing indicating that the TS-10 is waiting for MIDI Start and Clock messages).</li>
   <li>Start your external sequencer playing its sequence. When the external sequence stops, or when you press <kbd class="button">Stop</kbd> on the TS-10, the TS-10 will show “EDITING DATA...” for a time and then display the <span class="page-name">Locate</span> page.</li>
-  <li>Set <span class="lcd">CLOCK=INT</span> on the <span class="page-name">Sequencer Control</span> page and press <kbd class="button">Play</kbd> to hear what you have recorded. You may then decide that the results are satisfactory, or if not, you can try again or erase the sequence.</li>
+  <li>Set <span class="value">CLOCK=INT</span> on the <span class="page-name">Sequencer Control</span> page and press <kbd class="button">Play</kbd> to hear what you have recorded. You may then decide that the results are satisfactory, or if not, you can try again or erase the sequence.</li>
 </ul>
 <p>Recording into the Sequencer in a MIDI Loop Use the following basic procdure if you want to record into the TS-10’s sequencer from its own keyboardin a MIDI loop. You can record to a single track, or to multiple stacked tracks, depending on which tracks are selected, and how you set the REC-SOURCE parameter on the</p>
 <h3 id="sequencer-control-page"><span class="page-name">Sequencer Control</span> page:</h3>
@@ -769,7 +774,8 @@
 </ul>
 <p>(solidly selected) track, and any stacked tracks will be de-selected after Audition. If <span class="lcd">REC-SOURCE=MULTI</span>, data wil be recorded on all selected and stacked tracks, but there will be no</p>
 <p>Audition.</p>
-<p>Using the <span class="function">Step Entry</span> Recorder All notes played and all control changes made in <span class="function">Step Entry</span> mode will always be recorded into the new track.</p>
+<h3 id="using-the-step-entry-recorder">Using the Step Entry Recorder</h3>
+<p>All notes played and all control changes made in <span class="function">Step Entry</span> mode will always be recorded into the new track.</p>
 <p>With <span class="lcd">GATE-TIME=HELD</span>, if you enter a note and release the key without advancing the track location (time), then the note will be recorded with minimum (1/64th note) duration. This is also true when using AutoStep because the key down and key up appear to occur at the same time.</p>
 <p>For controllers, it is necessary to advance the track location after entering the event so that they will be correctly recorded. Use <span class="lcd">*STEP*</span> or advance one of the TIME fields.</p>
 <p>It is possible to record trills played with monophonic sounds when <span class="lcd">AUTOSTEP=ON</span> if you set the gate-time to be less than the step size, and remember to change GATE-TIME to HELD just before you finally release the held key. For example, if <span class="lcd">STEP=1/16</span>, then GATE-TIME must be less than 1/16 (i.e. 1/16T, 1/32, etc.).</p>
