@@ -342,7 +342,7 @@ span.range {
   color: var(--muted);
 }
 
-span.function {
+span.function, span.patch-name {
   font-family: var(--font-ui);
   font-weight: 650;
 }
@@ -1016,6 +1016,22 @@ dl.parameter dt {
   font-family: var(--font-ui);
   font-size: 0.78rem;
   color: var(--muted);
+}
+.text-with-image img {
+  float: right;
+  width: min(50%, 400px);
+  height: auto;
+  margin: 0 0 1rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .text-with-image img {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1rem;
+  }
 }
 
 @media (max-width: 720px) {
