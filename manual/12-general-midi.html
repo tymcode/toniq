@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Section 12 — General MIDI — ENSONIQ TS-10/TS-12 Musician’s Manual</title>
   <link rel="stylesheet" href="css/manual.css">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="chrome">
       <a href="index.html"><span class="brand">ENSONIQ</span>
-      <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
+        <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
     </div>
   </header>
   <nav class="section-nav">
@@ -25,317 +27,2233 @@
       <h1 id="section-12-general-midi">Section 12 — General MIDI</h1>
     </header>
     <h2 id="what-is-general-midi">What is General MIDI?</h2>
-<p><span class="mode">General MIDI</span> (GM) is an industry standard for program mapping that defines 128 sounds and their locations. This means that if a device conforms to the GM standard, MIDI Program Change #1 will always call up an acoustic piano.</p>
-<p>MIDI  Program Change #62 will always call up a brass section, etc. Although the actual sounds (tone and quality) will vary from product to product, each specific MIDI Program number will always call up the same type of sound.</p>
-<h4 id="sound-map">Sound Map</h4>
-<p>The <span class="mode">General MIDI</span> Sound Map (found later in this section) lists the 128 <span class="mode">General MIDI</span> sounds in the TS-10 ROM and their assigned <span class="mode">General MIDI</span> Program Change numbers.</p>
-<h4 id="percussion">Percussion</h4>
-<p><span class="mode">General MIDI</span> also includes a Percussion Key Map, defining specific drum voices for each key.</p>
-<p>To avoid confusion, <span class="mode">General MIDI</span> always assigns percussion to MIDI channel 10. The General</p>
-<table class="defn-table"><tbody><tr><td><span class="lcd">MIDI</span></td><td>Percussion Key Map can be found after the <span class="mode">General MIDI</span> Sound Map.</td></tr><tr><td><span class="lcd">GS/MT-32</span></td><td>Compatibility GS is an extended MIDI sound specification originated by Roland® Corp. Although we provide the GS Drum Maps (listed later) and MT-32 Program Change Map for Roland Sound Canvas™ compatibility, the TS-10 is not GS compatible and does not contain the GS Alternate Sound Banks.</td></tr></tbody></table>
-<p>Other <span class="mode">General MIDI</span> Requirements A <span class="mode">General MIDI</span> sound module must respond to all 16 MIDI channels, with dynamic voice allocation, and a minimum of 24 voices. It also must respond to velocity, pitch bend, mod wheel, volume and pan, expression, sustain, and the All Notes Off and Reset All Controllers messages.</p>
-<p>With these controllers supported, a composition that relies on note articulations and mix settings can be played back and still sound correct when played by any GM sound module. The TS-10 supports all of the above MIDI messages, and fully conforms to the <span class="mode">General MIDI</span> Specification.</p>
-<h2 id="why-use-general-midi">Why use General MIDI?</h2>
-<p>While the TS-10 instruments are a superb sound source, with greater fidelity and more programmability than most GM modules, there are interesting applications for <span class="mode">General MIDI</span> that can enhance your music making.</p>
-<p>1. There is an interesting genre of music software (for your computer) that creates backing patterns for you to play along with, for pleasure and study. These programs include:</p>
-<p>Band in a Box                       For more information contact:</p>
-<table class="defn-table"><tbody><tr><td><span class="lcd">PG</span></td><td>Music Inc.</td></tr><tr><td><span class="lcd">266</span></td><td>Elmwood Avenue</td></tr></tbody></table>
-<h3 id="suite-111">Suite 111</h3>
-<p>Buffalo, NY 14222</p>
-<p>Voice 1-800-268-6272 or 905-528-2368</p>
-<h4 id="fax-905-628-2541" class="param-name">FAX 905-628-2541</h4>
-<p>Jammer                              For more information contact:</p>
-<p>Soundtreck</p>
-<p>3384 Hill Dr.</p>
-<p>Duluth, GA 30136</p>
-<h3 id="voice-404-623-0879">Voice 404-623-0879</h3>
-<h4 id="fax-404-623-3054" class="param-name">FAX 404-623-3054</h4>
-<p>MiBac Jazz                          For more information contact:</p>
-<p>MiBac Music Software</p>
-<p>PO  Box 468 Northfield, MN 55057</p>
-<h3 id="voice-507-645-5851">Voice 507-645-5851</h3>
-<p>2. Many pre-recorded pieces of music can be purchased for home listening, solo performance backing tracks (e.g., instant karaoke), and other applications. Note that this application requires a computer/hardware sequencer/sequencer player and some type of computer software (such as those listed above). Look through current issues of music/computer software magazines for listings (these products must conform to the Standard MIDI File [SMF] format* in order to use them properly).</p>
-<p>* A Standard MIDI File (SMF) is a MIDI protocol designed for sharing sequences between different products.</p>
-<p>3. There is an ever-increasing amount of educational software that uses <span class="mode">General MIDI</span> for such applications as ear training, music lessons, etc.</p>
-<p>4. Some computer games offer <span class="mode">General MIDI</span> as an optional sound source. The TS-10 will provide high quality sound variations for this enjoyable leisure activity, enhancing the excitement and thrill of your computer games.</p>
-<p><span class="mode">General MIDI</span> Sound Map The following map shows the <span class="mode">General MIDI</span> sound name and program change number of each sound as they appear in the TS-10. This map also shows how <span class="mode">General MIDI</span> divides the instruments into 16 categories of similar sounds:</p>
-<p>PROG       INSTRUMENT          PROG    INSTRUMENT       PROG    INSTRUMENT      PROG     INSTRUMENT</p>
-<p>#                              #                        #                       #</p>
-<table class="param-cols cols-5"><tbody><tr><td>1-8</td><td>PIANO</td><td>33-40   BASS</td><td>65-72   REED</td><td>97-104   SYNTH</td></tr></tbody></table>
-<table class="data-table lookup"><tbody><tr><td>1</td><td>GRAND-PIANO</td><td>33</td><td>ACOUSTIC-BS</td><td>65</td><td>SOPRANO-SAX</td><td>97</td><td>EFFECTS</td></tr><tr><td>2</td><td>BRITE-PIANO</td><td>34</td><td>FINGERED-BS</td><td>66</td><td>ALTO-SAX</td><td>98</td><td>ICE-RAIN</td></tr><tr><td>3</td><td>ELEC-GRAND</td><td>35</td><td>PICKED-BASS</td><td>67</td><td>TENOR-SAX</td><td>99</td><td>SOUNDTRACK</td></tr><tr><td>4</td><td>HONKY-TONK</td><td>36</td><td>FRETLESS-BS</td><td>68</td><td>BARI-SAX</td><td>100</td><td>CRYSTAL</td></tr><tr><td>5</td><td>ELEC-PIANO1</td><td>37</td><td>SLAP-BASS-1</td><td>69</td><td>OBOE</td><td>101</td><td>ATMOSPHERE</td></tr><tr><td>6</td><td>ELEC-PIANO2</td><td>38</td><td>SLAP-BASS-2</td><td>70</td><td>ENGLISH-HRN</td><td>102</td><td><span class="param">BRIGHTNESS</span></td></tr><tr><td>7</td><td>HARPSICHORD</td><td>39</td><td>SYNTH-BASS1</td><td>71</td><td>BASSOON</td><td>103</td><td>GOBLINS</td></tr><tr><td>8</td><td>CLAVINET</td><td>40</td><td>SYNTH-BASS2</td><td>72</td><td>CLARINET</td><td>104</td><td>ECHO-DROPS</td></tr></tbody></table>
-<h4 id="star-theme" class="param-name">STAR-THEME</h4>
-<table class="param-cols cols-6"><tbody><tr><td>9-16</td><td>CHROM</td><td>41-48   STRINGS</td><td>73-80   PIPE</td><td>105-</td><td>ETHNIC</td></tr></tbody></table>
-<table class="data-table lookup"><tbody><tr><td>9</td><td><span class="lcd">PERCUSSION</span></td><td>41</td><td>VIOLIN</td><td>73</td><td>PICCOLO</td><td>112</td><td>SITAR</td></tr><tr><td>10</td><td>CELESTA</td><td>42</td><td>VIOLA</td><td>74</td><td>FLUTE</td><td>105</td><td>BANJO</td></tr><tr><td>11</td><td>GLOCKNSPIEL</td><td>43</td><td>CELLO</td><td>75</td><td>RECORDER</td><td>106</td><td>SHAMISEN</td></tr><tr><td>12</td><td>MUSIC-BOX</td><td>44</td><td>CONTRABASS</td><td>76</td><td>PANFLUTE</td><td>107</td><td>KOTO</td></tr><tr><td>13</td><td>VIBRAPHONE</td><td>45</td><td>TREMOLO-STR</td><td>77</td><td>BOTTLE-BLOW</td><td>108</td><td>KALIMBA</td></tr><tr><td>14</td><td>MARIMBA</td><td>46</td><td>PIZZI-STRGS</td><td>78</td><td>SHAKUHACHI</td><td>109</td><td>BAGPIPES</td></tr><tr><td>15</td><td>XYLOPHONE</td><td>47</td><td>HARP</td><td>79</td><td>WHISTLE</td><td>110</td><td>FIDDLE</td></tr><tr><td>16</td><td>TUBULR-BELLS</td><td>48</td><td>TYMPANI</td><td>80</td><td>OCARINA</td><td>111</td><td>SHANNAI</td></tr></tbody></table>
-<p>DULCIMER                                                             112</p>
-<table class="param-cols cols-6"><tbody><tr><td>17-24</td><td>ORGAN</td><td>49-56   ENSEMBLE</td><td>81-88   SYNTH LEAD</td><td>113-</td><td>PERCUSSIVE</td></tr></tbody></table>
-<table class="data-table lookup"><tbody><tr><td>17</td><td>DRWBAR-ORGN</td><td>49</td><td>STRG-ENSMBL</td><td>81</td><td>SQUARE-</td><td>120</td><td>TINKLE-BELL</td></tr><tr><td>18</td><td>PERC-ORGAN</td><td>50</td><td>SLOW-STRNGS</td><td>82</td><td>WAVE</td><td>113</td><td>AGOGO</td></tr><tr><td>19</td><td>ROCK-ORGAN</td><td>51</td><td>SYNTH-STR-1</td><td>83</td><td>SAW-WAVE</td><td>114</td><td>STEEL-DRUMS</td></tr><tr><td>20</td><td>CHRCH-ORGAN</td><td>52</td><td>SYNTH-STR-2</td><td>84</td><td>CALLIOPE</td><td>115</td><td>WOODBLOCK</td></tr><tr><td>21</td><td>REED-ORGAN</td><td>53</td><td>CHOIR-AAHS</td><td>85</td><td>CHIFF-LEAD</td><td>116</td><td>TAIKO-DRUM</td></tr><tr><td>22</td><td>ACCORDION</td><td>54</td><td>VOICE-OOHS</td><td>86</td><td>CHARANG</td><td>117</td><td>MELODIC-TOM</td></tr><tr><td>23</td><td>HARMONICA</td><td>55</td><td>SYNTH-VOICE</td><td>87</td><td>SOLO-VOICE</td><td>118</td><td>SYNTH-DRUM</td></tr><tr><td>24</td><td>BANDONEON</td><td>56</td><td>ORCH-HIT</td><td>88</td><td>SAW-FIFTHS</td><td>119</td><td><span class="value">REVERSE</span>-CYM</td></tr></tbody></table>
-<p>BASS+LEAD       120</p>
-<table class="param-cols cols-6"><tbody><tr><td>25-32</td><td>GUITAR</td><td>57-64   BRASS</td><td>89-96   SYNTH PAD</td><td>121-</td><td>SOUND</td></tr></tbody></table>
-<table class="data-table lookup"><tbody><tr><td>25</td><td>NYL-STR-GTR</td><td>57</td><td>TRUMPET</td><td>89</td><td>NEW-AGE-PAD</td><td>128</td><td>EFFECTS</td></tr><tr><td>26</td><td>STL-STR-GTR</td><td>58</td><td>TROMBONE</td><td>90</td><td>WARM-PAD</td><td>121</td><td>GT-FRETNOIS</td></tr><tr><td>27</td><td>JAZZ-GUITAR</td><td>59</td><td>TUBA</td><td>91</td><td>POLYSYNTH</td><td>122</td><td>BREATHNOISE</td></tr><tr><td>28</td><td>CLEAN-GUITR</td><td>60</td><td>MUTED-</td><td>92</td><td>SPACE-VOICE</td><td>123</td><td>SEASHORE</td></tr><tr><td>29</td><td>MUTED-GUITR</td><td>61</td><td>TRMPT</td><td>93</td><td>BOWED-</td><td>124</td><td>BIRD-TWEET</td></tr><tr><td>30</td><td>OVRDRIV-GTR</td><td>62</td><td>FRENCH-</td><td>94</td><td>GLASS</td><td>125</td><td>TELEPHONE</td></tr><tr><td>31</td><td>DISTORT-GTR</td><td>63</td><td>HORN</td><td>95</td><td>METALIC-PAD</td><td>126</td><td>HELICOPTER</td></tr><tr><td>32</td><td>GTR-HRMONIC</td><td>64</td><td>BRASS-SECTN</td><td>96</td><td>HALO-PAD</td><td>127</td><td>APPLAUSE</td></tr></tbody></table>
-<table class="param-cols cols-4"><tbody><tr><td>SYN-BRASS-1</td><td>SWEEP-PAD</td><td>128</td><td>GUN-SHOT</td></tr></tbody></table>
-<h4 id="syn-brass-2" class="param-name">SYN-BRASS-2</h4>
-<p>Note that the names listed above are as they appear in the TS-10, and not as they appear in the <span class="mode">General MIDI</span> Spec. The only differences are in spelling.</p>
-<h3 id="gm-and-gs-percussion-key-maps-channel-10">GM and GS Percussion Key Maps (Channel 10)</h3>
-<div class="vfd-callouts top"><div>MIDI</div><div>1 - STANDARD-</div><div>9 - ROOM-KIT</div></div>
-<p>33 - JAZZ-KIT</p>
-<table class="param-cols cols-6"><tbody><tr><td>35</td><td>B1</td><td>Kick Drum 2</td><td>Kick Drum 2</td><td>Kick Drum</td><td>Kick Drum</td></tr><tr><td>36</td><td>C2</td><td>Kick Drum 1</td><td>Kick Drum 1</td><td>Mondo Kick</td><td>Elec Bass Drum</td></tr></tbody></table>
-<table class="data-table"><thead><tr><th>___ 37</th><th>C2+</th><th>Side Stick</th><th>Side Stick</th><th>Side Stick</th><th>Side Stick</th></tr></thead><tbody><tr><td>38</td><td>D2</td><td>Acoustic Snare</td><td>Acoustic Snare</td><td>Gated Snare</td><td>Electric Snare</td></tr><tr><td>___ 39</td><td>D2+</td><td>Hand Clap</td><td>Hand Clap</td><td>Hand Clap</td><td>Hand Clap</td></tr><tr><td>40</td><td>E2</td><td>Electric Snare</td><td>Electric Snare</td><td>Electric Snare</td><td>Gated Snare</td></tr><tr><td>41</td><td>F2</td><td>Low Floor Tom</td><td>Low Room Tom</td><td>Low Room Tom</td><td>Elec Low Tom</td></tr><tr><td>___ 42</td><td>F2+</td><td>Closed Hi-Hat</td><td>Closed Hi-Hat</td><td>Closed Hi-Hat</td><td>Closed Hi-Hat</td></tr><tr><td>43</td><td>G2</td><td>High Floor Tom</td><td>Low Room Tom 2</td><td>Low Room Tom 2</td><td>Elec Low Tom</td></tr><tr><td>___ 44</td><td>G2+</td><td>Pedal Hi-Hat</td><td>Pedal Hi-Hat</td><td>Pedal Hi-Hat</td><td>Pedal Hi-Hat</td></tr><tr><td>45</td><td>A2</td><td>Low Tom</td><td>Mid Room Tom</td><td>Mid Room Tom</td><td>Elec Mid Tom</td></tr><tr><td>___ 46</td><td>A2+</td><td>Open Hi-Hat</td><td>Open Hi-Hat</td><td>Open Hi-Hat</td><td>Open Hi-Hat</td></tr><tr><td>47</td><td>B2</td><td>Low-Mid Tom</td><td>Mid Room Tom</td><td>Mid Room Tom</td><td>Elec Mid Tom</td></tr><tr><td>48</td><td>C3</td><td>High-Mid Tom</td><td>High Room Tom</td><td>High Room Tom</td><td>Elec High Tom</td></tr><tr><td>___ 49</td><td>C3+</td><td>Crash Cymbal 1</td><td>Crash Cymbal 1</td><td>Crash Cymbal 1</td><td>Crash Cymbal 1</td></tr><tr><td>50</td><td>D3</td><td>High Tom</td><td>High Room Tom</td><td>High Room Tom</td><td>Elec High Tom</td></tr><tr><td>___ 51</td><td>D3+</td><td>Ride Cymbal 1</td><td>Ride Cymbal 1</td><td>Ride Cymbal 1</td><td>Ride Cymbal 1</td></tr><tr><td>52</td><td>E3</td><td>Chinese Cymbal</td><td>Chinese Cymbal</td><td>Chinese Cymbal</td><td>Reverse Cymbal</td></tr><tr><td>53</td><td>F3</td><td>Ride Bell</td><td>Ride Bell</td><td>Ride Bell</td><td>Ride Bell</td></tr><tr><td>___ 54</td><td>F3+</td><td>Tambourine</td><td>Tambourine</td><td>Tambourine</td><td>Tambourine</td></tr><tr><td>55</td><td>G3</td><td>Splash Cymbal</td><td>Splash Cymbal</td><td>Splash Cymbal</td><td>Splash Cymbal</td></tr><tr><td>___ 56</td><td>G3+</td><td>Cowbell</td><td>Cowbell</td><td>Cowbell</td><td>Cowbell</td></tr><tr><td>57</td><td>A3</td><td>Crash Cymbal 2</td><td>Crash Cymbal 2</td><td>Crash Cymbal 2</td><td>Crash Cymbal 2</td></tr><tr><td>___ 58</td><td>A3+</td><td>Vibraslap</td><td>Vibraslap</td><td>Vibraslap</td><td>Vibraslap</td></tr><tr><td>59</td><td>B3</td><td>Ride Cymbal 2</td><td>Ride Cymbal 2</td><td>Ride Cymbal 2</td><td>Ride Cymbal 2</td></tr><tr><td>60</td><td>C4</td><td>High Bongo</td><td>High Bongo</td><td>High Bongo</td><td>High Bongo</td></tr><tr><td>___ 61</td><td>C4+</td><td>Low Bongo</td><td>Low Bongo</td><td>Low Bongo</td><td>Low Bongo</td></tr><tr><td>62</td><td>D4</td><td>Mute High Conga</td><td>Mute High Conga</td><td>Mute High Conga</td><td>Mute High Conga</td></tr><tr><td>___ 63</td><td>D4+</td><td>Open High Conga</td><td>Open High Conga</td><td>Open High Conga</td><td>Open High Conga</td></tr><tr><td>64</td><td>E4</td><td>Low Conga</td><td>Low Conga</td><td>Low Conga</td><td>Low Conga</td></tr><tr><td>65</td><td>F4</td><td>High Timbale</td><td>High Timbale</td><td>High Timbale</td><td>High Timbale</td></tr><tr><td>___ 66</td><td>F4+</td><td>Low Timbale</td><td>Low Timbale</td><td>Low Timbale</td><td>Low Timbale</td></tr><tr><td>67</td><td>G4</td><td>High Agogo</td><td>High Agogo</td><td>High Agogo</td><td>High Agogo</td></tr><tr><td>___ 68</td><td>G4+</td><td>Low Agogo</td><td>Low Agogo</td><td>Low Agogo</td><td>Low Agogo</td></tr><tr><td>69</td><td>A4</td><td>Cabasa</td><td>Cabasa</td><td>Cabasa</td><td>Cabasa</td></tr><tr><td>___ 70</td><td>A4+</td><td>Maracas</td><td>Maracas</td><td>Maracas</td><td>Maracas</td></tr><tr><td>71</td><td>B4</td><td>Short Whistle</td><td>Short Whistle</td><td>Short Whistle</td><td>Short Whistle</td></tr><tr><td>72</td><td>C5</td><td>Long Whistle</td><td>Long Whistle</td><td>Long Whistle</td><td>Long Whistle</td></tr><tr><td>___ 73</td><td>C5+</td><td>Short Guiro</td><td>Short Guiro</td><td>Short Guiro</td><td>Short Guiro</td></tr><tr><td>74</td><td>D5</td><td>Long Guiro</td><td>Long Guiro</td><td>Long Guiro</td><td>Long Guiro</td></tr><tr><td>___ 75</td><td>D5+</td><td>Claves</td><td>Claves</td><td>Claves</td><td>Claves</td></tr><tr><td>76</td><td>E5</td><td>High Wood Block</td><td>High Wood Block</td><td>High Wood Block</td><td>High Wood Block</td></tr><tr><td>77</td><td>F5</td><td>Low Wood Block</td><td>Low Wood Block</td><td>Low Wood Block</td><td>Low Wood Block</td></tr><tr><td>___ 78</td><td>F5+</td><td>Mute Cuica</td><td>Mute Cuica</td><td>Mute Cuica</td><td>Mute Cuica</td></tr><tr><td>79</td><td>G5</td><td>Open Cuica</td><td>Open Cuica</td><td>Open Cuica</td><td>Open Cuica</td></tr><tr><td>___ 80</td><td>G5+</td><td>Mute Triangle</td><td>Mute Triangle</td><td>Mute Triangle</td><td>Mute Triangle</td></tr><tr><td>81</td><td>A5</td><td>Open Triangle</td><td>Open Triangle</td><td>Open Triangle</td><td>Open Triangle</td></tr><tr><td>___ 82</td><td>A5+</td><td>Shaker</td><td>Shaker</td><td>Shaker</td><td>Shaker</td></tr><tr><td>83</td><td>B5</td><td>Jingle Bell</td><td>Jingle Bell</td><td>Jingle Bell</td><td>Jingle Bell</td></tr><tr><td>84</td><td>C6</td><td>Belltree</td><td>Belltree</td><td>Belltree</td><td>Belltree</td></tr><tr><td>___ 85</td><td>C6+</td><td>Castanets</td><td>Castanets</td><td>Castanets</td><td>Castanets</td></tr><tr><td>86</td><td>D6</td><td>Mute Surdo</td><td>Mute Surdo</td><td>Mute Surdo</td><td>Mute Surdo</td></tr><tr><td>___ 87</td><td>D6+</td><td>Open Surdo</td><td>Open Surdo</td><td>Open Surdo</td><td>Open Surdo</td></tr></tbody></table>
-<p>88       E6</p>
-<h3 id="gm-and-gs-percussion-key-maps-channel-10-2">GM and GS Percussion Key Maps (Channel 10)</h3>
-<table class="param-cols cols-5"><tbody><tr><td>MIDI</td><td>26 - TR-808-KIT</td><td>41 - BRUSH-KIT</td><td>49 - ORCH-</td><td>128 - MT-32-KIT</td></tr></tbody></table>
-<p>Note #                                                PERCSN</p>
-<div class="vfd-callouts top"><div>35</div><div>B1</div><div>Kick Drum 2</div></div>
-<p>Drum</p>
-<table class="data-table"><tbody><tr><td>36</td><td>C2</td><td>808 Bass Drum</td><td>Kick Drum 1</td><td>Concert Bass Drum</td><td>Bass Drum 1</td></tr><tr><td>___ 37</td><td>C2+</td><td>808 Rim Shot</td><td>Side Stick</td><td>Side Stick</td><td>Rim Shot</td></tr><tr><td>38</td><td>D2</td><td>808 Snare Drum</td><td>Brush Tap</td><td>Concert Snare</td><td>Acoustic Snare</td></tr></tbody></table>
-<p>Drum</p>
-<div class="vfd-callouts top"><div>___ 39 40</div><div>D2+ E2</div><div>Hand Clap Electric Snare</div></div>
-<p>Drum</p>
-<table class="param-cols cols-6"><tbody><tr><td>41</td><td>F2</td><td>808 Low Tom</td><td>Low Floor Tom</td><td>Tympani F</td><td>Acoustic Low Tom</td></tr></tbody></table>
-<table class="data-table"><thead><tr><th>___ 42</th><th>F2+</th><th>808 Closed Hi-Hat</th><th>Closed Hi-Hat</th><th>Tympani F#</th><th>Closed Hi-Hat</th></tr></thead><tbody><tr><td>43</td><td>G2</td><td>808 Low Tom</td><td>High Floor Tom</td><td>Tympani G</td><td>Acoustic Low Tom</td></tr><tr><td>___ 44</td><td>G2+</td><td>808 Closed Hi-Hat</td><td>Pedal Hi-Hat</td><td>Tympani G#</td><td>Open Hi-Hat</td></tr><tr><td>45</td><td>A2</td><td>808 Mid Tom</td><td>Low Tom</td><td>Tympani A</td><td>Acoustic Mid Tom</td></tr><tr><td>___ 46</td><td>A2+</td><td>80 Open Hi-Hat</td><td>Open Hi-Hat</td><td>Tympani A#</td><td>Open Hi-Hat</td></tr><tr><td>47</td><td>B2</td><td>808 Mid Tom</td><td>Mid Tom</td><td>Tympani B</td><td>Acoustic Mid Tom</td></tr><tr><td>48</td><td>C3</td><td>808 High Tom</td><td>High Tom</td><td>Tympani C</td><td>Acoustic High Tom</td></tr><tr><td>___ 49</td><td>C3+</td><td>808 Cymbal</td><td>Crash Cymbal 1</td><td>Tympani C#</td><td>Crash Cymbal</td></tr><tr><td>50</td><td>D3</td><td>808 High Tom</td><td>High Tom</td><td>Tympani D</td><td>Acoustic High Tom</td></tr><tr><td>___ 51</td><td>D3+</td><td>Ride Cymbal 1</td><td>Ride Cymbal 1</td><td>Tympani D#</td><td>Ride Cymbal 1</td></tr><tr><td>52</td><td>E3</td><td>Chinese Cymbal</td><td>Chinese Cymbal</td><td>Tympani E</td><td></td></tr><tr><td>53</td><td>F3</td><td>Ride Bell</td><td>Ride Bell</td><td>Tympani F</td><td></td></tr><tr><td>___ 54</td><td>F3+</td><td>Tambourine</td><td>Tambourine</td><td>Tambourine</td><td>Tambourine</td></tr><tr><td>55</td><td>G3</td><td>Splash Cymbal</td><td>Splash Cymbal</td><td>Splash Cymbal</td><td></td></tr><tr><td>___ 56</td><td>G3+</td><td>808 Cowbell</td><td>Cowbell</td><td>Cowbell</td><td>Cowbell</td></tr><tr><td>57</td><td>A3</td><td>Crash Cymbal 2</td><td>Crash Cymbal 2</td><td>Concert Cymbal 2</td><td></td></tr><tr><td>___ 58</td><td>A3+</td><td>Vibraslap</td><td>Vibraslap</td><td>Vibraslap</td><td></td></tr><tr><td>59</td><td>B3</td><td>Ride Cymbal 2</td><td>Ride Cymbal 2</td><td>Concert Cymbal 1</td><td></td></tr><tr><td>60</td><td>C4</td><td>High Bongo</td><td>High Bongo</td><td>High Bongo</td><td>High Bongo</td></tr><tr><td>___ 61</td><td>C4+</td><td>Low Bongo</td><td>Low Bongo</td><td>Low Bongo</td><td>Low Bongo</td></tr><tr><td>62</td><td>D4</td><td>808 High Conga</td><td>Mute High Conga</td><td>Mute High Conga</td><td>Mute High Conga</td></tr><tr><td>___ 63</td><td>D4+</td><td>808 Mid Conga</td><td>Open High Conga</td><td>Open High Conga</td><td>High Conga</td></tr><tr><td>64</td><td>E4</td><td>808 Low Conga</td><td>Low Conga</td><td>Low Conga</td><td>Low Conga</td></tr><tr><td>65</td><td>F4</td><td>High Timbale</td><td>High Timbale</td><td>High Timbale</td><td>High Timbale</td></tr><tr><td>___ 66</td><td>F4+</td><td>Low Timbale</td><td>Low Timbale</td><td>Low Timbale</td><td>Low Timbale</td></tr><tr><td>67</td><td>G4</td><td>High Agogo</td><td>High Agogo</td><td>High Agogo</td><td>High Agogo</td></tr><tr><td>___ 68</td><td>G4+</td><td>Low Agogo</td><td>Low Agogo</td><td>Low Agogo</td><td>Low Agogo</td></tr><tr><td>69</td><td>A4</td><td>Cabasa</td><td>Cabasa</td><td>Cabasa</td><td>Cabasa</td></tr><tr><td>___ 70</td><td>A4+</td><td>808 Maracas</td><td>Maracas</td><td>Maracas</td><td>Maracas</td></tr><tr><td>71</td><td>B4</td><td>Short Whistle</td><td>Short Whistle</td><td>Short Whistle</td><td>Short Whistle</td></tr><tr><td>72</td><td>C5</td><td>Long Whistle</td><td>Long Whistle</td><td>Long Whistle</td><td>Long Whistle</td></tr><tr><td>___ 73</td><td>C5+</td><td>Short Guiro</td><td>Short Guiro</td><td>Short Guiro</td><td>Quijada</td></tr><tr><td>74</td><td>D5</td><td>Long Guiro</td><td>Long Guiro</td><td>Long Guiro</td><td></td></tr><tr><td>___ 75</td><td>D5+</td><td>808 Claves</td><td>Claves</td><td>Claves</td><td>Claves</td></tr><tr><td>76</td><td>E5</td><td>High Wood Block</td><td>High Wood Block</td><td>High Wood Block</td><td></td></tr><tr><td>77</td><td>F5</td><td>Low Wood Block</td><td>Low Wood Block</td><td>Low Wood Block</td><td></td></tr><tr><td>___ 78</td><td>F5+</td><td>Mute Cuica</td><td>Mute Cuica</td><td>Mute Cuica</td><td>Punch</td></tr><tr><td>79</td><td>G5</td><td>Open Cuica</td><td>Open Cuica</td><td>Open Cuica</td><td>Heartbeat</td></tr><tr><td>___ 80</td><td>G5+</td><td>Mute Triangle</td><td>Mute Triangle</td><td>Mute Triangle</td><td>Footsteps 1</td></tr><tr><td>81</td><td>A5</td><td>Open Triangle</td><td>Open Triangle</td><td>Open Triangle</td><td>Footsteps 2</td></tr><tr><td>___ 82</td><td>A5+</td><td>Shaker</td><td>Shaker</td><td>Shaker</td><td>Applause</td></tr><tr><td>83</td><td>B5</td><td>Jingle Bell</td><td>Jingle Bell</td><td>Jingle Bell</td><td>Creaking</td></tr><tr><td>84</td><td>C6</td><td>Belltree</td><td>Belltree</td><td>Belltree</td><td>Door</td></tr><tr><td>___ 85</td><td>C6+</td><td>Castanets</td><td>Castanets</td><td>Castanets</td><td>Scratch</td></tr><tr><td>86</td><td>D6</td><td>Mute Surdo</td><td>Mute Surdo</td><td>Mute Surdo</td><td>Wind Chime</td></tr><tr><td>___ 87</td><td>D6+</td><td>Open Surdo</td><td>Open Surdo</td><td>Open Surdo</td><td></td></tr><tr><td>88</td><td>E6</td><td>Applause</td><td></td><td></td><td></td></tr></tbody></table>
-<ul>
-  <li>There are four additional sounds assigned to keys in the MT-32-KIT: 90 (F6+) Crash 92 (G6+) Train 93 (A6) Jet 94 (A6+) Helicopter</li>
-</ul>
-<h3 id="using-general-midi-in-the-real-world">Using General MIDI in the Real World</h3>
-<p>MIDI Out</p>
-<p>External  MIDI Interface (if applicable)               MIDI In</p>
-<p>Internal card, parallel port, modem, or printer port</p>
-<p>Computer (with MIDI Interface) connected to TS Keyboard</p>
-<h3 id="using-ts-10-general-midi-sounds-with-an-external-gm-sequencer">Using TS-10 General MIDI Sounds with an External GM Sequencer</h3>
-<h4 id="connecting-the-ts-10-keyboard-to-a-computer-or-other-general-midi-sequ">Connecting the TS-10 keyboard to a computer (or other General MIDI sequencer)</h4>
-<p>1. Power down all electronic devices before making any connections.</p>
-<p>2. Using a MIDI Cable, connect the MIDI In jack of the TS-10 to the MIDI Out jack of the computer/hardware sequencer/sequence player.</p>
-<aside class="note"><p>Note: Many computers do not have a MIDI jack built into them, and require an additional MIDI Interface connector between the computer and the TS-10.</p></aside>
-<p>3. Make sure the proper amplification is connected to the TS-10, and power on the computer, the TS-10 keyboard, and the amplification system (in that order).</p>
-<aside class="tip"><p>Headphones connected to the Phones jack of the TS-10 will work fine in</p></aside>
-<p><span class="mode">General MIDI</span> mode, and allow you to work late hours without disturbing others.</p>
-<p>To Enable  <span class="mode">General MIDI</span> on the TS-10 1.   Press the <kbd class="button">MIDI Control</kbd> button. The display shows:</p>
-<figure class="vfd-unit has-page">
+
+    <div style="float:right;"><img style=" width: 250px; height:250px;" src="images/GENERAL_MIDI_LOGO.svg"
+        alt="General MIDI Logo"></div>
+    <p><dfn class="term">General MIDI (GM)</dfn> is an industry standard for program mapping that defines 128 sounds and
+      their locations. This means that if a device conforms to the GM standard, MIDI Program Change #1 will always call
+      up an acoustic piano,
+      MIDI Program Change #62 will always call up a brass section, etc. Although the actual sounds (tone and quality)
+      will vary from product to product, each specific MIDI Program number will always call up the same <em>type</em> of
+      sound.</p>
+    <h4 id="sound-map">Sound Map</h4>
+    <p>The General MIDI Sound Map (found later in this section) lists the 128 General MIDI sounds in the TS-10 ROM and
+      their assigned General MIDI Program Change numbers.</p>
+    <h4 id="percussion">Percussion</h4>
+    <p>General MIDI also includes a Percussion Key Map, defining specific drum voices for each key. To avoid confusion,
+      General MIDI always assigns percussion to MIDI channel 10. The General MIDI</span></td>
+      <td>Percussion Key Map can be found after the General MIDI Sound Map.
+    </p>
+    <h4 id="gs-mt-32-compatibility" class="param-name">GS/MT-32 Compatibility</h4>
+    <p>GS is an extended MIDI sound specification originated by Roland® Corp. Although we provide the GS Drum Maps
+      (listed later) and MT-32 Program Change Map for Roland Sound Canvas™ compatibility, the TS-10 is not GS compatible
+      and does not contain the GS Alternate Sound Banks.</p>
+
+    <h2 id="other-general-midi-requirements" class="param-name">Other General MIDI Requirements</h2>
+    <p>A General MIDI sound module must respond to all 16 MIDI channels, with dynamic voice allocation, and a minimum of
+      24 voices. It also must respond to velocity, pitch bend, mod wheel, volume and pan, expression, sustain, and the
+      All Notes Off and Reset All Controllers messages.</p>
+    <p>With these controllers supported, a composition that relies on note articulations and mix settings can be played
+      back and still sound correct when played by any GM sound module. The TS-10 supports all of the above MIDI
+      messages, and fully conforms to the General MIDI Specification.</p>
+
+    <h2 id="why-use-general-midi">Why use General MIDI?</h2>
+    <p>While the TS-10 instruments are a superb sound source, with greater fidelity and more programmability than most
+      GM modules, there are interesting applications for General MIDI that can enhance your music making.</p>
+    <ul>
+      <li> There is an interesting genre of music software (for your computer) that creates backing patterns for you to
+      play along with, for pleasure and study.</li>
+      <li> Many pre-recorded pieces of music can be purchased for home listening, solo performance backing tracks (e.g.,
+      instant karaoke), and other applications. Note that this application requires a computer/hardware
+      sequencer/sequencer player and some type of computer software (such as those listed above). Look through current
+      issues of music/computer software magazines for listings (these products must conform to the Standard MIDI File
+      [SMF] format* in order to use them properly).</li>
+      </ul>
+    <aside class="asterisk"><h5><em>* A Standard MIDI File (SMF) is a MIDI protocol designed for sharing sequences between different products.</em></h5></aside>
+    <ul>
+      <li> There is an ever-increasing amount of educational software that uses General MIDI for such applications as ear
+      training, music lessons, etc.</li>
+    <li> Some computer games offer General MIDI as an optional sound source. The TS-10 will provide high quality sound
+      variations for this enjoyable leisure activity, enhancing the excitement and thrill of your computer games.</li>
+    </ul>
+      <h1 id="general-midi-sound-map" class="param-name">General MIDI Sound Map</h1> 
+      The following map shows the General MIDI sound name and program change number of each
+      sound as they appear in the TS-10. This map also shows how General MIDI divides the instruments into 16 categories
+      of similar sounds:</li>
   
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        <th class="page-tag-slot"></th>
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button" aria-pressed="true"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell page-label">MIDI</td><td class="cell">BASE-CHAN=01</td><td class="cell selected">GMIDI=OFF</td><td class="cell">SEND=TRACK</td></tr>
-      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MODE=MULTI</td><td class="cell">VELS/XPOS=BOTH</td><td class="cell">XCTRL=002</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        <th class="page-tag-slot"></th>
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
+    <table border="2px" class="data-table" >
+      <thead>
+        <tr>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight: bold;">1-8</td>
+          <td style="font-weight: bold;">PIANO</td>
+          <td style="font-weight: bold;">33-40</td>
+          <td style="font-weight: bold;">BASS</td>
+          <td style="font-weight: bold;">65-72</td>
+          <td style="font-weight: bold;">REED</td>
+          <td style="font-weight: bold;">97-104</td>
+          <td style="font-weight: bold;">SYNTH EFFECTS</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>GRAND-PIANO</td>
+          <td>33</td>
+          <td>ACOUSTIC-BS</td>
+          <td>65</td>
+          <td>SOPRANO-SAX</td>
+          <td>97</td>
+          <td>EFFECTS</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>BRITE-PIANO</td>
+          <td>34</td>
+          <td>FINGERED-BS</td>
+          <td>66</td>
+          <td>ALTO-SAX</td>
+          <td>98</td>
+          <td>ICE-RAIN</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ELEC-GRAND</td>
+          <td>35</td>
+          <td>PICKED-BASS</td>
+          <td>67</td>
+          <td>TENOR-SAX</td>
+          <td>99</td>
+          <td>SOUNDTRACK</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>HONKY-TONK</td>
+          <td>36</td>
+          <td>FRETLESS-BS</td>
+          <td>68</td>
+          <td>BARI-SAX</td>
+          <td>100</td>
+          <td>CRYSTAL</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ELEC-PIANO1</td>
+          <td>37</td>
+          <td>SLAP-BASS-1</td>
+          <td>69</td>
+          <td>OBOE</td>
+          <td>101</td>
+          <td>ATMOSPHERE</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ELEC-PIANO2</td>
+          <td>38</td>
+          <td>SLAP-BASS-2</td>
+          <td>70</td>
+          <td>ENGLISH-HRN</td>
+          <td>102</td>
+          <td>BRIGHTNESS</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>HARPSICHORD</td>
+          <td>39</td>
+          <td>SYNTH-BASS1</td>
+          <td>71</td>
+          <td>BASSOON</td>
+          <td>103</td>
+          <td>GOBLINS</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>CLAVINET</td>
+          <td>40</td>
+          <td>SYNTH-BASS2</td>
+          <td>72</td>
+          <td>CLARINET</td>
+          <td>104</td>
+          <td>ECHO-DROPS<br>STAR-THEME</td>
+        </tr>
+
+        <tr>
+          <td style="font-weight: bold;">9-16</td>
+          <td style="font-weight: bold;">CHROMATIC<br>PERCUSSION</td>
+          <td style="font-weight: bold;">41-48</td>
+          <td style="font-weight: bold;">STRINGS</td>
+          <td style="font-weight: bold;">73-80</td>
+          <td style="font-weight: bold;">PIPE</td>
+          <td style="font-weight: bold;">105-112</td>
+          <td style="font-weight: bold;">ETHNIC</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>CELESTA</td>
+          <td>41</td>
+          <td>VIOLIN</td>
+          <td>73</td>
+          <td>PICCOLO</td>
+          <td>105</td>
+          <td>SITAR</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>GLOCKNSPIEL</td>
+          <td>42</td>
+          <td>VIOLA</td>
+          <td>74</td>
+          <td>FLUTE</td>
+          <td>106</td>
+          <td>BANJO</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>MUSIC-BOX</td>
+          <td>43</td>
+          <td>CELLO</td>
+          <td>75</td>
+          <td>RECORDER</td>
+          <td>107</td>
+          <td>SHAMISEN</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>VIBRAPHONE</td>
+          <td>44</td>
+          <td>CONTRABASS</td>
+          <td>76</td>
+          <td>PANFLUTE</td>
+          <td>108</td>
+          <td>KOTO</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>MARIMBA</td>
+          <td>45</td>
+          <td>TREMOLO-STR</td>
+          <td>77</td>
+          <td>BOTTLE-BLOW</td>
+          <td>109</td>
+          <td>KALIMBA</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>XYLOPHONE</td>
+          <td>46</td>
+          <td>PIZZI-STRGS</td>
+          <td>78</td>
+          <td>SHAKUHACHI</td>
+          <td>110</td>
+          <td>BAGPIPES</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>TUBULR-BELLS</td>
+          <td>47</td>
+          <td>HARP</td>
+          <td>79</td>
+          <td>WHISTLE</td>
+          <td>111</td>
+          <td>FIDDLE</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>DULCIMER</td>
+          <td>48</td>
+          <td>TYMPANI</td>
+          <td>80</td>
+          <td>OCARINA</td>
+          <td>112</td>
+          <td>SHANNAI</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">17-24</td>
+          <td style="font-weight: bold;">ORGAN</td>
+          <td style="font-weight: bold;">49-56</td>
+          <td style="font-weight: bold;">ENSEMBLE</td>
+          <td style="font-weight: bold;">81-88</td>
+          <td style="font-weight: bold;">SYNTH LEAD</td>
+          <td style="font-weight: bold;">113-120</td>
+          <td style="font-weight: bold;">PERCUSSIVE</td>
+        </tr>
+
+        <tr>
+          <td>17</td>
+          <td>DRWBAR-ORGN</td>
+          <td>49</td>
+          <td>STRG-ENSMBL</td>
+          <td>81</td>
+          <td>SQUARE-WAVE</td>
+          <td>113</td>
+          <td>TINKLE-BELL</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>PERC-ORGAN</td>
+          <td>50</td>
+          <td>SLOW-STRNGS</td>
+          <td>82</td>
+          <td>SAW-WAVE</td>
+          <td>114</td>
+          <td>AGOGO</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>ROCK-ORGAN</td>
+          <td>51</td>
+          <td>SYNTH-STR-1</td>
+          <td>83</td>
+          <td>CALLIOPE</td>
+          <td>115</td>
+          <td>STEEL-DRUMS</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>CHRCH-ORGAN</td>
+          <td>52</td>
+          <td>SYNTH-STR-2</td>
+          <td>84</td>
+          <td>CHIFF-LEAD</td>
+          <td>116</td>
+          <td>WOODBLOCK</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>REED-ORGAN</td>
+          <td>53</td>
+          <td>CHOIR-AAHS</td>
+          <td>85</td>
+          <td>CHARANG</td>
+          <td>117</td>
+          <td>TAIKO-DRUM</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>ACCORDION</td>
+          <td>54</td>
+          <td>VOICE-OOHS</td>
+          <td>86</td>
+          <td>SOLO-VOICE</td>
+          <td>118</td>
+          <td>MELODIC-TOM</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>HARMONICA</td>
+          <td>55</td>
+          <td>SYNTH-VOICE</td>
+          <td>87</td>
+          <td>SAW-FIFTHS</td>
+          <td>119</td>
+          <td>SYNTH-DRUM</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>BANDONEON</td>
+          <td>56</td>
+          <td>ORCH-HIT</td>
+          <td>88</td>
+          <td>BASS+LEAD</td>
+          <td>120</td>
+          <td>REVERSE-CYM</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">25-32</td>
+          <td style="font-weight: bold;">GUITAR</td>
+          <td style="font-weight: bold;">57-64</td>
+          <td style="font-weight: bold;">BRASS</td>
+          <td style="font-weight: bold;">89-96</td>
+          <td style="font-weight: bold;">SYNTH PAD</td>
+          <td style="font-weight: bold;">121-128</td>
+          <td style="font-weight: bold;">SOUND EFFECTS</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>NYL-STR-GTR</td>
+          <td>57</td>
+          <td>TRUMPET</td>
+          <td>89</td>
+          <td>NEW-AGE-PAD</td>
+          <td>121</td>
+          <td>GT-FRETNOIS</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>STL-STR-GTR</td>
+          <td>58</td>
+          <td>TROMBONE</td>
+          <td>90</td>
+          <td>WARM-PAD</td>
+          <td>122</td>
+          <td>BREATHNOISE</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>JAZZ-GUITAR</td>
+          <td>59</td>
+          <td>TUBA</td>
+          <td>91</td>
+          <td>POLYSYNTH</td>
+          <td>123</td>
+          <td>SEASHORE</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>CLEAN-GUITR</td>
+          <td>60</td>
+          <td>MUTED-TRMPT</td>
+          <td>92</td>
+          <td>SPACE-VOICE</td>
+          <td>124</td>
+          <td>BIRD-TWEET</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>MUTED-GUITR</td>
+          <td>61</td>
+          <td>FRENCH-HORN</td>
+          <td>93</td>
+          <td>BOWED-GLASS</td>
+          <td>125</td>
+          <td>TELEPHONE</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>OVRDRIV-GTR</td>
+          <td>62</td>
+          <td>BRASS-SECTN</td>
+          <td>94</td>
+          <td>METALIC-PAD</td>
+          <td>126</td>
+          <td>HELICOPTER</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>DISTORT-GTR</td>
+          <td>63</td>
+          <td>SYN-BRASS-1</td>
+          <td>95</td>
+          <td>HALO-PAD</td>
+          <td>127</td>
+          <td>APPLAUSE</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>GTR-HRMONIC</td>
+          <td>64</td>
+          <td>SYN-BRASS-2</td>
+          <td>96</td>
+          <td>SWEEP-PAD</td>
+          <td>128</td>
+          <td>GUN-SHOT</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Note that the names listed above are as they appear in the TS-10, and not as they appear in the General MIDI
+      Spec. The only differences are in spelling.</p>
+    <h3 id="gm-and-gs-percussion-key-maps-channel-10">GM and GS Percussion Key Maps (Channel 10)</h3>
+
+    <table border="2px" class="data-table">
+      <thead>
+        <tr>
+          <th>MIDI Note #</th>
+          <th>Key Name</th>
+          <th>1 - STANDARD KIT<br>33-JAZZ-KIT</th>
+          <th>9 - ROOM KIT</th>
+          <th>17 - POWER-KIT</th>
+          <th>25 - ELECTRONIC KIT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>35</td>
+          <td>B1</td>
+          <td>Kick Drum 2</td>
+          <td>Kick Drum 2</td>
+          <td>Kick Drum</td>
+          <td>Kick Drum</td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>C2</td>
+          <td>Kick Drum 1</td>
+          <td>Kick Drum 1</td>
+          <td>Mondo Kick</td>
+          <td>Elec Bass Drum</td>
+        </tr>
+        <tr>
+          <td>___ 37</td>
+          <td>C2+</td>
+          <td>Side Stick</td>
+          <td>Side Stick</td>
+          <td>Side Stick</td>
+          <td>Side Stick</td>
+        </tr>
   
-  
-</figure>
-<p>2. On the first <span class="page-name">MIDI Control</span> sub-page, press the upper middle soft button on the display to select the <span class="param">GMIDI</span> parameter (it should be underlined).</p>
-<p>3.   Press the <kbd class="button">Up Arrow</kbd> button to enter <span class="mode">General MIDI</span> mode.</p>
-<p>If the sequencer is running, the SEQUENCER MUST BE STOPPED message will be displayed. If the sequencer is stopped, the “SAVE CHANGES?” prompt will be displayed (if necessary). Otherwise, the following prompt will be displayed:</p>
-<figure class="vfd-unit">
-  
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell">ENTER GENERAL MIDI MODE</td><td class="cell">&nbsp;</td><td class="cell">*YES*</td></tr>
-      <tr><td class="cell">&nbsp;</td><td class="cell">&nbsp;</td><td class="cell">*NO*</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  
-  
-</figure>
-<p>4. Pressing the soft button beneath <span class="lcd">*NO*</span> will leave the TS-10 system unchanged, returning you to the first <span class="page-name">MIDI Control</span> sub-page.</p>
-<p>5. Pressing the soft button above <span class="lcd">*YES*</span> will enable <span class="mode">General MIDI</span> Mode. All LEDs will be off and all buttons (except the Arrow buttons and the soft buttons) will be disabled. The TS-10 will display the <span class="page-name">General MIDI Mode</span> page as follows:</p>
-<figure class="vfd-unit">
-  <div class="vfd-callouts top"><div>Press here for GM-PANIC RESET</div><div>MIDI reception ON/OFF</div><div>Press here to exit GM Mode</div></div>
-  <div class="vfd-bezel">
-  <table>
-    <colgroup><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-    <thead>
-      <tr class="soft-row top">
-        
-        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-      </tr>
-    </thead>
-    <tbody class="vfd-screen">
-      <tr><td class="cell">GENERAL MIDI MODE</td><td class="cell">RECV=ON</td><td class="cell">*EXIT*</td></tr>
-      <tr><td class="cell">GM-CHAN=01</td><td class="cell">GM-PROG=001</td><td class="cell">GM-PROGNAME</td></tr>
-    </tbody>
-    <tfoot>
-      <tr class="soft-row bottom">
-        
-        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-      </tr>
-    </tfoot>
-  </table>
-  </div>
-  <div class="vfd-callouts bottom"><div>General MIDI Track/Channel Number</div><div>General MIDI Program Number</div><div>General MIDI Sound Name</div></div>
-  
-</figure>
-<p>The TS-10 behaves as though an enlarged 16-track sequence has been selected, and as though the current MIDI Mode=<span class="value">MULTI</span>. Incoming MIDI will be received on all 16 MIDI channels, to 16 discrete inbound Track/Channels. The default effect algorithm (46 CHORUS + REVERB 2) will be installed, and all Track/Channels will be routed through the effect.</p>
-<p>When you now run the external computer or hardware sequencer, you will hear the proper sounds played from the TS-10 as program changes and note/controller data is transmitted to the TS-10 via the MIDI In jack.</p>
-<table class="defn-table"><tbody><tr><td><span class="lcd">MIDI</span></td><td>Out in <span class="mode">General MIDI</span> Mode The TS-10 keyboard will always play the sound assigned to the currently displayed Track/Channel number. Local playing on the TS-10 keyboard and controllers will be transmitted via the MIDI Out jack on the displayed MIDI Channel number. This allows you to connect the</td></tr><tr><td><span class="lcd">TS-10 MIDI</span></td><td>Out jack to the MIDI In jack of a computer sequencer/hardware sequencer/other</td></tr><tr><td><span class="lcd">MIDI</span></td><td>Sound module.</td></tr></tbody></table>
-<p>This feature adds MIDI Controller capability to the TS-10 while in <span class="mode">General MIDI</span> Mode.</p>
-<h2 id="ts-10-general-midi-parameters">TS-10 General MIDI Parameters</h2>
-<h4 id="recv-midi-reception" class="param-name"><span class="param">RECV (MIDI Reception)</span><span class="range">Range: ON or OFF</span></h4>
-<p>This parameter is set to receive MIDI data by default (<span class="lcd">RECV=ON)</span>. By changing the RECV value for each MIDI channel, you can define how many Track/Channels you want to receive data via MIDI.</p>
-<p>Setting <span class="lcd">RECV=OFF</span> will disable reception of MIDI notes, controllers and program changes on the displayed MIDI channel. Sounds can still be played from the keyboard, and live playing will still transmit via MIDI on the displayed MIDI channel.</p>
-<p>When <span class="lcd">RECV=OFF</span>, the Track/Channel volume will be set to full on (127), so that your live playing can use the full dynamic range. Resetting RECV to ON will reset the Track/Channel volume back to the <span class="mode">General MIDI</span> default value of 100.</p>
-<aside class="tip"><p>When set to <span class="lcd">RECV=OFF</span>, this parameter allows for “music-minus-one” applications in <span class="mode">General MIDI</span> mode. By setting this parameter to <span class="value">OFF</span>, you disable incoming MIDI for the selected Track/Channel, boost the volume, and can play the assigned sound live from the keyboard as the remaining sequence tracks play back via incoming MIDI.</p></aside>
-<p>No matter what the setting of this parameter, a CVP-1 Pedal connected to the Pedal•CV Jack will always control the volume of the selected Track/Channel.</p>
-<h4 id="gm-chan" class="param-name"><span class="param">GM-CHAN</span><span class="range">Range: 01 to 16</span></h4>
-<p>This parameter is used to select and view the sounds assigned to each MIDI Channel. When this parameter is selected, the Data Entry Controls will scroll through all 16 Track/Channels.</p>
-<p><span class="lcd">GM-CHAN=10</span> is permanently assigned to play Drum Maps only. When Track/Channel 10 is selected, the GM-PROG parameter will scroll through the nine available GM/GS Drum Maps.</p>
-<p>Playing on the TS-10 keyboard will always be transmitted on the displayed MIDI channel. If the GM-CHAN value is changed while a note is held down, local voices will be silenced on the previously selected Track/Channel.</p>
-<h4 id="gm-prog" class="param-name"><span class="param">GM-PROG</span><span class="range">Range: 001 to 128</span></h4>
-<p>The GM-PROG (<span class="mode">General MIDI</span> Program number) parameter determines which sound will be assigned to each MIDI Channel. When this parameter is selected, the Data Entry Controls will change which of the 128 <span class="mode">General MIDI</span> ROM Sounds is assigned to the currently displayed Track/Channel. The corresponding Program Change message will be transmitted via MIDI whenever this parameter is edited.</p>
-<p>Program Changes received on MIDI channels 1-9 and 11-16 will assign programs to the 16 Track/Channels from the 128 <span class="mode">General MIDI</span> sounds in ROM. MIDI Channel 10 can only access the nine GM/GS Drum Maps, and will receive the corresponding GS Drum Map Program change value (<span class="lcd">1=STANDRD-KIT</span>, <span class="lcd">9=ROOM-KIT</span>, <span class="lcd">17=POWER-KIT</span>, <span class="lcd">25=ELCTRNC-KIT</span>, <span class="lcd">26=TR-808-KIT</span>, <span class="lcd">33=JAZZ-KIT</span>, <span class="lcd">41=BRUSH-KIT</span>, <span class="lcd">49=ORCH-PERCSN</span>, <span class="lcd">128=MT-32-KIT)</span>.</p>
-<p>The TS-10 keyboard will always play the sound assigned to the displayed Track/Channel number.</p>
-<aside class="button-float"><table class="button-id"><tr><td><span class="keycap-fallback" aria-hidden="true"></span><div class="button-label">Sounds</div></td></tr></table></aside>
-<p>Manually Assigning  GM Sounds to Each MIDI Channel 1.   Press the soft button beneath the GM-PROG parameter.</p>
-<p>2.   Use the Data Entry Controls to scroll through the different GM Sounds.</p>
-<p>The General  MIDI Sound names change when you use the Data Entry Controls. These sound names and their associated GM Program numbers are listed on the <span class="mode">General MIDI</span></p>
-<p>Sound Map found earlier in this section.</p>
-<aside class="note"><p>Note: Most sequence data contains MIDI Program Change messages intented to assign the correct sounds to each MIDI Track/Channel. These incoming MIDI program changes will probably change any manually assigned sounds. If you wish to prevent this from happening, you should disable program change transmission from the external MIDI sequencer.</p></aside>
-<p><span class="mode">General MIDI</span> “Panic” button Some remote MIDI Devices may leave notes and controller values “dangling,” causing Track/Channels to function improperly. The TS-10 has a solution to this problem — the MIDI “Panic” button. Pressing the upper left soft button above GENERAL MIDI <span class="param">MODE</span> will invoke the GM-PANIC RESET function:</p>
-<p>“GM-PANIC RESET” will be momentarily displayed. All TS-10 and MIDI voices on all 16 Track/Channels will be silenced. The following MIDI messages will be transmitted on all 16</p>
-<p>MIDI  Channels: All Notes Off, Reset All Controllers, key-ups for all keys down, sustain and sostenuto pedal ups, and controllers will be normalized to the <span class="mode">General MIDI</span> default values.</p>
-<p>Program Changes will be transmitted corresponding to the sounds assigned to each of the 16</p>
-<p>Track/Channels.</p>
-<p>System and MIDI Control Settings in GM Mode The following System and <span class="page-name">MIDI Control</span> page parameter settings are installed in <span class="mode">General MIDI</span> mode (see Sections <a class="refer-to" href="02-system.html#section-2-system-page-parameters">2</a> and <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">3</a> for information about these parameters). All other parameters are reset to values appropriate for <span class="mode">General MIDI</span> reception:</p>
-<ul>
-  <li><span class="page-name">System</span> page <span class="param">TUNE</span> and PITCH-TABLE settings are retained.</li>
-  <li><span class="page-name">System</span> page <span class="param">TOUCH</span> and <span class="param">VEL-MAX</span> settings are retained.</li>
-  <li><span class="page-name">System</span> page <span class="param">PEDAL</span> is set to <span class="value">VOL</span>.</li>
-  <li><span class="page-name">System</span> page FOOT-SW1-R and SW2-R are set to <span class="param">SUSTAIN</span>.</li>
-  <li><span class="page-name">System</span> page FOOT-SW1-L and SW2-L are set to <span class="param">SOSTENUTO</span> if they were previously set to any value other than <span class="lcd">*UNUSED*</span>. If they were set to <span class="lcd">*UNUSED*</span>, they will remain <span class="lcd">*UNUSED*</span>.</li>
-  <li><span class="page-name">MIDI Control</span> page <span class="param">SYS-EX</span> setting is set to ON.</li>
-</ul>
-<p>Exiting <span class="mode">General MIDI</span> will restore your original settings.</p>
-<h3 id="disabling-general-midi">Disabling General MIDI</h3>
-<h4 id="to-disable-general-midi">To Disable General MIDI</h4>
-<ul>
-  <li>Press the soft button above <span class="lcd">*EXIT*</span> to exit <span class="mode">General MIDI</span> Mode.</li>
-</ul>
-<p>The TS-10 will momentarily show:</p>
-<p>The TS-10 will then return to its previous state. The <span class="mode">General MIDI</span> Track/Channel sound assignments will be preserved in static RAM, even after power-off.</p>
-<aside class="note"><p>Note: You can also disable <span class="mode">General MIDI</span> by turning the TS-10 off, and then back on (this will not happen if the WAKE-UP parameter is set to GEN-MIDI).</p></aside>
-<h3 id="enabling-disabling-general-midi-with-system-exclusive-messages">Enabling/Disabling General MIDI with System Exclusive Messages</h3>
-<p><span class="mode">General MIDI</span> can also be enabled/disabled using Universal System Exclusive (SysEx) messages:</p>
-<h4 id="turning-general-midi-on-using-sysex-messages">Turning General MIDI On using SysEx Messages</h4>
-<div class="vfd-callouts top"><div>F0</div><div>7E</div><div>&lt;Device ID&gt;</div></div>
-<table class="defn-table"><thead><tr><th>Turning General</th><th>MIDI Off using SysEx Messages</th></tr></thead><tbody><tr><td><span class="lcd">F0 7E</span></td><td>Universal non-real-time SysEx header</td></tr><tr><td>&lt;Device ID&gt;</td><td>ID of target device (suggest using 7F: Broadcast)</td></tr><tr><td><span class="lcd">09</span></td><td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td></tr><tr><td><span class="lcd">01</span></td><td>sub-ID #<span class="lcd">2=G</span>eneral MIDI On</td></tr><tr><td><span class="lcd">F7</span></td><td>EOX (end of SysEx)</td></tr></tbody></table>
-<div class="vfd-callouts top"><div>F0</div><div>7E</div><div>&lt;Device ID&gt;</div></div>
-<table class="defn-table"><thead><tr><th>More</th><th>about SysEx Messages</th></tr></thead><tbody><tr><td><span class="lcd">F0 7E</span></td><td>Universal non-real-time SysEx header</td></tr><tr><td>&lt;Device ID&gt;</td><td>ID of target device (suggest using 7F: Broadcast)</td></tr><tr><td><span class="lcd">09</span></td><td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td></tr><tr><td><span class="lcd">02</span></td><td>sub-ID #<span class="lcd">2=G</span>eneral MIDI Off</td></tr><tr><td><span class="lcd">F7</span></td><td>EOX (end of SysEx)</td></tr></tbody></table>
-<ul>
-  <li>The MIDI Control <span class="param">SYS-EX</span> parameter must be set to <span class="lcd">SYS-EX=ON</span> in order to receive Universal SysEx messages.</li>
-  <li>A Universal SysEx <span class="mode">General MIDI</span> On message acts the same as answering <span class="lcd">*YES*</span> to the “ENTER GENERAL MIDI <span class="param">MODE</span>?” prompt, and displays the <span class="page-name">General MIDI Mode</span> page. The SysEx message will be ignored if the sequencer is running, or if the system is already in <span class="mode">General MIDI</span> Mode. Sequencer changes will be saved automatically, unless <span class="lcd">SAVE-CHANGES=NO</span> (on the third <span class="page-name">Sequencer Control</span> sub-page).</li>
-  <li>If the TS-10 is already in <span class="mode">General MIDI</span> mode, a Universal SysEx <span class="mode">General MIDI</span> Off message acts the same as pressing <span class="lcd">*EXIT*</span> on the <span class="mode">General MIDI</span> mode screen. This exits <span class="mode">General MIDI</span> mode and returns the TS-10 to its previous state.</li>
-  <li>When in <span class="mode">General MIDI</span> Mode, the Universal SysEx <span class="mode">General MIDI</span> Off message is the only SysEx message that will be received; all other SysEx messages are ignored.</li>
-</ul>
-<p>Sound Canvas MT-32 Mode Program Change Map The Roland® MT-32 was an early, pre-<span class="mode">General MIDI</span> multi-timbral sound module. It used a different MIDI Program Change Map than <span class="mode">General MIDI</span>. The Roland Sound Canvas™ provides an MT-32 Emulation mode, and some Standard MIDI Files are set up to use this. An MT-32 Program Change Map has been included in the TS-10 to provide Sound Canvas MT-32 emulation capability.</p>
-<p>Roland products use the Bank Select MSB (MIDI Controller 0) to change sound banks; in the Sound Canvas, sound bank 127 is designated as the MT-32 Emulation mode bank. After the TS-10 has received a Bank Select value of MSB 127, subsequent MIDI Program Changes on that MIDI channel will select the GM Sounds remapped to the Roland MT-32 Program Change Map, as below:</p>
-<p>PROG    INSTRUMENT          PROG    INSTRUMENT     PROG    INSTRUMENT      PROG    INSTRUMENT</p>
-<p>#                           #                      #                       #</p>
-<table class="data-table lookup"><tbody><tr><td>1</td><td>GRAND-PIANO</td><td>33</td><td>NEW-AGE-PAD</td><td>65</td><td>ACOUSTIC-BS</td><td>97</td><td>BRASS-SECTN</td></tr><tr><td>2</td><td>BRITE-PIANO</td><td>34</td><td>SWEEP-PAD</td><td>66</td><td>ACOUSTIC-BS</td><td>98</td><td>VIBRAPHONE</td></tr><tr><td>3</td><td>ELEC-GRAND</td><td>35</td><td>CHOIR-AAHS</td><td>67</td><td>FINGERED-BS</td><td>99</td><td>VIBRAPHONE</td></tr><tr><td>4</td><td>ELEC-PIANO2</td><td>36</td><td>BOWED-</td><td>68</td><td>SYNTH-BASS2</td><td>100</td><td>DULCIMER</td></tr><tr><td>5</td><td>ELEC-GRAND</td><td>37</td><td>GLASS</td><td>69</td><td>SLAP-BASS-2</td><td>101</td><td>TINKLE-BELL</td></tr><tr><td>6</td><td>ELEC-PIANO1</td><td>38</td><td>SOUNDTRACK</td><td>70</td><td>SLAP-BASS-1</td><td>102</td><td>GLOCKNSPIEL</td></tr></tbody></table>
-<p>7       ELEC-PIANO1         39      ATMOSPHERE     71      FRETLESS-BS     103     TUBULR-8       HONKY-TONK          40      MUSIC-BOX      72      FRETLESS-BS     104     BELLS</p>
-<p>SOLO-VOICE                                     XYLOPHONE</p>
-<table class="data-table lookup"><tbody><tr><td>9</td><td>DRWBAR-ORGN</td><td>41</td><td>POLYSYNTH</td><td>73</td><td>FLUTE</td><td>105</td><td>MARIMBA</td></tr><tr><td>10</td><td>ROCK-ORGAN</td><td>42</td><td>ICE-RAIN</td><td>74</td><td>FLUTE</td><td>106</td><td>KOTO</td></tr><tr><td>11</td><td>PERC-ORGAN</td><td>43</td><td>POLYSYNTH</td><td>75</td><td>PICCOLO</td><td>107</td><td>BANDONEON</td></tr><tr><td>12</td><td>DRWBAR-ORGN</td><td>44</td><td>ECHO-DROPS</td><td>76</td><td>PICCOLO</td><td>108</td><td>SHAKUHACHI</td></tr><tr><td>13</td><td>CHRCH-ORGAN</td><td>45</td><td>BASS+LEAD</td><td>77</td><td>RECORDER</td><td>109</td><td>WHISTLE</td></tr><tr><td>14</td><td>CHRCH-ORGAN</td><td>46</td><td>REED-ORGAN</td><td>78</td><td>PANFLUTE</td><td>110</td><td>WHISTLE</td></tr><tr><td>15</td><td>CHRCH-ORGAN</td><td>47</td><td>GLOCKNSPIEL</td><td>79</td><td>ALTO-SAX</td><td>111</td><td>BOTTLE-BLOW</td></tr><tr><td>16</td><td>ACCORDION</td><td>48</td><td>SQUARE-</td><td>80</td><td>SOPRANO-SAX</td><td>112</td><td>BOTTLE-BLOW</td></tr></tbody></table>
-<h4 id="wave" class="param-name">WAVE</h4>
-<table class="data-table lookup"><tbody><tr><td>17</td><td>HARPSICHORD</td><td>49</td><td>STRG-ENSMBL</td><td>81</td><td>TENOR-SAX</td><td>113</td><td>TYMPANI</td></tr><tr><td>18</td><td>HARPSICHORD</td><td>50</td><td>STRG-ENSMBL</td><td>82</td><td>BAR-SAX</td><td>114</td><td>MELODIC-TOM</td></tr><tr><td>19</td><td>SQUARE-WAVE</td><td>51</td><td>SYNTH-STR-1</td><td>83</td><td>CLARINET</td><td>115</td><td>SYNTH-DRUM</td></tr><tr><td>20</td><td>CLAVINET</td><td>52</td><td>PIZZI-STRGS</td><td>84</td><td>CLARINET</td><td>116</td><td>SYNTH-DRUM</td></tr><tr><td>21</td><td>CLAVINET</td><td>53</td><td>VIOLIN</td><td>85</td><td>OBOE</td><td>117</td><td>SYNTH-DRUM</td></tr><tr><td>22</td><td>CLAVINET</td><td>54</td><td>VIOLIN</td><td>86</td><td>ENGLISH-HRN</td><td>118</td><td>TAIKO-DRUM</td></tr><tr><td>23</td><td>CELESTA</td><td>55</td><td>CELLO</td><td>87</td><td>BASSOON</td><td>119</td><td>WOODBLOCK</td></tr><tr><td>24</td><td>CELESTA</td><td>56</td><td>CELLO</td><td>88</td><td>HARMONICA</td><td>120</td><td><span class="value">REVERSE</span>-CYM</td></tr><tr><td>25</td><td>SYN-BRASS-1</td><td>57</td><td>CONTRABASS</td><td>89</td><td>TRUMPET</td><td>121</td><td>WOODBLOCK</td></tr><tr><td>26</td><td>SYN-BRASS-1</td><td>58</td><td>HARP</td><td>90</td><td>TRUMPET</td><td>122</td><td>TINKLE-BELL</td></tr><tr><td>27</td><td>SYN-BRASS-2</td><td>59</td><td>HARP</td><td>91</td><td>TROMBONE</td><td>123</td><td>ORCH-HIT</td></tr><tr><td>28</td><td>SYN-BRASS-2</td><td>60</td><td>NYL-STR-GTR</td><td>92</td><td>TROMBONE</td><td>124</td><td>TELEPHONE</td></tr><tr><td>29</td><td>SYNTH-BASS2</td><td>61</td><td>STL-STR-GTR</td><td>93</td><td>FRENCH-</td><td>125</td><td>BIRD-TWEET</td></tr><tr><td>30</td><td>HARPSICHORD</td><td>62</td><td>CLEAN-GUITR</td><td>94</td><td>HORN</td><td>126</td><td>BREATHNOISE</td></tr><tr><td>31</td><td>SAW-WAVE</td><td>63</td><td>CLEAN-GUITR</td><td>95</td><td>FRENCH-</td><td>127</td><td>CRYSTAL</td></tr><tr><td>32</td><td>SYNTH-BASS2</td><td>64</td><td>SITAR</td><td>96</td><td>HORN</td><td>128</td><td>BREATHNOISE</td></tr></tbody></table>
-<h4 id="tuba" class="param-name">TUBA</h4>
-<h4 id="brass-sectn" class="param-name">BRASS-SECTN</h4>
-<p>After receiving a Bank Select value of MSB 127 on MIDI Channel 10, any subsequent MIDI program changes on MIDI channel 10 will always select the MT-32 Drum Map.</p>
-<p>Transmitting a Bank Select value of 0-126 MSB will return the MIDI channel to normal MIDI program change reception, selecting sounds from the <span class="mode">General MIDI</span> Sound Map as described on the previous page.</p>
-<table class="defn-table"><thead><tr><th>General</th><th>MIDI Mode Controller Implementation Chart</th></tr></thead><tbody><tr><td><span class="lcd">MIDI</span></td><td>Controller Implementation in <span class="mode">General MIDI</span> Mode When in <span class="mode">General MIDI</span> mode, many of the TS-10 controllers function differently than noted in the</td></tr><tr><td><span class="lcd">MIDI</span></td><td>Implementation chart, and are described in the chart on the following page.</td></tr></tbody></table>
-<div class="vfd-callouts top"><div>Function…</div><div>Transmitted</div><div>Recognized</div></div>
-<p>Velocity        Note ON              YES      YES        1 In the TS-10, a Note Off velocity of 64 is always sent for all keys.</p>
-<p>Note <span class="value">OFF</span>             YES1     NO 2       2 The TS-10 voice architecture does not support Release Velocity.</p>
-<table class="param-cols cols-4"><tbody><tr><td>Aftertouch</td><td>Key</td><td>NO</td><td>NO</td></tr></tbody></table>
-<table class="param-cols cols-3"><tbody><tr><td>Channel</td><td>NO</td><td>NO</td></tr></tbody></table>
-<p>Pitch Bender                         YES      YES        Defaults to a value of 64 (center).</p>
-<p>Controller 0 YES YES Always transmitted as 0. An MSB value of 127 received will select the MT-32 Program Change (Bank Select MSB) Sound Map.</p>
-<p>Controller 1                         YES      YES        Defaults to a value of 0.</p>
-<p>(Mod Wheel)</p>
-<table class="param-cols cols-3"><tbody><tr><td>Controller 4</td><td>NO</td><td>NO</td></tr></tbody></table>
-<p>(Foot Pedal)</p>
-<p>Controller 6                         NO       YES        For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</p>
-<p>(Data Entry MSB)</p>
-<p>Controller 7                         YES      YES        Defaults to a value of 100. Setting <span class="lcd">RECV=OFF</span> will default the Track/Channel volume to 127.</p>
-<p>(Volume)                                                 Devices connected to the Pedal•CV jack will control volume.</p>
-<div class="vfd-callouts top"><div>Controller 10</div><div>NO</div><div>YES</div></div>
-<p>(Pan)</p>
-<p>Controller 11                        NO       YES        Defaults to a value of 127. Expression messages received will be responded to as Mix.</p>
-<p>(Expression)</p>
-<table class="param-cols cols-3"><tbody><tr><td>Controller 12</td><td>NO</td><td>NO</td></tr></tbody></table>
-<p>(Effect Mod Foot Switch)</p>
-<p>Controller 32                        YES      NO         Always transmitted as 0.</p>
-<p>(Bank Select LSB)</p>
-<p>Controller 38                        NO       YES        For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</p>
-<p>(Data Entry LSB)</p>
-<p>Controller 64                        YES      YES        This defaults to a value of 0. The right foot switch will always function as Sustain.</p>
-<p>(Sustain)</p>
-<p>Controller 66 YES YES This defaults to a value of 0. The left foot switch can function as Sostenuto, if a stereo foot (Sostenuto) switch is connected.</p>
-<p>Controller 70                        YES      NO         ENSONIQ Patch Selects; values of 0, 32, 64, 127</p>
-<p>(Sound Variation)</p>
-<p>Controller 71                        NO       NO         ENSONIQ Timbre.</p>
-<p>(Harmonic Content)</p>
-<div class="vfd-callouts top"><div>Controller 72</div><div>NO</div><div>YES</div></div>
-<p>(Release Time)</p>
-<div class="vfd-callouts top"><div>Controller 73</div><div>NO</div><div>YES</div></div>
-<p>(Attack Time)</p>
-<div class="vfd-callouts top"><div>Controller 74</div><div>NO</div><div>YES</div></div>
-<p>(Brightness)</p>
-<div class="vfd-callouts top"><div>Controller 75</div><div>NO</div><div>YES</div></div>
-<p>(Rate)</p>
-<p>Controller 91                        NO       YES        Controls effect bus switching and the FX2 wet/dry mix in the <span class="mode">General MIDI</span> effect.</p>
-<p>(External Effects {Reverb} Depth)</p>
-<p>Controller 93                        NO       YES        Controls effect bus switching and the FX1 wet/dry mix in the <span class="mode">General MIDI</span> effect.</p>
-<p>(Chorus Depth)</p>
-<p>Controller 100                       NO       YES        Values of 0, 1, and 2.</p>
-<p>(Reg Param Select LSB)</p>
-<table class="param-cols cols-3"><tbody><tr><td>Controller 101</td><td>NO</td><td>NO</td></tr></tbody></table>
-<p>(Reg Param Select MSB)</p>
-<div class="vfd-callouts top"><div>Controller 120</div><div>NO</div><div>YES</div></div>
-<p>(All Sound Off)</p>
-<p>Controller 121 YES YES Reset Controller messages received will normalize only the controllers supported in General (Reset All Controllers) MIDI Mode. It is received independently on each of the 16 <span class="mode">General MIDI</span> Track/Channels.</p>
-<p>Controller 123 All Notes Off messages received will be responded to regardless of the setting of the <span class="param">ALL-OFF</span> (All Notes Off) YES YES parameter on the <span class="page-name">MIDI Control</span> page. It is received independently on each of the 16 General</p>
-<p>MIDI Track/Channels.</p>
-<p>Registered Parameters:                                   These Registered Parameters are received independently on each of the 16 <span class="mode">General MIDI</span></p>
-<div class="vfd-callouts top"><div>0 Pitch Bend Range 1 Fine Tuning 2 Coarse Tuning</div><div>NO NO NO</div><div>YES YES YES</div></div>
-<div class="vfd-callouts top"><div>Program Change</div><div>YES</div><div>YES</div></div>
+        <tr>
+          <td>38</td>
+          <td>D2</td>
+          <td>Acoustic Snare</td>
+          <td>Acoustic Snare</td>
+          <td>Gated Snare</td>
+          <td>Electric Snare</td>
+        </tr>
+        <tr>
+          <td>___ 39</td>
+          <td>D2+</td>
+          <td>Hand Clap</td>
+          <td>Hand Clap</td>
+          <td>Hand Clap</td>
+          <td>Hand Clap</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>E2</td>
+          <td>Electric Snare</td>
+          <td>Electric Snare</td>
+          <td>Electric Snare</td>
+          <td>Gated Snare</td>
+        </tr>
+        <tr>
+          <td>41</td>
+          <td>F2</td>
+          <td>Low Floor Tom</td>
+          <td>Low Room Tom</td>
+          <td>Low Room Tom</td>
+          <td>Elec Low Tom</td>
+        </tr>
+        <tr>
+          <td>___ 42</td>
+          <td>F2+</td>
+          <td>Closed Hi-Hat</td>
+          <td>Closed Hi-Hat</td>
+          <td>Closed Hi-Hat</td>
+          <td>Closed Hi-Hat</td>
+        </tr>
+        <tr>
+          <td>43</td>
+          <td>G2</td>
+          <td>High Floor Tom</td>
+          <td>Low Room Tom 2</td>
+          <td>Low Room Tom 2</td>
+          <td>Elec Low Tom</td>
+        </tr>
+        <tr>
+          <td>___ 44</td>
+          <td>G2+</td>
+          <td>Pedal Hi-Hat</td>
+          <td>Pedal Hi-Hat</td>
+          <td>Pedal Hi-Hat</td>
+          <td>Pedal Hi-Hat</td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>A2</td>
+          <td>Low Tom</td>
+          <td>Mid Room Tom</td>
+          <td>Mid Room Tom</td>
+          <td>Elec Mid Tom</td>
+        </tr>
+        <tr>
+          <td>___ 46</td>
+          <td>A2+</td>
+          <td>Open Hi-Hat</td>
+          <td>Open Hi-Hat</td>
+          <td>Open Hi-Hat</td>
+          <td>Open Hi-Hat</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>B2</td>
+          <td>Low-Mid Tom</td>
+          <td>Mid Room Tom</td>
+          <td>Mid Room Tom</td>
+          <td>Elec Mid Tom</td>
+        </tr>
+        <tr>
+          <td>48</td>
+          <td>C3</td>
+          <td>High-Mid Tom</td>
+          <td>High Room Tom</td>
+          <td>High Room Tom</td>
+          <td>Elec High Tom</td>
+        </tr>
+        <tr>
+          <td>___ 49</td>
+          <td>C3+</td>
+          <td>Crash Cymbal 1</td>
+          <td>Crash Cymbal 1</td>
+          <td>Crash Cymbal 1</td>
+          <td>Crash Cymbal 1</td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>D3</td>
+          <td>High Tom</td>
+          <td>High Room Tom</td>
+          <td>High Room Tom</td>
+          <td>Elec High Tom</td>
+        </tr>
+        <tr>
+          <td>___ 51</td>
+          <td>D3+</td>
+          <td>Ride Cymbal 1</td>
+          <td>Ride Cymbal 1</td>
+          <td>Ride Cymbal 1</td>
+          <td>Ride Cymbal 1</td>
+        </tr>
+        <tr>
+          <td>52</td>
+          <td>E3</td>
+          <td>Chinese Cymbal</td>
+          <td>Chinese Cymbal</td>
+          <td>Chinese Cymbal</td>
+          <td>Reverse Cymbal</td>
+        </tr>
+        <tr>
+          <td>53</td>
+          <td>F3</td>
+          <td>Ride Bell</td>
+          <td>Ride Bell</td>
+          <td>Ride Bell</td>
+          <td>Ride Bell</td>
+        </tr>
+        <tr>
+          <td>___ 54</td>
+          <td>F3+</td>
+          <td>Tambourine</td>
+          <td>Tambourine</td>
+          <td>Tambourine</td>
+          <td>Tambourine</td>
+        </tr>
+        <tr>
+          <td>55</td>
+          <td>G3</td>
+          <td>Splash Cymbal</td>
+          <td>Splash Cymbal</td>
+          <td>Splash Cymbal</td>
+          <td>Splash Cymbal</td>
+        </tr>
+        <tr>
+          <td>___ 56</td>
+          <td>G3+</td>
+          <td>Cowbell</td>
+          <td>Cowbell</td>
+          <td>Cowbell</td>
+          <td>Cowbell</td>
+        </tr>
+        <tr>
+          <td>57</td>
+          <td>A3</td>
+          <td>Crash Cymbal 2</td>
+          <td>Crash Cymbal 2</td>
+          <td>Crash Cymbal 2</td>
+          <td>Crash Cymbal 2</td>
+        </tr>
+        <tr>
+          <td>___ 58</td>
+          <td>A3+</td>
+          <td>Vibraslap</td>
+          <td>Vibraslap</td>
+          <td>Vibraslap</td>
+          <td>Vibraslap</td>
+        </tr>
+        <tr>
+          <td>59</td>
+          <td>B3</td>
+          <td>Ride Cymbal 2</td>
+          <td>Ride Cymbal 2</td>
+          <td>Ride Cymbal 2</td>
+          <td>Ride Cymbal 2</td>
+        </tr>
+        <tr>
+          <td>60</td>
+          <td>C4</td>
+          <td>High Bongo</td>
+          <td>High Bongo</td>
+          <td>High Bongo</td>
+          <td>High Bongo</td>
+        </tr>
+        <tr>
+          <td>___ 61</td>
+          <td>C4+</td>
+          <td>Low Bongo</td>
+          <td>Low Bongo</td>
+          <td>Low Bongo</td>
+          <td>Low Bongo</td>
+        </tr>
+        <tr>
+          <td>62</td>
+          <td>D4</td>
+          <td>Mute High Conga</td>
+          <td>Mute High Conga</td>
+          <td>Mute High Conga</td>
+          <td>Mute High Conga</td>
+        </tr>
+        <tr>
+          <td>___ 63</td>
+          <td>D4+</td>
+          <td>Open High Conga</td>
+          <td>Open High Conga</td>
+          <td>Open High Conga</td>
+          <td>Open High Conga</td>
+        </tr>
+        <tr>
+          <td>64</td>
+          <td>E4</td>
+          <td>Low Conga</td>
+          <td>Low Conga</td>
+          <td>Low Conga</td>
+          <td>Low Conga</td>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>F4</td>
+          <td>High Timbale</td>
+          <td>High Timbale</td>
+          <td>High Timbale</td>
+          <td>High Timbale</td>
+        </tr>
+        <tr>
+          <td>___ 66</td>
+          <td>F4+</td>
+          <td>Low Timbale</td>
+          <td>Low Timbale</td>
+          <td>Low Timbale</td>
+          <td>Low Timbale</td>
+        </tr>
+        <tr>
+          <td>67</td>
+          <td>G4</td>
+          <td>High Agogo</td>
+          <td>High Agogo</td>
+          <td>High Agogo</td>
+          <td>High Agogo</td>
+        </tr>
+        <tr>
+          <td>___ 68</td>
+          <td>G4+</td>
+          <td>Low Agogo</td>
+          <td>Low Agogo</td>
+          <td>Low Agogo</td>
+          <td>Low Agogo</td>
+        </tr>
+        <tr>
+          <td>69</td>
+          <td>A4</td>
+          <td>Cabasa</td>
+          <td>Cabasa</td>
+          <td>Cabasa</td>
+          <td>Cabasa</td>
+        </tr>
+        <tr>
+          <td>___ 70</td>
+          <td>A4+</td>
+          <td>Maracas</td>
+          <td>Maracas</td>
+          <td>Maracas</td>
+          <td>Maracas</td>
+        </tr>
+        <tr>
+          <td>71</td>
+          <td>B4</td>
+          <td>Short Whistle</td>
+          <td>Short Whistle</td>
+          <td>Short Whistle</td>
+          <td>Short Whistle</td>
+        </tr>
+        <tr>
+          <td>72</td>
+          <td>C5</td>
+          <td>Long Whistle</td>
+          <td>Long Whistle</td>
+          <td>Long Whistle</td>
+          <td>Long Whistle</td>
+        </tr>
+        <tr>
+          <td>___ 73</td>
+          <td>C5+</td>
+          <td>Short Guiro</td>
+          <td>Short Guiro</td>
+          <td>Short Guiro</td>
+          <td>Short Guiro</td>
+        </tr>
+        <tr>
+          <td>74</td>
+          <td>D5</td>
+          <td>Long Guiro</td>
+          <td>Long Guiro</td>
+          <td>Long Guiro</td>
+          <td>Long Guiro</td>
+        </tr>
+        <tr>
+          <td>___ 75</td>
+          <td>D5+</td>
+          <td>Claves</td>
+          <td>Claves</td>
+          <td>Claves</td>
+          <td>Claves</td>
+        </tr>
+        <tr>
+          <td>76</td>
+          <td>E5</td>
+          <td>High Wood Block</td>
+          <td>High Wood Block</td>
+          <td>High Wood Block</td>
+          <td>High Wood Block</td>
+        </tr>
+        <tr>
+          <td>77</td>
+          <td>F5</td>
+          <td>Low Wood Block</td>
+          <td>Low Wood Block</td>
+          <td>Low Wood Block</td>
+          <td>Low Wood Block</td>
+        </tr>
+        <tr>
+          <td>___ 78</td>
+          <td>F5+</td>
+          <td>Mute Cuica</td>
+          <td>Mute Cuica</td>
+          <td>Mute Cuica</td>
+          <td>Mute Cuica</td>
+        </tr>
+        <tr>
+          <td>79</td>
+          <td>G5</td>
+          <td>Open Cuica</td>
+          <td>Open Cuica</td>
+          <td>Open Cuica</td>
+          <td>Open Cuica</td>
+        </tr>
+        <tr>
+          <td>___ 80</td>
+          <td>G5+</td>
+          <td>Mute Triangle</td>
+          <td>Mute Triangle</td>
+          <td>Mute Triangle</td>
+          <td>Mute Triangle</td>
+        </tr>
+        <tr>
+          <td>81</td>
+          <td>A5</td>
+          <td>Open Triangle</td>
+          <td>Open Triangle</td>
+          <td>Open Triangle</td>
+          <td>Open Triangle</td>
+        </tr>
+        <tr>
+          <td>___ 82</td>
+          <td>A5+</td>
+          <td>Shaker</td>
+          <td>Shaker</td>
+          <td>Shaker</td>
+          <td>Shaker</td>
+        </tr>
+        <tr>
+          <td>83</td>
+          <td>B5</td>
+          <td>Jingle Bell</td>
+          <td>Jingle Bell</td>
+          <td>Jingle Bell</td>
+          <td>Jingle Bell</td>
+        </tr>
+        <tr>
+          <td>84</td>
+          <td>C6</td>
+          <td>Belltree</td>
+          <td>Belltree</td>
+          <td>Belltree</td>
+          <td>Belltree</td>
+        </tr>
+        <tr>
+          <td>___ 85</td>
+          <td>C6+</td>
+          <td>Castanets</td>
+          <td>Castanets</td>
+          <td>Castanets</td>
+          <td>Castanets</td>
+        </tr>
+        <tr>
+          <td>86</td>
+          <td>D6</td>
+          <td>Mute Surdo</td>
+          <td>Mute Surdo</td>
+          <td>Mute Surdo</td>
+          <td>Mute Surdo</td>
+        </tr>
+        <tr>
+          <td>___ 87</td>
+          <td>D6+</td>
+          <td>Open Surdo</td>
+          <td>Open Surdo</td>
+          <td>Open Surdo</td>
+          <td>Open Surdo</td>
+        </tr>
+        <tr>
+          <td>88</td>
+          <td>E6</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tbody>
+    </table>
+    
+    <h3 id="gm-and-gs-percussion-key-maps-channel-10-2">GM and GS Percussion Key Maps (Channel 10)</h3>
+    <table border="2px" class="data-table">
+      <tbody>
+        <tr>
+          <td>MIDI</td>
+          <td>26 - TR-808-KIT</td>
+          <td>41 - BRUSH-KIT</td>
+          <td>49 - ORCH-</td>
+          <td>128 - MT-32-KIT</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Note # PERCSN</p>
+    <div class="vfd-callouts top">
+      <div>35</div>
+      <div>B1</div>
+      <div>Kick Drum 2</div>
+    </div>
+    <p>Drum</p>
+    <table class="data-table">
+      <tbody>
+        <tr>
+          <td>36</td>
+          <td>C2</td>
+          <td>808 Bass Drum</td>
+          <td>Kick Drum 1</td>
+          <td>Concert Bass Drum</td>
+          <td>Bass Drum 1</td>
+        </tr>
+        <tr>
+          <td>___ 37</td>
+          <td>C2+</td>
+          <td>808 Rim Shot</td>
+          <td>Side Stick</td>
+          <td>Side Stick</td>
+          <td>Rim Shot</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>D2</td>
+          <td>808 Snare Drum</td>
+          <td>Brush Tap</td>
+          <td>Concert Snare</td>
+          <td>Acoustic Snare</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Drum</p>
+    <div class="vfd-callouts top">
+      <div>___ 39 40</div>
+      <div>D2+ E2</div>
+      <div>Hand Clap Electric Snare</div>
+    </div>
+    <p>Drum</p>
+    <table class="param-cols cols-6">
+      <tbody>
+        <tr>
+          <td>41</td>
+          <td>F2</td>
+          <td>808 Low Tom</td>
+          <td>Low Floor Tom</td>
+          <td>Tympani F</td>
+          <td>Acoustic Low Tom</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>___ 42</th>
+          <th>F2+</th>
+          <th>808 Closed Hi-Hat</th>
+          <th>Closed Hi-Hat</th>
+          <th>Tympani F#</th>
+          <th>Closed Hi-Hat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>43</td>
+          <td>G2</td>
+          <td>808 Low Tom</td>
+          <td>High Floor Tom</td>
+          <td>Tympani G</td>
+          <td>Acoustic Low Tom</td>
+        </tr>
+        <tr>
+          <td>___ 44</td>
+          <td>G2+</td>
+          <td>808 Closed Hi-Hat</td>
+          <td>Pedal Hi-Hat</td>
+          <td>Tympani G#</td>
+          <td>Open Hi-Hat</td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>A2</td>
+          <td>808 Mid Tom</td>
+          <td>Low Tom</td>
+          <td>Tympani A</td>
+          <td>Acoustic Mid Tom</td>
+        </tr>
+        <tr>
+          <td>___ 46</td>
+          <td>A2+</td>
+          <td>80 Open Hi-Hat</td>
+          <td>Open Hi-Hat</td>
+          <td>Tympani A#</td>
+          <td>Open Hi-Hat</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>B2</td>
+          <td>808 Mid Tom</td>
+          <td>Mid Tom</td>
+          <td>Tympani B</td>
+          <td>Acoustic Mid Tom</td>
+        </tr>
+        <tr>
+          <td>48</td>
+          <td>C3</td>
+          <td>808 High Tom</td>
+          <td>High Tom</td>
+          <td>Tympani C</td>
+          <td>Acoustic High Tom</td>
+        </tr>
+        <tr>
+          <td>___ 49</td>
+          <td>C3+</td>
+          <td>808 Cymbal</td>
+          <td>Crash Cymbal 1</td>
+          <td>Tympani C#</td>
+          <td>Crash Cymbal</td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>D3</td>
+          <td>808 High Tom</td>
+          <td>High Tom</td>
+          <td>Tympani D</td>
+          <td>Acoustic High Tom</td>
+        </tr>
+        <tr>
+          <td>___ 51</td>
+          <td>D3+</td>
+          <td>Ride Cymbal 1</td>
+          <td>Ride Cymbal 1</td>
+          <td>Tympani D#</td>
+          <td>Ride Cymbal 1</td>
+        </tr>
+        <tr>
+          <td>52</td>
+          <td>E3</td>
+          <td>Chinese Cymbal</td>
+          <td>Chinese Cymbal</td>
+          <td>Tympani E</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>53</td>
+          <td>F3</td>
+          <td>Ride Bell</td>
+          <td>Ride Bell</td>
+          <td>Tympani F</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>___ 54</td>
+          <td>F3+</td>
+          <td>Tambourine</td>
+          <td>Tambourine</td>
+          <td>Tambourine</td>
+          <td>Tambourine</td>
+        </tr>
+        <tr>
+          <td>55</td>
+          <td>G3</td>
+          <td>Splash Cymbal</td>
+          <td>Splash Cymbal</td>
+          <td>Splash Cymbal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>___ 56</td>
+          <td>G3+</td>
+          <td>808 Cowbell</td>
+          <td>Cowbell</td>
+          <td>Cowbell</td>
+          <td>Cowbell</td>
+        </tr>
+        <tr>
+          <td>57</td>
+          <td>A3</td>
+          <td>Crash Cymbal 2</td>
+          <td>Crash Cymbal 2</td>
+          <td>Concert Cymbal 2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>___ 58</td>
+          <td>A3+</td>
+          <td>Vibraslap</td>
+          <td>Vibraslap</td>
+          <td>Vibraslap</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>59</td>
+          <td>B3</td>
+          <td>Ride Cymbal 2</td>
+          <td>Ride Cymbal 2</td>
+          <td>Concert Cymbal 1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>60</td>
+          <td>C4</td>
+          <td>High Bongo</td>
+          <td>High Bongo</td>
+          <td>High Bongo</td>
+          <td>High Bongo</td>
+        </tr>
+        <tr>
+          <td>___ 61</td>
+          <td>C4+</td>
+          <td>Low Bongo</td>
+          <td>Low Bongo</td>
+          <td>Low Bongo</td>
+          <td>Low Bongo</td>
+        </tr>
+        <tr>
+          <td>62</td>
+          <td>D4</td>
+          <td>808 High Conga</td>
+          <td>Mute High Conga</td>
+          <td>Mute High Conga</td>
+          <td>Mute High Conga</td>
+        </tr>
+        <tr>
+          <td>___ 63</td>
+          <td>D4+</td>
+          <td>808 Mid Conga</td>
+          <td>Open High Conga</td>
+          <td>Open High Conga</td>
+          <td>High Conga</td>
+        </tr>
+        <tr>
+          <td>64</td>
+          <td>E4</td>
+          <td>808 Low Conga</td>
+          <td>Low Conga</td>
+          <td>Low Conga</td>
+          <td>Low Conga</td>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>F4</td>
+          <td>High Timbale</td>
+          <td>High Timbale</td>
+          <td>High Timbale</td>
+          <td>High Timbale</td>
+        </tr>
+        <tr>
+          <td>___ 66</td>
+          <td>F4+</td>
+          <td>Low Timbale</td>
+          <td>Low Timbale</td>
+          <td>Low Timbale</td>
+          <td>Low Timbale</td>
+        </tr>
+        <tr>
+          <td>67</td>
+          <td>G4</td>
+          <td>High Agogo</td>
+          <td>High Agogo</td>
+          <td>High Agogo</td>
+          <td>High Agogo</td>
+        </tr>
+        <tr>
+          <td>___ 68</td>
+          <td>G4+</td>
+          <td>Low Agogo</td>
+          <td>Low Agogo</td>
+          <td>Low Agogo</td>
+          <td>Low Agogo</td>
+        </tr>
+        <tr>
+          <td>69</td>
+          <td>A4</td>
+          <td>Cabasa</td>
+          <td>Cabasa</td>
+          <td>Cabasa</td>
+          <td>Cabasa</td>
+        </tr>
+        <tr>
+          <td>___ 70</td>
+          <td>A4+</td>
+          <td>808 Maracas</td>
+          <td>Maracas</td>
+          <td>Maracas</td>
+          <td>Maracas</td>
+        </tr>
+        <tr>
+          <td>71</td>
+          <td>B4</td>
+          <td>Short Whistle</td>
+          <td>Short Whistle</td>
+          <td>Short Whistle</td>
+          <td>Short Whistle</td>
+        </tr>
+        <tr>
+          <td>72</td>
+          <td>C5</td>
+          <td>Long Whistle</td>
+          <td>Long Whistle</td>
+          <td>Long Whistle</td>
+          <td>Long Whistle</td>
+        </tr>
+        <tr>
+          <td>___ 73</td>
+          <td>C5+</td>
+          <td>Short Guiro</td>
+          <td>Short Guiro</td>
+          <td>Short Guiro</td>
+          <td>Quijada</td>
+        </tr>
+        <tr>
+          <td>74</td>
+          <td>D5</td>
+          <td>Long Guiro</td>
+          <td>Long Guiro</td>
+          <td>Long Guiro</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>___ 75</td>
+          <td>D5+</td>
+          <td>808 Claves</td>
+          <td>Claves</td>
+          <td>Claves</td>
+          <td>Claves</td>
+        </tr>
+        <tr>
+          <td>76</td>
+          <td>E5</td>
+          <td>High Wood Block</td>
+          <td>High Wood Block</td>
+          <td>High Wood Block</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>77</td>
+          <td>F5</td>
+          <td>Low Wood Block</td>
+          <td>Low Wood Block</td>
+          <td>Low Wood Block</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>___ 78</td>
+          <td>F5+</td>
+          <td>Mute Cuica</td>
+          <td>Mute Cuica</td>
+          <td>Mute Cuica</td>
+          <td>Punch</td>
+        </tr>
+        <tr>
+          <td>79</td>
+          <td>G5</td>
+          <td>Open Cuica</td>
+          <td>Open Cuica</td>
+          <td>Open Cuica</td>
+          <td>Heartbeat</td>
+        </tr>
+        <tr>
+          <td>___ 80</td>
+          <td>G5+</td>
+          <td>Mute Triangle</td>
+          <td>Mute Triangle</td>
+          <td>Mute Triangle</td>
+          <td>Footsteps 1</td>
+        </tr>
+        <tr>
+          <td>81</td>
+          <td>A5</td>
+          <td>Open Triangle</td>
+          <td>Open Triangle</td>
+          <td>Open Triangle</td>
+          <td>Footsteps 2</td>
+        </tr>
+        <tr>
+          <td>___ 82</td>
+          <td>A5+</td>
+          <td>Shaker</td>
+          <td>Shaker</td>
+          <td>Shaker</td>
+          <td>Applause</td>
+        </tr>
+        <tr>
+          <td>83</td>
+          <td>B5</td>
+          <td>Jingle Bell</td>
+          <td>Jingle Bell</td>
+          <td>Jingle Bell</td>
+          <td>Creaking</td>
+        </tr>
+        <tr>
+          <td>84</td>
+          <td>C6</td>
+          <td>Belltree</td>
+          <td>Belltree</td>
+          <td>Belltree</td>
+          <td>Door</td>
+        </tr>
+        <tr>
+          <td>___ 85</td>
+          <td>C6+</td>
+          <td>Castanets</td>
+          <td>Castanets</td>
+          <td>Castanets</td>
+          <td>Scratch</td>
+        </tr>
+        <tr>
+          <td>86</td>
+          <td>D6</td>
+          <td>Mute Surdo</td>
+          <td>Mute Surdo</td>
+          <td>Mute Surdo</td>
+          <td>Wind Chime</td>
+        </tr>
+        <tr>
+          <td>___ 87</td>
+          <td>D6+</td>
+          <td>Open Surdo</td>
+          <td>Open Surdo</td>
+          <td>Open Surdo</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>88</td>
+          <td>E6</td>
+          <td>Applause</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>There are four additional sounds assigned to keys in the MT-32-KIT: 90 (F6+) Crash 92 (G6+) Train 93 (A6) Jet
+        94 (A6+) Helicopter</li>
+    </ul>
+    <h3 id="using-general-midi-in-the-real-world">Using General MIDI in the Real World</h3>
+    <p>MIDI Out</p>
+    <p>External MIDI Interface (if applicable) MIDI In</p>
+    <p>Internal card, parallel port, modem, or printer port</p>
+    <p>Computer (with MIDI Interface) connected to TS Keyboard</p>
+    <h3 id="using-ts-10-general-midi-sounds-with-an-external-gm-sequencer">Using TS-10 General MIDI Sounds with an
+      External GM Sequencer</h3>
+    <h4 id="connecting-the-ts-10-keyboard-to-a-computer-or-other-general-midi-sequ">Connecting the TS-10 keyboard to a
+      computer (or other General MIDI sequencer)</h4>
+    <p>1. Power down all electronic devices before making any connections.</p>
+    <p>2. Using a MIDI Cable, connect the MIDI In jack of the TS-10 to the MIDI Out jack of the computer/hardware
+      sequencer/sequence player.</p>
+    <aside class="note">
+      <p>Note: Many computers do not have a MIDI jack built into them, and require an additional MIDI Interface
+        connector between the computer and the TS-10.</p>
+    </aside>
+    <p>3. Make sure the proper amplification is connected to the TS-10, and power on the computer, the TS-10 keyboard,
+      and the amplification system (in that order).</p>
+    <aside class="tip">
+      <p>Headphones connected to the Phones jack of the TS-10 will work fine in</p>
+    </aside>
+    <p>General MIDI mode, and allow you to work late hours without disturbing others.</p>
+    <p>To Enable General MIDI on the TS-10 1. Press the <kbd class="button">MIDI Control</kbd> button. The display
+      shows:</p>
+    <figure class="vfd-unit has-page">
+
+      <div class="vfd-bezel">
+        <table>
+          <colgroup>
+            <col class="page-col">
+            <col class="param-col">
+            <col class="param-col">
+            <col class="param-col">
+          </colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button"
+                  aria-pressed="true"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell page-label">MIDI</td>
+              <td class="cell">BASE-CHAN=01</td>
+              <td class="cell selected">GMIDI=OFF</td>
+              <td class="cell">SEND=TRACK</td>
+            </tr>
+            <tr>
+              <td class="cell page-label">&nbsp;</td>
+              <td class="cell">MODE=MULTI</td>
+              <td class="cell">VELS/XPOS=BOTH</td>
+              <td class="cell">XCTRL=002</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+
+    </figure>
+    <p>2. On the first <span class="page-name">MIDI Control</span> sub-page, press the upper middle soft button on the
+      display to select the <span class="param">GMIDI</span> parameter (it should be underlined).</p>
+    <p>3. Press the <kbd class="button">Up Arrow</kbd> button to enter General MIDI mode.</p>
+    <p>If the sequencer is running, the SEQUENCER MUST BE STOPPED message will be displayed. If the sequencer is
+      stopped, the “SAVE CHANGES?” prompt will be displayed (if necessary). Otherwise, the following prompt will be
+      displayed:</p>
+    <figure class="vfd-unit">
+
+      <div class="vfd-bezel">
+        <table>
+          <colgroup>
+            <col class="param-col">
+            <col class="param-col">
+            <col class="param-col">
+          </colgroup>
+          <thead>
+            <tr class="soft-row top">
+
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+              </th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell">ENTER GENERAL MIDI MODE</td>
+              <td class="cell">&nbsp;</td>
+              <td class="cell">*YES*</td>
+            </tr>
+            <tr>
+              <td class="cell">&nbsp;</td>
+              <td class="cell">&nbsp;</td>
+              <td class="cell">*NO*</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+
+    </figure>
+    <p>4. Pressing the soft button beneath <span class="lcd">*NO*</span> will leave the TS-10 system unchanged,
+      returning you to the first <span class="page-name">MIDI Control</span> sub-page.</p>
+    <p>5. Pressing the soft button above <span class="lcd">*YES*</span> will enable General MIDI Mode. All LEDs will be
+      off and all buttons (except the Arrow buttons and the soft buttons) will be disabled. The TS-10 will display the
+      <span class="page-name">General MIDI Mode</span> page as follows:</p>
+    <figure class="vfd-unit">
+      <div class="vfd-callouts top">
+        <div>Press here for GM-PANIC RESET</div>
+        <div>MIDI reception ON/OFF</div>
+        <div>Press here to exit GM Mode</div>
+      </div>
+      <div class="vfd-bezel">
+        <table>
+          <colgroup>
+            <col class="param-col">
+            <col class="param-col">
+            <col class="param-col">
+          </colgroup>
+          <thead>
+            <tr class="soft-row top">
+
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+              </th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell">GENERAL MIDI MODE</td>
+              <td class="cell">RECV=ON</td>
+              <td class="cell">*EXIT*</td>
+            </tr>
+            <tr>
+              <td class="cell">GM-CHAN=01</td>
+              <td class="cell">GM-PROG=001</td>
+              <td class="cell">GM-PROGNAME</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="vfd-callouts bottom">
+        <div>General MIDI Track/Channel Number</div>
+        <div>General MIDI Program Number</div>
+        <div>General MIDI Sound Name</div>
+      </div>
+
+    </figure>
+    <p>The TS-10 behaves as though an enlarged 16-track sequence has been selected, and as though the current MIDI
+      Mode=<span class="value">MULTI</span>. Incoming MIDI will be received on all 16 MIDI channels, to 16 discrete
+      inbound Track/Channels. The default effect algorithm (46 CHORUS + REVERB 2) will be installed, and all
+      Track/Channels will be routed through the effect.</p>
+    <p>When you now run the external computer or hardware sequencer, you will hear the proper sounds played from the
+      TS-10 as program changes and note/controller data is transmitted to the TS-10 via the MIDI In jack.</p>
+    <table class="defn-table">
+      <tbody>
+        <tr>
+          <td><span class="lcd">MIDI</span></td>
+          <td>Out in General MIDI Mode The TS-10 keyboard will always play the sound assigned to the currently displayed
+            Track/Channel number. Local playing on the TS-10 keyboard and controllers will be transmitted via the MIDI
+            Out jack on the displayed MIDI Channel number. This allows you to connect the</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">TS-10 MIDI</span></td>
+          <td>Out jack to the MIDI In jack of a computer sequencer/hardware sequencer/other</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">MIDI</span></td>
+          <td>Sound module.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This feature adds MIDI Controller capability to the TS-10 while in General MIDI Mode.</p>
+    <h2 id="ts-10-general-midi-parameters">TS-10 General MIDI Parameters</h2>
+    <h4 id="recv-midi-reception" class="param-name"><span class="param">RECV (MIDI Reception)</span><span
+        class="range">Range: ON or OFF</span></h4>
+    <p>This parameter is set to receive MIDI data by default (<span class="lcd">RECV=ON)</span>. By changing the RECV
+      value for each MIDI channel, you can define how many Track/Channels you want to receive data via MIDI.</p>
+    <p>Setting <span class="lcd">RECV=OFF</span> will disable reception of MIDI notes, controllers and program changes
+      on the displayed MIDI channel. Sounds can still be played from the keyboard, and live playing will still transmit
+      via MIDI on the displayed MIDI channel.</p>
+    <p>When <span class="lcd">RECV=OFF</span>, the Track/Channel volume will be set to full on (127), so that your live
+      playing can use the full dynamic range. Resetting RECV to ON will reset the Track/Channel volume back to the
+      General MIDI default value of 100.</p>
+    <aside class="tip">
+      <p>When set to <span class="lcd">RECV=OFF</span>, this parameter allows for “music-minus-one” applications in
+        General MIDI mode. By setting this parameter to <span class="value">OFF</span>, you disable incoming MIDI for
+        the selected Track/Channel, boost the volume, and can play the assigned sound live from the keyboard as the
+        remaining sequence tracks play back via incoming MIDI.</p>
+    </aside>
+    <p>No matter what the setting of this parameter, a CVP-1 Pedal connected to the Pedal•CV Jack will always control
+      the volume of the selected Track/Channel.</p>
+    <h4 id="gm-chan" class="param-name"><span class="param">GM-CHAN</span><span class="range">Range: 01 to 16</span>
+    </h4>
+    <p>This parameter is used to select and view the sounds assigned to each MIDI Channel. When this parameter is
+      selected, the Data Entry Controls will scroll through all 16 Track/Channels.</p>
+    <p><span class="lcd">GM-CHAN=10</span> is permanently assigned to play Drum Maps only. When Track/Channel 10 is
+      selected, the GM-PROG parameter will scroll through the nine available GM/GS Drum Maps.</p>
+    <p>Playing on the TS-10 keyboard will always be transmitted on the displayed MIDI channel. If the GM-CHAN value is
+      changed while a note is held down, local voices will be silenced on the previously selected Track/Channel.</p>
+    <h4 id="gm-prog" class="param-name"><span class="param">GM-PROG</span><span class="range">Range: 001 to 128</span>
+    </h4>
+    <p>The GM-PROG (General MIDI Program number) parameter determines which sound will be assigned to each MIDI Channel.
+      When this parameter is selected, the Data Entry Controls will change which of the 128 General MIDI ROM Sounds is
+      assigned to the currently displayed Track/Channel. The corresponding Program Change message will be transmitted
+      via MIDI whenever this parameter is edited.</p>
+    <p>Program Changes received on MIDI channels 1-9 and 11-16 will assign programs to the 16 Track/Channels from the
+      128 General MIDI sounds in ROM. MIDI Channel 10 can only access the nine GM/GS Drum Maps, and will receive the
+      corresponding GS Drum Map Program change value (<span class="lcd">1=STANDRD-KIT</span>, <span
+        class="lcd">9=ROOM-KIT</span>, <span class="lcd">17=POWER-KIT</span>, <span class="lcd">25=ELCTRNC-KIT</span>,
+      <span class="lcd">26=TR-808-KIT</span>, <span class="lcd">33=JAZZ-KIT</span>, <span
+        class="lcd">41=BRUSH-KIT</span>, <span class="lcd">49=ORCH-PERCSN</span>, <span
+        class="lcd">128=MT-32-KIT)</span>.</p>
+    <p>The TS-10 keyboard will always play the sound assigned to the displayed Track/Channel number.</p>
+    <aside class="button-float">
+      <table class="button-id">
+        <tr>
+          <td><span class="keycap-fallback" aria-hidden="true"></span>
+            <div class="button-label">Sounds</div>
+          </td>
+        </tr>
+      </table>
+    </aside>
+    <p>Manually Assigning GM Sounds to Each MIDI Channel 1. Press the soft button beneath the GM-PROG parameter.</p>
+    <p>2. Use the Data Entry Controls to scroll through the different GM Sounds.</p>
+    <p>The General MIDI Sound names change when you use the Data Entry Controls. These sound names and their associated
+      GM Program numbers are listed on the General MIDI</p>
+    <p>Sound Map found earlier in this section.</p>
+    <aside class="note">
+      <p>Note: Most sequence data contains MIDI Program Change messages intented to assign the correct sounds to each
+        MIDI Track/Channel. These incoming MIDI program changes will probably change any manually assigned sounds. If
+        you wish to prevent this from happening, you should disable program change transmission from the external MIDI
+        sequencer.</p>
+    </aside>
+    <p>General MIDI “Panic” button Some remote MIDI Devices may leave notes and controller values “dangling,” causing
+      Track/Channels to function improperly. The TS-10 has a solution to this problem — the MIDI “Panic” button.
+      Pressing the upper left soft button above GENERAL MIDI <span class="param">MODE</span> will invoke the GM-PANIC
+      RESET function:</p>
+    <p>“GM-PANIC RESET” will be momentarily displayed. All TS-10 and MIDI voices on all 16 Track/Channels will be
+      silenced. The following MIDI messages will be transmitted on all 16</p>
+    <p>MIDI Channels: All Notes Off, Reset All Controllers, key-ups for all keys down, sustain and sostenuto pedal ups,
+      and controllers will be normalized to the General MIDI default values.</p>
+    <p>Program Changes will be transmitted corresponding to the sounds assigned to each of the 16</p>
+    <p>Track/Channels.</p>
+    <p>System and MIDI Control Settings in GM Mode The following System and <span class="page-name">MIDI Control</span>
+      page parameter settings are installed in General MIDI mode (see Sections <a class="refer-to"
+        href="02-system.html#section-2-system-page-parameters">2</a> and <a class="refer-to"
+        href="03-midi.html#section-3-midi-control-page-parameters">3</a> for information about these parameters). All
+      other parameters are reset to values appropriate for General MIDI reception:</p>
+    <ul>
+      <li><span class="page-name">System</span> page <span class="param">TUNE</span> and PITCH-TABLE settings are
+        retained.</li>
+      <li><span class="page-name">System</span> page <span class="param">TOUCH</span> and <span
+          class="param">VEL-MAX</span> settings are retained.</li>
+      <li><span class="page-name">System</span> page <span class="param">PEDAL</span> is set to <span
+          class="value">VOL</span>.</li>
+      <li><span class="page-name">System</span> page FOOT-SW1-R and SW2-R are set to <span class="param">SUSTAIN</span>.
+      </li>
+      <li><span class="page-name">System</span> page FOOT-SW1-L and SW2-L are set to <span
+          class="param">SOSTENUTO</span> if they were previously set to any value other than <span
+          class="lcd">*UNUSED*</span>. If they were set to <span class="lcd">*UNUSED*</span>, they will remain <span
+          class="lcd">*UNUSED*</span>.</li>
+      <li><span class="page-name">MIDI Control</span> page <span class="param">SYS-EX</span> setting is set to ON.</li>
+    </ul>
+    <p>Exiting General MIDI will restore your original settings.</p>
+    <h3 id="disabling-general-midi">Disabling General MIDI</h3>
+    <h4 id="to-disable-general-midi">To Disable General MIDI</h4>
+    <ul>
+      <li>Press the soft button above <span class="lcd">*EXIT*</span> to exit General MIDI Mode.</li>
+    </ul>
+    <p>The TS-10 will momentarily show:</p>
+    <p>The TS-10 will then return to its previous state. The General MIDI Track/Channel sound assignments will be
+      preserved in static RAM, even after power-off.</p>
+    <aside class="note">
+      <p>Note: You can also disable General MIDI by turning the TS-10 off, and then back on (this will not happen if the
+        WAKE-UP parameter is set to GEN-MIDI).</p>
+    </aside>
+    <h3 id="enabling-disabling-general-midi-with-system-exclusive-messages">Enabling/Disabling General MIDI with System
+      Exclusive Messages</h3>
+    <p>General MIDI can also be enabled/disabled using Universal System Exclusive (SysEx) messages:</p>
+    <h4 id="turning-general-midi-on-using-sysex-messages">Turning General MIDI On using SysEx Messages</h4>
+    <div class="vfd-callouts top">
+      <div>F0</div>
+      <div>7E</div>
+      <div>&lt;Device ID&gt;</div>
+    </div>
+    <table class="defn-table">
+      <thead>
+        <tr>
+          <th>Turning General</th>
+          <th>MIDI Off using SysEx Messages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="lcd">F0 7E</span></td>
+          <td>Universal non-real-time SysEx header</td>
+        </tr>
+        <tr>
+          <td>&lt;Device ID&gt;</td>
+          <td>ID of target device (suggest using 7F: Broadcast)</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">09</span></td>
+          <td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">01</span></td>
+          <td>sub-ID #<span class="lcd">2=G</span>eneral MIDI On</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">F7</span></td>
+          <td>EOX (end of SysEx)</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="vfd-callouts top">
+      <div>F0</div>
+      <div>7E</div>
+      <div>&lt;Device ID&gt;</div>
+    </div>
+    <table class="defn-table">
+      <thead>
+        <tr>
+          <th>More</th>
+          <th>about SysEx Messages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="lcd">F0 7E</span></td>
+          <td>Universal non-real-time SysEx header</td>
+        </tr>
+        <tr>
+          <td>&lt;Device ID&gt;</td>
+          <td>ID of target device (suggest using 7F: Broadcast)</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">09</span></td>
+          <td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">02</span></td>
+          <td>sub-ID #<span class="lcd">2=G</span>eneral MIDI Off</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">F7</span></td>
+          <td>EOX (end of SysEx)</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>The MIDI Control <span class="param">SYS-EX</span> parameter must be set to <span class="lcd">SYS-EX=ON</span>
+        in order to receive Universal SysEx messages.</li>
+      <li>A Universal SysEx General MIDI On message acts the same as answering <span class="lcd">*YES*</span> to the
+        “ENTER GENERAL MIDI <span class="param">MODE</span>?” prompt, and displays the <span class="page-name">General
+          MIDI Mode</span> page. The SysEx message will be ignored if the sequencer is running, or if the system is
+        already in General MIDI Mode. Sequencer changes will be saved automatically, unless <span
+          class="lcd">SAVE-CHANGES=NO</span> (on the third <span class="page-name">Sequencer Control</span> sub-page).
+      </li>
+      <li>If the TS-10 is already in General MIDI mode, a Universal SysEx General MIDI Off message acts the same as
+        pressing <span class="lcd">*EXIT*</span> on the General MIDI mode screen. This exits General MIDI mode and
+        returns the TS-10 to its previous state.</li>
+      <li>When in General MIDI Mode, the Universal SysEx General MIDI Off message is the only SysEx message that will be
+        received; all other SysEx messages are ignored.</li>
+    </ul>
+    <p>Sound Canvas MT-32 Mode Program Change Map The Roland® MT-32 was an early, pre-General MIDI multi-timbral sound
+      module. It used a different MIDI Program Change Map than General MIDI. The Roland Sound Canvas™ provides an MT-32
+      Emulation mode, and some Standard MIDI Files are set up to use this. An MT-32 Program Change Map has been included
+      in the TS-10 to provide Sound Canvas MT-32 emulation capability.</p>
+    <p>Roland products use the Bank Select MSB (MIDI Controller 0) to change sound banks; in the Sound Canvas, sound
+      bank 127 is designated as the MT-32 Emulation mode bank. After the TS-10 has received a Bank Select value of MSB
+      127, subsequent MIDI Program Changes on that MIDI channel will select the GM Sounds remapped to the Roland MT-32
+      Program Change Map, as below:</p>
+    <p>PROG INSTRUMENT PROG INSTRUMENT PROG INSTRUMENT PROG INSTRUMENT</p>
+    <p># # # #</p>
+    <table class="data-table lookup">
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>GRAND-PIANO</td>
+          <td>33</td>
+          <td>NEW-AGE-PAD</td>
+          <td>65</td>
+          <td>ACOUSTIC-BS</td>
+          <td>97</td>
+          <td>BRASS-SECTN</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>BRITE-PIANO</td>
+          <td>34</td>
+          <td>SWEEP-PAD</td>
+          <td>66</td>
+          <td>ACOUSTIC-BS</td>
+          <td>98</td>
+          <td>VIBRAPHONE</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ELEC-GRAND</td>
+          <td>35</td>
+          <td>CHOIR-AAHS</td>
+          <td>67</td>
+          <td>FINGERED-BS</td>
+          <td>99</td>
+          <td>VIBRAPHONE</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ELEC-PIANO2</td>
+          <td>36</td>
+          <td>BOWED-</td>
+          <td>68</td>
+          <td>SYNTH-BASS2</td>
+          <td>100</td>
+          <td>DULCIMER</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ELEC-GRAND</td>
+          <td>37</td>
+          <td>GLASS</td>
+          <td>69</td>
+          <td>SLAP-BASS-2</td>
+          <td>101</td>
+          <td>TINKLE-BELL</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ELEC-PIANO1</td>
+          <td>38</td>
+          <td>SOUNDTRACK</td>
+          <td>70</td>
+          <td>SLAP-BASS-1</td>
+          <td>102</td>
+          <td>GLOCKNSPIEL</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>7 ELEC-PIANO1 39 ATMOSPHERE 71 FRETLESS-BS 103 TUBULR-8 HONKY-TONK 40 MUSIC-BOX 72 FRETLESS-BS 104 BELLS</p>
+    <p>SOLO-VOICE XYLOPHONE</p>
+    <table class="data-table lookup">
+      <tbody>
+        <tr>
+          <td>9</td>
+          <td>DRWBAR-ORGN</td>
+          <td>41</td>
+          <td>POLYSYNTH</td>
+          <td>73</td>
+          <td>FLUTE</td>
+          <td>105</td>
+          <td>MARIMBA</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>ROCK-ORGAN</td>
+          <td>42</td>
+          <td>ICE-RAIN</td>
+          <td>74</td>
+          <td>FLUTE</td>
+          <td>106</td>
+          <td>KOTO</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>PERC-ORGAN</td>
+          <td>43</td>
+          <td>POLYSYNTH</td>
+          <td>75</td>
+          <td>PICCOLO</td>
+          <td>107</td>
+          <td>BANDONEON</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>DRWBAR-ORGN</td>
+          <td>44</td>
+          <td>ECHO-DROPS</td>
+          <td>76</td>
+          <td>PICCOLO</td>
+          <td>108</td>
+          <td>SHAKUHACHI</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>CHRCH-ORGAN</td>
+          <td>45</td>
+          <td>BASS+LEAD</td>
+          <td>77</td>
+          <td>RECORDER</td>
+          <td>109</td>
+          <td>WHISTLE</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>CHRCH-ORGAN</td>
+          <td>46</td>
+          <td>REED-ORGAN</td>
+          <td>78</td>
+          <td>PANFLUTE</td>
+          <td>110</td>
+          <td>WHISTLE</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>CHRCH-ORGAN</td>
+          <td>47</td>
+          <td>GLOCKNSPIEL</td>
+          <td>79</td>
+          <td>ALTO-SAX</td>
+          <td>111</td>
+          <td>BOTTLE-BLOW</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>ACCORDION</td>
+          <td>48</td>
+          <td>SQUARE-</td>
+          <td>80</td>
+          <td>SOPRANO-SAX</td>
+          <td>112</td>
+          <td>BOTTLE-BLOW</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 id="wave" class="param-name">WAVE</h4>
+    <table class="data-table lookup">
+      <tbody>
+        <tr>
+          <td>17</td>
+          <td>HARPSICHORD</td>
+          <td>49</td>
+          <td>STRG-ENSMBL</td>
+          <td>81</td>
+          <td>TENOR-SAX</td>
+          <td>113</td>
+          <td>TYMPANI</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>HARPSICHORD</td>
+          <td>50</td>
+          <td>STRG-ENSMBL</td>
+          <td>82</td>
+          <td>BAR-SAX</td>
+          <td>114</td>
+          <td>MELODIC-TOM</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>SQUARE-WAVE</td>
+          <td>51</td>
+          <td>SYNTH-STR-1</td>
+          <td>83</td>
+          <td>CLARINET</td>
+          <td>115</td>
+          <td>SYNTH-DRUM</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>CLAVINET</td>
+          <td>52</td>
+          <td>PIZZI-STRGS</td>
+          <td>84</td>
+          <td>CLARINET</td>
+          <td>116</td>
+          <td>SYNTH-DRUM</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>CLAVINET</td>
+          <td>53</td>
+          <td>VIOLIN</td>
+          <td>85</td>
+          <td>OBOE</td>
+          <td>117</td>
+          <td>SYNTH-DRUM</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>CLAVINET</td>
+          <td>54</td>
+          <td>VIOLIN</td>
+          <td>86</td>
+          <td>ENGLISH-HRN</td>
+          <td>118</td>
+          <td>TAIKO-DRUM</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>CELESTA</td>
+          <td>55</td>
+          <td>CELLO</td>
+          <td>87</td>
+          <td>BASSOON</td>
+          <td>119</td>
+          <td>WOODBLOCK</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>CELESTA</td>
+          <td>56</td>
+          <td>CELLO</td>
+          <td>88</td>
+          <td>HARMONICA</td>
+          <td>120</td>
+          <td><span class="value">REVERSE</span>-CYM</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>SYN-BRASS-1</td>
+          <td>57</td>
+          <td>CONTRABASS</td>
+          <td>89</td>
+          <td>TRUMPET</td>
+          <td>121</td>
+          <td>WOODBLOCK</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>SYN-BRASS-1</td>
+          <td>58</td>
+          <td>HARP</td>
+          <td>90</td>
+          <td>TRUMPET</td>
+          <td>122</td>
+          <td>TINKLE-BELL</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>SYN-BRASS-2</td>
+          <td>59</td>
+          <td>HARP</td>
+          <td>91</td>
+          <td>TROMBONE</td>
+          <td>123</td>
+          <td>ORCH-HIT</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>SYN-BRASS-2</td>
+          <td>60</td>
+          <td>NYL-STR-GTR</td>
+          <td>92</td>
+          <td>TROMBONE</td>
+          <td>124</td>
+          <td>TELEPHONE</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>SYNTH-BASS2</td>
+          <td>61</td>
+          <td>STL-STR-GTR</td>
+          <td>93</td>
+          <td>FRENCH-</td>
+          <td>125</td>
+          <td>BIRD-TWEET</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>HARPSICHORD</td>
+          <td>62</td>
+          <td>CLEAN-GUITR</td>
+          <td>94</td>
+          <td>HORN</td>
+          <td>126</td>
+          <td>BREATHNOISE</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>SAW-WAVE</td>
+          <td>63</td>
+          <td>CLEAN-GUITR</td>
+          <td>95</td>
+          <td>FRENCH-</td>
+          <td>127</td>
+          <td>CRYSTAL</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>SYNTH-BASS2</td>
+          <td>64</td>
+          <td>SITAR</td>
+          <td>96</td>
+          <td>HORN</td>
+          <td>128</td>
+          <td>BREATHNOISE</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4 id="tuba" class="param-name">TUBA</h4>
+    <h4 id="brass-sectn" class="param-name">BRASS-SECTN</h4>
+    <p>After receiving a Bank Select value of MSB 127 on MIDI Channel 10, any subsequent MIDI program changes on MIDI
+      channel 10 will always select the MT-32 Drum Map.</p>
+    <p>Transmitting a Bank Select value of 0-126 MSB will return the MIDI channel to normal MIDI program change
+      reception, selecting sounds from the General MIDI Sound Map as described on the previous page.</p>
+    <table class="defn-table">
+      <thead>
+        <tr>
+          <th>General</th>
+          <th>MIDI Mode Controller Implementation Chart</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="lcd">MIDI</span></td>
+          <td>Controller Implementation in General MIDI Mode When in General MIDI mode, many of the TS-10 controllers
+            function differently than noted in the</td>
+        </tr>
+        <tr>
+          <td><span class="lcd">MIDI</span></td>
+          <td>Implementation chart, and are described in the chart on the following page.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="vfd-callouts top">
+      <div>Function…</div>
+      <div>Transmitted</div>
+      <div>Recognized</div>
+    </div>
+    <p>Velocity Note ON YES YES 1 In the TS-10, a Note Off velocity of 64 is always sent for all keys.</p>
+    <p>Note <span class="value">OFF</span> YES1 NO 2 2 The TS-10 voice architecture does not support Release Velocity.
+    </p>
+    <table class="param-cols cols-4">
+      <tbody>
+        <tr>
+          <td>Aftertouch</td>
+          <td>Key</td>
+          <td>NO</td>
+          <td>NO</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="param-cols cols-3">
+      <tbody>
+        <tr>
+          <td>Channel</td>
+          <td>NO</td>
+          <td>NO</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Pitch Bender YES YES Defaults to a value of 64 (center).</p>
+    <p>Controller 0 YES YES Always transmitted as 0. An MSB value of 127 received will select the MT-32 Program Change
+      (Bank Select MSB) Sound Map.</p>
+    <p>Controller 1 YES YES Defaults to a value of 0.</p>
+    <p>(Mod Wheel)</p>
+    <table class="param-cols cols-3">
+      <tbody>
+        <tr>
+          <td>Controller 4</td>
+          <td>NO</td>
+          <td>NO</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>(Foot Pedal)</p>
+    <p>Controller 6 NO YES For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</p>
+    <p>(Data Entry MSB)</p>
+    <p>Controller 7 YES YES Defaults to a value of 100. Setting <span class="lcd">RECV=OFF</span> will default the
+      Track/Channel volume to 127.</p>
+    <p>(Volume) Devices connected to the Pedal•CV jack will control volume.</p>
+    <div class="vfd-callouts top">
+      <div>Controller 10</div>
+      <div>NO</div>
+      <div>YES</div>
+    </div>
+    <p>(Pan)</p>
+    <p>Controller 11 NO YES Defaults to a value of 127. Expression messages received will be responded to as Mix.</p>
+    <p>(Expression)</p>
+    <table class="param-cols cols-3">
+      <tbody>
+        <tr>
+          <td>Controller 12</td>
+          <td>NO</td>
+          <td>NO</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>(Effect Mod Foot Switch)</p>
+    <p>Controller 32 YES NO Always transmitted as 0.</p>
+    <p>(Bank Select LSB)</p>
+    <p>Controller 38 NO YES For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</p>
+    <p>(Data Entry LSB)</p>
+    <p>Controller 64 YES YES This defaults to a value of 0. The right foot switch will always function as Sustain.</p>
+    <p>(Sustain)</p>
+    <p>Controller 66 YES YES This defaults to a value of 0. The left foot switch can function as Sostenuto, if a stereo
+      foot (Sostenuto) switch is connected.</p>
+    <p>Controller 70 YES NO ENSONIQ Patch Selects; values of 0, 32, 64, 127</p>
+    <p>(Sound Variation)</p>
+    <p>Controller 71 NO NO ENSONIQ Timbre.</p>
+    <p>(Harmonic Content)</p>
+    <div class="vfd-callouts top">
+      <div>Controller 72</div>
+      <div>NO</div>
+      <div>YES</div>
+    </div>
+    <p>(Release Time)</p>
+    <div class="vfd-callouts top">
+      <div>Controller 73</div>
+      <div>NO</div>
+      <div>YES</div>
+    </div>
+    <p>(Attack Time)</p>
+    <div class="vfd-callouts top">
+      <div>Controller 74</div>
+      <div>NO</div>
+      <div>YES</div>
+    </div>
+    <p>(Brightness)</p>
+    <div class="vfd-callouts top">
+      <div>Controller 75</div>
+      <div>NO</div>
+      <div>YES</div>
+    </div>
+    <p>(Rate)</p>
+    <p>Controller 91 NO YES Controls effect bus switching and the FX2 wet/dry mix in the General MIDI effect.</p>
+    <p>(External Effects {Reverb} Depth)</p>
+    <p>Controller 93 NO YES Controls effect bus switching and the FX1 wet/dry mix in the General MIDI effect.</p>
+    <p>(Chorus Depth)</p>
+    <p>Controller 100 NO YES Values of 0, 1, and 2.</p>
+    <p>(Reg Param Select LSB)</p>
+    <table class="param-cols cols-3">
+      <tbody>
+        <tr>
+          <td>Controller 101</td>
+          <td>NO</td>
+          <td>NO</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>(Reg Param Select MSB)</p>
+    <div class="vfd-callouts top">
+      <div>Controller 120</div>
+      <div>NO</div>
+      <div>YES</div>
+    </div>
+    <p>(All Sound Off)</p>
+    <p>Controller 121 YES YES Reset Controller messages received will normalize only the controllers supported in
+      General (Reset All Controllers) MIDI Mode. It is received independently on each of the 16 General MIDI
+      Track/Channels.</p>
+    <p>Controller 123 All Notes Off messages received will be responded to regardless of the setting of the <span
+        class="param">ALL-OFF</span> (All Notes Off) YES YES parameter on the <span class="page-name">MIDI
+        Control</span> page. It is received independently on each of the 16 General</p>
+    <p>MIDI Track/Channels.</p>
+    <p>Registered Parameters: These Registered Parameters are received independently on each of the 16 General MIDI</p>
+    <div class="vfd-callouts top">
+      <div>0 Pitch Bend Range 1 Fine Tuning 2 Coarse Tuning</div>
+      <div>NO NO NO</div>
+      <div>YES YES YES</div>
+    </div>
+    <div class="vfd-callouts top">
+      <div>Program Change</div>
+      <div>YES</div>
+      <div>YES</div>
+    </div>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
@@ -343,4 +2261,5 @@
     and the printed Index are omitted.
   </footer>
 </body>
+
 </html>
