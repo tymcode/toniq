@@ -529,7 +529,6 @@ figure.vfd-unit.has-page col.param-col {
 .sysex-cmd > div,
 .sysex-byte {
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.78rem;
   font-weight: 600;
   color: var(--ink);
   background: var(--panel);
@@ -544,7 +543,6 @@ figure.vfd-unit.has-page col.param-col {
 
 .defn-table>tbody>tr>td.sysex-byte, .sysex-byte {
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.78rem;
   font-weight: 600;
   color: var(--ink);
   background: var(--panel);
