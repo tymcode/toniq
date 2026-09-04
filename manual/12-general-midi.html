@@ -41,9 +41,8 @@
       their assigned General MIDI Program Change numbers.</p>
     <h4 id="percussion">Percussion</h4>
     <p>General MIDI also includes a Percussion Key Map, defining specific drum voices for each key. To avoid confusion,
-      General MIDI always assigns percussion to MIDI channel 10. The General MIDI</span></td>
-      <td>Percussion Key Map can be found after the General MIDI Sound Map.
-    </p>
+      General MIDI always assigns percussion to MIDI channel 10. The General MIDI Percussion Key Map can be found after
+      the General MIDI Sound Map.</p>
     <h4 id="gs-mt-32-compatibility" class="param-name">GS/MT-32 Compatibility</h4>
     <p>GS is an extended MIDI sound specification originated by Roland® Corp. Although we provide the GS Drum Maps
       (listed later) and MT-32 Program Change Map for Roland Sound Canvas™ compatibility, the TS-10 is not GS compatible
@@ -79,7 +78,7 @@
       <h1 id="general-midi-sound-map" class="param-name">General MIDI Sound Map</h1> 
       The following map shows the General MIDI sound name and program change number of each
       sound as they appear in the TS-10. This map also shows how General MIDI divides the instruments into 16 categories
-      of similar sounds:</li>
+      of similar sounds:
   
     <table border="2px" class="data-table" >
       <thead>
@@ -906,30 +905,32 @@
           <td></td>
           <td></td>
           <td></td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
     
     <h3 id="gm-and-gs-percussion-key-maps-channel-10-2">GM and GS Percussion Key Maps (Channel 10)</h3>
     <table border="2px" class="data-table">
+      <thead>
+        <tr>
+          <th>MIDI Note #</th>
+          <th>Key Name</th>
+          <th>26 - TR-808-KIT</th>
+          <th>41 - BRUSH-KIT</th>
+          <th>49 - ORCH-PERCSN</th>
+          <th>128 - MT-32-KIT</th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
-          <td>MIDI</td>
-          <td>26 - TR-808-KIT</td>
-          <td>41 - BRUSH-KIT</td>
-          <td>49 - ORCH-</td>
-          <td>128 - MT-32-KIT</td>
+          <td>35</td>
+          <td>B1</td>
+          <td>Kick Drum 2</td>
+          <td>Kick Drum 2</td>
+          <td>Concert Bass Drum</td>
+          <td>Acoustic Bass Drum</td>
         </tr>
-      </tbody>
-    </table>
-    <p>Note # PERCSN</p>
-    <div class="vfd-callouts top">
-      <div>35</div>
-      <div>B1</div>
-      <div>Kick Drum 2</div>
-    </div>
-    <p>Drum</p>
-    <table class="data-table">
-      <tbody>
         <tr>
           <td>36</td>
           <td>C2</td>
@@ -951,20 +952,25 @@
           <td>D2</td>
           <td>808 Snare Drum</td>
           <td>Brush Tap</td>
-          <td>Concert Snare</td>
+          <td>Concert Snare Drum</td>
           <td>Acoustic Snare</td>
         </tr>
-      </tbody>
-    </table>
-    <p>Drum</p>
-    <div class="vfd-callouts top">
-      <div>___ 39 40</div>
-      <div>D2+ E2</div>
-      <div>Hand Clap Electric Snare</div>
-    </div>
-    <p>Drum</p>
-    <table class="param-cols cols-6">
-      <tbody>
+        <tr>
+          <td>___ 39</td>
+          <td>D2+</td>
+          <td>Hand Clap</td>
+          <td>Brush Slap</td>
+          <td>Castanets</td>
+          <td>Hand Clap</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>E2</td>
+          <td>Electric Snare</td>
+          <td>Brush Swirl</td>
+          <td>Concert Snare Drum</td>
+          <td>Electric Snare</td>
+        </tr>
         <tr>
           <td>41</td>
           <td>F2</td>
@@ -973,20 +979,14 @@
           <td>Tympani F</td>
           <td>Acoustic Low Tom</td>
         </tr>
-      </tbody>
-    </table>
-    <table class="data-table">
-      <thead>
         <tr>
-          <th>___ 42</th>
-          <th>F2+</th>
-          <th>808 Closed Hi-Hat</th>
-          <th>Closed Hi-Hat</th>
-          <th>Tympani F#</th>
-          <th>Closed Hi-Hat</th>
+          <td>___ 42</td>
+          <td>F2+</td>
+          <td>808 Closed Hi-Hat</td>
+          <td>Closed Hi-Hat</td>
+          <td>Tympani F#</td>
+          <td>Closed Hi-Hat</td>
         </tr>
-      </thead>
-      <tbody>
         <tr>
           <td>43</td>
           <td>G2</td>
@@ -1350,9 +1350,9 @@
         <tr>
           <td>88</td>
           <td>E6</td>
+          <td></td>
+          <td></td>
           <td>Applause</td>
-          <td></td>
-          <td></td>
           <td></td>
         </tr>
       </tbody>
@@ -1361,60 +1361,46 @@
       <li>There are four additional sounds assigned to keys in the MT-32-KIT: 90 (F6+) Crash 92 (G6+) Train 93 (A6) Jet
         94 (A6+) Helicopter</li>
     </ul>
-    <h3 id="using-general-midi-in-the-real-world">Using General MIDI in the Real World</h3>
-    <p>MIDI Out</p>
-    <p>External MIDI Interface (if applicable) MIDI In</p>
-    <p>Internal card, parallel port, modem, or printer port</p>
-    <p>Computer (with MIDI Interface) connected to TS Keyboard</p>
+    <h2 id="using-general-midi-in-the-real-world">Using General MIDI in the Real World</h2>
+    <figure class="figure">
+      <img src="images/gm-connection-setup.png" alt="General MIDI Connection Setup">
+    </figure>
     <h3 id="using-ts-10-general-midi-sounds-with-an-external-gm-sequencer">Using TS-10 General MIDI Sounds with an
       External GM Sequencer</h3>
     <h4 id="connecting-the-ts-10-keyboard-to-a-computer-or-other-general-midi-sequ">Connecting the TS-10 keyboard to a
       computer (or other General MIDI sequencer)</h4>
-    <p>1. Power down all electronic devices before making any connections.</p>
-    <p>2. Using a MIDI Cable, connect the MIDI In jack of the TS-10 to the MIDI Out jack of the computer/hardware
-      sequencer/sequence player.</p>
+      <ol>
+        <li>Power down all electronic devices before making any connections.</li>
+        <li>Using a MIDI Cable, connect the <kbd class="button">MIDI In</kbd> jack of the TS-10 to the <kbd class="button">MIDI Out</kbd> jack of the computer/hardware sequencer/sequence player.
+      
     <aside class="note">
-      <p>Note: Many computers do not have a MIDI jack built into them, and require an additional MIDI Interface
-        connector between the computer and the TS-10.</p>
-    </aside>
-    <p>3. Make sure the proper amplification is connected to the TS-10, and power on the computer, the TS-10 keyboard,
-      and the amplification system (in that order).</p>
-    <aside class="tip">
-      <p>Headphones connected to the Phones jack of the TS-10 will work fine in</p>
-    </aside>
-    <p>General MIDI mode, and allow you to work late hours without disturbing others.</p>
-    <p>To Enable General MIDI on the TS-10 1. Press the <kbd class="button">MIDI Control</kbd> button. The display
-      shows:</p>
-    <figure class="vfd-unit has-page">
-
-      <div class="vfd-bezel">
-        <table>
-          <colgroup>
-            <col class="page-col">
-            <col class="param-col">
-            <col class="param-col">
-            <col class="param-col">
-          </colgroup>
-          <thead>
-            <tr class="soft-row top">
-              <th class="page-tag-slot"></th>
-              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-              <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button"
-                  aria-pressed="true"></button></th>
-              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-            </tr>
-          </thead>
+      <p>Many computers do not have a MIDI jack built into them, and require an additional MIDI Interface connector between the computer and the TS-10.</p>
+    </aside></li>
+    
+      <li>Make sure the proper amplification is connected to the TS-10, and power on the computer, the TS-10 keyboard, and the amplification system (in that order).</li>
+      <aside class="tip">Headphones connected to the Phones jack of the TS-10 will work fine in <span class="function">General MIDI Mode</span>, and allow you to work late hours without disturbing others.</li>
+    </ol>
+    <h4 id="to-enable-general-midi-on-the-ts-10">To Enable General MIDI on the TS-10</h4> 
+    <ol>
+      <li>Press the <kbd class="button">MIDI Control</kbd> button. The display shows:</li>
+      <figure class="vfd-unit has-page">
+        <div class="vfd-bezel">
+          <table>
+            <colgroup>
+              <col class="page-col">
+              <col class="param-col">
+              <col class="param-col">
           <tbody class="vfd-screen">
             <tr>
               <td class="cell page-label">MIDI</td>
               <td class="cell">BASE-CHAN=01</td>
-              <td class="cell selected">GMIDI=OFF</td>
+              <td class="cell">GMIDI=<span class="selected">OFF</span></td>
               <td class="cell">SEND=TRACK</td>
             </tr>
             <tr>
               <td class="cell page-label">&nbsp;</td>
-              <td class="cell">MODE=MULTI</td>
-              <td class="cell">VELS/XPOS=BOTH</td>
+              <td class="cell" style="text-align: left;">MODE=MULTI</td>
+              <td class="cell" style="text-align: left;">VELS/XPOS=BOTH</td>
               <td class="cell">XCTRL=002</td>
             </tr>
           </tbody>
@@ -1434,24 +1420,16 @@
 
 
     </figure>
-    <p>2. On the first <span class="page-name">MIDI Control</span> sub-page, press the upper middle soft button on the
-      display to select the <span class="param">GMIDI</span> parameter (it should be underlined).</p>
-    <p>3. Press the <kbd class="button">Up Arrow</kbd> button to enter General MIDI mode.</p>
-    <p>If the sequencer is running, the SEQUENCER MUST BE STOPPED message will be displayed. If the sequencer is
-      stopped, the “SAVE CHANGES?” prompt will be displayed (if necessary). Otherwise, the following prompt will be
-      displayed:</p>
+    <li> On the first <span class="page-name">MIDI Control</span> sub-page, press the upper middle soft button on the
+      display to select the <span class="param">GMIDI</span> parameter (it should be underlined).
+    <li> Press the <kbd class="button">Up Arrow</kbd> button to enter <span class="function">General MIDI Mode</span>.
+    <p>If the sequencer is running, the <span class="lcd">SEQUENCER MUST BE STOPPED</span> message will be displayed. If the sequencer is
+      stopped, the <span class="lcd">SAVE CHANGES?</span> prompt will be displayed (if necessary). Otherwise, the following prompt will be displayed:</p>
     <figure class="vfd-unit">
-
       <div class="vfd-bezel">
         <table>
-          <colgroup>
-            <col class="param-col">
-            <col class="param-col">
-            <col class="param-col">
-          </colgroup>
           <thead>
             <tr class="soft-row top">
-
               <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
               <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
               </th>
@@ -1460,14 +1438,14 @@
           </thead>
           <tbody class="vfd-screen">
             <tr>
-              <td class="cell">ENTER GENERAL MIDI MODE</td>
+              <td class="cell">ENTER GENERAL MIDI MODE ?</td>
               <td class="cell">&nbsp;</td>
-              <td class="cell">*YES*</td>
+              <td class="cell" style="text-align: right;">*YES*</td>
             </tr>
             <tr>
               <td class="cell">&nbsp;</td>
               <td class="cell">&nbsp;</td>
-              <td class="cell">*NO*</td>
+              <td class="cell" style="text-align: right;">*NO*</td>
             </tr>
           </tbody>
           <tfoot>
@@ -1486,11 +1464,11 @@
 
 
     </figure>
-    <p>4. Pressing the soft button beneath <span class="lcd">*NO*</span> will leave the TS-10 system unchanged,
+    <p>4. Pressing the soft button beneath <span class="value">*NO*</span> will leave the TS-10 system unchanged,
       returning you to the first <span class="page-name">MIDI Control</span> sub-page.</p>
-    <p>5. Pressing the soft button above <span class="lcd">*YES*</span> will enable General MIDI Mode. All LEDs will be
+    <p>5. Pressing the soft button above <span class="value">*YES*</span> will enable <span class="function">General MIDI Mode</span>. All LEDs will be
       off and all buttons (except the Arrow buttons and the soft buttons) will be disabled. The TS-10 will display the
-      <span class="page-name">General MIDI Mode</span> page as follows:</p>
+      <span class="page-name"><span class="function">General MIDI Mode</span></span> page as follows:</p>
     <figure class="vfd-unit">
       <div class="vfd-callouts top">
         <div>Press here for GM-PANIC RESET</div>
@@ -1515,7 +1493,7 @@
           </thead>
           <tbody class="vfd-screen">
             <tr>
-              <td class="cell">GENERAL MIDI MODE</td>
+              <td class="cell">General MIDI Mode</td>
               <td class="cell">RECV=ON</td>
               <td class="cell">*EXIT*</td>
             </tr>
@@ -1546,44 +1524,30 @@
 
     </figure>
     <p>The TS-10 behaves as though an enlarged 16-track sequence has been selected, and as though the current MIDI
-      Mode=<span class="value">MULTI</span>. Incoming MIDI will be received on all 16 MIDI channels, to 16 discrete
-      inbound Track/Channels. The default effect algorithm (46 CHORUS + REVERB 2) will be installed, and all
-      Track/Channels will be routed through the effect.</p>
-    <p>When you now run the external computer or hardware sequencer, you will hear the proper sounds played from the
-      TS-10 as program changes and note/controller data is transmitted to the TS-10 via the MIDI In jack.</p>
-    <table class="defn-table">
-      <tbody>
-        <tr>
-          <td><span class="lcd">MIDI</span></td>
-          <td>Out in General MIDI Mode The TS-10 keyboard will always play the sound assigned to the currently displayed
-            Track/Channel number. Local playing on the TS-10 keyboard and controllers will be transmitted via the MIDI
-            Out jack on the displayed MIDI Channel number. This allows you to connect the</td>
-        </tr>
-        <tr>
-          <td><span class="lcd">TS-10 MIDI</span></td>
-          <td>Out jack to the MIDI In jack of a computer sequencer/hardware sequencer/other</td>
-        </tr>
-        <tr>
-          <td><span class="lcd">MIDI</span></td>
-          <td>Sound module.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>This feature adds MIDI Controller capability to the TS-10 while in General MIDI Mode.</p>
+      Mode is <span class="value">MULTI</span>. Incoming MIDI will be received on all 16 MIDI channels, to 16 discrete
+        inbound Track/Channels. The default effect algorithm (<span class="patch-name">46 CHORUS + REVERB 2</span>) will be installed, and all
+        Tracks/Channels will be routed through the effect.</p>
+      <p>When you now run the external computer or hardware sequencer, you will hear the proper sounds played from the
+      TS-10 as program changes and note/controller data is transmitted to the TS-10 via the <kbd class="button">MIDI In</kbd> jack.</p>
+    
+    <h3 id="midi-out-in-general-midi-mode">MIDI Out in General MIDI Mode</h3>
+    <p>The TS-10 keyboard will always play the sound assigned to the currently displayed Track/Channel number. Local playing on the TS-10 keyboard and controllers will be transmitted via the <kbd class="button">MIDI Out</kbd> jack on the displayed MIDI Channel number. This allows you to connect the TS-10 <kbd class="button">MIDI Out</kbd> jack to a MIDI sequencer, hardware sequencer, or other MIDI device.
+    
+    <p>This feature adds MIDI Controller capability to the TS-10 while in <span class="function"><span class="function">General MIDI Mode</span></span>.</p>
     <h2 id="ts-10-general-midi-parameters">TS-10 General MIDI Parameters</h2>
     <h4 id="recv-midi-reception" class="param-name"><span class="param">RECV (MIDI Reception)</span><span
         class="range">Range: ON or OFF</span></h4>
-    <p>This parameter is set to receive MIDI data by default (<span class="lcd">RECV=ON)</span>. By changing the RECV
+    <p>This parameter is set to receive MIDI data by default (<span class="value">RECV=ON</span>). By changing the <span class="param">RECV</span>
       value for each MIDI channel, you can define how many Track/Channels you want to receive data via MIDI.</p>
-    <p>Setting <span class="lcd">RECV=OFF</span> will disable reception of MIDI notes, controllers and program changes
+    <p>Setting <span class="value">RECV=OFF</span> will disable reception of MIDI notes, controllers and program changes
       on the displayed MIDI channel. Sounds can still be played from the keyboard, and live playing will still transmit
       via MIDI on the displayed MIDI channel.</p>
-    <p>When <span class="lcd">RECV=OFF</span>, the Track/Channel volume will be set to full on (127), so that your live
+    <p>When <span class="value">RECV=OFF</span>, the Track/Channel volume will be set to full on (127), so that your live
       playing can use the full dynamic range. Resetting RECV to ON will reset the Track/Channel volume back to the
       General MIDI default value of 100.</p>
     <aside class="tip">
-      <p>When set to <span class="lcd">RECV=OFF</span>, this parameter allows for “music-minus-one” applications in
-        General MIDI mode. By setting this parameter to <span class="value">OFF</span>, you disable incoming MIDI for
+      <p>When set to <span class="value">RECV=OFF</span>, this parameter allows for “music-minus-one” applications in
+        <span class="value">General MIDI Mode</span>. By setting this parameter to <span class="value">OFF</span>, you disable incoming MIDI for
         the selected Track/Channel, boost the volume, and can play the assigned sound live from the keyboard as the
         remaining sequence tracks play back via incoming MIDI.</p>
     </aside>
@@ -1593,7 +1557,7 @@
     </h4>
     <p>This parameter is used to select and view the sounds assigned to each MIDI Channel. When this parameter is
       selected, the Data Entry Controls will scroll through all 16 Track/Channels.</p>
-    <p><span class="lcd">GM-CHAN=10</span> is permanently assigned to play Drum Maps only. When Track/Channel 10 is
+    <p><span class="patch-name">GM-CHAN=10</span> is permanently assigned to play Drum Maps only. When Track/Channel 10 is
       selected, the GM-PROG parameter will scroll through the nine available GM/GS Drum Maps.</p>
     <p>Playing on the TS-10 keyboard will always be transmitted on the displayed MIDI channel. If the GM-CHAN value is
       changed while a note is held down, local voices will be silenced on the previously selected Track/Channel.</p>
@@ -1605,165 +1569,205 @@
       via MIDI whenever this parameter is edited.</p>
     <p>Program Changes received on MIDI channels 1-9 and 11-16 will assign programs to the 16 Track/Channels from the
       128 General MIDI sounds in ROM. MIDI Channel 10 can only access the nine GM/GS Drum Maps, and will receive the
-      corresponding GS Drum Map Program change value (<span class="lcd">1=STANDRD-KIT</span>, <span
-        class="lcd">9=ROOM-KIT</span>, <span class="lcd">17=POWER-KIT</span>, <span class="lcd">25=ELCTRNC-KIT</span>,
-      <span class="lcd">26=TR-808-KIT</span>, <span class="lcd">33=JAZZ-KIT</span>, <span
-        class="lcd">41=BRUSH-KIT</span>, <span class="lcd">49=ORCH-PERCSN</span>, <span
-        class="lcd">128=MT-32-KIT)</span>.</p>
+      corresponding GS Drum Map Program change value (<span class="patch-name">1=STANDRD-KIT</span>, <span
+        class="patch-name">9=ROOM-KIT</span>, <span class="patch-name">17=POWER-KIT</span>, <span class="patch-name">25=ELCTRNC-KIT</span>,
+      <span class="patch-name">26=TR-808-KIT</span>, <span class="patch-name">33=JAZZ-KIT</span>, <span
+        class="patch-name">41=BRUSH-KIT</span>, <span class="patch-name">49=ORCH-PERCSN</span>, <span
+        class="patch-name">128=MT-32-KIT)</span>.</p>
     <p>The TS-10 keyboard will always play the sound assigned to the displayed Track/Channel number.</p>
-    <aside class="button-float">
-      <table class="button-id">
-        <tr>
-          <td><span class="keycap-fallback" aria-hidden="true"></span>
-            <div class="button-label">Sounds</div>
-          </td>
-        </tr>
-      </table>
-    </aside>
-    <p>Manually Assigning GM Sounds to Each MIDI Channel 1. Press the soft button beneath the GM-PROG parameter.</p>
+    
+    <p>Manually Assigning GM Sounds to Each MIDI Channel 1. Press the soft button beneath the <span class="param">GM-PROG</span> parameter.</p>
     <p>2. Use the Data Entry Controls to scroll through the different GM Sounds.</p>
     <p>The General MIDI Sound names change when you use the Data Entry Controls. These sound names and their associated
-      GM Program numbers are listed on the General MIDI</p>
-    <p>Sound Map found earlier in this section.</p>
+      GM Program numbers are listed on the General MIDI Sound Map found earlier in this section.</p>
     <aside class="note">
-      <p>Note: Most sequence data contains MIDI Program Change messages intented to assign the correct sounds to each
+      <p>Most sequence data contains MIDI Program Change messages intended to assign the correct sounds to each
         MIDI Track/Channel. These incoming MIDI program changes will probably change any manually assigned sounds. If
         you wish to prevent this from happening, you should disable program change transmission from the external MIDI
         sequencer.</p>
     </aside>
-    <p>General MIDI “Panic” button Some remote MIDI Devices may leave notes and controller values “dangling,” causing
-      Track/Channels to function improperly. The TS-10 has a solution to this problem — the MIDI “Panic” button.
-      Pressing the upper left soft button above GENERAL MIDI <span class="param">MODE</span> will invoke the GM-PANIC
-      RESET function:</p>
-    <p>“GM-PANIC RESET” will be momentarily displayed. All TS-10 and MIDI voices on all 16 Track/Channels will be
-      silenced. The following MIDI messages will be transmitted on all 16</p>
-    <p>MIDI Channels: All Notes Off, Reset All Controllers, key-ups for all keys down, sustain and sostenuto pedal ups,
-      and controllers will be normalized to the General MIDI default values.</p>
-    <p>Program Changes will be transmitted corresponding to the sounds assigned to each of the 16</p>
-    <p>Track/Channels.</p>
-    <p>System and MIDI Control Settings in GM Mode The following System and <span class="page-name">MIDI Control</span>
-      page parameter settings are installed in General MIDI mode (see Sections <a class="refer-to"
-        href="02-system.html#section-2-system-page-parameters">2</a> and <a class="refer-to"
-        href="03-midi.html#section-3-midi-control-page-parameters">3</a> for information about these parameters). All
-      other parameters are reset to values appropriate for General MIDI reception:</p>
+    <h3 id="general-midi-panic-button">General MIDI “Panic” Button</h3>
+    <p>Some remote MIDI Devices may leave notes and controller values “dangling,” causing Track/Channels to function improperly. The TS-10 has a solution to this problem — the MIDI “Panic” button. Pressing the upper left soft button above <span class="lcd">GENERAL MIDI MODE</span> will invoke the <span class="function">GM-PANIC RESET</span> function:</p>
+    <figure class="vfd-unit">
+      <div class="vfd-bezel">
+        <table>
+          <thead>
+            <tr class="soft-row top">
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+              </th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell" colspan="3">GM-PANIC RESET</td>
+            </tr>
+            <tr>
+              <td class="cell" colspan="3">&nbsp;</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+</figure>
+  “GM-PANIC RESET” will be momentarily displayed. All TS-10 and MIDI voices on all 16 Track/Channels will be silenced. The following MIDI messages will be transmitted on all 16 MIDI Channels: <span class="message">All Notes Off</span>, <span class="message">Reset All Controllers</span>, <span class="message">key-ups</span> for all keys down, <span class="message">sustain and sostenuto pedal ups</span>, and <span class="message">controllers</span> will be normalized to the General MIDI default values. Program Changes will be transmitted corresponding to the sounds assigned to each of the 16 Track/Channels.</p>
+    <p>System and MIDI Control Settings in GM Mode The following System and <span class="page-name">MIDI Control</span> page parameter settings are installed in <span class="function">General MIDI Mode</span> (see Sections <a class="refer-to" href="02-system.html#section-2-system-page-parameters">2</a> and <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">3</a> for information about these parameters). All other parameters are reset to values appropriate for General MIDI reception:</p>
     <ul>
-      <li><span class="page-name">System</span> page <span class="param">TUNE</span> and PITCH-TABLE settings are
+      <li><span class="page-name">System</span> page <span class="param">TUNE</span> and <span class="param">PITCH-TABLE</span> settings are
         retained.</li>
-      <li><span class="page-name">System</span> page <span class="param">TOUCH</span> and <span
-          class="param">VEL-MAX</span> settings are retained.</li>
-      <li><span class="page-name">System</span> page <span class="param">PEDAL</span> is set to <span
-          class="value">VOL</span>.</li>
-      <li><span class="page-name">System</span> page FOOT-SW1-R and SW2-R are set to <span class="param">SUSTAIN</span>.
+      <li><span class="page-name">System</span> page <span class="param">TOUCH</span> and <span class="param">VEL-MAX</span> settings are retained.</li>
+      <li><span class="page-name">System</span> page <span class="param">PEDAL</span> is set to <span class="value">VOL</span>.</li>
+      <li><span class="page-name">System</span> page <span class="param">FOOT-SW1-R</span> and <span class="param">SW2-R</span> are set to <span class="value">SUSTAIN</span>.
       </li>
-      <li><span class="page-name">System</span> page FOOT-SW1-L and SW2-L are set to <span
-          class="param">SOSTENUTO</span> if they were previously set to any value other than <span
-          class="lcd">*UNUSED*</span>. If they were set to <span class="lcd">*UNUSED*</span>, they will remain <span
-          class="lcd">*UNUSED*</span>.</li>
-      <li><span class="page-name">MIDI Control</span> page <span class="param">SYS-EX</span> setting is set to ON.</li>
+      <li><span class="page-name">System</span> page <span class="param">FOOT-SW1-L</span> and <span class="param">SW2-L</span> are set to <span class="value">SOSTENUTO</span> if they were previously set to any value other than <span class="value">*UNUSED*</span>. If they were set to <span class="value">*UNUSED*</span>, they will remain <span class="value">*UNUSED*</span>.</li>
+      <li><span class="page-name">MIDI Control</span> page <span class="param">SYS-EX</span> setting is set to <span class="value">ON</span>.</li>
     </ul>
-    <p>Exiting General MIDI will restore your original settings.</p>
+    <p>Exiting <span class="function">General MIDI Mode</span> will restore your original settings.</p>
     <h3 id="disabling-general-midi">Disabling General MIDI</h3>
     <h4 id="to-disable-general-midi">To Disable General MIDI</h4>
     <ul>
-      <li>Press the soft button above <span class="lcd">*EXIT*</span> to exit General MIDI Mode.</li>
+      <li>Press the soft button above <span class="lcd">*EXIT*</span> to exit <span class="function">General MIDI Mode</span>.</li>
     </ul>
     <p>The TS-10 will momentarily show:</p>
+    <figure class="vfd-unit">
+      <div class="vfd-bezel">
+        <table>
+          <thead>
+            <tr class="soft-row top">
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button>
+              </th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell" colspan="3">GM-TRACKS RESET</td>
+            </tr>
+            <tr>
+              <td class="cell" colspan="3">&nbsp;</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button>
+              </td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+</figure>
     <p>The TS-10 will then return to its previous state. The General MIDI Track/Channel sound assignments will be
       preserved in static RAM, even after power-off.</p>
     <aside class="note">
-      <p>Note: You can also disable General MIDI by turning the TS-10 off, and then back on (this will not happen if the
-        WAKE-UP parameter is set to GEN-MIDI).</p>
+      <p>You can also disable General MIDI by turning the TS-10 off, and then back on (this will not happen if the
+        <span class="param">WAKE-UP</span> parameter is set to <span class="value">GEN-MIDI</span>).</p>
     </aside>
     <h3 id="enabling-disabling-general-midi-with-system-exclusive-messages">Enabling/Disabling General MIDI with System
       Exclusive Messages</h3>
-    <p>General MIDI can also be enabled/disabled using Universal System Exclusive (SysEx) messages:</p>
-    <h4 id="turning-general-midi-on-using-sysex-messages">Turning General MIDI On using SysEx Messages</h4>
-    <div class="vfd-callouts top">
-      <div>F0</div>
-      <div>7E</div>
-      <div>&lt;Device ID&gt;</div>
-    </div>
-    <table class="defn-table">
-      <thead>
-        <tr>
-          <th>Turning General</th>
-          <th>MIDI Off using SysEx Messages</th>
-        </tr>
+      <p>General MIDI can also be enabled/disabled using Universal System Exclusive (SysEx) messages:</p>
+      <h4 id="turning-general-midi-on-using-sysex-messages">Turning General MIDI On using SysEx Messages</h4>
+      <div class="sysex-cmd top">
+        <div>F0</div>
+        <div>7E</div>
+        <div><span>&lt;Device ID&gt;</span></div>
+        <div>09</div>
+        <div>01</div>
+        <div>F7</div>
+      </div>
+      <tr>
+        <table class="defn-table">
+          <tbody>
+            <tr>
+              <td class="sysex-byte">F0 7E</span></td>
+              <td>Universal non-real-time SysEx header</td>
+            </tr>
+            <tr>
+              <td class="sysex-byte">&lt;Device ID&gt;</td>
+              <td>ID of target device (suggest using 7F: Broadcast)</td>
+            </tr>
+            <tr>
+              <td class="sysex-byte">09</span></td>
+              <td>sub-ID #1=G</span>eneral MIDI message</td>
+            </tr>
+            <tr>
+              <td class="sysex-byte">01</span></td>
+              <td>sub-ID #2=G</span>eneral MIDI On</td>
+            </tr>
+            <tr>
+              <td class="sysex-byte">F7</span></td>
+              <td>EOX (end of SysEx)</td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <h4 id="turning-general-midi-on-using-sysex-messages">Turning General MIDI Off using SysEx Messages</h4>
+        <div class="sysex-cmd top">
+          <div>F0</div>
+          <div>7E</div>
+          <div>&lt;Device ID&gt;</div>
+          <div>09</div>
+          <div>02</div>
+          <div>F7</div>
+        </div>
+        <table class="defn-table">
+          <thead>
+
       </thead>
       <tbody>
         <tr>
-          <td><span class="lcd">F0 7E</span></td>
+          <td class="sysex-byte">F0 7E</span></td>
           <td>Universal non-real-time SysEx header</td>
         </tr>
         <tr>
-          <td>&lt;Device ID&gt;</td>
+          <td class="sysex-byte">&lt;Device ID&gt;</td>
           <td>ID of target device (suggest using 7F: Broadcast)</td>
         </tr>
         <tr>
-          <td><span class="lcd">09</span></td>
-          <td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td>
+          <td class="sysex-byte">09</span></td>
+          <td>sub-ID #1=G</span>eneral MIDI message</td>
         </tr>
         <tr>
-          <td><span class="lcd">01</span></td>
-          <td>sub-ID #<span class="lcd">2=G</span>eneral MIDI On</td>
+          <td class="sysex-byte">02</span></td>
+          <td>sub-ID #2=G</span>eneral MIDI Off</td>
         </tr>
         <tr>
-          <td><span class="lcd">F7</span></td>
-          <td>EOX (end of SysEx)</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="vfd-callouts top">
-      <div>F0</div>
-      <div>7E</div>
-      <div>&lt;Device ID&gt;</div>
-    </div>
-    <table class="defn-table">
-      <thead>
-        <tr>
-          <th>More</th>
-          <th>about SysEx Messages</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="lcd">F0 7E</span></td>
-          <td>Universal non-real-time SysEx header</td>
-        </tr>
-        <tr>
-          <td>&lt;Device ID&gt;</td>
-          <td>ID of target device (suggest using 7F: Broadcast)</td>
-        </tr>
-        <tr>
-          <td><span class="lcd">09</span></td>
-          <td>sub-ID #<span class="lcd">1=G</span>eneral MIDI message</td>
-        </tr>
-        <tr>
-          <td><span class="lcd">02</span></td>
-          <td>sub-ID #<span class="lcd">2=G</span>eneral MIDI Off</td>
-        </tr>
-        <tr>
-          <td><span class="lcd">F7</span></td>
+          <td class="sysex-byte">F7</span></td>
           <td>EOX (end of SysEx)</td>
         </tr>
       </tbody>
     </table>
     <ul>
-      <li>The MIDI Control <span class="param">SYS-EX</span> parameter must be set to <span class="lcd">SYS-EX=ON</span>
+      <li>The MIDI Control <span class="param">SYS-EX</span> parameter must be set to <span class="value">SYS-EX=ON</span>
         in order to receive Universal SysEx messages.</li>
-      <li>A Universal SysEx General MIDI On message acts the same as answering <span class="lcd">*YES*</span> to the
-        “ENTER GENERAL MIDI <span class="param">MODE</span>?” prompt, and displays the <span class="page-name">General
+      <li>A Universal SysEx General MIDI On message acts the same as answering <span class="value">*YES*</span> to the
+        <span class="lcd">ENTER GENERAL MIDI MODE?</span> prompt, and displays the <span class="page-name">General
           MIDI Mode</span> page. The SysEx message will be ignored if the sequencer is running, or if the system is
-        already in General MIDI Mode. Sequencer changes will be saved automatically, unless <span
-          class="lcd">SAVE-CHANGES=NO</span> (on the third <span class="page-name">Sequencer Control</span> sub-page).
+        already in <span class="function">General MIDI Mode</span>. Sequencer changes will be saved automatically, unless <span
+          class="value">SAVE-CHANGES=NO</span> (on the third <span class="page-name">Sequencer Control</span> sub-page).
       </li>
-      <li>If the TS-10 is already in General MIDI mode, a Universal SysEx General MIDI Off message acts the same as
-        pressing <span class="lcd">*EXIT*</span> on the General MIDI mode screen. This exits General MIDI mode and
+      <li>If the TS-10 is already in <span class="function">General MIDI Mode</span>, a Universal SysEx General MIDI Off message acts the same as
+        pressing <span class="value">*EXIT*</span> on the <span class="function">General MIDI Mode</span> screen. This exits <span class="function">General MIDI Mode</span> and
         returns the TS-10 to its previous state.</li>
-      <li>When in General MIDI Mode, the Universal SysEx General MIDI Off message is the only SysEx message that will be
+      <li>When in <span class="function">General MIDI Mode</span>, the Universal SysEx <span class="message">General MIDI Off</span> message is the only SysEx message that will be
         received; all other SysEx messages are ignored.</li>
     </ul>
-    <p>Sound Canvas MT-32 Mode Program Change Map The Roland® MT-32 was an early, pre-General MIDI multi-timbral sound
+    <h3 id="sound-canvas-mt-32-mode-program-change-map">Sound Canvas MT-32 Mode Program Change Map</h3>
+    <p>The Roland® MT-32 was an early, pre-General MIDI multi-timbral sound
       module. It used a different MIDI Program Change Map than General MIDI. The Roland Sound Canvas™ provides an MT-32
       Emulation mode, and some Standard MIDI Files are set up to use this. An MT-32 Program Change Map has been included
       in the TS-10 to provide Sound Canvas MT-32 emulation capability.</p>
@@ -1771,9 +1775,19 @@
       bank 127 is designated as the MT-32 Emulation mode bank. After the TS-10 has received a Bank Select value of MSB
       127, subsequent MIDI Program Changes on that MIDI channel will select the GM Sounds remapped to the Roland MT-32
       Program Change Map, as below:</p>
-    <p>PROG INSTRUMENT PROG INSTRUMENT PROG INSTRUMENT PROG INSTRUMENT</p>
-    <p># # # #</p>
-    <table class="data-table lookup">
+    <table border="2px" class="data-table">
+      <thead>
+        <tr>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+          <th>PROG #</th>
+          <th>INSTRUMENT</th>
+        </tr>
+      </thead>
       <tbody>
         <tr>
           <td>1</td>
@@ -1809,7 +1823,7 @@
           <td>4</td>
           <td>ELEC-PIANO2</td>
           <td>36</td>
-          <td>BOWED-</td>
+          <td>BOWED-GLASS</td>
           <td>68</td>
           <td>SYNTH-BASS2</td>
           <td>100</td>
@@ -1819,7 +1833,7 @@
           <td>5</td>
           <td>ELEC-GRAND</td>
           <td>37</td>
-          <td>GLASS</td>
+          <td>SOUNDTRACK</td>
           <td>69</td>
           <td>SLAP-BASS-2</td>
           <td>101</td>
@@ -1829,18 +1843,32 @@
           <td>6</td>
           <td>ELEC-PIANO1</td>
           <td>38</td>
-          <td>SOUNDTRACK</td>
+          <td>ATMOSPHERE</td>
           <td>70</td>
           <td>SLAP-BASS-1</td>
           <td>102</td>
           <td>GLOCKNSPIEL</td>
         </tr>
-      </tbody>
-    </table>
-    <p>7 ELEC-PIANO1 39 ATMOSPHERE 71 FRETLESS-BS 103 TUBULR-8 HONKY-TONK 40 MUSIC-BOX 72 FRETLESS-BS 104 BELLS</p>
-    <p>SOLO-VOICE XYLOPHONE</p>
-    <table class="data-table lookup">
-      <tbody>
+        <tr>
+          <td>7</td>
+          <td>ELEC-PIANO1</td>
+          <td>39</td>
+          <td>MUSIC-BOX</td>
+          <td>71</td>
+          <td>FRETLESS-BS</td>
+          <td>103</td>
+          <td>TUBULR-BELLS</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>HONKY-TONK</td>
+          <td>40</td>
+          <td>SOLO-VOICE</td>
+          <td>72</td>
+          <td>FRETLESS-BS</td>
+          <td>104</td>
+          <td>XYLOPHONE</td>
+        </tr>
         <tr>
           <td>9</td>
           <td>DRWBAR-ORGN</td>
@@ -1915,17 +1943,12 @@
           <td>16</td>
           <td>ACCORDION</td>
           <td>48</td>
-          <td>SQUARE-</td>
+          <td>SQUARE-WAVE</td>
           <td>80</td>
           <td>SOPRANO-SAX</td>
           <td>112</td>
           <td>BOTTLE-BLOW</td>
         </tr>
-      </tbody>
-    </table>
-    <h4 id="wave" class="param-name">WAVE</h4>
-    <table class="data-table lookup">
-      <tbody>
         <tr>
           <td>17</td>
           <td>HARPSICHORD</td>
@@ -2004,7 +2027,7 @@
           <td>88</td>
           <td>HARMONICA</td>
           <td>120</td>
-          <td><span class="value">REVERSE</span>-CYM</td>
+          <td>REVERSE-CYM</td>
         </tr>
         <tr>
           <td>25</td>
@@ -2052,7 +2075,7 @@
           <td>61</td>
           <td>STL-STR-GTR</td>
           <td>93</td>
-          <td>FRENCH-</td>
+          <td>FRENCH-HORN</td>
           <td>125</td>
           <td>BIRD-TWEET</td>
         </tr>
@@ -2062,7 +2085,7 @@
           <td>62</td>
           <td>CLEAN-GUITR</td>
           <td>94</td>
-          <td>HORN</td>
+          <td>FRENCH-HORN</td>
           <td>126</td>
           <td>BREATHNOISE</td>
         </tr>
@@ -2072,7 +2095,7 @@
           <td>63</td>
           <td>CLEAN-GUITR</td>
           <td>95</td>
-          <td>FRENCH-</td>
+          <td>TUBA</td>
           <td>127</td>
           <td>CRYSTAL</td>
         </tr>
@@ -2082,178 +2105,239 @@
           <td>64</td>
           <td>SITAR</td>
           <td>96</td>
-          <td>HORN</td>
+          <td>BRASS-SECTN</td>
           <td>128</td>
           <td>BREATHNOISE</td>
         </tr>
       </tbody>
     </table>
-    <h4 id="tuba" class="param-name">TUBA</h4>
-    <h4 id="brass-sectn" class="param-name">BRASS-SECTN</h4>
-    <p>After receiving a Bank Select value of MSB 127 on MIDI Channel 10, any subsequent MIDI program changes on MIDI
+    <p>After receiving a <span class="param">Bank Select</span> value of <span class="sysex-byte">MSB 127</span> on MIDI Channel 10, any subsequent MIDI program changes on MIDI
       channel 10 will always select the MT-32 Drum Map.</p>
-    <p>Transmitting a Bank Select value of 0-126 MSB will return the MIDI channel to normal MIDI program change
+    <p>Transmitting a <span class="param">Bank Select</span> value of <span class="sysex-byte">0-126 MSB</span> will return the MIDI channel to normal MIDI program change
       reception, selecting sounds from the General MIDI Sound Map as described on the previous page.</p>
-    <table class="defn-table">
+    <h2 id="midi-controller-implementation-in-general-midi-mode">MIDI Controller Implementation in General MIDI Mode</h2>
+    <p>When in <span class="function">General MIDI Mode</span>, many of the TS-10 controllers
+      function differently than noted in the <span class="message">MIDI Implementation chart</span>, and are described in the chart on the following page.</p>
+    <h3 id="general-midi-mode-controller-implementation-chart">General MIDI Mode Controller Implementation Chart</h3>
+    <table border="2px" class="data-table impl-chart">
       <thead>
         <tr>
-          <th>General</th>
-          <th>MIDI Mode Controller Implementation Chart</th>
+          <th>Function…</th>
+          <th>Transmitted</th>
+          <th>Recognized</th>
+          <th>Notes</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><span class="lcd">MIDI</span></td>
-          <td>Controller Implementation in General MIDI Mode When in General MIDI mode, many of the TS-10 controllers
-            function differently than noted in the</td>
+          <td>Velocity — Note ON</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td rowspan="2"><sup>1</sup> In the TS-10, a Note Off velocity of <span class="value">64</span> is always sent for all keys.<br>
+            <sup>2</sup> The TS-10 voice architecture does not support Release Velocity.</td>
         </tr>
         <tr>
-          <td><span class="lcd">MIDI</span></td>
-          <td>Implementation chart, and are described in the chart on the following page.</td>
+          <td>Velocity — Note OFF</td>
+          <td><span class="value">YES</span><sup>1</sup></td>
+          <td><span class="value">NO</span><sup>2</sup></td>
+        </tr>
+        <tr>
+          <td>Aftertouch — Key</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">NO</span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Aftertouch — Channel</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">NO</span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Pitch Bender</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">64</span> (center).</td>
+        </tr>
+        <tr>
+          <td>Controller 0<br>(Bank Select MSB)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Always transmitted as <span class="sysex-byte">00</span>. An MSB value of <span class="sysex-byte">127</span> received will select the MT-32 Program Change Sound Map.</td>
+        </tr>
+        <tr>
+          <td>Controller 1<br>(Mod Wheel)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">0</span>.</td>
+        </tr>
+        <tr>
+          <td>Controller 4<br>(Foot Pedal)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">NO</span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Controller 6<br>(Data Entry MSB)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>For recognized Registered Parameters only after controllers <span class="sysex-byte">100</span> &amp; <span class="sysex-byte">101</span> are received.</td>
+        </tr>
+        <tr>
+          <td>Controller 7<br>(Volume)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">100</span>. Setting <span class="param">RECV=OFF</span> will default the Track/Channel volume to <span class="value">127</span>. Devices connected to the <kbd class="button">Pedal•CV</kbd> jack will control volume.</td>
+        </tr>
+        <tr>
+          <td>Controller 10<br>(Pan)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">64</span> (center).</td>
+        </tr>
+        <tr>
+          <td>Controller 11<br>(Expression)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">127</span>. Expression messages received will be responded to as Mix.</td>
+        </tr>
+        <tr>
+          <td>Controller 12<br>(Effect Mod Foot Switch)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">NO</span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Controller 32<br>(Bank Select LSB)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">NO</span></td>
+          <td>Always transmitted as <span class="sysex-byte">00</span>.</td>
+        </tr>
+        <tr>
+          <td>Controller 38<br>(Data Entry LSB)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</td>
+        </tr>
+        <tr>
+          <td>Controller 64<br>(Sustain)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>This defaults to a value of <span class="value">0</span>. The right foot switch will always function as Sustain.</td>
+        </tr>
+        <tr>
+          <td>Controller 66<br>(Sostenuto)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>This defaults to a value of <span class="value">0</span>. The left foot switch can function as Sostenuto, if a stereo foot switch is connected.</td>
+        </tr>
+        <tr>
+          <td>Controller 70<br>(Sound Variation)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">NO</span></td>
+          <td>ENSONIQ Patch Selects; values of <span class="sysex-byte">00</span>, <span class="sysex-byte">20</span>, <span class="sysex-byte">40</span>, <span class="sysex-byte">7F</span></td>
+        </tr>
+        <tr>
+          <td>Controller 71<br>(Harmonic Content)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">NO</span></td>
+          <td>ENSONIQ <span class="param">Timbre</span>.</td>
+        </tr>
+        <tr>
+          <td>Controller 72<br>(Release Time)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">64</span> (center).</td>
+        </tr>
+        <tr>
+          <td>Controller 73<br>(Attack Time)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">64</span> (center).</td>
+        </tr>
+        <tr>
+          <td>Controller 74<br>(Brightness)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">64</span> (center).</td>
+        </tr>
+        <tr>
+          <td>Controller 75<br>(Rate)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Defaults to a value of <span class="value">64</span> (center).</td>
+        </tr>
+        <tr>
+          <td>Controller 91<br>(External Effects {Reverb} Depth)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Controls effect bus switching and the <span class="param">FX2</span> wet/dry mix in the General MIDI effect.</td>
+        </tr>
+        <tr>
+          <td>Controller 93<br>(Chorus Depth)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Controls effect bus switching and the <span class="param">FX1</span> wet/dry mix in the General MIDI effect.</td>
+        </tr>
+        <tr>
+          <td>Controller 100<br>(Reg Param Select LSB)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Values of <span class="sysex-byte">00</span>, <span class="sysex-byte">01</span>, and <span class="sysex-byte">02</span>.</td>
+        </tr>
+        <tr>
+          <td>Controller 101<br>(Reg Param Select MSB)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">NO</span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Controller 120<br>(All Sound Off)</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+          <td>Responded to as <span class="message">All Notes Off</span>.</td>
+        </tr>
+        <tr>
+          <td>Controller 121<br>(Reset All Controllers)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td><span class="message">Reset Controller</span> messages received will normalize only the controllers supported in General MIDI Mode. It is received independently on each of the 16 General MIDI Track/Channels.</td>
+        </tr>
+        <tr>
+          <td>Controller 123<br>(All Notes Off)</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td><span class="message">All Notes Off</span> messages received will be responded to regardless of the setting of the <span class="param">ALL-OFF</span> parameter on the <span class="page-name">MIDI Control</span> page. It is received independently on each of the 16 General MIDI Track/Channels.</td>
+        </tr>
+        <tr>
+          <td>Registered Parameters:</td>
+          <td></td>
+          <td></td>
+          <td rowspan="4">These Registered Parameters are received independently on each of the 16 General MIDI Track/Channels.</td>
+        </tr>
+        <tr>
+          <td><span class="value">0</span> Pitch Bend Range</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+        </tr>
+        <tr>
+          <td>1 Fine Tuning</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+        </tr>
+        <tr>
+          <td>2 Coarse Tuning</td>
+          <td><span class="value">NO</span></td>
+          <td><span class="value">YES</span></td>
+        </tr>
+        <tr>
+          <td>Program Change</td>
+          <td><span class="value">YES</span></td>
+          <td><span class="value">YES</span></td>
+          <td>0-127</td>
         </tr>
       </tbody>
     </table>
-    <div class="vfd-callouts top">
-      <div>Function…</div>
-      <div>Transmitted</div>
-      <div>Recognized</div>
-    </div>
-    <p>Velocity Note ON YES YES 1 In the TS-10, a Note Off velocity of 64 is always sent for all keys.</p>
-    <p>Note <span class="value">OFF</span> YES1 NO 2 2 The TS-10 voice architecture does not support Release Velocity.
-    </p>
-    <table class="param-cols cols-4">
-      <tbody>
-        <tr>
-          <td>Aftertouch</td>
-          <td>Key</td>
-          <td>NO</td>
-          <td>NO</td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="param-cols cols-3">
-      <tbody>
-        <tr>
-          <td>Channel</td>
-          <td>NO</td>
-          <td>NO</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Pitch Bender YES YES Defaults to a value of 64 (center).</p>
-    <p>Controller 0 YES YES Always transmitted as 0. An MSB value of 127 received will select the MT-32 Program Change
-      (Bank Select MSB) Sound Map.</p>
-    <p>Controller 1 YES YES Defaults to a value of 0.</p>
-    <p>(Mod Wheel)</p>
-    <table class="param-cols cols-3">
-      <tbody>
-        <tr>
-          <td>Controller 4</td>
-          <td>NO</td>
-          <td>NO</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>(Foot Pedal)</p>
-    <p>Controller 6 NO YES For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</p>
-    <p>(Data Entry MSB)</p>
-    <p>Controller 7 YES YES Defaults to a value of 100. Setting <span class="lcd">RECV=OFF</span> will default the
-      Track/Channel volume to 127.</p>
-    <p>(Volume) Devices connected to the Pedal•CV jack will control volume.</p>
-    <div class="vfd-callouts top">
-      <div>Controller 10</div>
-      <div>NO</div>
-      <div>YES</div>
-    </div>
-    <p>(Pan)</p>
-    <p>Controller 11 NO YES Defaults to a value of 127. Expression messages received will be responded to as Mix.</p>
-    <p>(Expression)</p>
-    <table class="param-cols cols-3">
-      <tbody>
-        <tr>
-          <td>Controller 12</td>
-          <td>NO</td>
-          <td>NO</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>(Effect Mod Foot Switch)</p>
-    <p>Controller 32 YES NO Always transmitted as 0.</p>
-    <p>(Bank Select LSB)</p>
-    <p>Controller 38 NO YES For recognized Registered Parameters only after controllers 100 &amp; 101 are received.</p>
-    <p>(Data Entry LSB)</p>
-    <p>Controller 64 YES YES This defaults to a value of 0. The right foot switch will always function as Sustain.</p>
-    <p>(Sustain)</p>
-    <p>Controller 66 YES YES This defaults to a value of 0. The left foot switch can function as Sostenuto, if a stereo
-      foot (Sostenuto) switch is connected.</p>
-    <p>Controller 70 YES NO ENSONIQ Patch Selects; values of 0, 32, 64, 127</p>
-    <p>(Sound Variation)</p>
-    <p>Controller 71 NO NO ENSONIQ Timbre.</p>
-    <p>(Harmonic Content)</p>
-    <div class="vfd-callouts top">
-      <div>Controller 72</div>
-      <div>NO</div>
-      <div>YES</div>
-    </div>
-    <p>(Release Time)</p>
-    <div class="vfd-callouts top">
-      <div>Controller 73</div>
-      <div>NO</div>
-      <div>YES</div>
-    </div>
-    <p>(Attack Time)</p>
-    <div class="vfd-callouts top">
-      <div>Controller 74</div>
-      <div>NO</div>
-      <div>YES</div>
-    </div>
-    <p>(Brightness)</p>
-    <div class="vfd-callouts top">
-      <div>Controller 75</div>
-      <div>NO</div>
-      <div>YES</div>
-    </div>
-    <p>(Rate)</p>
-    <p>Controller 91 NO YES Controls effect bus switching and the FX2 wet/dry mix in the General MIDI effect.</p>
-    <p>(External Effects {Reverb} Depth)</p>
-    <p>Controller 93 NO YES Controls effect bus switching and the FX1 wet/dry mix in the General MIDI effect.</p>
-    <p>(Chorus Depth)</p>
-    <p>Controller 100 NO YES Values of 0, 1, and 2.</p>
-    <p>(Reg Param Select LSB)</p>
-    <table class="param-cols cols-3">
-      <tbody>
-        <tr>
-          <td>Controller 101</td>
-          <td>NO</td>
-          <td>NO</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>(Reg Param Select MSB)</p>
-    <div class="vfd-callouts top">
-      <div>Controller 120</div>
-      <div>NO</div>
-      <div>YES</div>
-    </div>
-    <p>(All Sound Off)</p>
-    <p>Controller 121 YES YES Reset Controller messages received will normalize only the controllers supported in
-      General (Reset All Controllers) MIDI Mode. It is received independently on each of the 16 General MIDI
-      Track/Channels.</p>
-    <p>Controller 123 All Notes Off messages received will be responded to regardless of the setting of the <span
-        class="param">ALL-OFF</span> (All Notes Off) YES YES parameter on the <span class="page-name">MIDI
-        Control</span> page. It is received independently on each of the 16 General</p>
-    <p>MIDI Track/Channels.</p>
-    <p>Registered Parameters: These Registered Parameters are received independently on each of the 16 General MIDI</p>
-    <div class="vfd-callouts top">
-      <div>0 Pitch Bend Range 1 Fine Tuning 2 Coarse Tuning</div>
-      <div>NO NO NO</div>
-      <div>YES YES YES</div>
-    </div>
-    <div class="vfd-callouts top">
-      <div>Program Change</div>
-      <div>YES</div>
-      <div>YES</div>
-    </div>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.

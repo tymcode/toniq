@@ -517,6 +517,42 @@ figure.vfd-unit.has-page col.param-col {
   grid-template-columns: 22% 1fr 1fr 1fr;
 }
 
+.sysex-cmd {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.45rem 0.6rem;
+  margin: 0.35rem 0 0.55rem;
+  border: 1px solid var(--ink);
+  padding: 0.28rem 0.4rem;
+}
+
+.sysex-cmd > div,
+.sysex-byte {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--panel);
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.sysex-cmd.top {
+  margin: 0.55rem 0 0.2rem;
+}
+
+.defn-table>tbody>tr>td.sysex-byte, .sysex-byte {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--panel);
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 .vfd-callouts.bottom {
   margin: 0.55rem 0 0.2rem;
 }
@@ -907,6 +943,15 @@ table.data-table.lookup th:last-child {
 
 table.data-table.lookup th {
   text-align: right;
+}
+
+table.data-table.impl-chart td:nth-child(2),
+table.data-table.impl-chart td:nth-child(3),
+table.data-table.impl-chart th:nth-child(2),
+table.data-table.impl-chart th:nth-child(3) {
+  text-align: center;
+  white-space: nowrap;
+  width: 7rem;
 }
 
 .memory-map {
