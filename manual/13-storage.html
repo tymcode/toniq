@@ -39,6 +39,7 @@
     <ul>
       <li>Pressing <kbd class="button">Storage</kbd> will always display the <span class="page-name">Storage</span>
         page:</li>
+      </ul>
         <figure class="vfd-unit has-page">
           <div class="vfd-bezel">
           <table>
@@ -66,7 +67,6 @@
           </table>
           </div>          
         </figure>
-    </ul>
     <p>From the <span class="page-name">Storage</span> page you can select which kind of data storage you want to use —
       Disk or MIDI <span class="param">SYS-EX</span> storage. A SCSI option is available for loading Sampled Sounds from
       EPS/EPS-16 PLUS/ASR-10 format SCSI Storage Devices when the optional SP-4 interface is installed. The TS-10 SCSI
@@ -150,14 +150,14 @@
       <li><span class="value">6-PROGRAMS</span> — contains a bank of 6 TS-10 programs, as displayed on the Program Bank pages 0-9. This file type
         lets you organize programs into groups of six that can be saved and loaded back into any RAM bank you choose.
       </li>
-      <li><span class="value">60-PROGRAMS</span> — contains one <dfn class="term">BankSet</dfn> of 60 User RAM Programs.</li>
-      <li><span class="value">120-PROGRAMS</span> — contains all of the User RAM Program memory (both <dfn class="term">BankSets</dfn>).</li>
+      <li><span class="value">60-PROGRAMS</span> — contains one BankSet of 60 User RAM Programs.</li>
+      <li><span class="value">120-PROGRAMS</span> — contains all of the User RAM Program memory (both BankSets).</li>
     </ul>
     <h4 id="presets">Presets:</h4>
     <ul>
       <li><span class="value">1-PRESET</span> — contains a single TS-10 Preset.</li>
-      <li><span class="value">60-PRESETS</span> — contains one <dfn class="term">BankSet</dfn> of 60 TS-10 User RAM Presets.</li>
-      <li><span class="value">120-PRESETS</span> — contains all of the User RAM Preset memory (both <dfn class="term">BankSets</dfn>).</li>
+      <li><span class="value">60-PRESETS</span> — contains one BankSet of 60 TS-10 User RAM Presets.</li>
+      <li><span class="value">120-PRESETS</span> — contains all of the User RAM Preset memory (both BankSets).</li>
     </ul>
     <h4 id="sequence-song">Sequence/Song:</h4>
     <ul>
@@ -172,8 +172,8 @@
       programs (either 60 or the entire 120) in the same file along with the sequencer data.</p>
     <p>Saving 60 Programs with a 30-SEQ/SONGS file containing Seq/Song Banks 0-4 will save the contents of Program <dfn
         class="term">BankSet</dfn> U0. Saving 60 Programs with a 30-SEQ/SONGS file containing Seq/Song Banks 5-9 will
-      save the contents of Program <dfn class="term">BankSet</dfn> U1. Saving 60 Programs with a 60-SEQ/SONGS file will
-      save the contents of Program <dfn class="term">BankSet</dfn> U0. A 60 SEQ/SONGS file will also allow you to save
+      save the contents of Program BankSet U1. Saving 60 Programs with a 60-SEQ/SONGS file will
+      save the contents of Program BankSet U0. A 60 SEQ/SONGS file will also allow you to save
       the currently loaded contents of the Sample Banks with it. This lets you keep the sequences and their appropriate
       programs and Sample Banks information together when reloading the data.</p>
     <h3 id="midi-system-exclusive-data">MIDI System Exclusive data:</h3>
@@ -191,8 +191,8 @@
     </ul>
     <h4 id="sampled-sounds">Sampled Sounds:</h4>
     <ul>
-      <li><span class="value">SAMPLE-BANKS</span> — remembers up to 20 Sampled Sound names (ten in <dfn class="term">BankSet</dfn> 8 and ten in
-        <dfn class="term">BankSet</dfn> 9, if applicable) as well as their source disk(s), file paths, and bank
+      <li><span class="value">SAMPLE-BANKS</span> — remembers up to 20 Sampled Sound names (ten in BankSet 8 and ten in
+        BankSet 9, if applicable) as well as their source disk(s), file paths, and bank
         locations. Loading a <dfn class="term">Sample-Banks</dfn> file will allow you to <span
           class="function">Auto-Load</span> the Sampled Sound files back into the same location(s) that they were in at
         the time the <dfn class="term">Sample-Banks</dfn> file was saved.</li>
@@ -334,7 +334,7 @@
     </ul>
  
     <h3 id="copy-making-a-backup-copy-of-a-disk">COPY — Making a Backup Copy of a Disk</h3>
-    <p>The COPY function lets you duplicate the contents of one entire disk (the source disk) on another disk (the
+    <p>The <span class="function">COPY</span> function lets you duplicate the contents of one entire disk (the source disk) on another disk (the
       destination disk). It is a good practice to regularly back up your valuable data in this way.</p>
     <h3 id="be-careful">Be Careful!</h3>
     <p>This procedure uses the sequencer memory to temporarily hold the information while copying it between disks.
@@ -473,11 +473,43 @@
 
     <h4 id="save-saving-data-to-disk">SAVE — Saving Data to Disk</h4>
     <p>When you press <span class="function">SAVE</span> from the <span class="page-name">Disk Storage</span> menu, you will see the following display:</p>
-    <h4 id="file-type" class="param-name">File Type</h4>
-    <p>Source Bank or <dfn class="term">BankSet</dfn> Free disk blocks (some file types)</p>
-    <p>The display shows the File Type, the number of free blocks on the disk, and (for some file types) the Source Bank
-      or <dfn class="term">BankSet</dfn>, i.e. which <dfn class="term">BankSet</dfn> or bank(s) you want to save. Note
-      that you cannot save information to a Sampled Sound disk.</p>
+    <figure class="vfd-unit has-page">
+      <div class="vfd-callouts top">
+        <div class="vfd-callout vfd-callout-top-left"></div>
+        <div class="vfd-callout vfd-callout-top-right">File Type</div>
+      </div>
+      <div class="vfd-bezel">
+      <table>
+        <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+        <thead>
+          <tr class="soft-row top">
+            <th class="page-tag-slot"></th>
+            <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+            <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+            <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+          </tr>
+        </thead>
+        <tbody class="vfd-screen">
+          <tr><td class="cell page-label" >SAVE FILE</td><td class="cell" colspan="2">TYPE=<span class="selected">60-PROGRAMS</span></td><td class="cell" style="text-align: right">*YES*</td></tr>
+          <tr><td class="cell page-label" >FREE=3027</td><td class="cell" colspan="2">SELECT=BANKSET U0-0</td><td class="cell" style="text-align: right">*NO *</td></tr>
+        </tbody>
+        <tfoot>
+          <tr class="soft-row bottom">
+            <th class="page-tag-slot"></th>
+            <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+            <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+            <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>    
+      <div class="vfd-callouts bottom">
+        <div class="vfd-callout vfd-callout-top-left">Free disk blocks</div>
+        <div class="vfd-callout vfd-callout-top-right">Source Bank or BankSet<br>(some file types)</div>
+      </div>      
+    </figure>
+
+    <p>The display shows the <dfn class="term">File Type</dfn>, the number of free blocks on the disk, and (for some file types) the <dfn class="term">Source Bank</dfn> or <dfn class="term">BankSet</dfn>, i.e. which BankSet or bank(s) you want to save. Note that you cannot save information to a Sampled Sound disk.</p>
     <h5 id="to-save-data-to-disk">To Save data to disk:</h5>
     <ul>
       <li>Insert a formatted TS-10 disk into the disk drive.</li>
@@ -517,54 +549,50 @@
       </tbody>
     </table>
     <ul>
-      <li>Select a source bank (if applicable). For the file types 6–PROGRAMS and 30–SEQ/SONGS, you will see a <span
-          class="value">SELECT=BANK(</span>s) location beneath the file type, and for the file types 60–PROGRAMS and
-        60–PRESETS you will see a <span class="value">SELECT=BANKSET</span> location beneath the file type, as shown
-        above. This defaults to the current <dfn class="term">BankSet</dfn> (or bank). If you want to save a different
-        <dfn class="term">BankSet</dfn> (or bank) than what is showing, select this field and change it using the data
+      <li>Select a source bank (if applicable). For the file types <span class="patch-name">6–PROGRAMS</span> and <span class="patch-name">30–SEQ/SONGS</span>, you will see a <span
+          class="value">SELECT=BANK(s)</span> location beneath the file type, and for the file types <span class="patch-name">60–PROGRAMS</span> and <span class="patch-name">60–PRESETS</span> you will see a <span class="value">SELECT=BANKSET</span> location beneath the file type, as shown
+        above. This defaults to the current BankSet (or bank). If you want to save a different
+        BankSet (or bank) than what is showing, select this field and change it using the data
         entry controls.</li>
         <figure class="vfd-unit has-page">
           <div class="vfd-bezel">
-          <table>
-            <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
-            <thead>
-              <tr class="soft-row top">
-                <th class="page-tag-slot"></th>
-                <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-                <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
-                <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
-              </tr>
-            </thead>
-            <tbody class="vfd-screen">
-              <tr><td class="cell page-label">SAVE FILE</td><td class="cell" colspan="2">TYPE=<span class="selected">6-PROGRAMS</span></td><td class="cell" style="text-align: right">*YES*</td></tr>
-              <tr><td class="cell page-label">FREE=3167</td><td class="cell" colspan="2">SELECT=BANK U0-0</td><td class="cell" style="text-align: right" style="text-align: right">*NO *</td></tr>
-            </tbody>
-            <tfoot>
-              <tr class="soft-row bottom">
-                <th class="page-tag-slot"></th>
-                <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
-                <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
-                <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
-              </tr>
-            </tfoot>
-          </table>
+            <table>
+              <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th class="page-tag-slot"></th>
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
+                <tr><td class="cell page-label">SAVE FILE</td><td class="cell" colspan="2">TYPE=<span class="selected">6-PROGRAMS</span></td><td class="cell" style="text-align: right">*YES*</td></tr>
+                <tr><td class="cell page-label">FREE=3167</td><td class="cell" colspan="2">SELECT=BANK U0-0</td><td class="cell" style="text-align: right" style="text-align: right">*NO *</td></tr>
+              </tbody>
+              <tfoot>
+                <tr class="soft-row bottom">
+                  <th class="page-tag-slot"></th>
+                  <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+                  <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+                </tr>
+              </tfoot>
+            </table>
           </div>          
         </figure>
-      <li>Press <span class="value">*YES*</span>. The display showsthe Name File page.</li>
+        <li>Press <span class="value">*YES*</span>. The display shows the <span class="page-name">Name File</span> page.</li>
       <li>Name the file with a name of your choice using the data entry controls and the two cursor soft buttons,
         labeled LEFT and RIGHT, or you can use the keyboard to select characters and move the cursor (see below).</li>
-      <li>Press <span class="value">*YES*</span>. The display reads SAVING &lt;FILENAME&gt; while the data is being saved
-        to disk.</li>
+      <li>Press <span class="value">*YES*</span>. The display reads <span class="lcd">SAVING &lt;FILENAME&gt;</span> while the data is being saved
+        to disk.  Or Press <span class="value">*NO*</span> to cancel the procedure for any reason. If you are saving a <span class="patch-name">30-SEQ/SONGS</span>
+      or <span class="patch-name">60-SEQ/SONGS</span> file there are additional steps (see below).</li>
     </ul>
-    <p>Or Press <span class="value">*NO*</span> to cancel the procedure for any reason. If you are saving a 30-SEQ/SONGS
-      or 60-SEQ/SONGS file there are additional steps (see below).</p>
+    <p></p>
     <ul>
-      <li>If there is a file of that type with the same name already on the disk, the TS-10 will ask</li>
-    </ul>
-    <p>DELETE <span class="value">OLD</span> VERSION? Press <span class="value">*YES*</span> to save the file, replacing
+      <li>If there is a file of that type with the same name already on the disk, the TS-10 will ask <span class="lcd">DELETE OLD VERSION?</span> Press <span class="value">*YES*</span> to save the file, replacing
       the one on the disk. This is for updating files to which you have made changes. Or press <span
-        class="value">*NO*</span> to abort the procedure.</p>
-    <ul>
+        class="value">*NO*</span> to abort the procedure.</li>
       <li>After the file is saved, the TS-10 returns to the <span class="page-name">Save File</span> page so that you
         can save any other files you may want to save at that time.</li>
     </ul>
@@ -578,14 +606,14 @@
 
 <figure class="figure">
   <img src="images/keyboard-naming.png" alt="Keyboard Naming" class="figure-img img-fluid rounded">
-  <figcaption class="figure-caption">Keyboard Naming</figcaption>
+  <figcaption class="figure-caption">Using the Keyboard to Enter Filenames</figcaption>
 </figure>
 
     <h4 id="saving-programs-along-with-a-30-seqsongs-file">Saving Programs along with a 30-SEQ/SONGS File</h4>
-    <p>When you save a 30-SEQ/SONGS file, the TS-10 gives you the option
+    <p>When you save a <span class="patch-name">30-SEQ/SONGS</span> file, the TS-10 gives you the option
       of saving Programs in the same file, so that you can keep the sequences and the Programs that go with them
       together.</p>
-    <p>After you have selected the 30-SEQ/SONGS file type, chosen either <span class="value">SELECT=BANKS</span> 0-4 or
+    <p>After you have selected the <span class="patch-name">30-SEQ/SONGS</span> file type, chosen either <span class="value">SELECT=BANKS</span> 0-4 or
       5-9, and pressed <span class="value">*YES*</span>, the TS-10 offers you an option. The display shows:</p>
       <figure class="vfd-unit has-page">
         <div class="vfd-bezel">
@@ -627,58 +655,143 @@
         <li>After choosing the number of Programs to be saved, press <span class="value">*YES*</span> to proceed.</li>
       </ul>
       <aside class="note">
-        30-SEQ/SONGS file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
+        <span class="patch-name">30-SEQ/SONGS</span> file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
         will automatically be reloaded into the same User RAM location when the 30-SEQ/SONGS file is loaded, replacing the Programs that are there.</aside>
       
     <aside class="note">
       <p>If Programs have been saved in a Sequencer file along with the sequencer data, when you later go to load
-        the file, a P will flash on the display next to the file name when the file is displayed on the</p>
+        the file, a P will flash on the display next to the file name when the file is displayed on the <span class="page-name">DISK LOAD</span> page. When you answer <span class="value">*YES*</span> to load the data,
+        the TS-10 will load the Programs automatically with the sequencer data. This will over-write the Programs that are
+        in the internal memory. You should always be sure that any Programs you value are saved before loading sequencer
+        files which contain Programs.</p>
     </aside>
-    <p><span class="page-name">DISK LOAD</span> page. When you answer <span class="value">*YES*</span> to load the data,
-      the TS-10 will load the Programs automatically with the sequencer data. This will over-write the Programs that are
-      in the internal memory. You should always be sure that any Programs you value are saved before loading sequencer
-      files which contain Programs.</p>
-    <p>Saving <dfn class="term">Sample-Banks</dfn> along with a 60 SEQ/SONGS File When you save a 60-SEQ/SONGS file, the
-      TS-10 also gives you the option of saving the currently loaded contents of the Sample Banks, as well as the
-      internal User RAM Programs, in the same file, so that you can store the Programs, and Sampled Sound data that the
-      sequences and songs use all together in a single file.</p>
-    <p>After you have selected 60-SEQ/SONGS file type and pressed <span class="value">*YES*</span>, the TS-10 offers you
-      the first option. The display shows:</p>
-    <p>Use the data entry controls to select whether or not Programs will be saved in the same file with the sequence
-      data:</p>
-    <ul>
-      <li>NO — Only the specified sequencer data will be saved, without Programs.</li>
-      <li>120 — All User RAM Programs will be saved into the file along with the sequence data (<dfn
+    <h3>Saving Sample-Banks along with a <span class="patch-name">60-SEQ/SONGS</span> File:</h3>
+    <p>When you save a <span class="patch-name">60-SEQ/SONGS</span> file, the TS-10 also gives you the option of saving the currently loaded contents of the Sample Banks, as well as the internal User RAM Programs, in the same file, so that you can store the Programs, and Sampled Sound data that the sequences and songs use all together in a single file.</p>
+    <p>After you have selected <span class="patch-name">60-SEQ/SONGS</span> file type and pressed <span class="value">*YES*</span>, the TS-10 offers you the first option. The display shows:</p>
+    <figure class="vfd-unit has-page">
+      <div class="vfd-bezel">
+        <table>
+          <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr><td class="cell page-label" colspan="3">SAVE <span class="selected">NO </span> PROGRAMS IN SEQ FILE</td><td class="cell">*YES*</td></tr>
+            <tr><td class="cell page-label">&nbsp</td><td class="cell">&nbsp;</td><td class="cell">&nbsp</td><td class="cell">*NO *</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>          
+    </figure>
+    Use the data entry controls to select whether or not Programs will be saved in the same file with the sequence data:
+   <ul>
+
+      <li><span class="value">NO</span> — Only the specified sequencer data will be saved, without Programs.</li>
+      <li><span class="value">120</span> — All User RAM Programs will be saved into the file along with the sequence data (<dfn
           class="term">BankSet</dfn> U0 and U1). The Programs will be reloaded into the internal memory when the
-        60-SEQ/SONGS file is loaded, replacing the Programs that are there.</li>
+        <span class="patch-name">60-SEQ/SONGS</span> file is loaded, replacing the Programs that are there.</li>
       <li>After choosing whether or not Programs will be saved, press <span class="value">*YES*</span> to proceed. If any
         Sampled Sounds are currently loaded, the TS-10 offers you the second option. The display shows:</li>
     </ul>
+    <figure class="vfd-unit has-page">
+      <div class="vfd-bezel">
+        <table>
+          <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr><td class="cell page-label" colspan="3">SAVE SAMPLE BANKS IN SEQ FILE</td><td class="cell">*YES*</td></tr>
+            <tr><td class="cell page-label">&nbsp</td><td class="cell">&nbsp;</td><td class="cell">&nbsp</td><td class="cell">*NO *</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>          
+    </figure>
     <aside class="note">
       <p>Note: The SAVE SAMPLE BANKS prompt will only appear if there are Sampled Sounds currently loaded into the
         TS-10.</p>
     </aside>
     <ul>
       <li>Answering <span class="value">*YES*</span> will save all of the Sampled Sound names (ten in <dfn
-          class="term">BankSet</dfn> 8 and ten in <dfn class="term">BankSet</dfn> 9, if applicable) as well as their
+          class="term">BankSet</dfn> 8 and ten in BankSet 9, if applicable) as well as their
         source disk(s), file paths, and bank locationswith the 60-SEQ/SONGS file.</li>
       <li>Answering <span class="value">*NO*</span> will not save the <dfn class="term">Sample-Banks</dfn> file with the
         sequence file.</li>
     </ul>
-    <p>Specifying a File Bank Location when Saving a File If you follow the save procedure exactly as described earlier
+    <h3>Specifying a File Bank Location when Saving a File:</h3>
+    <p>If you follow the save procedure exactly as described earlier
       (pressing <span class="value">*YES*</span> after naming the file) the data will automatically be placed in the first
       empty file bank location for that file type, starting from the first location in Bank 0 and going up from there.
     </p>
     <p>However, you can specify a particular file bank for the file to be placed in:</p>
     <ul>
-      <li>Press <kbd class="button">Storage</kbd>, and select DISK, then SAVE. The Save File display appears.</li>
+      <li>Press <kbd class="button">Storage</kbd>, and select <span class="function">DISK</span>, then <span class="function">SAVE</span>. 
+        The <span class="page-name">Save File</span> display appears.</li>
       <li>Select the desired file type and then press <span class="value">*YES*</span>.</li>
       <li>Name the file with the name of your choice.</li>
       <li>Now you can press the <kbd class="button">Bank</kbd> buttons (0-9) to see the file banks, which show all the
         files of that type on the disk, six at a time. For example:</li>
     </ul>
-    <p>File Bank Locations containing Files</p>
-    <p>Empty File Bank Locations</p>
+    <figure class="vfd-unit has-page">
+      <div class="vfd-callouts top">
+        <div class="vfd-callout top-left"></div>
+        <div class="vfd-callout top-right">File Bank Locations containing Files</div>
+      </div>
+      <div class="vfd-bezel">
+        <table>
+          <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr><td class="cell page-label" >FILE</td><td class="cell">BASS-SOUNDS</td><td class="cell">STRINGS</td><td class="cell">DRUM-KITS</td></tr>
+            <tr><td class="cell page-label">&nbsp</td><td class="cell">*****</td><td class="cell">*****</td><td class="cell" style="text-align: right">*****</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>   
+      <div class="vfd-callouts bottom">
+        <div class="vfd-callout top-left"></div>
+        <div class="vfd-callout top-right">Empty File Bank Locations</div>
+      </div>       
+    </figure>
     <ul>
       <li>File bank locations containing a file show the file name. Locations that show <span class="value">*****</span>
         are empty and are available for saving files to.</li>
@@ -686,28 +799,62 @@
         that location. This lets you organize your files into banks of your choosing for easy access when loading them
         later.</li>
       <li>If there is a file with the same name already on the disk in a different file bank location, the TS-10 will
-        ask DELETE <span class="value">OLD</span> VERSION? If you press <span class="value">*YES*</span> the TS-10, will
+        ask <span class="lcd">DELETE OLD VERSION?</span> If you press <span class="value">*YES*</span> the TS-10, will
         delete the original file and save the new one in the new location. Use this to change the bank in which a file
         is saved.</li>
       <li>Note that when you simply want to update an existing file, but not change its file bank location, it is not
         necessary to specify the location. Just press <span class="value">*YES*</span> after naming the file and answer
-        <span class="value">*YES*</span> to DELETE <span class="value">OLD</span> VERSION?</li>
+        <span class="value">*YES*</span> to <span class="lcd">DELETE OLD VERSION?</span></li>
     </ul>
     <h3 id="load-loading-data-from-disk">LOAD — Loading Data from Disk</h3>
-    <p>When you press LOAD from the Disk Storage menu, you will see the following display:</p>
-    <h4 id="file-size" class="param-name">File Size</h4>
-    <p>File Name in blocks</p>
-    <p>File Type Destination Bank (some file types)</p>
-    <p>The display shows the File Name which identifies the file that will be loaded if you press <span
-        class="value">*YES*</span>; the Size of the file in Blocks; the File Type and (for some file types) the
-      Destination Bank, i.e. which bank(s) to load the data into. Only files of the type selected will be shown in the
-      File Name field, or in file banks.</p>
-    <p>To Load a file from disk:</p>
+    <p>When you press <span class="function">LOAD</span> from the <span class="page-name">Disk Storage</span> menu, you will see the following display:</p>
+    <figure class="vfd-unit has-page">
+      <div class="vfd-callouts top">
+        <div class="vfd-callout top-left"></div>
+        <div class="vfd-callout top-left">File Name</div>
+        <div class="vfd-callout top-right">File Size in blocks</div>
+      </div>
+      <div class="vfd-bezel">
+        <table>
+          <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr><td class="cell page-label" style="text-align: right">LOAD</td><td class="cell">FILE=6-PROG-FILE</td><td class="cell" style="text-align: right">SIZE=7</td><td class="cell" style="text-align: right">*YES*</td></tr>
+            <tr><td class="cell page-label" colspan="2">       TYPE=<span class="selected">6-PROGRAMS</span></td><td class="cell" style="text-align: right">BANK=0</td><td class="cell" style="text-align: right">*NO *</td></tr>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="vfd-callouts bottom">
+        <div class="vfd-callout"></div>
+        <div class="vfd-callout">File Type </div>
+        <div class="vfd-callout">Destination Bank<br>(some file types)</div>
+      </div>          
+    </figure>
+    <p>The display shows the <dfn class="term">File Name</dfn> which identifies the file that will be loaded if you press <span
+        class="value">*YES*</span>; the <em>Size</em> of the file in Blocks; the <em>File Type</em> and (for some file types) the
+      <em>Destination Bank</em>, i.e. which bank(s) to load the data into. Only files of the type selected will be shown in the
+      <dfn class="term">File Name</dfn> field, or in file banks.</p>
+    <h5>To Load a file from disk:</h5>
     <ul>
       <li>Insert the disk containing the file data into the disk drive.</li>
-      <li>Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage</span> Page.</li>
-      <li>Press DISK. The Disk Storage menu appears.</li>
-      <li>Press LOAD. The Load File display appears as shown above. The file type is underlined.</li>
+      <li>Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage</span> page.</li>
+      <li>Press <span class="function">DISK</span>. The <span class="page-name">Disk Storage</span> menu appears.</li>
+      <li>Press <span class="function">LOAD</span>. The <span class="page-name">Load File</span> display appears as shown above. The file type is underlined.</li>
       <li>Select the file type you want from among the available types:</li>
     </ul>
     <table class="param-cols cols-4">
@@ -730,43 +877,46 @@
           <td>60-SEQ/SONGS</td>
           <td>SAMPLE-BANKS</td>
         </tr>
+        <tr>
+          <td >120-PROGRAMS</td><td></td><td></td><td>SAMPLE-EDITS</td>
+        </tr>
       </tbody>
     </table>
-    <p>120-PROGRAMS SAMPLE-EDITS</p>
     <aside class="tip">
-      <p>Press the <kbd class="button">Storage</kbd> button twice to get to the Load File display quickly.</p>
+      <div style="float:left"><img src="images/double-click-symbol.png" alt="Double click symbol" width="25" /></div>
+      <p>Press the <kbd class="button">Storage</kbd> button twice to get to the <span class="page-name">Load File</span> display quickly.</p>
     </aside>
     <ul>
       <li>Press the soft button above the file name and use the data entry controls to find the file you want, or you
         can use the File Banks to quickly locate the file without scrolling (see below).</li>
-      <li>Select a destination bank (if applicable). For the file types 6–PROGRAMS and 30–SEQ/SONGS, you will see a Bank
-        destination, as shown above. For the file types 60–PROGRAMS and 60–PRESETS, you will see a <dfn
-          class="term">BankSet</dfn> destination This defaults to the same <dfn class="term">BankSet</dfn> (or bank) the
+      <li>Select a destination bank (if applicable). For the file types <span class="param">6-PROGRAMS</span> and <span class="param">30-SEQ/SONGS</span>, you will see a Bank
+        destination, as shown above. For the file types <span class="param">60-PROGRAMS</span> and <span class="param">60-PRESETS</span>, you will see a <dfn
+          class="term">BankSet</dfn> destination This defaults to the same BankSet (or bank) the
         file was originally saved from. If you want a different destination bank, select this field and change it using
         the data entry controls.</li>
-      <li>Press <span class="value">*YES*</span>. The display reads LOADING FILE... while the data is being loaded. Or
+      <li>Press <span class="value">*YES*</span>. The display reads <span class="lcd">LOADING FILE...</span> while the data is being loaded. Or
         Press <span class="value">*NO*</span> to cancel the procedure for any reason.</li>
-      <li>After the file is loaded, the TS-10 returns to the <span class="page-name">Load File</span> page so that you
+      <li>After the file is loaded, the TS-10 returns to the <span class="page-name">Load File</span> page so that you can
         can load any other files you may want.</li>
     </ul>
     <p>Where the data ends up depends on the file type and (where applicable) the destination bank selected:</p>
     <ul>
-      <li>1-PROGRAM file — once loaded, the program is placed on the <span class="page-name">Write</span> page, where
+      <li><span class="patch-name">1-PROGRAM</span> file — once loaded, the program is placed on the <span class="page-name">Write</span> page, where
         you can save it to any internal User RAM location as detailed in <a class="refer-to"
           href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</li>
-      <li>6-PROGRAMS file — the bank of 6 programs is loaded into the destination Bank (U0-0 to U1-9) specified before
+      <li><span class="patch-name">6-PROGRAMS</span> file — the bank of 6 programs is loaded into the destination Bank (U0-0 to U1-9) specified before
         pressing <span class="value">*YES*</span>.</li>
-      <li>60-PROGRAMS file — the 60 programs will be loaded into either <dfn class="term">BankSet</dfn> U0 or U1 as
+      <li><span class="patch-name">60-PROGRAMS</span> file — the 60 programs will be loaded into either BankSet U0 or U1 as
         specified before pressing <span class="value">*YES*</span>.</li>
-      <li>120-PROGRAM file — replaces all User RAM program memory locations (both <dfn class="term">BankSets</dfn>).
+      <li><span class="patch-name">120-PROGRAM</span> file — replaces all User RAM program memory locations (both BankSets).
       </li>
-      <li>1-PRESET file — the preset is loaded as the Edit Preset, and can be saved to memory as detailed in Saving a
+      <li><span class="patch-name">1-PRESET</span> file — the preset is loaded as the Edit Preset, and can be saved to memory as detailed in Saving a
         Preset in <a class="refer-to" href="04-presets.html#section-4-understanding-presets">Section 4 — Understanding
           Presets</a>.</li>
-      <li>60-PRESETS file — will be loaded into either <dfn class="term">BankSet</dfn> of preset memory as specified
+      <li><span class="patch-name">60-PRESETS</span> file — will be loaded into either BankSet of preset memory as specified
         before pressing <span class="value">*YES*</span>.</li>
-      <li>120-PRESET file — replaces the internal preset memory (both <dfn class="term">BankSet</dfn> locations).</li>
-      <li>1-SEQ/SONG file — After selecting the single sequence/song file to be loaded and selecting <span
+      <li><span class="patch-name">120-PRESET</span> file — replaces the internal preset memory (both BankSet locations).</li>
+      <li><span class="patch-name">1-SEQ/SONG</span> file — After selecting the single sequence/song file to be loaded and selecting <span
           class="value">*YES*</span> on the <span class="page-name">Load File</span> page, you are shown a prompt page
         which allows you to select the bank location into which the sequence/song file will be loaded. The default value
         is the first available location, and you may accept this choice, or you may select a different location by using
@@ -774,31 +924,27 @@
         sequence bank page, and while the bank button is held, you may select the destination Location using the soft
         buttons. If your selection is a -BLANK- location, the display will revert to the prompt page with the new
         location selected. You may also directly select the location number using the data entry controls.</li>
-      <li>30-SEQ/SONGS file — the 30 sequence/songs will be loaded into either the lower half of the sequencer memory
-        (Banks 0-4) or the upper half (Banks 5-9), specified before pressing <span class="value">*YES*</span>.</li>
-    </ul>
-    <p>If 60 or 120 programs were saved in a 30-SEQ/SONGS file along with the sequencer data, a P will flash on the
-      upper line of the display when the file is displayed on the <span class="page-name">DISK LOAD</span> page.</p>
-    <p>When you answer <span class="value">*YES*</span> to load the data, the TS-10 will load the programs automatically
-      with the sequencer data, replacing the programs currently in memory.</p>
-    <ul>
-      <li>60-SEQ/SONGS file — replaces the entire sequencer memory (Banks 0-9), and installs global <span
-          class="page-name">Sequencer Control</span> page settings.</li>
-    </ul>
+      <li><span class="patch-name">30-SEQ/SONGS</span> file — the 30 sequence/songs will be loaded into either the lower half of the sequencer memory
+        (Banks 0-4) or the upper half (Banks 5-9), specified before pressing <span class="value">*YES*</span>. If 60 or 120 programs were saved in a <span class="patch-name">30-SEQ/SONGS</span> file along with the sequencer data, a P will flash on the
+      upper line of the display when the file is displayed on the <span class="page-name">DISK LOAD</span> page. 
+      When you answer <span class="value">*YES*</span> to load the data, the TS-10 will load the programs automatically
+      with the sequencer data, replacing the programs currently in memory.</li>
+    <li><span class="patch-name">60-SEQ/SONGS</span> file — replaces the entire sequencer memory (Banks 0-9), and installs global <span
+      class="page-name">Sequencer Control</span> page settings.</li>
     <h3 id="loading-60-seq-songs-files-that-contain-programs-and-or-sample-banks">Loading 60 SEQ/SONGS Files that
       Contain Programs and/or Sample Banks</h3>
     <ul>
       <li>If only Programs have been saved in a 60-SEQ/SONGS file along with the sequencer data, when you go to load the
-        file, a P will flash on the display next to the file name when the file name is displayed on the <span
+        file, a <span class="lcd">P</span> will flash on the display next to the file name when the file name is displayed on the <span
           class="page-name">LOAD FILE</span> page.</li>
       <li>If only Sample Banks have been saved in a 60-SEQ/SONGS file along with the sequencer data, when you later go
-        to load the file, an S will flash on the display next to the file name when the file name is displayed on the
+        to load the file, an <span class="lcd">S</span> will flash on the display next to the file name when the file name is displayed on the
         <span class="page-name">LOAD FILE</span> page.</li>
       <li>If both Programs and Sample Banks have been saved in a 60-SEQ/SONGS file along with the sequencer data, when
         you later go to load the file, a PS will flash on the display next to the file name when the file name is
         displayed on the <span class="page-name">LOAD FILE</span> page.</li>
     </ul>
-    <p>To load a 60 SEQ/SONGS file:</p>
+    <h5>To load a 60 SEQ/SONGS file:</h5>
     <ul>
       <li>Press <kbd class="button">Storage</kbd>.</li>
       <li>Press the soft button beneath DISK.</li>
@@ -807,19 +953,25 @@
       <li>Press the upper left soft button to select the file to load.</li>
       <li>Press the upper right soft button above <span class="value">*YES*</span>.</li>
     </ul>
-    <p>If the 60-SEQ/SONGS file had Sample Banks saved with it, after answering <span class="value">*YES*</span> to load
-      the 60-SEQ/SONGS file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
+    <p>If the <span class="patch-name">60-SEQ/SONGS</span> file had Sample Banks saved with it, after answering <span class="value">*YES*</span> to load
+      the <span class="patch-name">60-SEQ/SONGS</span> file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
         class="value">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask
       for the disk(s) to automatically load the Sampled Sound data. If you answer *NO *, the Sampled Sound bank
       information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not
       loaded.</p>
+      the <span class="patch-name">60-SEQ/SONGS</span> file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
+        class="value">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask
+      for the disk(s) to automatically load the Sampled Sound data. If you answer <span class="value">*NO*</span>, the Sampled Sound bank
+      information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not
+      loaded.</p>
     <aside class="note">
-      <p>Note: Do not load any 60-SEQ/SONGS files that have been saved with <dfn class="term">Sample-Banks</dfn> into a
+      <p>Note: Do not load any <span class="patch-name">60-SEQ/SONGS</span> files that have been saved with <span class="patch-name">Sample-Banks</span> into a
         TS-10 that is running software earlier than version 2.0. The new feature is incompatible with older software.
       </p>
+      <p>To check which software version of the TS-10 you are running, while holding down the <kbd
+          class="button">Presets</kbd> button, press the <kbd class="button">System</kbd> button.</p>
     </aside>
-    <p>To check which software version of the TS-10 you are running, while holding down the <kbd
-        class="button">Presets</kbd> button, press the <kbd class="button">System</kbd> button.</p>
+
     <h3 id="using-file-banks-to-locate-files-for-loading">Using File Banks to Locate Files for Loading</h3>
     <p>As we mentioned earlier, File Banks provide a quick way to locate and select a file for loading. After you have
       selected <span class="command">LOAD</span> from the <span class="page-name">DISK Storage</span> menu, the ten <kbd
@@ -1065,13 +1217,13 @@
     <ul>
       <li>Press the soft button for PROGRAMS. The display reads:</li>
       <li>CURRENT PROGRAM — this command will send out all data for the currently selected primary Program as a system
-        exclusive message. The Program may be in any bank, including the ROM <dfn class="term">BankSets</dfn>, or may be
+        exclusive message. The Program may be in any bank, including the ROM BankSets, or may be
         in the <span class="function">Compare</span> buffer.</li>
-      <li>BANKSET-U0 — this command transmits the contents of User RAM Program <dfn class="term">BankSet</dfn> U0 as a
+      <li>BANKSET-U0 — this command transmits the contents of User RAM Program BankSet U0 as a
         system exclusive message. The dump contains data for 60 Programs.</li>
-      <li>BANKSET-U1 — this command transmits the contents of User RAM Program <dfn class="term">BankSet</dfn> U1 as a
+      <li>BANKSET-U1 — this command transmits the contents of User RAM Program BankSet U1 as a
         system exclusive message. The dump contains data for 60 Programs.</li>
-      <li>ALL — this command transmits the contents of both User RAM Program <dfn class="term">BankSets</dfn> U0 and U1
+      <li>ALL — this command transmits the contents of both User RAM Program BankSets U0 and U1
         as a system exclusive message. The dump contains data for the complete set of 120 RAM Programs.</li>
     </ul>
     <h4 id="presets-2">PRESETS</h4>
@@ -1080,12 +1232,12 @@
     <ul>
       <li>Press the soft button for PRESETS. The display reads:</li>
       <li>CURRENT PRESET — will send out all data for the current Preset as a system exclusive message. The Preset may
-        be in any bank, including the ROM <dfn class="term">BankSets</dfn>, or may be in the Preset Edit buffer.</li>
-      <li>BANKSET-U0 — this command transmits the contents of User RAM Preset <dfn class="term">BankSet</dfn> U0 as a
+        be in any bank, including the ROM BankSets, or may be in the Preset Edit buffer.</li>
+      <li>BANKSET-U0 — this command transmits the contents of User RAM Preset BankSet U0 as a
         system exclusive message. The dump contains data for 60 Presets.</li>
-      <li>BANKSET-U1 — this command transmits the contents of User RAM Preset <dfn class="term">BankSet</dfn> U1 as a
+      <li>BANKSET-U1 — this command transmits the contents of User RAM Preset BankSet U1 as a
         system exclusive message. The dump contains data for 60 Presets.</li>
-      <li>ALL — this command transmits the contents of both User RAM Preset <dfn class="term">BankSets</dfn> U0 and U1
+      <li>ALL — this command transmits the contents of both User RAM Preset BankSets U0 and U1
         as a system exclusive message. The dump contains data for the complete set of 120 RAM Presets.</li>
     </ul>
     <h4 id="sequencer-data">SEQUENCER DATA</h4>
@@ -1106,7 +1258,7 @@
           class="param">SYS-EX</span> page</span>:</p>
     <ul>
       <li>Press the soft button for ALL. The TS-10 will transmit three consecutive dump messages containing both User
-        Program <dfn class="term">BankSets</dfn> (U0 and U1), both User Preset <dfn class="term">BankSets</dfn> (U0 and
+        Program BankSets (U0 and U1), both User Preset BankSets (U0 and
         U1), and the entire Sequencer memory. Using this command is equivalent to sending the three messages
         individually, and is convenient when you wish to transmit everything with one command.</li>
     </ul>
@@ -1310,7 +1462,7 @@
     <aside class="note">
       <p>Note: Any <dfn class="term">Sample-Banks</dfn> files created on an 8 Meg TS-10 using <dfn
           class="term">BankSet</dfn> S9, and then loaded into a 2 Meg unit will automatically erase all Sampled Sounds
-        in <dfn class="term">BankSet</dfn> S9.</p>
+        in BankSet S9.</p>
     </aside>
     <p>Fatal Error Messages Fatal error messages are always accompanied by the <span class="param">PRESS</span> ANY
       BUTTON TO CONTINUE...</p>
