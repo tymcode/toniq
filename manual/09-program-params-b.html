@@ -76,7 +76,7 @@
 </figure>
 <h4 id="sample-start-offset" class="param-name"><span class="param">SAMPLE-START-OFFSET</span><span class="range">Range: 00 to 99</span></h4>
 <p>This controls where in the sample the wave will begin playing. When set to <span class="value">00</span>, the whole wave will play. As the start point is adjusted upwards, it will begin playing further into the wave. You can use this, for example, to skip the attack and play only the loop portion of looped (sustaining) sounds.</p>
-<aside class="note"><p>Note: When using the <span class="lcd">INHARMONIC</span> and <span class="lcd">WAVEFORM</span> Wave Classes, this parameter will change the starting phase, which is only heard when two waves are played at exactly the same pitch.</p></aside>
+<aside class="note"><p>When using the <span class="lcd">INHARMONIC</span> and <span class="lcd">WAVEFORM</span> Wave Classes, this parameter will change the starting phase, which is only heard when two waves are played at exactly the same pitch.</p></aside>
 <h4 id="start-modsrc" class="param-name"><span class="param">START-MODSRC</span><span class="range">Range: various</span></h4>
 <p>Here you choose which of the modulators will control the sample-start of the voice. Any of the 15 modulators can be selected.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
@@ -232,8 +232,8 @@
 <p>This parameter determines the number of steps that the selected Mod Destination will be modulated. Modulation can be either positive or negative.</p>
 <h2 id="drum-map-specific-wave-parameters">Drum-Map Specific Wave Parameters</h2>
 <p>A <dfn class="term">Drum-Map</dfn> can use up to 64 waves per program, four waves per key, with separate pitch, volume, panning and voice template parameters for each wave. All of the <span class="value">DRUM-MAP</span> wave page parameters are identical to the first thirteen wave classes, with the exclusion of the <span class="param">MULTISAMPLE-SHIFT parameter.</span></p>
-<p>Also, the <span class="value">DRUM-MAP</span> Wave Class category is only visible when the current program contains a <dfn class="term">Drum-Map</dfn>. The wave name parameter in a <dfn class="term">Drum-Map</dfn> is meaningless and is not selectable.</p>
-<aside class="note"><p>Note: When a Program contains a <dfn class="term">Drum-Map</dfn>, the <span class="param">OCTAVE</span> and <span class="param">SEMITONE</span> values on the <span class="page-name">PITCH</span> page will have no effect on the <dfn class="term">Drum-Map</dfn>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <dfn class="term">Drum-Map</dfn> Editor.</p></aside>
+<p>Also, the <span class="value">DRUM-MAP</span> Wave Class category is only visible when the current program contains a <span class="term">Drum-Map</span>. The wave name parameter in a <span class="term">Drum-Map</span> is meaningless and is not selectable.</p>
+<aside class="note"><p>When a Program contains a <span class="term">Drum-Map</span>, the <span class="param">OCTAVE</span> and <span class="param">SEMITONE</span> values on the <span class="page-name">PITCH</span> page will have no effect on the <span class="term">Drum-Map</span>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <span class="term">Drum-Map</span> Editor.</p></aside>
 <h2 id="mod-mixer-page">Mod Mixer Page</h2>
 <p>The Mod Mixer is a unique feature which allows you to:</p>
 <ul>
@@ -630,7 +630,7 @@ You can assign a sequence of 16 Programs to a single Hyper-Wave, and then play i
 You can control the pitch and even the playback direction of each Program.
 You can control the relative volume of each Program, and you can optionally eliminate the dip in volume that would otherwise occur at the midpoint of the transition between two Programs.
 </p>
-<p><dfn class="term">Hyper-Waves</dfn> are defined by <dfn class="term">Wave-Lists</dfn>. You control the timing and pitch of the Programs using the <span class="page-name">Wave-List Editor</span> parameters.
+<p><span class="term">Hyper-Waves</span> are defined by <dfn class="term">Wave-Lists</dfn>. You control the timing and pitch of the Programs using the <span class="page-name">Wave-List Editor</span> parameters.
 <h2 id="wave-list-editor-parameters">Wave-List Editor Parameters</h2>
 <p>The following parameters are only available when <span class="lcd">OPTION=WAVE-LIST</span> on the <span class="page-name">Program Control</span> Page. To access the Wave-List Editor parameters for a program that does not contain a Wave-List:</p>
 <ol>
@@ -843,7 +843,7 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>3) Press the <kbd class="button">Up Arrow</kbd> button.</p>
 <p>4) Select <span class="lcd">DRUM-MAP</span> on the bottom of the display by pressing its soft button.</p>
 <p>5) Press either of the soft buttons beneath EDIT <span class="lcd">DRUM-MAP</span>.</p>
-<p>The <dfn class="term">Drum-Map</dfn> Editor parameters are:</p>
+<p>The <span class="term">Drum-Map</span> Editor parameters are:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -896,7 +896,7 @@ You can control the relative volume of each Program, and you can optionally elim
     <tr><td><span class="value">------R</span></td><td style="text-align: left;">Hard Right</td></tr>
   </tbody>
 </table>
-<aside class="note"><p>Note: When <span class="value">PAN=*VOICE*</span>, the key uses whatever pan setting is chosen on the <span class="page-name">Output</span> page of the voice(s) responding to the key. 
+<aside class="note"><p>When <span class="value">PAN=*VOICE*</span>, the key uses whatever pan setting is chosen on the <span class="page-name">Output</span> page of the voice(s) responding to the key. 
   All of the other <span class="param">PAN</span> settings override the pan setting on the <span class="page-name">Output</span> page.</p>
 </aside>
 <h4 id="pitch-2" class="param-name"><span class="param">PITCH</span><span class="range">Range: -16 to +15 semitones</span></h4>
@@ -1199,7 +1199,7 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>Understanding the effect algorithms and their related parameters are described in detail in <a href="06-effects-concepts.html">Section 6 — Understanding Effects</a> and <a href="07-effects-00-21.html">Section 7 — Effect Parameters</a>.</p>
 
 <h2 id="select-voice-page">Select Voice Page</h2>
-<p>The <span class="page-name">Select Voice</span> page is used to view the six voices that create a program sound. Note that if there is a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> within the program, the <span class="page-name">Select Voice</span> page will only show four voices (a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> replaces voices 5 and 6).</p>
+<p>The <span class="page-name">Select Voice</span> page is used to view the six voices that create a program sound. Note that if there is a <dfn class="term">Drum-Map</dfn>, <dfn class="term">Wave-List</dfn>, or <dfn class="term">Pitch-Table</dfn> within the program, the <span class="page-name">Select Voice</span> page will only show four voices (a <span class="term">Drum-Map</span>, <span class="term">Wave-List</span>, or <span class="term">Pitch-Table</span> replaces voices 5 and 6).</p>
 <p>Continued presses of the <kbd class="button">Select Voice</kbd> button will toggle between the <span class="page-name">Select Voice</span> page and the page you were on prior to entering the <span class="page-name">Select Voice</span> Page.</p>
 
 <h2 id="copy-page">Copy Page</h2>

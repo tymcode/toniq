@@ -1,157 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Section 6 — Understanding Effects — ENSONIQ TS-10/TS-12 Musician’s Manual</title>
   <link rel="stylesheet" href="css/manual.css">
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="chrome">
       <a href="index.html"><span class="brand">ENSONIQ</span>
-      <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
+        <span class="product">TS-10 / TS-12 Musician’s Manual</span></a>
     </div>
   </header>
   <nav class="section-nav">
-    <div><a href="05-track-params.html#section-5-preset-track-parameters">← Section 5 — Preset/Track Parameters</a></div>
+    <div><a href="05-track-params.html#section-5-preset-track-parameters">← Section 5 — Preset/Track Parameters</a>
+    </div>
     <div><a href="index.html">Contents</a> · <a href="search.html">Search</a></div>
-    <div><a href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters (00–21 Parallel) →</a></div>
+    <div><a href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters (00–21
+        Parallel) →</a></div>
   </nav>
   <article class="manual" id="main">
     <header class="title-block">
       <p class="brand-line">Performance / Composition Synthesizer · Version 3.0</p>
       <h1 id="section-6-understanding-effects">Section 6 — Understanding Effects</h1>
     </header>
-    <p>This section offers a basic overview of the concepts involved in selecting, creating, editing, and understanding Effects. For more detailed descriptions of the actual effect parameters, refer to the following section.</p>
+    <p>This section offers a basic overview of the concepts involved in selecting, creating, editing, and understanding
+      Effects. For more detailed descriptions of the actual effect parameters, refer to the following section.</p>
     <h2 id="understanding-ts-10-effects">Understanding TS-10 Effects</h2>
-      <p>The TS-10 has a powerful built-in signal processor that can produce a variety of effects. More important, its functions are integrated into, rather than added onto, the rest of the synthesizer. The flexible bus routing scheme and extensive real-time control give the TS-10 its dynamic effects capability.</p>
-<p>The TS-10 is equipped with an advanced digital signal processing system based on the ENSONIQ Signal Processor (ESP) chip. The ESP is designed specifically for digital audio signal processing, and in the TS-10 it works in tandem with a fourth-generation version of the Digital Oscillator Chip (DOC IV a.k.a. OTTO) and an external 16-bit digital-to-analog converter to provide a very high-quality output signal.</p>
-<p>Digital effects processing capability has been designed to complement the advanced performance features of the TS-10, and all of the effects can have any parameter modulated by various performance controllers such as the Mod Wheel, <dfn class="term">Poly-Key</dfn>™ pressure, and other user-definable controllers.</p>
-<p>All effects are fully programmable and may be customized for particular applications. Effects are most often stored as part of a sound, although each preset may also have its own override effect, independent of the effects contained by the sounds within the preset. Each individual sequence and song also has an independent effect. The following sections describe each type of effect.</p>
-<h3 id="program-and-sampled-sound-effects">Program and Sampled Sound Effects</h3>
-  <p>Each sound in the TS-10 contains an effect and a complete set of parameter values which determine how that effect will sound. The effect is present even if none of the voices in the sound are routed through the effect (e.g. all voices are sent to the DRY or AUX destination bus - see the <span class="page-name">Output</span> page in <a class="refer-to" href="09-program-params-a.html#section-9-program-parameters-lfo-envelopes-pitch-filters">Section 9 — Program Parameters</a>). Whenever you save or write a sound, the effect settings are also saved with the sound.</p>
-<p>The sound effect is displayed and edited by pressing the <kbd class="button">Program Effects</kbd> button. These Effect Parameter pages are described in detail in <a class="refer-to" href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
-<p>If the preset effect that is currently loaded and being heard is different than the sound effect that is being shown, then a flashing MUTE will appear in the lower left corner of the display.</p>
-<h3 id="preset-effects">Preset Effects</h3>
-<p>Each preset in the TS-10 also contains an effect and a complete set of effect parameter values. The effect is present even if none of the tracks in the preset are routed through the effect (e.g. all tracks are sent to the DRY or AUX destination bus - see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>).</p>
-<p>Whenever you save or write a preset, the effect settings are also saved with the preset.</p>
-<p>The preset effect is the same as the effect contained in the primary selected sound in the preset, but can easily be changed to suit the needs of the preset more closely. This effect applies to all preset tracks (or their program voices) that are routed to either the FX1 or FX2 destination bus.</p>
-<p>The preset effect is displayed and edited by pressing the <kbd class="button">Track Effects</kbd> button in the Track Parameters section of the front panel, when the TS-10 is in either Sounds or Presets mode.</p>
-<p>The top level page controls the re-routing of the voices without editing the sound itself, and is described in <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>. The next page allows you to define which tracks will send controller information to the effect. The remaining pages contain the effect parameters, which are specific to the effect type. These effect parameter pages are described in <a class="refer-to" href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
-<h3 id="sequencer-effect">Sequencer Effect</h3>
-<p>Like each of the presets in the TS-10, each sequence and song contains an effect and a complete set of effect parameter values. The effect is present even if none of the tracks in the sequence are routed through the effect (e.g. all tracks are sent to the DRY or AUX destination bus - see <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>). This effect applies to all sequencer tracks (or their program voices) which are routed to either the FX1 or FX2 destination bus.</p>
-<p>The effect is saved with each sequence or song. It will remain unaffected until a new song or sequence is selected, unless it is specifically edited. A special incoming MIDI program change message may be used to load new effects into a sequence in <span class="value">MULTI</span> mode (see <a class="refer-to" href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI Control</span> Page Parameters</a>). The Copy function and a special mode of Copy Preset to Sequence can be used to replace the Sequence effect.</p>
-<p>The sequencer effect is displayed and edited by pressing the <kbd class="button">Track Effects</kbd> button in the Track Parameters section of the front panel, when the TS-10 is in Sequencer mode.</p>
-<h3 id="selecting-effects">Selecting Effects</h3>
-<p>The first parameter of the <span class="page-name">Effects</span> page is the effects selector. Changing this parameter causes a new effect to be selected, which in turn changes the type of parameters that will be available on the rest of the pages. Selecting a new effect algorithm will automatically set all of the effect parameters to their default values for the new effect. The available effects algorithms are:</p>
-<table class="data-table" id="effect-algorithms"><caption>Effect Algorithms</caption><tbody><tr><td>00 DRY/BYPASSED</td><td>25 LARGE PLATE REVERB 1</td><td>50 EQ- -CHORUS + EQ- -DDL</td></tr><tr><td>01 DDL+CHORUS+REV</td><td>26 LARGE PLATE REVERB 2</td><td>51 FLANGER + REVERB</td></tr><tr><td>02 EQ- -DDL+CHORUS+REV</td><td>27 HALL REVERB 1</td><td>52 EQ- -FLANGER + DELAY</td></tr><tr><td>03 DELAYLFO+CHORUS+REV</td><td>28 HALL REVERB 2</td><td>53 PHASER + REVERB</td></tr><tr><td>04 ROTOSPKR+CHORUS+REV</td><td>29 HALL REVERB 3</td><td>54 PHASER + DELAY</td></tr><tr><td>05 DISTORT+CHORUS+REV</td><td>30 SMALL ROOM REVERB</td><td>55 EQ- -TREMOLO + DELAY</td></tr><tr><td>06 PARAM EQ+CHORUS+REV</td><td>31 MEDIUM ROOM REVERB</td><td>56 EQ- -VIBRATO + DELAY</td></tr><tr><td>07 ENV VCF+CHORUS+REV</td><td>32 LARGE ROOM REVERB</td><td>57 PITCH SHIFTER</td></tr><tr><td>08 DDL+PHLANGR+REV</td><td>33 TIGHT AMBIENCE</td><td>58 FAST PITCH SHIFTER</td></tr><tr><td>09 EQ- -DDL+PHLANGR+REV</td><td>34 WIDE AMBIENCE</td><td>59 PITCH SHIFTER + DELAY</td></tr><tr><td>10 DELAYLFO+PHLANGR+REV</td><td>35 NONLINEAR REVERB 1</td><td>60 ROTARY SPEAKER + REV</td></tr><tr><td>11 ROTOSPKR+PHLANGR+REV</td><td>36 NONLINEAR REVERB 2</td><td>61 SPEAKER CABINET</td></tr><tr><td>12 DISTORT+PHLANGR+REV</td><td>37 NONLINEAR REVERB 3</td><td>62 TUNABLE SPEAKER</td></tr><tr><td>13 PARAM EQ+PHLANGR+REV</td><td>38 GATED REVERB</td><td>63 GUITAR AMP 1</td></tr><tr><td>14 ENV VCF+PHLANGR+REV</td><td>39 <span class="value">REVERSE</span> REVERB 1</td><td>64 GUITAR AMP 2</td></tr><tr><td>15 DDL+ROTOSPKR+REV</td><td>40 <span class="value">REVERSE</span> REVERB 2</td><td>65 GUITAR AMP 3</td></tr><tr><td>16 EQ- -DDL+ROTOSPKR+REV</td><td>41 <span class="value">STEREO</span> DELAY + DELAY</td><td>66 VCF- -DISTORTION- -VCF</td></tr><tr><td>17 DELAYLFO+ROTOSPKR+REV</td><td>42 MULTITAP DELAY</td><td>67 WAH- -DISTORTION + REV</td></tr><tr><td>18 ROTOSPKR+ROTOSPKR+REV</td><td>43 EQ- -<span class="value">STEREO</span> DELAYLFO</td><td>68 FLNG- -CMP- -DIST + REV</td></tr><tr><td>19 DISTORT+ROTOSPKR+REV</td><td>44 EIGHT VOICE CHORUS</td><td>69 DISTORT + CHORUS- -REV</td></tr><tr><td>20 PARAM EQ+ROTOSPKR+REV</td><td>45 CHORUS + REVERB 1</td><td>70 PARAMETRIC EQ</td></tr><tr><td>21 ENV VCF+ROTOSPKR+REV</td><td>46 CHORUS + REVERB 2</td><td>71 EQ- -COMPRESSOR</td></tr><tr><td>22 PLATE + PLATE REVERBS</td><td>47 DDL- -CHORUS + REVRB 1</td><td>72 RUMBLE FILTER</td></tr><tr><td>23 PARAMETRIC EQ + PLATE</td><td>48 DDL- -CHORUS + REVRB 2</td><td>73 VAN DER POL FILTER</td></tr><tr><td>24 SMALL PLATE REVERB</td><td>49 EQ- -CHORUS + REVERB</td><td></td></tr></tbody></table>
-<aside class="tip"><p>Double click the <kbd class="button">Program Effects</kbd> button to return to the algorithm select page.</p></aside>
-<aside class="tip"><p>The names of the parallel effect algorithms are right justified to differentiate them from the other effect algorithms.</p></aside>
-<h2 id="what-is-an-algorithm">What is an Algorithm?</h2>
-<p>An algorithm is the basic signal processing building block in the TS-10. The word “effect” could be used instead of algorithm, but some algorithms can produce several sonic effects simultaneously. Each algorithm has a set of parameters used to control the effect(s) it produces.</p>
-<p>The values of these parameters are saved with the algorithm. Wherever applicable, we will refer to the TS-10 effects as <em>algorithms</em>.</p>
-<h3 id="signal-routing-between-effects">Signal Routing Between Effects</h3>
-<p>If the algorithm consists of two or more different types of effects, the algorithm name has symbols that show how these different effect types are routed together. The routing symbols are:</p>
-<p><span class="lcd">--</span> indicates a serial connection from the effect on the left into the effect on the right.<br>
-<span class="lcd">+</span> indicates a parallel connection between the effect on the left and the effect on the right.<br></p>
-<p>For example, the EQ--TREMOLO + DELAY algorithm has a serial routing from the EQ into the tremolo effect (i.e. the output of the EQ always feeds into the Tremolo) , and a parallel routing between the tremolo and the digital delay (i.e. there is an input into the delay line).</p>
-<h3 id="sounds-and-presets">Sounds and Presets</h3>
-  The complete effects setup, including the values of all effect parameters, is saved when you save a sound. It is also saved when you save a preset. The TS-10 tries to be smart about switching effects, since all sound must stop for an instant when it changes effects.</p>
-<h2 id="when-are-new-algorithms-loaded-into-the-esp-chip">When are New Algorithms loaded into the ESP Chip?</h2>
-<p>Whenever a new algorithm is loaded into the ESP, the audio output will pause briefly, allowing the instructions which create the new algorithm to be loaded into the ESP. If an algorithm differs only by variation in parameter values, then this pause may not occur.</p>
-<p>These are the rules that the TS-10 follows in deciding when to change algorithms:</p>
-<ol>
-  <li>When you select a primary sound from one of the Sound Bank pages, the algorithm saved in that sound will be loaded into the ESP, and you will hear the sound with its algorithm. If you layer a sound by double-clicking, its algorithm will not be loaded.</li>
-  <li>When you select or layer sounds/tracks from a preset or <span class="page-name">Track Parameter</span> page, the algorithm is not changed.</li>
-  <li>When you change the sound on a track from <span class="function">Replace Track Sound</span> mode (e.g. with the Sounds LED flashing), the algorithm will not be changed.</li>
-  <li>When you change the sound on a track by double-clicking the <kbd class="button">Replace Track Sound</kbd> button (e.g. with the Sounds and the <span class="function">Replace Track Sound</span> LED flashing), the algorithm will be changed.</li>
-  <li>When you select a preset, the algorithm saved in that preset will be loaded into the ESP.</li>
-  <li>When you select a song or sequence, the algorithm saved in that song or sequence will be loaded into the ESP.</li>
-  <li>Whenever you go from Sounds mode to Sequencer mode (by pressing <kbd class="button">Seqs/Songs</kbd>) the sequencer algorithm is loaded. The same is true when going from Sequencer mode to Sounds mode (by pressing <kbd class="button">Sounds</kbd>).</li>
-  <li>Saving either the sound or the preset will save the <em>current algorithm</em>.</li>
-  <li>Should you start editing a sound while an algorithm <em>other than its own</em> is active, a warning will appear, reminding you that you are not hearing the algorithm you are seeing or editing. This warning appears as <span class="lcd">MUTE</span>, flashing in the lower left corner of the display.</li>
-  <li>When MIDI program changes 60-119 are received in <span class="value">MULTI</span> or <span class="value">MONO B</span> modes, the sequence or song effect algorithm will be loaded with the one in the program change.</li>
-</ol> 
-<h3 id="performance-control-of-tracks-in-preset-or-sequencer-mode">Performance Control of Tracks in Preset or Sequencer Mode</h3>
-  <p>When the TS-10 is in Presets or Sequencer mode, all the instruments in the internal memory are routed through the same global effect. In order to gain some individual control for each track, two additional sub-pages on the <span class="page-name">Track Effect</span> page determine how each instrument will interact with the algorithm. The algorithm for the current preset, song, or sequence is edited by pressing the <kbd class="button">Track Effects</kbd> button in the Track Parameters section of the front panel.</p>
-<p>The first time it is pressed, it shows the <span class="page-name">Effects Output Routing</span> parameter for each of the three tracks in a performance preset (or for 6 of the 12 tracks of the current song or sequence in Sequencer mode). The <span class="page-name">Effects Output Routing</span> sub-page determines which of the Output Busses the track will be sent through. By using this parameter, you can give individual instruments different Dry/Wet or multiple effect mixes.</p>
-<p>The second press shows the <span class="page-name">Effect Mod Controller</span> page. This parameter determines whether or not the controllers of a particular track will be routed to control the effect. This is an important setting when in Presets or Sequencer mode; since all tracks are routed through the same effect, it could be confusing to have multiple instruments sending conflicting controller information to the effect. If more than one track is set to <span class="param">CNTRL-FX</span>, “controller fights” can occur. If set to <span class="param">NO-CNTRL</span>, a track will remain routed to the effects, but its controllers (such as the <span class="param">TIMBRE</span>, <span class="param">PBEND</span>, <span class="param">WHEEL</span>, etc.) will not affect the track.</p>
-<p>The second press shows the <span class="page-name">Effect Mod Controller</span> page. This parameter determines whether or not the controllers of a particular track will be routed to control the effect. This is an important setting when in Presets or Sequencer mode; since all tracks are routed through the same effect, it could be confusing to have multiple instruments sending conflicting controller information to the effect. If more than one track is set to <span class="param">CNTRL-FX</span>, “controller fights” can occur. If set to <span class="param">NO-CNTRL</span>, a track will remain routed to the effects, but its controllers (such as the <span class="param">TIMBRE</span>, <span class="param">PBEND</span>, <span class="param">WHEEL</span>, etc.) will not affect the track.</p>
-<p>Subsequent presses reveal the effects programming parameters, which are identical to those found on the <span class="page-name">Program Effects</span> page.</p>
-<h3 id="programming-effects">Programming Effects</h3>
-<p>The TS-10 algorithms are fully programmable. The first sub-page contains the effect selector. The effect selector is a little different than all of the other parameters. It controls how all of the other effect pages will be configured and displayed. When this parameter is changed, a new algorithm is selected which causes several important things to occur: </p>
-  <ul>
-    <li>a new algorithm is loaded, causing a brief pause in the audio output</li>
-    <li>the effect parameter pages are redefined for the particular effect selected</li>
-    <li>the effect parameter values are reset to their default settings for the effect</li>
-  </ul>
-<aside class="tip"><p>When editing the effect selector, it is possible to change the new effect type quickly and avoid the brief delay caused by the actions described above. Pass rapidly over the types between the old type and the new type, and then pause. The new effect will be recalled only after you stop changing the type.</p></aside>
-<h4 id="effect-variations">Effect Variations</h4>
-<p>The first effect parameter page is similar for all of the effects (the display shows <span class="lcd">VARIATION=</span>). It selects an <dfn class="term">Effect Variation</dfn>, which feature various “preset” patches, letting you quickly access several set-ups within the same effect. Each algorithm has a predetermined amount of variations. Each of these variations is individually editable and can act as independent effect edit buffers. Each Effect Variation can have two different <dfn class="term">Modulation Sources</dfn>, <dfn class="term">Destination parameters</dfn>, and defined modulation ranges.</p>
-<h4 id="the-effects-busses">The Effects Busses</h4>
-<p>The output of every voice in the TS-10 is assigned to a stereo bus. A bus, like the bus of a mixing board, mixes together all the voices assigned to that bus into a single stereo pair. Of the four busses on the TS-10, two are inputs into the signal processor (<dfn class="term">FX1</dfn> and <dfn class="term">FX2</dfn>), another is a direct path to the Main outputs which bypasses all effect processing (<dfn class="term">DRY</dfn>) and the fourth is a direct path to the AUX outputs which also bypasses all effect processing (<dfn class="term">AUX</dfn>). The Destination Bus assignment for each Voice is set on the <span class="page-name">Output</span> page. The voice settings in a program can be overridden for each preset and sequencer track on the top-level of the <span class="page-name">Track Effects</span> page.</p>
-<aside class="tip"><p>By double-clicking the <kbd class="button">Track Effects</kbd> button, you can bypass the effect. However, any tracks routed to the <kbd class="button">AUX</kbd> outputs will not be bypassed.</p></aside>
-<h3 id="effects-mixing">Effects Mixing</h3>
-<p>Almost all of the effects have separate mixing controls for the <dfn class="term">FX1</dfn> and <dfn class="term">FX2</dfn> busses. They are found on the next sub-page within the <span class="page-name">Effects</span> page, and will have slightly different wording depending on the effect they’re contained within.</p>
-<p>When an effect having a single processing function (such as reverb only) is selected, both busses <dfn class="term">FX1</dfn> and <dfn class="term">FX2</dfn> are routed to it. When using a dual or multi-effect, <dfn class="term">FX1</dfn> will generally route the signal through both or all effects, with <dfn class="term">FX2</dfn> routing only through the second effect. In all cases, a third bus labeled <dfn class="term">DRY</dfn> is a dedicated dry path to the Main Outputs.</p>
-<h4 id="single-function-effect-mixer">Single Function Effect Mixer</h4>
-<figure class="figure"><img src="images/single-function-effect-mixer.png" alt="Single-function effect mixer: Voice Output pan/vol to Destination Bus (FX1, FX2, DRY, AUX); FX1 and FX2 each pass through Mix1 or Mix2 into Effect 1, then to Main Outputs; DRY and AUX go to Main and Aux outputs"><figcaption>Single-function effect mixer.</figcaption></figure>
-<p>The above illustration shows the effects busses and the output mixing. Every voice is assigned to one of the four stereo busses, which go around or through the effects processing. In all of the effects routing diagrams, the heavy lines are stereo paths.</p>
-<h4 id="multiple-function-effect-mixer">Multiple Function Effect Mixer</h4>
-<figure class="figure"><img src="images/multiple-function-effect-mixer.png" alt="Multiple-function effect mixer: FX1 through Effect 1 and Mix1, FX2 through Mix2 into Effect 2; dry paths from Mix1, Mix2, and DRY bus to Main Outputs"><figcaption>Multiple-function effect mixer.</figcaption></figure>
-<p>When the selected algorithm is a combined effect that has more than one signal processing function (such as chorus and reverb), the FX1 bus feeds Effect 1, and the FX2 bus feeds Effect 2. The <span class="param">FX2 Mix</span> control sets the amount of Effect 2 (usually reverb) for voices assigned to that bus.</p>
-<p><span class="param">FX1 Mix</span> controls the amount of the output from Effect 1 sent to Effect 2 rather than directly to the output. By setting this control to its extremes, you can arrange the two effects to be either in series or in parallel. The majority of combined effects follow this topology. If a specific algorithm uses a different topology, it will be explained in <a class="refer-to" href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
-<h4 id="parallel-effect-mixer">Parallel Effect Mixer</h4>
-<figure class="figure"><img src="images/parallel-effect-mixer.png" alt="Parallel effect mixer: FX1 L/R to Effect A and Effect B with A-to-B and reverb sends; FX2 to reverb and dry mix; DRY and AUX to Main and Aux outputs"><figcaption>Parallel effect mixer.</figcaption></figure>
-<p>All of the parallel effect algorithms follow the topology shown in the illustration above. The heavy lines are stereo paths. Voices assigned to FX1 (on the <span class="page-name">Output</span> Page) will be sent to Effect A, if the <span class="param">PAN</span> parameter is set to -99 (hard left) or sent to Effect B, if the <span class="param">PAN</span> parameter is set to <span class="value">+99</span> (hard right). Note that by setting the <span class="param">PAN</span> parameter to <span class="value">50</span>, you can create a parallel routing between Effect A and Effect B. 
-  There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into Effect B. 
-  There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into the Reverb, and another parameter allowing a serial connection from Effect B into the Reverb.</p>
-<p>Voices assigned to FX2 (on the <span class="page-name">Output</span> Page) will send a stereo signal to the reverb. The <span class="param">FX- - REVRB</span> parameter allows you to define how much of the signal you want sent into the Reverb.</p>
-<p>There is also a <span class="param">DRY</span> parameter (on the <span class="page-name">SEND</span> sub-page) from FX2 allowing you to define how much of the FX2 signal you want to completely bypass the Reverb. Any voices assigned to the <span class="param">DRY</span> Destination-Bus (on the <span class="page-name">Output</span> page) will go through the mixer to the Main Output jacks.</p>
-<p>Any voices assigned to the <span class="param">AUX</span> Destination-Bus will go directly to the AUX Output jacks, without any effects processing.</p>
-<p>Selectable Effect Modulation Parameters All of the algorithms allow real-time control of selectable parameters and share common modulation control parameters. The Modulation Control parameters are always the last parameters on the algorithm sub-pages:</p>
-<h4 id="mod-1-src-modulation-source-1" class="param-name"><span class="param">MOD-1 SRC — Modulation Source 1</span><span class="range">Range: (described below)</span><br>
-<h4 id="mod-2-src-modulation-source-2" class="param-name"><span class="param">MOD-2 SRC — Modulation Source 2</span><span class="range">Range: (described below)</span></h4></br>
-<p>These parameters select the modulation sources used to modulate the parameter Destinations. Each Effect Variation has a choice of two discrete mod sources.</p>
-<h4 id="modulators-that-can-be-applied-to-the-effects">Modulators that can be applied to the Effects</h4>
-<p>The following modulation sources are available to alter the effects in performance:</p>
-<table class="defn-table">
-  <thead>
-    <tr><th>Mod Source</th><th>Modulation effect derived from</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><span class="value">WHEEL</span></td><td>the value of the mod wheel</td></tr>
-    <tr><td><span class="value">PBEND</span></td><td>the value of the pitch wheel</td></tr>
-    <tr><td><span class="value">PEDAL</span></td><td>the value of the Pedal•CV input</td></tr>
-    <tr><td><span class="value">TIMBR</span></td><td>the value of the <span class="param">TIMBRE</span> parameter for the track</td></tr>
-    <tr><td><span class="value">XCTRL</span></td><td>the value of the <span class="param">XCTRL</span> (external MIDI controller number) parameter for the track</td></tr>
-    <tr><td><span class="value">PRESS</span></td><td>the channel pressure value for the track</td></tr>
-    <tr><td><span class="value">KEYBD</span></td><td>the number of the last key played</td></tr>
-    <tr><td><span class="value">VELOC</span></td><td>the average velocity of all keys played</td></tr>
-    <tr><td><span class="value">KEYDN</span></td><td>on when any keys are pressed; otherwise off</td></tr>
-    <tr><td><span class="value">PATCH</span></td><td>four values (0, 32, 64, 127) for the four button states</td></tr>
-    <tr><td><span class="value">SUSTN</span></td><td>on when the assigned foot switch is held down (and <span class="value">SUSTAIN</span> is selected as a <dfn class="term">FOOT-SW</dfn> controller on the <span class="page-name">System</span> sub-page); otherwise off</td></tr>
-    <tr><td><span class="value">SOSTU</span></td><td>on when the assigned foot switch is held down (and <span class="value">SOSTENUTO</span> is selected as a <dfn class="term">FOOT-SW</dfn> controller on the <span class="page-name">System</span> sub-page); otherwise off</td></tr>
-    <tr><td><span class="value">FX-SW</span></td><td>on when assigned foot switch is held down (and <span class="value">FX-SW-MOD</span> is selected as a <dfn class="term">FOOT-SW</dfn> controller on the <span class="page-name">System</span> sub-page); otherwise off</td></tr>
-    <tr><td><span class="value">*OFF*</span></td><td>no modulation</td></tr>
-  </tbody>
-</table>
-<p>For more information about the Modulation Sources, see <a class="refer-to" href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>
-<h4 id="dest-mod1-destination-parameter" class="param-name"><span class="param">DEST — Mod1 Destination Parameter</span><span class="range">Range: varies (selected parameter name)</span></h4>
-<h4 id="dest-mod2-destination-parameter" class="param-name"><span class="param">DEST — Mod2 Destination Parameter</span><span class="range">Range: varies (selected parameter name)</span></h4>
-<p>The Destination parameters select which effect parameters will be modulated by the modulation sources. The choice of parameters varies depending on the selected effect. Any parameter within an algorithm can be selected. Each Effect Variation has a choice of two different mod destinations. You cannot edit a parameter when it is assigned as a modulator destination.</p>
-<p>Disabling modulation of a parameter will restore its saved value.</p>
-<h4 id="min-mod-1-param-range-minimum" class="param-name"><span class="param">MIN — Mod 1 Param Range Minimum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
-<h4 id="max-mod-1-param-range-maximum" class="param-name"><span class="param">MAX — Mod 1 Param Range Maximum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
-<h4 id="min-mod-2-param-range-minimum" class="param-name"><span class="param">MIN — Mod 2 Param Range Minimum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
-<h4 id="max-mod-2-param-range-maximum" class="param-name"><span class="param">MAX — Mod 2 Param Range Maximum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
-<p>These four parameters set the minimum and maximum amount (based on the selected Destination parameter’s range) that the Mod Destination will be modulated by the Mod Source.</p>
-<p>Inverting the amounts will also invert the Mod effect.</p>
+    <p>The TS-10 has a powerful built-in signal processor that can produce a variety of effects. More important, its
+      functions are integrated into, rather than added onto, the rest of the synthesizer. The flexible bus routing
+      scheme and extensive real-time control give the TS-10 its dynamic effects capability.</p>
+    <p>The TS-10 is equipped with an advanced digital signal processing system based on the ENSONIQ Signal Processor
+      (ESP) chip. The ESP is designed specifically for digital audio signal processing, and in the TS-10 it works in
+      tandem with a fourth-generation version of the Digital Oscillator Chip (DOC IV a.k.a. OTTO) and an external 16-bit
+      digital-to-analog converter to provide a very high-quality output signal.</p>
+    <p>Digital effects processing capability has been designed to complement the advanced performance features of the
+      TS-10, and all of the effects can have any parameter modulated by various performance controllers such as the Mod
+      Wheel, <dfn class="term">Poly-Key</dfn>™ pressure, and other user-definable controllers.</p>
+    <p>All effects are fully programmable and may be customized for particular applications. Effects are most often
+      stored as part of a sound, although each preset may also have its own override effect, independent of the effects
+      contained by the sounds within the preset. Each individual sequence and song also has an independent effect. The
+      following sections describe each type of effect.</p>
+    <h3 id="program-and-sampled-sound-effects">Program and Sampled Sound Effects</h3>
+    <p>Each sound in the TS-10 contains an effect and a complete set of parameter values which determine how that effect
+      will sound. The effect is present even if none of the voices in the sound are routed through the effect (e.g. all
+      voices are sent to the DRY or AUX destination bus - see the <span class="page-name">Output</span> page in <a
+        class="refer-to"
+        href="09-program-params-a.html#section-9-program-parameters-lfo-envelopes-pitch-filters">Section 9 — Program
+        Parameters</a>). Whenever you save or write a sound, the effect settings are also saved with the sound.</p>
+    <p>The sound effect is displayed and edited by pressing the <kbd class="button">Program Effects</kbd> button. These
+      Effect Parameter pages are described in detail in <a class="refer-to"
+        href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
+    <p>If the preset effect that is currently loaded and being heard is different than the sound effect that is being
+      shown, then a flashing MUTE will appear in the lower left corner of the display.</p>
+    <h3 id="preset-effects">Preset Effects</h3>
+    <p>Each preset in the TS-10 also contains an effect and a complete set of effect parameter values. The effect is
+      present even if none of the tracks in the preset are routed through the effect (e.g. all tracks are sent to the
+      <span class="value">DRY</span> or <span class="value">AUX</span> destination bus - see <a class="refer-to"
+        href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>).</p>
+    <p>Whenever you save or write a preset, the effect settings are also saved with the preset.</p>
+    <p>The preset effect is the same as the effect contained in the primary selected sound in the preset, but can easily
+      be changed to suit the needs of the preset more closely. This effect applies to all preset tracks (or their
+      program voices) that are routed to either the FX1 or FX2 destination bus.</p>
+    <p>The preset effect is displayed and edited by pressing the <kbd class="button">Track Effects</kbd> button in the
+      <span class="key-group">Track Parameters</span> section of the front panel, when the TS-10 is in either Sounds or
+      Presets mode.</p>
+    <p>The top level page controls the re-routing of the voices without editing the sound itself, and is described in <a
+        class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track
+        Parameters</a>. The next page allows you to define which tracks will send controller information to the effect.
+      The remaining pages contain the effect parameters, which are specific to the effect type. These effect parameter
+      pages are described in <a class="refer-to"
+        href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
+    <h3 id="sequencer-effect">Sequencer Effect</h3>
+    <p>Like each of the presets in the TS-10, each sequence and song contains an effect and a complete set of effect
+      parameter values. The effect is present even if none of the tracks in the sequence are routed through the effect
+      (e.g. all tracks are sent to the <span class="value">DRY</span> or <span class="value">AUX</span> destination bus - see <a class="refer-to"
+        href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a>). This
+      effect applies to all sequencer tracks (or their program voices) which are routed to either the FX1 or FX2
+      destination bus.</p>
+    <p>The effect is saved with each sequence or song. It will remain unaffected until a new song or sequence is
+      selected, unless it is specifically edited. A special incoming MIDI program change message may be used to load new
+      effects into a sequence in <span class="value">MULTI</span> mode (see <a class="refer-to"
+        href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — <span class="page-name">MIDI
+          Control</span> Page Parameters</a>). The <span class="function">Copy</span> function and a special mode of <span class="function">Copy Preset to Sequence</span> can be
+      used to replace the Sequence effect.</p>
+    <p>The sequencer effect is displayed and edited by pressing the <kbd class="button">Track Effects</kbd> button in
+      the <span class="key-group">Track Parameters</span> section of the front panel, when the TS-10 is in Sequencer
+      mode.</p>
+    <h3 id="selecting-effects">Selecting Effects</h3>
+    <p>The first parameter of the <span class="page-name">Effects</span> page is the effects selector. Changing this
+      parameter causes a new effect to be selected, which in turn changes the type of parameters that will be available
+      on the rest of the pages. Selecting a new effect algorithm will automatically set all of the effect parameters to
+      their default values for the new effect. The available effects algorithms are:</p>
+    <table class="data-table" id="effect-algorithms">
+      <caption>Effect Algorithms</caption>
+      <tbody>
+        <tr>
+          <td>00 <span class="patch-name">DRY/BYPASSED</span></td>
+          <td>25 <span class="patch-name">LARGE PLATE REVERB 1</span></td>
+          <td>50 <span class="patch-name">EQ- -CHORUS + EQ- -DDL</span></td>
+        </tr>
+        <tr>
+          <td>01 <span class="patch-name">DDL+CHORUS+REV</span></td>
+          <td>26 <span class="patch-name">LARGE PLATE REVERB 2</span></td>
+          <td>51 <span class="patch-name">FLANGER + REVERB</span></td>
+        </tr>
+        <tr>
+          <td>02 <span class="patch-name">EQ- -DDL+CHORUS+REV</span></td>
+          <td>27 <span class="patch-name">HALL REVERB 1</span></td>
+          <td>52 <span class="patch-name">EQ- -FLANGER + DELAY</span></td>
+        </tr>
+        <tr>
+          <td>03 <span class="patch-name">DELAYLFO+CHORUS+REV</span></td>
+          <td>28 <span class="patch-name">HALL REVERB 2</span></td>
+          <td>53 <span class="patch-name">PHASER + REVERB</span></td>
+        </tr>
+        <tr>
+          <td>04 <span class="patch-name">ROTOSPKR+CHORUS+REV</span></td>
+          <td>29 <span class="patch-name">HALL REVERB 3</span></td>
+          <td>54 <span class="patch-name">PHASER + DELAY</span></td>
+        </tr>
+        <tr>
+          <td>05 <span class="patch-name">DISTORT+CHORUS+REV</span></td>
+          <td>30 <span class="patch-name">SMALL ROOM REVERB</span></td>
+          <td>55 <span class="patch-name">EQ- -TREMOLO + DELAY</span></td>
+        </tr>
+        <tr>
+          <td>06 <span class="patch-name">PARAM EQ+CHORUS+REV</span></td>
+          <td>31 <span class="patch-name">MEDIUM ROOM REVERB</span></td>
+          <td>56 <span class="patch-name">EQ- -VIBRATO + DELAY</span></td>
+        </tr>
+        <tr>
+          <td>07 <span class="patch-name">ENV VCF+CHORUS+REV</span></td>
+          <td>32 <span class="patch-name">LARGE ROOM REVERB</span></td>
+          <td>57 <span class="patch-name">PITCH SHIFTER</span></td>
+        </tr>
+        <tr>
+          <td>08 <span class="patch-name">DDL+PHLANGR+REV</span></td>
+          <td>33 <span class="patch-name">TIGHT AMBIENCE</span></td>
+          <td>58 <span class="patch-name">FAST PITCH SHIFTER</span></td>
+        </tr>
+        <tr>
+          <td>09 <span class="patch-name">EQ- -DDL+PHLANGR+REV</span></td>
+          <td>34 <span class="patch-name">WIDE AMBIENCE</span></td>
+          <td>59 <span class="patch-name">PITCH SHIFTER + DELAY</span></td>
+        </tr>
+        <tr>
+          <td>10 <span class="patch-name">DELAYLFO+PHLANGR+REV</span></td>
+          <td>35 <span class="patch-name">NONLINEAR REVERB 1</span></td>
+          <td>60 <span class="patch-name">ROTARY SPEAKER + REV</span></td>
+        </tr>
+        <tr>
+          <td>11 <span class="patch-name">ROTOSPKR+PHLANGR+REV</span></td>
+          <td>36 <span class="patch-name">NONLINEAR REVERB 2</span></td>
+          <td>61 <span class="patch-name">SPEAKER CABINET</span></td>
+        </tr>
+        <tr>
+          <td>12 <span class="patch-name">DISTORT+PHLANGR+REV</span></td>
+          <td>37 <span class="patch-name">NONLINEAR REVERB 3</span></td>
+          <td>62 <span class="patch-name">TUNABLE SPEAKER</span>      </td>
+        </tr>
+        <tr>
+          <td>13 <span class="patch-name">PARAM EQ+PHLANGR+REV</span></td>
+          <td>38 <span class="patch-name">GATED REVERB</span>   </td>
+          <td>63 <span class="patch-name">GUITAR AMP 1</span></td>
+        </tr>
+        <tr>
+          <td>14 <span class="patch-name">ENV VCF+PHLANGR+REV</span></td>
+          <td>39 <span class="patch-name">REVERSE REVERB 1</span></td>
+          <td>64 <span class="patch-name">GUITAR AMP 2</span></td>
+        </tr>
+        <tr>
+          <td>15 <span class="patch-name">DDL+ROTOSPKR+REV</span></td>
+          <td>40 <span class="patch-name">REVERSE REVERB 2</span></td>
+          <td>65 <span class="patch-name">GUITAR AMP 3</span></td>
+        </tr>
+        <tr>
+          <td>16 <span class="patch-name">EQ- -DDL+ROTOSPKR+REV</span></td>
+          <td>41 <span class="patch-name">STEREO DELAY + DELAY</span></td>
+          <td>66 <span class="patch-name">VCF- -DISTORTION- -VCF</span> </td>
+        </tr>
+        <tr>
+          <td>17 <span class="patch-name">DELAYLFO+ROTOSPKR+REV</span></td>
+          <td>42 <span class="patch-name">MULTITAP DELAY</span></td>
+          <td>67 <span class="patch-name">WAH- -DISTORTION + REV</span></td>
+        </tr>
+        <tr>
+          <td>18 <span class="patch-name">ROTOSPKR+ROTOSPKR+REV</span></td>
+          <td>43 <span class="patch-name">EQ- -STEREO DELAYLFO</span></td>
+          <td>68 <span class="patch-name">FLNG- -CMP- -DIST + REV</span></td>
+        </tr>
+        <tr>
+          <td>19 <span class="patch-name">DISTORT+ROTOSPKR+REV</span></td>
+          <td>44 <span class="patch-name">EIGHT VOICE CHORUS</span></td>
+          <td>69 <span class="patch-name">DISTORT + CHORUS- -REV</span></td>
+        </tr>
+        <tr>
+          <td>20 <span class="patch-name">PARAM EQ+ROTOSPKR+REV</span></td>
+          <td>45 <span class="patch-name">CHORUS + REVERB 1</span></td>
+          <td>70 <span class="patch-name">PARAMETRIC EQ</span>  </td>
+        </tr>
+        <tr>
+          <td>21 <span class="patch-name">ENV VCF+ROTOSPKR+REV</span></td>
+          <td>46 <span class="patch-name">CHORUS + REVERB 2</span></td>
+          <td>71 <span class="patch-name">EQ- -COMPRESSOR</span></td>
+        </tr>
+        <tr>
+          <td>22 <span class="patch-name">PLATE + PLATE REVERBS</span></td>
+          <td>47 <span class="patch-name">DDL- -CHORUS + REVRB 1</span></td>
+          <td>72 <span class="patch-name">RUMBLE FILTER</span></td>
+        </tr>
+        <tr>
+          <td>23 <span class="patch-name">PARAMETRIC EQ + PLATE</span></td>
+          <td>48 <span class="patch-name">DDL- -CHORUS + REVRB 2</span></td>
+          <td>73 <span class="patch-name">VAN DER POL FILTER</span></td>
+        </tr>
+        <tr>
+          <td>24 <span class="patch-name">SMALL PLATE REVERB</span></td>
+          <td>49 <span class="patch-name">EQ- -CHORUS + REVERB</span></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <aside class="tip">
+      <p>Double click the <kbd class="button">Program Effects</kbd> button to return to the algorithm select page.</p>
+    </aside>
+    <aside class="tip">
+      <p>The names of the parallel effect algorithms are right justified to differentiate them from the other effect
+        algorithms.</p>
+    </aside>
+    <h2 id="what-is-an-algorithm">What is an Algorithm?</h2>
+    <p>An algorithm is the basic signal processing building block in the TS-10. The word “effect” could be used instead
+      of algorithm, but some algorithms can produce several sonic effects simultaneously. Each algorithm has a set of
+      parameters used to control the effect(s) it produces.</p>
+    <p>The values of these parameters are saved with the algorithm. Wherever applicable, we will refer to the TS-10
+      effects as <em>algorithms</em>.</p>
+    <h3 id="signal-routing-between-effects">Signal Routing Between Effects</h3>
+    <p>If the algorithm consists of two or more different types of effects, the algorithm name has symbols that show how
+      these different effect types are routed together. The routing symbols are:</p>
+    <p><span class="lcd">--</span> indicates a serial connection from the effect on the left into the effect on the
+      right.<br>
+      <span class="lcd">+</span> indicates a parallel connection between the effect on the left and the effect on the
+      right.<br>
+    </p>
+    <p>For example, the <span class="patch-name">EQ--TREMOLO + DELAY</span> algorithm has a serial routing from the EQ into the tremolo effect (i.e. the
+      output of the EQ always feeds into the Tremolo) , and a parallel routing between the tremolo and the digital delay
+      (i.e. there is an input into the delay line).</p>
+    <h3 id="sounds-and-presets">Sounds and Presets</h3>
+    The complete effects setup, including the values of all effect parameters, is saved when you save a sound. It is
+    also saved when you save a preset. The TS-10 tries to be smart about switching effects, since all sound must stop
+    for an instant when it changes effects.</p>
+    <h2 id="when-are-new-algorithms-loaded-into-the-esp-chip">When are New Algorithms loaded into the ESP Chip?</h2>
+    <p>Whenever a new algorithm is loaded into the ESP, the audio output will pause briefly, allowing the instructions
+      which create the new algorithm to be loaded into the ESP. If an algorithm differs only by variation in parameter
+      values, then this pause may not occur.</p>
+    <p>These are the rules that the TS-10 follows in deciding when to change algorithms:</p>
+    <ol>
+      <li>When you select a primary sound from one of the Sound Bank pages, the algorithm saved in that sound will be
+        loaded into the ESP, and you will hear the sound with its algorithm. If you layer a sound by double-clicking,
+        its algorithm will not be loaded.</li>
+      <li>When you select or layer sounds/tracks from a preset or <span class="page-name">Track Parameter</span> page,
+        the algorithm is not changed.</li>
+      <li>When you change the sound on a track from <span class="function">Replace Track Sound</span> mode (e.g. with
+        the <kbd class="button">Sounds</kbd> LED flashing), the algorithm will not be changed.</li>
+      <li>When you change the sound on a track by double-clicking the <kbd class="button">Replace Track Sound</kbd>
+        button (e.g. with the <kbd class="button">Sounds</kbd> and the <kbd class="button">Replace Track Sound</kbd> LED flashing), the
+        algorithm will be changed.</li>
+      <li>When you select a preset, the algorithm saved in that preset will be loaded into the ESP.</li>
+      <li>When you select a song or sequence, the algorithm saved in that song or sequence will be loaded into the ESP.
+      </li>
+      <li>Whenever you go from Sounds mode to Sequencer mode (by pressing <kbd class="button">Seqs/Songs</kbd>) the
+        sequencer algorithm is loaded. The same is true when going from Sequencer mode to Sounds mode (by pressing <kbd
+          class="button">Sounds</kbd>).</li>
+      <li>Saving either the sound or the preset will save the <em>current algorithm</em>.</li>
+      <li>Should you start editing a sound while an algorithm <em>other than its own</em> is active, a warning will
+        appear, reminding you that you are not hearing the algorithm you are seeing or editing. This warning appears as
+        <span class="lcd">MUTE</span>, flashing in the lower left corner of the display.</li>
+      <li>When MIDI program changes <span class="value">60-119</span> are received in <span class="value">MULTI</span> or <span class="value">MONO
+          B</span> modes, the sequence or song effect algorithm will be loaded with the one in the program change.</li>
+    </ol>
+    <h3 id="performance-control-of-tracks-in-preset-or-sequencer-mode">Performance Control of Tracks in Preset or
+      Sequencer Mode</h3>
+    <p>When the TS-10 is in Presets or Sequencer mode, all the instruments in the internal memory are routed through the
+      same global effect. In order to gain some individual control for each track, two additional sub-pages on the <span
+        class="page-name">Track Effect</span> page determine how each instrument will interact with the algorithm. The
+      algorithm for the current preset, song, or sequence is edited by pressing the <kbd class="button">Track
+        Effects</kbd> button in the <span class="key-group">Track Parameters</span> section of the front panel.</p>
+    <p>The first time it is pressed, it shows the <span class="page-name">Effects Output Routing</span> parameter for
+      each of the three tracks in a performance preset (or for 6 of the 12 tracks of the current song or sequence in
+      Sequencer mode). The <span class="page-name">Effects Output Routing</span> sub-page determines which of the Output
+      Busses the track will be sent through. By using this parameter, you can give individual instruments different
+      Dry/Wet or multiple effect mixes.</p>
+    <p>The second press shows the <span class="page-name">Effect Mod Controller</span> page. This parameter determines
+      whether or not the controllers of a particular track will be routed to control the effect. This is an important
+      setting when in Presets or Sequencer mode; since all tracks are routed through the same effect, it could be
+      confusing to have multiple instruments sending conflicting controller information to the effect. If more than one
+      track is set to <span class="param">CNTRL-FX</span>, “controller fights” can occur. If set to <span
+        class="param">NO-CNTRL</span>, a track will remain routed to the effects, but its controllers (such as the <span
+        class="param">TIMBRE</span>, <span class="param">PBEND</span>, <span class="param">WHEEL</span>, etc.) will not
+      affect the track.</p>
+    <p>The second press shows the <span class="page-name">Effect Mod Controller</span> page. This parameter determines
+      whether or not the controllers of a particular track will be routed to control the effect. This is an important
+      setting when in Presets or Sequencer mode; since all tracks are routed through the same effect, it could be
+      confusing to have multiple instruments sending conflicting controller information to the effect. If more than one
+      track is set to <span class="param">CNTRL-FX</span>, “controller fights” can occur. If set to <span
+        class="param">NO-CNTRL</span>, a track will remain routed to the effects, but its controllers (such as the <span
+        class="param">TIMBRE</span>, <span class="param">PBEND</span>, <span class="param">WHEEL</span>, etc.) will not
+      affect the track.</p>
+    <p>Subsequent presses reveal the effects programming parameters, which are identical to those found on the <span
+        class="page-name">Program Effects</span> page.</p>
+    <h3 id="programming-effects">Programming Effects</h3>
+    <p>The TS-10 algorithms are fully programmable. The first sub-page contains the <dfn class="term">effect selector</dfn>. The effect selector
+      is a little different than all of the other parameters. It controls how all of the other effect pages will be
+      configured and displayed. When this parameter is changed, a new algorithm is selected which causes several
+      important things to occur: </p>
+    <ul>
+      <li>a new algorithm is loaded, causing a brief pause in the audio output</li>
+      <li>the effect parameter pages are redefined for the particular effect selected</li>
+      <li>the effect parameter values are reset to their default settings for the effect</li>
+    </ul>
+    <aside class="tip">
+      <p>When editing the effect selector, it is possible to change the new effect type quickly and avoid the brief
+        delay caused by the actions described above. Pass rapidly over the types between the old type and the new type,
+        and then pause. The new effect will be recalled only after you stop changing the type.</p>
+    </aside>
+    <h4 id="effect-variations">Effect Variations</h4>
+    <p>The first effect parameter page is similar for all of the effects (the display shows <span
+        class="lcd">VARIATION=</span>). It selects an <dfn class="term">Effect Variation</dfn>, which feature various
+      “preset” patches, letting you quickly access several set-ups within the same effect. Each algorithm has a
+      predetermined amount of variations. Each of these variations is individually editable and can act as independent
+      effect edit buffers. Each Effect Variation can have two different <dfn class="term">Modulation Sources</dfn>, <dfn
+        class="term">Destination parameters</dfn>, and defined modulation ranges.</p>
+    <h4 id="the-effects-busses">The Effects Busses</h4>
+    <p>The output of every voice in the TS-10 is assigned to a stereo bus. A bus, like the bus of a mixing board, mixes
+      together all the voices assigned to that bus into a single stereo pair. Of the four busses on the TS-10, two are
+      inputs into the signal processor (<dfn class="term">FX1</dfn> and <dfn class="term">FX2</dfn>), another is a
+      direct path to the Main outputs which bypasses all effect processing (<dfn class="term">DRY</dfn>) and the fourth
+      is a direct path to the AUX outputs which also bypasses all effect processing (<dfn class="term">AUX</dfn>). The
+      Destination Bus assignment for each Voice is set on the <span class="page-name">Output</span> page. The voice
+      settings in a program can be overridden for each preset and sequencer track on the top-level of the <span
+        class="page-name">Track Effects</span> page.</p>
+    <aside class="tip">
+      <p>By double-clicking the <kbd class="button">Track Effects</kbd> button, you can bypass the effect. However, any
+        tracks routed to the <kbd class="button">AUX</kbd> outputs will not be bypassed.</p>
+    </aside>
+    <h3 id="effects-mixing">Effects Mixing</h3>
+    <p>Almost all of the effects have separate mixing controls for the <dfn class="term">FX1</dfn> and <dfn
+        class="term">FX2</dfn> busses. They are found on the next sub-page within the <span
+        class="page-name">Effects</span> page, and will have slightly different wording depending on the effect they’re
+      contained within.</p>
+    <p>When an effect having a single processing function (such as reverb only) is selected, both busses <span
+        class="term">FX1</span> and <span class="term">FX2</span> are routed to it. When using a dual or multi-effect,
+      <span class="term">FX1</span> will generally route the signal through both or all effects, with <span
+        class="term">FX2</span> routing only through the second effect. In all cases, a third bus labeled <dfn
+        class="term">DRY</dfn> is a dedicated dry path to the Main Outputs.</p>
+    <h4 id="single-function-effect-mixer">Single Function Effect Mixer</h4>
+    <figure class="figure"><img src="images/single-function-effect-mixer.png"
+        alt="Single-function effect mixer: Voice Output pan/vol to Destination Bus (FX1, FX2, DRY, AUX); FX1 and FX2 each pass through Mix1 or Mix2 into Effect 1, then to Main Outputs; DRY and AUX go to Main and Aux outputs">
+      <figcaption>Single-function effect mixer.</figcaption>
+    </figure>
+    <p>The above illustration shows the effects busses and the output mixing. Every voice is assigned to one of the four
+      stereo busses, which go around or through the effects processing. In all of the effects routing diagrams, the
+      heavy lines are stereo paths.</p>
+    <h4 id="multiple-function-effect-mixer">Multiple Function Effect Mixer</h4>
+    <figure class="figure"><img src="images/multiple-function-effect-mixer.png"
+        alt="Multiple-function effect mixer: FX1 through Effect 1 and Mix1, FX2 through Mix2 into Effect 2; dry paths from Mix1, Mix2, and DRY bus to Main Outputs">
+      <figcaption>Multiple-function effect mixer.</figcaption>
+    </figure>
+    <p>When the selected algorithm is a combined effect that has more than one signal processing function (such as
+      chorus and reverb), the FX1 bus feeds Effect 1, and the FX2 bus feeds Effect 2. The <span class="param">FX2
+        Mix</span> control sets the amount of Effect 2 (usually reverb) for voices assigned to that bus.</p>
+    <p><span class="param">FX1 Mix</span> controls the amount of the output from Effect 1 sent to Effect 2 rather than
+      directly to the output. By setting this control to its extremes, you can arrange the two effects to be either in
+      series or in parallel. The majority of combined effects follow this topology. If a specific algorithm uses a
+      different topology, it will be explained in <a class="refer-to"
+        href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
+    <h4 id="parallel-effect-mixer">Parallel Effect Mixer</h4>
+    <figure class="figure"><img src="images/parallel-effect-mixer.png"
+        alt="Parallel effect mixer: FX1 L/R to Effect A and Effect B with A-to-B and reverb sends; FX2 to reverb and dry mix; DRY and AUX to Main and Aux outputs">
+      <figcaption>Parallel effect mixer.</figcaption>
+    </figure>
+    <p>All of the parallel effect algorithms follow the topology shown in the illustration above. The heavy lines are
+      stereo paths. Voices assigned to FX1 (on the <span class="page-name">Output</span> Page) will be sent to Effect A,
+      if the <span class="param">PAN</span> parameter is set to -99 (hard left) or sent to Effect B, if the <span
+        class="param">PAN</span> parameter is set to <span class="value">+99</span> (hard right). Note that by setting
+      the <span class="param">PAN</span> parameter to <span class="value">50</span>, you can create a parallel routing
+      between Effect A and Effect B.
+      There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into Effect B.
+      There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into the Reverb,
+      and another parameter allowing a serial connection from Effect B into the Reverb.</p>
+    <p>Voices assigned to FX2 (on the <span class="page-name">Output</span> Page) will send a stereo signal to the
+      reverb. The <span class="param">FX- - REVRB</span> parameter allows you to define how much of the signal you want
+      sent into the Reverb.</p>
+    <p>There is also a <span class="param">DRY</span> parameter (on the <span class="page-name">SEND</span> sub-page)
+      from FX2 allowing you to define how much of the FX2 signal you want to completely bypass the Reverb. Any voices
+      assigned to the <span class="param">DRY</span> Destination-Bus (on the <span class="page-name">Output</span> page)
+      will go through the mixer to the Main Output jacks.</p>
+    <p>Any voices assigned to the <span class="param">AUX</span> Destination-Bus will go directly to the AUX Output
+      jacks, without any effects processing.</p>
+    <p>Selectable Effect Modulation Parameters All of the algorithms allow real-time control of selectable parameters
+      and share common modulation control parameters. The Modulation Control parameters are always the last parameters
+      on the algorithm sub-pages:</p>
+    <h4 id="mod-1-src-modulation-source-1" class="param-name"><span class="param">MOD-1 SRC — Modulation Source
+        1</span><span class="range">Range: (described below)</span><br>
+      <h4 id="mod-2-src-modulation-source-2" class="param-name"><span class="param">MOD-2 SRC — Modulation Source
+          2</span><span class="range">Range: (described below)</span></h4></br>
+      <p>These parameters select the modulation sources used to modulate the parameter Destinations. Each Effect
+        Variation has a choice of two discrete mod sources.</p>
+      <h4 id="modulators-that-can-be-applied-to-the-effects">Modulators that can be applied to the Effects</h4>
+      <p>The following modulation sources are available to alter the effects in performance:</p>
+      <table class="defn-table">
+        <thead>
+          <tr>
+            <th>Mod Source</th>
+            <th>Modulation effect derived from</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="value">WHEEL</span></td>
+            <td>the value of the mod wheel</td>
+          </tr>
+          <tr>
+            <td><span class="value">PBEND</span></td>
+            <td>the value of the pitch wheel</td>
+          </tr>
+          <tr>
+            <td><span class="value">PEDAL</span></td>
+            <td>the value of the Pedal•CV input</td>
+          </tr>
+          <tr>
+            <td><span class="value">TIMBR</span></td>
+            <td>the value of the <span class="param">TIMBRE</span> parameter for the track</td>
+          </tr>
+          <tr>
+            <td><span class="value">XCTRL</span></td>
+            <td>the value of the <span class="param">XCTRL</span> (external MIDI controller number) parameter for the
+              track</td>
+          </tr>
+          <tr>
+            <td><span class="value">PRESS</span></td>
+            <td>the channel pressure value for the track</td>
+          </tr>
+          <tr>
+            <td><span class="value">KEYBD</span></td>
+            <td>the number of the last key played</td>
+          </tr>
+          <tr>
+            <td><span class="value">VELOC</span></td>
+            <td>the average velocity of all keys played</td>
+          </tr>
+          <tr>
+            <td><span class="value">KEYDN</span></td>
+            <td>on when any keys are pressed; otherwise off</td>
+          </tr>
+          <tr>
+            <td><span class="value">PATCH</span></td>
+            <td>four values (0, 32, 64, 127) for the four button states</td>
+          </tr>
+          <tr>
+            <td><span class="value">SUSTN</span></td>
+            <td>on when the assigned foot switch is held down (and <span class="value">SUSTAIN</span> is selected as a
+              <dfn class="term">FOOT-SW</dfn> controller on the <span class="page-name">System</span> sub-page);
+              otherwise off</td>
+          </tr>
+          <tr>
+            <td><span class="value">SOSTU</span></td>
+            <td>on when the assigned foot switch is held down (and <span class="value">SOSTENUTO</span> is selected as a
+              <span class="term">FOOT-SW</span> controller on the <span class="page-name">System</span> sub-page);
+              otherwise off</td>
+          </tr>
+          <tr>
+            <td><span class="value">FX-SW</span></td>
+            <td>on when assigned foot switch is held down (and <span class="value">FX-SW-MOD</span> is selected as a
+              <span class="term">FOOT-SW</span> controller on the <span class="page-name">System</span> sub-page);
+              otherwise off</td>
+          </tr>
+          <tr>
+            <td><span class="value">*OFF*</span></td>
+            <td>no modulation</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>For more information about the Modulation Sources, see <a class="refer-to"
+          href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</p>
+      <h4 id="dest-mod1-destination-parameter" class="param-name"><span class="param">DEST — Mod1 Destination
+          Parameter</span><span class="range">Range: varies (selected parameter name)</span></h4>
+      <h4 id="dest-mod2-destination-parameter" class="param-name"><span class="param">DEST — Mod2 Destination
+          Parameter</span><span class="range">Range: varies (selected parameter name)</span></h4>
+      <p>The Destination parameters select which effect parameters will be modulated by the modulation sources. The
+        choice of parameters varies depending on the selected effect. Any parameter within an algorithm can be selected.
+        Each Effect Variation has a choice of two different mod destinations. You cannot edit a parameter when it is
+        assigned as a modulator destination.</p>
+      <p>Disabling modulation of a parameter will restore its saved value.</p>
+      <h4 id="min-mod-1-param-range-minimum" class="param-name"><span class="param">MIN — Mod 1 Param Range
+          Minimum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
+      <h4 id="max-mod-1-param-range-maximum" class="param-name"><span class="param">MAX — Mod 1 Param Range
+          Maximum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
+      <h4 id="min-mod-2-param-range-minimum" class="param-name"><span class="param">MIN — Mod 2 Param Range
+          Minimum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
+      <h4 id="max-mod-2-param-range-maximum" class="param-name"><span class="param">MAX — Mod 2 Param Range
+          Maximum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
+      <p>These four parameters set the minimum and maximum amount (based on the selected Destination parameter’s range)
+        that the Mod Destination will be modulated by the Mod Source.</p>
+      <p>Inverting the amounts will also invert the Mod effect.</p>
 
-<aside class="reminder"><p>When an effect algorithm parameter is selected to be modulated, that parameter can no longer be edited. If you want to edit the parameter, set the Modulation Source (<span class="param">SRC)</span> to <span class="value">*OFF*</span>. To see the current value that the modulator has set it to, reselect the parameter.</p></aside>
-<p>In order for the effect modulation to work for the selected track, the <span class="param">Effect Mod Control</span> parameter on the <span class="page-name">Track Effects</span> sub-page must be set to <span class="param">CNTRL-FX</span>.</p>
+      <aside class="reminder">
+        <p>When an effect algorithm parameter is selected to be modulated, that parameter can no longer be edited. If
+          you want to edit the parameter, set the Modulation Source (<span class="param">SRC)</span> to <span
+            class="value">*OFF*</span>. To see the current value that the modulator has set it to, reselect the
+          parameter.</p>
+      </aside>
+      <p>In order for the effect modulation to work for the selected track, the <span class="param">Effect Mod
+          Control</span> parameter on the <span class="page-name">Track Effects</span> sub-page must be set to <span
+          class="param">CNTRL-FX</span>.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.
@@ -159,4 +525,5 @@
     and the printed Index are omitted.
   </footer>
 </body>
+
 </html>

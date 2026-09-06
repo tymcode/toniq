@@ -90,7 +90,7 @@
   <li><span class="value">TRACK</span> — The settings on the <span class="page-name">Track MIDI</span> page determine the MIDI transmission channel.</li>
 </ul>
 <p>The TS-10 will transmit on the channel(s) assigned to the track(s) being played, either from the keyboard or the sequencer, depending on the Track MIDI Status (i.e. nothing will be sent if a track is assigned to the - - - - /RECV or <span class="value">MIDI-OFF</span> status). Each track can have its own MIDI channel.</p>
-<aside class="note"><p>Note: When a Sequence or Song Track is selected, <span class="param">SEND</span> will automatically be set to TRACK. Sequence and Song Tracks always transmit on their Track MIDI Channel.</p></aside>
+<aside class="note"><p>When a Sequence or Song Track is selected, <span class="param">SEND</span> will automatically be set to TRACK. Sequence and Song Tracks always transmit on their Track MIDI Channel.</p></aside>
 
 <h4 id="mode" class="param-name">MODE<span class="range">Range: OMNI, POLY, MULTI, MONO-A, or MONO-B</span></h4>
 <p>This parameter determines how MIDI information will be received by the TS-10. <span class="value">MODE</span> has no effect on what MIDI information is transmitted.</p>
@@ -325,7 +325,7 @@
         <tr><td>Track <span class="value ">BANK=009</span> (BankSet&nbsp;S9)</td><td>60-69</td><td>(with FX) Sampled Sounds 0-9</td></tr>
         </tbody>
       </table>
-<aside class="note"><p>Note: Incoming MIDI Bank Select messages 0 thru 9 will select BankSets&nbsp;0&nbsp;thru&nbsp;9, changing which Programs will be selected by incoming MIDI Program Changes. In all cases Program Change numbers above 120 to 127 are ignored.</p></aside>
+<aside class="note"><p>Incoming MIDI Bank Select messages 0 thru 9 will select BankSets&nbsp;0&nbsp;thru&nbsp;9, changing which Programs will be selected by incoming MIDI Program Changes. In all cases Program Change numbers above 120 to 127 are ignored.</p></aside>
 <h4 id="selecting-a-new-sequence-or-song-effect-from-midi-program-changes">Selecting a New Sequence or Song Effect from MIDI Program Changes</h4>
   <p>As indicated in the above chart, in <span class="value">MULTI</span> and <span class="value">MONO-B</span> modes, adding 60 to the MIDI Program Change number for the desired sound will select the new sound and also install the effect from that sound into the sequence (or song) effect. This can be useful when controlling the TS-10 from an external sequencer. Note that changing the effect will briefly silence the audio output and will cut off any sounding voices if <span class="value">VOICE-MUTING=ON</span> on the <span class="page-name">System</span> page.</p>
 <ul>

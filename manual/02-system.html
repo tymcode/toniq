@@ -71,7 +71,7 @@
   <li><span class="value">FIXED-64</span> — With this setting, the velocity curve always generates a fixed value, set at the halfway point. This may be useful in simulating old synth sounds that originally had no velocity control.</li>
   <li><span class="value">FIXED-127</span> — This setting is also a fixed velocity curve, with full volume. This is good for playing drum/percussion parts when you want a part without dynamic changes.</li>
 </ul>
-<aside class="note"><p>Note: We recommend starting with the default setting (VELTBL-4), then going up or down to find your optimal setting.</p></aside>
+<aside class="note"><p>We recommend starting with the default setting (VELTBL-4), then going up or down to find your optimal setting.</p></aside>
 <h4 id="vel-max" class="param-name"><span class="param">VEL-MAX</span><span class="range">Range: 001 to 127</span></h4>
 <p>This parameter determines the maximum keyboard velocity value that will be recognized and transmitted by the TS-10. The default setting is 127, which allows for the normal full range of velocity values. Lower settings limit the maximum value that will be used internally and sent out via MIDI. This can be useful when controlling devices which do not respond to the full range of velocity values, or can be used in conjunction with the <span class="param">TOUCH</span> parameter to control just the top part of the velocity response curve. When <span class="value">TOUCH=FIXED-64</span> or <span class="value">127</span>, this parameter can be used to set the fixed velocity to any value.</p>
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: SOFT, MED, FIRM, and HARD</span></h4>
@@ -186,7 +186,7 @@
   <li><span class="param">TIMBRE</span> — the <kbd class="button">Data Entry Slider</kbd> will control the Track Timbre setting of the primary selected sound while any <span class="page-name">Sounds or Presets bank</span> page is displayed. As a performance controller, the slider will only affect the primary sound.</li>
   <li><span class="param">XCTRL</span> — the <kbd class="button">Data Entry Slider</kbd> will control the Track <span class="param">XCTRL</span> setting of the primary selected sound while any <span class="page-name">Sounds or Presets bank</span> page is displayed. As a performance controller, the slider will only affect the primary sound.</li>
 </ul>
-<aside class="note"><p>Note: If you play and hold a note, modulate the sound with the Timbre or <span class="param">XCTRL</span> Slider, and then select another sound, the Timbre slider will no longer affect the sound of the held note.</p></aside>
+<aside class="note"><p>If you play and hold a note, modulate the sound with the Timbre or <span class="param">XCTRL</span> Slider, and then select another sound, the Timbre slider will no longer affect the sound of the held note.</p></aside>
 <h4 id="voice-muting" class="param-name"><span class="param">VOICE-MUTING</span><span class="range">Range: OFF or ON</span></h4>
 <p>This parameter controls whether or not all voices currently playing will shut off when a new program or preset is selected. This lets you avoid any audible “glitch” or discontinuity as the new sound’s effect is loaded, but at the expense of being able to sustain a note from one sound while selecting and playing another.</p>
 <ul>
@@ -296,7 +296,7 @@
     <li>If you would like to continue using a particular pitch-table with other sounds, press the <kbd class="button">Sounds</kbd> button to return to the TS-10’s internal sound banks. The currently selected System pitch-table will remain in affect even after turning the TS-10 power off and back on. In this way, if your music requires the same pitch-table all the time, you can simply turn on the TS-10 and start playing.</li>
   </ol>
 <h4>Using the U1-Programs Pitch-Tables</h4>
-<aside class="note"><p>Note: You will need the TSD-100 floppy disk that was included with the TS-10 to complete the following exercise. This disk contains two files of pitch-tables. They are stored as 60-PROGRAMS file types. The first pitch-table file is called HIST PTABLS and contains five different Historical pitch-tables with twelve root key versions of each scale. The second file is called ETH/<span class="value">MOD</span> PTS and contains a variety of Ethnic and Modern pitch-tables:</p></aside>
+<aside class="note"><p>You will need the TSD-100 floppy disk that was included with the TS-10 to complete the following exercise. This disk contains two files of pitch-tables. They are stored as 60-PROGRAMS file types. The first pitch-table file is called HIST PTABLS and contains five different Historical pitch-tables with twelve root key versions of each scale. The second file is called ETH/<span class="value">MOD</span> PTS and contains a variety of Ethnic and Modern pitch-tables:</p></aside>
 <ul>
   <li>Insert the TSD-100 floppy disk into the disk drive and press the <kbd class="button">Storage</kbd> button twice.</li>
   <aside class="tip"><p>Pressing the <kbd class="button">Storage</kbd> button twice will automatically take you to the <span class="page-name">Disk Load</span> Page.</p></aside>
@@ -312,7 +312,7 @@
   <li>While holding down the <kbd class="button">BankSet</kbd> button, press the <kbd class="button">Bank 1</kbd> button, then release both buttons.
 You have now selected User RAM BankSet U1.</li>
   </ul>
-<aside class="note"><p>Note: At this point when you select locations in BankSet U1, you will be selecting from 60 pitch-tables instead of 60 Programs. The Programs that were originally stored in BankSet U1 have been replaced by the newly loaded pitch-table file.</p></aside>
+<aside class="note"><p>At this point when you select locations in BankSet U1, you will be selecting from 60 pitch-tables instead of 60 Programs. The Programs that were originally stored in BankSet U1 have been replaced by the newly loaded pitch-table file.</p></aside>
  <ul>
    <li>Press the <kbd class="button">Bank 0</kbd> button and then press the upper left soft button. Play the keyboard. This selects the first of the 60 pitch-tables that are instantaneously available.</li>
 </ul>
@@ -331,7 +331,7 @@ You have now selected User RAM BankSet U1.</li>
   This does not apply to some editing sub-pages. Note that if the TS-10 was in <span class="mode">General MIDI</span> mode when it was powered-off, it will wake-up showing the last page that the TS-10 was on before entering <span class="mode">General MIDI</span> mode.</li>
   <li><span class="value">GEN-MIDI</span> — Power-on in <span class="mode">General MIDI</span> mode.</li>
 </ul>
-<aside class="note"><p>Note: When <span class="value">WAKE-UP-MODE=GEN-MIDI</span>, and Sampled Sounds had previously been loaded, the <span class="function">Auto-Load</span> prompt will be displayed <em>before</em> the TS-10 enters <span class="mode">General MIDI</span>. To prevent this, you can first erase all Sampled Sounds from memory, as described in <a class="refer-to" href="14-sampled-sounds.html#section-14-understanding-sampled-sounds">Section 14 — Understanding Sampled Sounds</a>.</p></aside>
+<aside class="note"><p>When <span class="value">WAKE-UP-MODE=GEN-MIDI</span>, and Sampled Sounds had previously been loaded, the <span class="function">Auto-Load</span> prompt will be displayed <em>before</em> the TS-10 enters <span class="mode">General MIDI</span>. To prevent this, you can first erase all Sampled Sounds from memory, as described in <a class="refer-to" href="14-sampled-sounds.html#section-14-understanding-sampled-sounds">Section 14 — Understanding Sampled Sounds</a>.</p></aside>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.

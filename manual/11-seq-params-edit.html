@@ -1641,7 +1641,7 @@
     <ul>
       <li>On Key events, the display shows: <span class="lcd">EVENT=KEY.C4.115</span>. The three segments represent
         Event Type; Key Number; and Velocity.</li>
-      <li>On <dfn class="term">Poly-Key</dfn> pressure events, the display shows <span
+      <li>On <span class="term">Poly-Key</span> pressure events, the display shows <span
           class="lcd">EVENT=KPS.C4.115</span>. The three segments represent Event Type; Key Number; and pressure Value.
       </li>
       <li>On Program Change events, the display shows: <span class="lcd">EVENT=PRG.000.000.B</span>. The last three
@@ -2183,7 +2183,7 @@
     <p>There is a fourth Record Mode which is available only when a song is selected:</p>
     <ul>
       <li><span class="value">MIXDOWN</span> — When a song is selected on the TS-10, you can set the Record Mode to MIXDOWN, which is used to
-        record dynamic Volume and Pan changes into sequence and song tracks. When <span class="value">RECORD-MODE=MIXDOWN</span> the TS-10 will record only changes made on the <span class="page-name">Volume</span> and <span class="page-name">Pan</span> pages in the Track Parameters section. Notes, controllers, program changes, etc. will <em>not</em> be recorded in this mode.
+        record dynamic Volume and Pan changes into sequence and song tracks. When <span class="value">RECORD-MODE=MIXDOWN</span> the TS-10 will record only changes made on the <span class="page-name">Volume</span> and <span class="page-name">Pan</span> pages in the <span class="key-group">Track Parameters</span> section. Notes, controllers, program changes, etc. will <em>not</em> be recorded in this mode.
       </li>
     </ul>
     <p>Depending on the setting of the <span class="param">EDIT TRACKS</span> parameter on the next sub-page (see below) you can mix down either
@@ -2261,7 +2261,7 @@
         href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a> for
       information on recording into the TS-10 sequencer in a MIDI loop.</p>
     <aside class="note">
-      <p>Note: With the SQX-70 installed, the sequencer can record over 97,00 notes. However the sequencer record buffer
+      <p>With the SQX-70 installed, the sequencer can record over 97,00 notes. However the sequencer record buffer
         is of a limited size, and can only record 16, 00 notes at one time. As a result, you may see an OUT OF MEMORY
         message if you exceed the size of the record buffer. (this is most common in multi-track record). If this
         occurs, try editing the incoming data into several smaller sequences; then, once recorded into the TS-10
@@ -2276,7 +2276,7 @@
       with each song.</p>
     <ul>
       <li>SEQ — the sequence tracks from the current song step will be displayed. When EDIT <span
-          class="value">TRACKS=SEQ</span> and you press <kbd class="button">Seq/Song Tracks 1-6 or 7-12</kbd>, the LED
+          class="value">TRACKS=SEQ</span> and you press <span class="key-group">Seq/Song Tracks</span> <kbd class="button">1-6</kbd> or <kbd class="button">7-12</kbd>, the LED
         above the button will flash to remind you that you are looking at the tracks from the sequence currently playing
         and not at the song tracks. The sequence tracks will receive via incoming MIDI.</li>
       <li>SONG — the song tracks will be displayed when a song is selected. The song tracks will receive via incoming
@@ -2286,7 +2286,7 @@
       <p>When you are working with a song, you may want to switch back and forth between the Song and Sequence tracks
         without having to go to the <span class="page-name">Sequencer Control</span> page. There is a shortcut for
         toggling between <span class="value">EDIT TRACKS=SEQ</span> and <span class="value">EDIT TRACKS=SONG</span>. While on either of the Seq/Song
-        Tracks pages, rapidly double-click the Seq/Song Tracks <kbd class="button">1-6</kbd> or <kbd class="button">7-12</kbd> button. The LED
+        Tracks pages, rapidly double-click the <span class="key-group">Seq/Song Tracks</span> <kbd class="button">1-6</kbd> or <kbd class="button">7-12</kbd> button. The LED
         above the tracks button flashes when you are looking at sequence tracks; it remains solidly lit when the song
         tracks are displayed.</p>
     </aside>

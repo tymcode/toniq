@@ -501,7 +501,7 @@
   </figure>
 <h4 id="ws-root-key" class="param-name"><span class="param">WS-ROOT-KEY</span><span class="range">Range: K00 to K20, A0 to C8</span></h4>
 <p>This parameter allows you to change the WaveSample root key. The root key is the key at which the WaveSample plays back at the same pitch as it was recorded.</p>
-<aside class="note"><p>Note: Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
+<aside class="note"><p>Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
 <h4 id="fine-tune" class="param-name"><span class="param">FINE-TUNE</span><span class="range">Range: -99 to +99 cents</span></h4>
 <p>This parameter adjusts the WaveSample fine-tuning.</p>
 
@@ -553,7 +553,7 @@
   </table>
 </div>
   </figure>
-<aside class="note"><p>Note: When <span class="lcd">STEREO=ON</span>, all pitch modulation in the right layer will be slaved to the settings in the WaveSamples assigned to the same or overlapping key zones in the left layer. This includes BEND  Range, NOISE RATE, and all pitch modulation. Pitch modulation settings for WaveSamples in the right layer will be ignored.</p>
+<aside class="note"><p>When <span class="lcd">STEREO=ON</span>, all pitch modulation in the right layer will be slaved to the settings in the WaveSamples assigned to the same or overlapping key zones in the left layer. This includes BEND  Range, NOISE RATE, and all pitch modulation. Pitch modulation settings for WaveSamples in the right layer will be ignored.</p>
 </aside>
   <h4 id="modsrc" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for the pitch of the WaveSample from among the 15 available modulators.</p>
@@ -698,8 +698,8 @@
 <p>Setting this parameter to ON gives the selected WaveSample a +12dB boost in volume. This should actually be considered a headroom control; when removing that 12dB of headroom by enabling boost may leave the sample vulnerable to clipping from other processes like effects. Be careful that adding boost to a sample doesn’t cause it to become so loud that it starts to clip.</p>
 <h4 id="lo-hi-key" class="param-name"><span class="param">LO/HI-KEY</span><span class="range">Range: K00 to K20, A0 to C8</span></h4>
 <p>This parameter determines the key range the selected WaveSample will cover. Select the <span class="param">WS RNG LO</span> parameter, play the key that you want to be the low key, the cursor will then automatically switch to the <span class="param">HI</span> parameter, which can then be set in the same fashion.</p>
-<aside class="note"><p>Note: Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
-<aside class="note"><p>Note: If you accidentally set the High Key below the Low Key, the selected WaveSample will not be heard.</p></aside>
+<aside class="note"><p>Keys below A0 are displayed as K00 through K20. These values are only accessible when the Sampled Sound is transposed up.</p></aside>
+<aside class="note"><p>If you accidentally set the High Key below the Low Key, the selected WaveSample will not be heard.</p></aside>
 <h4 id="vol" class="param-name"><span class="param">VOL</span><span class="range">Range: 0 to 99</span></h4>
 <p>Determines the volume of each WaveSample. Since Envelope 3 is permanently routed to control the volume of the WaveSample, this parameter also determines the amount by which ENV3 will affect volume.</p>
 <h4 id="modsrc-3" class="param-name"><span class="param">MODSRC</span><span class="range">Range: various</span></h4>
@@ -754,7 +754,7 @@
 <p>Determines the amount by which the assigned volume modulator will affect the pan of the WaveSample.</p>
 <h2 id="wave-page">Wave Page</h2>
 <p>The parameters on this page control all the WaveSample pointers such as sample start, sample end, loop points, etc. Also on this page, you can choose the playback mode and set up modulation of the sample start and/or various loop modulation options.</p>
-<aside class="note"><p>Note: The <span class="page-name">Wave</span> page parameters can only be edited when the <span class="page-name">Edit Context</span> page is set up to edit a single WaveSample (WAVESAMPLE=###). The LAYER EDIT NOT ALLOWED message will be displayed if you try to edit those parameters with the Edit Context set up to edit an entire layer or an entire Sampled Sound.</p></aside>
+<aside class="note"><p>The <span class="page-name">Wave</span> page parameters can only be edited when the <span class="page-name">Edit Context</span> page is set up to edit a single WaveSample (WAVESAMPLE=###). The LAYER EDIT NOT ALLOWED message will be displayed if you try to edit those parameters with the Edit Context set up to edit an entire layer or an entire Sampled Sound.</p></aside>
 <p>Press the <kbd class="button">Wave</kbd> button. The first WAVE sub-page is displayed.</p>
 <figure class="vfd-unit has-page">
     <div class="vfd-bezel">
@@ -837,7 +837,7 @@
 <p>This parameter allows you to set the loop start point. After making a sample it is often necessary to “loop” (play over and over) a portion of the sound, so that it can sustain indefinitely when the key is held down.</p>
 <h4 id="loop-end" class="param-name">LOOP END</h4>
 <p>This parameter allows you to set or change the loop end point.</p>
-<aside class="note"><p>Note:    The maximum loop length is 1.5 MegaWords.</p></aside>
+<aside class="note"><p>The maximum loop length is 1.5 MegaWords.</p></aside>
 <p>Press the <kbd class="button">Wave</kbd> button a third time. The final WAVE sub-page is displayed.</p>
 <figure class="vfd-unit has-page">
   <div class="vfd-bezel">
@@ -929,7 +929,7 @@
 <p>To reverse the polarity of the volume modulator, set the values as follows: “A-B FADE <span class="lcd">IN=0</span> TO 0” and “C-D FADE <span class="lcd">OUT=0</span> TO 127.” The shape imposed on the output of the volume modulation is as follows; again, the Mod Wheel is the volume modulator:</p>
 <figure class="figure"><img src="images/volume-modulator-reversed.png" alt="Reverse Volume Modulation"><figcaption>Reverse Volume Modulation.</figcaption></figure>
 
-<aside class="note"><p>Note:    Whenever you cross fade between WaveSamples, the WaveSamples must be in different layers, since only one WaveSample can occupy a given key within a single layer.</p></aside>
+<aside class="note"><p>Whenever you cross fade between WaveSamples, the WaveSamples must be in different layers, since only one WaveSample can occupy a given key within a single layer.</p></aside>
 <h4 id="curve" class="param-name"><span class="param">CURVE</span><span class="range">Range: CROSSFADE or LINEAR</span></h4>
 <p>Determines what type of curve will be used when fading samples in and out between breakpoints A-B and C-D. There are two possible fadecurves:</p>
 <ul>
@@ -987,7 +987,7 @@
   <li>TRIGGER — This mode plays monophonically, with the envelopes and WaveSamples retriggering, or restarting, each time there is a new key down. This mode works just like LEGATO mode, except that it has no “note memory”. It is ideal for adding monophonic piano “thuds” to piano sounds.</li>
   <li>MINIMODE — This mode plays with one-voice polyphony, and new notes will glide from the previous note if the previous note is still held. Unlike the <span class="value">LEGATO</span>, <span class="value">PEDAL</span>, or <span class="value">TRIGGER</span> modes, the envelopes and WaveSamples are only restarted from the beginning when you play a key with no other keys down (i.e.: if you play staccato).</li>
 </ul>
-<aside class="note"><p>Note: LEGATO and MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p></aside>
+<aside class="note"><p>LEGATO and MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p></aside>
 <table class="data-table" id="glide-modes"><caption>GLIDE MODES</caption><thead><tr><th>Mode</th><th>Staccato Glide</th><th>Legato Glide</th><th>Legato Envelope</th><th>Note Memory Retrigger</th></tr></thead><tbody><tr><td>LEGATO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td><span class="param">PEDAL</span> (with pedal down)</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>TRIGGER</td><td>NO</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MINIMODE</td><td>NO</td><td>YES</td><td>NO</td><td>YES</td></tr></tbody></table>
 <h4 id="time" class="param-name"><span class="param">TIME</span><span class="range">Range: 0 to 99</span></h4>
 <p>This parameter controls the duration it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses Constant-Time Portamento. This means that it will take the same duration to glide between notes that are close together (i.e. C4 to D4) as it will to glide between notes that are far apart (i.e. C4 to C7).</p>

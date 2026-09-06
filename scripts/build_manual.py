@@ -3820,13 +3820,6 @@ PANEL_BUTTON_EXTRAS = [
     "Controllers On/Off",
     "Play",
     "Layer (Program Control)",
-    "Seq/Song Tracks 1-6 (or 7-12)",
-    "Seq/Song Tracks 1-6 or 7-12",
-    "Seq/Song Tracks 1-6 and/or 7-12",
-    "Seq/Song Track 1-6 and/or 7-12",
-    "Seq/Song Track 1-6",
-    "Seq/Song Track 7-12",
-    "Tracks 1-6 or 7-12",
     "Record/Play",
     "Track/MIDI",
     "Sequence Control",
@@ -3903,6 +3896,70 @@ def _tail_after_last(pattern: re.Pattern[str], before: str) -> str | None:
     if re.search(r"[.!?]", tail):
         return None
     return tail
+
+
+SEQ_SONG_TRACKS_COMBO_RE = re.compile(
+    r"(?<![\w>])(Seq/Song Tracks?)(?:\s+)(1-6(?:\s+or\s+7-12)?|7-12|7–12)(?!\s+(?:[Pp]age|[Pp]ages)\b)"
+)
+KEY_GROUP_AFTER = {
+    "track parameters": re.compile(r"^\s+(section|buttons)\b", re.I),
+    "programming": re.compile(r"^\s+(section|buttons)\b", re.I),
+    "parameters": re.compile(r"^\s+(section|buttons)\b", re.I),
+    "seq/song tracks": re.compile(r"^\s+(button|buttons|LED|<kbd)\b", re.I),
+    "seq/song track": re.compile(r"^\s+(button|buttons|LED|<kbd)\b", re.I),
+    "user ram banksets": re.compile(r"^", re.I),
+    "rom banksets": re.compile(r"^", re.I),
+    "sampled sound banksets": re.compile(r"^", re.I),
+}
+
+
+def wrap_seq_song_tracks(escaped: str) -> str:
+    """Split the silk-screen group from the 1-6 / 7-12 buttons."""
+
+    def repl(m: re.Match[str]) -> str:
+        before = escaped[max(0, m.start() - 40) : m.start()]
+        if before.rstrip().endswith((">", '"')):
+            return m.group(0)
+        half = m.group(2).replace("–", "-")
+        if half.lower() == "1-6 or 7-12":
+            return (
+                '<span class="key-group">Seq/Song Tracks</span> '
+                '<kbd class="button">1-6</kbd> or '
+                '<kbd class="button">7-12</kbd>'
+            )
+        return (
+            f'<span class="key-group">Seq/Song Tracks</span> '
+            f'<kbd class="button">{half}</kbd>'
+        )
+
+    return SEQ_SONG_TRACKS_COMBO_RE.sub(repl, escaped)
+
+
+def wrap_key_groups(escaped: str, terms: dict[str, list[str]]) -> str:
+    """Tag silk-screen group legends only when they help locate a control."""
+    names = terms.get("key-group", [])
+    for name in sorted(names, key=len, reverse=True):
+        after_ok = KEY_GROUP_AFTER.get(name.lower())
+        if after_ok is None:
+            continue
+        if name.lower() in {"user ram banksets", "rom banksets", "sampled sound banksets"}:
+            pat = re.compile(rf"(?<![\w>])({re.escape(html.escape(name))})(?![\w<])")
+        else:
+            pat = re.compile(rf"(?<![\w>])({re.escape(html.escape(name))})(?![\w<])")
+
+        def repl(m: re.Match[str], check=after_ok, label=name) -> str:
+            after = escaped[m.end() : m.end() + 24]
+            if not check.match(after):
+                return m.group(1)
+            if label.lower().endswith("banksets"):
+                before = re.sub(r"<[^>]+>", "", escaped[max(0, m.start() - 48) : m.start()])
+                if not re.search(r"\bselects?\s+$", before, re.I):
+                    return m.group(1)
+            display = "Seq/Song Tracks" if label.lower().startswith("seq/song track") else m.group(1)
+            return f'<span class="key-group">{display}</span>'
+
+        escaped = pat.sub(repl, escaped)
+    return escaped
 
 
 def wrap_press_buttons(escaped: str, names: list[str]) -> str:
@@ -4020,6 +4077,8 @@ def apply_tags(
     escaped = link_section_refs(escaped, source_file)
     if heading:
         escaped = wrap_press_buttons(escaped, panel_button_names(terms))
+        escaped = wrap_seq_song_tracks(escaped)
+        escaped = wrap_key_groups(escaped, terms)
         escaped = wrap_bankset(escaped)
         if not PAGE_TITLE_RE.match(text.strip()):
             escaped = wrap_page_names(escaped, terms)
@@ -4071,6 +4130,8 @@ def apply_tags(
 
         wrap_in_text(LCD_STAR_RE, lambda m: f'<span class="lcd">{m.group(0)}</span>')
         escaped = wrap_press_buttons(escaped, panel_button_names(terms))
+        escaped = wrap_seq_song_tracks(escaped)
+        escaped = wrap_key_groups(escaped, terms)
         field_pat = re.compile(
             r"(?<![\w>])(" + "|".join(re.escape(x) for x in sorted(LCD_FIELDS, key=len, reverse=True)) + r")(?![\w<])"
         )
@@ -4723,7 +4784,8 @@ def to_html_body(
                         used_button = True
                         break
         if line.lower().startswith("note:") or line.lower().startswith("important:"):
-            chunks.append(f'<aside class="note"><p>{tagged}</p></aside>')
+            body = re.sub(r"^note:\s*", "", line, flags=re.I)
+            chunks.append(f'<aside class="note"><p>{tags(body)}</p></aside>')
         else:
             chunks.append(f"<p>{tagged}</p>")
         ni = consume_inline_figure(line, lines, i, chunks)
@@ -4884,6 +4946,53 @@ def split_parts(lines: list[str], parts: list[tuple[str, str | None]]) -> dict[s
     return out
 
 
+HEADING_OPEN_RE = re.compile(r"<h([2-4])\b[^>]*>", re.I)
+DFN_TERM_RE = re.compile(r'<dfn class="term">(.*?)</dfn>', re.I | re.S)
+
+
+def _heading_positions(html: str, level: int) -> list[int]:
+    return [m.start() for m in HEADING_OPEN_RE.finditer(html) if int(m.group(1)) == level]
+
+
+def dfn_term_sections(html: str) -> list[tuple[int, int]]:
+    """Slices between consecutive h4s, or h3s when a stretch has no h4."""
+    n = len(html)
+    h3s = _heading_positions(html, 3)
+    blocks = ([0] + h3s + [n]) if h3s else [0, n]
+    ranges: list[tuple[int, int]] = []
+    for a, b in zip(blocks, blocks[1:]):
+        h4s = [p for p in _heading_positions(html, 4) if a <= p < b]
+        if h4s:
+            cuts = [a] + h4s + [b]
+            ranges.extend((x, y) for x, y in zip(cuts, cuts[1:]) if x < y)
+        elif a < b:
+            ranges.append((a, b))
+    return ranges
+
+
+def dedupe_dfn_terms(html: str) -> str:
+    """Keep one dfn.term per string per heading section; later hits become span.term."""
+    out: list[str] = []
+    last = 0
+    for a, b in dfn_term_sections(html):
+        out.append(html[last:a])
+        chunk = html[a:b]
+        seen: set[str] = set()
+
+        def repl(m: re.Match[str]) -> str:
+            inner = m.group(1)
+            key = re.sub(r"<[^>]+>", "", inner)
+            if key in seen:
+                return f'<span class="term">{inner}</span>'
+            seen.add(key)
+            return m.group(0)
+
+        out.append(DFN_TERM_RE.sub(repl, chunk))
+        last = b
+    out.append(html[last:])
+    return "".join(out)
+
+
 def write_delay_tempo_chart_page(terms: dict[str, list[str]]) -> None:
     body = build_delay_tempo_chart_page_body(terms)
     html_out = chrome(
@@ -4891,7 +5000,7 @@ def write_delay_tempo_chart_page(terms: dict[str, list[str]]) -> None:
         body,
         extra_scripts=["js/delay-tempo-calculator.js"],
     )
-    (OUT / DELAY_TEMPO_CHART_FNAME).write_text(html_out, encoding="utf-8")
+    (OUT / DELAY_TEMPO_CHART_FNAME).write_text(dedupe_dfn_terms(html_out), encoding="utf-8")
     print("wrote", DELAY_TEMPO_CHART_FNAME)
 
 
@@ -4906,7 +5015,7 @@ def write_page(
     # Page shell IDs are not generated through slugify but must stay unique.
     USED_IDS.add("main")
     body = to_html_body(lines, terms, fname, catalog)
-    (OUT / fname).write_text(chrome(fname, body), encoding="utf-8")
+    (OUT / fname).write_text(dedupe_dfn_terms(chrome(fname, body)), encoding="utf-8")
     print("wrote", fname, "lines", len(lines))
 
 
