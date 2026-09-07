@@ -4147,6 +4147,7 @@ def apply_tags(
     if source_file and source_file.startswith("07-effects-") and EFFECT_PARAM_NAMES:
         wrap(EFFECT_PARAM_NAMES, "param")
     wrap(terms.get("param", []), "param")
+    wrap(terms.get("file-type", []), "file-type")
     wrap(terms.get("value", []), "value")
     wrap(["Sounds Mode", "Presets Mode", "Sequencer Mode", "General MIDI",
           "Group Edit", "Mono A", "Mono B"], "mode")

@@ -379,7 +379,7 @@ span.function {
   font-weight: 550;
 }
 
-span.patch-name {
+span.patch-name, span.file-type {
   font-family: var(--font-panel);
   font-stretch: 87.5%;
   font-weight: 500;

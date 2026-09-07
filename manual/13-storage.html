@@ -70,7 +70,7 @@
     <p>From the <span class="page-name">Storage</span> page you can select which kind of data storage you want to use —
       Disk or MIDI <span class="param">SYS-EX</span> storage. A SCSI option is available for loading Sampled Sounds from
       EPS/EPS-16 PLUS/ASR-10 format SCSI Storage Devices when the optional SP-4 interface is installed. The TS-10 SCSI
-      port will only read from SCSI; it will not write to SCSI Storage Devices. When the SP-4 is installed, the <span
+      port will only <em>read</em> from SCSI; it will not write to SCSI Storage Devices. When the SP-4 is installed, the <span
         class="page-name">STORAGE</span> page will display a new active field (explained later), as below:</p>
         <figure class="vfd-unit has-page">
           <div class="vfd-bezel">
@@ -99,14 +99,15 @@
           </table>
           </div>          
         </figure>
-    <p>Pressing <span class="value">*LOAD*</span> is the equivalent of pressing DISK followed by <span
-        class="value">*LOAD*</span> on the <span class="page-name">Disk</span> page.</p>
-    <p>Pressing the <kbd class="button">Storage</kbd> button twice in a row performs the same function. Since Disk
+    <p>Pressing <span class="lcd">*LOAD*</span> is the equivalent of pressing <span class="param">DISK</span> followed by <span
+        class="lcd">*LOAD*</span> on the <span class="page-name">Disk</span> page. Pressing the <kbd class="button">Storage</kbd> button twice in a row performs the same function. Since floppy disk
       storage is the most convenient and commonly used form of storage, we’ll cover that first.</p>
-    <p>Disk Storage — Using the Disk Drive to Save and Load Data The TS-10’s built-in disk drive is used to store all
+    
+      <h2 id="disk-storage">Disk Storage — Using the Floppy Disk Drive to Save and Load Data</h2>
+      The TS-10’s built-in disk drive is used to store all
       your program, preset and sequencer data, as well as System Exclusive messages from other MIDI devices. The TS-10
       uses a Quad-density disk drive that can store 1600 Kilobytes of data on a Double-Sided High-Density (DSHD) 3.5”
-      microfloppy disk and 800 Kilobytes of data on a Double-Sided Double-Density (DSDD) 3.5” microfloppy disk. The
+      floppy disk and 800 Kilobytes of data on a Double-Sided Double-Density (DSDD) 3.5” floppy disk. The
       disks are enclosed in a protective plastic carrier with an automatic shutter to protect the diskette from physical
       damage. It is important not to alter this carrier in any way.</p>
     <figure class="figure"><img src="images/floppy-disks.png"
@@ -146,26 +147,26 @@
       can be saved:</p>
     <h4 id="programs">Programs:</h4>
     <ul>
-      <li><span class="value">1-PROGRAM</span> — contains a single TS-10 Program.</li>
-      <li><span class="value">6-PROGRAMS</span> — contains a bank of 6 TS-10 programs, as displayed on the Program Bank pages 0-9. This file type
+      <li><span class="file-type">1-PROGRAM</span> — contains a single TS-10 Program.</li>
+      <li><span class="file-type">6-PROGRAMS</span> — contains a bank of 6 TS-10 programs, as displayed on the Program Bank pages 0-9. This file type
         lets you organize programs into groups of six that can be saved and loaded back into any RAM bank you choose.
       </li>
-      <li><span class="value">60-PROGRAMS</span> — contains one BankSet of 60 User RAM Programs.</li>
-      <li><span class="value">120-PROGRAMS</span> — contains all of the User RAM Program memory (both BankSets).</li>
+      <li><span class="file-type">60-PROGRAMS</span> — contains one BankSet of 60 User RAM Programs.</li>
+      <li><span class="file-type">120-PROGRAMS</span> — contains all of the User RAM Program memory (both BankSets).</li>
     </ul>
     <h4 id="presets">Presets:</h4>
     <ul>
-      <li><span class="value">1-PRESET</span> — contains a single TS-10 Preset.</li>
-      <li><span class="value">60-PRESETS</span> — contains one BankSet of 60 TS-10 User RAM Presets.</li>
-      <li><span class="value">120-PRESETS</span> — contains all of the User RAM Preset memory (both BankSets).</li>
+      <li><span class="file-type">1-PRESET</span> — contains a single TS-10 Preset.</li>
+      <li><span class="file-type">60-PRESETS</span> — contains one BankSet of 60 TS-10 User RAM Presets.</li>
+      <li><span class="file-type">120-PRESETS</span> — contains all of the User RAM Preset memory (both BankSets).</li>
     </ul>
     <h4 id="sequence-song">Sequence/Song:</h4>
     <ul>
-      <li><span class="value">1-SEQ/SONG</span> — contains a single TS-10 sequence or song.</li>
-      <li><span class="value">30-SEQ/SONGS</span> — contains 30 TS-10 sequencer locations, saved from either the lower half of the sequencer memory
-        (Banks 0-4) or the upper half (Banks 5-9). A <span class="value">30-SEQ/SONGS</span> file can be loaded into either the upper or lower
+      <li><span class="file-type">1-SEQ/SONG</span> — contains a single TS-10 sequence or song.</li>
+      <li><span class="file-type">30-SEQ/SONGS</span> — contains 30 TS-10 sequencer locations, saved from either the lower half of the sequencer memory
+        (Banks 0-4) or the upper half (Banks 5-9). A <span class="file-type">30-SEQ/SONGS</span> file can be loaded into either the upper or lower
         half.</li>
-      <li><span class="value">60-SEQ/SONGS</span> — contains the entire sequencer memory (Banks 0-9) and the global Click and <kbd
+      <li><span class="file-type">60-SEQ/SONGS</span> — contains the entire sequencer memory (Banks 0-9) and the global Click and <kbd
           class="button">Sequencer Control</kbd> page settings.</li>
     </ul>
     <p>Whenever you save a 30 or 60 Seq/Song file to disk, you will be asked whether you want to also save internal
@@ -178,25 +179,25 @@
       programs and Sample Banks information together when reloading the data.</p>
     <h3 id="midi-system-exclusive-data">MIDI System Exclusive data:</h3>
     <ul>
-      <li><span class="value">SYS-EX-DATA</span> — In addition to the above types of TS-10 data, you can use the disk
+      <li><span class="file-type">SYS-EX-DATA</span> — In addition to the above types of TS-10 data, you can use the disk
         drive to save system exclusive data from other MIDI devices. The TS-10 can thus serve as the “librarian” for
         your other MIDI gear. This function is covered at the end of this section.</li>
     </ul>
     <h3 id="system-file">System File:</h3>
     <ul>
-      <li><span class="value">SYSTEM-SET-UP</span> — System set-up files let you save the system, or “global” parameters, those contained on the
+      <li><span class="file-type">SYSTEM-SET-UP</span> — System set-up files let you save the system, or “global” parameters, those contained on the
         <span class="page-name">System</span> and <span class="page-name">MIDI Control</span> pages, so that you can save and re-load a new system configuration in seconds. This is
         handy if you use the TS-10 in a number of different applications that require different settings for MIDI mode,
         MIDI base channel, master tuning, etc.</li>
     </ul>
     <h4 id="sampled-sounds">Sampled Sounds:</h4>
     <ul>
-      <li><span class="value">SAMPLE-BANKS</span> — remembers up to 20 Sampled Sound names (ten in BankSet 8 and ten in
+      <li><span class="file-type">SAMPLE-BANKS</span> — remembers up to 20 Sampled Sound names (ten in BankSet 8 and ten in
         BankSet 9, if applicable) as well as their source disk(s), file paths, and bank
         locations. Loading a <dfn class="term">Sample-Banks</dfn> file will allow you to <span
           class="function">Auto-Load</span> the Sampled Sound files back into the same location(s) that they were in at
         the time the <span class="term">Sample-Banks</span> file was saved.</li>
-      <li><span class="value">SAMPLE-EDITS</span> — contains parameter edits of Sampled Sounds.</li>
+      <li><span class="file-type">SAMPLE-EDITS</span> — contains parameter edits of Sampled Sounds.</li>
     </ul>
     <h3 id="disk-capacity">Disk Capacity — Bytes, Blocks, and Files</h3>
       <p>The TS-10 has a <span class="value">high-density (HD)</span> drive, allowing you to use both Double-Sided High-Density and Double-Sided Double-Density disks:</p>
@@ -513,44 +514,44 @@
     <h5 id="to-save-data-to-disk">To Save data to disk:</h5>
     <ul>
       <li>Insert a formatted TS-10 disk into the disk drive.</li>
-      <li>When saving <span class="patch-name">1-PROGRAM</span>, <span class="patch-name">1-PRESET</span> or <span class="patch-name">1-SEQ/SONG</span>, first make sure the program, preset or sequencer location you
+      <li>When saving <span class="file-type">1-PROGRAM</span>, <span class="file-type">1-PRESET</span> or <span class="file-type">1-SEQ/SONG</span>, first make sure the program, preset or sequencer location you
         want to save is selected.</li>
       <li>Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage</span> Page.</li>
       <li>Press <span class="param">DISK</span>. The Disk Storage menu appears.</li>
       <li>Press <span class="function">SAVE</span>. The Save File display appears as shown above. The file type is underlined.</li>
       <li>Select the file type you want to save from among the available types:</li>
     </ul>
-    <table class="param-cols cols-4">
+    <table id="file-types" class="param-cols cols-4">
       <tbody>
         <tr>
-          <td>1-PROGRAM</td>
-          <td>1-PRESET</td>
-          <td>1-SEQ/SONG</td>
-          <td><span class="param">SYS-EX</span>-DATA</td>
+          <td><span class="file-type">1-PROGRAM</span></td>
+          <td><span class="file-type">1-PRESET</span></td>
+          <td><span class="file-type">1-SEQ/SONG</span></td>
+          <td><span class="file-type">SYS-EX-DATA</span></td>
         </tr>
         <tr>
-          <td>6-PROGRAMS</td>
-          <td>60-PRESETS</td>
-          <td>30-SEQ/SONGS</td>
-          <td>SYSTEM-SETUP</td>
+          <td><span class="file-type">6-PROGRAMS</span></td>
+          <td><span class="file-type">60-PRESETS</span></td>
+          <td><span class="file-type">30-SEQ/SONGS</span></td>
+          <td><span class="file-type">SYSTEM-SETUP</span></td>
         </tr>
         <tr>
-          <td>60-PROGRAMS</td>
-          <td>120-PRESETS</td>
-          <td>60-SEQ/SONGS</td>
-          <td>SAMPLE-BANKS</td>
+          <td><span class="file-type">60-PROGRAMS</span></td>
+          <td><span class="file-type">120-PRESETS</span></td>
+          <td><span class="file-type">60-SEQ/SONGS</span></td>
+          <td><span class="file-type">SAMPLE-BANKS</span></td>
         </tr>
         <tr>
-          <td>120-PROGRAMS</td>
+          <td><span class="file-type">120-PROGRAMS</span></td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
-          <td>SAMPLE-EDITS</td>
+          <td><span class="file-type">SAMPLE-EDITS</span></td>
         </tr>
       </tbody>
     </table>
     <ul>
-      <li>Select a source bank (if applicable). For the file types <span class="patch-name">6–PROGRAMS</span> and <span class="patch-name">30–SEQ/SONGS</span>, you will see a <span
-          class="value">SELECT=BANK(s)</span> location beneath the file type, and for the file types <span class="patch-name">60–PROGRAMS</span> and <span class="patch-name">60–PRESETS</span> you will see a <span class="value">SELECT=BANKSET</span> location beneath the file type, as shown
+      <li>Select a source bank (if applicable). For the file types <span class="file-type">6–PROGRAMS</span> and <span class="file-type">30–SEQ/SONGS</span>, you will see a <span
+          class="value">SELECT=BANK(s)</span> location beneath the file type, and for the file types <span class="file-type">60–PROGRAMS</span> and <span class="file-type">60–PRESETS</span> you will see a <span class="value">SELECT=BANKSET</span> location beneath the file type, as shown
         above. This defaults to the current BankSet (or bank). If you want to save a different
         BankSet (or bank) than what is showing, select this field and change it using the data
         entry controls.</li>
@@ -585,8 +586,8 @@
       <li>Name the file with a name of your choice using the data entry controls and the two cursor soft buttons,
         labeled LEFT and RIGHT, or you can use the keyboard to select characters and move the cursor (see below).</li>
       <li>Press <span class="value">*YES*</span>. The display reads <span class="lcd">SAVING &lt;FILENAME&gt;</span> while the data is being saved
-        to disk.  Or Press <span class="value">*NO*</span> to cancel the procedure for any reason. If you are saving a <span class="patch-name">30-SEQ/SONGS</span>
-      or <span class="patch-name">60-SEQ/SONGS</span> file there are additional steps (see below).</li>
+        to disk.  Or Press <span class="value">*NO*</span> to cancel the procedure for any reason. If you are saving a <span class="file-type">30-SEQ/SONGS</span>
+      or <span class="file-type">60-SEQ/SONGS</span> file there are additional steps (see below).</li>
     </ul>
     <p></p>
     <ul>
@@ -610,10 +611,10 @@
 </figure>
 
     <h4 id="saving-programs-along-with-a-30-seqsongs-file">Saving Programs along with a 30-SEQ/SONGS File</h4>
-    <p>When you save a <span class="patch-name">30-SEQ/SONGS</span> file, the TS-10 gives you the option
+    <p>When you save a <span class="file-type">30-SEQ/SONGS</span> file, the TS-10 gives you the option
       of saving Programs in the same file, so that you can keep the sequences and the Programs that go with them
       together.</p>
-    <p>After you have selected the <span class="patch-name">30-SEQ/SONGS</span> file type, chosen either <span class="value">SELECT=BANKS</span> 0-4 or
+    <p>After you have selected the <span class="file-type">30-SEQ/SONGS</span> file type, chosen either <span class="value">SELECT=BANKS</span> 0-4 or
       5-9, and pressed <span class="value">*YES*</span>, the TS-10 offers you an option. The display shows:</p>
       <figure class="vfd-unit has-page">
         <div class="vfd-bezel">
@@ -655,7 +656,7 @@
         <li>After choosing the number of Programs to be saved, press <span class="value">*YES*</span> to proceed.</li>
       </ul>
       <aside class="note">
-        <span class="patch-name">30-SEQ/SONGS</span> file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
+        <span class="file-type">30-SEQ/SONGS</span> file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
         will automatically be reloaded into the same User RAM location when the 30-SEQ/SONGS file is loaded, replacing the Programs that are there.</aside>
       
     <aside class="note">
@@ -665,9 +666,9 @@
         in the internal memory. You should always be sure that any Programs you value are saved before loading sequencer
         files which contain Programs.</p>
     </aside>
-    <h3>Saving Sample-Banks along with a <span class="patch-name">60-SEQ/SONGS</span> File:</h3>
-    <p>When you save a <span class="patch-name">60-SEQ/SONGS</span> file, the TS-10 also gives you the option of saving the currently loaded contents of the Sample Banks, as well as the internal User RAM Programs, in the same file, so that you can store the Programs, and Sampled Sound data that the sequences and songs use all together in a single file.</p>
-    <p>After you have selected <span class="patch-name">60-SEQ/SONGS</span> file type and pressed <span class="value">*YES*</span>, the TS-10 offers you the first option. The display shows:</p>
+    <h3>Saving Sample-Banks along with a <span class="file-type">60-SEQ/SONGS</span> File:</h3>
+    <p>When you save a <span class="file-type">60-SEQ/SONGS</span> file, the TS-10 also gives you the option of saving the currently loaded contents of the Sample Banks, as well as the internal User RAM Programs, in the same file, so that you can store the Programs, and Sampled Sound data that the sequences and songs use all together in a single file.</p>
+    <p>After you have selected <span class="file-type">60-SEQ/SONGS</span> file type and pressed <span class="value">*YES*</span>, the TS-10 offers you the first option. The display shows:</p>
     <figure class="vfd-unit has-page">
       <div class="vfd-bezel">
         <table>
@@ -701,7 +702,7 @@
       <li><span class="value">NO</span> — Only the specified sequencer data will be saved, without Programs.</li>
       <li><span class="value">120</span> — All User RAM Programs will be saved into the file along with the sequence data (<dfn
           class="term">BankSet</dfn> U0 and U1). The Programs will be reloaded into the internal memory when the
-        <span class="patch-name">60-SEQ/SONGS</span> file is loaded, replacing the Programs that are there.</li>
+        <span class="file-type">60-SEQ/SONGS</span> file is loaded, replacing the Programs that are there.</li>
       <li>After choosing whether or not Programs will be saved, press <span class="value">*YES*</span> to proceed. If any
         Sampled Sounds are currently loaded, the TS-10 offers you the second option. The display shows:</li>
     </ul>
@@ -860,25 +861,28 @@
     <table class="param-cols cols-4">
       <tbody>
         <tr>
-          <td>1-PROGRAM</td>
-          <td>1-PRESET</td>
-          <td>1-SEQ/SONG</td>
-          <td><span class="param">SYS-EX</span>-DATA</td>
+          <td><span class="file-type">1-PROGRAM</span></td>
+          <td><span class="file-type">1-PRESET</span></td>
+          <td><span class="file-type">1-SEQ/SONG</span></td>
+          <td><span class="file-type">SYS-EX-DATA</span></td>
         </tr>
         <tr>
-          <td>6-PROGRAMS</td>
-          <td>60-PRESETS</td>
-          <td>30-SEQ/SONGS</td>
-          <td>SYSTEM-SETUP</td>
+          <td><span class="file-type">6-PROGRAMS</span></td>
+          <td><span class="file-type">60-PRESETS</span></td>
+          <td><span class="file-type">30-SEQ/SONGS</span></td>
+          <td><span class="file-type">SYSTEM-SETUP</span></td>
         </tr>
         <tr>
-          <td>60-PROGRAMS</td>
-          <td>120-PRESETS</td>
-          <td>60-SEQ/SONGS</td>
-          <td>SAMPLE-BANKS</td>
+          <td><span class="file-type">60-PROGRAMS</span></td>
+          <td><span class="file-type">120-PRESETS</span></td>
+          <td><span class="file-type">60-SEQ/SONGS</span></td>
+          <td><span class="file-type">SAMPLE-BANKS</span></td>
         </tr>
         <tr>
-          <td >120-PROGRAMS</td><td></td><td></td><td>SAMPLE-EDITS</td>
+          <td><span class="file-type">120-PROGRAMS</span></td>
+          <td></td>
+          <td></td>
+          <td><span class="file-type">SAMPLE-EDITS</span></td>
         </tr>
       </tbody>
     </table>
@@ -901,22 +905,22 @@
     </ul>
     <p>Where the data ends up depends on the file type and (where applicable) the destination bank selected:</p>
     <ul>
-      <li><span class="patch-name">1-PROGRAM</span> file — once loaded, the program is placed on the <span class="page-name">Write</span> page, where
+      <li><span class="file-type">1-PROGRAM</span> file — once loaded, the program is placed on the <span class="page-name">Write</span> page, where
         you can save it to any internal User RAM location as detailed in <a class="refer-to"
           href="08-programs.html#section-8-understanding-programs">Section 8 — Understanding Programs</a>.</li>
-      <li><span class="patch-name">6-PROGRAMS</span> file — the bank of 6 programs is loaded into the destination Bank (U0-0 to U1-9) specified before
+      <li><span class="file-type">6-PROGRAMS</span> file — the bank of 6 programs is loaded into the destination Bank (U0-0 to U1-9) specified before
         pressing <span class="value">*YES*</span>.</li>
-      <li><span class="patch-name">60-PROGRAMS</span> file — the 60 programs will be loaded into either BankSet U0 or U1 as
+      <li><span class="file-type">60-PROGRAMS</span> file — the 60 programs will be loaded into either BankSet U0 or U1 as
         specified before pressing <span class="value">*YES*</span>.</li>
-      <li><span class="patch-name">120-PROGRAM</span> file — replaces all User RAM program memory locations (both BankSets).
+      <li><span class="file-type">120-PROGRAM</span> file — replaces all User RAM program memory locations (both BankSets).
       </li>
-      <li><span class="patch-name">1-PRESET</span> file — the preset is loaded as the Edit Preset, and can be saved to memory as detailed in Saving a
+      <li><span class="file-type">1-PRESET</span> file — the preset is loaded as the Edit Preset, and can be saved to memory as detailed in Saving a
         Preset in <a class="refer-to" href="04-presets.html#section-4-understanding-presets">Section 4 — Understanding
           Presets</a>.</li>
-      <li><span class="patch-name">60-PRESETS</span> file — will be loaded into either BankSet of preset memory as specified
+      <li><span class="file-type">60-PRESETS</span> file — will be loaded into either BankSet of preset memory as specified
         before pressing <span class="value">*YES*</span>.</li>
-      <li><span class="patch-name">120-PRESET</span> file — replaces the internal preset memory (both BankSet locations).</li>
-      <li><span class="patch-name">1-SEQ/SONG</span> file — After selecting the single sequence/song file to be loaded and selecting <span
+      <li><span class="file-type">120-PRESET</span> file — replaces the internal preset memory (both BankSet locations).</li>
+      <li><span class="file-type">1-SEQ/SONG</span> file — After selecting the single sequence/song file to be loaded and selecting <span
           class="value">*YES*</span> on the <span class="page-name">Load File</span> page, you are shown a prompt page
         which allows you to select the bank location into which the sequence/song file will be loaded. The default value
         is the first available location, and you may accept this choice, or you may select a different location by using
@@ -924,12 +928,12 @@
         sequence bank page, and while the bank button is held, you may select the destination Location using the soft
         buttons. If your selection is a -BLANK- location, the display will revert to the prompt page with the new
         location selected. You may also directly select the location number using the data entry controls.</li>
-      <li><span class="patch-name">30-SEQ/SONGS</span> file — the 30 sequence/songs will be loaded into either the lower half of the sequencer memory
-        (Banks 0-4) or the upper half (Banks 5-9), specified before pressing <span class="value">*YES*</span>. If 60 or 120 programs were saved in a <span class="patch-name">30-SEQ/SONGS</span> file along with the sequencer data, a P will flash on the
+      <li><span class="file-type">30-SEQ/SONGS</span> file — the 30 sequence/songs will be loaded into either the lower half of the sequencer memory
+        (Banks 0-4) or the upper half (Banks 5-9), specified before pressing <span class="value">*YES*</span>. If 60 or 120 programs were saved in a <span class="file-type">30-SEQ/SONGS</span> file along with the sequencer data, a P will flash on the
       upper line of the display when the file is displayed on the <span class="page-name">DISK LOAD</span> page. 
       When you answer <span class="value">*YES*</span> to load the data, the TS-10 will load the programs automatically
       with the sequencer data, replacing the programs currently in memory.</li>
-    <li><span class="patch-name">60-SEQ/SONGS</span> file — replaces the entire sequencer memory (Banks 0-9), and installs global <span
+    <li><span class="file-type">60-SEQ/SONGS</span> file — replaces the entire sequencer memory (Banks 0-9), and installs global <span
       class="page-name">Sequencer Control</span> page settings.</li>
     <h3 id="loading-60-seq-songs-files-that-contain-programs-and-or-sample-banks">Loading 60 SEQ/SONGS Files that
       Contain Programs and/or Sample Banks</h3>
@@ -953,19 +957,19 @@
       <li>Press the upper left soft button to select the file to load.</li>
       <li>Press the upper right soft button above <span class="value">*YES*</span>.</li>
     </ul>
-    <p>If the <span class="patch-name">60-SEQ/SONGS</span> file had Sample Banks saved with it, after answering <span class="value">*YES*</span> to load
-      the <span class="patch-name">60-SEQ/SONGS</span> file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
+    <p>If the <span class="file-type">60-SEQ/SONGS</span> file had Sample Banks saved with it, after answering <span class="value">*YES*</span> to load
+      the <span class="file-type">60-SEQ/SONGS</span> file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
         class="value">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask
       for the disk(s) to automatically load the Sampled Sound data. If you answer *NO *, the Sampled Sound bank
       information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not
       loaded.</p>
-      the <span class="patch-name">60-SEQ/SONGS</span> file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
+      the <span class="file-type">60-SEQ/SONGS</span> file, the <span class="function">Auto-Load</span> prompt will be displayed. If you answer <span
         class="value">*YES*</span> to <span class="function">Auto-Load</span> the Sampled Sound data, the TS-10 will ask
       for the disk(s) to automatically load the Sampled Sound data. If you answer <span class="value">*NO*</span>, the Sampled Sound bank
       information is loaded and all currently loaded Sampled Sounds are deleted, but the Sampled Sound files are not
       loaded.</p>
     <aside class="note">
-      <p>Do not load any <span class="patch-name">60-SEQ/SONGS</span> files that have been saved with <span class="patch-name">Sample-Banks</span> into a
+      <p>Do not load any <span class="file-type">60-SEQ/SONGS</span> files that have been saved with <span class="file-type">Sample-Banks</span> into a
         TS-10 that is running software earlier than version 2.0. The new feature is incompatible with older software.
       </p>
       <p>To check which software version of the TS-10 you are running, while holding down the <kbd
@@ -974,13 +978,13 @@
 
     <h3 id="using-file-banks-to-locate-files-for-loading">Using File Banks to Locate Files for Loading</h3>
     <p>As we mentioned earlier, File Banks provide a quick way to locate and select a file for loading. After you have
-      selected <span class="command">LOAD</span> from the <span class="page-name">DISK Storage</span> menu, the ten <kbd
+      selected <span class="function">LOAD</span> from the <span class="page-name">DISK Storage</span> menu, the ten <kbd
         class="button">Bank</kbd> buttons will select file banks. From the file banks you can directly select a file to
       be loaded instead of scrolling through the entire list of files.</p>
     <h3 id="here-s-how-file-banks-work">Here’s how file banks work:</h3>
     <ul>
-      <li>Press <kbd class="button">Storage</kbd> and select <span class="command">DISK</span>, then <span
-          class="command">LOAD</span> to get to the Load File display.</li>
+      <li>Press <kbd class="button">Storage</kbd> and select <span class="function">DISK</span>, then <span
+          class="function">LOAD</span> to get to the Load File display.</li>
       <li>Select the file type you want to load.</li>
       <li>Press <kbd class="button">Bank</kbd> button <span class="value">0</span> and hold it down. The display shows
         the first File Bank for that file type: File Bank Locations containing Files</li>
@@ -1004,11 +1008,11 @@
         end-user.</p>
     </aside>
     <h3 id="delete-deleting-erasing-files-from-disk">DELETE — Deleting (Erasing) Files from Disk</h3>
-    <p>When you press DELETE from the Disk Storage menu, you will see the following display:</p>
+    <p>When you press <span class="function">DELETE</span> from the Disk Storage menu, you will see the following display:</p>
     <h4 id="file-size-2" class="param-name">File Size</h4>
     <p>File Name in blocks</p>
     <h4 id="file-type-2" class="param-name">File Type</h4>
-    <p>The display shows the File Name which identifies the file that will be deleted if you press <span
+    <p>The display shows the File Name which identifies the file that will be deleted if you press <span class="value">*YES*</span>; the Size of the file in Blocks; and the File Type. Only files of the type selected
         class="value">*YES*</span>; the Size of the file in Blocks; and the File Type. Only files of the type selected
       will be shown in the Name field, or in the file banks. Note that you cannot delete any data from a Sampled Sound
       disk.</p>
@@ -1016,8 +1020,8 @@
     <ul>
       <li>Insert the disk containing the file to be deleted into the disk drive.</li>
       <li>Press <kbd class="button">Storage</kbd> to go to the <span class="page-name">Storage</span> page.</li>
-      <li>Press <span class="command">DISK</span>. The <span class="page-name">DISK Storage</span> menu appears.</li>
-      <li>Press <span class="command">DELETE</span>. The <span class="page-name">Delete File</span> page appears as
+      <li>Press <span class="function">DISK</span>. The <span class="page-name">DISK Storage</span> menu appears.</li>
+      <li>Press <span class="function">DELETE</span>. The <span class="page-name">Delete File</span> page appears as
         shown above. The file type is underlined.</li>
       <li>Select the file type you want from among the available types.</li>
       <li>Press the soft button above the file name and use the data entry controls to find the file you want to delete.
