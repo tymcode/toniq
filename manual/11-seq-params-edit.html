@@ -170,9 +170,9 @@
       </div>
     </figure>
     <ul>
-      <li>Pressing <span class="value">*YES*</span> will erase Song Track 12, replacing it with a Tempo Track. The display
+      <li>Pressing <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will erase Song Track 12, replacing it with a Tempo Track. The display
         will momentarily show TEMPO TRACK INSTALLED, and the ADD-TEMPO-TRK Song Command will no longer be visible.</li>
-      <li>Pressing <span class="value">*NO*</span> will abort the procedure and leave Song Track 12 intact.</li>
+      <li>Pressing <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> will abort the procedure and leave Song Track 12 intact.</li>
     </ul>
     <p><span class="page-name">INFO</span> Sub-Page Pressing the soft button above INFO displays a page containing
       information about the song, including the song name, the size in blocks, the song tempo offset, number of steps,
@@ -181,7 +181,7 @@
     <h4 id="name" class="param-name">NAME</h4>
     <p>Used to rename the song. Pressing the soft button above the Song Name displays a sub-page which allows you to
       edit the name of the song. Use the data entry controls and the LEFT and RIGHT cursor buttons to rename the song.
-      Then press <span class="value">*SAVE*</span> to return to the <span class="page-name">INFO</span> page with the new
+      Then press <span class="function"><span class="star">*</span>SAVE<span class="star">*</span></span> to return to the <span class="page-name">INFO</span> page with the new
       name.</p>
     <h4 id="size" class="param-name"><span class="param">SIZE</span><span class="range">Range: (read only)</span></h4>
     <p>This read only parameter displays the size of the current song in blocks. Blocks are the units of 512 bytes used
@@ -205,7 +205,7 @@
       <li>Press <kbd class="button">Edit Song</kbd>.</li>
       <li>Press the soft button beneath ERASE. The display asks <span class="lcd">ERASE CURRENT SONG &lt;SONG NAME&gt; FROM LOCATION ##?</span>
       </li>
-      <li>Press <span class="value">*YES*</span> to erase and undefine the song, or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to erase and undefine the song, or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel.</li>
     </ul>
     <h4 id="copy">COPY</h4>
@@ -260,8 +260,7 @@
       </figure>
       <li>Use the data entry controls to select a location for the copied song. Note that only undefined sequencer
         locations will be available for selecting.</li>
-      <li>Press <span class="value">*YES*</span> to copy the song to the new location (or press <span
-          class="value">*NO*</span> to cancel). The new song will be given the same name as the original one you copied.
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to copy the song to the new location (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to cancel). The new song will be given the same name as the original one you copied.
         You can rename it from the <span class="page-name">Edit Song INFO</span> page as described above.</li>
     </ul>
     <h4 id="edit-steps">EDIT STEPS Page</h4>
@@ -333,8 +332,8 @@
     <p>Selects the sequence to be used for the current song step. An empty song step will show <span class="lcd">SEQ= - BLANK-</span>. To put a
       sequence into an empty song step (thus defining the step) simply underline this field and then press the <kbd
         class="button">Up Arrow</kbd> button. The final step (the one after the last defined song step) will always read
-      <span class="lcd">SEQ=*SONG-END*</span>. To add another sequence at the end of the song, select <span
-        class="lcd">SEQ=*SONG-END*</span> and press the <kbd class="button">Up Arrow</kbd> to define the step. This puts
+      <span class="lcd">SEQ=<span class="function"><span class="star">*</span>SONG-END<span class="star">*</span></span></span>. To add another sequence at the end of the song, select <span
+        class="lcd">SEQ=<span class="function"><span class="star">*</span>SONG-END<span class="star">*</span></span></span> and press the <kbd class="button">Up Arrow</kbd> to define the step. This puts
       a sequence in that step and moves the Song End back one more step.</p>
     <h4 id="reps" class="param-name"><span class="param">REPS</span><span class="range">Range: 01 to 99, or FS</span>
     </h4>
@@ -470,8 +469,8 @@
         source is the current sequence, which allows the current sequence to be easily appended to itself.</li>
       <li>The bottom of the display shows the destination sequence, and the total number of bars in the current
         sequence.</li>
-      <li>Press <span class="value">*YES*</span> to append the sequence specified in the top line of the display onto the
-        end of the current sequence (or press <span class="value">*NO*</span> to cancel).</li>
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to append the sequence specified in the top line of the display onto the
+        end of the current sequence (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to cancel).</li>
     </ul>
 
     <h3 id="info" class="param-name">INFO</h3>
@@ -500,7 +499,7 @@
     <h3 id="name-2" class="param-name">NAME</h3>
     <p>Pressing the soft button above the sequence <span class="function">NAME</span> displays a sub-page which allows you to edit the name of the
       sequence. Use the data entry controls and the LEFT and RIGHT cursor buttons to rename the sequence. Then press
-      <span class="value">*SAVE*</span> to return to the <span class="page-name">INFO</span> page.</p>
+      <span class="function"><span class="star">*</span>SAVE<span class="star">*</span></span> to return to the <span class="page-name">INFO</span> page.</p>
     <h4 id="size-2" class="param-name"><span class="param">SIZE</span><span class="range">Range: (read only)</span></h4>
     <p>Displays the size of the current sequence in events.</p>
     <h4 id="tempo-2" class="param-name"><span class="param">TEMPO</span><span class="range">Range: 025 to 250, or
@@ -522,8 +521,7 @@
     <ul>
       <li>Press <kbd class="button">Edit Sequence</kbd>.</li>
       <li>Press <span class="function">ERASE</span>. The display asks <span class="lcd">ERASE CURRENT SEQ &lt;SEQ-NAME&gt; FROM LOCATION ##?</span></li>
-      <li>Press <span class="value">*YES*</span> to erase and undefine the sequence, or press <span
-          class="value">*NO*</span> to cancel.</li>
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to erase and undefine the sequence, or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to cancel.</li>
     </ul>
     <h4 id="copy-2">COPY</h4>
     <p>Use this command to make a copy of the currently selected sequence in another sequencer location. If this command
@@ -556,7 +554,7 @@
       </figure> 
       <li>Use the data entry controls to select a location for the copied sequence. Note that only <span class="value">-BLANK-</span> sequencer
         locations will be available for selecting.</li>
-      <li>Press <span class="value">*YES*</span> to copy the sequence (or press <span class="value">*NO*</span> to cancel).
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to copy the sequence (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to cancel).
         The new sequence will be given the same name as the original sequence. You can then rename it from the <span class="page-name">Edit
         Sequence/INFO</span> page if you wish.</li>
     </ul>
@@ -641,7 +639,7 @@
       <li>Use the data entry controls to select how many bars you want to add. You can add any number up to a total
         sequence length of 999 bars. Empty bars (no track data) will be added beginning from the bar selected in the
         previous step.</li>
-      <li>Press <span class="value">*YES*</span> to complete the command, or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to complete the command, or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel.</li>
     </ul>
     <h4 id="delete-bars">DELETE BARS</h4>
@@ -686,7 +684,7 @@
         within the Sequence. Bars will be deleted from the beginning of the Bar you select here.</li>
       <li>Press the soft button above <span class="lcd">DELETE ## BARS.</span></li>
       <li>Use the data entry controls to select how many bars you want to delete.</li>
-      <li>Press <span class="value">*YES*</span> to complete the command, or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to complete the command, or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel.</li>
     </ul>
     <h2 id="sequence-bank-utilities">Sequence Bank Utilities</h2>
@@ -755,9 +753,9 @@
         ranges every time you press a key. You can reset the range (if it’s not correct) by pressing the soft button
         again, and playing the low and high keys. You can also set the key range using the data entry controls, and
         pressing the soft button again to move the cursor from the low to high key.</li>
-      <li>Press <span class="value">*SET*</span> to accept these edit ranges for the current track edit function. You will
+      <li>Press <span class="function"><span class="star">*</span>SET<span class="star">*</span></span> to accept these edit ranges for the current track edit function. You will
         be returned to the edit function with the display reading <span class="value">RANGE=SET</span>, or;</li>
-      <li>Press <span class="value">*ALL*</span> to bypass the edit ranges and have the track edit function affect the
+      <li>Press <span class="function"><span class="star">*</span>ALL<span class="star">*</span></span> to bypass the edit ranges and have the track edit function affect the
         entire track.</li>
     </ul>
     <p>You will be returned to the edit function with the display reading <span class="lcd">RANGE=ALL</span>.</p>
@@ -850,7 +848,7 @@
       <li>Use the data entry controls to specify the amount the track is to be shifted. Positive values will move the
         events in the track ahead in time, toward the end of the sequence; negative amounts will shift the events back,
         toward the beginning.</li>
-      <li>Press <span class="lcd">*YES*</span> to execute the edit command (or press <span class="lcd">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the edit command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel). After editing, the display shows the <span class="page-name">Audition Play/Keep</span> page where you
         can audition the results of the edit before deciding whether to keep it or not.</li>
     </ul>
@@ -931,7 +929,7 @@
       <li>If you wish to quantize a specific range rather than the entire track, press <span class="function">RANGE</span> and set the time and/or key
         range on the <span class="page-name">Edit Track Range</span> page, as shown earlier in this section. If not,
         leave it set to <span class="value">RANGE=ALL</span>.</li>
-      <li>Press <span class="value">*YES*</span> to execute the <span class="function">QUANTIZE</span> command (or press <span class="value">*NO*</span> to cancel). After
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the <span class="function">QUANTIZE</span> command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to cancel). After
         editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep</span> page where you can
         audition the results of the edit before deciding whether to keep it or not.</li>
     </ul>
@@ -947,7 +945,7 @@
       <li>On the <span class="page-name">Options</span> page, you can set the levels of the <span class="function">Quantize PERCENT</span>, <span class="function">RANDOM</span>,
         and <span class="function">SWING</span> amount using the <kbd class="button">Data Entry Slider</kbd>. After setting these levels, to engage
         these parameters, press <span class="value">*ON&nbsp;*</span>.</li>
-      <li>If you do not want to use these features, press <span class="value">*OFF*</span>. This returns you to the previous display.</li>
+      <li>If you do not want to use these features, press <span class="function"><span class="star">*</span>OFF<span class="star">*</span></span>. This returns you to the previous display.</li>
       <li>Straight quantization will always take place when quantize options are set to “<span class="value">OFF</span>,” even if the user has specified values for <span class="function">PERCENT</span>, <span class="function">RANDOM</span>, and <span class="function">SWING</span>. The options will not have any effect until “<span class="value">OPTIONS=ON</span>.”</li>
     </ul>
     <p>The option switch defaults to <span class="value">OFF</span> when the sequencer is initialized, but after that,
@@ -1144,7 +1142,7 @@
       <li>If you wish to erase a specific range rather than the entire track, press <span class="param">RANGE</span> and set the time and/or key
         range on the <span class="page-name">Edit Track Range</span> page, as shown earlier in this section. If not,
         leave it set to <span class="value">RANGE=ALL</span>.</li>
-      <li>Press <span class="value">*YES*</span> to execute the edit command (or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the edit command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel). After editing, if a range was specified, the TS-10 returns with the <span class="page-name">Audition
           Play/Keep</span> page where you can audition the results of the edit before deciding whether to keep it or
         not. If the range was <span class="value">ALL</span>, there is no audition.</li>
@@ -1220,7 +1218,7 @@
       <li>If you wish to copy a specific range rather than the entire track, press <span class="param">RANGE</span> and set the time and/or key
         range on the <span class="page-name">Edit Track Range</span> page, as shown earlier in this section. If not,
         leave it set to <span class="value">RANGE=ALL</span>.</li>
-      <li>Press <span class="value">*YES*</span> to execute the copy command (or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the copy command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep</span> page where
         you can audition the results of the edit before deciding whether to keep it or not.</li>
     </ul>
@@ -1230,23 +1228,22 @@
         <ul>
           <li>If the destination track is empty (no track data), both the track data and all the track parameters (Mix, Pan,
             Timbre, etc.) from source track will be copied to the destination track.</li>
-            <li>If the destination track already contains recorded track data, after you press <span class="value">*YES*</span>
-              to copy the track, the display will warn: <span class="lcd">DATA ON DESTINATION TRACK WILL BE LOST</span>. Press <span
-              class="value">*YES*</span> to proceed, or press <span class="value">*NO*</span> to exit and select a different
+            <li>If the destination track already contains recorded track data, after you press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>
+              to copy the track, the display will warn: <span class="lcd">DATA ON DESTINATION TRACK WILL BE LOST</span>. Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to proceed, or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to exit and select a different
               destination track.</li>
-              <li>After you press <span class="value">*YES*</span>, the display asks <span class="lcd">COPY TRACK PARAMETERS TOO?</span></li>
+              <li>After you press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>, the display asks <span class="lcd">COPY TRACK PARAMETERS TOO?</span></li>
               <ul>
-              <li>Press <span class="value">*YES*</span> to copy both the recorded track data and all the track parameters to
+              <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to copy both the recorded track data and all the track parameters to
                 the destination track.</p>
-                <li> Press <span class="value">*NO*</span> to copy only the recorded track data to the destination track, leaving
+                <li> Press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to copy only the recorded track data to the destination track, leaving
                   the values of all the track parameters as they were before.</p>
                 </ul>
                 </ul>
               </aside>
-    <h3 id="more-additional-track-edit-functions">*MORE* — Additional Track Edit functions</h3>
-    <p>Pressing <span class="function">*MORE*</span> from the <span class="page-name">Edit Track</span> page displays a
+    <h3 id="more-additional-track-edit-functions"><span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> — Additional Track Edit functions</h3>
+    <p>Pressing <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> from the <span class="page-name">Edit Track</span> page displays a
       sub-page which contains five additional track editing options. Pressing the <kbd class="button">Edit Track</kbd>
-      button twice will also take you directly to this page. Press <span class="function">*MORE*</span>. The display shows:
+      button twice will also take you directly to this page. Press <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span>. The display shows:
     </p>
 
     <figure class="vfd-unit">
@@ -1303,7 +1300,7 @@
       the key range function to a transpose a single key.</p>
     <ul>
       <li>Make sure the track you want to transpose is selected.</li>
-      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="lcd">*MORE*</span> from the <span
+      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> from the <span
           class="page-name">Edit Track</span> page), then select <span class="param">TRANSPOSE</span>. The display shows:</li>
     </ul>
     <figure class="vfd-unit">
@@ -1366,7 +1363,7 @@
       <li>If you wish to transpose a specific range rather than the entire track, press RANGE and set the time and/or
         key range on the <span class="page-name">Edit Track Range</span> page, as shown earlier in this section. If not,
         leave it set to <span class="value">RANGE=ALL</span>.</li>
-      <li>Press <span class="value">*YES*</span> to execute the edit command (or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the edit command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel). After editing, the TS-10 returns with the <span class="page-name">Play/Keep</span> page where you can
         audition the results of the edit before deciding whether to keep it or not.</li>
     </ul>
@@ -1376,7 +1373,7 @@
       increase the key velocity of all the notes in the track by some amount.</p>
     <ul>
       <li>Make sure the track you want to edit is selected.</li>
-      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="value">*MORE*</span> from the <span
+      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> from the <span
           class="page-name">Edit Track</span> page), then select SCALE. The display shows:</li>
           <figure class="vfd-unit">
 
@@ -1527,7 +1524,7 @@
       <li>If you wish to scale a specific range rather than the entire track, press <span class="param">RANGE</span> and set the time and/or key
         range on the <span class="page-name">Edit Track Range</span> page, as shown earlier in this section. If not,
         leave it set to <span class="value">RANGE=ALL</span>.</li>
-      <li>Press <span class="value">*YES*</span> to execute the Scale command (or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the Scale command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep</span> page where
         you can audition the results of the edit before deciding whether to keep it or not.</li>
     </ul>
@@ -1536,7 +1533,7 @@
       track. Every key event, controller change and program change can be individually located and edited.</p>
     <ul>
       <li>Make sure the track you want to edit is selected.</li>
-      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="value">*MORE*</span> from the <span
+      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> from the <span
           class="page-name">Edit Track</span> page), then select <span class="function">EVENT-LIST</span>. The display shows:</li>
     </ul>
     <figure class="vfd-unit">
@@ -1654,14 +1651,14 @@
         sequences that make up the song: when <span class="value">TEMPO=+00</span>, the <span class="param">ACTUAL</span> value shows the actual
         tempo of the sequence corresponding to the song step that is currently playing.</p>
     </aside>
-    <h4 id="exit" class="param-name">*EXIT*</h4>
+    <h4 id="exit" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
     <p>This exits Event List mode. If you have made any changes to the track you will be put on the <span
         class="page-name">Play/Keep</span> page where you can audition the changes before deciding whether to keep them.
     </p>
-    <h4 id="edit" class="param-name">*EDIT*</h4>
+    <h4 id="edit" class="param-name"><span class="function"><span class="star">*</span>EDIT<span class="star">*</span></span></h4>
     <p>Pressing EDIT displays the event editor sub-page which shows the selected event and its event number with the
       time that it occurs, and in the case of events with duration, the end time of the event as well.</p>
-    <p>Once you have selected an event to edit using the Event Number parameter (<span class="param">NUM</span>), press <span class="function">*EDIT*</span>. The display shows:</p>
+    <p>Once you have selected an event to edit using the Event Number parameter (<span class="param">NUM</span>), press <span class="function"><span class="star">*</span>EDIT<span class="star">*</span></span>. The display shows:</p>
     <figure class="vfd-unit">
       <div class="vfd-callouts top">
         
@@ -1702,8 +1699,8 @@
       not available when the Event Type is <span class="value">ALL</span> (all events) or <span class="value">CNT</span> (all controllers).</p>
     <h4 id="delete-2" class="param-name">DELETE</h4>
     <p>This will remove the current event from the track.</p>
-    <h4 id="exit-2" class="param-name">*EXIT*</h4>
-    <p>Pressing <span class="value">*EXIT*</span> returns you to the main <span class="page-name">Event List</span> page.
+    <h4 id="exit-2" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
+    <p>Pressing <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> returns you to the main <span class="page-name">Event List</span> page.
     </p>
     <p>Value</p>
     <p>To edit the VALUE of the current Event (the key number and velocity of a key event; the value from 0 to 127 of a
@@ -1715,7 +1712,7 @@
       button below the time. The display shows:</p>
     <p>Use the data entry controls to change the start point of the event, pressing the soft button beneath the time to
       move the cursor between Bar, Beat, and Clock. When you have the starting time that you want showing on the
-      display, press <span class="lcd">*EXIT*</span> to return to the <span class="page-name">Event List</span> page
+      display, press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the <span class="page-name">Event List</span> page
       with the event on the new time.</p>
     <aside class="note">
       <p>When a Song track is selected, an additional two segments are added to this readout, and the time
@@ -1761,13 +1758,13 @@
       beats and clocks the event lasts. You can select <span class="value">BEATS=##</span>, edit that and then select <span class="value">CLOCKS=##</span> and edit that.</p>
     <p>The upper and lower lines of this sub-page are interactive — editing the End Time on the upper line will cause
       the duration on the lower line to change, and vice versa.</p>
-    <p>When you have the duration that you want showing on the display, press <span class="value">*EXIT*</span> to return
+    <p>When you have the duration that you want showing on the display, press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return
       to the <span class="page-name">Event Edit</span> sub-page.</p>
     <h3 id="auditioning-event-edit-changes" class="param-name">Auditioning Event Edit Changes</h3>
-      <p>If you press <span class="value">*EXIT*</span> to leave the Event List function
+      <p>If you press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to leave the Event List function
       without having made any changes in the track, you will simply be returned to the <span class="page-name">Edit
         Track</span> page.</p>
-    <p>If you do change anything in the track, when you press <span class="value">*EXIT*</span> you will be placed on a
+    <p>If you do change anything in the track, when you press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> you will be placed on a
       special version of the <span class="page-name">Audition Play/Keep</span> page, where you can audition the new
       track and the original before deciding to either keep the new track, keep the old track or return to the Event
       Editor to edit some more. The display shows:</p>
@@ -1830,7 +1827,7 @@
     <p>The <span class="function">FILTER</span> command has two modes, <span class="value">ERASE</span> and <span class="value">COPY</span>. Depending on which mode is selected, it will either remove the specified events from the track, or simply copy them to another track, leaving the original track intact.</p>
     <ul>
       <li>Make sure the track you want to filter is selected.</li>
-      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="lcd">*MORE*</span> from the <span
+      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> from the <span
           class="page-name">Edit Track</span> page), then select FILTER. The display shows:</li>
           <figure class="vfd-unit">
             <div class="vfd-bezel">
@@ -1947,7 +1944,7 @@
         <li>You are returned to the <span class="page-name">Filter</span> page, the display reading <span class="value">MODE=COPY</span>.</li>
         <li>If you want to permanently remove the data from the track, simply press <span class="function">ERASE</span>. You are returned to the <span class="page-name">Filter</span> page, the display reading <span class="value">MODE=ERASE</span>.</li>
         </ul>
-        <li>Press <span class="value">*YES*</span> to execute the filter command (or press <span class="value">*NO*</span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep</span> page where you can audition the results of the edit before deciding whether to keep it or not.</li>
+        <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the filter command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep</span> page where you can audition the results of the edit before deciding whether to keep it or not.</li>
       </ul>
     <aside class="note">
       <p>If you chose Copy mode, the TS-10 returns with the new track (the copy) selected. If you wanted to copy
@@ -1964,7 +1961,7 @@
       that the source sequence is not altered or erased by this process.</p>
     <ul>
       <li>Make sure the track you want to merge (the source track) is selected.</li>
-      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="lcd">*MORE*</span> from the <span
+      <li>Press <kbd class="button">Edit Track</kbd> twice (or press <span class="function"><span class="star">*</span>MORE<span class="star">*</span></span> from the <span
           class="page-name">Edit Track</span> page), then select MERGE. The display shows:</li>
           <figure class="vfd-unit">
             <div class="vfd-callouts top">
@@ -2016,7 +2013,7 @@
       <li>If you want to merge the source track with a track in a different sequence, select the destination sequence
         and use the data entry controls to choose the one you want. The default is the current sequence, the one the
         source track is in.</li>
-      <li>Press <span class="value">*YES*</span> to execute the merge command (or press <span class="value">*NO*</span> to
+      <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to execute the merge command (or press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to
         cancel). After editing, the TS-10 returns with the <span class="page-name">Audition Play/Keep</span> page where
         you can audition the results of the edit before deciding whether to keep it or not.</li>
     </ul>
@@ -2343,7 +2340,7 @@
         sound on a track, etc. and then select a different sequence or song, you will be asked if you want to save those
         changes. This is the default setting.</li>
       <li><span class="value">AUTO</span> — when <span class="value">SAVE CHANGES=AUTO</span>, all changes made to any of the Track Parameters, or
-        track sound assignments are made permanent when you select another sequence or song. <span class="value">AUTO</span> is similar to <span class="value">ASK</span>, except the <span class="lcd">SAVE CHANGES?</span> prompt is not displayed, and assumes that you answered <span class="value">*YES*</span>. Recording any new track data will not automatically reset this parameter to <span class="value">ASK</span> — it will remain set to <span class="value">AUTO</span> until you change it.</li>
+        track sound assignments are made permanent when you select another sequence or song. <span class="value">AUTO</span> is similar to <span class="value">ASK</span>, except the <span class="lcd">SAVE CHANGES?</span> prompt is not displayed, and assumes that you answered <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>. Recording any new track data will not automatically reset this parameter to <span class="value">ASK</span> — it will remain set to <span class="value">AUTO</span> until you change it.</li>
     <h4 id="step-entry" class="param-name"><span class="param">STEP-ENTRY</span><span class="range">Range: OFF or
         ON</span></h4>
     <p>Determines whether <span class="function">Step Entry</span> mode will be used when the sequencer is put into
@@ -2462,7 +2459,7 @@
       <h4 id="step-3" class="param-name"><span class="param">STEP</span><span class="range">Range: (described
         below)</span></h4>
     <p>Allows you to set the current step size which will be added to the current track location (<span class="param">TIME</span>) whenever you use
-      the <span class="function">*STEP*</span> command, or when <span class="value">AUTOSTEP=ON</span>. The range of step sizes
+      the <span class="function"><span class="star">*</span>STEP<span class="star">*</span></span> command, or when <span class="value">AUTOSTEP=ON</span>. The range of step sizes
       is from whole notes <span class="value">1/1</span> to 1/64th note triplets <span class="value">1/64T</span>. Dotted note values are also available (<span class="value">1/1D</span> to <span class="value">1/16D</span>).</p>
     <table class="data-table lookup">
       <thead>
@@ -2555,16 +2552,16 @@
         </tr>
       </tbody>
     </table>
-    <h4 id="step-4" class="param-name">*STEP*</h4>
+    <h4 id="step-4" class="param-name"><span class="function"><span class="star">*</span>STEP<span class="star">*</span></span></h4>
     <p>Pressing this soft button will advance the track location (TIME) by the amount set in the STEP parameter. Notice
-      the TIME parameter adjusts to the new location on the track when the <span class="function">*STEP*</span> button is
+      the TIME parameter adjusts to the new location on the track when the <span class="function"><span class="star">*</span>STEP<span class="star">*</span></span> button is
       pressed.</p>
     <p>If you have selected <span class="value">RECORD-MODE=LOOPED</span> on the <span class="value">MODE=LOOPED</span> on the <span
         class="page-name">Sequencer Control</span> page, stepping past the end of the track will wrap around to the
       beginning, allowing you to continue stepping. Otherwise, if you step past the end of the track you will enter <span class="function">Audition</span> mode.</p>
     <p>If you are using a Foot Switch with the TS-10, you can assign the foot switch to advance the location by setting
-      <span class="value">FS1=*STEP*</span> on the <span class="page-name">System</span> page. Pressing the foot switch
-      will act just like the <span class="value">*STEP*</span> command on the <span class="page-name">Step Entry</span>
+      <span class="value">FS1=<span class="function"><span class="star">*</span>STEP<span class="star">*</span></span></span> on the <span class="page-name">System</span> page. Pressing the foot switch
+      will act just like the <span class="function"><span class="star">*</span>STEP<span class="star">*</span></span> command on the <span class="page-name">Step Entry</span>
       page. This is useful when you need both hands to control the keyboard.</p>
   </article>
   <footer class="site-footer">

@@ -16,6 +16,15 @@
 }
 
 @font-face {
+  font-family: "Anybody Star";
+  src: url("../fonts/anybody-star.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+002A;
+}
+
+@font-face {
   font-family: Michroma;
   src: url("../fonts/michroma-latin.woff2") format("woff2");
   font-weight: 400;
@@ -250,6 +259,9 @@ body {
 
 .manual h5 {
   margin: 1.1rem 0 0;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .manual h5 + p,
@@ -346,6 +358,14 @@ span.value,
   white-space: nowrap;
   color: var(--ink);
   letter-spacing: 0em;
+}
+
+span.star {
+  font-family: "Anybody Star", var(--font-panel);
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 500;
+  font-synthesis: none;
 }
 
 span.lcd {
@@ -914,8 +934,16 @@ table.data-table th {
   color: var(--accent);
 }
 
-table.data-table.lookup td {
+table.data-table.direct-macro-dial td {
+  border: 1px solid var(--ink);
+  text-align: center;
+  vertical-align: middle;
+}
+
+table.data-table.direct-macro-dial td:first-child {
   text-align: right;
+  font-family: var(--font-ui);
+  font-weight: 550;
   white-space: nowrap;
 }
 

@@ -357,9 +357,9 @@
 </ul>
 <aside class="tip"><p>With the <span class="function">SoundFinder</span> feature, when a sound name is selected, pressing the <kbd class="button">Replace Track Sound</kbd> button and then continued presses of the Up or <kbd class="button">Down Arrow</kbd> buttons will scroll through all sounds in memory that are assigned the same TYPE.</p></aside>
 <h4 id="option" class="param-name"><span class="param">OPTION</span><span class="range">Range: *-NONE-*, PITCHTBL, WAVELIST, or DRUM-MAP</span></h4>
-<p>The setting of this parameter indicates whether a Custom <dfn class="term">Pitch-Table</dfn>, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="value">*EXIT*</span>.” If you choose <span class="value">*EXIT*</span>, then the setting of the parameter is not changed.</p>
-<p>If you have a program where <span class="value">OPTION=PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>, and you want to eliminate the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="value">*YES*</span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
-<p>If you have a program where OPTION=&lt;<span class="value">PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to change the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="value">*EXIT*</span>. At this point, you can select a new Option, or press <span class="value">*EXIT*</span> to return to the previously selected Option assigned to the program.</p>
+<p>The setting of this parameter indicates whether a Custom <dfn class="term">Pitch-Table</dfn>, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is not changed.</p>
+<p>If you have a program where <span class="value">OPTION=PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>, and you want to eliminate the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
+<p>If you have a program where OPTION=&lt;<span class="value">PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to change the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: OFF, KEY, or CHAN</span></h4>
 <p>Allows you to select <dfn class="term">Poly-Key</dfn>, Channel, or no pressure for the program. Generally, if a program doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="patch" class="param-name"><span class="param">PATCH</span><span class="range">Range: LIVE or HELD</span></h4>
@@ -492,7 +492,7 @@
   <div class="vfd-callouts bottom"><div>Source Key</div><div>Playback Pitch (in Semitones)</div><div>Playback Pitch (in Cents)</div></div>
   
 </figure>
-<h4 id="calculator" class="param-name">*CALCULATOR*</h4>
+<h4 id="calculator" class="param-name"><span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span></h4>
 <p>This parameter selects the <span class="page-name">Extrapolate/Interpolate</span> sub-page, allowing you to create a pitch-table calculated from a user-defined key range.</p>
 <h4 id="key-source-key" class="param-name"><span class="param">KEY Source Key</span><span class="range">Range: A0 to C8</span></h4>
 <p>For every Source Key on the lower left, you can see and edit the pitch of that key. The Source Key can be selected by pressing the keys, or using the Data Entry Controls.</p>
@@ -500,12 +500,12 @@
 <p>The source key can be thought of as the physical location of the key on the keyboard. The playback pitch can be the same as the source key — as shown in the display — or it can be any pitch from A0 to C8.</p>
 <h4 id="fine-tune-parameter" class="param-name"><span class="param">Fine Tune Parameter</span><span class="range">Range: 00 to 99 cents</span></h4>
 <p>Enables you to fine tune the pitch, or create micro-tunings and other alternate tunings.</p>
-<h4 id="exit" class="param-name">*EXIT*</h4>
+<h4 id="exit" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
 <ul>
-  <li>Press <span class="value">*EXIT*</span> to return to the first <span class="page-name">Program Control</span> sub-page, eliminating any edits you may have made on the <span class="page-name">Pitch-Table Editor</span> sub-page.</li>
+  <li>Press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the first <span class="page-name">Program Control</span> sub-page, eliminating any edits you may have made on the <span class="page-name">Pitch-Table Editor</span> sub-page.</li>
 </ul>
 <h3 id="extrapolate-interpolate" class="param-name">Extrapolate/Interpolate</h3>
-<p>To display the <span class="page-name">Extrapolate/Interpolate</span> sub-page, press the <span class="lcd">*CALCULATOR*</span> soft button. The display shows:</p>
+<p>To display the <span class="page-name">Extrapolate/Interpolate</span> sub-page, press the <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span> soft button. The display shows:</p>
 <figure class="vfd-unit">
   
   <div class="vfd-bezel">
@@ -542,12 +542,12 @@
   Note that you can also set the start and end keys using the data entry controls, and press the soft button beneath them to toggle back and forth.</p>
 <h4 id="extrapolate" class="param-name">EXTRAPOLATE</h4>
 <p>The <span class="function">EXTRAPOLATE</span> command takes the pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
-<p>After a key-range has been defined, press the EXTRAPOLATE soft button. The display briefly reads PITCH-TABLE <span class="lcd">*CALCULATOR*</span>, then returns with the newly defined range across the whole keyboard.</p>
+<p>After a key-range has been defined, press the EXTRAPOLATE soft button. The display briefly reads PITCH-TABLE <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span>, then returns with the newly defined range across the whole keyboard.</p>
 <h4 id="interpolate" class="param-name">INTERPOLATE</h4>
 <p><span class="function">INTERPOLATE</span> takes the interval between two notes on the keyboard and divides all the keys in between into equally-spaced fractions of that interval.</p>
-<p>After a key-range has been defined, press the <span class="function">INTERPOLATE</span> soft button. The display briefly reads <span class="lcd">PITCH-TABLE *CALCULATOR*</span>, then returns with the newly defined range across the whole keyboard.</p>
+<p>After a key-range has been defined, press the <span class="function">INTERPOLATE</span> soft button. The display briefly reads <span class="lcd">PITCH-TABLE <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span></span>, then returns with the newly defined range across the whole keyboard.</p>
 <ul>
-  <li>Press <span class="value">*EXIT*</span> to return to the first <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn></span> sub-page, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate</span> sub-page.</li>
+  <li>Press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the first <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn></span> sub-page, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate</span> sub-page.</li>
 </ul>
 <aside class="warning"><p>You must save the program containing your custom pitch-table, or copy the custom pitch-table into the system, or you will lose it as soon as you edit another sound.</p></aside>
 <h3 id="copy-pitch-table-parameters" class="param-name">Copy Pitch-Table Parameters</h3>
@@ -677,7 +677,7 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>Defines which of the internal ROM waves will be used in the currently selected step.</p>
 <h4 id="start" class="param-name"><span class="param">START</span><span class="range">Range: 00 to 99</span></h4>
 <p>Determines the starting point <em>within</em> the internal ROM wave. This offset can be used to eliminate the attack portion of a wave to create a smoother transition between waves.</p>
-<h4 id="time" class="param-name">*TIME*</h4>
+<h4 id="time" class="param-name"><span class="function"><span class="star">*</span>TIME<span class="star">*</span></span></h4>
 <p>Pressing this soft button will reveal the following screen:</p>
 <figure class="vfd-unit">
   
@@ -722,9 +722,9 @@ You can control the relative volume of each Program, and you can optionally elim
 <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 0 to 6 dB</span></h4>
 <p>Determines how many decibels (dB) below normal volume the two wave steps will meet at the center point of the cross-fade curve.</p>
 <figure class="figure"><img src="images/xfade-depth.svg" alt="Cross-fade volume graph: DEPTH=0 dB at the top of the X, DEPTH=6 dB at the crossing"><figcaption>DEPTH is how far below full volume the two steps meet.</figcaption></figure>
-<h4 id="exit-2" class="param-name">*EXIT*</h4>
-<p>Pressing <span class="lcd">*EXIT*</span> will return you to the <span class="page-name">Wave-List Editor</span> page.</p>
-<h4 id="pitch" class="param-name">*PITCH*</h4>
+<h4 id="exit-2" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
+<p>Pressing <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> will return you to the <span class="page-name">Wave-List Editor</span> page.</p>
+<h4 id="pitch" class="param-name"><span class="function"><span class="star">*</span>PITCH<span class="star">*</span></span></h4>
 <p>Pressing this soft button will reveal the following screen:</p>
 <figure class="vfd-unit">
   
@@ -766,8 +766,8 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>Determines the pitch of the wave step, transposing from the root note of the wave step. This can be used to create preset arpeggios or other patterns.</p>
 <h4 id="detune" class="param-name"><span class="param">DETUNE</span><span class="range">Range: -99 to +99 (in cents)</span></h4>
 <p>Allows you to fine-tune the wave step's pitch.</p>
-<h4 id="exit-3" class="param-name">*EXIT*</h4>
-<p>Pressing <span class="lcd">*EXIT*</span> will return you to the <span class="page-name">Wave-List Editor</span> page.</p>
+<h4 id="exit-3" class="param-name"><span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span></h4>
+<p>Pressing <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> will return you to the <span class="page-name">Wave-List Editor</span> page.</p>
 <p>Copy  Wave-List Parameters Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Edit Wave-List</span> sub-page will display the <span class="page-name">Copy</span> page:</p>
 <figure class="vfd-unit has-page">
   
@@ -886,7 +886,7 @@ You can control the relative volume of each Program, and you can optionally elim
 
 <table class="data-table lookup">
   <tbody>
-    <tr><td><span class="value">*VOICE*</span></td><td style="text-align: left;">Uses Patch VOICE panning</td></tr>
+    <tr><td><span class="function"><span class="star">*</span>VOICE<span class="star">*</span></span></td><td style="text-align: left;">Uses Patch VOICE panning</td></tr>
     <tr><td><span class="value">L------</span></td><td style="text-align: left;">Hard Left</td></tr>
     <tr><td><span class="value">-L-----</span></td><td style="text-align: left;">Medium Left</td></tr>
     <tr><td><span class="value">--L----</span></td><td style="text-align: left;">Soft Left</td></tr>
@@ -896,7 +896,7 @@ You can control the relative volume of each Program, and you can optionally elim
     <tr><td><span class="value">------R</span></td><td style="text-align: left;">Hard Right</td></tr>
   </tbody>
 </table>
-<aside class="note"><p>When <span class="value">PAN=*VOICE*</span>, the key uses whatever pan setting is chosen on the <span class="page-name">Output</span> page of the voice(s) responding to the key. 
+<aside class="note"><p>When <span class="value">PAN=<span class="function"><span class="star">*</span>VOICE<span class="star">*</span></span></span>, the key uses whatever pan setting is chosen on the <span class="page-name">Output</span> page of the voice(s) responding to the key. 
   All of the other <span class="param">PAN</span> settings override the pan setting on the <span class="page-name">Output</span> page.</p>
 </aside>
 <h4 id="pitch-2" class="param-name"><span class="param">PITCH</span><span class="range">Range: -16 to +15 semitones</span></h4>
@@ -1192,8 +1192,8 @@ You can control the relative volume of each Program, and you can optionally elim
 <p><span class="page-name">Map Editor</span> page when you pressed <kbd class="button">Copy</kbd>).</p>
 <h4 id="key-range-start-end-2" class="param-name"><span class="param">KEY–RANGE START / END</span><span class="range">Range: B1 to B6</span></h4>
 <p>Allows you to specify the range of keys in the drum-map to be filled by playing the lowest and then highest key of the range. You can also edit these parameters using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Press the soft button to select between the Start and End key fields.</p>
-<p>Selecting <span class="lcd">*COPY*</span> will complete the command and will show <span class="lcd">COPY DONE</span> before returning to the <span class="page-name">Copy</span> page.</p>
-<p>Selecting <span class="lcd">*EXIT*</span> will simply return the <span class="page-name">Copy</span> page without affecting the Drum-Map.</p>
+<p>Selecting <span class="function"><span class="star">*</span>COPY<span class="star">*</span></span> will complete the command and will show <span class="lcd">COPY DONE</span> before returning to the <span class="page-name">Copy</span> page.</p>
+<p>Selecting <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> will simply return the <span class="page-name">Copy</span> page without affecting the Drum-Map.</p>
 
 <h2 id="program-effects-page">Program Effects Page</h2>
 <p>Understanding the effect algorithms and their related parameters are described in detail in <a href="06-effects-concepts.html">Section 6 — Understanding Effects</a> and <a href="07-effects-00-21.html">Section 7 — Effect Parameters</a>.</p>

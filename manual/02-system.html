@@ -109,9 +109,9 @@
   
 </figure>
 <p>When the optional SW-10 Dual Foot Switch is plugged into either Foot Switch jack, the settings of these parameters will control the function of the pedals. You can even use two SW-10 Dual Foot Switches plugged into both Foot Switch jacks, and have four completely independent controllers.</p>
-<p>If you are using the single SW-2 Foot Switch which came with the TS-10, you should keep both left foot switch parameters set to <span class="value">*UNUSED*</span>, and assign the right foot switch parameters to the desired function. The list of available parameters are:</p>
+<p>If you are using the single SW-2 Foot Switch which came with the TS-10, you should keep both left foot switch parameters set to <span class="function"><span class="star">*</span>UNUSED<span class="star">*</span></span>, and assign the right foot switch parameters to the desired function. The list of available parameters are:</p>
 <ul>
-  <li><span class="value">*UNUSED*</span> — makes the TS-10 ignore the Foot Switch.</li>
+  <li><span class="function"><span class="star">*</span>UNUSED<span class="star">*</span></span> — makes the TS-10 ignore the Foot Switch.</li>
   <li><span class="value">SUSTAIN</span> — holding the Foot Switch down will cause notes to sustain after a key has been released, much like the sustain pedal on a piano. Transmitted via MIDI as <span class="message">Controller #64</span>.</li>
   <li><span class="value">SOSTENUTO</span> — makes the Foot Switch act similar to the sostenuto pedal on a piano. Any keys that are held down when you press the Foot Switch are sustained until you release the Foot Switch, but subsequent keys are not affected. Transmitted via MIDI as <span class="message">Controller #66</span>.</li>
   <li><span class="value">PATCH R</span> — makes the Foot Switch act like the right patch select button.</li>
@@ -127,7 +127,7 @@
   <li><span class="value">PRESET-DN</span> — each time the Foot Switch is pressed, the TS-10 selects the previous Preset (functioning just the opposite to PRESET-UP).</li>
   <li><span class="value">PLAY/STOP</span> — the Foot Switch will play and stop the sequencer, exactly reproducing the actions of the <kbd class="button">Play</kbd> and <kbd class="button">Stop</kbd> buttons on the front panel.</li>
   <li><span class="value">STOP/CONT</span> — the Foot Switch will stop and continue the sequencer, exactly reproducing the actions of the <kbd class="button">Stop/Continue</kbd> button on the front panel.</li>
-  <li><span class="value">STEP-REC</span> — this setting allows the Foot Switch to be used in Sequencer <span class="function">Step Entry</span> record mode to advance the track location by the amount set in the step size parameter on the <span class="page-name">Step Entry</span> page. This is the same as using the <span class="value">*STEP*</span> command on that page.</li>
+  <li><span class="value">STEP-REC</span> — this setting allows the Foot Switch to be used in Sequencer <span class="function">Step Entry</span> record mode to advance the track location by the amount set in the step size parameter on the <span class="page-name">Step Entry</span> page. This is the same as using the <span class="function"><span class="star">*</span>STEP<span class="star">*</span></span> command on that page.</li>
   <li><span class="value">SONG-STEP</span> — if a song step has been programmed with <span class="value">REPS=FS</span>, each time you press the Foot Switch, the TS-10 will select the sequence that is the next step in the song.</li>
 </ul>
 <aside class="tip"><p>Both the Sustain and Sostenuto pedals can be used to dynamically “latch” the current amount of pressure being exerted on the keyboard. Here’s how:</p>
@@ -303,7 +303,7 @@
   <li>Press the Up or <kbd class="button">Down Arrow</kbd> button until the display reads <span class="value">TYPE=60-PROGRAMS</span>.</li>
   <li>Press the upper left soft button above the words <span class="lcd">LOAD FILE=__________</span>. Using the Up or <kbd class="button">Down Arrow</kbd> button, find the file named <span class="value">ETH/MOD PTS</span>.</li>
   <li>Press the bottom middle soft button beneath the words BANKSET U0, and press the <kbd class="button">Up Arrow</kbd> button once so the display reads BANKSET U1.</li>
-  <li>Press the upper right soft button above the word <span class="lcd">*YES*</span>. This will load 60 new pitch-table Programs into User RAM BankSet 1.</li>
+  <li>Press the upper right soft button above the word <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>. This will load 60 new pitch-table Programs into User RAM BankSet 1.</li>
 </ul>
 <p>When the file has been loaded, the display will show <span class="lcd">DISK COMMAND COMPLETED</span>.</p>
 <ul>
