@@ -4994,6 +4994,159 @@ def dedupe_dfn_terms(html: str) -> str:
     return "".join(out)
 
 
+STAR_GLYPH_RE = r'(?:<span class="star">\*</span>|\*)'
+LCD_ACTION_INNER_RE = r"[ \t]*[A-Z][A-Z0-9 ./\-]*[ \t]*"
+LCD_ACTION_RE = re.compile(
+    r"(?:"
+    r'<span\s+class="(?:value|function|lcd)">\s*'
+    + STAR_GLYPH_RE
+    + rf"(?P<inner1>{LCD_ACTION_INNER_RE})"
+    + STAR_GLYPH_RE
+    + r"\s*</span>"
+    r"|"
+    + STAR_GLYPH_RE
+    + rf"(?P<inner2>{LCD_ACTION_INNER_RE})"
+    + STAR_GLYPH_RE
+    + r")"
+)
+STAR_SPAN = '<span class="star">*</span>'
+SKIP_STAR_OPEN_RE = re.compile(
+    r"<(?P<tag>figure|div|table|tbody)\b[^>]*\bclass=\"[^\"]*\b"
+    r"(?:vfd-unit|vfd-screen|vfd-bezel)\b[^\"]*\"[^>]*>",
+    re.I,
+)
+
+
+def _skip_star_ranges(html: str) -> list[tuple[int, int]]:
+    """VFD mockup ranges (vfd-unit / vfd-bezel / vfd-screen)."""
+    ranges: list[tuple[int, int]] = []
+    i = 0
+    while True:
+        m = SKIP_STAR_OPEN_RE.search(html, i)
+        if not m:
+            break
+        tag = m.group("tag").lower()
+        depth = 1
+        pos = m.end()
+        open_re = re.compile(rf"<{tag}\b[^>]*>", re.I)
+        close_re = re.compile(rf"</{tag}\s*>", re.I)
+        while depth and pos < len(html):
+            nxt_open = open_re.search(html, pos)
+            nxt_close = close_re.search(html, pos)
+            if not nxt_close:
+                break
+            if nxt_open and nxt_open.start() < nxt_close.start():
+                depth += 1
+                pos = nxt_open.end()
+            else:
+                depth -= 1
+                pos = nxt_close.end()
+        ranges.append((m.start(), pos))
+        i = pos
+    return ranges
+
+
+NESTED_ACTION_WRAPPER_RE = re.compile(
+    r'<span\s+class="(?:value|lcd)">\s*'
+    r'(<span class="function"><span class="star">\*</span>'
+    rf"{LCD_ACTION_INNER_RE}"
+    r'<span class="star">\*</span></span>)\s*</span>',
+    re.I,
+)
+
+
+BEZEL_OPEN_RE = re.compile(
+    r'<div\b[^>]*\bclass="[^"]*\bvfd-bezel\b[^"]*"[^>]*>',
+    re.I,
+)
+STAR_TAG_RE = re.compile(r'<span class="star">\*</span>')
+
+
+def strip_stars_in_vfd_bezels(html: str) -> str:
+    """VFD mockups use the display asterisk; Anybody Star spans are prose-only."""
+    out: list[str] = []
+    last = 0
+    i = 0
+    while True:
+        m = BEZEL_OPEN_RE.search(html, i)
+        if not m:
+            break
+        depth = 1
+        pos = m.end()
+        open_re = re.compile(r"<div\b[^>]*>", re.I)
+        close_re = re.compile(r"</div\s*>", re.I)
+        while depth and pos < len(html):
+            nxt_open = open_re.search(html, pos)
+            nxt_close = close_re.search(html, pos)
+            if not nxt_close:
+                break
+            if nxt_open and nxt_open.start() < nxt_close.start():
+                depth += 1
+                pos = nxt_open.end()
+            else:
+                depth -= 1
+                pos = nxt_close.end()
+        chunk = html[m.start() : pos]
+        screens: list[tuple[int, int]] = []
+        s = 0
+        screen_open = re.compile(
+            r'<tbody\b[^>]*\bclass="[^"]*\bvfd-screen\b[^"]*"[^>]*>', re.I
+        )
+        while True:
+            sm = screen_open.search(chunk, s)
+            if not sm:
+                break
+            depth = 1
+            p = sm.end()
+            t_open = re.compile(r"<tbody\b[^>]*>", re.I)
+            t_close = re.compile(r"</tbody\s*>", re.I)
+            while depth and p < len(chunk):
+                nxt_open = t_open.search(chunk, p)
+                nxt_close = t_close.search(chunk, p)
+                if not nxt_close:
+                    break
+                if nxt_open and nxt_open.start() < nxt_close.start():
+                    depth += 1
+                    p = nxt_open.end()
+                else:
+                    depth -= 1
+                    p = nxt_close.end()
+            screens.append((sm.start(), p))
+            s = p
+        if screens:
+            parts: list[str] = []
+            cur = 0
+            for a, b in screens:
+                parts.append(chunk[cur:a])
+                parts.append(STAR_TAG_RE.sub("*", chunk[a:b]))
+                cur = b
+            parts.append(chunk[cur:])
+            chunk = "".join(parts)
+        out.append(html[last : m.start()])
+        out.append(chunk)
+        last = pos
+        i = pos
+    out.append(html[last:])
+    return "".join(out)
+
+
+def wrap_flanking_asterisks(html: str) -> str:
+    """Tag *ALLCAPS* LCD actions as function + Anybody stars; leave VFD asterisks."""
+    html = NESTED_ACTION_WRAPPER_RE.sub(r"\1", html)
+    skip = _skip_star_ranges(html)
+    out: list[str] = []
+    last = 0
+    for m in LCD_ACTION_RE.finditer(html):
+        if any(a <= m.start() < b for a, b in skip):
+            continue
+        inner = m.group("inner1") if m.group("inner1") is not None else m.group("inner2")
+        out.append(html[last : m.start()])
+        out.append(f'<span class="function">{STAR_SPAN}{inner}{STAR_SPAN}</span>')
+        last = m.end()
+    out.append(html[last:])
+    return strip_stars_in_vfd_bezels("".join(out))
+
+
 def write_delay_tempo_chart_page(terms: dict[str, list[str]]) -> None:
     body = build_delay_tempo_chart_page_body(terms)
     html_out = chrome(
@@ -5001,7 +5154,9 @@ def write_delay_tempo_chart_page(terms: dict[str, list[str]]) -> None:
         body,
         extra_scripts=["js/delay-tempo-calculator.js"],
     )
-    (OUT / DELAY_TEMPO_CHART_FNAME).write_text(dedupe_dfn_terms(html_out), encoding="utf-8")
+    (OUT / DELAY_TEMPO_CHART_FNAME).write_text(
+        wrap_flanking_asterisks(dedupe_dfn_terms(html_out)), encoding="utf-8"
+    )
     print("wrote", DELAY_TEMPO_CHART_FNAME)
 
 
@@ -5016,7 +5171,9 @@ def write_page(
     # Page shell IDs are not generated through slugify but must stay unique.
     USED_IDS.add("main")
     body = to_html_body(lines, terms, fname, catalog)
-    (OUT / fname).write_text(dedupe_dfn_terms(chrome(fname, body)), encoding="utf-8")
+    (OUT / fname).write_text(
+        wrap_flanking_asterisks(dedupe_dfn_terms(chrome(fname, body))), encoding="utf-8"
+    )
     print("wrote", fname, "lines", len(lines))
 
 
