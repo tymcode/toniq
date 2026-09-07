@@ -372,7 +372,7 @@
       <figcaption>Multiple-function effect mixer.</figcaption>
     </figure>
     <p>When the selected algorithm is a combined effect that has more than one signal processing function (such as
-      chorus and reverb), the FX1 bus feeds Effect 1, and the FX2 bus feeds Effect 2. The <span class="param">FX2
+      chorus and reverb), the <span class="param">FX1</span> bus feeds Effect 1, and the <span class="param">FX2</span> bus feeds Effect 2. The <span class="param">FX2
         Mix</span> control sets the amount of Effect 2 (usually reverb) for voices assigned to that bus.</p>
     <p><span class="param">FX1 Mix</span> controls the amount of the output from Effect 1 sent to Effect 2 rather than
       directly to the output. By setting this control to its extremes, you can arrange the two effects to be either in
@@ -385,7 +385,7 @@
       <figcaption>Parallel effect mixer.</figcaption>
     </figure>
     <p>All of the parallel effect algorithms follow the topology shown in the illustration above. The heavy lines are
-      stereo paths. Voices assigned to FX1 (on the <span class="page-name">Output</span> Page) will be sent to Effect A,
+      stereo paths. Voices assigned to <span class="param">FX1</span> (on the <span class="page-name">Output</span> Page) will be sent to Effect A,
       if the <span class="param">PAN</span> parameter is set to -99 (hard left) or sent to Effect B, if the <span
         class="param">PAN</span> parameter is set to <span class="value">+99</span> (hard right). Note that by setting
       the <span class="param">PAN</span> parameter to <span class="value">50</span>, you can create a parallel routing
@@ -393,26 +393,27 @@
       There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into Effect B.
       There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into the Reverb,
       and another parameter allowing a serial connection from Effect B into the Reverb.</p>
-    <p>Voices assigned to FX2 (on the <span class="page-name">Output</span> Page) will send a stereo signal to the
+    <p>Voices assigned to <span class="param">FX2</span> (on the <span class="page-name">Output</span> Page) will send a stereo signal to the
       reverb. The <span class="param">FX- - REVRB</span> parameter allows you to define how much of the signal you want
       sent into the Reverb.</p>
     <p>There is also a <span class="param">DRY</span> parameter (on the <span class="page-name">SEND</span> sub-page)
-      from FX2 allowing you to define how much of the FX2 signal you want to completely bypass the Reverb. Any voices
-      assigned to the <span class="param">DRY</span> Destination-Bus (on the <span class="page-name">Output</span> page)
+      from <span class="param">FX2</span> allowing you to define how much of the <span class="param">FX2</span> signal you want to completely bypass the Reverb. Any voices
+      assigned to the <span class="value">DRY</span> <span class="param">DESTINATION-BUS</span> (on the <span class="page-name">Output</span> page)
       will go through the mixer to the Main Output jacks.</p>
-    <p>Any voices assigned to the <span class="param">AUX</span> Destination-Bus will go directly to the AUX Output
+    <p>Any voices assigned to the <span class="value">AUX</span> <span class="param">DESTINATION-BUS</span> will go directly to the <kbd class="button">AUX</kbd> Output
       jacks, without any effects processing.</p>
-    <p>Selectable Effect Modulation Parameters All of the algorithms allow real-time control of selectable parameters
-      and share common modulation control parameters. The Modulation Control parameters are always the last parameters
+    <h4 id="selectable-effect-modulation-parameters">Selectable Effect Modulation Parameters</h4>
+    <p>All of the algorithms allow real-time control of selectable parameters
+      and share common modulation control parameters. The <span class="param">MODULATION CONTROL</span> parameters are always the last parameters
       on the algorithm sub-pages:</p>
     <h4 id="mod-1-src-modulation-source-1" class="param-name"><span class="param">MOD-1 SRC — Modulation Source
-        1</span><span class="range">Range: (described below)</span><br>
-      <h4 id="mod-2-src-modulation-source-2" class="param-name"><span class="param">MOD-2 SRC — Modulation Source
-          2</span><span class="range">Range: (described below)</span></h4></br>
-      <p>These parameters select the modulation sources used to modulate the parameter Destinations. Each Effect
-        Variation has a choice of two discrete mod sources.</p>
-      <h4 id="modulators-that-can-be-applied-to-the-effects">Modulators that can be applied to the Effects</h4>
-      <p>The following modulation sources are available to alter the effects in performance:</p>
+        1</span><span class="range">Range: (described below)</span></h4>
+    <h4 id="mod-2-src-modulation-source-2" class="param-name"><span class="param">MOD-2 SRC — Modulation Source
+        2</span><span class="range">Range: (described below)</span></h4>
+    <p>These parameters select the modulation sources used to modulate the parameter Destinations. Each Effect
+      Variation has a choice of two discrete mod sources.</p>
+    <h4 id="modulators-that-can-be-applied-to-the-effects">Modulators that can be applied to the Effects</h4>
+    <p>The following modulation sources are available to alter the effects in performance:</p>
       <table class="defn-table">
         <thead>
           <tr>
@@ -471,13 +472,13 @@
           <tr>
             <td><span class="value">SOSTU</span></td>
             <td>on when the assigned foot switch is held down (and <span class="value">SOSTENUTO</span> is selected as a
-              <span class="term">FOOT-SW</span> controller on the <span class="page-name">System</span> sub-page);
+              <span class="param">FOOT-SW</span> controller on the <span class="page-name">System</span> sub-page);
               otherwise off</td>
           </tr>
           <tr>
             <td><span class="value">FX-SW</span></td>
             <td>on when assigned foot switch is held down (and <span class="value">FX-SW-MOD</span> is selected as a
-              <span class="term">FOOT-SW</span> controller on the <span class="page-name">System</span> sub-page);
+              <span class="param">FOOT-SW</span> controller on the <span class="page-name">System</span> sub-page);
               otherwise off</td>
           </tr>
           <tr>

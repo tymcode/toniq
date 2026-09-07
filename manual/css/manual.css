@@ -248,6 +248,18 @@ body {
   margin: 0.08rem 0;
 }
 
+.manual h5 {
+  margin: 1.1rem 0 0;
+}
+
+.manual h5 + p,
+.manual h5 + ul:not(.tips),
+.manual h5 + ol,
+.manual h5 + figure,
+.manual h5 + aside {
+  margin-top: 0;
+}
+
 .manual a {
   color: var(--ensoniq);
 }
