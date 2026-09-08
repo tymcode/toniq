@@ -56,7 +56,7 @@
       Effect Parameter pages are described in detail in <a class="refer-to"
         href="07-effects-00-21.html#section-7-effect-parameters-00-21-parallel">Section 7 — Effect Parameters</a>.</p>
     <p>If the preset effect that is currently loaded and being heard is different than the sound effect that is being
-      shown, then a flashing MUTE will appear in the lower left corner of the display.</p>
+      shown, then a flashing <span class="lcd">MUTE</span> will appear in the lower left corner of the display.</p>
     <h3 id="preset-effects">Preset Effects</h3>
     <p>Each preset in the TS-10 also contains an effect and a complete set of effect parameter values. The effect is
       present even if none of the tracks in the preset are routed through the effect (e.g. all tracks are sent to the
@@ -339,8 +339,8 @@
     <p>The output of every voice in the TS-10 is assigned to a stereo bus. A bus, like the bus of a mixing board, mixes
       together all the voices assigned to that bus into a single stereo pair. Of the four busses on the TS-10, two are
       inputs into the signal processor (<dfn class="term">FX1</dfn> and <dfn class="term">FX2</dfn>), another is a
-      direct path to the Main outputs which bypasses all effect processing (<dfn class="term">DRY</dfn>) and the fourth
-      is a direct path to the AUX outputs which also bypasses all effect processing (<dfn class="term">AUX</dfn>). The
+      direct path to the <kbd class="button">Main</kbd> outputs which bypasses all effect processing (<dfn class="term">DRY</dfn>) and the fourth
+      is a direct path to the <kbd class="button">AUX</kbd> outputs which also bypasses all effect processing (<dfn class="term">AUX</dfn>). The
       Destination Bus assignment for each Voice is set on the <span class="page-name">Output</span> page. The voice
       settings in a program can be overridden for each preset and sequencer track on the top-level of the <span
         class="page-name">Track Effects</span> page.</p>
@@ -399,7 +399,7 @@
     <p>There is also a <span class="param">DRY</span> parameter (on the <span class="page-name">SEND</span> sub-page)
       from <span class="param">FX2</span> allowing you to define how much of the <span class="param">FX2</span> signal you want to completely bypass the Reverb. Any voices
       assigned to the <span class="value">DRY</span> <span class="param">DESTINATION-BUS</span> (on the <span class="page-name">Output</span> page)
-      will go through the mixer to the Main Output jacks.</p>
+      will go through the mixer to the <kbd class="button">Main</kbd> Output jacks.</p>
     <p>Any voices assigned to the <span class="value">AUX</span> <span class="param">DESTINATION-BUS</span> will go directly to the <kbd class="button">AUX</kbd> Output
       jacks, without any effects processing.</p>
     <h4 id="selectable-effect-modulation-parameters">Selectable Effect Modulation Parameters</h4>
@@ -482,7 +482,7 @@
               otherwise off</td>
           </tr>
           <tr>
-            <td><span class="function"><span class="star">*</span>OFF<span class="star">*</span></span></td>
+            <td><span class="value"><span class="star">*</span>OFF<span class="star">*</span></span></td>
             <td>no modulation</td>
           </tr>
         </tbody>
@@ -507,17 +507,16 @@
       <h4 id="max-mod-2-param-range-maximum" class="param-name"><span class="param">MAX — Mod 2 Param Range
           Maximum</span><span class="range">Range: varies (based on DEST parameter range)</span></h4>
       <p>These four parameters set the minimum and maximum amount (based on the selected Destination parameter’s range)
-        that the Mod Destination will be modulated by the Mod Source.</p>
-      <p>Inverting the amounts will also invert the Mod effect.</p>
+        that the Mod Destination will be modulated by the Mod Source. Inverting the amounts will also invert the Mod effect.</p>
 
       <aside class="reminder">
         <p>When an effect algorithm parameter is selected to be modulated, that parameter can no longer be edited. If
-          you want to edit the parameter, set the Modulation Source (<span class="param">SRC)</span> to <span class="function"><span class="star">*</span>OFF<span class="star">*</span></span>. To see the current value that the modulator has set it to, reselect the
+          you want to edit the parameter, set the Modulation Source (<span class="param">SRC)</span> to <span class="value"><span class="star">*</span>OFF<span class="star">*</span></span>. To see the current value that the modulator has set it to, reselect the
           parameter.</p>
       </aside>
       <p>In order for the effect modulation to work for the selected track, the <span class="param">Effect Mod
           Control</span> parameter on the <span class="page-name">Track Effects</span> sub-page must be set to <span
-          class="param">CNTRL-FX</span>.</p>
+          class="value">CNTRL-FX</span>.</p>
   </article>
   <footer class="site-footer">
     Copyright © 1993, 1995 ENSONIQ Corp. All rights reserved.

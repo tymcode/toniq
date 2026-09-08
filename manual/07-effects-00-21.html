@@ -129,8 +129,7 @@
     </h4>
     <p>Controls the amount of Effect B (<span class="value">CHORUS</span>) being sent into the reverb. This would allow
       you to add reverb to voices assigned to FX1 and panned hard right. A setting of <span class="value">99</span>
-      would yield a serial connection between the CHORUS and the reverb for voices sent to FX1 and panned hard right</p>
-    <p>(on the <span class="page-name">Output</span> page).</p>
+      would yield a serial connection between the CHORUS and the reverb for voices sent to FX1 and panned hard right (on the <span class="page-name">Output</span> page).</p>
     <h4 id="a-revrb" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
     </h4>
     <p>Controls the amount of Effect A (<span class="value">DDL</span>) being sent into the reverb. This would allow you
@@ -186,14 +185,13 @@
       panned hard left, and <span class="value">+99</span> is hard right.</p>
     <h4 id="chorus-center" class="param-name"><span class="param">CHORUS CENTER</span><span class="range">Range: 000 to
         127</span></h4>
-    <p>Controls the nominal delay time of the chorus about which the delay modulation occurs.</p>
-    <p>Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the
-      <span class="param">REGEN</span> or the DDL delays.</p>
+    <p>Controls the nominal delay time of the chorus about which the delay modulation occurs. Adjusting this parameter will change the tonal character of the effect. This delay time is not related to the
+      <span class="param">REGEN</span> or the <span class="param">DDL</span> delays.</p>  
     <h4 id="rate" class="param-name"><span class="param">RATE</span><span class="range">Range: 000 to 127</span></h4>
-    <p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces vibrato and
+    <p>Controls the four rates of modulation of the delay time of the chorus. The delay modulation produces <dfn class="term">vibrato</dfn> and <dfn class="term">tremolo</dfn>.
       tremolo.</p>
     <h4 id="width" class="param-name"><span class="param">WIDTH</span><span class="range">Range: 000 to 127</span></h4>
-    <p>Controls the depth of vibrato and tremolo.</p>
+    <p>Controls the depth of <dfn class="term">vibrato</dfn> and <dfn class="term">tremolo</dfn>.</p>
     <h4 id="lfo-spread" class="param-name"><span class="param">LFO SPREAD</span><span class="range">Range: 000 to
         128</span></h4>
     <p>Controls the depth of the detuning, that is, how much the pitch will change. Low values yield a metallic sound.
@@ -526,8 +524,7 @@
     </h4>
     <p>Controls the amount of Effect B (PHLANGR) being sent into the reverb. This would allow you to add reverb to
       voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection between the PHLANGR
-      and the reverb for voices sent to FX1 and panned hard right</p>
-    <p>(on the <span class="page-name">Output</span> page).</p>
+      and the reverb for voices sent to FX1 and panned hard right (on the <span class="page-name">Output</span> page).</p>
     <h4 id="a-revrb-2" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
     </h4>
     <p>Controls the amount of Effect A (DDL) being sent into the reverb. This would allow you to add reverb to voices
@@ -608,7 +605,7 @@
     <ul>
       <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DELAYLFO</span>)</li>
       <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
@@ -625,7 +622,7 @@
     <ul>
       <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">ROTOSPKR</span>)</li>
       <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span> )</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
@@ -641,7 +638,7 @@
     <ul>
       <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DISTORT</span>)</li>
       <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
@@ -657,7 +654,7 @@
     <ul>
       <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">PARAM EQ</span>)</li>
       <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
@@ -672,8 +669,8 @@
       and a reverb. The second sub-page (not user-programmable) shows how this parallel effect is routed:</p>
     <ul>
       <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">ENV VCF</span>)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (PHLANGR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">PHLANGR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#08-ddl-phlangr-rev">DDL+PHLANGR+REV</a> algorithm found earlier in this section.</p>
@@ -687,21 +684,20 @@
     <p>This parallel effect combines a digital delay with a rotary speaker effect and a reverb. The second sub-page (not
       user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DDL)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DDL</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <h4 id="sends-a-b-3" class="param-name"><span class="param">SENDS A- -B</span><span class="range">Range: 00 to
         99</span></h4>
     <p>Controls the amount of Effect A (<span class="param">DDL</span>) being sent into Effect B (the rotary speaker). A
-      setting of 99 would yield a serial connection between Effect A and the rotary speaker effect for voices sent to
+      setting of <span class="value">99</span> would yield a serial connection between Effect A and the rotary speaker effect for voices sent to
       FX1 and panned hard left (on the <span class="page-name">Output</span> page).</p>
     <h4 id="b-revrb-3" class="param-name"><span class="param">B- -REVRB</span><span class="range">Range: 00 to 99</span>
     </h4>
     <p>Controls the amount of Effect B (<span class="param">ROTSPKR</span>) being sent into the reverb. This would allow
-      you to add reverb to voices assigned to FX1 and panned hard right. A setting of 99 would yield a serial connection
-      between the ROTSPKR and the reverb for voices sent to FX1 and panned hard right</p>
-    <p>(on the <span class="page-name">Output</span> page).</p>
+      you to add reverb to voices assigned to FX1 and panned hard right. A setting of <span class="value">99</span> would yield a serial connection
+      between the <span class="param">ROTSPKR</span> and the reverb for voices sent to FX1 and panned hard right (on the <span class="page-name">Output</span> page).</p>
     <h4 id="a-revrb-3" class="param-name"><span class="param">A- -REVRB</span><span class="range">Range: 00 to 99</span>
     </h4>
     <p>Controls the amount of Effect A (<span class="param">DDL</span>) being sent into the reverb. This would allow you
@@ -779,15 +775,15 @@
         between slow and fast. Every time the modulation source moves from zero in a positive direction, the rotating
         speaker effect changes speeds from slow to fast or fast to slow.</li>
     </ul>
-    <p>For a complete description of the remaining <span class="param">Reverb</span> parameters, refer to the <a
+    <p>For a complete description of the remaining Reverb parameters, refer to the <a
         class="algo" href="#01-ddl-chorus-rev">DDL+CHORUS+REV</a> algorithm found earlier in this section.</p>
     <h2 id="16-eq-ddl-rotospkr-rev" class="algo">16 EQ- -DDL+ROTOSPKR+REV</h2>
     <p>This parallel effect combines a parametric EQ into a digital delay with a rotary speaker effect and a reverb. The
       second sub-page (not user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (EQ- -DDL)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">EQ- -DDL</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
@@ -801,9 +797,9 @@
     <p>This parallel effect combines a digital delay that provides LFO modulation with a rotary speaker effect and a
       reverb. The second sub-page (not user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DELAY LFO)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DELAY LFO</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
@@ -817,9 +813,9 @@
     <p>This parallel effect combines a rotary speaker with another rotary speaker effect and a reverb. The second
       sub-page (not user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> and the <span class="param">ROTO</span>
       parameters, refer to the <a class="algo" href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier
@@ -830,9 +826,9 @@
     <p>This parallel effect combines a raspy distortion with a rotary speaker and a reverb. The second sub-page (not
       user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (DIST)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">DIST</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
@@ -846,9 +842,9 @@
     <p>This parallel effect combines a parametric EQ with a rotary speaker and a reverb. The second sub-page (not
       user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (PARAM EQ)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">PARAM EQ</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
@@ -862,9 +858,9 @@
     <p>This parallel effect combines a voltage control filter with a rotary speaker and a reverb. The second sub-page
       (not user-programmable) shows how this effect is routed:</p>
     <ul>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (ENV VCF)</li>
-      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (ROTOSPKR)</li>
-      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (REV)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned left) are sent to Effect A (<span class="param">ENV VCF</span>)</li>
+      <li>Voices assigned to <span class="param">FX1</span> (and panned right) are sent to Effect B (<span class="param">ROTOSPKR</span>)</li>
+      <li>Voices assigned to <span class="param">FX2</span> are sent to the reverb (<span class="param">REV</span>)</li>
     </ul>
     <p>For a complete description of the <span class="param">SENDS</span> parameters, refer to the <a class="algo"
         href="#15-ddl-rotospkr-rev">DDL+ROTOSPKR+REV</a> algorithm found earlier in this section.</p>
