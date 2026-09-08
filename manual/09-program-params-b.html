@@ -26,7 +26,34 @@
     </header>
     <h2 id="wave-page">Wave Page</h2>
 <p>Press the <kbd class="button">Wave</kbd> button. On the <span class="page-name">Wave</span> page, the same three parameters (Wave Name, Wave Type, and Delay) will always appear on the top line of the display, no matter which type of wave is selected:</p>
-
+<figure class="vfd-unit has-page">
+  <div class="vfd-callouts top has-page"><div class="page-spacer"></div><div>Wave Name</div><div>Wave Class</div><div>Delay before playing</div><div></div></div>
+  <div class="vfd-bezel">
+  <table>
+    <colgroup><col class="page-col"><col class="param-col"><col class="param-col"><col class="param-col"></colgroup>
+    <thead>
+      <tr class="soft-row top">
+        <th class="page-tag-slot"></th>
+        <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+        <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+      </tr>
+    </thead>
+    <tbody class="vfd-screen">
+      <tr><td class="cell page-label">WAVE</td><td class="cell selected">SOLOVIOLIN</td><td class="cell">STRING-SOUND</td><td class="cell">DELAY=0000</td></tr>
+      <tr><td class="cell page-label">&nbsp;</td><td class="cell">MULTISAMPLE-SHIFT=+00</td><td colspan="2" class="cell" style="text-align: right;">DIR=FORWARD</td></tr>
+    </tbody>
+    <tfoot>
+      <tr class="soft-row bottom">
+        <th class="page-tag-slot"></th>
+        <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+        <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+      </tr>
+    </tfoot>
+  </table>
+  </div>
+</figure>
 <h4 id="wave-name" class="param-name">Wave Name</h4>
 <p>Here you select the actual wave that the voice will play. When this parameter is underlined, the <kbd class="button">Data Entry Slider</kbd> will select only among the waves in the current wave class. Pressing the <kbd class="button">Up/Down Arrow</kbd> button will allow you to cross over into the next Wave Class.</p>
 <h4 id="wave-class">Wave Class</h4>
@@ -76,7 +103,7 @@
 </figure>
 <h4 id="sample-start-offset" class="param-name"><span class="param">SAMPLE-START-OFFSET</span><span class="range">Range: 00 to 99</span></h4>
 <p>This controls where in the sample the wave will begin playing. When set to <span class="value">00</span>, the whole wave will play. As the start point is adjusted upwards, it will begin playing further into the wave. You can use this, for example, to skip the attack and play only the loop portion of looped (sustaining) sounds.</p>
-<aside class="note"><p>When using the <span class="lcd">INHARMONIC</span> and <span class="lcd">WAVEFORM</span> Wave Classes, this parameter will change the starting phase, which is only heard when two waves are played at exactly the same pitch.</p></aside>
+<aside class="note"><p>When using the <span class="value">INHARMONIC</span> and <span class="value">WAVEFORM</span> Wave Classes, this parameter will change the starting phase, which is only heard when two waves are played at exactly the same pitch.</p></aside>
 <h4 id="start-modsrc" class="param-name"><span class="param">START-MODSRC</span><span class="range">Range: various</span></h4>
 <p>Here you choose which of the modulators will control the sample-start of the voice. Any of the 15 modulators can be selected.</p>
 <h4 id="modamt" class="param-name"><span class="param">MODAMT</span><span class="range">Range: -99 to +99</span></h4>
@@ -86,7 +113,7 @@
 <p>Each Transwave is actually composed of many different single-cycle waveforms, which progress from one timbre to another, occupying adjacent areas of memory. Movement within the sound is created by playing different waveforms in succession; that is, by modulating the wavetable.</p>
 <p>The illustration below shows a typical wave of this category, with the index set in the middle range, near <span class="value">50</span>.</p>
 <figure class="figure"><img src="images/transwave-modulation.png" alt="TransWave waveform with a marked start point; negative modulation moves left, positive modulation moves right"><figcaption>Typical <dfn class="term">TransWave</dfn> with the index near 50. Negative modulation moves the start point left; positive modulation moves it right.</figcaption></figure>
-<p>When the wave class is <span class="lcd">TRANSWAVE</span>, the lower line of the display shows:</p>
+<p>When the wave class is <span class="value">TRANSWAVE</span>, the lower line of the display shows:</p>
 <figure class="vfd-unit has-page">
   
   <div class="vfd-bezel">
@@ -233,7 +260,7 @@
 <h2 id="drum-map-specific-wave-parameters">Drum-Map Specific Wave Parameters</h2>
 <p>A <dfn class="term">Drum-Map</dfn> can use up to 64 waves per program, four waves per key, with separate pitch, volume, panning and voice template parameters for each wave. All of the <span class="value">DRUM-MAP</span> wave page parameters are identical to the first thirteen wave classes, with the exclusion of the <span class="param">MULTISAMPLE-SHIFT parameter.</span></p>
 <p>Also, the <span class="value">DRUM-MAP</span> Wave Class category is only visible when the current program contains a <span class="term">Drum-Map</span>. The wave name parameter in a <span class="term">Drum-Map</span> is meaningless and is not selectable.</p>
-<aside class="note"><p>When a Program contains a <span class="term">Drum-Map</span>, the <span class="param">OCTAVE</span> and <span class="param">SEMITONE</span> values on the <span class="page-name">PITCH</span> page will have no effect on the <span class="term">Drum-Map</span>. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <span class="term">Drum-Map</span> Editor.</p></aside>
+<aside class="note"><p>When a Program contains a <span class="term">Drum-Map</span>, the <span class="param">OCTAVE</span> and <span class="param">SEMITONE</span> values on the <span class="page-name">PITCH</span> page will have no effect on the Drum-Map. You can still use pitch modulation to obtain more drastic pitch shifts than are possible within the PITCH parameter in the <span class="page-name">Drum-Map Editor</span>.</p></aside>
 <h2 id="mod-mixer-page">Mod Mixer Page</h2>
 <p>The Mod Mixer is a unique feature which allows you to:</p>
 <ul>
@@ -322,46 +349,46 @@
 <h4 id="type" class="param-name"><span class="param">Type</span><span class="range">Range: various</span></h4>
 <p>Allows you to define a sound class for your sound. This setting can be used by third-party editor librarian software for “automatic-sorting” of sounds by type. The available types are:</p>
 <ul>
-  <li>ACPIANOS          Acoustic pianos, honky-tonk, toy pianos, and piano forte</li>
-  <li>ELPIANOS          Electric and electronic piano sounds</li>
-  <li>ORGANS            Pipe organs, electric, and electronic organs</li>
-  <li>ALTKEYS           Other keyboard sounds such as harpsichord, accordion, and piano layered with other sounds</li>
-  <li>SYNLEAD           Lead synth sounds</li>
-  <li>SYNPAD            Sustaining synth pads</li>
-  <li>SYNOTHER          Other synth sounds: hybrids, fat power-synths, synth bells</li>
-  <li>GUITARS           Acoustic guitars, clean electric guitars and distortion guitars</li>
-  <li>ALTPLUCK          Other plucked strings: harps, banjo, dulcimer, sitar, etc.</li>
-  <li>SOLOSTRG          Plucked and bowed solo strings (violin, viola, cello, bass)</li>
-  <li>STRGSECT          Plucked and bowed string sections and small ensembles</li>
-  <li>SOLOBRAS          Solo brass: trumpet, trombone, tuba, French horns</li>
-  <li>BRASSECT          Brass sections: trumpet, trombone, tuba, French horns</li>
-  <li>SOLOSAX           Solo saxophones</li>
-  <li>SOLOWIND          Solo woodwinds/reeds (including harmonica)</li>
-  <li>WINDSECT          Woodwind/reed/saxophone sections and small ensembles</li>
-  <li>VOCALS            Vocal sounds: choirs and synth-vox</li>
-  <li>ACOUBASS          Acoustic basses</li>
-  <li>ELECBASS          Electric basses</li>
-  <li>SYNBASS           Synth basses</li>
-  <li>DRUMS-E           Drum kits that use the ENSONIQ Drum Map</li>
-  <li>DRUMS-GM          Drum kits that use the <span class="mode">General MIDI</span> Drum Map</li>
-  <li>PERCUSSN          Percussion kits and solo untuned percussion (e.g. taiko)</li>
-  <li>TUNEPERC          Tuned percussion: marimba, xylophone, timpani, orchestral hits</li>
-  <li>SOUND-FX          Realistic (e.g. broken glass) and fantasy (e.g. spacecraft) sound effects</li>
-  <li>SPLITS            Combination keyboard splits of 2 or more different sounds</li>
-  <li>TRANS-WV          Distinctly <dfn class="term">TransWave</dfn>-type sounds</li>
-  <li>HYPER-WV          Distinctly <dfn class="term">Hyper-Wave</dfn> texture sounds</li>
-  <li>GROOVES           Rhythm loop groove patterns and pulsed performance sounds</li>
-  <li>UTILITY           Utility resources: default template sounds, pitch tables, etc.</li>
-  <li>OTHER             Unclassified miscellaneous sounds (e.g. didgeridoo), and unnatural acoustic layers (e.g. violin scrape layered with a shakuhachi)</li>
-  <li>CUSTOM            Use this to define your own special purpose sound type: ENSONIQ sounds will never be released with <span class="value">TYPE=CUSTOM</span>.</li>
+  <li><span class="value">ACPIANOS</span>          Acoustic pianos, honky-tonk, toy pianos, and piano forte</li>
+  <li><span class="value">ELPIANOS</span>          Electric and electronic piano sounds</li>
+  <li><span class="value">ORGANS</span>            Pipe organs, electric, and electronic organs</li>
+  <li><span class="value">ALTKEYS</span>           Other keyboard sounds such as harpsichord, accordion, and piano layered with other sounds</li>
+  <li><span class="value">SYNLEAD</span>           Lead synth sounds</li>
+  <li><span class="value">SYNPAD</span>            Sustaining synth pads</li>
+  <li><span class="value">SYNOTHER</span>          Other synth sounds: hybrids, fat power-synths, synth bells</li>
+  <li><span class="value">GUITARS</span>           Acoustic guitars, clean electric guitars and distortion guitars</li>
+  <li><span class="value">ALTPLUCK</span>          Other plucked strings: harps, banjo, dulcimer, sitar, etc.</li>
+  <li><span class="value">SOLOSTRG</span>          Plucked and bowed solo strings (violin, viola, cello, bass)</li>
+  <li><span class="value">STRGSECT</span>          Plucked and bowed string sections and small ensembles</li>
+  <li><span class="value">SOLOBRAS</span>          Solo brass: trumpet, trombone, tuba, French horns</li>
+  <li><span class="value">BRASSECT</span>          Brass sections: trumpet, trombone, tuba, French horns</li>
+  <li><span class="value">SOLOSAX</span>           Solo saxophones</li>
+  <li><span class="value">SOLOWIND</span>          Solo woodwinds/reeds (including harmonica)</li>
+  <li><span class="value">WINDSECT</span>          Woodwind/reed/saxophone sections and small ensembles</li>
+  <li><span class="value">VOCALS</span>            Vocal sounds: choirs and synth-vox</li>
+  <li><span class="value">ACOUBASS</span>          Acoustic basses</li>
+  <li><span class="value">ELECBASS</span>          Electric basses</li>
+  <li><span class="value">SYNBASS</span>           Synth basses</li>
+  <li><span class="value">DRUMS-E</span>           Drum kits that use the ENSONIQ Drum Map</li>
+  <li><span class="value">DRUMS-GM</span>          Drum kits that use the General MIDI (GM) Drum Map</li>
+  <li><span class="value">PERCUSSN</span>          Percussion kits and solo untuned percussion (e.g. taiko)</li>
+  <li><span class="value">TUNEPERC</span>          Tuned percussion: marimba, xylophone, timpani, orchestral hits</li>
+  <li><span class="value">SOUND-FX</span>          Realistic (e.g. broken glass) and fantasy (e.g. spacecraft) sound effects</li>
+  <li><span class="value">SPLITS</span>            Combination keyboard splits of 2 or more different sounds</li>
+  <li><span class="value">TRANS-WV</span>          Distinctly <dfn class="term">TransWave</dfn>-type sounds</li>
+  <li><span class="value">HYPER-WV</span>          Distinctly <dfn class="term">Hyper-Wave</dfn> texture sounds</li>
+  <li><span class="value">GROOVES</span>           Rhythm loop groove patterns and pulsed performance sounds</li>
+  <li><span class="value">UTILITY</span>           Utility resources: default template sounds, pitch tables, etc.</li>
+  <li><span class="value">OTHER</span>             Unclassified miscellaneous sounds (e.g. didgeridoo), and unnatural acoustic layers (e.g. violin scrape layered with a shakuhachi)</li>
+  <li><span class="value">CUSTOM</span>            Use this to define your own special purpose sound type: ENSONIQ sounds will never be released with <span class="value">TYPE=CUSTOM</span>.</li>
 </ul>
-<aside class="tip"><p>With the <span class="function">SoundFinder</span> feature, when a sound name is selected, pressing the <kbd class="button">Replace Track Sound</kbd> button and then continued presses of the Up or <kbd class="button">Down Arrow</kbd> buttons will scroll through all sounds in memory that are assigned the same TYPE.</p></aside>
+<aside class="tip"><p>With the <span class="function">SoundFinder</span> feature, when a sound name is selected, pressing the <kbd class="button">Replace Track Sound</kbd> button and then continued presses of the Up or <kbd class="button">Down Arrow</kbd> buttons will scroll through all sounds in memory that are assigned the same <span class="param">TYPE</span>.</p></aside>
 <h4 id="option" class="param-name"><span class="param">OPTION</span><span class="range">Range: *-NONE-*, PITCHTBL, WAVELIST, or DRUM-MAP</span></h4>
-<p>The setting of this parameter indicates whether a Custom <dfn class="term">Pitch-Table</dfn>, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is not changed.</p>
+<p>The setting of this parameter indicates whether a Custom Pitch-Table, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="value">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="value">WAVE-LIST</span>, <span class="value">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is not changed.</p>
 <p>If you have a program where <span class="value">OPTION=PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>, and you want to eliminate the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
-<p>If you have a program where OPTION=&lt;<span class="value">PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to change the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
+<p>If you have a program where <span class="value">OPTION=&lt;PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to change the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: OFF, KEY, or CHAN</span></h4>
-<p>Allows you to select <dfn class="term">Poly-Key</dfn>, Channel, or no pressure for the program. Generally, if a program doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the program is selected.</p>
+<p>Allows you to select <span class="value">POLY-KEY</span>, <span class="value">CHANNEL</span>, or <span class="value">NONE</span> (or no pressure responsiveness) for the program. Generally, if a program doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="patch" class="param-name"><span class="param">PATCH</span><span class="range">Range: LIVE or HELD</span></h4>
 <p>Selects the default patch select mode for the program. When set to LIVE, it uses the current state of the buttons to select a patch. When set to HELD, it uses the patch set by the first key hit while touching the patch select buttons. For more information about patch selects, refer to Sections <a class="refer-to" href="04-presets.html#section-4-understanding-presets">4</a> and <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">5</a>. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="restrike" class="param-name"><span class="param">RESTRIKE</span><span class="range">Range: 00 to 99</span></h4>
@@ -545,9 +572,9 @@
 <p>After a key-range has been defined, press the EXTRAPOLATE soft button. The display briefly reads PITCH-TABLE <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span>, then returns with the newly defined range across the whole keyboard.</p>
 <h4 id="interpolate" class="param-name">INTERPOLATE</h4>
 <p><span class="function">INTERPOLATE</span> takes the interval between two notes on the keyboard and divides all the keys in between into equally-spaced fractions of that interval.</p>
-<p>After a key-range has been defined, press the <span class="function">INTERPOLATE</span> soft button. The display briefly reads <span class="lcd">PITCH-TABLE <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span></span>, then returns with the newly defined range across the whole keyboard.</p>
+<p>After a key-range has been defined, press the <span class="function">INTERPOLATE</span> soft button. The display briefly reads <span class="lcd">PITCH-TABLE <span class="star">*</span>CALCULATOR<span class="star">*</span></span>, then returns with the newly defined range across the whole keyboard.</p>
 <ul>
-  <li>Press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the first <span class="page-name">Edit <dfn class="term">Pitch-Table</dfn></span> sub-page, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate</span> sub-page.</li>
+  <li>Press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the first <span class="page-name">Edit Pitch-Table</span> sub-page, eliminating any edits you may have made on the <span class="page-name">Extrapolate/Interpolate</span> sub-page.</li>
 </ul>
 <aside class="warning"><p>You must save the program containing your custom pitch-table, or copy the custom pitch-table into the system, or you will lose it as soon as you edit another sound.</p></aside>
 <h3 id="copy-pitch-table-parameters" class="param-name">Copy Pitch-Table Parameters</h3>
@@ -589,7 +616,7 @@
   For instance, if you want to hear what other programs sound like using the custom pitch-table from a program, you can redefine the System pitch-table. 
   Or, if your main tuning is “just intonation,” then it might be convenient for you to use this or some other alternate tuning as your System tuning.</p>
 <ul>
-  <li>Press the soft button beneath <span class="lcd">SYSTEM</span>. The display briefly reads <span class="lcd">COPY TO SYSTEM PITCH-TABLE</span>, and the custom pitch-table is installed into the TS-10 Operating System where it is available for use by any program.</li>
+  <li>Press the soft button beneath <span class="value">SYSTEM</span>. The display briefly reads <span class="lcd">COPY TO SYSTEM PITCH-TABLE</span>, and the custom pitch-table is installed into the TS-10 Operating System where it is available for use by any program.</li>
   <li>Press <kbd class="button">System</kbd> four times to view the <span class="page-name">System PITCH-TABLE</span> sub-page.</li>
 </ul>
 <figure class="vfd-unit has-page">
@@ -632,13 +659,13 @@ You can control the relative volume of each Program, and you can optionally elim
 </p>
 <p><span class="term">Hyper-Waves</span> are defined by <dfn class="term">Wave-Lists</dfn>. You control the timing and pitch of the Programs using the <span class="page-name">Wave-List Editor</span> parameters.
 <h2 id="wave-list-editor-parameters">Wave-List Editor Parameters</h2>
-<p>The following parameters are only available when <span class="lcd">OPTION=WAVE-LIST</span> on the <span class="page-name">Program Control</span> Page. To access the Wave-List Editor parameters for a program that does not contain a Wave-List:</p>
+<p>The following parameters are only available when <span class="param">OPTION=<span class="value">WAVE-LIST</span></span> on the <span class="page-name">Program Control</span> Page. To access the Wave-List Editor parameters for a program that does not contain a Wave-List:</p>
 <ol>
   <li>Press the <kbd class="button">Program Control</kbd> button.</li>
   <li>Select the <span class="param">OPTIONS</span> parameter by pressing its soft button.</li>
   <li>Press the <kbd class="button">Up Arrow</kbd> button.</li>
-  <li>Select <span class="lcd">WAVE-LIST</span> on the bottom of the display by pressing its soft button.</li>
-  <li>Press either of the soft buttons beneath <span class="lcd">EDIT WAVE-LIST</span>.</li>
+  <li>Select <span class="value">WAVE-LIST</span> on the bottom of the display by pressing its soft button.</li>
+  <li>Press either of the soft buttons beneath <span class="value">EDIT WAVE-LIST</span>.</li>
 </ol>
 <p>The Wave-List Editor parameters are:</p>
 <figure class="vfd-unit">
@@ -905,7 +932,7 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>This parameter selects a single key for editing and displays all of the current drum-map parameter settings for that key. 
   When this parameter is underlined, you can select the drum-map key to be edited using the data entry controls or by playing the keys on the keyboard. 
   If you play several keys together, the last one played will be selected. 
-  There are 61 possible keys in a drum-map, ranging from B1 to D7 (MIDI keys 35 to 95). 
+  There are 61 possible keys in a drum-map, ranging from <span class="key">B1</span> to <span class="key">D7</span> (MIDI keys 35 to 95). 
   This range is based on the General MIDI Specification.</p>
 <h4 id="wave" class="param-name"><span class="param">WAVE</span><span class="range">Range: (shown below)</span></h4>
 <p>This parameter allows you to select the wave to be played by the key from any of the internal ROM waves. Drum-maps will have access to all Waves in the following Wave Classes, for a total of 105 different selectable wave forms:</p>
@@ -948,15 +975,15 @@ You can control the relative volume of each Program, and you can optionally elim
     </tr>
     <tr>
       <td><span class="lcd">0* PATCH</span></td>
-      <td>Voice will play, along with any other voice(s) assigned to Patch Select <span class="value">0*</span></td>
+      <td>Voice will play, along with any other voice(s) assigned to Patch Select <span class="value">0<span class="star">*</span></span></td>
     </tr>
     <tr>
       <td><span class="lcd">*0 PATCH</span></td>
-      <td>Voice will play, along with any other voice(s) assigned to Patch Select <span class="value">*0</span></td>
+      <td>Voice will play, along with any other voice(s) assigned to Patch Select <span class="value"><span class="star">*</span>0</span></td>
     </tr>
     <tr>
       <td><span class="lcd">** PATCH</span></td>
-      <td>Voice will play, along with any other voice(s) assigned to Patch Select <span class="value">**</span></td>
+      <td>Voice will play, along with any other voice(s) assigned to Patch Select <span class="value"><span class="star">*</span><span class="star">*</span></span></td>
     </tr>
     <tr>
       <td><span class="lcd">DRUM-FX1</span></td>
@@ -998,13 +1025,13 @@ You can control the relative volume of each Program, and you can optionally elim
     </tr>
     <tr>
       <td><span class="lcd">NORMAL-DRY</span></td>
-      <td>Same as above, routed to DRY</td>
+      <td>Same as above, routed to <span class="value">DRY</span></td>
     </tr>
     <tr>
       <td><span class="lcd">TOMTOM-FX1</span></td>
       <td>Slight downward pitch envelope, volume and filter shapes optimized for toms, routed to <span class="value">FX-1</span>. Can be used for
         toms, congas, tablas, anything that wants a subtle pitch env. and drum decay. Pressure bends the pitch down
-        further. (For more radical pitch effects, use SYNDRM default below.)</td>
+        further. (For more radical pitch effects, use <span class="patch-name">SYNDRM</span> default below.)</td>
     </tr>
     <tr>
       <td><span class="lcd">TOMTOM-FX2</span></td>
@@ -1012,7 +1039,7 @@ You can control the relative volume of each Program, and you can optionally elim
     </tr>
     <tr>
       <td><span class="lcd">TOMTOM-DRY</span></td>
-      <td>Same as above, routed to DRY</td>
+      <td>Same as above, routed to <span class="value">DRY</span></td>
     </tr>
     <tr>
       <td><span class="lcd">KEYGRP-FX1</span></td>
@@ -1081,8 +1108,8 @@ You can control the relative volume of each Program, and you can optionally elim
     </tr>
     <tr>
       <td><span class="lcd">DRUM-AUX</span></td>
-      <td>The envelope is the same as <span class="value">DRUM-FX1</span>, but the voice is routed to AUX. This special default routes the basic
-        drum/perc. voice to the AUX outputs.</td>
+      <td>The envelope is the same as <span class="value">DRUM-FX1</span>, but the voice is routed to <span class="value">AUX</span>. This special default routes the basic
+        drum/perc. voice to the <kbd class="button">AUX</kbd> outputs.</td>
     </tr>
   </tbody>
 </table>
