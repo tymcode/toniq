@@ -73,7 +73,7 @@
     </tr>
     <tr>
       <td class="cell"><span class="param">Receive</span></td>
-      <td class="cell">In Poly mode — keys, controllers, and program changes are only recognized if received on the base channel. In <span class="mode">Mono A</span> mode, program changes are received only on the base channel. The base channel is also used in both Mono modes as the first channel of the 12 channel range.</td>
+      <td class="cell">In <span class="mode">Poly</span> mode — keys, controllers, and program changes are only recognized if received on the base channel. In <span class="mode">Mono A</span> mode, program changes are received only on the base channel. The base channel is also used in both Mono modes as the first channel of the 12 channel range.</td>
     </tr>
   </tr>
 </tbody>
@@ -89,7 +89,7 @@
   <li><span class="value">BASE</span> — The TS-10 will transmit only on the Base Channel, and will ignore the channel assignments contained in the tracks. When Presets are selected, they will transmit the MIDI Program Change for the Preset, and not the Program Change values for the three Tracks.</li>
   <li><span class="value">TRACK</span> — The settings on the <span class="page-name">Track MIDI</span> page determine the MIDI transmission channel.</li>
 </ul>
-<p>The TS-10 will transmit on the channel(s) assigned to the track(s) being played, either from the keyboard or the sequencer, depending on the Track MIDI Status (i.e. nothing will be sent if a track is assigned to the - - - - /RECV or <span class="value">MIDI-OFF</span> status). Each track can have its own MIDI channel.</p>
+<p>The TS-10 will transmit on the channel(s) assigned to the track(s) being played, either from the keyboard or the sequencer, depending on the Track MIDI Status (i.e. nothing will be sent if a track is assigned to the <span class="value">----/RECV</span> or <span class="value">MIDI-OFF</span> status). Each track can have its own MIDI channel.</p>
 <aside class="note"><p>When a Sequence or Song Track is selected, <span class="param">SEND</span> will automatically be set to TRACK. Sequence and Song Tracks always transmit on their Track MIDI Channel.</p></aside>
 
 <h4 id="mode" class="param-name">MODE<span class="range">Range: OMNI, POLY, MULTI, MONO-A, or MONO-B</span></h4>
@@ -246,12 +246,12 @@
   <li><span class="value">ON</span> — The TS-10 will not transmit changes made to the Track <span class="param">MIX</span> parameter on tracks with <span class="value">STATUS=LOCAL-OFF</span> or <span class="value">MIDI-LOOP</span>. Volume pedal changes will be transmitted directly and are unaffected by the <span class="param">MIX</span> setting.</li>
 </ul>
 <p>When <span class="value">LOOP=OFF</span>, then the <span class="param">MIX</span> parameter is combined (multiplied) with the volume pedal setting to create a composite volume, which is then transmitted to external sound modules as MIDI controller 7. In a MIDI loop situation with a computer, this is undesirable, because lowering the <span class="param">MIX</span> value will send controller messages that are indistinguishable from volume pedal messages. When this information is echoed by the computer, the TS-10 receives it as volume pedal, lowering the volume on that track even further. Eventually this causes the volume to spiral down to zero, which in turn causes the track to be silenced, even though the displayed volume setting is greater than zero. Setting <span class="value">LOOP=ON</span> will prevent this problem from occurring.</p>
-<p>Note that the volume pedal is only active if <span class="lcd">PEDAL=VOL</span> on the <span class="page-name">System</span> page, and that volume pedal changes will always be transmitted as MIDI volume (controller 7).</p>
+<p>Note that the volume pedal is only active if <span class="value">PEDAL=VOL</span> on the <span class="page-name">System</span> page, and that volume pedal changes will always be transmitted as MIDI volume (controller 7).</p>
 <h4 id="working-with-midi-loops">Working with MIDI Loops</h4>
   <p>With a MIDI loop setup, the MIDI Out of the TS-10 is either directly or indirectly (through an external device such as a computer) connected to the MIDI In of the TS-10. The <span class="value">MIDI-LOOP</span> Track <span class="param">STATUS</span> is optimized for use in a MIDI loop in which the TS-10 will play back into itself.</p>
 <p>Do not use the <span class="value">SEND/RECV</span> Track <span class="param">STATUS</span> setting with a MIDI loop present. To connect a TS-10 track to a computer sequencer, the <span class="value">MIDI-LOOP</span> setting should be used. In this type of setup, a computer in MIDI Thru mode forms a loop which echoes the MIDI information back into the TS-10. See <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section&nbsp;5&nbsp;—&nbsp;Preset/Track &nbsp;Parameters</a> for more information about the Track <span class="param">MIDI STATUS</span> parameter. See <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section&nbsp;0&nbsp;—&nbsp;Understanding&nbsp;the &nbsp;Sequencer</a> for information on recording into the TS-10 sequencer in a MIDI loop.</p>
 <h4 id="using-presets-with-midi-loops">Using Presets with MIDI Loops</h4>
-<aside class="tip"><p>For best results, set <span class="value">SEND=BASE</span> and <span class="value">MODE=POLY</span> on the <span class="page-name">MIDI Control</span> page. Be aware that when you select a new preset, program changes with the preset’s number are transmitted via MIDI; Program changes are not transmitted from the individual tracks in the preset. Receiving from MIDI while on a Preset bank page or <span class="page-name">Preset Track parameter</span> page will minimize problems.</p></aside>
+<aside class="tip"><p>For best results, set <span class="value">SEND=BASE</span> and <span class="value">MODE=POLY</span> on the <span class="page-name">MIDI Control</span> page. Be aware that when you select a new preset, program changes with the preset’s number are transmitted via MIDI; Program changes are not transmitted from the individual tracks in the preset. Receiving from MIDI while on a <span class="page-name">Preset Bank</span> page or <span class="page-name">Preset Track Parameters</span> page will minimize problems.</p></aside>
 <h4 id="cntrls-controllers" class="param-name">CNTRLS — Controllers<span class="range">Range: OFF or ON</span></h4>
 <p>This switch controls whether or not the TS-10 will transmit and receive MIDI controllers — pitch bend, mod wheel, pressure, volume, sustain pedal, etc.</p>
 <h4 id="song-sel-song-select" class="param-name"><span class="param">SONG-SEL — Song Select</span><span class="range">Range: OFF or ON</span></h4>
@@ -281,7 +281,8 @@
   <li><span class="value">NEW</span>—the TS-10 will transmit program changes only if they are different than the previous program change sent out on the particular channel. Program changes will be received normally.</li>
 </ul>
 <p>Refer to the Track MIDI parameter description in <a class="refer-to" href="05-track-params.html#section-5-preset-track-parameters">Section 5 — Preset/Track Parameters</a> and <a class="refer-to" href="10-sequencer.html#section-10-understanding-the-sequencer">Section 10 — Understanding the Sequencer</a> for more information on how program changes are handled.</p>
-<p>Receiving MIDI Program Changes The way in which the TS-10 receives program changes is slightly more complex than some other systems, because of the large number of programs and presets that are available to be selected from MIDI program changes. The following chart shows how the TS-10 receives MIDI program changes:</p>
+<h4 id="receiving-midi-program-changes">Receiving MIDI Program Changes</h4>
+  <p>The way in which the TS-10 receives program changes is slightly more complex than some other systems, because of the large number of programs and presets that are available to be selected from MIDI program changes. The following chart shows how the TS-10 receives MIDI program changes:</p>
 <p>In <span class="value">OMNI</span>, <span class="value">POLY</span> and <span class="value">MONO-A</span> modes (puts unit into <span class="mode">Sounds/Presets</span> mode):</p>
 
 <table class="data-table">
