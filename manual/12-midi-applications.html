@@ -120,7 +120,7 @@
     </ul>
     <h3 id="midi-controller-tricks">MIDI Controller Tricks — Creating MIDI Track Templates</h3>
     <p>There are some subtle features of the TS-10 sequencer which enhance its capabilities as a MIDI controller. You can change the sound and mix of every instrument in your rig with the push of a button, and create giant presets with as many as 12 remote MIDI devices split and/or layered.</p>
-    <p>Each sequence you create and store in the TS-10’s sequencer memory contains up to 12 sets of Sound and Mixing information, each of which will be sent out on the designated MIDI Channel when you select that sequence. Each sequence also remembers all Performance/Track Parameters settings for each track, as well as which tracks are selected or layered.</p>
+    <p>Each sequence you create and store in the TS-10’s sequencer memory contains up to 12 sets of Sound and Mixing information, each of which will be sent out on the designated MIDI Channel when you select that sequence. Each sequence also remembers <em>all</em> Performance/Track Parameters settings for each track, as well as which tracks are selected or layered.</p>
     <p>If you have the TS-10 connected to other instruments via MIDI, try this:</p>
 
     <ul>
@@ -149,7 +149,7 @@
       through the same procedure as before, but assigning different program numbers to the external instruments.
       (Remember always to change programs from the TS-10’s <span class="page-name">Track MIDI</span> sub-page.)
     </li>
-      <li>Again, you can play a different external instrument, or the TS-10 alone, or the TS-10 and an external
+      <li>Again, you can play a different external instrument, or the TS-10 alone, or the TS-10 <em>and</em> an external
         instrument, depending on which track(s) you select.
       </li>
     </ul>
@@ -249,7 +249,7 @@
     </ul>
     <h3 id="a-few-important-points-about-multi-mode">A Few Important Points About MULTI Mode</h3>
     <ul>
-      <li>When the TS-10 is in <span class="value">MULTI</span> mode, only the 12 tracks of the <span
+      <li>When the TS-10 is in <span class="value">MULTI</span> mode, <em>only</em> the 12 tracks of the <span
           class="value">MULTI</span> mode will receive MIDI information. Sounds and presets selected in the normal
         fashion will not respond to MIDI at all.</li>
       <li>Each of the 12 sequencer tracks (six in Seq/Song Tracks 1-6, six in 7-12) is completely independent and
@@ -302,7 +302,7 @@
           send MIDI to the sequencer, and then will play local TS-10 voices when it receives the information back at its
           MIDI input.
         </li>
-        <li>For tracks which you want to play one of the other MIDI devices, but not play a TS-10 sound, set the <span class="param">STATUS</span>
+        <li>For tracks which you want to play one of the other MIDI devices, but <em>not</em> play a TS-10 sound, set the <span class="param">STATUS</span>
           to <span class="value">LOCAL-OFF</span>. The track will send MIDI to the sequencer, but will not play locally when
           the data is received. The <kbd class="button">MIDI Thru</kbd> jack will send the information along to the remote MIDI devices.
         </li>

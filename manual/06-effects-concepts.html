@@ -42,7 +42,7 @@
       TS-10, and all of the effects can have any parameter modulated by various performance controllers such as the Mod
       Wheel, <dfn class="term">Poly-Key</dfn>™ pressure, and other user-definable controllers.</p>
     <p>All effects are fully programmable and may be customized for particular applications. Effects are most often
-      stored as part of a sound, although each preset may also have its own override effect, independent of the effects
+      stored as part of a sound, although each preset may also have its own <em>override</em> effect, independent of the effects
       contained by the sounds within the preset. Each individual sequence and song also has an independent effect. The
       following sections describe each type of effect.</p>
     <h3 id="program-and-sampled-sound-effects">Program and Sampled Sound Effects</h3>
@@ -247,12 +247,12 @@
       <span class="lcd">+</span> indicates a parallel connection between the effect on the left and the effect on the
       right.<br>
     </p>
-    <p>For example, the <span class="patch-name">EQ--TREMOLO + DELAY</span> algorithm has a serial routing from the EQ into the tremolo effect (i.e. the
-      output of the EQ always feeds into the Tremolo) , and a parallel routing between the tremolo and the digital delay
+    <p>For example, the <span class="patch-name">EQ--TREMOLO + DELAY</span> algorithm has a <em>serial</em> routing from the EQ into the tremolo effect (i.e. the
+      output of the EQ always feeds into the Tremolo) , and a <em>parallel</em> routing between the tremolo and the digital delay
       (i.e. there is an input into the delay line).</p>
     <h3 id="sounds-and-presets">Sounds and Presets</h3>
     The complete effects setup, including the values of all effect parameters, is saved when you save a sound. It is
-    also saved when you save a preset. The TS-10 tries to be smart about switching effects, since all sound must stop
+    <em>also</em> saved when you save a preset. The TS-10 tries to be smart about switching effects, since all sound must stop
     for an instant when it changes effects.</p>
     <h2 id="when-are-new-algorithms-loaded-into-the-esp-chip">When are New Algorithms loaded into the ESP Chip?</h2>
     <p>Whenever a new algorithm is loaded into the ESP, the audio output will pause briefly, allowing the instructions
@@ -266,9 +266,9 @@
       <li>When you select or layer sounds/tracks from a preset or <span class="page-name">Track Parameter</span> page,
         the algorithm is not changed.</li>
       <li>When you change the sound on a track from <span class="function">Replace Track Sound</span> mode (e.g. with
-        the <kbd class="button">Sounds</kbd> LED flashing), the algorithm will not be changed.</li>
+        the <kbd class="button">Sounds</kbd> LED flashing), the algorithm <em>will</em> <em>not</em> be changed.</li>
       <li>When you change the sound on a track by double-clicking the <kbd class="button">Replace Track Sound</kbd>
-        button (e.g. with the <kbd class="button">Sounds</kbd> and the <kbd class="button">Replace Track Sound</kbd> LED flashing), the
+        button (e.g. with the <kbd class="button">Sounds</kbd> <em>and</em> the <kbd class="button">Replace Track Sound</kbd> LED flashing), the
         algorithm will be changed.</li>
       <li>When you select a preset, the algorithm saved in that preset will be loaded into the ESP.</li>
       <li>When you select a song or sequence, the algorithm saved in that song or sequence will be loaded into the ESP.
@@ -371,7 +371,7 @@
         alt="Multiple-function effect mixer: FX1 through Effect 1 and Mix1, FX2 through Mix2 into Effect 2; dry paths from Mix1, Mix2, and DRY bus to Main Outputs">
       <figcaption>Multiple-function effect mixer.</figcaption>
     </figure>
-    <p>When the selected algorithm is a combined effect that has more than one signal processing function (such as
+    <p>When the selected algorithm is a <em>combined</em> effect that has more than one signal processing function (such as
       chorus and reverb), the <span class="param">FX1</span> bus feeds Effect 1, and the <span class="param">FX2</span> bus feeds Effect 2. The <span class="param">FX2
         Mix</span> control sets the amount of Effect 2 (usually reverb) for voices assigned to that bus.</p>
     <p><span class="param">FX1 Mix</span> controls the amount of the output from Effect 1 sent to Effect 2 rather than
@@ -388,7 +388,7 @@
       stereo paths. Voices assigned to <span class="param">FX1</span> (on the <span class="page-name">Output</span> Page) will be sent to Effect A,
       if the <span class="param">PAN</span> parameter is set to -99 (hard left) or sent to Effect B, if the <span
         class="param">PAN</span> parameter is set to <span class="value">+99</span> (hard right). Note that by setting
-      the <span class="param">PAN</span> parameter to <span class="value">50</span>, you can create a parallel routing
+      the <span class="param">PAN</span> parameter to <span class="value">50</span>, you can create a <em>parallel</em> routing
       between Effect A and Effect B.
       There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into Effect B.
       There is a <span class="param">SEND</span> parameter allowing a serial connection from Effect A into the Reverb,

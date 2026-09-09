@@ -307,7 +307,7 @@
 <h4 id="src-2" class="param-name"><span class="param">SRC-2</span><span class="range">Range: various</span></h4>
 <p>Select one of the 15 available modulators as Mod Source 2. Before being added to <span class="param">SRC-1</span>, <span class="param">SRC-2</span>’s level is adjusted by a scale factor, and then it is passed through the shaper, which allows its response to be customized in a number of interesting ways.</p>
 <h4 id="src-2-scale" class="param-name"><span class="param">SRC-2 SCALE</span><span class="range">Range: various from 0.1 to 8.0</span></h4>
-<p>This is used to adjust the level of <span class="param">SRC-2</span> relative to <span class="param">SRC-1</span>, or to simply scale the level of the modulator for effect. The modulator’s level is multiplied by the number shown. A value of 1.0 leaves the modulator at its original level. Fractional values (0.1 to 0.9) will reduce the level.</p>
+<p>This is used to adjust the level of <span class="param">SRC-2</span> relative to <span class="param">SRC-1</span>, or to simply scale the level of the modulator for effect. The modulator’s level is <em>multiplied</em> by the number shown. A value of 1.0 leaves the modulator at its original level. Fractional values (0.1 to 0.9) will reduce the level.</p>
 <p>Values greater than 1.0 will amplify the effect of the modulator, in most cases simply causing it to reach full level much sooner.</p>
 <h4 id="shape" class="param-name"><span class="param">SHAPE</span><span class="range">Range: various</span></h4>
 <p>Here you select which of the 16 tracking curves will be applied to the modulator selected as <span class="param">SRC-2</span>. You can use one of the convex or concave shapes to make the modulator’s effect come in earlier or later than it ordinarily would; you can use one of the quantized shapes to make the modulator’s effect sound “stepped”; or you can use the smoother (which is similar to a “lag processor” in some older analog synths) to smooth the effect of the modulator, to round off the edges. The diagram below shows the 16 Shaper tracking curves:</p>
@@ -384,9 +384,9 @@
 </ul>
 <aside class="tip"><p>With the <span class="function">SoundFinder</span> feature, when a sound name is selected, pressing the <kbd class="button">Replace Track Sound</kbd> button and then continued presses of the Up or <kbd class="button">Down Arrow</kbd> buttons will scroll through all sounds in memory that are assigned the same <span class="param">TYPE</span>.</p></aside>
 <h4 id="option" class="param-name"><span class="param">OPTION</span><span class="range">Range: *-NONE-*, PITCHTBL, WAVELIST, or DRUM-MAP</span></h4>
-<p>The setting of this parameter indicates whether a Custom Pitch-Table, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="value">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="value">WAVE-LIST</span>, <span class="value">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is not changed.</p>
-<p>If you have a program where <span class="value">OPTION=PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>, and you want to eliminate the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
-<p>If you have a program where <span class="value">OPTION=&lt;PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to change the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
+<p>The setting of this parameter indicates whether a Custom Pitch-Table, a Wave-List, or a Drum- Map exists within the sound. These options occupy the portion of a sound program which is usually used by voices 5 and 6, so when an Option is present, you do not have access to those two voices. Whenever the setting of this parameter is changed, you will be prompted with the question “<span class="value">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="value">WAVE-LIST</span>, <span class="value">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>.” If you choose <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>, then the setting of the parameter is <em>not</em> changed.</p>
+<p>If you have a program where <span class="value">OPTION=PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>, and you want to <em>eliminate</em> the Option (to gain back Voices 5 and 6), press the <kbd class="button">Down Arrow</kbd> button when this parameter is selected. The display will show <span class="lcd">ERASE CURRENT &lt;PITCH-TABLE, <span class="lcd">DRUM-MAP</span>, or <span class="lcd">WAVE-LIST</span>&gt;</span>? Selecting <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> will eliminate the Option, and restore Voices 5 and 6 to their default settings.</p>
+<p>If you have a program where <span class="value">OPTION=&lt;PITCHTBL</span>, <span class="value">DRUM-MAP</span>, or <span class="value">WAVELIST</span>&gt;, and you want to <em>change</em> the Option (to another option), press the <kbd class="button">Up Arrow</kbd> button when this parameter is selected. The display will show the prompt <span class="lcd">REPLACE VOICES 5+6 WITH PITCH–TABLE</span>, <span class="lcd">WAVE-LIST</span>, <span class="lcd">DRUM–MAP</span>, or <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span>. At this point, you can select a new Option, or press <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> to return to the previously selected Option assigned to the program.</p>
 <h4 id="press" class="param-name"><span class="param">PRESS</span><span class="range">Range: OFF, KEY, or CHAN</span></h4>
 <p>Allows you to select <span class="value">POLY-KEY</span>, <span class="value">CHANNEL</span>, or <span class="value">NONE</span> (or no pressure responsiveness) for the program. Generally, if a program doesn’t need to respond to pressure, set this to <span class="value">OFF</span> to conserve sequencer memory. This is the default setting that will be installed into a track when the program is selected.</p>
 <h4 id="patch" class="param-name"><span class="param">PATCH</span><span class="range">Range: LIVE or HELD</span></h4>
@@ -476,7 +476,7 @@
   
   
 </figure>
-<p>The <span class="page-name">TIMBRE</span> sub-page controls the relative volume modulation amounts for each Voice, as controlled by Timbre. 
+<p>The <span class="page-name">TIMBRE</span> sub-page controls the <em>relative</em> volume modulation amounts for each Voice, as controlled by Timbre. 
   Note that when <span class="param">OPTIONS</span> is set to <span class="value">PITCH-TABLE</span>, <span class="value">WAVE-LIST</span>, or <span class="value">DRUM-MAP</span>, the <span class="param">V5</span> and <span class="param">V6</span> parameters are not displayed.</p>
 <h2 id="pitch-table-editor-parameters">Pitch-Table Editor Parameters</h2>
 <p>The following parameters are only available when <span class="value">OPTION=PITCH-TABLE</span> on the first <span class="page-name">Program Control</span> Page. To access the <dfn class="term">Pitch-Table</dfn> Editor parameters:</p>
@@ -610,7 +610,7 @@
   
 </figure>
 <p>The <span class="param">MAKE COPY</span> parameter allows you to make a copy of the complete pitch-table from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer.</p>
-<p>The <span class="param">RECALL</span> parameter allows you to recall the complete pitch-table from the Copy Buffer into an edited version of the current program if 1) the current program has a pitch-table installed in it and 2) the Copy buffer contains a pitch-table. 
+<p>The <span class="param">RECALL</span> parameter allows you to recall the complete pitch-table from the Copy Buffer into an edited version of the current program if 1) the current program has a pitch-table installed in it <em>and</em> 2) the Copy buffer contains a pitch-table. 
   If you attempt to recall a Pitch-Table into a program without just previously having copied a pitch-table into the Copy buffer, the copy is not completed and an error message is displayed.</p>
 <p>The <span class="param">SYSTEM</span> parameter allows you to install an alternate tuning into the System pitch-table. As an added feature, the System pitch-table itself is user-definable. 
   For instance, if you want to hear what other programs sound like using the custom pitch-table from a program, you can redefine the System pitch-table. 
@@ -828,7 +828,7 @@ You can control the relative volume of each Program, and you can optionally elim
 </figure>
 <p>The <span class="function">MAKE COPY</span> command allows you to make a copy of the complete Wave-List from the currently selected program (or the Compare Buffer) into the <dfn class="term">Copy Buffer</dfn>.</p>
 <p>The <span class="function">RECALL</span> parameter allows you to recall the complete Wave-List from the Copy Buffer into an edited version of the current program if 
-  1) the current program has a Wave-List installed in it and 
+  1) the current program has a Wave-List installed in it <em>and</em> 
   2) the Copy buffer contains a Wave-List. 
   </p>
   <p>If you attempt to recall a Wave-List into a program without just previously having copied a Wave-List into the Copy buffer, the copy is not completed and the following message is displayed:</p>
@@ -932,7 +932,7 @@ You can control the relative volume of each Program, and you can optionally elim
 <p>This parameter selects a single key for editing and displays all of the current drum-map parameter settings for that key. 
   When this parameter is underlined, you can select the drum-map key to be edited using the data entry controls or by playing the keys on the keyboard. 
   If you play several keys together, the last one played will be selected. 
-  There are 61 possible keys in a drum-map, ranging from <span class="key">B1</span> to <span class="key">D7</span> (MIDI keys 35 to 95). 
+  There are 61 possible keys in a drum-map, ranging from <kbd class="key">B1</kbd> to <kbd class="key">D7</kbd> (MIDI keys 35 to 95). 
   This range is based on the General MIDI Specification.</p>
 <h4 id="wave" class="param-name"><span class="param">WAVE</span><span class="range">Range: (shown below)</span></h4>
 <p>This parameter allows you to select the wave to be played by the key from any of the internal ROM waves. Drum-maps will have access to all Waves in the following Wave Classes, for a total of 105 different selectable wave forms:</p>
@@ -955,9 +955,9 @@ You can control the relative volume of each Program, and you can optionally elim
 <h4 id="voice-voice-parameter-template" class="param-name"><span class="param">VOICE — Voice Parameter
     Template</span><span class="range">Range: (shown below)</span></h4>
 <p>This parameter specifies where the current voice will be sent. For the four <kbd class="button">Patch Select</kbd>
-  settings, the destination voices are within the current program and the number of active voices is determined by the
+  settings, the destination voices are within the current program and the number of <em>active</em> voices is determined by the
   mute status of the four voices within the specified patch.</p>
-<p>If the VOICE parameter is assigned to a patch which does not have any voices set to wave type <span
+<p>If the VOICE parameter is assigned to a patch which does not have <em>any</em> voices set to wave type <span
     class="lcd">DRUM-MAP</span>, then the display will show <span class="lcd">WAVE=*-VOICE-*</span> and the parameter
   will not be editable. This indicates that the wave played by the key is controlled by the voice(s) in the patch rather
   than by the Drum-Map.</p>
@@ -1153,7 +1153,7 @@ You can control the relative volume of each Program, and you can optionally elim
   
 </figure>
 <p>The <span class="function">MAKE COPY</span> option allows you to make a copy of the complete Drum-Map from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer.</p>
-<p>The <span class="function">RECALL</span> option allows you to recall the complete Drum-Map from the Copy Buffer into an edited version of the current program if 1) the current program has a Drum-Map installed in it and 2) the Copy buffer contains a Drum-Map.</p> 
+<p>The <span class="function">RECALL</span> option allows you to recall the complete Drum-Map from the Copy Buffer into an edited version of the current program if 1) the current program has a Drum-Map installed in it <em>and</em> 2) the Copy buffer contains a Drum-Map.</p> 
 <p>If you attempt to recall a Drum-Map into a program without just previously having copied a Drum-Map into the Copy Buffer, the copy is not completed and the following message is displayed:</p>
 <figure class="vfd-unit">
   

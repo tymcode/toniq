@@ -67,7 +67,7 @@
 <h4 id="rate-modsrc" class="param-name"><span class="param">RATE MODSRC</span><span class="range">Range: various</span></h4>
 <p>Selects a modulation source for LFO RATE from among the 15 available modulators.</p>
 <h4 id="rate-modamt" class="param-name"><span class="param">RATE MODAMT</span><span class="range">Range: 00 to 99</span></h4>
-<p>Determines the amount by which the assigned <span class="param">RATE</span> modulator will affect the LFO <span class="param">RATE</span>. The effect of <span class="param">RATE MODAMT</span> is added to the effect of the LFO <span class="param">RATE</span> parameter.</p>
+<p>Determines the amount by which the assigned <span class="param">RATE</span> modulator will affect the LFO <span class="param">RATE</span>. The effect of <span class="param">RATE MODAMT</span> is <em>added</em> to the effect of the LFO <span class="param">RATE</span> parameter.</p>
 <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 00 to 99</span></h4>
 <p>Sets the “manual” level of the LFO. <span class="param">DEPTH</span> controls the initial amount of LFO.</p>
 <h4 id="depth-modsrc" class="param-name"><span class="param">DEPTH MODSRC</span><span class="range">Range: various</span></h4>
@@ -130,13 +130,13 @@
 <figure class="figure"><img src="images/noise-rate.png" alt="Stepped random NOISE modulator with a bracket marking Noise Rate"><figcaption>Typical NOISE modulator signal.</figcaption></figure>
 <p><span class="param">NOISE-RATE</span> determines how frequently the random level will change. Low values will cause it to change very slowly; with high values the level will change quickly.</p>
 <h3 id="env1-env2-env3-ts-10-envelopes">ENV1, ENV2, ENV3 — TS-10 Envelopes</h3>
-<p>An Envelope is a shape, or contour, which we apply to a signal source to make it change over time. Each TS-10 voice has three envelopes. These envelopes are automatically routed to the pitch, filter frequency and amplitude of the voice, though ENV1 and ENV2 can also be assigned elsewhere, wherever a modulator is selectable.</p>
+<p>An <em>Envelope</em> is a shape, or contour, which we apply to a signal source to make it change over time. Each TS-10 voice has three envelopes. These envelopes are automatically routed to the pitch, filter frequency and amplitude of the voice, though ENV1 and ENV2 can also be assigned elsewhere, wherever a modulator is selectable.</p>
 <ul>
-  <li><span class="param">ENV1</span> is routed to the pitch of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods</span> page which lets you adjust the amount by which <span class="param">ENV1</span> will modulate the voice’s pitch.</li>
-  <li><span class="param">ENV2</span> is routed to the filter cutoff frequency of the voice. For each of the voice’s two filters, the <span class="param">ENV2</span> parameter on the <span class="page-name">Filters</span> page controls the <span class="param">ENV2</span> depth.</li>
-  <li><span class="param">ENV3</span> is routed to the amplitude (volume) of the voice. <span class="param">ENV3</span> always controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output</span> page will occur before <span class="param">ENV3</span> in the signal flow.</li>
+  <li><span class="param">ENV1</span> is routed to the <em>pitch</em> of the voice. There is a parameter always available on the <span class="page-name">Pitch Mods</span> page which lets you adjust the amount by which <span class="param">ENV1</span> will modulate the voice’s pitch.</li>
+  <li><span class="param">ENV2</span> is routed to the <em>filter cutoff frequency</em> of the voice. For each of the voice’s two filters, the <span class="param">ENV2</span> parameter on the <span class="page-name">Filters</span> page controls the <span class="param">ENV2</span> depth.</li>
+  <li><span class="param">ENV3</span> is routed to the <em>amplitude</em> (volume) of the voice. <span class="param">ENV3</span> <em>always</em> controls the final volume contour of the voice. Any other volume modulators selected on the <span class="page-name">Output</span> page will occur before <span class="param">ENV3</span> in the signal flow.</li>
 </ul>
-<p>The TS-10 envelopes are descended from the venerable ADSR (attack, decay, sustain, release) envelope, but with many refinements. While the ADSR envelope gives you control over three time segments and one level, the TS-10 envelopes give you control over four levels and five time segments.</p>
+<p>The TS-10 envelopes are descended from the venerable ADSR (attack, decay, sustain, release) envelope, but with many refinements. While the ADSR envelope gives you control over three time segments and one level, the TS-10 envelopes give you control over <em>four</em> levels and <em>five</em> time segments.</p>
 <p>The illustration below shows the make-up of a TS-10 envelope:</p>
 <figure class="figure"><img src="images/envelope-stages.png" alt="TS-10 envelope: ATTACK, DECAY 1–3, KEY HELD, and RELEASE with PEAK, BREAK1, BREAK2, and SUSTAIN levels"><figcaption>Make-up of a TS-10 envelope.</figcaption></figure>
 <p>Each envelope page consists of three sub-pages, which are reached by repeatedly pressing the <kbd class="button">Env 1</kbd>, <kbd class="button">Env 2</kbd>, or <kbd class="button">Env 3</kbd> button. For each envelope page:</p>
@@ -148,7 +148,7 @@
 <h2 id="env1-env2-and-env3-pages">ENV1, ENV2 and ENV3 Pages</h2>
 <p>The <span class="page-name">ENV1</span>, <span class="page-name">ENV2</span> and <span class="page-name">ENV3</span> Pages, parameters and ranges are all the same except where indicated below. We will use <span class="page-name">ENV3</span> as our example, since its effect on the volume of the voice is immediately apparent.</p>
 <p>Press the <kbd class="button">Env 3</kbd> button to get to the first <span class="page-name">ENV3</span> sub-page containing the five TIME parameters:</p>
-<p>Note that the numbers shown here represent times, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
+<p>Note that the numbers shown here represent <em>times</em>, not rates. That is, the envelope will take a fixed amount of time to go from one level to another no matter how close together or far apart those two levels are.</p>
 <h4 id="attack" class="param-name"><span class="param">ATTACK</span><span class="range">Range: 00 to 99 (see <a href="#envelope-times">the Envelope Times chart below</a> for a listing of the time values)</span></h4>
 <p>The amount of time it takes for the envelope level to travel from zero (when the key is struck) to the PEAK level. The higher the value, the longer the time.</p>
 <h4 id="track-attack-mod-selector" class="param-name"><span class="param">Track Attack Mod Selector</span><span class="range">Range: enabled (*) or disabled (blank)</span></h4>
@@ -337,7 +337,7 @@
 <aside class="note"><p>MONO, LEGATO and MINIMODE feature “note memory.” If you release a key while still holding down another key, the pitch will glide back to the note you are holding. Holding down the sustain pedal will dynamically disable note memory.</p></aside>
 <table class="data-table" id="glide-modes"><caption>GLIDE MODES</caption><thead><tr><th><span class="param">MODE</span></th><th>Staccato Glide</th><th>Legato Glide</th><th>Legato Envelope Retrigger</th><th>Note Memory</th></tr></thead><tbody><tr><td>PEDAL</span> (WITH PEDAL DOWN)</td><td>YES</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MONO</td><td>YES</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>LEGATO</td><td>NO</td><td>YES</td><td>YES</td><td>YES</td></tr><tr><td>TRIGGER</td><td>NO</td><td>YES</td><td>YES</td><td>NO</td></tr><tr><td>MINIMODE</td><td>NO</td><td>YES</td><td>NO</td><td>YES</td></tr></tbody></table>
 <h4 id="glidetime" class="param-name"><span class="param">GLIDETIME</span><span class="range">Range: 00 to 99</span></h4>
-<p>This parameter controls the time it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses <dfn class="term">Constant-Time Portamento</dfn>. This means that it will take the same amount of time to glide between notes that are close together (i.e.: <span class="key">C4</span> to <span class="key">D4</span>) as it will to glide between notes that are far apart (i.e.: <span class="key">C4</span> to <span class="key">C7</span>).</p>
+<p>This parameter controls the time it takes for the pitch to slide smoothly (glide) from one note to another. The higher the value, the longer the glide time. The TS-10 uses <dfn class="term">Constant-Time Portamento</dfn>. This means that it will take the same amount of time to glide between notes that are close together (i.e.: <kbd class="key">C4</kbd> to <kbd class="key">D4</kbd>) as it will to glide between notes that are far apart (i.e.: <kbd class="key">C4</kbd> to <kbd class="key">C7</kbd>).</p>
 
 
 <h2 id="pitch-mods-page">Pitch Mods Page</h2>
@@ -387,7 +387,7 @@
 </p>
 <ul>
   <li><span class="value">SYSTEM</span> — Uses whatever is selected as the system pitch-table on the <span class="page-name">System</span> page. Normally this is standard twelve-tone equal temperament tuning across the keyboard. However, a custom pitch-table can be copied into the system pitch-table for use by all sounds. The PITCH-TABLE parameter on the <span class="page-name">System</span> page determines what the System pitch-table will be.</li>
-  <li><span class="value">ALL-C4</span> — No pitch tracking — the same pitch (<span class="key">C4</span>) plays across the keyboard.</li>
+  <li><span class="value">ALL-C4</span> — No pitch tracking — the same pitch (<kbd class="key">C4</kbd>) plays across the keyboard.</li>
   <li><span class="value">CUSTOM</span> — User definable pitch-table. This option is only available if a custom pitch-table has been created in the program.</li>
 </ul>
 <h4 id="env1" class="param-name"><span class="param">ENV1</span><span class="range">Range: -99 to +99</span></h4>
@@ -399,7 +399,7 @@
 <h4 id="low-pass-high-pass">Low-pass/High-pass</h4>
 <p>A low-pass filter allows only those frequencies below the filter cutoff frequency to pass — higher frequencies are filtered out. The reverse is true for a high-pass filter — it lets frequencies higher than the cutoff frequency pass and filters out those below. In the TS-10, <span class="param">FILTER 1</span> is always a low-pass filter. <span class="param">FILTER 2</span> can be either a high-pass or low-pass filter.</p>
 <h4 id="poles" class="param-name"><span class="param">Poles – Rolloff Curves</span><span class="range">Range: 1 to 4</span></h4>
-<p><dfn class="term">Poles</dfn> is an engineering term which describes the steepness of a filter, or the filter’s cutoff slope. Each additional pole gives a filter a steeper rolloff curve. In the TS-10, the filter modes are interdependent; that is, the combined number of poles in <span class="param">FILTER 1</span> and <span class="param">FILTER 2</span> is always four.</p>
+<p><dfn class="term">Poles</dfn> is an engineering term which describes the steepness of a filter, or the filter’s cutoff <em>slope</em>. Each additional pole gives a filter a steeper rolloff curve. In the TS-10, the filter modes are interdependent; that is, the combined number of poles in <span class="param">FILTER 1</span> and <span class="param">FILTER 2</span> is always four.</p>
 <p>These four poles are divided between the two filters; either as 2 and 2, or as 3 and 1. There are two <span class="page-name">Filters</span> pages; however, if you change the number of poles on either page, you will change the number of poles on the other page — high-pass will remain high-pass, but the number of poles will change.</p>
 <p>A 1-pole filter will rolloff at 6 dB per octave; a 2-pole filter, 12 dB per octave; a 3-pole filter, 18 dB per octave; and 4-pole filter, 24 dB per octave. To reproduce a 4-pole low-pass filter (for that “classic” analog synth sound) you would set both low-pass filters to roll off at 12 dB per octave, resulting in a 24 dB per octave rolloff.</p>
 <h4 id="cutoff-frequency" class="param-name"><span class="param">Cutoff Frequency</span><span class="range">Range: 000 to 127</span></h4>
@@ -532,7 +532,7 @@
   
 </figure>
 <p>Can be used to fade the voice in or out between the two keys specified to the right (see below).</p>
-<p>This is good for doing keyboard crossfades between voices, or for reducing the volume of a particular voice as you go higher up the keyboard. A value of <span class="value">+99</span> will fade the voice in from silence to full level from the low keys to the high keys. A value of <span class="value">-99</span> will fade the voice out from full level to silence from the low keys to the high keys. Intermediate values will scale the voice from full level to an intermediate level.</p>
+<p>This is good for doing keyboard crossfades between voices, or for reducing the volume of a particular voice as you go higher up the keyboard. A value of <span class="value">+99</span> will fade the voice <em>in</em> from silence to full level from the low keys to the high keys. A value of <span class="value">-99</span> will fade the voice <em>out</em> from full level to silence from the low keys to the high keys. Intermediate values will scale the voice from full level to an intermediate level.</p>
 <figure class="figure"><img src="images/output-kbd-scale.png" alt="OUTPUT KBD-SCALE at +99 and −99 across MIDI keys 0–127, with the TS-10 keyboard range marked"><figcaption>Keyboard scaling of voice volume.</figcaption></figure>
 <p>Setting a Keyboard Zone Moving the <kbd class="button">Data Entry Slider</kbd> all the way down to the bottom position (below <span class="value">-99</span>) selects <span class="value">KBD-SCAL=ZON</span>. In this position the voice will sound only over the keyboard range specified by the low and high keys. When <span class="value">KBD-SCAL=ZON</span>, the volume scaling function is not in effect — the voice will play at the same volume throughout the zone.</p>
 <figure class="figure"><img src="images/output-kbd-zone.png" alt="KBD-SCALE=ZON: full volume only between the specified low and high keys"><figcaption>Keyboard zone with <span class="value">KBD-SCALE=ZON</span>.</figcaption></figure>

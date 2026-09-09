@@ -41,7 +41,7 @@
       their assigned General MIDI Program Change numbers.</p>
     <h4 id="percussion">Percussion</h4>
     <p>General MIDI also includes a Percussion Key Map, defining specific drum voices for each key. To avoid confusion,
-      General MIDI always assigns percussion to MIDI channel 10. The General MIDI Percussion Key Map can be found after
+      General MIDI <em>always</em> assigns percussion to MIDI channel 10. The General MIDI Percussion Key Map can be found after
       the General MIDI Sound Map.</p>
     <h4 id="gs-mt-32-compatibility" class="param-name">GS/MT-32 Compatibility</h4>
     <p>GS is an extended MIDI sound specification originated by Roland® Corp. Although we provide the GS Drum Maps
@@ -2111,8 +2111,8 @@
         </tr>
       </tbody>
     </table>
-    <p>After receiving a <span class="param">Bank Select</span> value of <span class="sysex-byte">MSB 127</span> on MIDI Channel 10, any subsequent MIDI program changes on MIDI
-      channel 10 will always select the MT-32 Drum Map.</p>
+    <p>After receiving a <span class="param">Bank Select</span> value of <span class="sysex-byte">MSB 127</span> on MIDI Channel 10, <em>any</em> subsequent MIDI program changes on MIDI
+      channel 10 will <em>always</em> select the MT-32 Drum Map.</p>
     <p>Transmitting a <span class="param">Bank Select</span> value of <span class="sysex-byte">0-126 MSB</span> will return the MIDI channel to normal MIDI program change
       reception, selecting sounds from the General MIDI Sound Map as described on the previous page.</p>
     <h2 id="midi-controller-implementation-in-general-midi-mode">MIDI Controller Implementation in General MIDI Mode</h2>

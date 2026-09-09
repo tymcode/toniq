@@ -98,7 +98,7 @@
     <p>This parameter determines which layer(s) will be triggered when a key is released. A good example of this would
       be the “thunk” sound made by a harpsichord when you release a key.</p>
     <p>This release sound can be a separate sample placed in a layer designated as a keyup layer. If you want a layer to
-      be triggered only when keys are released, first enable the layer on the <span class="param">KEY-UP-LAYERS</span> parameter, and then disable
+      be triggered <em>only</em> when keys are released, first enable the layer on the <span class="param">KEY-UP-LAYERS</span> parameter, and then disable
       the same layer on the <span class="param">KEY-DOWN-LAYERS</span> parameter.</p>
     <ul>
       <li>Select <span class="param">KEY-UP-LAYERS=########</span>. Successive presses of the soft button beneath <span class="param">KEY-UP-LAYERS</span> will move the
@@ -530,7 +530,7 @@
     <h4 id="rate-modamt" class="param-name"><span class="param">RATE MODAMT</span><span class="range">Range: 0 to
         99</span></h4>
     <p>Determines the amount by which the assigned RATE modulator will affect the <span class="param">LFO RATE</span>. The effect of <span
-        class="param">RATE MODAMT</span> is added to the effect of the <span class="param">LFO RATE</span> parameter.
+        class="param">RATE MODAMT</span> is <em>added</em> to the effect of the <span class="param">LFO RATE</span> parameter.
     </p>
     <h4 id="depth" class="param-name"><span class="param">DEPTH</span><span class="range">Range: 0 to 99</span></h4>
     <p>Sets the “manual” level of the LFO. <span class="param">DEPTH</span> controls the initial amount of LFO.</p>
@@ -753,7 +753,7 @@
     <h4 id="times" class="param-name"><span class="param">TIMES</span><span class="range">Range: 0 to 99</span></h4>
     <p><span class="param-name">TIME</span> shows five time parameters. The first four are the times between the five
       levels. The fifth time is the (first) release time.</p>
-    <p>Note that the numbers shown here represent durations, not rates. That is, the envelope will take a fixed amount
+    <p>Note that the numbers shown here represent <em>durations</em>, not rates. That is, the envelope will take a fixed amount
       of time to go from one level to another no matter how close together or far apart those two levels are.</p>
     <figure class="figure"><img src="images/times-between-levels.png" alt="Times between envelope Levels."></figure>
 
@@ -1064,8 +1064,8 @@
     <h4 id="rel-level" class="param-name"><span class="param">REL-LEVEL</span><span class="range">Range: -99 to
         +99</span></h4>
     <p><span class="param">2ND-RELEASE-TIME</span> and <span class="param">REL-LEVEL</span> provide one more breakpoint
-      in the envelope that occurs after the release time (<span class="param">TIME-5</span>). The <span class="param">LEVEL</span> value controls
-      where the breakpoint will be placed relative to the current output level of the envelope at the time the key was
+      in the envelope that occurs <em>after</em> the release time (<span class="param">TIME-5</span>). The <span class="param">LEVEL</span> value controls
+      where the breakpoint will be placed <em>relative to the current output level of the envelope</em> at the time the key was
       released.</p>
       <p>This is useful when you want to create a more natural release envelope, such as a release envelope that decays more slowly than the default release envelope.</p>
     <p>The following diagram illustrates how the <span class="param">2ND-RELEASE-TIME</span> and <span
@@ -1211,7 +1211,7 @@
       plays back at the same pitch as it was recorded.</p>
       <aside class="note"><p>If the <span class="param">PITCHTBL</span> parameter on the <span class="page-name">LAYER</span> sub-page is set to <span class="value">NO PITCH</span>, the WaveSample will play back at the same pitch as it was recorded, regardless of the <span class="param">WS-ROOT-KEY</span> parameter.</p></aside>
     <aside class="note">
-      <p>Keys below <span class="key">A0</span> are displayed as <span class="lcd">K00</span> through <span class="lcd">K20</span>. These values are only accessible when the Sampled Sound is transposed up.</p>
+      <p>Keys below <kbd class="key">A0</kbd> are displayed as <span class="lcd">K00</span> through <span class="lcd">K20</span>. These values are only accessible when the Sampled Sound is transposed up.</p>
     </aside>
     <h4 id="fine-tune" class="param-name"><span class="param">FINE-TUNE</span><span class="range">Range: -99 to +99
         cents</span></h4>
@@ -1863,7 +1863,7 @@
         with positive <span class="param">MODAMT</span> values, and backward (toward the beginning of the WaveSample)
         with negative <span class="param">MODAMT</span> values.</li>
       <li><span class="value">START</span> — The <span class="param">SAMPLE-START</span> will be modulated.</li>
-      <li><span class="value">START+LP</span> — Both the <span class="param">SAMPLE-START</span> and the <span class="param">LOOP-POSITION</span> will be modulated. When <span class="value">START+LP</span> is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value,
+      <li><span class="value">START+LP</span> — Both the <span class="param">SAMPLE-START</span> <em>and</em> the <span class="param">LOOP-POSITION</span> will be modulated. When <span class="value">START+LP</span> is selected, sample playback will always begin at the <span class="param">LOOPSTART</span> value,
         rather than at the <span class="param">SAMPLE-START</span> value.</li>
       <li><span class="value">LOOPSTRT</span> — Modulates the <span class="param">LOOPSTART</span> parameter. This will have the effect of either
         making the loop shorter (with positive <span class="param">MODAMT</span> values moving the <span
@@ -2030,11 +2030,11 @@
     <h4 id="pitchtbl" class="param-name"><span class="param">PITCHTBL</span><span class="range">Range: SYSTEM, NO PITCH,
         Pitch Tables 1-8.</span></h4>
     <p>This parameter determines whether the layer will use the SYSTEM pitch-table, or play each WaveSample in the layer
-      at the pitch it would play on <span class="key">C4</span> (NO PITCH), or use any pitch-table that was stored with the Sampled Sound.</p>
+      at the pitch it would play on <kbd class="key">C4</kbd> (NO PITCH), or use any pitch-table that was stored with the Sampled Sound.</p>
     <h4 id="stereo" class="param-name"><span class="param">STEREO</span><span class="range">Range: OFF or ON</span></h4>
     <p>Stereo samples are stored in pairs of adjacent layers (1&amp;2, 3&amp;4, 5&amp;6, or 7&amp;8), with the LEFT
       channel always stored in an odd numbered layer (1, 3, 5 or 7), and the RIGHT channel stored across the same key
-      range in the next higher even-numbered layer. These paired adjacent layers are called companion layers.</p>
+      range in the next higher even-numbered layer. These paired adjacent layers are called <em>companion</em> layers.</p>
     <p>When the <span class="param">STEREO</span> parameter is turned ON in the selected LAYER, it is simultaneously
       turned ON in the companion layer. When <span class="value">STEREO=ON</span>, simultaneous editing of both
       channels of a Stereo Sample is enabled (see below).</p>

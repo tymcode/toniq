@@ -475,6 +475,18 @@ strong.panel {
   box-shadow: 1px 1px 0 rgba(26, 26, 26, 0.45);
 }
 
+kbd.key {
+  font-family: inherit;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1em;
+  background: none;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 span.key-group {
   font-family: var(--font-panel);
   font-stretch: 87.5%;
