@@ -170,10 +170,10 @@
     </ul>
     <p>Whenever you save a 30 or 60 Seq/Song file to disk, you will be asked whether you want to also save internal
       programs (either 60 or the entire 120) in the same file along with the sequencer data.</p>
-    <p>Saving 60 Programs with a 30-SEQ/SONGS file containing Seq/Song Banks 0-4 will save the contents of Program <dfn
-        class="term">BankSet</dfn> U0. Saving 60 Programs with a 30-SEQ/SONGS file containing Seq/Song Banks 5-9 will
-      save the contents of Program BankSet U1. Saving 60 Programs with a 60-SEQ/SONGS file will
-      save the contents of Program BankSet U0. A 60 SEQ/SONGS file will also allow you to save
+    <p>Saving 60 Programs with a <span class="file-type">30-SEQ/SONGS</span> file containing Seq/Song Banks 0-4 will save the contents of Program <dfn
+        class="term">BankSet</dfn> U0. Saving 60 Programs with a <span class="file-type">30-SEQ/SONGS</span> file containing Seq/Song Banks 5-9 will
+      save the contents of Program BankSet U1. Saving 60 Programs with a <span class="file-type">60-SEQ/SONGS</span> file will
+      save the contents of Program BankSet U0. A <span class="file-type">60-SEQ/SONGS</span> file will also allow you to save
       the currently loaded contents of the Sample Banks with it. This lets you keep the sequences and their appropriate
       programs and Sample Banks information together when reloading the data.</p>
     <h3 id="midi-system-exclusive-data">MIDI System Exclusive data:</h3>
@@ -193,9 +193,9 @@
     <ul>
       <li><span class="file-type">SAMPLE-BANKS</span> — remembers up to 20 Sampled Sound names (ten in BankSet 8 and ten in
         BankSet 9, if applicable) as well as their source disk(s), file paths, and bank
-        locations. Loading a <dfn class="term">Sample-Banks</dfn> file will allow you to <span
+        locations. Loading a <span class="file-type">SAMPLE-BANKS</span> file will allow you to <span
           class="function">Auto-Load</span> the Sampled Sound files back into the same location(s) that they were in at
-        the time the <span class="term">Sample-Banks</span> file was saved.</li>
+        the time the <span class="file-type">SAMPLE-BANKS</span> file was saved.</li>
       <li><span class="file-type">SAMPLE-EDITS</span> — contains parameter edits of Sampled Sounds.</li>
     </ul>
     <h3 id="disk-capacity">Disk Capacity — Bytes, Blocks, and Files</h3>
@@ -276,7 +276,7 @@
         the label-side facing up, and the metal shutter facing away from you. Make sure the plastic write-protect tab is
         in the closed position (no light showing through the window).</li>
       <li>Press <kbd class="button">Storage</kbd>.</li>
-      <li>Press <span class="param">DISK</span>. The Disk Storage menu appears (as shown earlier).</li>
+      <li>Press <span class="function">DISK</span>. The Disk Storage menu appears (as shown earlier).</li>
       <li>Press <span class="function">FORMAT</span>.</li>
       <li>The display shows:</li>
       <figure class="vfd-unit has-page">
@@ -608,7 +608,7 @@
   <figcaption class="figure-caption">Using the Keyboard to Enter Filenames</figcaption>
 </figure>
 
-    <h4 id="saving-programs-along-with-a-30-seqsongs-file">Saving Programs along with a 30-SEQ/SONGS File</h4>
+    <h4 id="saving-programs-along-with-a-30-seqsongs-file">Saving Programs along with a <span class="file-type">30-SEQ/SONGS</span> File</h4>
     <p>When you save a <span class="file-type">30-SEQ/SONGS</span> file, the TS-10 gives you the option
       of saving Programs in the same file, so that you can keep the sequences and the Programs that go with them
       together.</p>
@@ -644,22 +644,22 @@
       Use the data entry controls to select whether (and how many) Programs will be saved in the same file with the sequence data:
       <ul>
         <li><span class="value">NO</span> — Only the specified sequencer data will be saved, no Programs.</li>
-        <li><span class="value">60</span> — When a 30-SEQ/SONGS file to be saved is from <span class="value">SELECT=BANKS</span> 0-4, the BankSet U0 programs will be saved into the file along with the sequence data. When a
-          30-SEQ/SONGS file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
-            will automatically be reloaded into the same User RAM location when the 30-SEQ/SONGS file is loaded, replacing
+        <li><span class="value">60</span> — When a <span class="file-type">30-SEQ/SONGS</span> file to be saved is from <span class="value">SELECT=BANKS</span> 0-4, the BankSet U0 programs will be saved into the file along with the sequence data. When a
+          <span class="file-type">30-SEQ/SONGS</span> file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
+            will automatically be reloaded into the same User RAM location when the <span class="file-type">30-SEQ/SONGS</span> file is loaded, replacing
             the Programs that are there.</li>
         <li><span class="value">120</span> — All User RAM Programs will be saved into the file along with the sequence data (<dfn
           class="term">BankSet</dfn> U0 and U1). The Programs will be reloaded into the internal memory when the
-        30-SEQ/SONGS file is loaded, replacing the programs that are there.</li>
+        <span class="file-type">30-SEQ/SONGS</span> file is loaded, replacing the programs that are there.</li>
         <li>After choosing the number of Programs to be saved, press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to proceed.</li>
       </ul>
       <aside class="note">
         <span class="file-type">30-SEQ/SONGS</span> file to be saved is from <span class="value">SELECT=BANKS</span> 5-9, the BankSet U1 programs will be saved into the file along with the sequence data. The Programs
-        will automatically be reloaded into the same User RAM location when the 30-SEQ/SONGS file is loaded, replacing the Programs that are there.</aside>
+        will automatically be reloaded into the same User RAM location when the <span class="file-type">30-SEQ/SONGS</span> file is loaded, replacing the Programs that are there.</aside>
       
     <aside class="note">
       <p>If Programs have been saved in a Sequencer file along with the sequencer data, when you later go to load
-        the file, a P will flash on the display next to the file name when the file is displayed on the <span class="page-name">DISK LOAD</span> page. When you answer <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to load the data,
+        the file, a <span class="lcd">P</span> will flash on the display next to the file name when the file is displayed on the <span class="page-name">DISK LOAD</span> page. When you answer <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> to load the data,
         the TS-10 will load the Programs automatically with the sequencer data. This will over-write the Programs that are
         in the internal memory. You should always be sure that any Programs you value are saved before loading sequencer
         files which contain Programs.</p>

@@ -74,7 +74,7 @@
       playing.</li>
       <li>Voices without brackets around the name are enabled for that patch and will play.</li>
       <li>Brackets around the name mean that the voice is muted for that patch and will not play.</li>
-      <li>Asterisks (*) on both sides of the name mean that the voice is soloed for that patch, and all other voices are
+      <li>Asterisks (<span class="star">*</span>) on both sides of the name mean that the voice is soloed for that patch, and all other voices are
       muted.</li>
     </ul>
     <p>The <kbd class="button">Patch Select</kbd> buttons are sent and received over MIDI as MIDI <span class="message">Controller #70</span>, and
@@ -102,7 +102,7 @@
       and any changes you make will affect the edit program.</p>
 <p>A general rule of thumb: The sound you hear, is the one you’re editing.</p>
     <p>If you like the result of the changes you have made to a program, you should rename it and save the new program
-      permanently to another location. See “<span class="page-name">Write</span> Page,” later in this section.</p>
+      permanently to another location. See <span class="page-name">Write</span> Page, later in this section.</p>
 <h3 id="abandoning-your-edits">Abandoning Your Edits</h3>
     <p>If you decide, while editing a program, that you’re not happy with what you’ve done, and you want to start over
       with the original program, just go to the proper Sound Bank location and select the program again. Then you can
@@ -315,8 +315,8 @@
       <p>There can be four variations of the program, one for each of the four possible
       patch select button positions. The patch selects are used to control which voices in a program are active and
       which ones are muted. The current patch select variation is shown in the lower-left corner of the display on the
-      <span class="page-name">Select Voice</span> page. For either button, a <span class="lcd">0</span> indicates that the button is not being
-      pressed, and an asterisk (<span class="lcd">*</span>) indicates that the button is down.</p>
+      <span class="page-name">Select Voice</span> page. For either button, a <span class="value">0</span> indicates that the button is not being
+      pressed, and an asterisk (<span class="star">*</span>) indicates that the button is down.</p>
     <p>While on the <span class="page-name">Select Voice</span> Page, press the <kbd class="button">Patch Select</kbd>
       buttons and watch as the display changes to show the status of each patch variation. Note that for each of the
       four patch select variations, a different combination of voices can be active or muted. This lets you dynamically
@@ -332,7 +332,7 @@
     <aside class="tip">
       <p>When programming the patch selects, it is often convenient to be able to instantly latch different <kbd
           class="button">Patch Select</kbd> variations so that you can set up the voice mutes for each variation. You
-        can do this by setting the <span class="page-name">Performance Options</span> <span class="param">PATCH SELECT</span> parameter to <span class="lcd">HELD</span>. Refer
+        can do this by setting the <span class="page-name">Performance Options</span> <span class="param">PATCH SELECT</span> parameter to <span class="value">HELD</span>. Refer
         to <a class="refer-to" href="04-presets.html#section-4-understanding-presets">Section 4 — Understanding Presets</a> for more information.</p>
     </aside>
     <h2 id="write-page-saving-a-new-program-into-memory">Write Page — Saving a New Program Into Memory</h2>
@@ -394,9 +394,9 @@
       <li>Edit the Program Name using the <kbd class="button">Data Entry Slider</kbd> and the two Move Cursor soft
       buttons, labeled LEFT and RIGHT. You can move the Data Entry Slider up and down to
       scroll through the available characters, or step through them one at a time with the <kbd class="button">Up/Down
-        Arrow</kbd> buttons. Find the first letter you want, then press the RIGHT button to move the cursor to the next
+        Arrow</kbd> buttons. Find the first letter you want, then press the <kbd class="button">Right</kbd> button to move the cursor to the next
       location. Repeat this procedure until the display shows the name you have chosen (or if the <span
-        class="param">KBD-NAMING</span> parameter on the <span class="page-name">System</span> page is ON, you can use
+        class="param">KBD-NAMING</span> parameter on the <span class="page-name">System</span> page is <span class="value">ON</span>, you can use
       the keyboard to enter the name, as explained in <a class="refer-to"
         href="02-system.html#section-2-system-page-parameters">Section 2 — System Page Parameters</a>.)</li>
     </ul>
@@ -505,7 +505,7 @@
       the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons to select
       among the 15 available modulation sources.</p>
     <aside class="tip">
-      <p>Moving the <kbd class="button">Data Entry Slider</kbd> all the way up selects <span class="lcd">*<span
+      <p>Moving the <kbd class="button">Data Entry Slider</kbd> all the way up selects <span class="star">*<span
             class="value">OFF</span>*</span>, which is handy if you don’t want a modulator applied in a particular
         location.</p>
     </aside>
@@ -569,11 +569,11 @@
 </figure>
 <h4 id="modamt-modulation-amount">MODAMT — Modulation Amount</h4>
     <p>As shown above, where a modulation source is selected, the parameter immediately to its right controls the
-      Modulation Amount (the display shows <span class="lcd">MODAMT=±##</span>), which controls how deeply the
+      Modulation Amount (the display shows <span class="star">MODAMT=±##</span>), which controls how deeply the
       selected modulator will affect the level to which it is being applied.</p>
-    <p>Press the soft button above <span class="lcd">MODAMT=</span>, and use the data entry controls to adjust the
+    <p>Press the soft button above <span class="value">MODAMT=</span>, and use the data entry controls to adjust the
       modulation amount. Modulation amount can be positive or negative. A modulation amount of <span class="value">+00</span> has the same effect
-      as turning the modulator <span class="function"><span class="star">*</span>OFF<span class="star">*</span></span>.</p>
+      as turning the modulator <span class="value"><span class="star">*</span>OFF<span class="star">*</span></span>.</p>
     <aside class="tip">
       <p>With modulation amount, as with all parameter values that have a center value (in this case, <span class="value">+00</span>), there is an
         easy way to reach that value. With the <span class="param">MODAMT</span> selected, press the <kbd
@@ -590,7 +590,7 @@
       </tr>
       <tr>
         <td>• <span class="value">NOISE</span> — Noise Generator</td>
-        <td>• <span class="param">PEDAL</span> — Voltage Control Foot Pedal</td>
+        <td>• <span class="value">PEDAL</span> — Voltage Control Foot Pedal</td>
       </tr>
       <tr>
         <td>• <span class="value">ENV-1</span> — Envelope 1</td>
@@ -598,11 +598,11 @@
       </tr>
       <tr>
         <td>• <span class="value">ENV-2</span> — Envelope 2</td>
-        <td>• <span class="param">XCTRL</span> — External Controller (MIDI)</td>
+        <td>• <span class="value">XCTRL</span> — External Controller (MIDI)</td>
       </tr>
       <tr>
         <td>• <span class="value">MIXER</span> — Mod Mixer/Shaper</td>
-        <td>• <span class="param">PRESS</span> — Pressure (After-touch)</td>
+        <td>• <span class="value">PRESS</span> — Pressure (After-touch)</td>
       </tr>
       <tr>
         <td>• <span class="value">WL + PR</span> — Wheel + Pressure</td>
@@ -614,11 +614,11 @@
       </tr>
       <tr>
         <td>• <span class="value">WHEEL</span> — Modulation Wheel</td>
-        <td>• <span class="lcd">*<span class="value">OFF</span>*</span> — no modulation</td>
+        <td>• <span class="star">*</span><span class="value">OFF</span><span class="star">*</span> — no modulation</td>
       </tr>
     </table>
 <h4 id="lfo-low-frequency-oscillator" class="param-name">LFO — Low Frequency Oscillator</h4>
-    <p>The Low Frequency Oscillator generates only very low frequency waves, below the audio spectrum, which can produce
+    <p>The <dfn class="term">Low Frequency Oscillator</dfn> generates only very low frequency waves, below the audio spectrum, which can produce
       vibrato, tremolo, and many other effects, depending on the LFO wave selected, and where it is applied as a
       modulator. There are seven possible waveshapes for the LFO.</p>
 <h4 id="noise-noise-generator" class="param-name">NOISE — Noise Generator</h4>
@@ -632,12 +632,14 @@
     <h4 id="env-1-env-2-env-3" class="param-name">ENV-1, ENV-2, (ENV-3)</h4>
     <p>The TS-10 has three complex Envelopes. Envelopes are used to create changes, over time, in pitch, brightness,
       volume, etc.</p>
-    <p>&gt; ENV-1 is permanently routed to the pitch of the voice, though it can be assigned as a modulator elsewhere if
-      you wish.</p>
-    <p>&gt; ENV-2 is permanently routed to the filter cutoff frequency. It also can be assigned as a modulator
-      elsewhere.</p>
-    <p>&gt; ENV-3 is a special case. ENV 3 always controls the volume of the voice, and cannot be selected as a
-      modulator anywhere else.</p>
+      <ul>
+    <li>ENV-1 is permanently routed to the pitch of the voice, though it can be assigned as a modulator elsewhere if
+      you wish.</li>
+    <li>ENV-2 is permanently routed to the filter cutoff frequency. It also can be assigned as a modulator
+      elsewhere.</li>
+    <li>ENV-3 is a special case. ENV 3 always controls the volume of the voice, and cannot be selected as a
+      modulator anywhere else.</li>
+    </ul>
     <h4 id="mixer-mod-mixer-shaper" class="param-name">MIXER — Mod Mixer/Shaper</h4>
     <p>The <dfn class="term">Mod Mixer/Shaper</dfn> is a powerful feature which allows you to assign two modulation sources to one input, and to
       scale and shape the response of one of those modulators. The controls on the <span class="page-name">Mod Mixer</span>
@@ -670,10 +672,9 @@
       no effect on incoming MIDI Foot Pedal data). See <a class="refer-to"
         href="02-system.html#section-2-system-page-parameters">Section 2 — System Page Parameters</a> for more details.</p>
     <h4 id="timbr-timbre-control" class="param-name">TIMBR — Timbre Control</h4>
-    <p>This is a special modulator, which is intended as an “extra” real-time performance controller.</p>
-    <p><span class="param">TIMBR</span> can be assigned like any other modulator wherever a modulation source is selected. It is controlled from
+    <p>This is a special modulator, which is intended as an “extra” real-time performance controller. <span class="value">TIMBR</span> can be assigned like any other modulator wherever a modulation source is selected. It is controlled from
       the <span class="page-name">Timbre</span> page in the <span class="key-group">Track Parameters</span> section.</p>
-    <p>The <span class="param">Timbre</span> parameter also controls the relative volume modulation amounts for each of the six program voices
+    <p>The <span class="value">Timbre</span> parameter also controls the relative volume modulation amounts for each of the six program voices
       (assigned on the <span class="page-name">TIMBRE</span> sub-page found on the <span class="page-name">Program
         Control</span> Page). This allows you to determine how much louder or softer each voice will become as the
       Timbre modulation controller is increased or decreased.</p>
@@ -698,17 +699,17 @@
     <p>You don’t have to be playing the TS-10 from an external instrument for this to work. For example, if you have a
       keyboard with a Breath Controller:</p>
     <ol>
-      <li>Connect its MIDI Out to the TS-10 MIDI In</li>
+      <li>Connect its <kbd class="button">MIDI Out</kbd> to the TS-10 <kbd class="button">MIDI In</kbd></li>
     <li>Make sure both instruments have controllers enabled (<span class="page-name">MIDI Control</span> Page)</li>
     <li>Select Breath Controller as the external controller that will be received by the TS-10 (<span
         class="value">XCTRL=02</span>, also on the <span class="page-name">MIDI Control</span> Page)</li>
     <li>assign <span class="param">XCTRL</span> as a Modulator for LFO level, Filter Cutoff frequency, or some other
       manual level within a voice</li>
     <li>play the sound from the TS-10 keyboard, while blowing into the Breath Controller connected to the sending
-      ins`trument. The modulation will have the same effect as if you were playing from the sending instrument.</li>
+      instrument. The modulation will have the same effect as if you were playing from the sending instrument.</li>
     </ol>
     <h4 id="press-pressure-after-touch" class="param-name">PRESS — Pressure (After-touch)</h4>
-    <p>Pressure, also called after-touch, is a modulator which varies a manual level within a voice depending on how
+    <p><dfn class="term">Pressure</dfn>, also called after-touch, is a modulator which varies a manual level within a voice depending on how
       hard you press down on a key or keys. After you have struck a key, and while the note is sustaining, continuing to
       press down harder on the key brings in pressure.</p>
     <p>The TS-10 keyboard generates pressure, and by using this modulator you can add a tremendous amount of expression
@@ -735,11 +736,11 @@
         alt="KEYBD modulator graph from -100 to +100 over MIDI keys 0–127: flat at -100 below a 76-note span, linear through that span (TS-10 keyboard nested inside), then flat at +100">
       <figcaption>KEYBD modulator scaling across the keyboard.</figcaption>
     </figure>
-    <p>As the above illustration shows, the effect of KEYBD as a modulator goes negative as well as positive. The effect
-      of KEYBD is to reduce the Level on notes below the break point (F4+), and increase levels above that point.
+    <p>As the above illustration shows, the effect of <span class="value">KEYBD</span> as a modulator goes negative as well as positive. The effect
+      of <span class="value">KEYBD</span> is to reduce the Level on notes below the break point (F4+), and increase levels above that point.
       Negative Modulation depths will do the opposite.</p>
     <h4 id="veloc-velocity" class="param-name">VELOC — Velocity</h4>
-    <p>Velocity means how hard you strike a key. Selecting VELOC as a Modulator allows you to modulate any manual level
+    <p><dfn class="term">Velocity</dfn> means how hard you strike a key. Selecting <span class="value">VELOC</span> as a Modulator allows you to modulate any manual level
       with velocity. Velocity as a modulation source only goes positive (though assigning a negative modulation amount
       will make the net result be to reduce the level with increased velocity).</p>
     <h4 id="off" class="param-name"><span class="function"><span class="star">*</span>OFF<span class="star">*</span></span></h4>
@@ -1920,9 +1921,9 @@
       voice.</p>
 <h3 id="recall">RECALL</h3>
     <p>Like pasting on a computer, this command will copy parameters back from the copy buffer into the compare buffer where the edit program
-      resides, again according to the copy context. Pressing the soft button below RECALL causes the indicated data set
+      resides, again according to the copy context. Pressing the soft button below <span class="function">RECALL</span> causes the indicated data set
       to be copied, and the display returns to the <span class="page-name">Copy</span> page.</p>
-    <p>The RECALL function always copies data into the compare buffer. If the compare buffer is selected (i.e. the <span
+    <p>The <span class="function">RECALL</span> function always copies data into the compare buffer. If the compare buffer is selected (i.e. the <span
         class="function">Compare</span> LED is on) at the time you perform a recall, then the data is added to the
       edited program in the compare buffer. If the compare buffer is not selected then the compare buffer is loaded with
       the currently selected primary program before the recall is completed. The compare buffer is always selected after
@@ -1933,9 +1934,9 @@
       voice and then recall it into a group of voices in one step. <span class="function">Group Edit</span> has no
       effect when recalling effects, complete voices, pitch tables, or complete programs.</p>
     <h3 id="special-recall-functions">Special Recall Functions</h3>
-    <p>There are several exceptions to the normal pattern of operation in the RECALL function. The first exceptions
+    <p>There are several exceptions to the normal pattern of operation in the <span class="function">RECALL</span> function. The first exceptions
       occur with the Envelope and Filter contexts. When the copy context is set to any of the Filter or Envelope
-      settings, pressing RECALL will display an additional page which allows you to select the source and destination
+      settings, pressing <span class="function">RECALL</span> will display an additional page which allows you to select the source and destination
       pages for the parameter transfer. This allows you to copy information between different envelopes and filters.</p>
     <figure class="vfd-unit">
       <div class="vfd-callouts top">
@@ -1988,17 +1989,17 @@
         <div></div>
       </div>
     </figure>
-    <p>The sample screen shown above illustrates the <span class="page-name">RECALL</span> sub-page for the ENVELOPE
+    <p>The sample screen shown above illustrates the <span class="page-name">RECALL</span> sub-page for the <span class="value">ENVELOPE</span>
       context.</p>
-    <p>The Source Envelope number controls which envelope in the copy buffer will be used by the recall, and the
-      Destination Envelope number determines which envelope in the compare buffer will be replaced with the new data
+    <p>The <span class="value">Source Envelope</span> number controls which envelope in the copy buffer will be used by the recall, and the
+      <span class="value">Destination Envelope</span> number determines which envelope in the compare buffer will be replaced with the new data
       being recalled. The default settings are always the same number for source and destination. If you want to copy
       across from one envelope to another, you must set the source and destination envelope numbers accordingly. The
-      <span class="page-name">RECALL</span> sub-page for the FILTER context is similar in appearance and function.</p>
+      <span class="page-name">RECALL</span> sub-page for the <span class="value">FILTER</span> context is similar in appearance and function.</p>
     <p>Remember that the copy buffer always contains copies of each of the three envelopes and two filters, regardless
       of whether you last used an envelope, filter, voice, or program copy function.</p>
-    <p>Another exception occurs in the PROGRAM context. Pressing RECALL from this context will take you directly to the
-      <span class="page-name">Write</span> page. The compare buffer is loaded with the same information as the copy
+    <p>Another exception occurs in the <span class="value">PROGRAM</span> context. Pressing <span class="function">RECALL</span> from this context will take you directly to the
+      <span class="page-name">WRITE</span> page. The compare buffer is loaded with the same information as the copy
       buffer whenever you recall an entire program, and you are ready to save the program in a new location.</p>
     <p>The system will alert you if you try to recall into a context different than the last copy action that was
       performed. This prevents you from mistakenly recalling a fragmented voice, program or pitch-table.</p>
@@ -2009,7 +2010,7 @@
     <p>There are some copy contexts which provide the option of recalling default parameter settings automatically. When
       this option is available, the DEFAULT command appears in the lower left part of the display.</p>
     <ul>
-      <li>For the ALL VOICE parameter context:</li>
+      <li>For the <span class="value">ALL VOICE</span> parameter context:</li>
     </ul>
     <figure class="vfd-unit has-page">
       <div class="vfd-bezel">
@@ -2060,9 +2061,9 @@
       into the currently selected voice in the compare buffer, as if you had performed the steps yourself. This allows
       you to easily put the voice into a standard configuration, which is often useful when creating new programs.</p>
     <ul>
-      <li>For the ENVELOPE-1, -2, and -3 parameter contexts:</li>
+      <li>For the <span class="value">ENVELOPE-1</span>, <span class="value">ENVELOPE-2</span>, and <span class="value">ENVELOPE-3</span> parameter contexts:</li>
     </ul>
-    <p>The DEFAULT command also appears with the ENVELOPE-# context. Pressing the soft button below the command displays
+    <p>The <span class="function">DEFAULT</span> command also appears with the <span class="value">ENVELOPE-#</span> context. Pressing the soft button below the command displays
       a sub-page which will allow you to select from a group of standard preset envelope types which can be recalled
       into the current envelope. This is particularly useful when setting up typical envelopes as starting points when
       you are creating new voices.</p>
@@ -2110,69 +2111,69 @@
     <table class="param-cols cols-3">
       <tbody>
         <tr>
-          <td>FULL VEL RANGE</td>
-          <td>PERCUSSION 1</td>
-          <td>VIBRATO LFO</td>
+          <td><span class="value">FULL VEL RANGE</span></td>
+          <td><span class="value">PERCUSSION 1</span></td>
+          <td><span class="value">VIBRATO LFO</span></td>
         </tr>
         <tr>
-          <td>FULL ON</td>
-          <td>PERCUSSION 2</td>
-          <td>DETUNE LFO</td>
+          <td><span class="value">FULL ON</span></td>
+          <td><span class="value">PERCUSSION 2</span></td>
+          <td><span class="value">DETUNE LFO</span></td>
         </tr>
         <tr>
-          <td>RAMP DOWN</td>
-          <td>TIGHT PERC</td>
-          <td>REPEAT TRIANG</td>
+          <td><span class="value">RAMP DOWN</span></td>
+          <td><span class="value">TIGHT PERC</span></td>
+          <td><span class="value">REPEAT TRIANG</span></td>
         </tr>
         <tr>
-          <td>RAMP UP</td>
-          <td>TOM-TOM DECAY</td>
-          <td>REPEAT RAMP</td>
+          <td><span class="value">RAMP UP</span></td>
+          <td><span class="value">TOM-TOM DECAY</span></td>
+          <td><span class="value">REPEAT RAMP</span></td>
         </tr>
         <tr>
-          <td>RAMP UP+DOWN</td>
-          <td>HI-HAT DECAY</td>
-          <td>TRANSIENT</td>
+          <td><span class="value">RAMP UP+DOWN</span></td>
+          <td><span class="value">HI-HAT DECAY</span></td>
+          <td><span class="value">TRANSIENT</span></td>
         </tr>
         <tr>
-          <td>PIANO DECAY</td>
-          <td>LONG CYMBAL</td>
-          <td>SHORT BLIP</td>
+          <td><span class="value">PIANO DECAY</span></td>
+          <td><span class="value">LONG CYMBAL</span></td>
+          <td><span class="value">SHORT BLIP</span></td>
         </tr>
         <tr>
-          <td>GUITAR DECAY</td>
-          <td>MED CYMBAL</td>
-          <td>AMP BLIP</td>
+          <td><span class="value">GUITAR DECAY</span></td>
+          <td><span class="value">MED CYMBAL</span></td>
+          <td><span class="value">AMP BLIP</span></td>
         </tr>
         <tr>
-          <td>BASS DECAY</td>
-          <td>SHORT CYMBAL</td>
-          <td>WIND PITCH</td>
+          <td><span class="value">BASS DECAY</span></td>
+          <td><span class="value">SHORT CYMBAL</span></td>
+          <td><span class="value">WIND PITCH</span></td>
         </tr>
         <tr>
-          <td>XPRSV STRINGS</td>
-          <td>BRASS FILTER</td>
-          <td>PITCH DOWN 1</td>
+          <td><span class="value">XPRSV STRINGS</span></td>
+          <td><span class="value">BRASS FILTER</span></td>
+          <td><span class="value">PITCH DOWN 1</span></td>
         </tr>
         <tr>
-          <td>FAST ATCK PAD</td>
-          <td>SFORZANDO</td>
-          <td>PITCH DOWN 2</td>
+          <td><span class="value">FAST ATCK PAD</span></td>
+          <td><span class="value">SFORZANDO</span></td>
+          <td><span class="value">PITCH DOWN 2</span></td>
         </tr>
         <tr>
-          <td>SLOW ATCK PAD</td>
-          <td>SLOW REPEAT</td>
-          <td>ALL ZEROS</td>
+          <td><span class="value">SLOW ATCK PAD</span>  </td>
+          <td><span class="value">SLOW REPEAT</span></td>
+          <td><span class="value">ALL ZEROS</span></td>
         </tr>
         <tr>
-          <td>SLOW ATCK/REL</td>
-          <td>SLOW LFO</td>
+          <td><span class="value">SLOW ATCK/REL</span></td>
+          <td><span class="value">SLOW LFO</span></td>
         </tr>
       </tbody>
     </table>
-    <p>Select the default envelope type using the <kbd class="button">Data Entry Slider</kbd> or the Up/Down Arrows and
+    <p>Select the default envelope type using the <kbd class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrows</kbd> and
       press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span> if you wish to install the selected envelope type into the envelope number
-      shown on the upper line of the display. Press <span class="function"><span class="star">*</span>NO<span class="star">*</span></span> to return to the <span
+      shown on the upper line of the display. Press <span class="value"><span class="star">*</span>NO<span class="star">*</span></span> to return to the <span
         class="page-name">Copy</span> page without performing any action.</p>
 <h3 id="system">SYSTEM</h3>
 <p>For the PITCHTABLE parameter context only:</p>
@@ -2222,11 +2223,11 @@
         </table>
       </div>
     </figure>
-    <p>When entered from the Edit Pitch-table pages, the <span class="page-name">Copy</span> page shows the SYSTEM
+    <p>When entered from the Edit Pitch-table pages, the <span class="page-name">Copy</span> page shows the <span class="function">SYSTEM</span>
       command on the lower left part of the display. This command will copy the pitch-table directly from the currently
       program, or from the compare buffer if the <span class="function">Compare</span> LED is on, into the system
-      pitchtable. It is not necessary to use the MAKE COPY command in this case. Using this command will automatically
-      set the SYSTEM PITCH-TABLE parameter on the <span class="page-name">System</span> page to CUSTOM, thereby
+      pitchtable. It is not necessary to use the <span class="function">MAKE COPY</span> command in this case. Using this command will automatically
+      set the <span class="param">SYSTEM PITCH-TABLE</span> parameter on the <span class="page-name">System</span> page to <span class="value">CUSTOM</span>, thereby
       selecting the newly installed pitch-table for use as the System pitch-table.</p>
 
 <h3 id="some-useful-applications-of-the-copy-functions">Some Useful Applications of the Copy Functions</h3>
@@ -2235,16 +2236,16 @@
       <li>Press <kbd class="button">Sounds</kbd> and select the program whose effect you wish to copy.</li>
       <li>Press <kbd class="button">Program Effects</kbd> in the <span class="key-group">Programming</span> section to display the <span
         class="page-name">Program Effect</span> page for this program.</li>
-      <li>Press <kbd class="button">Copy</kbd>. The copy context will show EFFECTS PARAMETERS.</li>
-      <li>Press the soft button below the MAKE COPY option to copy the <span class="page-name">Effect</span> page
+      <li>Press <kbd class="button">Copy</kbd>. The copy context will show <span class="lcd">EFFECTS PARAMETERS</span>.</li>
+      <li>Press the soft button below the <span class="function">MAKE COPY</span> option to copy the <span class="page-name">Effect</span> page
       parameters into the copy buffer.</li>
       <li>Select the program into which you wish to copy the effect. If the sound you are working on is in the compare
       buffer, make sure that the <span class="function">Compare</span> LED is on.</li>
       <li>Press <kbd class="button">Program Effects</kbd> in the <span class="key-group">Programming</span> section to redisplay the <span
         class="page-name">Program Effect</span> page.</li>
       <li>Press <kbd class="button">Copy</kbd>. You will be returned to the <span class="page-name">Copy</span> page with
-      the EFFECTS context.</li>
-      <li>Press the soft button below the RECALL option to recall the effect from the copy buffer.</li>
+      the <span class="value">EFFECTS</span> context.</li>
+      <li>Press the soft button below the <span class="function">RECALL</span> option to recall the effect from the copy buffer.</li>
       <li>Press <kbd class="button">Copy</kbd> again. You will be returned to the <span class="page-name">Effect</span>
         page. Note that the effect that you previously copied has now replaced the old effect. Remember to write
       the program if you wish to keep the change.</li>
@@ -2253,37 +2254,33 @@
     
     <h4 id="copying-all-parameters-from-one-voice-to-another">Copying all parameters from one voice to another</h4>
       <p>When the <span class="page-name">Copy</span> page is entered
-      from the <span class="page-name">Select Voice</span> page, the copy context is set to ALL VOICE PARAMETERS. In
+      from the <span class="page-name">Select Voice</span> page, the copy context is set to <span class="value">ALL VOICE PARAMETERS</span>. In
       this context, the values of all voice parameters for the currently selected voice are transferred to or from the
       copy buffer. Using this method, you can easily copy voices within a program or from one program to another.</p>
     <ul>
       <li>Press <kbd class="button">Select Voice</kbd> to display the <span class="page-name">Select Voice</span> page
       and to set the copy context. Make sure that the voice which you wish to copy is selected.</li>
-      <li>Press <kbd class="button">Copy</kbd>. The copy context will show ALL VOICE PARAMETERS.</li>
-      <li>Press the soft button below the MAKE COPY option to copy the voice into the copy buffer.</li>
+      <li>Press <kbd class="button">Copy</kbd>. The copy context will show <span class="lcd">ALL VOICE PARAMETERS</span>.</li>
+      <li>Press the soft button below the <span class="function">MAKE COPY</span> option to copy the voice into the copy buffer.</li>
       <li>Press <kbd class="button">Copy</kbd> again. You will be returned to the <span class="page-name">Select Voice</span>
         page.</li>
       <li>Select the voice you wish to replace with the voice you just copied.</li>
       <li>Press <kbd class="button">Copy</kbd> again. You will be returned to the <span class="page-name">Copy</span>
         page.</li>
-      <li>Press the soft button below the RECALL option to recall the voice from the copy buffer.</li>
+      <li>Press the soft button below the <span class="function">RECALL</span> option to recall the voice from the copy buffer.</li>
       <li>Press <kbd class="button">Copy</kbd> again. You will be returned to the <span class="page-name">Select Voice</span>
         page. Note that the voice you previously copied has now replaced the old voice.</li>
     </ul>
-    <h4 id="copying-a-complete-program-to-a-new-location">Copying a complete program to a new location</h4>
+    <h3 id="copying-a-complete-program-to-a-new-location">Copying a complete program to a new location</h3>
       <p>It is easy to copy programs from one location to another using the
-      copy and recall functions.</p>
-<p>Simply follow this procedure:</p>
+      copy and recall functions. Simply follow this procedure:</p>
     <ul>
       <li>Press <kbd class="button">Sounds</kbd> and select the program that you wish to copy. This will automatically
-      set the copy context to PROGRAM PARAMETERS.</li>
+      set the copy context to <span class="value">PROGRAM PARAMETERS</span>.</li>
       <li>Press <kbd class="button">Copy</kbd> to display the <span class="page-name">Copy</span> page.</li>
-      <li>Press the soft button below the MAKE COPY option to copy the program into the copy buffer.</li>
-    </ul>
-    <p>The program will be copied into the copy buffer, and the <span class="page-name">Copy</span> page will be
-      redisplayed.</p>
-    <ul>
-      <li>Press the soft button below the RECALL option to recall the program from the copy buffer into the compare
+      <li>Press the soft button below the <span class="function">MAKE COPY</span> option to copy the program into the copy buffer. The program will be copied into the copy buffer, and the <span class="page-name">Copy</span> page will be
+      redisplayed.</li>
+      <li>Press the soft button below the <span class="function">RECALL</span> option to recall the program from the copy buffer into the compare
       buffer. The <span class="page-name">Write</span> page will be displayed automatically.</li>
       <li>Using the normal techniques for writing programs, select the destination in which you wish to locate the copy
       (refer to the section describing the <span class="page-name">Write</span> page if you are unsure how to proceed).</li>
@@ -2297,13 +2294,13 @@
         class="button">Sounds</kbd>.</li>
       <li>Make sure that the <span class="function">Compare</span> LED is on, and that you are hearing the edit program
       of which you wish to make a copy (press <kbd class="button">Compare</kbd> if not).</li>
-      <li>Press <kbd class="button">Copy</kbd> and make sure that the copy context is PROGRAM PARAMETERS.</li>
-      <li>Press the soft button below the MAKE COPY option to copy the compare buffer into the copy buffer.</li>
+      <li>Press <kbd class="button">Copy</kbd> and make sure that the copy context is <span class="value">PROGRAM PARAMETERS</span>.</li>
+      <li>Press the soft button below the <span class="function">MAKE COPY</span> option to copy the compare buffer into the copy buffer.</li>
     </ul>
     <h4 id="collecting-parts-from-several-sources-into-the-copy-buffer">Collecting parts from several sources into the copy buffer</h4>
       <p>While you can only make a single copy of an entire voice or program at one time, it is possible to make consecutive copies of multiple pages of parameters before
       recalling the data you have copied. These pages can even be taken from different voices or different programs.</p>
-    <p>For example, using the normal MAKE COPY process, you can make copies of one or more envelope pages, followed by an <span class="page-name">LFO</span> page and a <span class="page-name">Wave</span> page. A single copy of each of these pages is saved into the copy buffer. You can then start recalling the pages you want into the compare buffer using the normal RECALL procedure described above. The data you copied will remain intact until you copy a complete voice or program, which will replace the contents of the copy buffer.</p>
+    <p>For example, using the normal <span class="function">MAKE COPY</span> process, you can make copies of one or more envelope pages, followed by an <span class="page-name">LFO</span> page and a <span class="page-name">Wave</span> page. A single copy of each of these pages is saved into the copy buffer. You can then start recalling the pages you want into the compare buffer using the normal <span class="function">RECALL</span> procedure described above. The data you copied will remain intact until you copy a complete voice or program, which will replace the contents of the copy buffer.</p>
     
     <h2 id="about-pitch-tables">About Pitch-Tables</h2>
       <p>Alternate <dfn class="term">Pitch-Tables</dfn> enable you to chart new musical territories as
@@ -2321,11 +2318,11 @@
     <p>You select the pitch-table for each voice on the <span class="page-name">Pitch Mods</span> page. The options are:
     </p>
     <ul>
-      <li><span class="param">SYSTEM</span> — This is the “global” or keyboard-wide pitch-table. As it comes out of the box, the TS-10’s System
-      pitch-table defaults to 12-tone equal-temperament tuning (standard tuning). However, you can copy a custom pitch-table into the system for use by all your programs. The parameter for changing the system pitch-table is on the <span class="page-name">System</span> page. More on
+      <li><span class="value">SYSTEM</span> — This is the “global” or keyboard-wide pitch-table. As it comes out of the box, the TS-10’s System
+      pitch-table defaults to 12-tone equal-temperament tuning (standard tuning). However, you can copy a custom pitch-table into the system for use by all your programs. The valueeter for changing the system pitch-table is on the <span class="page-name">System</span> page. More on
       this feature a bit later.</li>
-      <li><span class="param">ALL-C4</span> — No pitch tracking — all notes tuned to C4 (middle C).</li>
-      <li><span class="param">CUSTOM</span> — each program in the TS-10 can have its own “user-definable” (that is, you create it) pitch-table. When
+      <li><span class="value">ALL-C4</span> — No pitch tracking — all notes tuned to <span class="key">C4</span> (middle C).</li>
+      <li><span class="value">CUSTOM</span> — each program in the TS-10 can have its own <dfn class="term">user-definable</dfn> (that is, you create it) pitch-table. When
       you create a custom pitch-table, wave-list, or drum-map, the TS-10 will remove voices 5 and 6 from the program to
       create space for the pitch-table, wave-list, or drum- map. Bear this in mind — it could adversely affect the
       program if voices 5 or 6 are important parts of the sound.</li>
@@ -2497,7 +2494,7 @@
     <ul>
       <li>Press <kbd class="button">Pitch Mods</kbd>. This takes us to the <span class="page-name">Pitch Mods</span>
         page.</li>
-      <li>Select the <span class="param">PITCH-TABLE</span> parameter in the display and set it to <span class="lcd">PITCHTBL=CUSTOM</span> .</li>
+      <li>Select the <span class="param">PITCH-TABLE</span> parameter in the display and set it to <span class="value">PITCHTBL=CUSTOM</span> .</li>
     </ul>
     <p>Voice #1 is now set to play the custom pitch-table. This will enable you to hear any edits you make to the custom
       pitch-table.</p>
@@ -2561,15 +2558,15 @@
     </figure>
 <p>For every source key on the lower left, you can see and edit the pitch of that key.</p>
     <p>The source key can be thought of as the physical location of the key on the keyboard. The playback pitch can be
-      the same as the source key — as shown in the display — or it can be any pitch from A0 to C8. The range of the fine
-      tuning is 00 to 99 cents. This enables you to create micro-tunings and other alternate tunings. First, let’s get a
+      the same as the source key — as shown in the display — or it can be any pitch from <span class="key">A0</span> to <span class="key">C8</span>. The range of the fine
+      tuning is <span class="value">00</span> to <span class="value">99</span> cents. This enables you to create micro-tunings and other alternate tunings. First, let’s get a
       feel for the relationship between the source key and the playback pitch.</p>
     <ul>
       <li>Make sure the Source Key is underlined (by pressing the soft button beneath it).</li>
-      <li>Play C4 (middle C) on the keyboard, or use the data entry controls to select C4 as the source key.</li>
-      <li>Underline the playback pitch, in this case, C4.</li>
-      <li>Use the <kbd class="button">Up Arrow</kbd> button and change C4 (playback pitch) to C4+.</li>
-      <li>Underline 00 CENTS. Use the data entry controls to change the value to 50 CENTS. The display reads:</li>
+      <li>Play <span class="key">C4</span> (middle C) on the keyboard, or use the data entry controls to select <span class="key">C4</span> as the source key.</li>
+      <li>Underline the playback pitch, in this case, <span class="key">C4</span>.</li>
+      <li>Use the <kbd class="button">Up Arrow</kbd> button and change <span class="key">C4</span> (playback pitch) to <span class="key">C4+</span>.</li>
+      <li>Underline <span class="value">00</span> CENTS. Use the data entry controls to change the value to <span class="value">50</span> CENTS. The display reads:</li>
     </ul>
     <figure class="vfd-unit">
       <div class="vfd-bezel">
@@ -2612,7 +2609,7 @@
         </table>
       </div>
     </figure>
-    <p>C4 now plays back at C4+ and 50 Cents, one and one half semitones higher than normal. Try selecting other source
+    <p><span class="key">C4</span> now plays back at <span class="key">C4+</span> and <span class="value">50C ENTS</span>, one and one half semitones higher than normal. Try selecting other source
       keys, and then changing their playback pitches to any values you like. This is how we edit the custom pitch-table.
     </p>
     <ul>
@@ -2623,7 +2620,7 @@
 <p>To remove a custom pitch-table:</p>
     <ul>
       <li>Press <kbd class="button">Program Control</kbd>.</li>
-      <li>Underline <span class="lcd">OPTIONS=PITCHTBL</span>.</li>
+      <li>Underline <span class="value">OPTIONS=PITCHTBL</span>.</li>
       <li>Press the <kbd class="button">Down Arrow</kbd> button.</li>
       <li>The TS-10 will ask <span class="lcd">ERASE CURRENT PITCH-TABLE ?</span></li>
       <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>. You are returned to the <span class="page-name">Select Voice</span> page,
@@ -2634,7 +2631,7 @@
       pitch-table, let’s start over. This time we’ll work with an ancient tuning system, called Pythagorean. Then, we’ll
       work with the TS-10 built-in pitch-table calculator, and two new procedures: Extrapolation and Interpolation.</p>
     <h4 id="creating-and-extrapolating-a-custom-pitch-table">Creating and Extrapolating a Custom Pitch-Table</h4>
-      <p>The EXTRAPOLATE command takes the pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
+      <p>The <dfn class="term">EXTRAPOLATE</dfn> command takes the pitch-table relationships from within a key range and duplicates those relationships outside that range.</p>
     <ul>
       <li>If you have a custom pitch-table from the previous exercise, remove as shown above.</li>
       <li>Select a program into which you want to write a custom pitch-table.</li>
@@ -2645,86 +2642,86 @@
       <li>Press PITCH-TABLE to REMOVE VOICES 5+6. This takes us to the <span class="page-name">Select Voice</span> page.</li>
       <li>Select a voice into which you want to write a custom pitch-table.</li>
       <li>Press <kbd class="button">Pitch Mods</kbd>.</li>
-      <li>Select <span class="lcd">PITCHTBL=CUSTOM</span> .</li>
+      <li>Select <span class="value">PITCHTBL=CUSTOM</span> .</li>
       <li>Press <kbd class="button">Select Voice</kbd> to return to the <span class="page-name">Select Voice</span> page.</li>
       <li>Press either of the soft buttons beneath EDIT PITCH-TABLE. This takes us to the <span
         class="page-name">Pitch-Table Editor</span> page.</li>
       <li>The display shows the source key and playback pitch as described earlier.</li>
       <li>To set up one octave of a Pythagorean scale, change the source keys, playback pitches, and cents, one note at a
-      time, from C4 to C5 — to the following values:</li>
+      time, from <span class="key">C4</span> to <span class="key">C5</span> — to the following values:</li>
     </ul>
-    <table class="param-cols cols-3" style="text-align:center">
+    <table class="param-cols cols-3 data-table" style="text-align:center">
       <thead>
         <tr>
           <th>Source Key</th>
           <th>Playback Pitch</th>
-          <th>Cents </th>
+          <th>+ Cents </th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>C4</td>
-          <td>C4</td>
+          <td><span class="key">C4</span></td>
+          <td><span class="key">C4</span></td>
           <td>00</td>
         </tr>
         <tr>
-          <td>C4+</td>
-          <td>C4+</td>
+          <td><span class="key">C4+</span></td>
+          <td><span class="key">C4+</span></td>
           <td>17</td>
         </tr>
         <tr>
-          <td>D4</td>
-          <td>D4</td>
+          <td><span class="key">D4</span></td>
+          <td><span class="key">D4</span></td>
           <td>04</td>
         </tr>
         <tr>
-          <td>D4+</td>
-          <td>D4+</td>
+          <td><span class="key">D4+</span></td>
+          <td><span class="key">D4+</span></td>
           <td>01</td>
         </tr>
         <tr>
-          <td>E4</td>
-          <td>E4</td>
+          <td><span class="key">E4</span></td>
+          <td><span class="key">E4</span></td>
           <td>08</td>
         </tr>
         <tr>
-          <td>F4</td>
-          <td>E4</td>
+          <td><span class="key">F4</span></td>
+          <td><span class="key">F4</span></td>
           <td>98</td>
         </tr>
         <tr>
-          <td>F4+</td>
-          <td>F4+</td>
+          <td><soan class="key">F4+</span></td>
+          <td><span class="key">F4+</span></td>
           <td>12</td>
         </tr>
         <tr>
-          <td>G4</td>
-          <td>G4</td>
+          <td><span class="key">G4</span></td>
+          <td><span class="key">G4</span></td>
           <td>02</td>
         </tr>
         <tr>
-          <td>G4+</td>
-          <td>G4+</td>
+          <td><span class="key">G4+</span></td>
+          <td><span class="key">G4+</span></td>
           <td>14</td>
         </tr>
         <tr>
-          <td>A4</td>
-          <td>A4</td>
+          <td><span class="key">A4</span></td>
+          <td><span class="key">A4</span></td>
           <td>06</td>
         </tr>
         <tr>
-          <td>A4+</td>
-          <td>A4</td>
+          <td><span class="key">A4+</span></td>
+          <td><span class="key">A4+</span></td>
           <td>98</td>
         </tr>
         <tr>
-          <td>B4</td>
-          <td>B4</td>
+          <td><span class="key">B4</span></td>
+          <td><span class="key">B4</span></td>
           <td>10</td>
         </tr>
         <tr>
-          <td>C5</td>
-          <td>C5</td>
+          <td><span class="key">C5</span></td>
+          <td><span class="key">C5</span></td>
           <td>00</td>
         </tr>
       </tbody>
@@ -2779,9 +2776,9 @@
       calculations.</p>
     <h4 id="to-set-the-key-range">To set the key-range:</h4>
     <ul>
-      <li>The START key (the first of the two key numbers shown) should be underlined. If not, press the soft button
-      beneath it to select it. Now, play C4 (middle C) on the keyboard. The underline jumps to the END key.</li>
-      <li>The END key should now be underlined. Play C5 on the keyboard. The parameter should read: <span class="lcd">KEY-RANGE START/END
+      <li>The <span class="param">START</span> key (the first of the two key numbers shown) should be underlined. If not, press the soft button
+      beneath it to select it. Now, play <span class="key">C4</span> (middle C) on the keyboard. The underline jumps to the <span class="param">END</span> key.</li>
+      <li>The <span class="param">END</span> key should now be underlined. Play <span class="key">C5</span> on the keyboard. The parameter should read: <span class="lcd">KEY-RANGE START/END
       C4 – C5</span>. You have defined the key range whose pitch intervals you want to duplicate over the entire keyboard.</li>
     </ul>
     <p>Note that you can also set the start and end keys using the data entry controls, and press the soft button
@@ -2790,28 +2787,28 @@
       particular pitch-table. Extrapolate will take the intervals between the notes in our one-octave custom pitch-table
       and apply them to the rest of the keyboard, resulting in a Pythagorean tuning covering the entire keyboard.</p>
     <ul>
-      <li>Press EXTRAPOLATE. The display briefly reads <span class="lcd">PITCH-TABLE <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span></span>, then returns
+      <li>Press <span class="function">EXTRAPOLATE</span>. The display briefly reads <span class="lcd">PITCH-TABLE <span class="star">*</span>CALCULATOR<span class="star">*</span></span>, then returns
       with the Pythagorean temperament across the entire keyboard.</li>
     </ul>
     <p>At this point you might want save this pitch-table by using the <span class="function">COPY</span> function to write the program into a User
-      RAM location as described earlier in this Section. Or, you can use the <span class="function">COPY</span> function to copy the <span class="param">PITCHTABLE</span> into
+      RAM location as described earlier in this Section. Or, you can use the <span class="function">COPY</span> function to copy the pitch-table into
       another program, or even into the System, for use by all your programs.</p>
     <h3 id="creating-and-interpolating-a-custom-pitch-table">Creating and Interpolating a Custom Pitch-Table</h3>
       <p><span class="function">INTERPOLATE</span> takes the interval between two notes on the keyboard and divides all the keys in between into equally-spaced fractions of that interval.</p>
 <p>As an example, lets make the entire 5-octave keyboard of the TS-10 span just one octave in pitch from the lowest key to the highest.</p>
     <ul>
       <li>Using the procedure described earlier, create a custom pitch-table, and select <span
-        class="lcd">PITCH-TABLE=CUSTOM</span> on the <span class="page-name">Pitch Mods</span> page.</li>
+        class="value">PITCH-TABLE=CUSTOM</span> on the <span class="page-name">Pitch Mods</span> page.</li>
       <li>On the <span class="page-name">Select Voice</span> page, press the soft button for <span class="function">EDIT PITCH-TABLE</span>.</li>
-      <li>Set KEY C2 = C3 AND 00 CENTS. Next, set KEY C7 = C4 AND 00 CENTS.</li>
+      <li>Set <span class="param">KEY C2</span> =   <span class="value"><span class="key">C3</span> AND 00 CENTS</span>. Next, set <span class="param">KEY C7</span> = <span class="value"><span class="key">C4</span> AND 00 CENTS</span>.</li>
     </ul>
 <p>We’ve just established an interval of an octave between C2 and C7.</p>
     <ul>
       <li>Press <span class="function"><span class="star">*</span>CALCULATOR<span class="star">*</span></span></li>
-      <li>Set the key range to <span class="lcd">KEY-RANGE START/END C2 -C7</span>.</li>
-      <li>Press <span class="lcd">INTERPOLATE</span>.</li>
+      <li>Set the key range to <span class="param">KEY-RANGE START/END</span> <span class="value"><span class="key">C2</span> - <span class="key">C7</span></span>.</li>
+      <li>Press <span class="function">INTERPOLATE</span>.</li>
     </ul>
-    <p>The TS-10 has just interpolated the octave (C3 to C4) and divided it equally across the 61 note keyboard, so we
+    <p>The TS-10 has just interpolated the octave (<span class="key">C3</span> to <span class="key">C4</span>) and divided it equally across the 61 note keyboard, so we
       now have a 60 step octave.</p>
     <aside class="warning">
       <p>You must save the program containing your custom pitch-table, copy the custom pitch-table into another program,
@@ -2877,8 +2874,13 @@
       <!-- manual is missing this section #lookup-->
     <p>The <span class="function">MAKE COPY</span> option allows you to make a copy of the complete pitch-table from the currently selected program
       (or the Compare Buffer) into the Copy Buffer.</p>
-    <p>The RECALL option allows you to recall the complete pitch-table from the Copy Buffer into an edited version of
-      the current program if 1) the current program has a pitch-table installed in it and 2) the Copy buffer contains a pitch-table. If you attempt to recall a <dfn class="term">Pitch-Table</dfn> into a
+    <p>The <span class="function">RECALL</span> option allows you to recall the complete pitch-table from the Copy Buffer into an edited version of
+      the current program if:</p>
+    <ul>
+      <li>the current program has a pitch-table installed in it</li>
+      <li>the Copy buffer contains a pitch-table</li>
+    </ul>
+    <p>If you attempt to recall a <dfn class="term">Pitch-Table</dfn> into a
       program without just previously having copied a pitch-table into the Copy buffer, the copy is not completed and an
       error message is displayed.</p>
     <p>The <span class="param">SYSTEM</span> parameter allows you to install an alternate tuning into the System pitch-table. As an added feature, the System pitch-table itself is user-definable. For instance, if you want to hear
@@ -2887,7 +2889,7 @@
       other alternate tuning as your System tuning.</p>
     <h4 id="to-install-an-alternate-tuning-into-the-system-pitch-table">To install an alternate tuning into the System pitch-table:</h4>
     <ul>
-      <li>Press the soft button beneath <span class="lcd">SYSTEM</span>. The display briefly reads <span class="lcd">COPY TO SYSTEM PITCH-TABLE</span>, and the custom
+      <li>Press the soft button beneath <span class="value">SYSTEM</span>. The display briefly reads <span class="lcd">COPY TO SYSTEM PITCH-TABLE</span>, and the custom
       pitch-table is installed into the TS-10 operating system where it is available for use by any program.</li>
       <li>Press the <kbd class="button">System</kbd> button four times. The display shows:</li>
     </ul>
@@ -2940,30 +2942,31 @@
 
     </figure>
     <ul>
-      <li>Note that the System PITCH-TABLE parameter has been set to CUSTOM. Now all programs whose voices are set to use
+      <li>Note that the System <span class="param">PITCH-TABLE</span> parameter has been set to <span class="value">CUSTOM</span>. Now all programs whose voices are set to use
       the system pitch-table (which is most programs) will use the custom pitch-table.</li>
     </ul>
     <p>To return all programs to standard equi-tempered tuning, set the System <span class="param">PITCH-TABLE</span> parameter back to <span
         class="value">NORMAL</span>. Switching back to <span class="value">CUSTOM</span> will restore your custom System pitch-table. You can
       switch back and forth as often as you wish. You can also try installing other custom pitch-tables in the System,
       but the System pitch-table can only contain one custom pitchtable at a time.</p>
-    <p>Dynamic <dfn class="term">Pitch-Table</dfn> Selection The TS-10 allows you to easily switch between different
-      system pitch-tables in performance situations. With <span class="lcd">PITCH-TABLE=U1-PROGRAMS</span> (on the <span
-        class="page-name">System</span> Page), you can instantly load new CUSTOM system pitch-tables without affecting
-      the sound you are playing by selecting programs in <dfn class="term">BankSet</dfn> U1. This allows you to change
+    <h3 id="dynamic-pitch-table-selection">Dynamic Pitch-Table Selection</h3>
+      <p>The TS-10 allows you to easily switch between different
+      system pitch-tables in performance situations. With <span class="value">PITCH-TABLE=U1-PROGRAMS</span> (on the <span
+        class="page-name">System</span> page), you can instantly load new CUSTOM system pitch-tables without affecting
+      the sound you are playing by selecting programs in BankSet U1. This allows you to change
       the tuning while playing, and without having to actually select a different sound.</p>
     <p>In order for this feature to work correctly, you must set the system pitch-table switch to <span
-        class="lcd">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page before “selecting”
+        class="value">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page before “selecting”
       a new pitch-table program. If the program you indicate contains a valid pitch-table, it will be installed into the
       CUSTOM System pitch-table, and you will immediately hear the new tuning. If it does not, nothing will happen. In
       either case there will be no visible indication of your action. The program name will not be underlined when you
       “select” it, which is a good indication that you are using a pitchtable from a program in BankSet U1.</p>
     <p>You may save programs (with or without pitch-tables) onto BankSet U1 in the normal way.
       It is suggested that you name programs that are to be used to install pitch-tables with names that describe the
-      pitch-table they contain. For example, naming a program PT-PYTHA-F describes it as follows: PT for pitch-table
-      program; PYTHA for Pythagorean tuning; and F for the tone center. This naming scheme is useful in making pitch-table programs easily recognizable.</p>
+      pitch-table they contain. For example, naming a program <span class="patch-name">PT-PYTHA-F</span> describes it as follows: <span class="value">PT</span> for pitch-table
+      program; <span class="value">PYTHA</span> for Pythagorean tuning; and <span class="value">F</span> for the tone center. This naming scheme is useful in making pitch-table programs easily recognizable.</p>
     <p>In MIDI reception modes <span class="value">OMNI</span>, <span class="value">POLY</span>, and <span class="value">MONO A</span>, incoming
-      MIDI program changes 0 to 59 will select pitch-tables from BankSet U1, if <span class="param">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page.
+      MIDI program changes <span class="value">0</span> to <span class="value">59</span> will select pitch-tables from BankSet U1, if <span class="value">PITCH-TABLE=U1-PROGRAMS</span> on the <span class="page-name">System</span> page.
     <p>For more information about the <span class="param">MIDI MODE</span> parameter, see <a class="refer-to"
         href="03-midi.html#section-3-midi-control-page-parameters">Section 3 — MIDI Control Page Parameters</a>.</p>
 
@@ -3079,8 +3082,8 @@
     <p>Whenever you create a wave-list, the TS-10 will delete voices 5 and 6, and use the memory normally occupied by
       those parameters to store the wave-list.</p>
     <ul>
-      <li>Press the soft button underneath <span class="lcd">WAVE-LIST</span> to replace voices 5 &amp; 6, and create a
-      new default wave-list in the program. Selecting <span class="lcd">WAVE-LIST</span> will also display the <span
+      <li>Press the soft button underneath <span class="value">WAVE-LIST</span> to replace voices 5 &amp; 6, and create a
+      new default wave-list in the program. Selecting <span class="value">WAVE-LIST</span> will also display the <span
         class="page-name">Select Voice</span> page with the  <span class="function">EDIT WAVE-LIST</span> option activated.
       Note that the <span class="page-name">Program Control</span> page will now show <span
         class="lcd">OPTION=WAVELIST</span> to indicate that a wave-list is active in the program. The display shows:</li>
@@ -3271,7 +3274,7 @@
     <h4 id="to-remove-a-custom-wave-list">To remove a custom wave-list:</h4>
     <ul>
       <li>Press <kbd class="button">Program Control</kbd> to display the <span class="page-name">Program Control</span> page.</li>
-      <li>Underline <span class="lcd">OPTION=WAVE-LIST</span>.</li>
+      <li>Underline <span class="lcd">OPTION=<span class="selected">WAVE-LIST</span></span>.</li>
       <li>Press the <kbd class="button">Down Arrow</kbd> button.</li>
       <li>The TS-10 will ask <span class="lcd">ERASE CURRENT WAVE-LIST ?</span></li>
       <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>. You are returned to the <span class="page-name">Select Voice</span> page, the custom wave-list is gone, and voices 5 and 6 are reset to their default voices.</li>
@@ -3286,6 +3289,17 @@
               <col class="page-col">
               <col class="param-col">
               <col class="param-col">
+              <col class="param-col">
+              </colgroup>
+              <thead>
+                <tr class="soft-row top">
+                  <th class="page-tag-slot"></th>
+                  <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+                  <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+                </tr>
+              </thead>
+              <tbody class="vfd-screen">
             <tr>
               <td class="cell page-label">COPY</td>
               <td class="cell">WAVE-LIST</td>
@@ -3315,11 +3329,16 @@
 
 
     </figure>
-    <p>The MAKE COPY option allows you to make a copy of the complete <dfn class="term">Wave-List</dfn> from the
+    <p>The <span class="function">MAKE COPY</span> option allows you to make a copy of the complete <dfn class="term">Wave-List</dfn> from the
       currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer. Pressing
-      the lower right soft button beneath MAKE COPY will complete the command, and will show COPY COMPLETED before returning to the <span class="page-name">Copy</span> page.</p>
-    <p>The RECALL option allows you to recall the complete Wave-List from the Copy Buffer into
-      an edited version of the current program if 1) the current program has a Wave-List installed in it and 2) the Copy buffer contains a Wave-List. If you attempt to recall a Wave-List into a program without just previously having copied a Wave-List into the Copy buffer, the copy is not completed and the following message is displayed:</p>
+      the lower right soft button beneath <span class="function">MAKE COPY</span> will complete the command, and will show <span class="lcd">COPY COMPLETED</span> before returning to the <span class="page-name">Copy</span> page.</p>
+    <p>The <span class="function">RECALL</span> option allows you to recall the complete Wave-List from the Copy Buffer into
+      an edited version of the current program if:
+      <ol>
+        <li>the current program has a Wave-List installed in it</li>
+        <li>the Copy buffer contains a Wave-List</li>
+      </ol>
+      If you attempt to recall a Wave-List into a program without just previously having copied a Wave-List into the Copy buffer, the copy is not completed and the following message is displayed:</p>
 <figure class="vfd-unit">
   
   <div class="vfd-bezel">
@@ -3372,10 +3391,9 @@
 <p>One very useful aspect of this feature is the ability to construct a TS-10 program which emulates the key mapping and sonic characteristics of an external drum machine or percussion sound module, allowing you to record and play sequencer tracks which are compatible with the maps used by any external MIDI device. You may also exercise your creativity in coming up with other uses for the remapping functions provided by this feature.</p>
     <p>The basic function of a Drum-Mapis to control how keys are assigned to voices, and to provide a certain set of parameters to control how the voice is played. When you play a key, the system looks in the drum-map for information about pitch, volume, panning, wave type, and destination voice(s) for that particular key. Based on this information, the key is sent to one or more voices to be played. The exact way that the key will sound depends both on the information in the drummap and the parameter settings of the destination voice(s).
     </p>
-    <p>Drum-Map contain information about 61 keys. This represents the range from B1 to B6 on
-      the TS-10 (MIDI keys 35 to 95). This range was designed to comply with the <span class="mode">General MIDI</span>
-      Drum-</p>
-<p>Map spec.</p>
+    <p>Drum-Map contain information about 61 keys. This represents the range from <span class="key">B1</span> to <span class="key">B6</span> on
+      the TS-10 (MIDI keys <span class="value">35</span> to <span class="value">95</span>). This range was designed to comply with the <span class="mode">General MIDI</span>
+      Drum-Map spec.</p>
     <h4 id="general-midi-drum-map">General MIDI Drum Map</h4>
     <div class="twin-tables">
       <table class="data-table">
@@ -3389,122 +3407,122 @@
         <tbody>
           <tr>
             <td>35</td>
-            <td>B1</td>
+            <td><span class="key">B1</span></td>
             <td>Acoustic Bass Drum</td>
           </tr>
           <tr>
             <td>36</td>
-            <td>C2</td>
+            <td><span class="key">C2</span></td>
             <td>Bass Drum 1</td>
           </tr>
           <tr>
             <td>37</td>
-            <td>C2+</td>
+            <td><span class="key">C2+</span></td>
             <td>Side Stick</td>
           </tr>
           <tr>
             <td>38</td>
-            <td>D2</td>
+            <td><span class="key">D2</span></td>
             <td>Acoustic Snare</td>
           </tr>
           <tr>
             <td>39</td>
-            <td>D2+</td>
+            <td><span class="key">D2+</span></td>
             <td>Hand Clap</td>
           </tr>
           <tr>
             <td>40</td>
-            <td>E2</td>
+            <td><span class="key">E2</span></td>
             <td>Electric Snare</td>
           </tr>
           <tr>
             <td>41</td>
-            <td>F2</td>
+            <td><span class="key">F2</span></td>
             <td>Low Floor Tom</td>
           </tr>
           <tr>
             <td>42</td>
-            <td>F2+</td>
+            <td><span class="key">F2+</span></td>
             <td>Closed Hi-Hat</td>
           </tr>
           <tr>
             <td>43</td>
-            <td>G2</td>
+            <td><span class="key">G2</span></td>
             <td>High Floor Tom</td>
           </tr>
           <tr>
             <td>44</td>
-            <td>G2+</td>
+            <td><span class="key">G2+</span></td>
             <td>Pedal Hi-Hat</td>
           </tr>
           <tr>
             <td>45</td>
-            <td>A2</td>
+            <td><span class="key">A2</span></td>
             <td>Low Tom</td>
           </tr>
           <tr>
             <td>46</td>
-            <td>A2+</td>
+            <td><span class="key">A2+</span></td>
             <td>Open Hi-Hat</td>
           </tr>
           <tr>
             <td>47</td>
-            <td>B2</td>
+            <td><span class="key">B2</span></td>
             <td>Low-Mid Tom</td>
           </tr>
           <tr>
             <td>48</td>
-            <td>C3</td>
+            <td><span class="key">C3</span></td>
             <td>Hi Mid Tom</td>
           </tr>
           <tr>
             <td>49</td>
-            <td>C3+</td>
+            <td><span class="key">C3+</span></td>
             <td>Crash Cymbal 1</td>
           </tr>
           <tr>
             <td>50</td>
-            <td>D3</td>
+            <td><span class="key">D3</span></td>
             <td>High Tom</td>
           </tr>
           <tr>
             <td>51</td>
-            <td>D3+</td>
+            <td><span class="key">D3+</span></td>
             <td>Ride Cymbal 1</td>
           </tr>
           <tr>
             <td>52</td>
-            <td>E3</td>
+            <td><span class="key">E3</span></td>
             <td>Chinese Cymbal</td>
           </tr>
           <tr>
             <td>53</td>
-            <td>F3</td>
+            <td><span class="key">F3</span></td>
             <td>Ride Bell</td>
           </tr>
           <tr>
             <td>54</td>
-            <td>F3+</td>
+            <td><span class="key">F3+</span></td>
             <td>Tambourine</td>
           </tr>
           <tr>
             <td>55</td>
-            <td>G3</td>
+            <td><span class="key">G3</span></td>
             <td>Splash Cymbal</td>
           </tr>
           <tr>
             <td>56</td>
-            <td>G3+</td>
+            <td><span class="key">G3+</span></td>
             <td>Cowbell</td>
           </tr>
           <tr>
             <td>57</td>
-            <td>A3</td>
+            <td><span class="key">A3</span></td>
             <td>Crash Cymbal 2</td>
           </tr>
           <tr>
             <td>58</td>
-            <td>A3+</td>
+            <td><span class="key">A3+</span></td>
             <td>Vibraslap</td>
           </tr>
         </tbody>
@@ -3520,102 +3538,102 @@
         <tbody>
           <tr>
             <td>59</td>
-            <td>B3</td>
+            <td><span class="key">B3</span></td>
             <td>Ride Cymbal 2</td>
           </tr>
           <tr>
             <td>60</td>
-            <td>C4</td>
+            <td><span class="key">C4</span></td>
             <td>Hi Bongo</td>
           </tr>
           <tr>
             <td>61</td>
-            <td>C4+</td>
+            <td><span class="key">C4+</span></td>
             <td>Low Bongo</td>
           </tr>
           <tr>
             <td>62</td>
-            <td>D4</td>
+            <td><span class="key">D4</span></td>
             <td>Mute Hi Conga</td>
           </tr>
           <tr>
             <td>63</td>
-            <td>D4+</td>
+            <td><span class="key">D4+</span></td>
             <td>Open Hi Conga</td>
           </tr>
           <tr>
             <td>64</td>
-            <td>E4</td>
+            <td><span class="key">E4</span></td>
             <td>Low Conga</td>
           </tr>
           <tr>
             <td>65</td>
-            <td>F4</td>
+            <td><span class="key">F4</span></td>
             <td>High Timbale</td>
           </tr>
           <tr>
             <td>66</td>
-            <td>F4+</td>
+            <td><span class="key">F4+</span></td>
             <td>Low Timbale</td>
           </tr>
           <tr>
             <td>67</td>
-            <td>G4</td>
+            <td><span class="key">G4</span></td>
             <td>High Agogo</td>
           </tr>
           <tr>
             <td>68</td>
-            <td>G4+</td>
+            <td><span class="key">G4+</span></td>
             <td>Low Agogo</td>
           </tr>
           <tr>
             <td>69</td>
-            <td>A4</td>
+            <td><span class="key">A4</span></td>
             <td>Cabasa</td>
           </tr>
           <tr>
             <td>70</td>
-            <td>A4+</td>
+            <td><span class="key">A4+</span></td>
             <td>Maracas</td>
           </tr>
           <tr>
             <td>71</td>
-            <td>B4</td>
+            <td><span class="key">B4</span></td>
             <td>Short Whistle</td>
           </tr>
           <tr>
             <td>72</td>
-            <td>C5</td>
+            <td><span class="key">C5</span></td>
             <td>Long Whistle</td>
           </tr>
           <tr>
             <td>73</td>
-            <td>C5+</td>
+            <td><span class="key">C5+</span></td>
             <td>Short Guiro</td>
           </tr>
           <tr>
             <td>74</td>
-            <td>D5</td>
+            <td><span class="key">D5</span></td>
             <td>Long Guiro</td>
           </tr>
           <tr>
             <td>75</td>
-            <td>D5+</td>
+            <td><span class="key">D5+</span></td>
             <td>Claves</td>
           </tr>
           <tr>
             <td>76</td>
-            <td>E5</td>
+            <td><span class="key">E5</span></td>
             <td>High Wood Block</td>
           </tr>
           <tr>
             <td>77</td>
-            <td>F5</td>
+            <td><span class="key">F5</span></td>
             <td>Low Wood Block</td>
           </tr>
           <tr>
             <td>78</td>
-            <td>F5+</td>
+            <td><span class="key">F5+</span></td>
             <td>Mute Cuica</td>
           </tr>
           <tr>
@@ -3660,16 +3678,16 @@
             <tr class="soft-row top">
               <th class="page-tag-slot"></th>
               <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
-              <th><button type="button" class="soft-btn pressed" data-pos="tc" aria-label="Top center soft button"
-                  aria-pressed="true"></button></th>
-              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"
+                  aria-pressed="false"></button></th>
+              <th><button type="button" class="soft-btn pressed" data-pos="tr" aria-label="Top right soft button"></button></th>
             </tr>
           </thead>
           <tbody class="vfd-screen">
             <tr>
               <td class="cell page-label">PROGRAM</td>
               <td class="cell">TYPE=KEYBOARD</td>
-              <td class="cell selected" colspan="2" style="text-align:right">OPTION=*-NONE-*</td>
+              <td class="cell" colspan="2" style="text-align:right">OPTION=<span class="selected">*-NONE-*</span></td>
             </tr>
             <tr>
               <td class="cell page-label">&nbsp;</td>
@@ -3693,7 +3711,7 @@
       </div>
     </figure>
     <ul>
-      <li>Make sure <span class="lcd">OPTION=*-NONE-*</span> is underlined.</li>
+      <li>Make sure <span class="lcd">OPTION=<span class="selected">*-NONE-*</span></span> is underlined.</li>
       <li>Press the <kbd class="button">Up Arrow</kbd> button. The display reads:</li>
     </ul>
 <figure class="vfd-unit">
@@ -3746,7 +3764,7 @@
       by those parameters to store the drum-map.</p>
     <ul>
       <li>Press the soft button underneath <span class="lcd">DRUM-MAP</span> to replace voices 5 &amp; 6, and create a
-      new default drum-map in the program. Selecting <span class="lcd">DRUM-MAP</span> will also display the <span
+      new default drum-map in the program. Selecting <span class="value">DRUM-MAP</span> will also display the <span
       class="page-name">Select Voice</span> page with the <span class="param-name">Edit Drum-Map</span> option activated. Note
       that the <span class="page-name">Program Control</span> page will now show <span
         class="lcd">OPTION=DRUM-MAP</span> to indicate that a drum-map is active in the program. The display looks
@@ -3854,8 +3872,7 @@
 </figure>
     <ul>
       <li>As you can see, activating a Drum-Map in a Program automatically changes the Wave for
-      the four remaining voices to Drum-Map. Your edited program now contains a <dfn
-        class="term">Drum-Map</dfn> and all four voices will play the Drum-Map.</li>
+      the four remaining voices to Drum-Map. Your edited program now contains a Drum-Map and all four voices will play the Drum-Map.</li>
     </ul>
     <aside class="note">
       <p>When a Program contains a Drum-Map, the OCTAVE and SEMITONE values on the <span
@@ -3926,7 +3943,7 @@
       respond to drum-map keys assigned to that patch. In the Drum-Map Editor, each key is
       assigned to one of the four patches or to a single default drum-voice template which resides in ROM.</p>
     <ul>
-      <li>Press either soft button beneath EDIT <span class="lcd">DRUM-MAP</span>. This takes you to the <span
+      <li>Press either soft button beneath <span class="lcd">EDIT DRUM-MAP</span>. This takes you to the <span
         class="page-name">Drum Map Editor</span> page, where you can assign different waves, volume levels, panning, and
       voice output assignments to each key across the keyboard. For complete descriptions of the Drum Map Editor
       parameters, see <a class="refer-to"
@@ -3936,13 +3953,13 @@
     <aside class="note">
       <p>Remember to save the edited program after you have created and edited a drum-map.</p>
     </aside>
-    <p>Removing a Drum-Map If a program contains a custom drum-map and you wish to remove it
-      (thus restoring voices 5 and</p>
-    <p>6) you can do so from the <span class="page-name">Program Control</span> page. To remove a custom drum-map:</p>
+    <h3 id="removing-a-drum-map">Removing a Drum-Map</h3>
+      <p>If a program contains a custom drum-map and you wish to remove it
+      (thus restoring voices 5 and 6) you can do so from the <span class="page-name">Program Control</span> page. To remove a custom drum-map:</p>
     <ul>
       <li>Press <kbd class="button">Program Control</kbd> to display the <span class="page-name">Program Control</span>
         page.</li>
-      <li>Underline <span class="lcd">OPTION=DRUM-MAP</span>.</li>
+      <li>Underline <span class="lcd">OPTION=<span class="selected">DRUM-MAP</span></span>.</li>
       <li>Press the <kbd class="button">Down Arrow</kbd> button.</li>
       <li>The TS-10 will ask <span class="lcd">ERASE CURRENT DRUM-MAP ?</span> </li>
       <li>Press <span class="function"><span class="star">*</span>YES<span class="star">*</span></span>. You are returned to the <span class="page-name">Select Voice</span> page,
@@ -3950,8 +3967,52 @@
     </ul>
     <h4 id="using-the-copy-page-with-drum-map">Using the <span class="page-name">Copy</span> page with Drum-Map:</h4>
     <p>Pressing <kbd class="button">Copy</kbd> from the <span class="page-name">Drum-Map Editor</span> page will display the <span class="page-name">Copy</span> page with the following options:</p>
-    <p>The MAKE COPY option allows you to make a copy of the complete Drum-Map from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer.</p>
-    <p>The RECALL option allows you to recall the complete Drum-Map from the Copy Buffer into an edited version of the current program if 1) the current program has a Drum-Map installed in it and 2) the Copy buffer contains a Drum-Map. If you attempt to recall a Drum-Map into a program without just previously having copied a Drum-Map into the Copy buffer, the copy is not completed and the following message is displayed:</p>
+    <figure class="vfd-unit">
+      <div class="vfd-bezel">
+        <table>
+          <colgroup>
+            <col class="param-col">
+            <col class="param-col">
+            <col class="param-col">
+          </colgroup>
+          <thead>
+            <tr class="soft-row top">
+              <th class="page-tag-slot"></th>
+              <th><button type="button" class="soft-btn" data-pos="tl" aria-label="Top left soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tc" aria-label="Top center soft button"></button></th>
+              <th><button type="button" class="soft-btn" data-pos="tr" aria-label="Top right soft button"></button></th>
+            </tr>
+          </thead>
+          <tbody class="vfd-screen">
+            <tr>
+              <td class="cell page-label">COPY</td>
+              <td class="cell" colspan="2">DRUM-MAP  PARAMETERS</td>
+              <td class="cell">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="cell page-label">&nbsp;</td>
+              <td class="cell page-label">KEY RANGE</td>
+              <td class="cell">RECALL</td>
+              <td class="cell">MAKE COPY</td>
+          </tbody>
+          <tfoot>
+            <tr class="soft-row bottom">
+              <th class="page-tag-slot"></th>
+              <td><button type="button" class="soft-btn" data-pos="bl" aria-label="Bottom left soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="bc" aria-label="Bottom center soft button"></button></td>
+              <td><button type="button" class="soft-btn" data-pos="br" aria-label="Bottom right soft button"></button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </figure>
+    <p>The <span class="function">MAKE COPY</span> option allows you to make a copy of the complete Drum-Map from the currently selected program (or the <span class="function">Compare</span> Buffer) into the Copy Buffer.</p>
+    <p>The <span class="function">RECALL</span> option allows you to recall the complete Drum-Map from the Copy Buffer into an edited version of the current program if the current program if:</p>
+    <ol>
+      <li>the current program has a Drum-Map installed in it, <em>and</em></li>
+      <li>the Copy buffer contains a Drum-Map</li>
+    </ol>
+    <p>If you attempt to recall a Drum-Map into a program without just previously having copied a Drum-Map into the Copy buffer, the copy is not completed and the following message is displayed:</p>
 <figure class="vfd-unit">
   
   <div class="vfd-bezel">
@@ -4041,11 +4102,11 @@
   
   
 </figure>
-    <p>You can specify the range of keys in the drum-map to be filled by selecting the KEY–RANGE START/END parameter and
+    <p>You can specify the range of keys in the drum-map to be filled by selecting the <span class="param">KEY–RANGE START/END</span> parameter and
       then playing the lowest and then highest key of the range. You can also edit these parameters using the <kbd
         class="button">Data Entry Slider</kbd> or the <kbd class="button">Up/Down Arrow</kbd> buttons. Press the soft
-      button to select between the Start and End key fields.</p>
-    <p>Selecting <span class="function"><span class="star">*</span>COPY<span class="star">*</span></span> will complete the command and will show COPY DONE before returning to
+      button to select between the <span class="param">Start</span> and <span class="param">End</span> key fields.</p>
+    <p>Selecting <span class="function"><span class="star">*</span>COPY<span class="star">*</span></span> will complete the command and will show <span class="lcd">COPY DONE</span> before returning to
       the <span class="page-name">Copy</span> page.</p>
     <p>Selecting <span class="function"><span class="star">*</span>EXIT<span class="star">*</span></span> will simply return the <span class="page-name">Copy</span> page without
       affecting the Drum-Map.</p>

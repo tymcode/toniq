@@ -396,7 +396,8 @@ span.range {
 
 span.function {
   font-family: var(--font-ui);
-  font-weight: 550;
+  font-weight: 400;
+  font-stretch: semi-condensed;
 }
 
 span.patch-name, span.file-type {
