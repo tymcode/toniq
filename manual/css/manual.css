@@ -248,6 +248,12 @@ body {
   margin: 0.7rem 0;
 }
 
+.manual address {
+  font-style: normal;
+  margin: 0.7rem 0;
+  line-height: 1.45;
+}
+
 .manual ul:not(.tips) {
   margin: 0.35rem 0 0.55rem;
   padding-left: 1.65rem;
@@ -1032,6 +1038,26 @@ table.data-table.lookup th {
   text-align: right;
 }
 
+table.data-table.grid,
+table.data-table.impl-chart {
+  border: 2px solid var(--ink);
+}
+
+table.data-table.grid th,
+table.data-table.grid td,
+table.data-table.impl-chart th,
+table.data-table.impl-chart td {
+  border: 1px solid var(--ink);
+  vertical-align: middle;
+}
+
+table.data-table.grid th {
+  border-bottom: 1px solid var(--ink);
+  font-style: italic;
+  text-align: left;
+  color: inherit;
+}
+
 table.data-table.impl-chart td:nth-child(2),
 table.data-table.impl-chart td:nth-child(3),
 table.data-table.impl-chart th:nth-child(2),
@@ -1039,6 +1065,98 @@ table.data-table.impl-chart th:nth-child(3) {
   text-align: center;
   white-space: nowrap;
   width: 7rem;
+}
+
+table.data-table.impl-chart.midi-impl {
+  font-family: var(--font-ui);
+  font-size: 0.82em;
+}
+
+table.data-table.impl-chart.midi-impl tbody td:nth-child(2),
+table.data-table.impl-chart.midi-impl tbody td:nth-child(3),
+table.data-table.impl-chart.midi-impl tbody th:nth-child(2),
+table.data-table.impl-chart.midi-impl tbody th:nth-child(3) {
+  text-align: left;
+  white-space: normal;
+  width: auto;
+}
+
+table.data-table.impl-chart.midi-impl caption {
+  caption-side: top;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 0.35rem;
+}
+
+table.data-table.impl-chart.midi-impl caption .caption-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+table.data-table.impl-chart.midi-impl caption .model {
+  text-align: left;
+}
+
+table.data-table.impl-chart.midi-impl caption .title {
+  text-align: center;
+}
+
+table.data-table.impl-chart.midi-impl caption .version {
+  text-align: right;
+}
+
+table.data-table.impl-chart.midi-impl thead th {
+  text-align: center;
+  color: inherit;
+  border-bottom: 1px solid var(--ink);
+}
+
+table.data-table.impl-chart.midi-impl tbody th {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  text-align: left;
+  white-space: normal;
+  width: 7.5rem;
+  color: inherit;
+}
+
+table.data-table.impl-chart.midi-impl tbody td.tx,
+table.data-table.impl-chart.midi-impl tbody td.rx {
+  text-align: center;
+  white-space: nowrap;
+  width: 6.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+table.data-table.impl-chart.midi-impl tbody td.tx.list,
+table.data-table.impl-chart.midi-impl tbody td.rx.list {
+  text-align: left;
+  white-space: normal;
+  width: auto;
+}
+
+table.data-table.impl-chart.midi-impl tbody td.remarks {
+  text-align: left;
+  white-space: normal;
+}
+
+table.data-table.impl-chart.midi-impl tr.notes-row th {
+  text-align: left;
+}
+
+table.impl-legend {
+  width: 100%;
+  border-collapse: collapse;
+  margin: -0.6rem 0 1.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.82em;
+}
+
+table.impl-legend td {
+  vertical-align: top;
+  padding: 0.1rem 0.8rem 0.1rem 0;
 }
 
 .memory-map {

@@ -35,7 +35,8 @@ PAGES = {
     "13-storage.html": (336, 362),
     "14-sampled-sounds.html": (362, 384),
     "15-sampled-params.html": (384, 408),
-    "appendix-midi.html": (408, 410),
+    # Hand-maintained: MMA MIDI Implementation Chart (OCR of the printed grid is unusable).
+    # "appendix-midi.html": (408, 410),
 }
 
 # (page_start, page_end_exclusive, [(filename, heading_regex_or_None), ...])
@@ -236,9 +237,6 @@ def section_href(num: int, hint: str = "", current_file: str | None = None) -> s
 FIGURES = {
     "06-effects-concepts.html": [
         ("page-088.png", "Effects overview"),
-    ],
-    "appendix-midi.html": [
-        ("page-409.png", "MIDI Implementation Chart"),
     ],
 }
 
